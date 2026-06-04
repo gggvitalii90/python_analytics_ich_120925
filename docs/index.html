@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Analytics ICH</title>
+    <meta name="description" content="Учебный портал курса Python Analytics ICH: лекции, практика, ДЗ и запуск в Binder." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <header class="hero container">
+      <p class="tag">Python Analytics ICH</p>
+      <h1>Учебный портал курса</h1>
+      <p class="subtitle">
+        Откройте нужный notebook в один клик: просмотр на GitHub, скачивание файла или запуск в онлайн Jupyter через Binder.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab" target="_blank" rel="noreferrer">Запустить весь курс в Binder</a>
+        <a class="btn btn-secondary" href="https://github.com/gggvitalii90/python_analytics_ich_120925/archive/refs/heads/main.zip" target="_blank" rel="noreferrer">Скачать курс ZIP</a>
+        <a class="btn btn-ghost" href="https://github.com/gggvitalii90/python_analytics_ich_120925" target="_blank" rel="noreferrer">Открыть репозиторий</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Быстрый поиск по notebook</h2>
+          <p>Введите часть названия: например L20, PR16, HW_20 или Summary.</p>
+        </div>
+        <label class="search-wrap">
+          <span>Поиск</span>
+          <input id="search" type="search" placeholder="Введите название файла..." autocomplete="off" />
+        </label>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Ноутбуки курса</h2>
+          <p id="stats">Загрузка списка...</p>
+        </div>
+        <div id="notebook-list" class="grid"></div>
+      </section>
+    </main>
+
+    <template id="card-template">
+      <article class="card">
+        <h3 class="card-title"></h3>
+        <p class="card-path"></p>
+        <div class="card-actions">
+          <a class="mini-btn" data-action="view" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="mini-btn" data-action="raw" target="_blank" rel="noreferrer">Download</a>
+          <a class="mini-btn accent" data-action="binder" target="_blank" rel="noreferrer">Launch Binder</a>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

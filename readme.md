@@ -2,6 +2,16 @@
 
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab)
 
+## Сайт курса (GitHub Pages)
+
+Портал курса: https://gggvitalii90.github.io/python_analytics_ich_120925/
+
+Если ссылка еще не открывается, включите публикацию:
+1. Repository Settings -> Pages.
+2. Build and deployment -> Source: Deploy from a branch.
+3. Branch: main, folder: /docs.
+4. Нажмите Save.
+
 Этот репозиторий содержит учебные материалы курса:
 - ноутбуки с лекциями и практикой;
 - домашние задания (папка DZ_python_DA);

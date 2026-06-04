@@ -1,0 +1,248 @@
+:root {
+  --bg: #f8f8f4;
+  --ink: #152026;
+  --muted: #4f636f;
+  --accent: #0f8b8d;
+  --accent-2: #ff7a59;
+  --card: #ffffff;
+  --stroke: #d8e0e4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 500px at 10% -15%, #d9f4ef 0%, transparent 55%),
+    radial-gradient(900px 450px at 95% 0%, #ffe2d6 0%, transparent 50%),
+    var(--bg);
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.bg-shape {
+  position: fixed;
+  z-index: -1;
+  filter: blur(40px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.bg-shape-1 {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #b7ece3;
+  top: 6rem;
+  left: -5rem;
+}
+
+.bg-shape-2 {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: #ffd4c2;
+  top: 18rem;
+  right: -7rem;
+}
+
+.hero {
+  padding: 3.5rem 0 2rem;
+  animation: rise 0.6s ease-out;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: #e4f4f2;
+  color: #106f70;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  margin: 0.75rem 0 0.65rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 70ch;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.15rem;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #0b6e70);
+  color: #fff;
+  box-shadow: 0 6px 16px #0f8b8d3d;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #ff875e, var(--accent-2));
+  color: #fff;
+  box-shadow: 0 6px 16px #ff7a5933;
+}
+
+.btn-ghost {
+  background: #ffffff;
+  border-color: var(--stroke);
+  color: var(--ink);
+}
+
+.panel {
+  margin: 1rem 0;
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+  animation: rise 0.6s ease-out;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.panel-head p {
+  margin: 0.3rem 0 0.9rem;
+  color: var(--muted);
+}
+
+.search-wrap {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+#search {
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 0.75rem 0.85rem;
+  outline: none;
+}
+
+#search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #0f8b8d21;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+
+.card {
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: var(--card);
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.6rem;
+  animation: fadeUp 0.35s ease both;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card-path {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  word-break: break-word;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.mini-btn {
+  text-decoration: none;
+  border: 1px solid var(--stroke);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: #fff;
+}
+
+.mini-btn.accent {
+  background: #e6f5f5;
+  border-color: #b8e3e3;
+  color: #0c6668;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 2.2rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
