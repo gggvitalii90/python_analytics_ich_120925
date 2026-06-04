@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Auto-Git internal data
+.autogit/
+
+# Large or local artifacts
+*.log
+*.tmp
+events.csv

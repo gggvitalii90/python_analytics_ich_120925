@@ -1,0 +1,14 @@
+ID,Name,Age,Gender,Salary,Department,Joining_Date,Rating
+1,John,25.0,Male,50000.0,HR,2020-01-01,4.5
+2,Jane,30.0,Female,60000.0,Engineering,2019-05-15,4.2
+3,Alice,,Female,55000.0,Sales,2021-03-20,3.8
+4,Bob,22.0,Male,52000.0,Engineering,2018-07-10,4.0
+5,Charlie,35.0,Male,70000.0,HR,2017-02-28,4.7
+6,David,40.0,Male,75000.0,Sales,2020-11-11,4.9
+7,Emma,28.0,Unknown,80000.0,Engineering,2019-08-05,3.5
+8,Frank,45.0,Male,90000.0,HR,2022-01-15,4.3
+9,Grace,50.0,Female,81333.33333333333,Sales,2020-04-25,4.6
+10,Henry,110.0,Male,200000.0,Engineering,2016-09-30,5.0
+1,John,25.0,Male,50000.0,HR,2020-01-01,4.5
+2,Jane,30.0,Female,60000.0,Engineering,2019-05-15,4.2
+3,Alice,,Female,55000.0,Sales,2021-03-20,3.8

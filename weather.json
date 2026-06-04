@@ -1,0 +1,24 @@
+[
+  {
+    "date": "2025-09-01",
+    "temp_min": 13.0,
+    "temp_max": 27.2,
+    "temp_avg": 20.1,
+    "humidity": 78,
+    "pressure": 1015,
+    "wind_speed": 4.5,
+    "wind_direction": 230,
+    "rain_mm": 2.3
+  },
+  {
+    "date": "2025-09-02",
+    "temp_min": 17.1,
+    "temp_max": 20.2,
+    "temp_avg": 18.7,
+    "humidity": 80,
+    "pressure": 1013,
+    "wind_speed": 5.0,
+    "wind_direction": 245,
+    "rain_mm": 4.7
+  }
+]
