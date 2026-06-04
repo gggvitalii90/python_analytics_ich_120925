@@ -1,12 +1,33 @@
-# Python Analytics Course Materials
+# Python Analytics ICH
 
-This repository contains course materials for Python analytics training: lecture notebooks, practical notebooks, homework files, and datasets used in class. The goal is to keep all course content in one place so students can open the repository and quickly find the required file for each lesson.
+Этот репозиторий содержит учебные материалы курса:
+- ноутбуки с лекциями и практикой;
+- домашние задания (папка DZ_python_DA);
+- датасеты (CSV/XLSX/JSON), которые используются в ноутбуках.
 
-Most notebooks are independent and can be run separately in Jupyter or VS Code. If a notebook requires a specific dataset, the corresponding CSV/XLSX file is stored in the same repository. Homework files are grouped in the `DZ_python_DA` folder.
+## Самый простой сценарий для ученика (без Git и без терминала)
 
-How to use:
-1. Clone or download the repository.
-2. Open the needed notebook for your lesson.
-3. Run cells from top to bottom in order.
+1. Откройте нужный файл .ipynb на GitHub.
+2. Нажмите Download raw file (скачать файл).
+3. Откройте скачанный файл двойным кликом.
 
-The repository is updated regularly as new lectures and assignments are added.
+Если на компьютере уже настроено приложение по умолчанию для .ipynb (Jupyter, VS Code или другая IDE), файл откроется в нем автоматически.
+
+## Важно
+
+Из браузера нельзя безопасно "в один клик" запустить локальную программу сразу с GitHub-страницы. Поэтому всегда есть короткий шаг скачивания файла.
+
+## Одноразовая настройка по умолчанию
+
+- Windows: открыть любой .ipynb -> Open with -> Choose another app -> выбрать IDE -> включить Always use this app.
+- macOS: выбрать .ipynb -> Get Info -> Open with -> выбрать IDE -> Change All.
+
+После этой настройки ученику достаточно скачать файл и открыть его двойным кликом.
+
+## Структура репозитория
+
+- DZ_python_DA: домашние задания
+- *.ipynb: лекции и практические ноутбуки
+- *.csv, *.xlsx, *.json: учебные датасеты
+
+Материалы обновляются регулярно.
