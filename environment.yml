@@ -1,0 +1,17 @@
+name: python-analytics-ich
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - jupyterlab
+  - notebook
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - pmdarima
+  - prophet
+  - openpyxl
+  - xlrd

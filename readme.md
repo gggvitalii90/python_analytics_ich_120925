@@ -1,9 +1,20 @@
 # Python Analytics ICH
 
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab)
+
 Этот репозиторий содержит учебные материалы курса:
 - ноутбуки с лекциями и практикой;
 - домашние задания (папка DZ_python_DA);
 - датасеты (CSV/XLSX/JSON), которые используются в ноутбуках.
+
+## Онлайн запуск без установки (Binder)
+
+Если не хотите ничего настраивать локально, нажмите кнопку Launch Binder в начале файла. Откроется JupyterLab прямо в браузере с файлами этого репозитория.
+
+Важно: первая загрузка может занимать 2-7 минут. Сессия временная, поэтому нужные результаты лучше скачивать на компьютер.
+
+Пример прямой ссылки на конкретный ноутбук в Binder:
+https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab/tree/Python%20for%20DA_L20_2-for_students.ipynb
 
 ## Самый простой сценарий для ученика (без Git и без терминала)
 
