@@ -1,0 +1,37 @@
+Kyle Jones,2024-08-11,2365,Groceries,Chicago
+Michael Thomas,2024-08-08,2682,Groceries,London
+Carrie Morgan,2024-08-18,1974,Groceries,San Francisco
+Isaac Irwin,2024-08-08,2575,Groceries,San Francisco
+Brian Tanner,2024-08-11,2447,Groceries,Berlin
+Gail Whitney,2024-08-12,1065,Groceries,Toronto
+Mercedes Barron,2024-08-09,4623,Groceries,London
+Cheyenne Padilla,2024-08-24,2539,Groceries,Los Angeles
+Elizabeth Reynolds,2024-08-14,1138,Groceries,Miami
+Molly Cox,2024-08-04,1966,Groceries,Los Angeles
+Mark Hernandez,2024-08-05,3413,Groceries,Chicago
+Antonio Erickson,2024-08-04,4847,Groceries,San Francisco
+James Payne,2024-08-27,2276,Groceries,Dallas
+Nancy Mendoza,2024-08-26,3689,Groceries,New York
+Cole Garcia,2024-08-17,1173,Groceries,New York
+Wyatt Lopez,2024-08-15,1894,Groceries,San Francisco
+Michelle Gutierrez,2024-08-22,1103,Groceries,Los Angeles
+Edwin Johnson,2024-08-17,4743,Groceries,New York
+Brian Campbell,2024-08-25,4490,Groceries,London
+Sharon Murphy,2024-08-04,2117,Groceries,Los Angeles
+Meghan Robinson,2024-08-18,713,Groceries,Berlin
+Kendra Webb,2024-08-10,1273,Groceries,New York
+James Banks,2024-08-18,2084,Groceries,Berlin
+Melissa Davis,2024-08-31,3430,Groceries,Miami
+William Parker,2024-08-01,1481,Groceries,New York
+Sierra Perry,2024-08-09,2820,Groceries,Toronto
+Richard Meyer,2024-08-13,4450,Groceries,Dallas
+Arthur Chavez,2024-08-26,4550,Groceries,Miami
+Anne Mathews,2024-08-15,4795,Groceries,Toronto
+Tim Hughes,2024-08-31,2094,Groceries,San Francisco
+Julian Duke,2024-08-08,2043,Groceries,Chicago
+Lisa Gonzalez,2024-08-09,1692,Groceries,Toronto
+Joseph Morgan,2024-08-02,2949,Groceries,Toronto
+Bradley Cohen,2024-08-23,2308,Groceries,New York
+Mary Freeman,2024-08-13,989,Groceries,Los Angeles
+David Alexander,2024-08-07,2789,Groceries,San Francisco
+Cynthia Greene,2024-08-18,4617,Groceries,Los Angeles

@@ -1,0 +1,34 @@
+Charlene Sanders,2025-01-09,968,Electronics,Toronto
+Jeffrey Miranda,2025-01-22,3113,Electronics,San Francisco
+Hannah Bush,2025-01-18,3480,Electronics,London
+Christopher Smith,2025-01-19,2179,Electronics,Berlin
+Emily Lane,2025-01-11,2802,Electronics,Berlin
+Kelsey Strickland,2025-01-01,2358,Electronics,London
+Katrina Brown,2025-01-12,3530,Electronics,Berlin
+Holly Rice,2025-01-26,3268,Electronics,London
+Lisa Valdez,2025-01-17,1378,Electronics,Toronto
+Samantha Williams,2025-01-11,3233,Electronics,London
+Julie Hoffman,2025-01-15,1552,Electronics,Berlin
+William Everett,2025-01-28,4491,Electronics,Miami
+Dustin Lester,2025-01-06,2241,Electronics,Dallas
+Wayne Goodman,2025-01-02,917,Electronics,Toronto
+Angelica Odonnell MD,2025-01-21,2198,Electronics,Dallas
+Steven Miller,2025-01-09,1166,Electronics,San Francisco
+Diana Thompson,2025-01-09,1952,Electronics,Dallas
+Derek Cortez,2025-01-07,2693,Electronics,San Francisco
+Melissa Mason,2025-01-25,3436,Electronics,Los Angeles
+William Goodman,2025-01-17,704,Electronics,Dallas
+Daniel Bell,2025-01-11,1055,Electronics,Miami
+Jillian Walton,2025-01-31,3853,Electronics,Toronto
+Willie Swanson,2025-01-26,1022,Electronics,New York
+Kelly Mathis,2025-01-07,4001,Electronics,San Francisco
+Willie Raymond,2025-01-15,4536,Electronics,New York
+Sharon Adams,2025-01-06,2956,Electronics,Miami
+Philip Clark,2025-01-12,574,Electronics,New York
+Cynthia Morgan,2025-01-11,1419,Electronics,Berlin
+Sarah Reeves,2025-01-11,2548,Electronics,London
+Michael Richardson,2025-01-12,685,Electronics,London
+Michael West,2025-01-12,2428,Electronics,New York
+Jason Beasley,2025-01-01,522,Electronics,Los Angeles
+Dr. Crystal Jones,2025-01-27,1614,Electronics,San Francisco
+Jennifer Nelson,2025-01-28,4531,Electronics,Dallas

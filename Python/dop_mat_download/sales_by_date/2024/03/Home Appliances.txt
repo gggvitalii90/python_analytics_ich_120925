@@ -1,0 +1,51 @@
+Ebony Taylor,2024-03-15,3886,Home Appliances,Los Angeles
+Leah Garza,2024-03-15,3029,Home Appliances,Dallas
+Joseph Smith,2024-03-05,2239,Home Appliances,Los Angeles
+Matthew Garcia,2024-03-11,1187,Home Appliances,New York
+Jordan Anderson,2024-03-14,1948,Home Appliances,Chicago
+Kara Smith,2024-03-31,3221,Home Appliances,Los Angeles
+Lisa Hall,2024-03-02,4711,Home Appliances,Miami
+Donald Simpson,2024-03-11,4480,Home Appliances,London
+Michele Bowman,2024-03-18,4598,Home Appliances,Los Angeles
+Rebecca Perez,2024-03-11,2419,Home Appliances,Dallas
+David Taylor,2024-03-21,591,Home Appliances,London
+Angela Madden,2024-03-31,4847,Home Appliances,Miami
+Scott Young,2024-03-28,1459,Home Appliances,Toronto
+Lucas Wilcox,2024-03-26,2148,Home Appliances,Dallas
+Paula Sanford,2024-03-31,1481,Home Appliances,San Francisco
+Steven Mcintyre,2024-03-20,3439,Home Appliances,London
+Erica Bryant,2024-03-05,3318,Home Appliances,Toronto
+Gerald Solis,2024-03-22,3893,Home Appliances,Los Angeles
+Earl Boone,2024-03-30,4386,Home Appliances,Miami
+Benjamin Villa,2024-03-23,2183,Home Appliances,Berlin
+Sharon Walsh,2024-03-31,764,Home Appliances,Berlin
+Nancy Padilla,2024-03-13,1376,Home Appliances,Los Angeles
+Andrew Salazar,2024-03-22,3224,Home Appliances,Los Angeles
+Karen Williams,2024-03-13,2526,Home Appliances,San Francisco
+Brenda Hancock,2024-03-19,4531,Home Appliances,Dallas
+Thomas Smith,2024-03-30,4718,Home Appliances,San Francisco
+Jack Christian,2024-03-16,1279,Home Appliances,New York
+Jared Henderson,2024-03-07,1077,Home Appliances,Toronto
+Michelle Miller,2024-03-22,1510,Home Appliances,Toronto
+Ethan Gray,2024-03-14,1994,Home Appliances,Dallas
+Courtney Powell,2024-03-10,3805,Home Appliances,Toronto
+Tiffany Morgan,2024-03-05,2939,Home Appliances,Miami
+Michael Howard,2024-03-19,4670,Home Appliances,London
+Mark Munoz,2024-03-15,4281,Home Appliances,Los Angeles
+William Johnson,2024-03-10,1692,Home Appliances,San Francisco
+Christopher Neal,2024-03-03,4299,Home Appliances,London
+Terry Johnson,2024-03-23,1952,Home Appliances,Berlin
+Zachary Bryan,2024-03-31,4741,Home Appliances,London
+Emily Hudson,2024-03-02,2537,Home Appliances,Miami
+Jared West,2024-03-12,4870,Home Appliances,Los Angeles
+David Mcclain,2024-03-04,1854,Home Appliances,Chicago
+Barry Blackburn,2024-03-17,840,Home Appliances,Chicago
+Amanda Andrade,2024-03-20,1952,Home Appliances,Berlin
+Amy Richardson,2024-03-17,3776,Home Appliances,New York
+Michelle Johnson,2024-03-25,4508,Home Appliances,Miami
+Katherine Travis,2024-03-31,4620,Home Appliances,Dallas
+Adam Burke,2024-03-02,3266,Home Appliances,Dallas
+Danielle Howard,2024-03-20,1573,Home Appliances,San Francisco
+Chad Navarro,2024-03-04,2278,Home Appliances,San Francisco
+William Gallegos,2024-03-15,1783,Home Appliances,San Francisco
+Kelly Cook,2024-03-25,853,Home Appliances,Chicago

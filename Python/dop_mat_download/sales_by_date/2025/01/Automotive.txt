@@ -1,0 +1,42 @@
+Aaron Guzman,2025-01-19,645,Automotive,Chicago
+Nancy Johnson,2025-01-06,1608,Automotive,New York
+Donald Nelson,2025-01-02,4009,Automotive,San Francisco
+Kevin Taylor,2025-01-20,4913,Automotive,San Francisco
+Tiffany Ellis,2025-01-03,1620,Automotive,Dallas
+Virginia Mccormick,2025-01-27,4119,Automotive,Berlin
+Joseph Rojas,2025-01-07,4233,Automotive,San Francisco
+Bruce Novak,2025-01-31,994,Automotive,Dallas
+Matthew Stout,2025-01-01,607,Automotive,New York
+Stefanie Ortiz,2025-01-01,2817,Automotive,Miami
+Molly Woods,2025-01-24,2008,Automotive,Dallas
+Robert Hood,2025-01-16,4282,Automotive,Dallas
+Daniel Brady,2025-01-20,3448,Automotive,Chicago
+Rachel Christian,2025-01-25,1153,Automotive,Chicago
+Tammy Monroe,2025-01-26,3659,Automotive,London
+Vickie Hernandez,2025-01-19,4429,Automotive,Berlin
+James Holloway,2025-01-03,1323,Automotive,Chicago
+Madison Bates,2025-01-06,1598,Automotive,Dallas
+Angel Rush,2025-01-28,829,Automotive,Dallas
+Stephen Price,2025-01-24,1642,Automotive,Dallas
+Gabriel King,2025-01-15,2149,Automotive,Toronto
+Melissa Soto,2025-01-02,2212,Automotive,Los Angeles
+James Grant,2025-01-08,1832,Automotive,Los Angeles
+Joel Patterson,2025-01-26,745,Automotive,Dallas
+Jeffrey Hardy,2025-01-20,3868,Automotive,London
+Ashley Arnold,2025-01-15,4060,Automotive,Chicago
+Rebecca Aguilar,2025-01-21,3788,Automotive,Toronto
+Heather Savage,2025-01-15,1099,Automotive,Chicago
+David Rodriguez,2025-01-16,2833,Automotive,Toronto
+Shawn Peters,2025-01-12,1189,Automotive,Los Angeles
+Laura Vasquez,2025-01-14,2259,Automotive,Chicago
+Deborah Williams,2025-01-23,1822,Automotive,Dallas
+Jason Miller,2025-01-30,4929,Automotive,Toronto
+Katherine Ortiz,2025-01-09,2260,Automotive,London
+Heather Smith,2025-01-28,4458,Automotive,Dallas
+Jessica Oneill,2025-01-12,3224,Automotive,New York
+Carly Wilson,2025-01-03,2764,Automotive,San Francisco
+Teresa Ruiz,2025-01-09,4256,Automotive,San Francisco
+Daniel Morton DDS,2025-01-05,2034,Automotive,London
+Amanda Harris,2025-01-22,3659,Automotive,Toronto
+Joseph Solis,2025-01-14,3144,Automotive,New York
+Richard Sawyer,2025-01-28,1019,Automotive,London

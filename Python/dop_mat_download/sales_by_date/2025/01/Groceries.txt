@@ -1,0 +1,35 @@
+Phillip Lopez,2025-01-29,3425,Groceries,Los Angeles
+Ricardo Jackson,2025-01-23,4912,Groceries,Toronto
+Brent Woods,2025-01-17,4408,Groceries,San Francisco
+Kevin Collins,2025-01-27,538,Groceries,Dallas
+Daniel Johnson,2025-01-14,2591,Groceries,Berlin
+Stephanie Owens,2025-01-14,3096,Groceries,Toronto
+Michelle Barr,2025-01-07,3717,Groceries,London
+Ryan Dickerson,2025-01-08,2047,Groceries,Chicago
+Dustin Rose,2025-01-12,3059,Groceries,San Francisco
+Rebecca Reed,2025-01-01,4254,Groceries,London
+Joshua Young,2025-01-26,2158,Groceries,San Francisco
+Nicole Henry,2025-01-09,1095,Groceries,Dallas
+Jamie Maynard,2025-01-16,2186,Groceries,New York
+Melanie Martin,2025-01-07,1252,Groceries,Chicago
+Anthony Spencer,2025-01-09,3841,Groceries,Dallas
+Connie Rosales,2025-01-12,4385,Groceries,Toronto
+Mary Perry,2025-01-06,3869,Groceries,Chicago
+Charles Velazquez,2025-01-14,4391,Groceries,Berlin
+Eileen Vega,2025-01-18,696,Groceries,Chicago
+Kathleen Patterson,2025-01-06,735,Groceries,New York
+Lisa Cox,2025-01-26,2698,Groceries,Chicago
+Amy Manning,2025-01-03,3231,Groceries,Chicago
+Lori Hill,2025-01-09,2813,Groceries,London
+Michael Curtis,2025-01-18,2345,Groceries,Toronto
+Michael Mccoy,2025-01-12,4841,Groceries,Miami
+Patricia Harrison,2025-01-15,1713,Groceries,Berlin
+Katie Russell,2025-01-14,3206,Groceries,Toronto
+Kevin Perry,2025-01-09,3567,Groceries,Miami
+Tonya Reynolds,2025-01-07,4410,Groceries,Chicago
+Brian Cox,2025-01-09,4610,Groceries,San Francisco
+Benjamin Solis,2025-01-15,3326,Groceries,San Francisco
+Susan Howard,2025-01-20,3497,Groceries,Dallas
+Randy Russell,2025-01-06,4185,Groceries,Berlin
+Amber Jordan,2025-01-17,1881,Groceries,Miami
+Darren Cox,2025-01-28,1409,Groceries,Toronto

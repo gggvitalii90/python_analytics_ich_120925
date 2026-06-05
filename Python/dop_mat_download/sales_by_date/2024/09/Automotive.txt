@@ -1,0 +1,42 @@
+Susan Roberts,2024-09-05,2861,Automotive,Berlin
+Elizabeth Crawford,2024-09-21,507,Automotive,New York
+Jeremy Ramos,2024-09-16,2944,Automotive,Miami
+Mario Murray,2024-09-11,3320,Automotive,Toronto
+Kenneth Harrell,2024-09-07,3195,Automotive,Toronto
+Christopher Walsh,2024-09-08,3237,Automotive,Miami
+Danielle Anderson,2024-09-27,4339,Automotive,San Francisco
+Mr. Bryan Berry,2024-09-25,3903,Automotive,Chicago
+Kyle Wilson,2024-09-17,1741,Automotive,San Francisco
+Michael Chapman,2024-09-19,716,Automotive,Toronto
+Jose Gray,2024-09-06,2648,Automotive,Los Angeles
+Scott Parker,2024-09-07,2522,Automotive,New York
+Connie Harris,2024-09-24,610,Automotive,San Francisco
+William Howe,2024-09-14,4145,Automotive,Dallas
+James Clark,2024-09-08,1393,Automotive,Berlin
+Maria Proctor,2024-09-08,908,Automotive,Los Angeles
+Jason Hardin,2024-09-09,4336,Automotive,Toronto
+Christopher Burch,2024-09-15,4315,Automotive,Toronto
+Elizabeth Rodriguez,2024-09-03,2502,Automotive,Miami
+Elizabeth Smith,2024-09-10,1019,Automotive,New York
+Eric Martin,2024-09-24,4566,Automotive,Berlin
+Timothy Jordan,2024-09-14,1471,Automotive,San Francisco
+Mark Lowery,2024-09-25,4676,Automotive,Toronto
+Sandra Burke,2024-09-14,2514,Automotive,San Francisco
+Christina Foster,2024-09-19,1769,Automotive,Toronto
+Dr. Joshua Thompson,2024-09-19,1425,Automotive,London
+Jennifer Williams,2024-09-30,1976,Automotive,London
+James Davis,2024-09-06,2646,Automotive,Los Angeles
+Dillon Carroll,2024-09-16,2937,Automotive,London
+Karen Bell,2024-09-17,1488,Automotive,Miami
+Michael Conrad,2024-09-15,1706,Automotive,London
+Tina Barrett,2024-09-06,3695,Automotive,Toronto
+Phillip Moreno,2024-09-20,702,Automotive,London
+Matthew Bowman,2024-09-27,3798,Automotive,Los Angeles
+Wesley Montgomery,2024-09-28,1738,Automotive,Berlin
+Nicole Williams,2024-09-10,3143,Automotive,London
+Thomas Turner,2024-09-21,4296,Automotive,London
+Benjamin Long,2024-09-14,1708,Automotive,San Francisco
+Larry Thompson,2024-09-07,1320,Automotive,Berlin
+Debbie Logan,2024-09-17,532,Automotive,Chicago
+Tanya Baker,2024-09-06,3867,Automotive,Toronto
+Lisa Howard,2024-09-14,991,Automotive,San Francisco

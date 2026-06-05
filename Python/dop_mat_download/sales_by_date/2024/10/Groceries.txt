@@ -1,0 +1,40 @@
+Brandon Reed,2024-10-07,4217,Groceries,Berlin
+Adam Jimenez,2024-10-24,1683,Groceries,Berlin
+Holly Wilson,2024-10-29,1207,Groceries,London
+Amber Mckee,2024-10-21,4052,Groceries,San Francisco
+Kimberly Porter,2024-10-05,4598,Groceries,Dallas
+Candice Andrews,2024-10-28,1477,Groceries,London
+Glen Burton,2024-10-11,2685,Groceries,Los Angeles
+Phyllis Bennett,2024-10-09,3182,Groceries,Los Angeles
+Rodney Combs,2024-10-29,745,Groceries,Miami
+David Daniels,2024-10-28,4829,Groceries,San Francisco
+Andrew Fisher,2024-10-22,2134,Groceries,Chicago
+Joseph Contreras,2024-10-19,1041,Groceries,Los Angeles
+James Lamb,2024-10-26,2576,Groceries,Dallas
+Ashley Gomez,2024-10-06,2194,Groceries,Miami
+Daniel Parks,2024-10-04,4624,Groceries,Toronto
+Katherine Jenkins,2024-10-10,2985,Groceries,Chicago
+Stephanie Cook,2024-10-03,3644,Groceries,London
+Vincent Adams,2024-10-29,4549,Groceries,Los Angeles
+Tammy Alvarado,2024-10-24,2239,Groceries,Dallas
+Christopher Myers,2024-10-03,4145,Groceries,Dallas
+Michelle Church,2024-10-12,1596,Groceries,Toronto
+Jessica Taylor,2024-10-19,4211,Groceries,New York
+Debra Schaefer,2024-10-05,2392,Groceries,Dallas
+Joshua Harding,2024-10-27,1046,Groceries,Los Angeles
+Brandi Medina,2024-10-19,2914,Groceries,Toronto
+Karen Murray,2024-10-11,3612,Groceries,San Francisco
+Shelley Edwards,2024-10-23,4772,Groceries,New York
+Samantha Romero,2024-10-16,638,Groceries,New York
+Luke Valentine,2024-10-24,3183,Groceries,London
+Tanya Schroeder,2024-10-04,4067,Groceries,Miami
+Erika Howard PhD,2024-10-15,3590,Groceries,London
+Stephen Fisher,2024-10-11,924,Groceries,Chicago
+Lindsay Brown,2024-10-02,2772,Groceries,Chicago
+Scott Walker,2024-10-15,1627,Groceries,Dallas
+Vincent Caldwell,2024-10-28,2613,Groceries,Los Angeles
+Jessica Guerrero,2024-10-26,3559,Groceries,Dallas
+Alan Choi,2024-10-07,1876,Groceries,Berlin
+Haley Brown,2024-10-26,3710,Groceries,Los Angeles
+Leslie Daniel,2024-10-05,513,Groceries,New York
+Thomas Hopkins,2024-10-21,3536,Groceries,Dallas

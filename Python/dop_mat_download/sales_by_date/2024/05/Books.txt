@@ -1,0 +1,37 @@
+Tiffany Serrano,2024-05-05,4532,Books,Chicago
+Teresa Ibarra,2024-05-26,3601,Books,Los Angeles
+Laura Hodge,2024-05-05,2453,Books,Los Angeles
+John Taylor,2024-05-11,4629,Books,Berlin
+Matthew Moore,2024-05-11,3121,Books,Toronto
+Jason Smith,2024-05-27,2857,Books,San Francisco
+Sherry Terrell,2024-05-13,1890,Books,London
+John Sherman,2024-05-25,1797,Books,Los Angeles
+Christopher Erickson,2024-05-14,1616,Books,Chicago
+Christian Woodward,2024-05-18,837,Books,San Francisco
+Ralph Santos,2024-05-22,1102,Books,London
+Michael Williams,2024-05-15,4423,Books,Toronto
+Katherine Hicks,2024-05-02,2221,Books,Toronto
+Natalie Macdonald,2024-05-03,1105,Books,Los Angeles
+Shawna Smith,2024-05-04,3378,Books,Berlin
+Austin Hudson,2024-05-09,2470,Books,Chicago
+Richard Moreno,2024-05-31,3913,Books,Chicago
+Connor Wong,2024-05-11,937,Books,Los Angeles
+Tammy Lane,2024-05-09,2157,Books,Dallas
+Kathryn Freeman,2024-05-09,3921,Books,Dallas
+Caleb Sanders,2024-05-03,3902,Books,San Francisco
+Ryan Jackson,2024-05-09,3129,Books,Miami
+Christina Miller,2024-05-23,2371,Books,Toronto
+Jose Spears,2024-05-24,746,Books,Berlin
+Jordan Dean,2024-05-09,2667,Books,Toronto
+Wendy Young,2024-05-22,1470,Books,San Francisco
+Holly Martinez,2024-05-17,3933,Books,London
+Christina Davis,2024-05-26,2152,Books,Miami
+Monica Mckay,2024-05-15,4777,Books,Dallas
+William Nelson,2024-05-27,1127,Books,San Francisco
+Annette Blackwell,2024-05-20,1863,Books,Berlin
+Matthew Bridges,2024-05-14,2870,Books,Toronto
+Alejandro Coffey,2024-05-24,3359,Books,Toronto
+Mary Vasquez,2024-05-21,2675,Books,Miami
+Donna Andrews,2024-05-26,1981,Books,Miami
+Kayla Alvarado,2024-05-24,4485,Books,New York
+Kristin Clark,2024-05-14,4698,Books,Berlin

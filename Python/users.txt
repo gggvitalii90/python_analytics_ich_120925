@@ -1,0 +1,5 @@
+ID: 202 | Name: Alice | Age: 30 |Status: Inactive
+ID: 203 | Name: Bob | Age: 28 |Status: Active
+Дополнительная строка
+
+Добавленный текст

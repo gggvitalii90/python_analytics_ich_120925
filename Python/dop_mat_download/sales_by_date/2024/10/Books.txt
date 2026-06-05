@@ -1,0 +1,44 @@
+Scott Rodriguez,2024-10-02,1535,Books,Los Angeles
+Morgan Kelly,2024-10-30,3128,Books,San Francisco
+Brian Smith,2024-10-28,3539,Books,Toronto
+Kathryn Morrow,2024-10-02,1592,Books,Miami
+Joseph Martinez,2024-10-27,1897,Books,Dallas
+Jay Bradshaw,2024-10-31,1314,Books,Toronto
+Dr. Michael Riggs,2024-10-17,621,Books,Miami
+William Miller,2024-10-11,1576,Books,London
+Alexandra Brown,2024-10-29,4835,Books,Miami
+Tracy Clark,2024-10-13,3473,Books,London
+Kathleen Shelton,2024-10-26,2313,Books,Los Angeles
+Melinda Walker,2024-10-15,2368,Books,Berlin
+Shawn Wade,2024-10-06,3925,Books,London
+Matthew Cohen,2024-10-25,2101,Books,Los Angeles
+Margaret Taylor,2024-10-14,1317,Books,New York
+Mathew Taylor,2024-10-07,965,Books,New York
+Kristin Hogan,2024-10-30,1647,Books,Chicago
+Amy Hood,2024-10-01,4362,Books,Chicago
+Melanie Hernandez,2024-10-25,1719,Books,New York
+Veronica Herring DDS,2024-10-13,2296,Books,New York
+Eric Jacobson,2024-10-01,1784,Books,New York
+Suzanne Perez,2024-10-22,4255,Books,San Francisco
+Gary Kim,2024-10-14,4974,Books,London
+Amanda Norton,2024-10-14,2832,Books,Los Angeles
+David Thomas,2024-10-08,1686,Books,Berlin
+Anita Guerra,2024-10-24,514,Books,Berlin
+Joseph Flores,2024-10-22,3436,Books,London
+Monica Hernandez,2024-10-17,4524,Books,Chicago
+Shawn Davis,2024-10-22,1296,Books,Berlin
+Denise Leblanc,2024-10-30,2351,Books,London
+Mark Harris,2024-10-08,4819,Books,Berlin
+Heidi Long,2024-10-01,3041,Books,San Francisco
+Robin Garcia,2024-10-21,1997,Books,Berlin
+Lisa Thompson,2024-10-01,4063,Books,London
+Amber Brooks,2024-10-20,2909,Books,Dallas
+Jerry Scott,2024-10-31,3129,Books,New York
+Ian Joyce,2024-10-25,3458,Books,Miami
+Jacob Anderson,2024-10-03,1228,Books,Dallas
+Peter Ortiz DDS,2024-10-03,3073,Books,Miami
+Nancy Peterson,2024-10-21,3377,Books,Miami
+Amanda Lopez,2024-10-28,3801,Books,London
+Erika Parker,2024-10-24,2080,Books,Dallas
+Hannah Charles,2024-10-06,794,Books,San Francisco
+Jose Thompson,2024-10-10,2004,Books,New York

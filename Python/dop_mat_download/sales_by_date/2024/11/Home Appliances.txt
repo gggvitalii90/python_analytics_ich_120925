@@ -1,0 +1,29 @@
+Noah Peterson,2024-11-27,1128,Home Appliances,Berlin
+David Thomas,2024-11-10,1567,Home Appliances,Los Angeles
+Todd Diaz,2024-11-30,2814,Home Appliances,Dallas
+Natalie Mayer,2024-11-09,4772,Home Appliances,San Francisco
+Denise Pearson,2024-11-27,3572,Home Appliances,Chicago
+Jasmine Castillo,2024-11-27,953,Home Appliances,Chicago
+Kristine Brown,2024-11-10,2297,Home Appliances,San Francisco
+Matthew Lyons,2024-11-10,3696,Home Appliances,Dallas
+Rebecca Perez,2024-11-10,2712,Home Appliances,Berlin
+Ryan Tran,2024-11-19,3190,Home Appliances,Dallas
+Michael Miller,2024-11-06,4390,Home Appliances,London
+Nicole Reed,2024-11-30,2985,Home Appliances,London
+Tyler Ibarra,2024-11-26,839,Home Appliances,Chicago
+Anthony Johnson,2024-11-10,2155,Home Appliances,Berlin
+Sara Davis,2024-11-22,2071,Home Appliances,San Francisco
+Joshua Hall,2024-11-15,2526,Home Appliances,Los Angeles
+Brett Green,2024-11-05,3879,Home Appliances,Dallas
+Miss Jennifer Davis DDS,2024-11-14,1037,Home Appliances,Dallas
+Veronica Allen,2024-11-18,1185,Home Appliances,Chicago
+Belinda Rowland,2024-11-03,2221,Home Appliances,London
+Daniel Contreras,2024-11-16,935,Home Appliances,Dallas
+Lindsay Brown,2024-11-28,3057,Home Appliances,Chicago
+Sierra James,2024-11-29,3127,Home Appliances,Los Angeles
+Angela Rhodes,2024-11-18,2706,Home Appliances,Toronto
+Rachel Graves,2024-11-19,741,Home Appliances,London
+Thomas Parker,2024-11-25,1683,Home Appliances,New York
+John Porter,2024-11-29,3944,Home Appliances,Toronto
+Jacob Tran,2024-11-09,4632,Home Appliances,Dallas
+Casey Brooks,2024-11-14,2629,Home Appliances,New York

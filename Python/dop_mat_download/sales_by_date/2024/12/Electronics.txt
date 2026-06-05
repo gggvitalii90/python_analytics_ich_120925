@@ -1,0 +1,35 @@
+Eric Casey,2024-12-07,3081,Electronics,San Francisco
+Douglas Graham,2024-12-18,4162,Electronics,Berlin
+Kim Rodgers,2024-12-31,3828,Electronics,Berlin
+Joseph Knight,2024-12-08,2344,Electronics,Dallas
+Sarah Romero,2024-12-16,2463,Electronics,Toronto
+Jordan Ballard,2024-12-17,885,Electronics,Los Angeles
+Tyler Jenkins,2024-12-30,4402,Electronics,London
+Virginia Chavez,2024-12-20,536,Electronics,Miami
+Roger Mueller,2024-12-31,3466,Electronics,Dallas
+Frank Kelly,2024-12-26,663,Electronics,Miami
+Monica Mclaughlin,2024-12-16,4510,Electronics,London
+Tara Perez,2024-12-01,2204,Electronics,San Francisco
+Kenneth Nelson,2024-12-23,2309,Electronics,Los Angeles
+Shannon Berg,2024-12-13,4048,Electronics,Miami
+Manuel James,2024-12-31,2886,Electronics,Miami
+Nicole Chen,2024-12-26,1353,Electronics,New York
+Kara Valentine,2024-12-26,2170,Electronics,Miami
+Jessica Frazier,2024-12-27,1698,Electronics,Toronto
+Christian Moon,2024-12-26,4231,Electronics,Chicago
+Bryan Day,2024-12-27,4706,Electronics,New York
+Jose Patterson,2024-12-02,1813,Electronics,Toronto
+Bryce Andrade,2024-12-15,1944,Electronics,Berlin
+Jesus Ortiz MD,2024-12-02,2782,Electronics,Dallas
+David Morris,2024-12-06,1249,Electronics,Los Angeles
+Adam Wilson MD,2024-12-28,4978,Electronics,Berlin
+Luke Robinson,2024-12-22,928,Electronics,Berlin
+Jon Barnett,2024-12-30,4911,Electronics,Dallas
+Holly Fowler,2024-12-22,2460,Electronics,San Francisco
+Andrew Moreno,2024-12-01,846,Electronics,San Francisco
+Bryan Jefferson,2024-12-28,3890,Electronics,London
+Jacob Winters,2024-12-16,1783,Electronics,Los Angeles
+Paula Palmer,2024-12-27,1659,Electronics,Dallas
+Sarah Rodriguez,2024-12-01,2386,Electronics,New York
+Amanda Ortiz,2024-12-26,2253,Electronics,San Francisco
+Jessica Lewis,2024-12-31,671,Electronics,New York

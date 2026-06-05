@@ -1,0 +1,25 @@
+Kimberly Lee,2024-07-12,3653,Electronics,London
+Tony Thompson,2024-07-18,4991,Electronics,New York
+Gregory Camacho,2024-07-29,2612,Electronics,London
+Nicholas Crosby,2024-07-09,4841,Electronics,Berlin
+Karen Stevenson,2024-07-11,1374,Electronics,New York
+Cory Huff,2024-07-02,2044,Electronics,Chicago
+Nicole Vaughn,2024-07-09,3932,Electronics,London
+Kyle Davis,2024-07-21,3905,Electronics,Chicago
+Melanie Grimes,2024-07-08,853,Electronics,Dallas
+Charles Hill,2024-07-24,4152,Electronics,Dallas
+Jennifer Alexander,2024-07-31,4872,Electronics,London
+Victoria Brown,2024-07-18,1125,Electronics,San Francisco
+Karen Moore MD,2024-07-23,2258,Electronics,San Francisco
+Stephen Martinez,2024-07-22,3089,Electronics,Los Angeles
+Christopher Oliver,2024-07-22,2548,Electronics,Chicago
+Amy Williams,2024-07-27,4615,Electronics,London
+Joseph Johnson,2024-07-01,4068,Electronics,Chicago
+Melissa Robbins,2024-07-13,2322,Electronics,Toronto
+Jeffrey Green,2024-07-27,1786,Electronics,Dallas
+Casey Barr,2024-07-02,3570,Electronics,Berlin
+Marie Brown,2024-07-19,2215,Electronics,Dallas
+Candace Davis,2024-07-03,2730,Electronics,New York
+Angela King,2024-07-03,645,Electronics,Dallas
+Vincent Herrera,2024-07-15,4690,Electronics,San Francisco
+Mark Smith,2024-07-16,2084,Electronics,San Francisco

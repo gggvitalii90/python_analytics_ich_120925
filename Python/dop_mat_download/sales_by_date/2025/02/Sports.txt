@@ -1,0 +1,38 @@
+William Stevens,2025-02-13,4216,Sports,Chicago
+Kristina Barrett,2025-02-21,1879,Sports,Dallas
+Shannon Young,2025-02-12,2531,Sports,New York
+Robin Stevens,2025-02-28,2260,Sports,Berlin
+Oscar Scott,2025-02-25,3199,Sports,London
+Eric Cox,2025-02-01,3152,Sports,Chicago
+Lauren Hernandez,2025-02-28,2110,Sports,Berlin
+Sarah Brewer,2025-02-04,3897,Sports,Chicago
+Deborah Howard,2025-02-08,1786,Sports,Chicago
+Kelly Morris,2025-02-07,2900,Sports,New York
+Elijah Cross,2025-02-20,4190,Sports,San Francisco
+Joseph Richardson,2025-02-06,905,Sports,Chicago
+Brandon Weaver,2025-02-26,2796,Sports,Los Angeles
+Michael Wallace,2025-02-06,4435,Sports,San Francisco
+Jose Stevens,2025-02-23,3001,Sports,San Francisco
+Lindsey Hudson,2025-02-20,2613,Sports,London
+Mary Elliott,2025-02-19,1804,Sports,Berlin
+James Dougherty,2025-02-07,4723,Sports,London
+Lisa Morris,2025-02-09,3760,Sports,Miami
+Terry Short,2025-02-08,3567,Sports,Miami
+Justin Burton,2025-02-09,3803,Sports,Los Angeles
+Erin Brock,2025-02-06,3246,Sports,New York
+Sean Ray,2025-02-11,1880,Sports,Chicago
+Megan Gilbert,2025-02-26,1133,Sports,Dallas
+Cindy Ramos,2025-02-01,2609,Sports,Miami
+Katie Huang,2025-02-03,1563,Sports,Chicago
+Jacob Hanna,2025-02-24,3674,Sports,Miami
+Ashley Allen,2025-02-18,1875,Sports,Dallas
+Helen Harris,2025-02-26,3730,Sports,New York
+Joseph Reynolds,2025-02-11,2068,Sports,London
+Kristina Obrien,2025-02-08,1350,Sports,New York
+William Miller,2025-02-19,3593,Sports,Dallas
+Jane Campos,2025-02-06,4504,Sports,Berlin
+Christopher Pham,2025-02-09,2983,Sports,Toronto
+Dillon Yu,2025-02-14,1770,Sports,Chicago
+Cathy Jones,2025-02-07,2896,Sports,Los Angeles
+Kristen Thomas,2025-02-06,3744,Sports,San Francisco
+Mrs. Kathleen Cook,2025-02-27,2952,Sports,Los Angeles

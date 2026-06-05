@@ -1,0 +1,38 @@
+Julie Bray,2024-06-20,3329,Electronics,Los Angeles
+Joshua Thomas,2024-06-09,1357,Electronics,Miami
+Dwayne Smith,2024-06-14,1318,Electronics,Dallas
+Michelle Moore,2024-06-27,4016,Electronics,Berlin
+Kristina Wade,2024-06-14,2577,Electronics,Berlin
+Cheyenne Ford,2024-06-17,876,Electronics,London
+Charles Brown,2024-06-14,520,Electronics,Berlin
+Theresa Bennett DVM,2024-06-06,1262,Electronics,Dallas
+Cheryl Hunter,2024-06-19,1534,Electronics,New York
+Amber Johnson,2024-06-20,1983,Electronics,Toronto
+Jaclyn Wheeler,2024-06-06,4254,Electronics,Dallas
+Laura Cortez,2024-06-10,2646,Electronics,Miami
+John Estrada,2024-06-20,3175,Electronics,Chicago
+Mary Bartlett,2024-06-20,4655,Electronics,Chicago
+Oscar Gordon,2024-06-25,3526,Electronics,New York
+David Bishop,2024-06-21,1378,Electronics,Los Angeles
+Brian Sharp,2024-06-28,1726,Electronics,Chicago
+Rhonda Floyd,2024-06-23,2996,Electronics,London
+Elizabeth Richardson,2024-06-17,4731,Electronics,Miami
+Samantha Wright,2024-06-18,3813,Electronics,Toronto
+Megan Le,2024-06-20,3137,Electronics,Chicago
+Kaitlyn Ortiz,2024-06-02,588,Electronics,Miami
+Pamela Oneill,2024-06-02,3611,Electronics,New York
+Rebecca Hudson,2024-06-04,2635,Electronics,San Francisco
+Christina Logan,2024-06-01,3579,Electronics,Chicago
+Stanley Carlson,2024-06-06,1103,Electronics,Toronto
+John Buck,2024-06-18,2509,Electronics,Dallas
+Daniel Riggs,2024-06-20,2366,Electronics,London
+Michael Ortiz,2024-06-11,4066,Electronics,Los Angeles
+Frank Newman,2024-06-07,1850,Electronics,Los Angeles
+Roger Hunter,2024-06-06,1961,Electronics,New York
+Joseph Turner,2024-06-05,3605,Electronics,New York
+Mackenzie Potts,2024-06-15,2895,Electronics,Toronto
+Nicole Savage,2024-06-14,3995,Electronics,San Francisco
+Mary Hendricks,2024-06-08,2044,Electronics,Dallas
+Elizabeth Mclaughlin,2024-06-18,2432,Electronics,New York
+Elizabeth Pace,2024-06-04,1385,Electronics,San Francisco
+Brian Hester,2024-06-16,2389,Electronics,Miami

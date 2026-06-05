@@ -1,0 +1,3 @@
+Python is an amazing language! Python is used in many fields.
+Programming in Python is fun and powerful.
+The more you learn Python, the better you get.

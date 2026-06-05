@@ -1,0 +1,50 @@
+David Smith,2024-03-28,4314,Automotive,Los Angeles
+Dalton Singh,2024-03-10,2713,Automotive,London
+Jennifer Hart,2024-03-12,2441,Automotive,New York
+Cathy Cross,2024-03-29,2433,Automotive,Dallas
+Leslie Harris,2024-03-24,2117,Automotive,Berlin
+Ronald Johnson,2024-03-17,1758,Automotive,New York
+Christopher Taylor,2024-03-20,4200,Automotive,Miami
+Garrett Garner MD,2024-03-27,1480,Automotive,Los Angeles
+John Zuniga DVM,2024-03-17,2326,Automotive,Toronto
+Andrew Campbell,2024-03-13,4576,Automotive,Toronto
+Erica Cooke,2024-03-20,1696,Automotive,Berlin
+Jordan Nunez,2024-03-03,1424,Automotive,Dallas
+Donald Fuller,2024-03-27,2457,Automotive,Berlin
+Anthony Bowman,2024-03-18,2650,Automotive,Toronto
+Richard Long,2024-03-09,3284,Automotive,Berlin
+John Nelson,2024-03-05,4191,Automotive,Miami
+Sara King,2024-03-02,694,Automotive,Berlin
+Laura Carpenter,2024-03-07,1109,Automotive,Berlin
+William Mitchell,2024-03-07,3304,Automotive,Dallas
+Shawn Garza,2024-03-17,3232,Automotive,Los Angeles
+Randy Anderson,2024-03-12,1618,Automotive,Miami
+Nicole Mcintosh,2024-03-28,2022,Automotive,New York
+Martha Barber,2024-03-27,2083,Automotive,Miami
+James Maxwell,2024-03-10,2354,Automotive,Miami
+Kevin Maxwell,2024-03-07,563,Automotive,New York
+Jennifer Greene,2024-03-17,3344,Automotive,Los Angeles
+Tracey Gutierrez,2024-03-07,4414,Automotive,San Francisco
+Robert Collier,2024-03-28,614,Automotive,New York
+Kristen Warren DDS,2024-03-22,1571,Automotive,New York
+Kenneth Brewer,2024-03-16,1891,Automotive,London
+Melissa Castro,2024-03-21,2743,Automotive,Toronto
+Amber Davis,2024-03-21,4711,Automotive,Toronto
+John Scott MD,2024-03-18,883,Automotive,New York
+Nathan Mitchell,2024-03-26,4573,Automotive,London
+Andre Christensen,2024-03-12,4296,Automotive,Los Angeles
+Yvonne Rollins,2024-03-15,3989,Automotive,Chicago
+Michael Hawkins,2024-03-28,1517,Automotive,Chicago
+Clifford Donovan,2024-03-30,2899,Automotive,Dallas
+Anita Bryant,2024-03-13,2133,Automotive,Dallas
+Victoria Ponce,2024-03-12,4693,Automotive,Miami
+Carlos Smith,2024-03-17,1818,Automotive,Los Angeles
+Richard Shaw,2024-03-14,2445,Automotive,Dallas
+Brian Daniels,2024-03-20,3361,Automotive,San Francisco
+Nicholas Lane,2024-03-27,3432,Automotive,Toronto
+Adrian Warren,2024-03-19,4981,Automotive,Dallas
+Gary Morrow,2024-03-15,3207,Automotive,Toronto
+Martin Allen,2024-03-07,3520,Automotive,New York
+Martha Atkins,2024-03-27,2446,Automotive,Toronto
+April Bradley,2024-03-13,3741,Automotive,Toronto
+Corey Hill,2024-03-31,4731,Automotive,Los Angeles

@@ -1,0 +1,30 @@
+Abigail Ramirez,2024-05-20,576,Clothing,San Francisco
+Katrina Fritz,2024-05-24,533,Clothing,Los Angeles
+Morgan Carlson,2024-05-01,3257,Clothing,Toronto
+Kara Cantu,2024-05-17,1303,Clothing,Los Angeles
+Arthur Wilson,2024-05-10,1564,Clothing,London
+Kimberly Hudson,2024-05-15,2933,Clothing,London
+Laurie Burns,2024-05-07,614,Clothing,Dallas
+Henry Ford,2024-05-30,776,Clothing,Chicago
+Matthew Valdez,2024-05-22,2163,Clothing,Los Angeles
+Nicholas Lewis,2024-05-08,3044,Clothing,Miami
+Lori Christian,2024-05-06,3710,Clothing,Miami
+Nicole Williams,2024-05-18,4196,Clothing,London
+Chelsea Taylor,2024-05-02,2905,Clothing,Toronto
+Christopher Hall,2024-05-28,2591,Clothing,Berlin
+Cynthia Wilkinson,2024-05-25,3200,Clothing,Chicago
+Danny Lynn,2024-05-27,2338,Clothing,Toronto
+Rebecca Ellis,2024-05-09,3927,Clothing,Chicago
+Sarah Williams,2024-05-24,967,Clothing,Dallas
+John Perry,2024-05-24,1630,Clothing,Berlin
+Kenneth Henson,2024-05-09,1885,Clothing,Dallas
+James Gibson,2024-05-19,3778,Clothing,Berlin
+Robert Lane,2024-05-03,2670,Clothing,Berlin
+Kaylee Allen,2024-05-26,2173,Clothing,Berlin
+Elizabeth Anderson PhD,2024-05-01,2723,Clothing,San Francisco
+Courtney Krause,2024-05-26,2258,Clothing,Chicago
+Emily Rogers,2024-05-11,2905,Clothing,San Francisco
+Rhonda Rice,2024-05-08,2905,Clothing,New York
+Derek Warren,2024-05-13,4448,Clothing,Berlin
+Curtis Moore,2024-05-29,2920,Clothing,London
+Travis Walker,2024-05-18,3067,Clothing,Chicago

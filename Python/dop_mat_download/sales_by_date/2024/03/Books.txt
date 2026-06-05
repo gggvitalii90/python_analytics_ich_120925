@@ -1,0 +1,42 @@
+Stephen Page,2024-03-09,4953,Books,San Francisco
+Kristin Nelson,2024-03-13,2686,Books,Los Angeles
+Robin Watson,2024-03-15,4838,Books,Los Angeles
+Carol Caldwell,2024-03-19,1332,Books,Dallas
+Andrea Ritter,2024-03-20,1734,Books,Berlin
+Andrew Daniels,2024-03-13,1568,Books,San Francisco
+Michael Stark,2024-03-16,4604,Books,New York
+Philip Williams,2024-03-30,4409,Books,Miami
+Stacey Washington,2024-03-11,4204,Books,Toronto
+Jasmine Booth,2024-03-26,2642,Books,San Francisco
+Lisa Miller,2024-03-21,4058,Books,London
+Donald Gonzalez,2024-03-12,4589,Books,Miami
+Amanda Sullivan,2024-03-10,1110,Books,Toronto
+Deanna Knapp,2024-03-10,1502,Books,Los Angeles
+Andrew Mckee,2024-03-09,4725,Books,Toronto
+Matthew Scott,2024-03-23,1125,Books,Miami
+Carlos Baker,2024-03-15,936,Books,Berlin
+Regina Strickland,2024-03-10,3515,Books,New York
+Sheri Pearson,2024-03-09,764,Books,Chicago
+Amy Becker,2024-03-30,4786,Books,Toronto
+David Guzman,2024-03-13,1510,Books,Berlin
+Jacqueline Parsons,2024-03-24,3443,Books,Miami
+Joshua Reynolds,2024-03-21,2672,Books,Miami
+Elizabeth Lewis,2024-03-31,2520,Books,Berlin
+Kimberly Alvarez,2024-03-27,1428,Books,San Francisco
+Danielle Lewis,2024-03-15,834,Books,London
+Angela Gonzalez,2024-03-11,4693,Books,Berlin
+Michael Conner,2024-03-16,2162,Books,Miami
+Katherine Gilbert,2024-03-12,3009,Books,London
+Scott Harris,2024-03-22,3562,Books,Toronto
+Seth Hall,2024-03-08,2672,Books,London
+Robert Garcia,2024-03-11,3224,Books,Berlin
+Donna Freeman,2024-03-07,703,Books,Miami
+Cameron Pham,2024-03-04,4976,Books,Los Angeles
+Cameron Chase,2024-03-17,3556,Books,Chicago
+Zachary Pena,2024-03-14,683,Books,Miami
+Sonia Stanton,2024-03-12,2134,Books,New York
+Christopher Montoya,2024-03-06,2505,Books,San Francisco
+Michael Baldwin,2024-03-02,2365,Books,Miami
+Susan Mcmillan,2024-03-09,3718,Books,Chicago
+Sheryl Reese,2024-03-27,4804,Books,Toronto
+Donald Gardner,2024-03-03,4019,Books,Chicago

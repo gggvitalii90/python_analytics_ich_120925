@@ -1,0 +1,5 @@
+Ricky Boyle,2025-03-01,3701,Books,Dallas
+Stephen Adams,2025-03-02,4290,Books,Chicago
+Luis Ryan,2025-03-02,2139,Books,Los Angeles
+Sara Reid,2025-03-01,4651,Books,London
+Jennifer Harris,2025-03-02,1500,Books,Toronto

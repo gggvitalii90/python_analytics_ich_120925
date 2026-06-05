@@ -1,0 +1,29 @@
+Mr. Anthony Mullins,2025-01-05,3174,Sports,New York
+Angelica Daugherty,2025-01-11,1618,Sports,San Francisco
+Christina Johnson,2025-01-11,1897,Sports,Dallas
+Catherine Gallegos,2025-01-22,1693,Sports,Berlin
+Lisa Morse,2025-01-29,1199,Sports,Toronto
+Amber Wallace,2025-01-08,1072,Sports,Miami
+Melissa Wright,2025-01-11,686,Sports,Dallas
+Sean Parker,2025-01-04,3666,Sports,Chicago
+Patrick Lynch,2025-01-10,3166,Sports,San Francisco
+Dean Luna,2025-01-14,3850,Sports,Miami
+Cassandra Moore,2025-01-22,2107,Sports,Dallas
+Lisa James,2025-01-14,2811,Sports,New York
+Diane Murphy,2025-01-05,2448,Sports,Los Angeles
+Melinda Walters,2025-01-15,3190,Sports,New York
+Alvin Jackson,2025-01-26,2094,Sports,Dallas
+Andrea Foster,2025-01-08,4490,Sports,Toronto
+Phillip Price,2025-01-04,2412,Sports,Berlin
+Kim Morgan,2025-01-06,3284,Sports,San Francisco
+Sarah Kerr,2025-01-30,1385,Sports,Toronto
+Kelli Wood,2025-01-15,4391,Sports,Berlin
+Eric Stuart,2025-01-05,3452,Sports,Miami
+Austin George,2025-01-31,1534,Sports,Berlin
+Brandy Copeland,2025-01-27,4561,Sports,Los Angeles
+Jennifer Chen,2025-01-09,4434,Sports,Toronto
+Adam Garrett,2025-01-22,4318,Sports,Dallas
+Kevin Rodriguez,2025-01-22,512,Sports,London
+Victoria Silva,2025-01-24,2375,Sports,Berlin
+Sarah Rojas,2025-01-12,4362,Sports,London
+Stacey Oconnell,2025-01-27,2601,Sports,Miami

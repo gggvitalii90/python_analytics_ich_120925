@@ -1,0 +1,23 @@
+Scott Hayes,2024-04-15,3461,Sports,Berlin
+Willie Jackson,2024-04-03,1566,Sports,London
+Frank Oconnell,2024-04-28,996,Sports,New York
+Teresa Davis,2024-04-01,4526,Sports,Berlin
+Rodney Jackson,2024-04-18,4711,Sports,Berlin
+Audrey Morales,2024-04-06,1623,Sports,Toronto
+Albert Payne,2024-04-27,3325,Sports,Los Angeles
+Brandon Patel,2024-04-23,663,Sports,Dallas
+Kelsey Barrett,2024-04-05,3495,Sports,Toronto
+Michael Freeman,2024-04-02,723,Sports,Los Angeles
+Sean Olsen,2024-04-29,1724,Sports,Chicago
+Anthony Castro,2024-04-26,2043,Sports,Berlin
+David Wilson,2024-04-23,4390,Sports,London
+Justin Wood,2024-04-26,1570,Sports,San Francisco
+Kenneth Baker Jr.,2024-04-03,2274,Sports,Dallas
+Crystal Farley,2024-04-07,4589,Sports,London
+Julie Soto,2024-04-10,4897,Sports,San Francisco
+Brian Wagner,2024-04-25,4089,Sports,Miami
+Juan Clark,2024-04-20,1839,Sports,London
+William Vargas,2024-04-17,2212,Sports,Berlin
+Jessica Johnson,2024-04-29,1288,Sports,San Francisco
+Patricia Sanchez,2024-04-26,3402,Sports,New York
+Christine Coleman,2024-04-26,661,Sports,Dallas

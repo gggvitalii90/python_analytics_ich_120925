@@ -1,0 +1,43 @@
+Taylor Brown,2024-12-22,3914,Clothing,Chicago
+Brittany Crawford,2024-12-05,1039,Clothing,Los Angeles
+William Nguyen,2024-12-05,826,Clothing,San Francisco
+Frederick Davidson,2024-12-03,4507,Clothing,London
+Robert Schultz,2024-12-03,1573,Clothing,San Francisco
+Carmen Harrell,2024-12-29,3987,Clothing,Toronto
+Danielle Davis,2024-12-02,4861,Clothing,San Francisco
+Kathryn Hendricks,2024-12-20,799,Clothing,Los Angeles
+Ashley Thomas,2024-12-17,4265,Clothing,London
+Clinton Mcgee,2024-12-12,2827,Clothing,Toronto
+James Newman,2024-12-18,4564,Clothing,Chicago
+Lisa Miller,2024-12-21,959,Clothing,Los Angeles
+Jorge Wilkerson,2024-12-27,1900,Clothing,London
+Wanda Ortiz,2024-12-14,1410,Clothing,Miami
+Jeffery Nunez,2024-12-14,3845,Clothing,Chicago
+Samantha Chavez,2024-12-11,4241,Clothing,London
+Ronald Howard,2024-12-20,2456,Clothing,London
+Matthew Simmons,2024-12-23,1135,Clothing,London
+Jared Kim,2024-12-03,698,Clothing,London
+Dawn Allen,2024-12-29,3841,Clothing,Miami
+Kevin Avila,2024-12-26,2073,Clothing,New York
+Ryan Hernandez,2024-12-04,3433,Clothing,London
+Jamie Copeland,2024-12-22,4357,Clothing,Los Angeles
+Daniel Martin,2024-12-31,4167,Clothing,New York
+Adam Acosta,2024-12-11,703,Clothing,Toronto
+Margaret Suarez,2024-12-01,2450,Clothing,Chicago
+Olivia Atkinson,2024-12-02,2936,Clothing,Dallas
+Jeffrey Walsh,2024-12-26,961,Clothing,Los Angeles
+Jenna Pennington,2024-12-24,2305,Clothing,New York
+Jessica Mccoy,2024-12-02,1783,Clothing,Dallas
+Christopher Richards,2024-12-05,3406,Clothing,Toronto
+Norma Jackson,2024-12-09,1632,Clothing,London
+Lisa Peck,2024-12-31,1941,Clothing,Berlin
+Yolanda Pruitt,2024-12-28,4572,Clothing,Chicago
+Larry Hull,2024-12-12,4309,Clothing,London
+Sara Hernandez,2024-12-22,3277,Clothing,Los Angeles
+Susan Murphy,2024-12-13,3547,Clothing,Chicago
+Thomas Mann,2024-12-01,1202,Clothing,Los Angeles
+Christie Mcclain,2024-12-04,2929,Clothing,London
+Martin Acosta,2024-12-24,2150,Clothing,New York
+Dr. Joseph Meyer,2024-12-28,4165,Clothing,London
+Mark Becker,2024-12-30,2087,Clothing,Toronto
+Cynthia Miller,2024-12-14,2631,Clothing,Miami

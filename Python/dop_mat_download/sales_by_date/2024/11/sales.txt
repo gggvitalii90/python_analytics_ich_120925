@@ -1,0 +1,237 @@
+Elizabeth Walker,2024-11-02,945,Groceries,New York
+Christina Weaver,2024-11-26,1688,Clothing,Dallas
+David Ellis,2024-11-29,3649,Groceries,Berlin
+Suzanne Robinson,2024-11-29,888,Automotive,San Francisco
+Noah Peterson,2024-11-27,1128,Home Appliances,Berlin
+David Robinson,2024-11-05,2582,Electronics,Chicago
+David Thomas,2024-11-10,1567,Home Appliances,Los Angeles
+Todd Diaz,2024-11-30,2814,Home Appliances,Dallas
+Margaret Hudson,2024-11-05,853,Books,Berlin
+Brenda Miles,2024-11-19,1432,Electronics,London
+Brandy Martinez,2024-11-05,3763,Groceries,Berlin
+Melanie Greene,2024-11-28,3193,Clothing,Miami
+James Mullins,2024-11-22,1684,Clothing,San Francisco
+Brenda Gomez,2024-11-09,2616,Automotive,Chicago
+Mark Bradford,2024-11-24,844,Clothing,New York
+Kathryn Peterson,2024-11-24,2354,Groceries,London
+Sean Kline,2024-11-10,3274,Automotive,Los Angeles
+Natalie Mayer,2024-11-09,4772,Home Appliances,San Francisco
+Maria Acosta,2024-11-18,2650,Automotive,New York
+Lisa Thompson,2024-11-28,3883,Automotive,Berlin
+Heather Gray,2024-11-30,1241,Electronics,New York
+Catherine Whitehead,2024-11-15,2838,Groceries,Toronto
+Denise Pearson,2024-11-27,3572,Home Appliances,Chicago
+Christopher Camacho,2024-11-22,3111,Sports,Toronto
+Andrew Carroll,2024-11-23,4291,Groceries,London
+Arthur Powers,2024-11-02,2191,Groceries,Los Angeles
+Patrick Serrano,2024-11-29,3901,Clothing,New York
+Larry Jackson,2024-11-10,1024,Clothing,Miami
+Gary Haynes,2024-11-29,643,Electronics,Chicago
+Jasmine Castillo,2024-11-27,953,Home Appliances,Chicago
+Kelly Reyes,2024-11-06,2003,Books,Toronto
+Dwayne Campos,2024-11-21,4682,Books,Chicago
+Brittany Martin,2024-11-26,3351,Clothing,San Francisco
+Cory Ho,2024-11-20,3472,Automotive,Los Angeles
+Angela Vazquez,2024-11-14,4844,Electronics,Los Angeles
+Nicholas Green,2024-11-23,2945,Electronics,London
+Eric Townsend,2024-11-25,1602,Sports,London
+Sarah Morton,2024-11-25,4838,Electronics,Berlin
+Kristine Brown,2024-11-10,2297,Home Appliances,San Francisco
+Andrew Valencia,2024-11-04,3639,Sports,Berlin
+Rebecca Mathews,2024-11-07,3440,Clothing,London
+Michael Gonzalez,2024-11-12,4303,Groceries,London
+Mr. John Moore,2024-11-07,2222,Automotive,San Francisco
+Jennifer West,2024-11-22,3158,Automotive,New York
+Melody Hudson,2024-11-23,2268,Clothing,Berlin
+Jaime Watson,2024-11-09,1781,Automotive,Dallas
+Heather Lopez,2024-11-03,1657,Books,Chicago
+Jennifer Watson,2024-11-24,3963,Automotive,Chicago
+Matthew Lyons,2024-11-10,3696,Home Appliances,Dallas
+Harry Humphrey,2024-11-20,4595,Clothing,Miami
+Nicole Baldwin,2024-11-20,1644,Books,London
+Kenneth Goodman,2024-11-19,3445,Groceries,San Francisco
+Matthew West,2024-11-11,1571,Groceries,Chicago
+Jason Smith,2024-11-23,1543,Groceries,Toronto
+Rebecca Perez,2024-11-10,2712,Home Appliances,Berlin
+Jose Jimenez,2024-11-10,1098,Books,London
+Scott Green,2024-11-29,4620,Clothing,New York
+Amy Tucker,2024-11-14,3310,Sports,New York
+Timothy Parker,2024-11-02,3815,Groceries,London
+Victor Thomas,2024-11-09,1610,Clothing,Miami
+Jenny Myers,2024-11-08,3289,Automotive,Los Angeles
+Randy Arias,2024-11-16,1365,Clothing,Los Angeles
+Aaron Brown,2024-11-12,857,Groceries,Los Angeles
+Michelle Williams,2024-11-01,3688,Sports,Berlin
+Stephanie Gibson,2024-11-26,4178,Electronics,New York
+James Henry,2024-11-17,1001,Automotive,Dallas
+Julie Smith,2024-11-12,2963,Electronics,Toronto
+Christopher Lopez,2024-11-23,650,Automotive,Chicago
+Teresa Davis,2024-11-30,3423,Automotive,Toronto
+Dr. Monica Woodard,2024-11-05,1093,Clothing,Dallas
+Lynn Padilla,2024-11-02,4021,Automotive,Miami
+Noah Frank,2024-11-11,988,Sports,Los Angeles
+Donna Nunez,2024-11-03,1712,Electronics,San Francisco
+Daniel Perez,2024-11-14,4951,Electronics,Miami
+Karen Davis,2024-11-29,942,Groceries,Berlin
+Heather Dunn,2024-11-23,2054,Automotive,Chicago
+Christine Wolf,2024-11-26,4040,Automotive,Chicago
+Carolyn Campbell,2024-11-11,4653,Automotive,Dallas
+Ryan Tran,2024-11-19,3190,Home Appliances,Dallas
+Jamie Summers,2024-11-17,2065,Electronics,San Francisco
+Rachel Hill,2024-11-09,1551,Groceries,Los Angeles
+John Alvarez,2024-11-19,4541,Books,Los Angeles
+Marissa Owen,2024-11-21,923,Books,New York
+Brian Cook,2024-11-02,4349,Clothing,Miami
+Tracy Sherman,2024-11-24,3278,Sports,New York
+Brianna Frost,2024-11-30,4936,Automotive,Dallas
+James Castillo,2024-11-30,4146,Sports,New York
+Sydney Haney,2024-11-22,982,Automotive,New York
+Wendy Simmons,2024-11-20,2654,Sports,Toronto
+Scott Medina,2024-11-23,2084,Electronics,London
+Michael Bentley,2024-11-29,4343,Automotive,London
+Jennifer Rodriguez,2024-11-20,1658,Electronics,Los Angeles
+Brandon Gonzales,2024-11-11,2189,Automotive,New York
+Debra Shaw,2024-11-03,2606,Automotive,Berlin
+Maria Taylor,2024-11-23,1336,Groceries,New York
+Carla Jackson,2024-11-01,2132,Groceries,Berlin
+Michael Mosley,2024-11-09,2406,Automotive,London
+Francis Bowen,2024-11-26,3603,Books,San Francisco
+Nicholas Garrett,2024-11-12,2493,Automotive,Toronto
+Michael Miller,2024-11-06,4390,Home Appliances,London
+Danny Perez,2024-11-29,1121,Groceries,Miami
+Amy Romero,2024-11-10,2458,Clothing,London
+Alexander Woods,2024-11-05,3370,Electronics,Dallas
+Gregory Smith,2024-11-10,3255,Groceries,Toronto
+Nicole Reed,2024-11-30,2985,Home Appliances,London
+Craig Hill,2024-11-28,667,Electronics,Dallas
+Richard Young,2024-11-19,1848,Books,Chicago
+Amanda Ayers,2024-11-05,3173,Groceries,New York
+Michelle Williams,2024-11-08,4081,Sports,Berlin
+Andres Cooper,2024-11-23,2162,Electronics,Chicago
+Vanessa Page,2024-11-01,4089,Groceries,San Francisco
+Diane Ford,2024-11-13,3874,Clothing,Berlin
+David Gallagher,2024-11-27,4633,Groceries,Chicago
+Stacey Banks,2024-11-26,1515,Clothing,London
+Haley Gray,2024-11-17,2263,Groceries,London
+Tyler Ibarra,2024-11-26,839,Home Appliances,Chicago
+Greg Sellers,2024-11-16,4635,Groceries,Los Angeles
+Robert Ruiz,2024-11-23,4459,Clothing,London
+Elizabeth Burns,2024-11-12,1375,Electronics,New York
+Anthony Johnson,2024-11-10,2155,Home Appliances,Berlin
+Amy Christensen,2024-11-30,2517,Automotive,Dallas
+Marc Lopez,2024-11-03,4428,Books,London
+Sara Davis,2024-11-22,2071,Home Appliances,San Francisco
+Kristen Hayden,2024-11-26,1261,Groceries,Chicago
+Jason Price,2024-11-14,4511,Groceries,San Francisco
+David Gibson,2024-11-07,3740,Automotive,Chicago
+Jonathan Mason,2024-11-10,1163,Clothing,Chicago
+Joshua Hall,2024-11-15,2526,Home Appliances,Los Angeles
+Brett Green,2024-11-05,3879,Home Appliances,Dallas
+Paula Charles,2024-11-04,4468,Clothing,London
+Alexander Armstrong,2024-11-11,2652,Groceries,Berlin
+Shelley Williams,2024-11-25,3580,Sports,Chicago
+Oscar Torres,2024-11-15,4204,Books,Toronto
+Dr. Nicolas Ellis,2024-11-24,875,Automotive,New York
+Miss Jennifer Davis DDS,2024-11-14,1037,Home Appliances,Dallas
+Michael Cooper,2024-11-19,699,Groceries,Toronto
+Joyce Stephens,2024-11-07,3317,Automotive,Berlin
+Monica Gonzalez,2024-11-15,2432,Automotive,Miami
+Joshua Smith,2024-11-12,4854,Books,Dallas
+Dorothy Lambert,2024-11-20,4767,Books,Chicago
+Willie Smith,2024-11-14,2977,Clothing,London
+Shelby Weeks,2024-11-05,2422,Electronics,Dallas
+Traci Foster,2024-11-15,4599,Groceries,Chicago
+Karen Prince,2024-11-06,1551,Sports,Dallas
+David Harrell,2024-11-10,1730,Electronics,Berlin
+Veronica Allen,2024-11-18,1185,Home Appliances,Chicago
+Rachel Tapia,2024-11-10,3788,Automotive,Toronto
+Christy Williams,2024-11-02,3777,Electronics,Los Angeles
+Benjamin Knight,2024-11-12,3669,Clothing,Chicago
+Margaret Rocha,2024-11-15,2377,Clothing,San Francisco
+Richard Hawkins,2024-11-23,1349,Clothing,Berlin
+Adrienne Erickson,2024-11-27,811,Books,Chicago
+Luis Hughes,2024-11-30,4112,Clothing,Berlin
+Bonnie Guerrero,2024-11-02,1440,Books,London
+Sonya Grant,2024-11-11,2260,Electronics,San Francisco
+Olivia Brady,2024-11-04,1291,Books,Dallas
+Bruce Hamilton,2024-11-03,1149,Groceries,London
+Jordan Mann,2024-11-27,2317,Books,New York
+Anthony Weber,2024-11-28,982,Clothing,Los Angeles
+Shannon Rose,2024-11-20,4606,Sports,San Francisco
+William Everett,2024-11-29,1423,Electronics,Los Angeles
+Jorge Hill,2024-11-21,648,Clothing,Berlin
+Cheryl Casey,2024-11-12,3080,Automotive,Chicago
+James Osborn,2024-11-25,3339,Books,London
+Calvin Cannon,2024-11-10,4496,Groceries,San Francisco
+Ronald Scott,2024-11-09,3841,Groceries,Dallas
+Sarah Graham,2024-11-19,1370,Automotive,Berlin
+Tami Parker,2024-11-12,3147,Sports,Miami
+Michael Lewis,2024-11-01,3556,Automotive,Toronto
+Patricia Holland,2024-11-13,1006,Clothing,Chicago
+Belinda Rowland,2024-11-03,2221,Home Appliances,London
+Justin Reyes,2024-11-22,1813,Clothing,Los Angeles
+Christopher Perry,2024-11-18,2466,Clothing,Toronto
+Troy Ware DDS,2024-11-10,1549,Clothing,Miami
+John Warner,2024-11-23,1794,Sports,London
+Jesus Johnson,2024-11-04,1088,Books,Chicago
+Daniel Contreras,2024-11-16,935,Home Appliances,Dallas
+Lindsay Brown,2024-11-28,3057,Home Appliances,Chicago
+Ralph Higgins,2024-11-08,2024,Books,Berlin
+Levi Smith,2024-11-07,3049,Electronics,Chicago
+Randy Miller,2024-11-25,627,Sports,Berlin
+Michelle Carroll,2024-11-17,1696,Books,San Francisco
+Anne Cummings,2024-11-13,2496,Electronics,New York
+Anne Cooper,2024-11-09,4324,Sports,New York
+Samantha Little,2024-11-06,2594,Clothing,Berlin
+Anthony Potter,2024-11-03,1818,Sports,New York
+Dustin Day,2024-11-28,1896,Books,Miami
+Sierra James,2024-11-29,3127,Home Appliances,Los Angeles
+Joshua Watson,2024-11-22,1520,Electronics,Dallas
+Ashley Moore,2024-11-30,4653,Sports,Miami
+Susan Peters,2024-11-28,4254,Sports,Toronto
+Jasmine Anderson,2024-11-08,4418,Groceries,Berlin
+George Harris,2024-11-23,864,Sports,New York
+Christina Robles,2024-11-01,654,Books,London
+Todd Silva,2024-11-22,2511,Books,New York
+Lee Simon,2024-11-27,4828,Groceries,Dallas
+John Hester,2024-11-24,4876,Electronics,Miami
+Rhonda Miller MD,2024-11-30,1923,Clothing,London
+Brooke Miller,2024-11-03,3935,Electronics,Berlin
+Morgan Dyer,2024-11-08,1938,Sports,London
+Angela Rhodes,2024-11-18,2706,Home Appliances,Toronto
+Rachel Graves,2024-11-19,741,Home Appliances,London
+Thomas Parker,2024-11-25,1683,Home Appliances,New York
+Craig Lamb,2024-11-05,2102,Automotive,Toronto
+April Ruiz,2024-11-21,4596,Groceries,Dallas
+Rebecca Patrick,2024-11-09,3027,Sports,Dallas
+Shannon Shea,2024-11-15,4620,Automotive,Chicago
+James Thomas,2024-11-22,2391,Groceries,Toronto
+Jennifer Gray,2024-11-15,4478,Groceries,London
+Kristen Hawkins,2024-11-16,3698,Groceries,Los Angeles
+Jacob Rodriguez,2024-11-22,3418,Clothing,San Francisco
+Christopher Blanchard,2024-11-10,1706,Clothing,New York
+Taylor Sanchez,2024-11-14,1544,Clothing,Miami
+Emily Mcmahon,2024-11-06,3532,Books,Toronto
+John Porter,2024-11-29,3944,Home Appliances,Toronto
+Joshua White,2024-11-28,1835,Books,Miami
+John Harrison,2024-11-14,554,Sports,Berlin
+Matthew Vargas,2024-11-25,4066,Clothing,New York
+Steven Miles,2024-11-30,2558,Automotive,Los Angeles
+Jacob Tran,2024-11-09,4632,Home Appliances,Dallas
+Jeremy Rose,2024-11-15,1372,Automotive,London
+John Young,2024-11-08,3587,Clothing,San Francisco
+Angelica Mann,2024-11-01,1416,Automotive,Los Angeles
+Julie Mcguire,2024-11-06,3513,Books,Dallas
+Mrs. Crystal Hogan,2024-11-13,2135,Groceries,Chicago
+Jason Anderson,2024-11-26,727,Clothing,Berlin
+Ronald Gomez,2024-11-24,2463,Clothing,Los Angeles
+Justin Rivas,2024-11-11,4457,Clothing,Miami
+Andrea Thornton,2024-11-24,4091,Groceries,San Francisco
+Thomas Webster,2024-11-07,1398,Groceries,San Francisco
+Casey Brooks,2024-11-14,2629,Home Appliances,New York
+Jason Dennis,2024-11-05,952,Automotive,Berlin
+Tanya Green,2024-11-15,3849,Sports,San Francisco
+Linda Bishop,2024-11-15,3447,Groceries,Miami
+George Wright,2024-11-06,2154,Books,Toronto
+Debbie Tate,2024-11-30,4792,Books,Berlin
+Patrick Anderson,2024-11-24,2017,Groceries,London

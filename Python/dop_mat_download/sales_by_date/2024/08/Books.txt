@@ -1,0 +1,43 @@
+Ryan Hanson,2024-08-29,2731,Books,Los Angeles
+Ashley Wallace,2024-08-22,4334,Books,Berlin
+Sarah Smith,2024-08-26,2418,Books,San Francisco
+Tara Caldwell,2024-08-17,2689,Books,Dallas
+Steven Newman,2024-08-21,1975,Books,Toronto
+Julie Graham,2024-08-24,3273,Books,Dallas
+Steven Gonzalez,2024-08-18,3016,Books,Berlin
+Jonathan Mendez,2024-08-28,3335,Books,Dallas
+Tammy Nash,2024-08-04,2936,Books,Dallas
+Willie Cunningham,2024-08-17,4602,Books,London
+Lance Zhang,2024-08-12,1434,Books,New York
+Lisa Nixon,2024-08-15,4119,Books,London
+Jacqueline Black,2024-08-29,1532,Books,Berlin
+Daniel Hall,2024-08-03,1931,Books,Los Angeles
+Lucas Duncan,2024-08-19,2303,Books,Toronto
+Jack Campbell,2024-08-09,2163,Books,Dallas
+Melissa Soto,2024-08-10,2043,Books,London
+David Sanders,2024-08-09,2396,Books,Los Angeles
+Olivia Randolph,2024-08-09,962,Books,London
+Justin Anderson,2024-08-20,3502,Books,Los Angeles
+Glenn Ware,2024-08-25,3984,Books,Toronto
+Donna Rose,2024-08-14,4539,Books,Dallas
+Craig Morris,2024-08-18,3290,Books,New York
+Mr. Andrew Lewis,2024-08-21,693,Books,London
+Holly Sanders,2024-08-15,3791,Books,Dallas
+Adam Davis,2024-08-08,1603,Books,Toronto
+Brian Fox,2024-08-28,4995,Books,Miami
+Timothy Brown,2024-08-14,4669,Books,San Francisco
+Melissa Owens,2024-08-21,1840,Books,Dallas
+Eric Lee,2024-08-24,1176,Books,Toronto
+Gail Gordon,2024-08-24,4861,Books,Dallas
+Sean Griffin,2024-08-15,1598,Books,London
+Cassandra Greer,2024-08-01,4224,Books,San Francisco
+Gregory Wright,2024-08-18,1904,Books,Los Angeles
+Andrew Archer,2024-08-30,4455,Books,Los Angeles
+Ashley Taylor,2024-08-03,1993,Books,Los Angeles
+Gerald Jackson,2024-08-15,1248,Books,New York
+Nicolas Fischer,2024-08-13,4054,Books,Berlin
+Shelby Molina,2024-08-20,3911,Books,London
+Lisa Boyer,2024-08-12,4620,Books,Berlin
+Kelly Ryan,2024-08-01,2799,Books,Los Angeles
+Anthony Murray,2024-08-21,1814,Books,New York
+Rachel Berry,2024-08-14,4225,Books,New York

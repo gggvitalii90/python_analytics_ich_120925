@@ -1,0 +1,33 @@
+Sarah George,2024-08-12,3230,Home Appliances,Dallas
+Tonya Thomas,2024-08-01,4369,Home Appliances,San Francisco
+John Best,2024-08-01,4155,Home Appliances,Miami
+Robert Reed,2024-08-24,4712,Home Appliances,Toronto
+Alisha Bennett,2024-08-26,1477,Home Appliances,Toronto
+Kristin Alexander,2024-08-14,3012,Home Appliances,Berlin
+Bryan Wagner,2024-08-01,3657,Home Appliances,Miami
+Mr. Michael Miller,2024-08-04,3197,Home Appliances,Miami
+Brian Hale,2024-08-20,2700,Home Appliances,San Francisco
+Ricardo Green,2024-08-04,4896,Home Appliances,Berlin
+Ariel Costa,2024-08-08,4143,Home Appliances,London
+Dean Goodwin,2024-08-21,4802,Home Appliances,New York
+Emma Crawford,2024-08-14,3707,Home Appliances,Chicago
+Jose Cole,2024-08-25,912,Home Appliances,London
+Steven Johnson,2024-08-06,2151,Home Appliances,Dallas
+Dale Burnett,2024-08-20,3832,Home Appliances,Los Angeles
+Cynthia Gardner,2024-08-02,3677,Home Appliances,London
+Jennifer Herman,2024-08-19,2205,Home Appliances,New York
+Yolanda Lewis,2024-08-04,1871,Home Appliances,New York
+Mary Stewart,2024-08-09,1260,Home Appliances,San Francisco
+Jonathan Hall,2024-08-02,4991,Home Appliances,Los Angeles
+Matthew Hernandez,2024-08-25,2055,Home Appliances,Miami
+Sara Mathews,2024-08-12,4167,Home Appliances,New York
+Dr. Ashley Martinez,2024-08-13,3014,Home Appliances,Los Angeles
+Jamie Walker,2024-08-08,4837,Home Appliances,Toronto
+Megan Woodard,2024-08-17,1253,Home Appliances,New York
+Zachary Martinez,2024-08-29,1352,Home Appliances,Toronto
+Kimberly Foster,2024-08-11,3767,Home Appliances,Los Angeles
+Leslie Hartman,2024-08-07,4856,Home Appliances,Miami
+Leon Smith,2024-08-23,2692,Home Appliances,New York
+Karen Allison,2024-08-13,4371,Home Appliances,Los Angeles
+Lisa Sweeney,2024-08-11,4232,Home Appliances,London
+Karen Carr,2024-08-09,2548,Home Appliances,Los Angeles

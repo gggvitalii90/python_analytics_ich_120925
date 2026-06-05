@@ -1,0 +1,30 @@
+Justin Richardson,2024-09-12,1173,Clothing,New York
+James Johnson,2024-09-20,1420,Clothing,San Francisco
+Jeremiah Armstrong,2024-09-02,2058,Clothing,Los Angeles
+Patrick Hall,2024-09-21,659,Clothing,New York
+Sarah Huynh,2024-09-15,4257,Clothing,New York
+Michele Miller,2024-09-22,4761,Clothing,Berlin
+Riley Hancock,2024-09-01,2079,Clothing,London
+Vernon Taylor MD,2024-09-14,4819,Clothing,Los Angeles
+Elizabeth Curry,2024-09-30,4973,Clothing,Los Angeles
+Jennifer Torres,2024-09-28,1568,Clothing,Chicago
+Maurice Baxter,2024-09-30,3836,Clothing,Berlin
+Melissa Francis,2024-09-27,1998,Clothing,San Francisco
+Joshua Mata,2024-09-17,2834,Clothing,San Francisco
+Tamara Carter,2024-09-20,548,Clothing,Los Angeles
+Joy Henderson,2024-09-02,597,Clothing,New York
+Terri Smith,2024-09-12,1954,Clothing,Miami
+Mary Tran,2024-09-10,1722,Clothing,London
+Nicolas Jarvis,2024-09-29,627,Clothing,Dallas
+Christina Hamilton,2024-09-11,2353,Clothing,Chicago
+Christina Murray,2024-09-26,1849,Clothing,Dallas
+Matthew Lawson,2024-09-30,2904,Clothing,Berlin
+Jeffrey Fields,2024-09-06,3912,Clothing,Berlin
+Mason Carter,2024-09-25,3388,Clothing,Toronto
+Maria Brown,2024-09-21,1981,Clothing,London
+Paul Gross,2024-09-10,1489,Clothing,Toronto
+Traci Morgan,2024-09-30,1839,Clothing,Los Angeles
+Ricky Love,2024-09-20,1550,Clothing,Toronto
+Amanda Jones,2024-09-28,1780,Clothing,New York
+Tiffany Thompson,2024-09-17,4245,Clothing,San Francisco
+Robert Fischer,2024-09-03,763,Clothing,Berlin

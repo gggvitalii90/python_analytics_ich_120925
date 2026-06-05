@@ -1,0 +1,35 @@
+Christina Cervantes,2024-12-04,892,Sports,San Francisco
+Trevor Marquez,2024-12-31,944,Sports,Los Angeles
+Jessica Bates MD,2024-12-12,3668,Sports,Toronto
+Joseph Walker,2024-12-20,2994,Sports,Toronto
+Alex Johnson,2024-12-20,800,Sports,Dallas
+Amy Mitchell,2024-12-17,3312,Sports,Berlin
+David Hayes,2024-12-29,3593,Sports,Dallas
+John Garcia,2024-12-02,4491,Sports,Toronto
+Christopher Young,2024-12-02,3706,Sports,Dallas
+Holly King,2024-12-28,1746,Sports,London
+Dennis Martinez,2024-12-02,1374,Sports,San Francisco
+Harry Acosta,2024-12-19,2657,Sports,Miami
+Ronald Howard,2024-12-18,2495,Sports,Los Angeles
+Laura Johnson,2024-12-04,1272,Sports,San Francisco
+Donna Peck,2024-12-18,1219,Sports,Toronto
+Mark Valdez,2024-12-27,2435,Sports,Berlin
+Katrina Friedman,2024-12-25,2774,Sports,Dallas
+Edward Cross,2024-12-28,1207,Sports,Miami
+April King,2024-12-12,1299,Sports,Miami
+Curtis Bennett,2024-12-17,1966,Sports,Dallas
+Amy King,2024-12-24,1744,Sports,Toronto
+David Cole,2024-12-06,1056,Sports,New York
+Heather Coleman,2024-12-03,1925,Sports,Los Angeles
+Megan Cunningham,2024-12-21,4681,Sports,Miami
+Jillian Briggs,2024-12-05,3574,Sports,Toronto
+Michael Johnson,2024-12-30,642,Sports,New York
+Francis Blair,2024-12-31,2613,Sports,Toronto
+Zachary Wilson,2024-12-25,2133,Sports,Toronto
+Christie Cole,2024-12-24,4780,Sports,Los Angeles
+Carlos Schultz,2024-12-23,4354,Sports,Chicago
+Aaron Jackson,2024-12-24,4361,Sports,Miami
+Travis Greene,2024-12-04,4767,Sports,New York
+Calvin Hodges,2024-12-08,4081,Sports,Toronto
+Stephanie Brown,2024-12-10,3058,Sports,Dallas
+Linda Thomas,2024-12-28,2689,Sports,London

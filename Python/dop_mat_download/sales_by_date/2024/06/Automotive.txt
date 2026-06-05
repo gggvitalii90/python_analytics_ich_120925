@@ -1,0 +1,40 @@
+Christine Anderson,2024-06-02,1583,Automotive,San Francisco
+David Bowman,2024-06-04,4600,Automotive,Berlin
+Jennifer Smith,2024-06-29,1629,Automotive,Toronto
+Gary Morris,2024-06-19,3584,Automotive,Chicago
+Tiffany Peterson,2024-06-05,1667,Automotive,New York
+Lorraine Hernandez,2024-06-06,1103,Automotive,New York
+Robert Houston,2024-06-18,543,Automotive,London
+Craig Frost,2024-06-13,4223,Automotive,Berlin
+James Carr,2024-06-08,3398,Automotive,Toronto
+Karen Allen,2024-06-09,2741,Automotive,Dallas
+Nicole Lopez,2024-06-13,3840,Automotive,London
+Ronald Petersen,2024-06-14,1968,Automotive,Los Angeles
+Victoria Hurley,2024-06-01,2953,Automotive,Toronto
+Carl Jenkins,2024-06-01,2002,Automotive,Los Angeles
+Austin Cunningham,2024-06-13,2850,Automotive,Chicago
+Randy Parks,2024-06-19,1682,Automotive,Chicago
+Michael Payne,2024-06-25,4499,Automotive,Toronto
+Julie Lopez,2024-06-20,1277,Automotive,New York
+Tiffany Underwood,2024-06-07,2663,Automotive,London
+Susan Mills,2024-06-30,2392,Automotive,New York
+Heather Erickson,2024-06-01,1004,Automotive,Dallas
+Kevin Meyer,2024-06-11,1734,Automotive,New York
+Devin Solomon,2024-06-05,3703,Automotive,Miami
+Christopher Bell,2024-06-12,4638,Automotive,Miami
+Sarah Love,2024-06-12,2288,Automotive,Los Angeles
+Kelly Crawford,2024-06-02,3588,Automotive,Miami
+Richard Key,2024-06-11,4249,Automotive,Miami
+John Zhang,2024-06-10,2571,Automotive,San Francisco
+Miguel Farmer,2024-06-02,879,Automotive,London
+Elizabeth Wang,2024-06-05,3232,Automotive,Miami
+Stacy Padilla,2024-06-25,1013,Automotive,London
+Terry Velez,2024-06-07,2720,Automotive,Toronto
+Bailey Moore,2024-06-29,2678,Automotive,Miami
+Scott Price,2024-06-12,4704,Automotive,Chicago
+Jasmine Hardin,2024-06-16,2873,Automotive,London
+Kevin Hampton,2024-06-25,1774,Automotive,Los Angeles
+Robin George,2024-06-11,4502,Automotive,Dallas
+Mary Castro,2024-06-10,1840,Automotive,Berlin
+Robert Mitchell,2024-06-14,1850,Automotive,Toronto
+David Michael,2024-06-12,1601,Automotive,San Francisco

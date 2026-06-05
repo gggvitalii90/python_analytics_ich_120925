@@ -1,0 +1,26 @@
+Nicholas Powers,2025-02-05,2979,Electronics,Chicago
+Jamie Carpenter,2025-02-14,4925,Electronics,San Francisco
+Maria Nguyen,2025-02-23,3353,Electronics,London
+Kendra Martinez,2025-02-01,3799,Electronics,Los Angeles
+Raymond Phillips,2025-02-12,4567,Electronics,Miami
+Andrea Velazquez,2025-02-22,2361,Electronics,Dallas
+Cynthia Maddox,2025-02-01,538,Electronics,San Francisco
+Mr. Marcus Morrison DDS,2025-02-17,3124,Electronics,San Francisco
+Jamie Espinoza,2025-02-15,1717,Electronics,Berlin
+Rachel Miller,2025-02-02,1097,Electronics,Dallas
+Jose Johnson,2025-02-12,1565,Electronics,San Francisco
+Crystal Evans,2025-02-04,2177,Electronics,Los Angeles
+Heather Fowler,2025-02-25,2270,Electronics,Dallas
+Jillian Mcgee,2025-02-28,4113,Electronics,Los Angeles
+Brian Sanford,2025-02-16,3945,Electronics,Chicago
+Michelle Smith,2025-02-25,3430,Electronics,San Francisco
+Margaret Lawson,2025-02-18,1678,Electronics,London
+Anthony Cervantes,2025-02-15,4125,Electronics,Dallas
+Michael Barnes,2025-02-20,4294,Electronics,Los Angeles
+Jonathan Lopez,2025-02-26,3931,Electronics,Berlin
+Michael Nichols,2025-02-21,4866,Electronics,Toronto
+Barry House,2025-02-11,1739,Electronics,Miami
+Belinda Rogers,2025-02-15,4916,Electronics,New York
+Mrs. Karen Baker,2025-02-25,967,Electronics,Chicago
+Sandra Blake,2025-02-09,4602,Electronics,New York
+Jason Gomez,2025-02-18,3779,Electronics,London

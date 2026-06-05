@@ -1,0 +1,38 @@
+Kristi Bailey,2024-09-11,2241,Home Appliances,Toronto
+Amy Clark,2024-09-05,1928,Home Appliances,San Francisco
+Taylor Cook DVM,2024-09-19,4996,Home Appliances,San Francisco
+Carlos Garcia,2024-09-22,4945,Home Appliances,Los Angeles
+Matthew Smith,2024-09-03,1766,Home Appliances,Dallas
+Carla Zuniga,2024-09-24,665,Home Appliances,London
+Stephanie Mcguire,2024-09-19,4179,Home Appliances,Los Angeles
+Louis Tanner,2024-09-23,4854,Home Appliances,Berlin
+Erin Hayes,2024-09-23,2203,Home Appliances,Chicago
+Adam Harrington,2024-09-01,3754,Home Appliances,Berlin
+Laurie Brown,2024-09-29,4491,Home Appliances,Dallas
+Jimmy Henry,2024-09-21,2029,Home Appliances,Toronto
+Mark Wise,2024-09-21,2499,Home Appliances,Chicago
+Mr. Corey Evans Jr.,2024-09-17,2538,Home Appliances,New York
+Mrs. Amanda Robertson,2024-09-10,4155,Home Appliances,London
+Kevin Taylor,2024-09-15,4874,Home Appliances,Chicago
+Dawn Campbell,2024-09-21,4905,Home Appliances,Los Angeles
+Ryan Kennedy,2024-09-11,1026,Home Appliances,London
+Brian Martin,2024-09-04,739,Home Appliances,London
+Troy Martin,2024-09-06,2004,Home Appliances,London
+Daniel Hernandez,2024-09-05,4904,Home Appliances,London
+Katrina Morgan,2024-09-23,2476,Home Appliances,San Francisco
+Aaron Klein,2024-09-16,770,Home Appliances,Chicago
+Tracy Martinez,2024-09-25,1736,Home Appliances,Miami
+Bobby Hernandez DVM,2024-09-30,3823,Home Appliances,Dallas
+Jose Duncan,2024-09-22,1197,Home Appliances,Berlin
+Joseph Daniels,2024-09-14,609,Home Appliances,Toronto
+Benjamin Moore,2024-09-08,2380,Home Appliances,San Francisco
+Kyle Warren,2024-09-22,664,Home Appliances,Dallas
+Robert Murphy,2024-09-09,1294,Home Appliances,Berlin
+Jamie Nunez,2024-09-28,3237,Home Appliances,San Francisco
+Anne Roberts,2024-09-11,2713,Home Appliances,London
+James Joseph,2024-09-26,3849,Home Appliances,Los Angeles
+Christina Dennis,2024-09-27,3638,Home Appliances,San Francisco
+Melissa King,2024-09-13,4880,Home Appliances,Los Angeles
+Colton Bray,2024-09-16,1637,Home Appliances,San Francisco
+Anthony Nicholson MD,2024-09-21,3671,Home Appliances,New York
+Pamela Wright,2024-09-05,4876,Home Appliances,New York

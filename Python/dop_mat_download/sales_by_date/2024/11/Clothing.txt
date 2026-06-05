@@ -1,0 +1,42 @@
+Christina Weaver,2024-11-26,1688,Clothing,Dallas
+Melanie Greene,2024-11-28,3193,Clothing,Miami
+James Mullins,2024-11-22,1684,Clothing,San Francisco
+Mark Bradford,2024-11-24,844,Clothing,New York
+Patrick Serrano,2024-11-29,3901,Clothing,New York
+Larry Jackson,2024-11-10,1024,Clothing,Miami
+Brittany Martin,2024-11-26,3351,Clothing,San Francisco
+Rebecca Mathews,2024-11-07,3440,Clothing,London
+Melody Hudson,2024-11-23,2268,Clothing,Berlin
+Harry Humphrey,2024-11-20,4595,Clothing,Miami
+Scott Green,2024-11-29,4620,Clothing,New York
+Victor Thomas,2024-11-09,1610,Clothing,Miami
+Randy Arias,2024-11-16,1365,Clothing,Los Angeles
+Dr. Monica Woodard,2024-11-05,1093,Clothing,Dallas
+Brian Cook,2024-11-02,4349,Clothing,Miami
+Amy Romero,2024-11-10,2458,Clothing,London
+Diane Ford,2024-11-13,3874,Clothing,Berlin
+Stacey Banks,2024-11-26,1515,Clothing,London
+Robert Ruiz,2024-11-23,4459,Clothing,London
+Jonathan Mason,2024-11-10,1163,Clothing,Chicago
+Paula Charles,2024-11-04,4468,Clothing,London
+Willie Smith,2024-11-14,2977,Clothing,London
+Benjamin Knight,2024-11-12,3669,Clothing,Chicago
+Margaret Rocha,2024-11-15,2377,Clothing,San Francisco
+Richard Hawkins,2024-11-23,1349,Clothing,Berlin
+Luis Hughes,2024-11-30,4112,Clothing,Berlin
+Anthony Weber,2024-11-28,982,Clothing,Los Angeles
+Jorge Hill,2024-11-21,648,Clothing,Berlin
+Patricia Holland,2024-11-13,1006,Clothing,Chicago
+Justin Reyes,2024-11-22,1813,Clothing,Los Angeles
+Christopher Perry,2024-11-18,2466,Clothing,Toronto
+Troy Ware DDS,2024-11-10,1549,Clothing,Miami
+Samantha Little,2024-11-06,2594,Clothing,Berlin
+Rhonda Miller MD,2024-11-30,1923,Clothing,London
+Jacob Rodriguez,2024-11-22,3418,Clothing,San Francisco
+Christopher Blanchard,2024-11-10,1706,Clothing,New York
+Taylor Sanchez,2024-11-14,1544,Clothing,Miami
+Matthew Vargas,2024-11-25,4066,Clothing,New York
+John Young,2024-11-08,3587,Clothing,San Francisco
+Jason Anderson,2024-11-26,727,Clothing,Berlin
+Ronald Gomez,2024-11-24,2463,Clothing,Los Angeles
+Justin Rivas,2024-11-11,4457,Clothing,Miami

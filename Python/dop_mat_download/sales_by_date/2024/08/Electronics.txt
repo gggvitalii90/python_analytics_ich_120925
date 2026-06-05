@@ -1,0 +1,28 @@
+Mr. Timothy Henderson,2024-08-13,3684,Electronics,Miami
+Elizabeth Marquez,2024-08-03,1740,Electronics,Miami
+Katherine Foley,2024-08-12,4833,Electronics,Berlin
+Stephen Robinson,2024-08-23,2781,Electronics,San Francisco
+Misty Hoffman,2024-08-07,1663,Electronics,Miami
+Melody Page,2024-08-24,2644,Electronics,New York
+Amanda Thompson,2024-08-30,4633,Electronics,Toronto
+Kelly Smith,2024-08-13,4193,Electronics,Toronto
+Felicia Delgado,2024-08-30,3518,Electronics,Toronto
+Garrett Blair,2024-08-27,943,Electronics,San Francisco
+Benjamin Cole,2024-08-25,2719,Electronics,Berlin
+Lance Perry,2024-08-28,2348,Electronics,Chicago
+Bobby Murray,2024-08-21,4098,Electronics,London
+Adam Brown,2024-08-16,3749,Electronics,Berlin
+Matthew Osborne,2024-08-14,4847,Electronics,San Francisco
+David Jimenez,2024-08-28,614,Electronics,Berlin
+Karen Watson,2024-08-22,4629,Electronics,San Francisco
+Rebecca Schmidt,2024-08-01,1074,Electronics,Dallas
+Elizabeth Ramirez,2024-08-14,4299,Electronics,Dallas
+Haley Rocha,2024-08-21,1903,Electronics,Miami
+Stephanie Bass,2024-08-02,2458,Electronics,Dallas
+John Perkins,2024-08-16,4359,Electronics,San Francisco
+Jonathan Nelson,2024-08-22,3856,Electronics,San Francisco
+Robert Fuller,2024-08-16,1443,Electronics,San Francisco
+Marilyn Palmer,2024-08-18,4330,Electronics,Toronto
+John Fowler,2024-08-04,4858,Electronics,Berlin
+Michelle Mcpherson,2024-08-07,4354,Electronics,San Francisco
+Jean Harris,2024-08-29,640,Electronics,San Francisco

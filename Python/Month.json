@@ -1,0 +1,62 @@
+[
+    {
+        "Month": 1,
+        "Income": 9072,
+        "Outcome": 6668
+    },
+    {
+        "Month": 2,
+        "Income": 2414,
+        "Outcome": 7494
+    },
+    {
+        "Month": 3,
+        "Income": 4517,
+        "Outcome": 6901
+    },
+    {
+        "Month": 4,
+        "Income": 8883,
+        "Outcome": 7209
+    },
+    {
+        "Month": 5,
+        "Income": 3648,
+        "Outcome": 5089
+    },
+    {
+        "Month": 6,
+        "Income": 7815,
+        "Outcome": 6221
+    },
+    {
+        "Month": 7,
+        "Income": 8799,
+        "Outcome": 9540
+    },
+    {
+        "Month": 8,
+        "Income": 8643,
+        "Outcome": 4447
+    },
+    {
+        "Month": 9,
+        "Income": 9585,
+        "Outcome": 8307
+    },
+    {
+        "Month": 10,
+        "Income": 8455,
+        "Outcome": 5568
+    },
+    {
+        "Month": 11,
+        "Income": 4583,
+        "Outcome": 6706
+    },
+    {
+        "Month": 12,
+        "Income": 6463,
+        "Outcome": 7310
+    }
+]

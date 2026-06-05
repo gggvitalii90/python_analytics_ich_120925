@@ -1,0 +1,30 @@
+Lauren Martinez,2024-07-08,1187,Groceries,San Francisco
+Jennifer Moreno,2024-07-06,844,Groceries,Miami
+Mr. Trevor Brown,2024-07-28,1464,Groceries,Los Angeles
+John Roberts MD,2024-07-10,4205,Groceries,Berlin
+Jill Gilbert,2024-07-23,3328,Groceries,Miami
+Sharon Shaw,2024-07-09,3349,Groceries,London
+Riley Wood,2024-07-29,824,Groceries,Toronto
+Christina Evans,2024-07-18,2165,Groceries,London
+Brittany Brock,2024-07-24,2481,Groceries,Berlin
+James Ramirez,2024-07-22,3404,Groceries,Dallas
+Wanda Hines,2024-07-27,1225,Groceries,Dallas
+Erica Williams,2024-07-20,739,Groceries,Miami
+Brenda Mccoy,2024-07-24,4780,Groceries,Los Angeles
+Troy Mcdonald,2024-07-31,2073,Groceries,Miami
+Thomas Schroeder,2024-07-05,4749,Groceries,Berlin
+Yvonne Hayes,2024-07-02,2005,Groceries,Toronto
+Michael Robertson,2024-07-16,4600,Groceries,Chicago
+Michelle Stevens,2024-07-15,4101,Groceries,Berlin
+Stephanie Lambert,2024-07-14,2922,Groceries,San Francisco
+Jared Dunlap,2024-07-28,3594,Groceries,Berlin
+Cathy Sanchez,2024-07-12,750,Groceries,Dallas
+Chad Carroll,2024-07-05,4450,Groceries,Los Angeles
+David Hawkins,2024-07-09,3581,Groceries,Los Angeles
+Ann Dunn,2024-07-10,1260,Groceries,Toronto
+Jason Bradley,2024-07-13,2511,Groceries,San Francisco
+John Richard,2024-07-30,4902,Groceries,Dallas
+Tina Valdez,2024-07-10,2832,Groceries,New York
+Marc Bishop,2024-07-01,1846,Groceries,London
+Erica Baldwin,2024-07-18,1767,Groceries,Miami
+Kenneth Roberts,2024-07-26,3080,Groceries,Berlin

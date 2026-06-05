@@ -1,0 +1,31 @@
+Kevin Peters,2024-07-08,4145,Books,Toronto
+Steven Hart,2024-07-06,3869,Books,New York
+Jimmy Wright,2024-07-13,3164,Books,New York
+Jenny White,2024-07-11,2450,Books,Berlin
+Samuel Knox,2024-07-31,713,Books,Berlin
+Dwayne Logan,2024-07-05,1589,Books,San Francisco
+Connor Craig,2024-07-17,2597,Books,New York
+Laura Cantu,2024-07-21,1781,Books,Chicago
+Pamela Fernandez,2024-07-11,3368,Books,New York
+Frank Bolton,2024-07-18,1541,Books,San Francisco
+Ashley Ayala,2024-07-15,2405,Books,London
+Michael Cline,2024-07-13,2159,Books,Los Angeles
+Jessica Maldonado,2024-07-11,2425,Books,London
+Colleen Garcia,2024-07-25,3965,Books,Berlin
+Heather Nelson,2024-07-17,2525,Books,Miami
+Ryan Hopkins,2024-07-22,1202,Books,Chicago
+Maria Duncan,2024-07-17,4321,Books,Toronto
+Michael Payne,2024-07-21,2199,Books,New York
+Billy Trujillo,2024-07-13,3350,Books,New York
+Daniel Terry,2024-07-12,3563,Books,New York
+James Mason,2024-07-02,541,Books,New York
+Danielle Simpson,2024-07-10,1247,Books,Los Angeles
+Aaron Sanders,2024-07-03,2450,Books,Los Angeles
+Joshua Martin,2024-07-09,1195,Books,Los Angeles
+Patrick Williams,2024-07-31,703,Books,Chicago
+Ian Blair,2024-07-13,1852,Books,New York
+Carlos Heath,2024-07-17,1201,Books,New York
+Catherine Murphy,2024-07-03,4845,Books,Miami
+Joseph Smith,2024-07-14,1212,Books,London
+Robert Ibarra MD,2024-07-04,2523,Books,Los Angeles
+Andrea Moore,2024-07-13,1452,Books,Los Angeles

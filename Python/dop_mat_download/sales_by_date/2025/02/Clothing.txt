@@ -1,0 +1,25 @@
+Ethan Hoffman,2025-02-07,1250,Clothing,Dallas
+Chelsea Burch,2025-02-07,3732,Clothing,Miami
+Dr. Daniel Davis,2025-02-28,3147,Clothing,Berlin
+Elizabeth Cooley,2025-02-18,4219,Clothing,Miami
+Veronica Nelson,2025-02-22,3534,Clothing,Berlin
+Scott Miller,2025-02-11,2316,Clothing,San Francisco
+Lori Howell,2025-02-14,3137,Clothing,San Francisco
+Thomas Mullins,2025-02-09,551,Clothing,London
+Eric Reed,2025-02-05,1351,Clothing,Los Angeles
+Pamela Murphy,2025-02-15,3144,Clothing,Los Angeles
+Tony Strong,2025-02-27,3234,Clothing,San Francisco
+Christopher Barker,2025-02-21,1228,Clothing,New York
+Kevin Reid,2025-02-26,1369,Clothing,Dallas
+Elizabeth Simpson,2025-02-12,3608,Clothing,Los Angeles
+Gerald Boyd,2025-02-03,2030,Clothing,Berlin
+Christina White,2025-02-22,4481,Clothing,Dallas
+Paul Cannon,2025-02-07,2133,Clothing,Miami
+Stephanie Andrews,2025-02-16,4181,Clothing,Berlin
+Christopher Cain,2025-02-08,4566,Clothing,Dallas
+Erica Gordon,2025-02-15,3059,Clothing,Los Angeles
+John Sweeney,2025-02-09,1821,Clothing,New York
+Susan Avila,2025-02-24,2260,Clothing,San Francisco
+Karen Rodgers,2025-02-04,4355,Clothing,New York
+Steven Sherman,2025-02-02,2809,Clothing,New York
+Tony Wilcox,2025-02-06,3637,Clothing,Los Angeles

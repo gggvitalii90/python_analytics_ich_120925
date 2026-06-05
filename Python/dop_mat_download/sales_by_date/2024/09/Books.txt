@@ -1,0 +1,35 @@
+Dr. Marie West,2024-09-04,844,Books,London
+David Noble,2024-09-18,1710,Books,Chicago
+Andrea Davis,2024-09-16,4047,Books,London
+Angela Hendricks,2024-09-29,610,Books,Toronto
+Brittany Ewing,2024-09-10,3493,Books,New York
+Melissa Gallagher,2024-09-28,3457,Books,Chicago
+Robin Barnes,2024-09-29,3713,Books,Toronto
+Ryan Schultz,2024-09-05,1229,Books,Chicago
+Rachael Gordon,2024-09-20,4173,Books,Chicago
+Kenneth Hayes,2024-09-18,1755,Books,New York
+Elizabeth Simmons,2024-09-18,1321,Books,San Francisco
+Andrew Williams,2024-09-29,979,Books,London
+Kelly Dodson,2024-09-28,1754,Books,Toronto
+Amber Newman,2024-09-21,4160,Books,London
+Kelly Peterson,2024-09-30,4158,Books,San Francisco
+Richard Fox,2024-09-28,3051,Books,Dallas
+Jill Williams,2024-09-19,2268,Books,London
+Jennifer Becker,2024-09-16,3748,Books,Chicago
+Jonathan Dennis,2024-09-27,2582,Books,Los Angeles
+Shelley Schmidt,2024-09-11,715,Books,New York
+Heather Fox,2024-09-07,3832,Books,Toronto
+Catherine Pitts,2024-09-02,606,Books,London
+Maria Jones,2024-09-10,568,Books,Miami
+David Powell,2024-09-24,1505,Books,London
+Rachel Alvarez,2024-09-23,917,Books,San Francisco
+Marissa Fowler,2024-09-18,4166,Books,Berlin
+Jacqueline Flores,2024-09-20,2136,Books,Miami
+Larry Sawyer,2024-09-04,1910,Books,Chicago
+Shelby Brown,2024-09-04,4485,Books,Chicago
+Joshua Moore,2024-09-15,3001,Books,Dallas
+Ruben Gonzales,2024-09-17,2062,Books,San Francisco
+Shawn Simon,2024-09-08,2706,Books,New York
+Nathaniel Gilbert,2024-09-14,1219,Books,Dallas
+Taylor Kennedy,2024-09-09,3158,Books,Dallas
+Angela Jensen,2024-09-04,3326,Books,Toronto

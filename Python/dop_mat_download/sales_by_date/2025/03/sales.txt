@@ -1,0 +1,21 @@
+Ricky Boyle,2025-03-01,3701,Books,Dallas
+Kelly Olson,2025-03-01,2232,Clothing,New York
+Stephen Adams,2025-03-02,4290,Books,Chicago
+Luis Ryan,2025-03-02,2139,Books,Los Angeles
+Stephen Hanson,2025-03-01,3304,Groceries,Miami
+Randall Palmer,2025-03-02,4442,Clothing,Los Angeles
+Angela Hahn,2025-03-01,647,Electronics,New York
+Brian Wyatt,2025-03-02,4089,Electronics,Dallas
+Jennifer Knox,2025-03-02,3609,Sports,Berlin
+Elizabeth Curry,2025-03-02,847,Electronics,Chicago
+Adam Gomez,2025-03-02,2544,Sports,London
+Michael Gutierrez,2025-03-01,1831,Electronics,Dallas
+Bryan Morales,2025-03-01,4866,Groceries,San Francisco
+Allen Woods,2025-03-01,992,Automotive,Los Angeles
+Felicia Anderson,2025-03-02,1237,Clothing,Berlin
+David Walker,2025-03-02,611,Groceries,London
+Sara Reid,2025-03-01,4651,Books,London
+Jennifer Harris,2025-03-02,1500,Books,Toronto
+Jonathan Mack,2025-03-02,1596,Sports,Berlin
+Michele Brown,2025-03-01,3121,Clothing,Miami
+Megan Mcknight,2025-03-01,2674,Sports,Chicago

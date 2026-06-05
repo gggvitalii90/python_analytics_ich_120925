@@ -1,0 +1,31 @@
+Lisa Harris,2024-12-17,1673,Home Appliances,Toronto
+Eddie Jackson Jr.,2024-12-10,3210,Home Appliances,Chicago
+William Rice,2024-12-05,1719,Home Appliances,Miami
+Kevin Snow,2024-12-25,3468,Home Appliances,New York
+Richard English,2024-12-28,4778,Home Appliances,San Francisco
+Kelly Mcgrath,2024-12-26,4964,Home Appliances,Dallas
+John Taylor,2024-12-12,754,Home Appliances,Miami
+Jordan Huerta,2024-12-03,4989,Home Appliances,Chicago
+Sandra Fisher,2024-12-17,3068,Home Appliances,Chicago
+Virginia Potter,2024-12-28,2840,Home Appliances,Toronto
+Victoria Sanchez,2024-12-27,1157,Home Appliances,Los Angeles
+Devin Ferguson,2024-12-27,3121,Home Appliances,Los Angeles
+Yolanda Stewart,2024-12-19,674,Home Appliances,Los Angeles
+Bobby Diaz,2024-12-10,4762,Home Appliances,Chicago
+Samuel Moore,2024-12-26,2531,Home Appliances,Berlin
+Mary Hunter,2024-12-07,500,Home Appliances,Los Angeles
+Diana Morgan,2024-12-19,3261,Home Appliances,New York
+Kevin Stone,2024-12-17,984,Home Appliances,Miami
+Rachel Richardson,2024-12-08,2672,Home Appliances,Dallas
+Allison White,2024-12-25,4266,Home Appliances,Miami
+Betty Allen,2024-12-02,2551,Home Appliances,Miami
+Erin Phillips,2024-12-08,2699,Home Appliances,Toronto
+Christina Chapman,2024-12-16,2686,Home Appliances,San Francisco
+Caleb Miller,2024-12-16,4927,Home Appliances,Berlin
+Julian Jones,2024-12-30,2580,Home Appliances,Dallas
+Sean Long,2024-12-17,4814,Home Appliances,London
+Joshua Russo,2024-12-20,3676,Home Appliances,Toronto
+Christine Santos,2024-12-17,2289,Home Appliances,Toronto
+Susan Jones,2024-12-15,2855,Home Appliances,Berlin
+Alexis Conway DVM,2024-12-22,2766,Home Appliances,Toronto
+Matthew Atkinson,2024-12-15,781,Home Appliances,San Francisco

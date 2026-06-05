@@ -1,0 +1,264 @@
+Phillip Lopez,2025-01-29,3425,Groceries,Los Angeles
+Charlene Sanders,2025-01-09,968,Electronics,Toronto
+Erika Miller,2025-01-01,966,Books,Los Angeles
+Jennifer Graham PhD,2025-01-02,3622,Home Appliances,Miami
+Yvette Diaz,2025-01-17,3314,Books,San Francisco
+Nathan Riley,2025-01-26,571,Books,Los Angeles
+Ricardo Jackson,2025-01-23,4912,Groceries,Toronto
+Aaron Guzman,2025-01-19,645,Automotive,Chicago
+Elizabeth West,2025-01-25,4278,Home Appliances,London
+Jeffrey Miranda,2025-01-22,3113,Electronics,San Francisco
+Mr. Anthony Mullins,2025-01-05,3174,Sports,New York
+Hannah Bush,2025-01-18,3480,Electronics,London
+Nancy Johnson,2025-01-06,1608,Automotive,New York
+Tara Clark,2025-01-17,3266,Home Appliances,Dallas
+Shaun Glover,2025-01-16,2227,Home Appliances,Chicago
+Dr. David Davis MD,2025-01-17,730,Clothing,Chicago
+Nicholas Sanchez,2025-01-18,2787,Clothing,Chicago
+Brent Woods,2025-01-17,4408,Groceries,San Francisco
+Christopher Smith,2025-01-19,2179,Electronics,Berlin
+Kevin Collins,2025-01-27,538,Groceries,Dallas
+Angelica Daugherty,2025-01-11,1618,Sports,San Francisco
+Daniel Johnson,2025-01-14,2591,Groceries,Berlin
+Stephanie Owens,2025-01-14,3096,Groceries,Toronto
+Jason Kim,2025-01-06,3882,Clothing,Miami
+Christopher Vazquez,2025-01-02,689,Books,Dallas
+Randall Peterson,2025-01-05,2305,Books,New York
+Christina Johnson,2025-01-11,1897,Sports,Dallas
+Emily Lane,2025-01-11,2802,Electronics,Berlin
+Alec Richardson,2025-01-20,4801,Clothing,Miami
+Catherine Gallegos,2025-01-22,1693,Sports,Berlin
+Philip Jones,2025-01-26,2913,Books,Miami
+Michelle Barr,2025-01-07,3717,Groceries,London
+Kelsey Strickland,2025-01-01,2358,Electronics,London
+Kimberly Jensen,2025-01-03,1574,Clothing,Toronto
+Katrina Brown,2025-01-12,3530,Electronics,Berlin
+Lisa Morse,2025-01-29,1199,Sports,Toronto
+Holly Rice,2025-01-26,3268,Electronics,London
+Thomas Boyle,2025-01-16,3470,Home Appliances,San Francisco
+Amber Wallace,2025-01-08,1072,Sports,Miami
+Donald Nelson,2025-01-02,4009,Automotive,San Francisco
+Melissa Wright,2025-01-11,686,Sports,Dallas
+Kevin Taylor,2025-01-20,4913,Automotive,San Francisco
+Lisa Valdez,2025-01-17,1378,Electronics,Toronto
+Kristina Reed,2025-01-04,1968,Home Appliances,Chicago
+Stephanie Marshall,2025-01-06,2878,Home Appliances,Toronto
+Tiffany Ellis,2025-01-03,1620,Automotive,Dallas
+Lindsay Sanchez,2025-01-07,2914,Books,London
+Brandon Bullock,2025-01-05,2671,Books,San Francisco
+Angela Fischer,2025-01-14,3941,Books,Toronto
+Sandra Acosta,2025-01-05,2242,Clothing,San Francisco
+Virginia Mccormick,2025-01-27,4119,Automotive,Berlin
+Joseph Rojas,2025-01-07,4233,Automotive,San Francisco
+Sharon Robinson,2025-01-28,1286,Home Appliances,Dallas
+Bruce Novak,2025-01-31,994,Automotive,Dallas
+Matthew Stout,2025-01-01,607,Automotive,New York
+Jeffrey Byrd,2025-01-15,1252,Home Appliances,Dallas
+Darren Robinson,2025-01-07,4106,Clothing,London
+Ryan Dickerson,2025-01-08,2047,Groceries,Chicago
+Sean Parker,2025-01-04,3666,Sports,Chicago
+Stefanie Ortiz,2025-01-01,2817,Automotive,Miami
+Adam Barker,2025-01-31,1060,Clothing,San Francisco
+Teresa Zimmerman,2025-01-24,3862,Home Appliances,Berlin
+Molly Woods,2025-01-24,2008,Automotive,Dallas
+Robert Hood,2025-01-16,4282,Automotive,Dallas
+Emily Montoya,2025-01-31,3180,Clothing,New York
+Daniel Brady,2025-01-20,3448,Automotive,Chicago
+Paul Knight,2025-01-27,3112,Books,Dallas
+Patrick Lynch,2025-01-10,3166,Sports,San Francisco
+Melissa Wilson,2025-01-17,1760,Clothing,San Francisco
+Samantha Williams,2025-01-11,3233,Electronics,London
+Dustin Rose,2025-01-12,3059,Groceries,San Francisco
+Heather Soto,2025-01-09,3572,Clothing,Chicago
+Rachel Christian,2025-01-25,1153,Automotive,Chicago
+Vanessa Johnston,2025-01-30,2567,Home Appliances,Dallas
+Alexander Miller,2025-01-11,4216,Clothing,Toronto
+Rebecca Reed,2025-01-01,4254,Groceries,London
+Tammy Monroe,2025-01-26,3659,Automotive,London
+Dean Luna,2025-01-14,3850,Sports,Miami
+Elizabeth Singh,2025-01-29,3197,Clothing,Los Angeles
+Tracy Smith,2025-01-14,3213,Clothing,Toronto
+Vickie Hernandez,2025-01-19,4429,Automotive,Berlin
+James Holloway,2025-01-03,1323,Automotive,Chicago
+Amber Gibson,2025-01-13,3613,Books,Toronto
+Julie Hoffman,2025-01-15,1552,Electronics,Berlin
+Madison Bates,2025-01-06,1598,Automotive,Dallas
+William Everett,2025-01-28,4491,Electronics,Miami
+Spencer Combs,2025-01-13,2930,Books,Toronto
+Dustin Lester,2025-01-06,2241,Electronics,Dallas
+Angel Rush,2025-01-28,829,Automotive,Dallas
+Wayne Goodman,2025-01-02,917,Electronics,Toronto
+Troy Olson,2025-01-20,588,Clothing,Los Angeles
+Catherine Shea,2025-01-25,3136,Books,London
+Stephen Price,2025-01-24,1642,Automotive,Dallas
+Raymond Rodriguez,2025-01-18,3816,Books,San Francisco
+Cassandra Moore,2025-01-22,2107,Sports,Dallas
+Mark Brown,2025-01-10,3053,Home Appliances,London
+Angelica Odonnell MD,2025-01-21,2198,Electronics,Dallas
+Lisa James,2025-01-14,2811,Sports,New York
+Melissa Rose,2025-01-31,3825,Home Appliances,Chicago
+Gabriel King,2025-01-15,2149,Automotive,Toronto
+Steven Miller,2025-01-09,1166,Electronics,San Francisco
+Wayne Hernandez,2025-01-11,3216,Clothing,San Francisco
+Robert Schultz,2025-01-23,1196,Home Appliances,New York
+Melissa Soto,2025-01-02,2212,Automotive,Los Angeles
+Joshua Young,2025-01-26,2158,Groceries,San Francisco
+Diana Thompson,2025-01-09,1952,Electronics,Dallas
+Nicole Henry,2025-01-09,1095,Groceries,Dallas
+Cody Coleman,2025-01-26,2698,Home Appliances,Los Angeles
+Jamie Maynard,2025-01-16,2186,Groceries,New York
+Cynthia Long,2025-01-19,708,Clothing,Los Angeles
+Jack Hansen,2025-01-13,2131,Books,Dallas
+Michael Reid,2025-01-23,1592,Home Appliances,Los Angeles
+James Grant,2025-01-08,1832,Automotive,Los Angeles
+Melanie Martin,2025-01-07,1252,Groceries,Chicago
+Joel Patterson,2025-01-26,745,Automotive,Dallas
+Jennifer Pena,2025-01-22,4484,Books,London
+James Pugh,2025-01-06,1157,Books,Toronto
+Anthony Spencer,2025-01-09,3841,Groceries,Dallas
+Connie Rosales,2025-01-12,4385,Groceries,Toronto
+Jennifer Robinson,2025-01-13,1900,Home Appliances,San Francisco
+Joshua Smith,2025-01-14,3834,Books,Miami
+Sean Roberts,2025-01-13,3958,Home Appliances,New York
+Mary Perry,2025-01-06,3869,Groceries,Chicago
+Jeffrey Hardy,2025-01-20,3868,Automotive,London
+Charles Velazquez,2025-01-14,4391,Groceries,Berlin
+Ashley Arnold,2025-01-15,4060,Automotive,Chicago
+Eileen Vega,2025-01-18,696,Groceries,Chicago
+James Johnson,2025-01-26,1674,Home Appliances,Miami
+Rebecca Aguilar,2025-01-21,3788,Automotive,Toronto
+Kathleen Patterson,2025-01-06,735,Groceries,New York
+Lisa Cox,2025-01-26,2698,Groceries,Chicago
+George Ortiz,2025-01-09,3777,Clothing,San Francisco
+Diane Murphy,2025-01-05,2448,Sports,Los Angeles
+Heather Savage,2025-01-15,1099,Automotive,Chicago
+Peter Harvey,2025-01-13,950,Home Appliances,London
+Brenda Mcbride,2025-01-31,1021,Books,Berlin
+Amy Manning,2025-01-03,3231,Groceries,Chicago
+Lori Hill,2025-01-09,2813,Groceries,London
+Suzanne Martin,2025-01-13,2583,Books,Toronto
+David Wilson,2025-01-24,2598,Clothing,London
+David Rodriguez,2025-01-16,2833,Automotive,Toronto
+Derek Cortez,2025-01-07,2693,Electronics,San Francisco
+James Morrison,2025-01-28,4190,Books,Miami
+Mrs. Heather Wolfe MD,2025-01-08,4490,Books,Los Angeles
+Melinda Walters,2025-01-15,3190,Sports,New York
+Alvin Jackson,2025-01-26,2094,Sports,Dallas
+James Warner,2025-01-09,1381,Clothing,Toronto
+John Jones,2025-01-15,1793,Home Appliances,Berlin
+Andrea Foster,2025-01-08,4490,Sports,Toronto
+Audrey Callahan MD,2025-01-25,3768,Books,Chicago
+Anthony Davis,2025-01-06,1737,Clothing,Berlin
+Shawn Peters,2025-01-12,1189,Automotive,Los Angeles
+Michele Franklin,2025-01-06,1413,Clothing,Chicago
+Kenneth Ruiz,2025-01-08,2975,Books,Toronto
+Samantha Owens,2025-01-16,1679,Books,New York
+Pamela Lucero,2025-01-26,1593,Books,Dallas
+Crystal Pena,2025-01-07,2951,Clothing,Los Angeles
+Morgan Smith,2025-01-22,3180,Books,New York
+Chad Nichols,2025-01-22,683,Home Appliances,New York
+Stephanie Hayes,2025-01-02,4641,Home Appliances,Toronto
+Michael Curtis,2025-01-18,2345,Groceries,Toronto
+Samantha Nguyen,2025-01-26,3687,Books,Los Angeles
+Alisha George,2025-01-29,2354,Clothing,San Francisco
+Vicki Daugherty,2025-01-24,1118,Books,Chicago
+Joseph Flynn,2025-01-29,4433,Home Appliances,Toronto
+Phillip Price,2025-01-04,2412,Sports,Berlin
+Laura Vasquez,2025-01-14,2259,Automotive,Chicago
+Anthony Williams,2025-01-24,2658,Clothing,Chicago
+Kim Morgan,2025-01-06,3284,Sports,San Francisco
+Michael Mccoy,2025-01-12,4841,Groceries,Miami
+John Snow,2025-01-12,1292,Books,Miami
+Melissa Cole,2025-01-15,1663,Home Appliances,London
+Sarah Kerr,2025-01-30,1385,Sports,Toronto
+Deborah Williams,2025-01-23,1822,Automotive,Dallas
+Matthew Carroll,2025-01-21,4676,Books,Los Angeles
+Patricia Harrison,2025-01-15,1713,Groceries,Berlin
+Ashley Howell,2025-01-31,1829,Clothing,Berlin
+Jason Miller,2025-01-30,4929,Automotive,Toronto
+David Stevens,2025-01-14,1335,Clothing,Berlin
+Sarah Turner,2025-01-19,4796,Books,Chicago
+Melissa Mason,2025-01-25,3436,Electronics,Los Angeles
+Jacob Vazquez,2025-01-11,2143,Clothing,Chicago
+Matthew Nelson,2025-01-12,613,Home Appliances,Dallas
+Alexander Reed,2025-01-06,2289,Clothing,Chicago
+Ronald Orr,2025-01-18,4343,Home Appliances,London
+Kelli Wood,2025-01-15,4391,Sports,Berlin
+Robert Robinson,2025-01-16,4869,Books,London
+William Goodman,2025-01-17,704,Electronics,Dallas
+Mark Simpson,2025-01-15,3488,Clothing,New York
+Katherine Ortiz,2025-01-09,2260,Automotive,London
+Katie Russell,2025-01-14,3206,Groceries,Toronto
+Jose Miller,2025-01-29,2343,Clothing,Miami
+Heather Smith,2025-01-28,4458,Automotive,Dallas
+Eric Stuart,2025-01-05,3452,Sports,Miami
+William Ortiz,2025-01-29,4567,Clothing,Chicago
+Daniel Bell,2025-01-11,1055,Electronics,Miami
+Amber Miller,2025-01-09,4556,Home Appliances,San Francisco
+Austin George,2025-01-31,1534,Sports,Berlin
+Kevin Perry,2025-01-09,3567,Groceries,Miami
+Jillian Walton,2025-01-31,3853,Electronics,Toronto
+Willie Swanson,2025-01-26,1022,Electronics,New York
+Tonya Reynolds,2025-01-07,4410,Groceries,Chicago
+Mario Cook,2025-01-21,2433,Books,Chicago
+Jessica Oneill,2025-01-12,3224,Automotive,New York
+Mark Andrews,2025-01-24,3864,Books,San Francisco
+Brian Cox,2025-01-09,4610,Groceries,San Francisco
+Kerry Scott,2025-01-11,885,Books,Dallas
+Benjamin Solis,2025-01-15,3326,Groceries,San Francisco
+Kelly Mathis,2025-01-07,4001,Electronics,San Francisco
+David Delacruz,2025-01-14,2118,Books,Los Angeles
+Jessica Horton,2025-01-26,727,Home Appliances,Los Angeles
+Carly Wilson,2025-01-03,2764,Automotive,San Francisco
+Willie Raymond,2025-01-15,4536,Electronics,New York
+Denise Wilson,2025-01-30,2182,Books,Chicago
+Brandy Copeland,2025-01-27,4561,Sports,Los Angeles
+Teresa Ruiz,2025-01-09,4256,Automotive,San Francisco
+Danny Cox,2025-01-29,2346,Clothing,London
+George Velasquez,2025-01-23,2826,Clothing,Toronto
+Melissa Tucker,2025-01-03,2785,Home Appliances,Toronto
+William Davis,2025-01-31,4758,Clothing,Dallas
+John Garrison DDS,2025-01-15,3195,Books,Berlin
+Sharon Adams,2025-01-06,2956,Electronics,Miami
+April Lee,2025-01-26,3987,Books,Dallas
+Philip Clark,2025-01-12,574,Electronics,New York
+Susan Howard,2025-01-20,3497,Groceries,Dallas
+Cynthia Morgan,2025-01-11,1419,Electronics,Berlin
+Sarah Reeves,2025-01-11,2548,Electronics,London
+Anthony Stevenson,2025-01-21,948,Home Appliances,Dallas
+Mr. Joshua Hill,2025-01-27,1903,Home Appliances,Miami
+Billy Washington,2025-01-10,1825,Home Appliances,Toronto
+Michael Richardson,2025-01-12,685,Electronics,London
+Michael West,2025-01-12,2428,Electronics,New York
+Christina Bates,2025-01-24,3635,Clothing,Dallas
+Timothy Garcia,2025-01-17,2276,Home Appliances,Chicago
+Shelly Gomez,2025-01-25,2609,Home Appliances,Los Angeles
+Jennifer Chen,2025-01-09,4434,Sports,Toronto
+Adam Garrett,2025-01-22,4318,Sports,Dallas
+Ashley Johnson,2025-01-07,845,Books,Los Angeles
+Daniel Morton DDS,2025-01-05,2034,Automotive,London
+John Lewis,2025-01-11,5000,Books,Chicago
+Joanna Pitts,2025-01-08,4018,Books,London
+Amanda Zhang,2025-01-26,4722,Books,Chicago
+Kevin Rodriguez,2025-01-22,512,Sports,London
+Victoria Silva,2025-01-24,2375,Sports,Berlin
+James Hughes,2025-01-08,3552,Books,Berlin
+Randy Russell,2025-01-06,4185,Groceries,Berlin
+Amanda Harris,2025-01-22,3659,Automotive,Toronto
+Joseph Solis,2025-01-14,3144,Automotive,New York
+James Mccarthy,2025-01-25,4875,Home Appliances,Dallas
+Jason Beasley,2025-01-01,522,Electronics,Los Angeles
+Brandon Riley,2025-01-20,4608,Home Appliances,New York
+Harry Wilson,2025-01-18,2572,Clothing,Los Angeles
+Sarah Rojas,2025-01-12,4362,Sports,London
+Manuel Anderson,2025-01-01,4169,Clothing,Miami
+Stacey Oconnell,2025-01-27,2601,Sports,Miami
+Lisa Robinson,2025-01-25,897,Home Appliances,Los Angeles
+Courtney Conley,2025-01-26,1631,Home Appliances,London
+Joseph Shaw,2025-01-01,580,Home Appliances,Dallas
+Amber Jordan,2025-01-17,1881,Groceries,Miami
+Dr. Crystal Jones,2025-01-27,1614,Electronics,San Francisco
+Richard Sawyer,2025-01-28,1019,Automotive,London
+Darren Cox,2025-01-28,1409,Groceries,Toronto
+Jennifer Nelson,2025-01-28,4531,Electronics,Dallas
+Jonathan Nelson,2025-01-18,1945,Books,Toronto

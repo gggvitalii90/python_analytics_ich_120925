@@ -1,0 +1,33 @@
+Stacy Ferguson,2024-04-26,2539,Books,Toronto
+Stephanie Williams,2024-04-11,3598,Books,San Francisco
+Gary Griffith,2024-04-19,2500,Books,Miami
+Karen Lowe,2024-04-22,3986,Books,Chicago
+Scott Williams,2024-04-10,3560,Books,Los Angeles
+Stephen Hill,2024-04-17,4028,Books,San Francisco
+Samuel Mason,2024-04-28,2810,Books,Berlin
+Tara Armstrong,2024-04-24,3431,Books,Los Angeles
+Christopher Olsen,2024-04-25,1358,Books,Miami
+Michael Graham,2024-04-19,4761,Books,London
+Ashley Li,2024-04-12,2639,Books,San Francisco
+Elizabeth Jackson,2024-04-18,2623,Books,Dallas
+Emily Moore,2024-04-23,2622,Books,Dallas
+Susan Torres,2024-04-21,2613,Books,Dallas
+Tracy Hall,2024-04-26,4849,Books,Dallas
+Alexis Lucero,2024-04-22,3226,Books,Miami
+Cassandra Lee,2024-04-13,652,Books,Chicago
+Alex Allen,2024-04-22,544,Books,San Francisco
+Joshua Anderson,2024-04-02,2777,Books,London
+Lisa Johnson,2024-04-16,4797,Books,Berlin
+Jennifer Green,2024-04-30,4056,Books,Miami
+Christine Gonzales,2024-04-04,4528,Books,New York
+Andrea Molina,2024-04-21,3813,Books,Chicago
+Sarah Ayala,2024-04-23,3387,Books,San Francisco
+Samuel Williams,2024-04-16,3186,Books,Los Angeles
+Stacy Ortiz,2024-04-14,3766,Books,San Francisco
+Edward Burnett,2024-04-17,1898,Books,Toronto
+Gloria Fisher,2024-04-07,4407,Books,Miami
+Anthony Scott,2024-04-15,1414,Books,New York
+Annette Williams,2024-04-20,1720,Books,New York
+Emily Vega,2024-04-30,1180,Books,Berlin
+Kathryn Strickland,2024-04-02,2395,Books,Berlin
+Christopher Adkins,2024-04-26,4303,Books,Los Angeles

@@ -1,0 +1,43 @@
+Jonathan Conner,2024-10-21,1281,Automotive,Chicago
+Rebecca Cruz,2024-10-24,539,Automotive,Toronto
+Robin Lawson,2024-10-25,1899,Automotive,Miami
+Karen Johnson,2024-10-30,4999,Automotive,Chicago
+Duane Bowers,2024-10-22,4005,Automotive,Toronto
+Rebekah Joyce,2024-10-20,1735,Automotive,Miami
+Emily Wilkins,2024-10-03,4320,Automotive,London
+John Williams,2024-10-04,3492,Automotive,Toronto
+Angela Richardson,2024-10-19,3169,Automotive,Miami
+Elizabeth Wade,2024-10-17,1227,Automotive,Los Angeles
+Christina Mcgee,2024-10-30,1075,Automotive,London
+Cheyenne Smith,2024-10-01,4235,Automotive,Berlin
+Linda Garcia,2024-10-14,2673,Automotive,New York
+Grant Lopez,2024-10-25,1011,Automotive,San Francisco
+Jennifer Gutierrez,2024-10-23,3446,Automotive,Chicago
+Matthew Mcguire,2024-10-12,3967,Automotive,London
+Christopher Jones,2024-10-11,3539,Automotive,New York
+Richard Jones,2024-10-13,1314,Automotive,Miami
+Charles Cox,2024-10-09,2997,Automotive,Berlin
+Karen Watts,2024-10-23,1784,Automotive,Chicago
+William Ruiz,2024-10-17,2301,Automotive,Chicago
+Keith Frost,2024-10-24,4139,Automotive,London
+Janice Conner,2024-10-03,4740,Automotive,London
+Preston Day,2024-10-04,4638,Automotive,New York
+Charles Kelly,2024-10-31,865,Automotive,Chicago
+Bianca Small,2024-10-30,4190,Automotive,New York
+Rachel Dunn,2024-10-01,2804,Automotive,New York
+Kelly Patel,2024-10-21,2432,Automotive,Berlin
+Wanda Roberts,2024-10-18,2111,Automotive,San Francisco
+Keith Cook,2024-10-11,2576,Automotive,New York
+Timothy Zuniga,2024-10-08,4107,Automotive,London
+Antonio Martinez,2024-10-19,3010,Automotive,Miami
+Kevin Carter,2024-10-12,3965,Automotive,New York
+Shawn Watkins,2024-10-15,2955,Automotive,San Francisco
+Arthur Jackson,2024-10-29,2760,Automotive,Los Angeles
+Sabrina Gross,2024-10-21,1664,Automotive,Chicago
+Dawn Vargas,2024-10-24,4873,Automotive,Los Angeles
+Lori Friedman,2024-10-09,3930,Automotive,Dallas
+Colleen Davis,2024-10-16,3599,Automotive,Chicago
+Nicole Simmons,2024-10-01,4461,Automotive,Miami
+Christina Tucker,2024-10-17,4531,Automotive,Miami
+Chelsea Cummings,2024-10-12,4591,Automotive,Los Angeles
+Christine Smith,2024-10-26,4512,Automotive,Los Angeles

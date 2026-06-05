@@ -1,0 +1,43 @@
+Elizabeth Walker,2024-11-02,945,Groceries,New York
+David Ellis,2024-11-29,3649,Groceries,Berlin
+Brandy Martinez,2024-11-05,3763,Groceries,Berlin
+Kathryn Peterson,2024-11-24,2354,Groceries,London
+Catherine Whitehead,2024-11-15,2838,Groceries,Toronto
+Andrew Carroll,2024-11-23,4291,Groceries,London
+Arthur Powers,2024-11-02,2191,Groceries,Los Angeles
+Michael Gonzalez,2024-11-12,4303,Groceries,London
+Kenneth Goodman,2024-11-19,3445,Groceries,San Francisco
+Matthew West,2024-11-11,1571,Groceries,Chicago
+Jason Smith,2024-11-23,1543,Groceries,Toronto
+Timothy Parker,2024-11-02,3815,Groceries,London
+Aaron Brown,2024-11-12,857,Groceries,Los Angeles
+Karen Davis,2024-11-29,942,Groceries,Berlin
+Rachel Hill,2024-11-09,1551,Groceries,Los Angeles
+Maria Taylor,2024-11-23,1336,Groceries,New York
+Carla Jackson,2024-11-01,2132,Groceries,Berlin
+Danny Perez,2024-11-29,1121,Groceries,Miami
+Gregory Smith,2024-11-10,3255,Groceries,Toronto
+Amanda Ayers,2024-11-05,3173,Groceries,New York
+Vanessa Page,2024-11-01,4089,Groceries,San Francisco
+David Gallagher,2024-11-27,4633,Groceries,Chicago
+Haley Gray,2024-11-17,2263,Groceries,London
+Greg Sellers,2024-11-16,4635,Groceries,Los Angeles
+Kristen Hayden,2024-11-26,1261,Groceries,Chicago
+Jason Price,2024-11-14,4511,Groceries,San Francisco
+Alexander Armstrong,2024-11-11,2652,Groceries,Berlin
+Michael Cooper,2024-11-19,699,Groceries,Toronto
+Traci Foster,2024-11-15,4599,Groceries,Chicago
+Bruce Hamilton,2024-11-03,1149,Groceries,London
+Calvin Cannon,2024-11-10,4496,Groceries,San Francisco
+Ronald Scott,2024-11-09,3841,Groceries,Dallas
+Jasmine Anderson,2024-11-08,4418,Groceries,Berlin
+Lee Simon,2024-11-27,4828,Groceries,Dallas
+April Ruiz,2024-11-21,4596,Groceries,Dallas
+James Thomas,2024-11-22,2391,Groceries,Toronto
+Jennifer Gray,2024-11-15,4478,Groceries,London
+Kristen Hawkins,2024-11-16,3698,Groceries,Los Angeles
+Mrs. Crystal Hogan,2024-11-13,2135,Groceries,Chicago
+Andrea Thornton,2024-11-24,4091,Groceries,San Francisco
+Thomas Webster,2024-11-07,1398,Groceries,San Francisco
+Linda Bishop,2024-11-15,3447,Groceries,Miami
+Patrick Anderson,2024-11-24,2017,Groceries,London

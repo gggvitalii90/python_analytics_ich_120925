@@ -1,0 +1,44 @@
+Kristen Henderson,2024-10-12,4620,Sports,Toronto
+Andrea Obrien,2024-10-20,4427,Sports,Berlin
+Adrienne Moore,2024-10-15,1725,Sports,Los Angeles
+Austin Hopkins,2024-10-12,646,Sports,London
+Lisa Stephens,2024-10-15,3331,Sports,Toronto
+Chad Holland,2024-10-01,865,Sports,Los Angeles
+Karen Ball,2024-10-23,2305,Sports,London
+Mary Aguilar,2024-10-18,2605,Sports,New York
+Angela Williams,2024-10-17,3763,Sports,Chicago
+Gregory Herman,2024-10-03,3487,Sports,Toronto
+Gilbert Wolfe,2024-10-17,1150,Sports,Dallas
+Brandon Jones,2024-10-08,2213,Sports,New York
+Susan Bush,2024-10-04,4353,Sports,Toronto
+Jessica Ellis,2024-10-03,1070,Sports,Berlin
+Lauren Weaver,2024-10-04,4728,Sports,Chicago
+Daniel White,2024-10-26,1450,Sports,San Francisco
+Dr. Bobby Thomas,2024-10-27,2994,Sports,Berlin
+Wayne Hayes,2024-10-26,4271,Sports,Berlin
+Eric Johnson DDS,2024-10-21,1710,Sports,San Francisco
+Peter Schultz,2024-10-08,4826,Sports,Los Angeles
+Autumn Monroe,2024-10-10,3438,Sports,London
+Jessica Potter,2024-10-03,1812,Sports,Chicago
+Francisco Newman,2024-10-14,2193,Sports,New York
+Samantha Wood,2024-10-12,2341,Sports,Berlin
+Robert Patel,2024-10-19,3049,Sports,Chicago
+Sean Morse,2024-10-18,560,Sports,San Francisco
+Mark Bell,2024-10-03,2774,Sports,Toronto
+Veronica Alvarez,2024-10-13,4102,Sports,San Francisco
+Colleen Martinez,2024-10-03,4315,Sports,London
+Lori Howell,2024-10-08,3588,Sports,Dallas
+Shaun Wright,2024-10-10,2117,Sports,London
+Sean Wilson,2024-10-19,1453,Sports,Toronto
+John Young,2024-10-27,2473,Sports,San Francisco
+Maureen White,2024-10-06,3605,Sports,Berlin
+Steven Pitts,2024-10-29,1733,Sports,New York
+Benjamin Williams,2024-10-31,1081,Sports,Los Angeles
+Bobby Frank,2024-10-05,3562,Sports,Chicago
+Amy Adams,2024-10-14,3015,Sports,New York
+Austin Jackson,2024-10-14,2040,Sports,Chicago
+Calvin Brown,2024-10-31,2630,Sports,London
+Shawn Garcia,2024-10-12,3991,Sports,Berlin
+Kara Smith,2024-10-01,4856,Sports,Miami
+Jason Mckay,2024-10-06,1984,Sports,Los Angeles
+Joanna Willis,2024-10-21,3523,Sports,New York

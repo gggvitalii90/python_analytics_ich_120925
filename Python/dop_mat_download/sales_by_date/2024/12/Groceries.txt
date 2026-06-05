@@ -1,0 +1,37 @@
+Jeffrey Collins,2024-12-31,2507,Groceries,Berlin
+Elizabeth Coleman,2024-12-21,1929,Groceries,Chicago
+Jason Mercer,2024-12-08,2932,Groceries,London
+Karen Wells,2024-12-03,1344,Groceries,New York
+Lisa Noble,2024-12-07,4174,Groceries,Berlin
+Kelly Henderson,2024-12-30,2644,Groceries,Miami
+Paige Owen,2024-12-23,3939,Groceries,San Francisco
+Jessica Cabrera,2024-12-05,1773,Groceries,San Francisco
+Douglas Hoover,2024-12-04,3181,Groceries,Chicago
+Melinda Gonzalez,2024-12-25,4602,Groceries,New York
+Joshua Yates,2024-12-30,1215,Groceries,Los Angeles
+Jason Medina,2024-12-02,701,Groceries,Chicago
+James Bell,2024-12-17,1709,Groceries,London
+Karen Powers,2024-12-15,4896,Groceries,Chicago
+Kristin Wilcox,2024-12-28,4359,Groceries,Berlin
+Christopher Parker,2024-12-09,3133,Groceries,San Francisco
+Michelle Wells,2024-12-03,2589,Groceries,Los Angeles
+Jamie Singleton,2024-12-07,3892,Groceries,Toronto
+Dr. David Rose,2024-12-14,4508,Groceries,New York
+Victoria Gonzales MD,2024-12-30,2004,Groceries,New York
+Paula Johnston,2024-12-27,1017,Groceries,Toronto
+Justin Lamb,2024-12-08,2229,Groceries,Los Angeles
+Geoffrey Rodriguez,2024-12-08,4309,Groceries,Los Angeles
+Amanda Wang,2024-12-07,976,Groceries,New York
+Angelica Ramirez,2024-12-16,1014,Groceries,New York
+Robert Johnson,2024-12-04,4651,Groceries,London
+Jacob Burgess,2024-12-27,1679,Groceries,Los Angeles
+Nicole Watson,2024-12-07,932,Groceries,San Francisco
+Jason Perez,2024-12-01,720,Groceries,Miami
+Michael Thompson,2024-12-02,2493,Groceries,Dallas
+James Faulkner,2024-12-09,784,Groceries,New York
+Gary Simpson,2024-12-15,2578,Groceries,Chicago
+Tina Conley,2024-12-05,2294,Groceries,Toronto
+David Green,2024-12-17,922,Groceries,London
+Joseph Macias,2024-12-24,3080,Groceries,London
+Ashley Martin,2024-12-12,988,Groceries,Toronto
+Mitchell Gutierrez,2024-12-29,3780,Groceries,New York

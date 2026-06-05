@@ -1,0 +1,33 @@
+Jason Salas,2024-06-18,3451,Home Appliances,Miami
+Carla Lewis,2024-06-30,3629,Home Appliances,Berlin
+Daniel Garza,2024-06-18,2722,Home Appliances,Chicago
+Shannon Martinez,2024-06-27,4569,Home Appliances,Toronto
+Michael Jones,2024-06-15,3400,Home Appliances,London
+Chad Bowman,2024-06-09,2228,Home Appliances,London
+Logan Thomas,2024-06-06,670,Home Appliances,New York
+Michael Sullivan,2024-06-22,2731,Home Appliances,Dallas
+Kevin Smith,2024-06-18,2456,Home Appliances,New York
+Ashley Hudson,2024-06-17,2536,Home Appliances,Miami
+Robert Kelly,2024-06-14,3944,Home Appliances,Chicago
+Jennifer Smith,2024-06-08,2901,Home Appliances,New York
+Michael Valencia,2024-06-24,1893,Home Appliances,Miami
+Patrick Harris,2024-06-16,2885,Home Appliances,Toronto
+Kenneth Curry,2024-06-07,3628,Home Appliances,Berlin
+Danny Guerra,2024-06-09,3149,Home Appliances,London
+James Gay,2024-06-28,714,Home Appliances,Dallas
+Robert Jones,2024-06-25,1865,Home Appliances,New York
+Krystal Murphy,2024-06-14,2056,Home Appliances,Dallas
+Dakota Diaz,2024-06-09,3837,Home Appliances,San Francisco
+Laura Aguirre,2024-06-17,4528,Home Appliances,Dallas
+Karen Shannon,2024-06-26,4277,Home Appliances,Dallas
+John White,2024-06-12,1469,Home Appliances,Toronto
+Charles Smith,2024-06-27,648,Home Appliances,New York
+Julie Matthews,2024-06-25,3194,Home Appliances,Chicago
+Danny Hernandez,2024-06-29,3592,Home Appliances,London
+Robert Lowe,2024-06-16,3381,Home Appliances,San Francisco
+Mr. Joseph Durham,2024-06-30,1894,Home Appliances,Los Angeles
+Kimberly Owen,2024-06-10,1283,Home Appliances,London
+Robin Barron,2024-06-01,3925,Home Appliances,Dallas
+Mark Parrish,2024-06-09,1158,Home Appliances,Toronto
+Megan Farrell,2024-06-25,3372,Home Appliances,Berlin
+Kelsey Wilcox,2024-06-02,2433,Home Appliances,New York

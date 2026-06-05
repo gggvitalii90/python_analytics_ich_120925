@@ -1,0 +1,27 @@
+Ashley Donaldson,2024-03-20,2166,Electronics,New York
+Jacob Chavez,2024-03-24,1318,Electronics,Berlin
+Rebecca Cox,2024-03-04,3431,Electronics,Chicago
+Brandi Bowen,2024-03-04,993,Electronics,London
+Jason Carpenter,2024-03-20,2631,Electronics,Los Angeles
+Margaret Rosales,2024-03-30,4554,Electronics,Miami
+Andrea Mayo,2024-03-30,4914,Electronics,Berlin
+Paul Maldonado,2024-03-27,3822,Electronics,Miami
+Thomas Perkins,2024-03-02,4512,Electronics,Dallas
+Stephanie Liu,2024-03-07,2495,Electronics,Toronto
+Shelly Jacobs,2024-03-13,1113,Electronics,London
+Amanda Swanson,2024-03-08,3112,Electronics,London
+Denise Manning,2024-03-08,3313,Electronics,Berlin
+Mrs. Nicole Harrell,2024-03-14,3972,Electronics,New York
+Randy Perkins,2024-03-03,2414,Electronics,New York
+Ernest Ruiz,2024-03-04,2817,Electronics,New York
+Xavier Gallagher,2024-03-18,4657,Electronics,Chicago
+Ryan Green,2024-03-08,3665,Electronics,Berlin
+Cory Stokes,2024-03-20,1487,Electronics,Dallas
+Zachary Pacheco,2024-03-05,2152,Electronics,London
+Patricia Cole,2024-03-04,1484,Electronics,Berlin
+Carrie Cruz,2024-03-20,2711,Electronics,Toronto
+Alison Pearson MD,2024-03-16,809,Electronics,San Francisco
+Phillip Roberts,2024-03-07,4992,Electronics,Los Angeles
+Barbara Curtis,2024-03-30,1582,Electronics,Chicago
+Robin Turner,2024-03-19,1894,Electronics,Los Angeles
+Yvonne Johnson,2024-03-23,4381,Electronics,Dallas
