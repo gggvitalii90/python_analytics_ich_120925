@@ -41,20 +41,19 @@
         </label>
       </section>
 
-      <section class="panel">
-        <div class="panel-head">
-          <h2>Ноутбуки курса по разделам</h2>
-          <p id="stats">Загрузка списка...</p>
-        </div>
-        <div id="notebook-list" class="folder-list"></div>
-      </section>
-    </main>
+        <header class="hero">
+          <div class="container hero-inner">
+            <p class="tag">Python Analytics ICH</p>
+            <h1>Учебный портал курса</h1>
+            <p class="subtitle">
+              Откройте нужный notebook в один клик: просмотр на GitHub, скачивание файла или запуск в онлайн Jupyter через Binder.
+            </p>
 
-    <template id="row-template">
-      <article class="nb-row">
-        <div class="nb-name"></div>
-        <div class="nb-path"></div>
-        <div class="nb-actions">
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab" target="_blank" rel="noreferrer">Запустить весь курс в Binder</a>
+              <a class="btn btn-secondary" href="https://github.com/gggvitalii90/python_analytics_ich_120925/archive/refs/heads/main.zip" target="_blank" rel="noreferrer">Скачать курс ZIP</a>
+              <a class="btn btn-ghost" href="https://github.com/gggvitalii90/python_analytics_ich_120925" target="_blank" rel="noreferrer">Открыть репозиторий</a>
+            </div>
           <a class="row-btn" data-action="view" target="_blank" rel="noreferrer">GitHub</a>
           <a class="row-btn" data-action="raw" target="_blank" rel="noreferrer">Download</a>
           <a class="row-btn row-btn-accent" data-action="binder" target="_blank" rel="noreferrer">Launch Binder</a>
