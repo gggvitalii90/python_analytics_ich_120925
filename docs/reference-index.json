@@ -27,6 +27,17 @@
       "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html"
     },
     {
+      "id": "matplotlib-figure",
+      "title": "matplotlib.pyplot.figure",
+      "package": "Matplotlib",
+      "terms": ["figsize", "figure", "plt.figure", "figure size", "размер графика"],
+      "summary": "Official Matplotlib reference for creating figures and setting figure size.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.figure(figsize=(10, 6))\nplt.plot(x, y)\nplt.show()",
+      "related": ["matplotlib.pyplot.subplots", "matplotlib.figure.Figure.set_size_inches"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html"
+    },
+    {
       "id": "seaborn-histplot",
       "title": "seaborn.histplot",
       "package": "Seaborn",
@@ -124,6 +135,28 @@
       "syntax": "app = Dash(__name__)\napp.layout = html.Div([\n    html.H1(\"Dashboard\"),\n    dcc.Graph(figure=px.scatter(df, x=\"x\", y=\"y\"))\n])\napp.run(debug=True)",
       "related": ["plotly.express", "dcc.Graph"],
       "docsUrl": "https://dash.plotly.com/"
+    },
+    {
+      "id": "statsmodels-arima",
+      "title": "statsmodels.tsa.arima.model.ARIMA",
+      "package": "statsmodels",
+      "terms": ["arima", "sarima", "arma", "time series", "временные ряды"],
+      "summary": "Official statsmodels reference for ARIMA time series models.",
+      "import": "from statsmodels.tsa.arima.model import ARIMA",
+      "syntax": "model = ARIMA(series, order=(1, 1, 1))\nresult = model.fit()\nforecast = result.forecast(steps=10)",
+      "related": ["statsmodels.tsa.statespace.sarimax.SARIMAX", "acf", "pacf"],
+      "docsUrl": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html"
+    },
+    {
+      "id": "prophet-forecasting",
+      "title": "Prophet",
+      "package": "Prophet",
+      "terms": ["prophet", "forecast", "forecasting", "time series", "временные ряды", "прогноз"],
+      "summary": "Official Prophet documentation for forecasting time series data.",
+      "import": "from prophet import Prophet",
+      "syntax": "model = Prophet()\nmodel.fit(df)\nfuture = model.make_future_dataframe(periods=30)\nforecast = model.predict(future)",
+      "related": ["ARIMA", "SARIMA", "time series"],
+      "docsUrl": "https://facebook.github.io/prophet/docs/quick_start.html"
     },
     {
       "id": "python-list",
