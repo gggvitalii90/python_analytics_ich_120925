@@ -1,0 +1,42 @@
+Matthew Peterson,2024-08-22,1278,Clothing,Miami
+David Henry,2024-08-16,3926,Clothing,London
+Meghan Nguyen,2024-08-16,4403,Clothing,Toronto
+Michael Sanchez,2024-08-13,2059,Clothing,Berlin
+Christopher Randolph,2024-08-08,1721,Clothing,New York
+Anna Holt,2024-08-19,1353,Clothing,Berlin
+David Avila,2024-08-03,2850,Clothing,Toronto
+Jose Goodwin,2024-08-02,1951,Clothing,Chicago
+Isaac Arnold,2024-08-27,2111,Clothing,New York
+Christopher Cochran,2024-08-02,4522,Clothing,Dallas
+Amber Murray,2024-08-22,4367,Clothing,Toronto
+Steven Thompson,2024-08-23,2912,Clothing,Los Angeles
+Ryan Kim,2024-08-19,4688,Clothing,London
+Denise Glover,2024-08-27,2284,Clothing,San Francisco
+Richard Campbell,2024-08-24,3462,Clothing,Toronto
+Allison Reed,2024-08-29,3561,Clothing,Chicago
+Debra Washington,2024-08-31,4411,Clothing,Toronto
+Lisa Rangel,2024-08-24,2222,Clothing,Toronto
+Michael Parker,2024-08-25,1715,Clothing,Dallas
+Sara Patel,2024-08-15,1790,Clothing,London
+Michelle Chapman,2024-08-23,3509,Clothing,London
+Chad Henderson,2024-08-14,3815,Clothing,Berlin
+Linda Oconnor,2024-08-06,3891,Clothing,Miami
+Stacy Pitts,2024-08-22,2283,Clothing,New York
+Patricia Henry,2024-08-15,4091,Clothing,Miami
+Michelle Goodwin,2024-08-11,3850,Clothing,London
+Joseph Case,2024-08-16,3677,Clothing,Chicago
+Kathryn Bautista,2024-08-14,866,Clothing,Chicago
+Colleen Lowery,2024-08-08,4266,Clothing,San Francisco
+Anthony Baker,2024-08-03,3550,Clothing,Toronto
+Krista Meyer,2024-08-03,4369,Clothing,Miami
+Xavier Clarke,2024-08-26,2239,Clothing,Miami
+Danielle Brown,2024-08-04,595,Clothing,London
+Lisa Craig,2024-08-11,3777,Clothing,Dallas
+Jeffrey Smith,2024-08-13,1693,Clothing,Chicago
+Jesse Sanders,2024-08-11,3799,Clothing,Chicago
+Michelle Mullins,2024-08-12,2896,Clothing,Berlin
+Micheal Ramirez,2024-08-28,3012,Clothing,Chicago
+William Bush,2024-08-12,4100,Clothing,Chicago
+John White,2024-08-09,3137,Clothing,Miami
+Jose Smith,2024-08-21,2740,Clothing,Miami
+Michael Holland,2024-08-05,2192,Clothing,San Francisco

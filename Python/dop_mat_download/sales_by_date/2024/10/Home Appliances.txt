@@ -1,0 +1,29 @@
+Alexander Moore,2024-10-17,1284,Home Appliances,Miami
+Jared Ramirez,2024-10-30,3668,Home Appliances,Chicago
+Melissa Richard,2024-10-27,1057,Home Appliances,Los Angeles
+Alicia Keller,2024-10-22,2096,Home Appliances,San Francisco
+Karen Mendez,2024-10-11,3009,Home Appliances,New York
+Tanner Davis MD,2024-10-03,4930,Home Appliances,Chicago
+Theresa Hopkins,2024-10-01,2160,Home Appliances,Dallas
+Michael Cannon,2024-10-01,3792,Home Appliances,Dallas
+Tyler Olsen,2024-10-16,3854,Home Appliances,Berlin
+Brian Rose,2024-10-14,1429,Home Appliances,Dallas
+Zachary Ball,2024-10-09,2057,Home Appliances,Chicago
+Michael Holland,2024-10-15,4753,Home Appliances,Berlin
+Ashley Warren,2024-10-18,3309,Home Appliances,Dallas
+Lisa Cox,2024-10-19,4620,Home Appliances,Los Angeles
+Jacob Harrison,2024-10-16,3576,Home Appliances,Los Angeles
+Scott Huerta,2024-10-28,4619,Home Appliances,Dallas
+Jose Smith,2024-10-29,4357,Home Appliances,New York
+Tyler Warner,2024-10-14,1465,Home Appliances,San Francisco
+Jennifer Armstrong,2024-10-19,3643,Home Appliances,Chicago
+Jennifer Miller,2024-10-25,3497,Home Appliances,Chicago
+Kelly Tanner,2024-10-12,825,Home Appliances,New York
+Daniel Martinez,2024-10-17,1888,Home Appliances,Chicago
+Heather Noble,2024-10-28,2141,Home Appliances,Berlin
+Jeremy Johnson,2024-10-06,2519,Home Appliances,New York
+Timothy Garcia,2024-10-19,1722,Home Appliances,Toronto
+Brenda Sullivan,2024-10-18,4677,Home Appliances,Chicago
+Michael Suarez,2024-10-28,1589,Home Appliances,Dallas
+John Young,2024-10-15,4263,Home Appliances,New York
+Pam Grant,2024-10-02,4511,Home Appliances,London

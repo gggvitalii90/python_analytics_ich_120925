@@ -1,0 +1,39 @@
+Jeffrey Taylor,2024-03-08,1465,Groceries,Miami
+William Ponce,2024-03-30,3685,Groceries,Miami
+Michael Graham,2024-03-15,532,Groceries,San Francisco
+Rachel Hill,2024-03-25,837,Groceries,Dallas
+Jade Foley,2024-03-22,4034,Groceries,Chicago
+Sharon Powers,2024-03-26,3331,Groceries,Los Angeles
+Carmen Cannon,2024-03-22,545,Groceries,Chicago
+Gregory Washington,2024-03-26,3067,Groceries,Los Angeles
+Julie Howard,2024-03-28,2639,Groceries,San Francisco
+Matthew Yang,2024-03-06,3483,Groceries,Miami
+Michael Douglas,2024-03-12,3118,Groceries,Miami
+Patricia Diaz,2024-03-25,2242,Groceries,New York
+Luke Boyd,2024-03-19,3585,Groceries,New York
+Brianna Whitaker,2024-03-04,4933,Groceries,Toronto
+Maria Vang,2024-03-06,4028,Groceries,Berlin
+April Park,2024-03-25,1248,Groceries,Los Angeles
+Sharon Chaney,2024-03-26,3611,Groceries,Toronto
+Charles Hebert,2024-03-18,2926,Groceries,New York
+Emily Bailey,2024-03-15,2136,Groceries,Los Angeles
+Ronald Brown,2024-03-15,1078,Groceries,Dallas
+Julie Graham,2024-03-21,1427,Groceries,Chicago
+Carolyn Sheppard,2024-03-10,3065,Groceries,New York
+Krista Stein,2024-03-14,2570,Groceries,Miami
+Caroline Reyes,2024-03-13,4211,Groceries,Berlin
+Hannah Collins,2024-03-15,4714,Groceries,Toronto
+Diana Mcintyre,2024-03-10,1278,Groceries,London
+Katherine Roberts,2024-03-28,1484,Groceries,Miami
+Chase Howard,2024-03-24,4416,Groceries,San Francisco
+John Rodriguez,2024-03-10,2973,Groceries,Toronto
+Heather Odonnell,2024-03-18,907,Groceries,London
+Mr. Kevin Ford,2024-03-15,2095,Groceries,Miami
+Maria Tate,2024-03-06,2267,Groceries,London
+Anna Moore,2024-03-13,1373,Groceries,New York
+Marc Beck,2024-03-31,2696,Groceries,Los Angeles
+Sean Adams,2024-03-09,1817,Groceries,Los Angeles
+Michael Reid,2024-03-19,1953,Groceries,San Francisco
+Emily King,2024-03-11,1320,Groceries,Berlin
+Randy Smith,2024-03-10,4163,Groceries,Miami
+Alicia Shannon,2024-03-29,3917,Groceries,London

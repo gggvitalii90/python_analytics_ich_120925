@@ -1,0 +1,1 @@
+{"dict_example": {"key": "value"}, "list_example": ["apple", "banana"], "tuple_example": ["apple", "banana"], "string_example": "Hello", "int_example": 42, "float_example": 3.14, "bool_example_true": true, "bool_example_false": false, "none_example": null}

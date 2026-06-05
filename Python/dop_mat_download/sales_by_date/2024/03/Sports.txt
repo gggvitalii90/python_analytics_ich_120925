@@ -1,0 +1,35 @@
+Amy Shah,2024-03-08,4490,Sports,Miami
+Jesse Marquez,2024-03-26,2890,Sports,Chicago
+Melissa Mitchell,2024-03-16,1718,Sports,San Francisco
+Donna Martin,2024-03-11,2575,Sports,London
+Erica Drake,2024-03-20,1565,Sports,Miami
+Trevor Drake,2024-03-28,4161,Sports,Berlin
+Michael Davis,2024-03-23,2637,Sports,London
+Nathan Kirk,2024-03-17,4171,Sports,Miami
+Anna Cole,2024-03-23,3475,Sports,Chicago
+William Keith,2024-03-31,2185,Sports,Chicago
+Dennis Martin,2024-03-24,986,Sports,Berlin
+Andrea Carroll,2024-03-24,3149,Sports,San Francisco
+John Owens,2024-03-05,990,Sports,Chicago
+Jeff Brown,2024-03-26,4789,Sports,Chicago
+Anthony Kelly,2024-03-12,848,Sports,Los Angeles
+Taylor Fitzgerald,2024-03-25,1784,Sports,Miami
+George Lambert,2024-03-13,3087,Sports,Chicago
+Ashley Vincent,2024-03-23,3172,Sports,Chicago
+Samantha Cherry,2024-03-23,4674,Sports,Los Angeles
+Darrell King,2024-03-30,600,Sports,Toronto
+Dr. Thomas Moody,2024-03-30,4431,Sports,Los Angeles
+Dale Williams,2024-03-13,1774,Sports,Los Angeles
+John Cameron,2024-03-25,599,Sports,Toronto
+Michelle Garcia,2024-03-17,3952,Sports,San Francisco
+Tammy Moreno,2024-03-09,1422,Sports,Miami
+Robert Ross,2024-03-09,3252,Sports,Dallas
+Heather Roberts,2024-03-17,3852,Sports,Toronto
+Audrey Gomez,2024-03-27,4695,Sports,London
+Michelle Townsend,2024-03-15,3123,Sports,Berlin
+Robert Mccarthy,2024-03-12,4589,Sports,New York
+Kathy Lopez,2024-03-11,3096,Sports,Los Angeles
+Stacie Moore,2024-03-12,4678,Sports,Miami
+Anthony Yoder,2024-03-09,3101,Sports,Berlin
+Crystal Andrews,2024-03-09,635,Sports,Chicago
+Robert Brown,2024-03-18,3022,Sports,London

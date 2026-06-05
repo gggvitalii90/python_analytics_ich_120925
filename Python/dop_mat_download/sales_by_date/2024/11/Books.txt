@@ -1,0 +1,30 @@
+Margaret Hudson,2024-11-05,853,Books,Berlin
+Kelly Reyes,2024-11-06,2003,Books,Toronto
+Dwayne Campos,2024-11-21,4682,Books,Chicago
+Heather Lopez,2024-11-03,1657,Books,Chicago
+Nicole Baldwin,2024-11-20,1644,Books,London
+Jose Jimenez,2024-11-10,1098,Books,London
+John Alvarez,2024-11-19,4541,Books,Los Angeles
+Marissa Owen,2024-11-21,923,Books,New York
+Francis Bowen,2024-11-26,3603,Books,San Francisco
+Richard Young,2024-11-19,1848,Books,Chicago
+Marc Lopez,2024-11-03,4428,Books,London
+Oscar Torres,2024-11-15,4204,Books,Toronto
+Joshua Smith,2024-11-12,4854,Books,Dallas
+Dorothy Lambert,2024-11-20,4767,Books,Chicago
+Adrienne Erickson,2024-11-27,811,Books,Chicago
+Bonnie Guerrero,2024-11-02,1440,Books,London
+Olivia Brady,2024-11-04,1291,Books,Dallas
+Jordan Mann,2024-11-27,2317,Books,New York
+James Osborn,2024-11-25,3339,Books,London
+Jesus Johnson,2024-11-04,1088,Books,Chicago
+Ralph Higgins,2024-11-08,2024,Books,Berlin
+Michelle Carroll,2024-11-17,1696,Books,San Francisco
+Dustin Day,2024-11-28,1896,Books,Miami
+Christina Robles,2024-11-01,654,Books,London
+Todd Silva,2024-11-22,2511,Books,New York
+Emily Mcmahon,2024-11-06,3532,Books,Toronto
+Joshua White,2024-11-28,1835,Books,Miami
+Julie Mcguire,2024-11-06,3513,Books,Dallas
+George Wright,2024-11-06,2154,Books,Toronto
+Debbie Tate,2024-11-30,4792,Books,Berlin

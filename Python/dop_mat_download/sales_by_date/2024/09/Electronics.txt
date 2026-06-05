@@ -1,0 +1,29 @@
+Jason Simpson,2024-09-16,2635,Electronics,Berlin
+Mary Robinson,2024-09-10,1968,Electronics,London
+Adam Lee,2024-09-12,3668,Electronics,Dallas
+Marc Anderson,2024-09-17,4998,Electronics,Los Angeles
+Amanda Pratt,2024-09-28,4648,Electronics,Los Angeles
+Steven Thomas,2024-09-16,2092,Electronics,Dallas
+Tricia Li,2024-09-09,1875,Electronics,New York
+Tanya Mitchell,2024-09-10,4833,Electronics,Dallas
+Janet Brewer,2024-09-20,1305,Electronics,London
+Robert Cox,2024-09-03,4420,Electronics,London
+Benjamin Mcneil,2024-09-21,4061,Electronics,Miami
+Rachel Rogers,2024-09-29,4773,Electronics,Chicago
+Michelle Davis,2024-09-26,3511,Electronics,San Francisco
+Ms. Deanna Rosario,2024-09-04,3309,Electronics,London
+Adrian Avery,2024-09-28,3460,Electronics,New York
+Sherri Barrett,2024-09-10,4959,Electronics,Chicago
+Jennifer Mendez,2024-09-11,3794,Electronics,London
+Robin Mitchell,2024-09-26,4997,Electronics,Los Angeles
+Glen Sullivan,2024-09-09,4708,Electronics,London
+Julie Nelson,2024-09-14,1205,Electronics,London
+Nina Brennan,2024-09-14,1607,Electronics,Los Angeles
+Shelby Jenkins,2024-09-02,3826,Electronics,Dallas
+Julie Mullins,2024-09-23,948,Electronics,Berlin
+Brent Richardson,2024-09-27,1478,Electronics,Toronto
+Steven Manning,2024-09-13,3247,Electronics,Dallas
+Robert Vaughan,2024-09-23,2591,Electronics,Miami
+Dale Wong,2024-09-30,3885,Electronics,Dallas
+Michelle Rivera,2024-09-11,1602,Electronics,San Francisco
+Mark Cole,2024-09-22,4154,Electronics,New York

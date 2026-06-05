@@ -1,0 +1,24 @@
+Briana Ryan,2024-06-04,4679,Groceries,San Francisco
+Hunter Curtis,2024-06-13,3551,Groceries,New York
+Emily Ramirez,2024-06-23,3721,Groceries,Dallas
+Allison Bryant,2024-06-19,1810,Groceries,Berlin
+Douglas Cannon,2024-06-11,2589,Groceries,Los Angeles
+Mark Wheeler,2024-06-28,3859,Groceries,Dallas
+Christina Simmons,2024-06-25,1768,Groceries,New York
+Patricia Freeman,2024-06-02,3765,Groceries,London
+Hector Scott,2024-06-09,1150,Groceries,Toronto
+Sarah Myers,2024-06-22,3951,Groceries,London
+Edwin Hanson,2024-06-02,1730,Groceries,Miami
+Linda Kelley,2024-06-11,3036,Groceries,Dallas
+Amy Robles,2024-06-19,1234,Groceries,San Francisco
+Dawn Duarte,2024-06-16,2691,Groceries,New York
+William Young,2024-06-11,1465,Groceries,New York
+Karen Reid,2024-06-19,4568,Groceries,Berlin
+Charlene Campbell,2024-06-03,2254,Groceries,London
+Keith Ford,2024-06-03,2186,Groceries,Berlin
+Hector Obrien,2024-06-21,4979,Groceries,Miami
+Tina Santos,2024-06-25,755,Groceries,Dallas
+Casey Patterson,2024-06-24,4513,Groceries,Toronto
+Catherine Gonzalez,2024-06-11,530,Groceries,Berlin
+Annette Wright,2024-06-06,632,Groceries,Miami
+Erin Owen,2024-06-09,1785,Groceries,Los Angeles

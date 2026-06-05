@@ -1,0 +1,38 @@
+Dr. David Davis MD,2025-01-17,730,Clothing,Chicago
+Nicholas Sanchez,2025-01-18,2787,Clothing,Chicago
+Jason Kim,2025-01-06,3882,Clothing,Miami
+Alec Richardson,2025-01-20,4801,Clothing,Miami
+Kimberly Jensen,2025-01-03,1574,Clothing,Toronto
+Sandra Acosta,2025-01-05,2242,Clothing,San Francisco
+Darren Robinson,2025-01-07,4106,Clothing,London
+Adam Barker,2025-01-31,1060,Clothing,San Francisco
+Emily Montoya,2025-01-31,3180,Clothing,New York
+Melissa Wilson,2025-01-17,1760,Clothing,San Francisco
+Heather Soto,2025-01-09,3572,Clothing,Chicago
+Alexander Miller,2025-01-11,4216,Clothing,Toronto
+Elizabeth Singh,2025-01-29,3197,Clothing,Los Angeles
+Tracy Smith,2025-01-14,3213,Clothing,Toronto
+Troy Olson,2025-01-20,588,Clothing,Los Angeles
+Wayne Hernandez,2025-01-11,3216,Clothing,San Francisco
+Cynthia Long,2025-01-19,708,Clothing,Los Angeles
+George Ortiz,2025-01-09,3777,Clothing,San Francisco
+David Wilson,2025-01-24,2598,Clothing,London
+James Warner,2025-01-09,1381,Clothing,Toronto
+Anthony Davis,2025-01-06,1737,Clothing,Berlin
+Michele Franklin,2025-01-06,1413,Clothing,Chicago
+Crystal Pena,2025-01-07,2951,Clothing,Los Angeles
+Alisha George,2025-01-29,2354,Clothing,San Francisco
+Anthony Williams,2025-01-24,2658,Clothing,Chicago
+Ashley Howell,2025-01-31,1829,Clothing,Berlin
+David Stevens,2025-01-14,1335,Clothing,Berlin
+Jacob Vazquez,2025-01-11,2143,Clothing,Chicago
+Alexander Reed,2025-01-06,2289,Clothing,Chicago
+Mark Simpson,2025-01-15,3488,Clothing,New York
+Jose Miller,2025-01-29,2343,Clothing,Miami
+William Ortiz,2025-01-29,4567,Clothing,Chicago
+Danny Cox,2025-01-29,2346,Clothing,London
+George Velasquez,2025-01-23,2826,Clothing,Toronto
+William Davis,2025-01-31,4758,Clothing,Dallas
+Christina Bates,2025-01-24,3635,Clothing,Dallas
+Harry Wilson,2025-01-18,2572,Clothing,Los Angeles
+Manuel Anderson,2025-01-01,4169,Clothing,Miami

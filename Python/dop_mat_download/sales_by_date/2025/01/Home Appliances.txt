@@ -1,0 +1,40 @@
+Jennifer Graham PhD,2025-01-02,3622,Home Appliances,Miami
+Elizabeth West,2025-01-25,4278,Home Appliances,London
+Tara Clark,2025-01-17,3266,Home Appliances,Dallas
+Shaun Glover,2025-01-16,2227,Home Appliances,Chicago
+Thomas Boyle,2025-01-16,3470,Home Appliances,San Francisco
+Kristina Reed,2025-01-04,1968,Home Appliances,Chicago
+Stephanie Marshall,2025-01-06,2878,Home Appliances,Toronto
+Sharon Robinson,2025-01-28,1286,Home Appliances,Dallas
+Jeffrey Byrd,2025-01-15,1252,Home Appliances,Dallas
+Teresa Zimmerman,2025-01-24,3862,Home Appliances,Berlin
+Vanessa Johnston,2025-01-30,2567,Home Appliances,Dallas
+Mark Brown,2025-01-10,3053,Home Appliances,London
+Melissa Rose,2025-01-31,3825,Home Appliances,Chicago
+Robert Schultz,2025-01-23,1196,Home Appliances,New York
+Cody Coleman,2025-01-26,2698,Home Appliances,Los Angeles
+Michael Reid,2025-01-23,1592,Home Appliances,Los Angeles
+Jennifer Robinson,2025-01-13,1900,Home Appliances,San Francisco
+Sean Roberts,2025-01-13,3958,Home Appliances,New York
+James Johnson,2025-01-26,1674,Home Appliances,Miami
+Peter Harvey,2025-01-13,950,Home Appliances,London
+John Jones,2025-01-15,1793,Home Appliances,Berlin
+Chad Nichols,2025-01-22,683,Home Appliances,New York
+Stephanie Hayes,2025-01-02,4641,Home Appliances,Toronto
+Joseph Flynn,2025-01-29,4433,Home Appliances,Toronto
+Melissa Cole,2025-01-15,1663,Home Appliances,London
+Matthew Nelson,2025-01-12,613,Home Appliances,Dallas
+Ronald Orr,2025-01-18,4343,Home Appliances,London
+Amber Miller,2025-01-09,4556,Home Appliances,San Francisco
+Jessica Horton,2025-01-26,727,Home Appliances,Los Angeles
+Melissa Tucker,2025-01-03,2785,Home Appliances,Toronto
+Anthony Stevenson,2025-01-21,948,Home Appliances,Dallas
+Mr. Joshua Hill,2025-01-27,1903,Home Appliances,Miami
+Billy Washington,2025-01-10,1825,Home Appliances,Toronto
+Timothy Garcia,2025-01-17,2276,Home Appliances,Chicago
+Shelly Gomez,2025-01-25,2609,Home Appliances,Los Angeles
+James Mccarthy,2025-01-25,4875,Home Appliances,Dallas
+Brandon Riley,2025-01-20,4608,Home Appliances,New York
+Lisa Robinson,2025-01-25,897,Home Appliances,Los Angeles
+Courtney Conley,2025-01-26,1631,Home Appliances,London
+Joseph Shaw,2025-01-01,580,Home Appliances,Dallas

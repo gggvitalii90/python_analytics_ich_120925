@@ -1,0 +1,36 @@
+Megan Grant,2024-04-26,3491,Home Appliances,Toronto
+Joshua Jacobs,2024-04-27,2788,Home Appliances,Toronto
+Brittany Perry,2024-04-28,2810,Home Appliances,Dallas
+Elizabeth Henry,2024-04-11,4958,Home Appliances,Berlin
+William Galvan,2024-04-06,1606,Home Appliances,Toronto
+Ashley Miller,2024-04-22,1833,Home Appliances,Chicago
+Jennifer Harper,2024-04-16,1661,Home Appliances,San Francisco
+Jermaine Alvarez,2024-04-16,964,Home Appliances,New York
+Julie Gomez,2024-04-18,4474,Home Appliances,London
+Rick Stone,2024-04-21,1690,Home Appliances,Toronto
+Kathy Brown,2024-04-19,1223,Home Appliances,Berlin
+Jessica Brown,2024-04-22,3174,Home Appliances,New York
+Mary Edwards,2024-04-13,510,Home Appliances,Berlin
+Chelsey Gonzalez,2024-04-11,4460,Home Appliances,Toronto
+Laura Ewing,2024-04-24,2224,Home Appliances,Berlin
+Dr. Angela Cummings,2024-04-15,2152,Home Appliances,Dallas
+Justin King,2024-04-30,2295,Home Appliances,Toronto
+Olivia Wells,2024-04-06,2570,Home Appliances,London
+Jacob Moon,2024-04-22,4459,Home Appliances,San Francisco
+James Byrd,2024-04-26,1643,Home Appliances,Toronto
+Brittany Nguyen,2024-04-05,4846,Home Appliances,Berlin
+Melissa Tate,2024-04-14,3353,Home Appliances,Miami
+Eric Chavez,2024-04-30,4528,Home Appliances,San Francisco
+Katherine Mason,2024-04-13,2396,Home Appliances,Toronto
+Robert Berg,2024-04-09,4585,Home Appliances,Toronto
+Chad Ramirez,2024-04-13,1011,Home Appliances,Chicago
+Madison Curtis,2024-04-05,4416,Home Appliances,Dallas
+Jeffrey Kelley,2024-04-09,2225,Home Appliances,Berlin
+Jason Garcia,2024-04-17,590,Home Appliances,Los Angeles
+Christopher Lee,2024-04-05,2425,Home Appliances,Toronto
+Christopher Henry,2024-04-27,2465,Home Appliances,New York
+Glenn Ponce,2024-04-09,647,Home Appliances,New York
+Erika Montgomery,2024-04-28,2124,Home Appliances,New York
+Edward Gomez,2024-04-05,1114,Home Appliances,Miami
+John Stevens,2024-04-12,1950,Home Appliances,Berlin
+Lauren Woods,2024-04-21,3809,Home Appliances,Dallas

@@ -1,0 +1,36 @@
+Ronald Frey,2024-04-01,3156,Clothing,Berlin
+Amanda Herman,2024-04-14,894,Clothing,Dallas
+Jennifer Vincent,2024-04-29,3128,Clothing,Chicago
+Bradley Bush,2024-04-21,1780,Clothing,Chicago
+Amy Mccullough,2024-04-05,4838,Clothing,Miami
+Justin Wagner,2024-04-06,3288,Clothing,Berlin
+Brandy Johnson,2024-04-25,895,Clothing,Toronto
+Shawn Garner,2024-04-28,3422,Clothing,Toronto
+David Underwood,2024-04-26,4041,Clothing,Berlin
+Frederick Bell,2024-04-10,2361,Clothing,Chicago
+Darrell Ellis,2024-04-01,2326,Clothing,Los Angeles
+Roy Cooper,2024-04-29,2040,Clothing,San Francisco
+Anthony Smith,2024-04-27,4012,Clothing,Toronto
+Stephanie Hubbard,2024-04-25,1160,Clothing,New York
+Vincent Adams,2024-04-16,2743,Clothing,San Francisco
+Lisa Brown,2024-04-20,2285,Clothing,London
+Austin Taylor,2024-04-30,3246,Clothing,New York
+Spencer Bradley,2024-04-07,1439,Clothing,Berlin
+Tami Juarez,2024-04-16,836,Clothing,San Francisco
+George Lawson,2024-04-21,2888,Clothing,Toronto
+Stacey Singleton,2024-04-22,3305,Clothing,Toronto
+Patricia Mcmahon,2024-04-19,1298,Clothing,Berlin
+Arthur Gray,2024-04-23,3873,Clothing,Chicago
+Amy Ramirez,2024-04-06,2808,Clothing,Miami
+Sandra Fox,2024-04-19,2782,Clothing,San Francisco
+Alan Stevens,2024-04-23,1258,Clothing,Los Angeles
+Tanya Clark,2024-04-27,3077,Clothing,Chicago
+Deborah Cook,2024-04-04,2900,Clothing,Toronto
+Mark Scott,2024-04-24,2213,Clothing,Miami
+Stephen Jones,2024-04-29,4390,Clothing,Berlin
+Francisco Bailey,2024-04-25,2408,Clothing,London
+Jaclyn Jacobs,2024-04-07,2283,Clothing,Toronto
+Justin Herman,2024-04-29,1236,Clothing,New York
+Lonnie Jones,2024-04-01,3251,Clothing,San Francisco
+Patrick Walker,2024-04-21,4072,Clothing,New York
+Tammy Galvan,2024-04-05,814,Clothing,New York

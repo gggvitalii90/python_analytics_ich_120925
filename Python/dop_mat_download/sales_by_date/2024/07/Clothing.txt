@@ -1,0 +1,34 @@
+Ariel Charles MD,2024-07-12,1661,Clothing,Dallas
+Laura Mcneil,2024-07-18,3680,Clothing,Miami
+Arthur Mclean,2024-07-18,1276,Clothing,Miami
+Brian Ramirez,2024-07-14,1608,Clothing,Los Angeles
+Michael Sullivan,2024-07-26,4511,Clothing,Dallas
+Robert Cobb,2024-07-04,1835,Clothing,New York
+Monica Cantrell,2024-07-28,4947,Clothing,New York
+Natasha Taylor,2024-07-06,1903,Clothing,Los Angeles
+Michael Luna,2024-07-05,1422,Clothing,Dallas
+Michael Phillips,2024-07-19,3068,Clothing,Toronto
+Thomas Davis,2024-07-21,2847,Clothing,Los Angeles
+Jacob Bell,2024-07-03,720,Clothing,Los Angeles
+William Hughes,2024-07-23,3143,Clothing,London
+Christopher Wallace,2024-07-19,1149,Clothing,Los Angeles
+Tracy Johnson,2024-07-23,3994,Clothing,New York
+Allison Villarreal,2024-07-08,2555,Clothing,Miami
+Megan Gonzalez,2024-07-08,4322,Clothing,Berlin
+Danielle Mclaughlin,2024-07-25,1463,Clothing,Chicago
+David Myers,2024-07-01,2580,Clothing,London
+Allen Hoover,2024-07-22,865,Clothing,Toronto
+Eric Johnson,2024-07-09,3771,Clothing,London
+Jeremy Freeman,2024-07-24,2648,Clothing,Toronto
+James Williams,2024-07-28,2810,Clothing,New York
+Thomas Adams,2024-07-21,3833,Clothing,Toronto
+Tina Williams,2024-07-05,741,Clothing,Berlin
+Shane Price,2024-07-27,1994,Clothing,London
+Kurt Preston,2024-07-05,3455,Clothing,Berlin
+Kevin Mcintyre,2024-07-14,518,Clothing,Toronto
+Steven Barton,2024-07-02,997,Clothing,Toronto
+Brandon Brown,2024-07-18,1969,Clothing,London
+Tammie Zavala,2024-07-08,4730,Clothing,Chicago
+Richard Allen,2024-07-24,4958,Clothing,Berlin
+Sophia Curtis MD,2024-07-14,1055,Clothing,Chicago
+Kimberly Ortega,2024-07-22,2245,Clothing,San Francisco

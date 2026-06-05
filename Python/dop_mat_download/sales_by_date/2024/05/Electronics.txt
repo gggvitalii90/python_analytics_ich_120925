@@ -1,0 +1,37 @@
+Zachary Miller,2024-05-09,4441,Electronics,San Francisco
+Charles Williams,2024-05-14,2284,Electronics,Berlin
+Sean Miller,2024-05-17,2497,Electronics,Chicago
+Lisa Conley,2024-05-23,4332,Electronics,San Francisco
+Debra Randall,2024-05-28,4693,Electronics,Dallas
+Melissa Carlson,2024-05-20,2455,Electronics,Los Angeles
+Hannah Taylor,2024-05-04,2558,Electronics,Chicago
+Jennifer Walker,2024-05-16,4516,Electronics,Chicago
+Chelsea Sanders,2024-05-12,4548,Electronics,Los Angeles
+Tina Craig,2024-05-03,1318,Electronics,Dallas
+Austin Martinez,2024-05-30,2026,Electronics,Los Angeles
+Charles Jackson,2024-05-01,1443,Electronics,Dallas
+Jacqueline Nunez,2024-05-04,4107,Electronics,Toronto
+Austin Oliver,2024-05-09,3223,Electronics,Berlin
+Adam Hall,2024-05-18,3865,Electronics,Berlin
+Andrew Bridges,2024-05-05,4508,Electronics,San Francisco
+Evan Holloway,2024-05-27,2877,Electronics,San Francisco
+Ernest Cruz,2024-05-07,4502,Electronics,Dallas
+Angela Rice,2024-05-28,2304,Electronics,Berlin
+Kyle Sullivan,2024-05-31,1912,Electronics,New York
+Stephanie Larson,2024-05-18,4240,Electronics,Chicago
+Joseph Newton,2024-05-23,2685,Electronics,Dallas
+Patrick Mercer,2024-05-28,2433,Electronics,Los Angeles
+Karen Johnson,2024-05-27,2230,Electronics,Los Angeles
+Latoya Briggs,2024-05-03,3754,Electronics,Miami
+Richard Hutchinson,2024-05-20,1272,Electronics,Berlin
+David Dickerson,2024-05-12,2490,Electronics,Los Angeles
+Joshua Young,2024-05-01,2004,Electronics,London
+Dale Jarvis,2024-05-11,1633,Electronics,Dallas
+Nancy Warner,2024-05-04,3604,Electronics,Toronto
+Sarah Garner,2024-05-06,1623,Electronics,Dallas
+Amy Best,2024-05-04,1698,Electronics,Miami
+Deborah Campbell,2024-05-04,4102,Electronics,Los Angeles
+Jessica Williams,2024-05-19,2729,Electronics,New York
+Sierra Peterson,2024-05-30,4932,Electronics,San Francisco
+Susan Gay,2024-05-06,3259,Electronics,Chicago
+John Evans,2024-05-30,2250,Electronics,Miami

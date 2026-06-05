@@ -1,0 +1,34 @@
+Jennifer Jackson,2025-02-07,2413,Books,London
+Holly Snow,2025-02-19,3248,Books,San Francisco
+Kelly Sandoval,2025-02-17,3773,Books,Los Angeles
+Daniel Norris,2025-02-16,3024,Books,Dallas
+Tabitha Fisher,2025-02-24,4888,Books,New York
+Michael Ramirez,2025-02-02,2255,Books,Berlin
+Gary Knox,2025-02-13,3446,Books,London
+Richard Oconnor,2025-02-04,1804,Books,Toronto
+Michele Marshall,2025-02-01,3054,Books,San Francisco
+Tammy Miller,2025-02-13,3694,Books,New York
+Rachael Powers,2025-02-04,3214,Books,Miami
+Holly Nelson,2025-02-15,3285,Books,Toronto
+Dana Acevedo,2025-02-01,1118,Books,Chicago
+Bonnie Gray,2025-02-03,2335,Books,Berlin
+Christine West,2025-02-26,3600,Books,Berlin
+Devin Pitts,2025-02-04,985,Books,Berlin
+Seth Williams,2025-02-17,4693,Books,San Francisco
+Rodney Phelps,2025-02-22,2734,Books,London
+Tina Russell,2025-02-19,3418,Books,Miami
+Ashley Osborne,2025-02-20,4973,Books,Toronto
+Dana Fernandez,2025-02-11,3427,Books,Berlin
+Jennifer Foster,2025-02-03,4559,Books,Dallas
+William Love,2025-02-08,775,Books,Dallas
+Benjamin Mccoy,2025-02-03,3579,Books,San Francisco
+Daniel Mercer,2025-02-23,1076,Books,Los Angeles
+Eric Mercado,2025-02-18,4631,Books,London
+Adam Marshall,2025-02-18,1756,Books,San Francisco
+Edward Hardy,2025-02-27,3717,Books,London
+Whitney Fuentes,2025-02-17,4696,Books,Miami
+Robert Wood,2025-02-19,1063,Books,Miami
+Jenna Barber,2025-02-18,3092,Books,Berlin
+Robert Rasmussen,2025-02-09,2615,Books,Chicago
+Nathan Davis,2025-02-03,1549,Books,Berlin
+William Smith,2025-02-13,2267,Books,New York

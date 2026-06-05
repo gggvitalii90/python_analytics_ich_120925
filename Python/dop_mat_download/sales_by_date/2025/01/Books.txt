@@ -1,0 +1,46 @@
+Erika Miller,2025-01-01,966,Books,Los Angeles
+Yvette Diaz,2025-01-17,3314,Books,San Francisco
+Nathan Riley,2025-01-26,571,Books,Los Angeles
+Christopher Vazquez,2025-01-02,689,Books,Dallas
+Randall Peterson,2025-01-05,2305,Books,New York
+Philip Jones,2025-01-26,2913,Books,Miami
+Lindsay Sanchez,2025-01-07,2914,Books,London
+Brandon Bullock,2025-01-05,2671,Books,San Francisco
+Angela Fischer,2025-01-14,3941,Books,Toronto
+Paul Knight,2025-01-27,3112,Books,Dallas
+Amber Gibson,2025-01-13,3613,Books,Toronto
+Spencer Combs,2025-01-13,2930,Books,Toronto
+Catherine Shea,2025-01-25,3136,Books,London
+Raymond Rodriguez,2025-01-18,3816,Books,San Francisco
+Jack Hansen,2025-01-13,2131,Books,Dallas
+Jennifer Pena,2025-01-22,4484,Books,London
+James Pugh,2025-01-06,1157,Books,Toronto
+Joshua Smith,2025-01-14,3834,Books,Miami
+Brenda Mcbride,2025-01-31,1021,Books,Berlin
+Suzanne Martin,2025-01-13,2583,Books,Toronto
+James Morrison,2025-01-28,4190,Books,Miami
+Mrs. Heather Wolfe MD,2025-01-08,4490,Books,Los Angeles
+Audrey Callahan MD,2025-01-25,3768,Books,Chicago
+Kenneth Ruiz,2025-01-08,2975,Books,Toronto
+Samantha Owens,2025-01-16,1679,Books,New York
+Pamela Lucero,2025-01-26,1593,Books,Dallas
+Morgan Smith,2025-01-22,3180,Books,New York
+Samantha Nguyen,2025-01-26,3687,Books,Los Angeles
+Vicki Daugherty,2025-01-24,1118,Books,Chicago
+John Snow,2025-01-12,1292,Books,Miami
+Matthew Carroll,2025-01-21,4676,Books,Los Angeles
+Sarah Turner,2025-01-19,4796,Books,Chicago
+Robert Robinson,2025-01-16,4869,Books,London
+Mario Cook,2025-01-21,2433,Books,Chicago
+Mark Andrews,2025-01-24,3864,Books,San Francisco
+Kerry Scott,2025-01-11,885,Books,Dallas
+David Delacruz,2025-01-14,2118,Books,Los Angeles
+Denise Wilson,2025-01-30,2182,Books,Chicago
+John Garrison DDS,2025-01-15,3195,Books,Berlin
+April Lee,2025-01-26,3987,Books,Dallas
+Ashley Johnson,2025-01-07,845,Books,Los Angeles
+John Lewis,2025-01-11,5000,Books,Chicago
+Joanna Pitts,2025-01-08,4018,Books,London
+Amanda Zhang,2025-01-26,4722,Books,Chicago
+James Hughes,2025-01-08,3552,Books,Berlin
+Jonathan Nelson,2025-01-18,1945,Books,Toronto

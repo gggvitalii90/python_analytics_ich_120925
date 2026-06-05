@@ -1,0 +1,4 @@
+Angela Hahn,2025-03-01,647,Electronics,New York
+Brian Wyatt,2025-03-02,4089,Electronics,Dallas
+Elizabeth Curry,2025-03-02,847,Electronics,Chicago
+Michael Gutierrez,2025-03-01,1831,Electronics,Dallas

@@ -1,0 +1,22 @@
+Glenn Gregory,2024-07-26,1338,Sports,London
+Robert Jones,2024-07-14,1901,Sports,Los Angeles
+Jeffrey Ortiz,2024-07-20,662,Sports,Dallas
+Christopher Berg,2024-07-21,1415,Sports,San Francisco
+Morgan Patrick,2024-07-11,2341,Sports,Berlin
+Chelsea Bradshaw,2024-07-19,4558,Sports,New York
+Charles Mullen,2024-07-01,4023,Sports,Dallas
+Benjamin Reynolds,2024-07-25,3948,Sports,Berlin
+Michael Thomas,2024-07-03,2045,Sports,Toronto
+Jacqueline Rubio,2024-07-24,4055,Sports,Chicago
+Austin Mcmillan,2024-07-06,4749,Sports,San Francisco
+Barbara Hernandez,2024-07-18,3522,Sports,Los Angeles
+Gabriel Johnson,2024-07-29,3947,Sports,Berlin
+Laura Smith,2024-07-09,1017,Sports,Dallas
+Katherine Robles,2024-07-24,4206,Sports,Toronto
+Lori Wilson,2024-07-03,845,Sports,New York
+Christopher Evans,2024-07-17,3118,Sports,Dallas
+Linda Klein,2024-07-06,3193,Sports,Dallas
+Jennifer Fowler,2024-07-03,2282,Sports,Los Angeles
+Gloria Lewis,2024-07-13,3793,Sports,Toronto
+Donna Simpson,2024-07-12,1689,Sports,New York
+Ashley Gutierrez,2024-07-12,2242,Sports,Chicago

@@ -1,0 +1,37 @@
+Nicholas Martin,2024-12-06,1457,Books,Chicago
+Monica Cooper,2024-12-18,4237,Books,Los Angeles
+Kenneth Osborn,2024-12-14,2389,Books,Toronto
+Alexander Bowen,2024-12-01,4027,Books,Dallas
+Brian Harmon,2024-12-26,2983,Books,Berlin
+Jamie Estes,2024-12-27,3893,Books,Berlin
+Nancy Burke,2024-12-21,2603,Books,Berlin
+Kimberly Church,2024-12-10,3241,Books,Berlin
+Beth Buckley,2024-12-19,4390,Books,Toronto
+Amy Higgins,2024-12-20,3010,Books,Miami
+Pamela Sanchez,2024-12-09,3600,Books,Berlin
+Shirley Mason,2024-12-16,1853,Books,Miami
+Donald Williamson,2024-12-22,1841,Books,Miami
+Daniel Wilson,2024-12-28,3084,Books,New York
+Larry White,2024-12-25,4293,Books,Toronto
+Crystal Smith,2024-12-12,2469,Books,London
+Robert Riggs,2024-12-28,1661,Books,Berlin
+Christina White,2024-12-22,2490,Books,Berlin
+Vincent Walker,2024-12-05,3379,Books,Berlin
+Eddie Finley,2024-12-02,3048,Books,Chicago
+Charles Choi,2024-12-22,2247,Books,Berlin
+Adam King,2024-12-21,2706,Books,Toronto
+Elizabeth Henry,2024-12-09,517,Books,London
+Kim Guzman,2024-12-21,3115,Books,Dallas
+Matthew Castillo,2024-12-01,529,Books,Chicago
+Briana Richardson,2024-12-28,3396,Books,Berlin
+Taylor Flynn,2024-12-23,4272,Books,Los Angeles
+Bruce Arnold,2024-12-14,3484,Books,Chicago
+Leonard Green,2024-12-19,4203,Books,New York
+Robert Blair,2024-12-11,4665,Books,San Francisco
+Jared Ford,2024-12-03,4340,Books,Toronto
+Alicia Beard,2024-12-27,1051,Books,New York
+Catherine Johnson,2024-12-29,1314,Books,Chicago
+Donald Powell,2024-12-01,1873,Books,Miami
+Victoria Dean,2024-12-25,4988,Books,Toronto
+Joshua Davis,2024-12-12,1780,Books,London
+Janet Roth,2024-12-21,4637,Books,New York

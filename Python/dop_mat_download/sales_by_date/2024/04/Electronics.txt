@@ -1,0 +1,44 @@
+Mario Anderson,2024-04-01,1742,Electronics,Miami
+Nathan Watkins,2024-04-17,3845,Electronics,Toronto
+Brian Vaughn,2024-04-07,4330,Electronics,New York
+Michael Rios,2024-04-23,2087,Electronics,London
+Raymond Brewer,2024-04-12,1519,Electronics,Chicago
+Wendy Allen,2024-04-26,4803,Electronics,Miami
+Shelia Lewis,2024-04-11,4661,Electronics,Berlin
+Gregory Jennings,2024-04-22,2264,Electronics,Chicago
+Matthew Gonzalez,2024-04-17,1517,Electronics,Los Angeles
+Kimberly Floyd,2024-04-16,2151,Electronics,Dallas
+Logan Hodges,2024-04-19,4039,Electronics,San Francisco
+Marvin Lester,2024-04-14,3349,Electronics,London
+Charlotte Mitchell,2024-04-26,2023,Electronics,Los Angeles
+Erin Owens MD,2024-04-17,1021,Electronics,Los Angeles
+Michelle Ramos,2024-04-27,3548,Electronics,San Francisco
+John Peters,2024-04-15,4517,Electronics,Los Angeles
+Jasmine Smith,2024-04-22,1801,Electronics,Miami
+Amy Miller,2024-04-28,3382,Electronics,Miami
+Erin Smith,2024-04-15,3225,Electronics,San Francisco
+Michael Miller,2024-04-24,714,Electronics,Los Angeles
+Mr. Brian Curry,2024-04-13,3323,Electronics,Miami
+Amber Garcia,2024-04-15,1303,Electronics,New York
+Christopher Valdez,2024-04-21,1292,Electronics,Los Angeles
+Bradley Wilson,2024-04-17,2919,Electronics,Miami
+Brandon Brewer,2024-04-18,583,Electronics,Chicago
+Tiffany Moran,2024-04-04,4797,Electronics,London
+Melissa Jones,2024-04-19,4079,Electronics,Miami
+Kevin Haley,2024-04-28,4956,Electronics,London
+Michael Herrera,2024-04-01,4977,Electronics,Berlin
+Maria Perez,2024-04-19,1860,Electronics,Dallas
+Tanya Goodwin,2024-04-27,851,Electronics,New York
+Chelsea Howard,2024-04-28,1982,Electronics,Toronto
+Kayla Rios,2024-04-03,1458,Electronics,San Francisco
+Tina Page,2024-04-23,526,Electronics,New York
+Scott Jimenez,2024-04-18,4049,Electronics,Toronto
+Amber Howe,2024-04-07,3445,Electronics,London
+Rachel Gillespie MD,2024-04-01,4057,Electronics,Toronto
+Thomas Osborne,2024-04-14,3084,Electronics,Miami
+Darren Morrow,2024-04-01,1371,Electronics,Dallas
+Lisa Sanchez,2024-04-07,1032,Electronics,Berlin
+Darlene Drake,2024-04-16,3295,Electronics,Los Angeles
+Joshua Beltran,2024-04-27,2758,Electronics,San Francisco
+Alexis Roberts,2024-04-01,3299,Electronics,Chicago
+Sabrina Rivera,2024-04-09,4825,Electronics,New York

@@ -1,0 +1,35 @@
+Andrew Cain,2024-10-17,1123,Electronics,New York
+Rebecca Odonnell,2024-10-03,720,Electronics,Chicago
+Michael Olson,2024-10-23,1677,Electronics,Miami
+Kevin Gonzalez,2024-10-31,4186,Electronics,New York
+Tiffany Ray,2024-10-24,1582,Electronics,London
+Mikayla Daniels,2024-10-23,3041,Electronics,Miami
+Shannon Smith,2024-10-08,2401,Electronics,New York
+Rachel Olson,2024-10-21,4783,Electronics,San Francisco
+Sharon Huynh,2024-10-03,3949,Electronics,New York
+William Gonzalez,2024-10-29,3171,Electronics,Miami
+Michael Marshall,2024-10-28,2750,Electronics,Toronto
+Gabrielle Bush,2024-10-23,535,Electronics,San Francisco
+Ashley Smith,2024-10-21,3991,Electronics,San Francisco
+Theresa Wise,2024-10-26,1138,Electronics,Berlin
+Scott Bell,2024-10-30,1906,Electronics,Berlin
+Susan Brown,2024-10-22,2067,Electronics,Toronto
+Rachel Stevens,2024-10-23,560,Electronics,London
+Mr. Daniel Cruz,2024-10-29,3307,Electronics,Berlin
+Brian Payne,2024-10-04,3907,Electronics,Chicago
+Casey Cox,2024-10-07,4583,Electronics,Dallas
+Drew Green,2024-10-10,3573,Electronics,London
+Erin Johnson PhD,2024-10-24,3662,Electronics,Los Angeles
+Brian Roberts,2024-10-12,4655,Electronics,Chicago
+Brandon Reid,2024-10-17,1294,Electronics,New York
+Jeffrey Phillips,2024-10-30,4720,Electronics,Los Angeles
+Gregory Smith,2024-10-17,3260,Electronics,New York
+Michael Franklin,2024-10-03,3779,Electronics,Berlin
+Stephen Hernandez,2024-10-09,3973,Electronics,London
+Austin Sosa,2024-10-05,2670,Electronics,Dallas
+Jack Mullins,2024-10-08,3331,Electronics,Dallas
+Paige Harper,2024-10-20,2513,Electronics,Miami
+Donald Cherry,2024-10-15,758,Electronics,Los Angeles
+Robert Nelson,2024-10-09,2002,Electronics,Los Angeles
+Kenneth Jensen,2024-10-02,2846,Electronics,Los Angeles
+Timothy Logan,2024-10-13,1315,Electronics,Los Angeles

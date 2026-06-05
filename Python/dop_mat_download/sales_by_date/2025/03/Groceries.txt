@@ -1,0 +1,3 @@
+Stephen Hanson,2025-03-01,3304,Groceries,Miami
+Bryan Morales,2025-03-01,4866,Groceries,San Francisco
+David Walker,2025-03-02,611,Groceries,London

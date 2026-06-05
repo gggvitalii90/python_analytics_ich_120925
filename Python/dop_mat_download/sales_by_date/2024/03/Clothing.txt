@@ -1,0 +1,34 @@
+Kristine Watkins,2024-03-28,849,Clothing,Berlin
+Jesse Thompson,2024-03-05,3151,Clothing,Miami
+Kevin Williams,2024-03-06,2068,Clothing,San Francisco
+Kayla Parrish,2024-03-12,3029,Clothing,Chicago
+Jasmine Wells,2024-03-15,1056,Clothing,Chicago
+Lori Crawford,2024-03-22,4354,Clothing,Los Angeles
+Melanie Brown,2024-03-18,2405,Clothing,London
+Kevin Lane,2024-03-15,2785,Clothing,Los Angeles
+Ryan Delgado,2024-03-03,4795,Clothing,Dallas
+Karen Griffin,2024-03-28,1849,Clothing,Los Angeles
+Michele Juarez,2024-03-14,4484,Clothing,Dallas
+Donna Stark,2024-03-31,4847,Clothing,London
+Tiffany Foster,2024-03-11,2027,Clothing,Toronto
+Erin Ray,2024-03-09,2057,Clothing,Miami
+Dr. Melvin Davis,2024-03-22,2402,Clothing,San Francisco
+Kurt Bell,2024-03-31,3613,Clothing,Miami
+Chloe Hensley,2024-03-21,852,Clothing,Berlin
+Vincent Cortez,2024-03-11,2420,Clothing,New York
+Robert Houston,2024-03-25,3088,Clothing,New York
+Timothy Soto,2024-03-07,764,Clothing,Chicago
+Barry Taylor,2024-03-15,2009,Clothing,Dallas
+Ryan Johnson,2024-03-27,1259,Clothing,Miami
+Donald Anderson,2024-03-19,661,Clothing,Miami
+Patrick Turner,2024-03-04,4021,Clothing,London
+John Diaz,2024-03-06,2018,Clothing,Dallas
+Sarah Mueller,2024-03-19,673,Clothing,Los Angeles
+Christopher Johnson,2024-03-24,2066,Clothing,Chicago
+Hannah Carr,2024-03-14,4725,Clothing,Miami
+Donald Newton,2024-03-19,2328,Clothing,Miami
+Kylie Lloyd,2024-03-30,2686,Clothing,Miami
+Julie Lawson,2024-03-05,4168,Clothing,San Francisco
+Michael Kim,2024-03-14,1898,Clothing,Berlin
+Justin Rice,2024-03-23,1263,Clothing,Miami
+Jose Clark,2024-03-20,4648,Clothing,Miami

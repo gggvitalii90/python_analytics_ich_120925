@@ -1,0 +1,36 @@
+{
+  "DA_PythonFund_ProjectOrg (1).pdf": {
+    "path": "c:\\Users\\Vitaliy\\OneDrive\\It_career_hub\\Python\\проект\\DA_PythonFund_ProjectOrg (1).pdf",
+    "md": "c:\\Users\\Vitaliy\\OneDrive\\It_career_hub\\Python\\проект\\DA_PythonFund_ProjectOrg (1).md",
+    "chars": 8954,
+    "words": 3813,
+    "header": [
+      "П о с л е д н и е",
+      "н е д е л и",
+      "м о д у л я",
+      "В ы",
+      "п о д о ш л и",
+      "к",
+      "к о н ц у",
+      "м о д у л я"
+    ],
+    "excerpt": "П о с л е д н и е\n \nн е д е л и\n \nм о д у л я\n \nВ ы\n \nп о д о ш л и\n \nк\n \nк о н ц у\n \nм о д у л я\n \nп о\n \nP y t h o n\n \nF u n d a m e n t a l s ,\n \nа\n \nэ т о\n \nз н а ч и т\n \nв п е р е д и\n \nв а с\n \nж д у т\n \nн а с ы щ е н н ы е\n \nн е д е л и .\n \n \n \nВ\n \nр а м к а х\n \nп о с л е д н и х\n \nн е д е л ь\n \nм о д у л я\n \nн у ж н о :\n \n \n●\n \nС д а т ь\n \nо с т а в ш и е с я\n \nд о м а ш н и е\n \nз а д а н и я\n \nп о\n \nм о д у л ю\n \nP y t h o n\n \nF u n d a m e n t a l s\n \n●\n \nВ ы п о л н и т ь\n \nи т о г о в ы е\n \nт е с т ы\n \nп о\n \nм о д у л ю\n \nP y t h o n\n \nF u n d a m e n t a l s\n \n●\n \nВ ы п о л н и т ь\n \nи т о г о в ы й\n \nп р о е к т\n \n \n●\n \nЗ а щ и т и т ь\n \nи т о г о в ы й\n \nп р о е к т\n \n●\n \nЗ а п о л н и т ь\n \nа н к е т у\n \nо б р а т н о й\n \nс в я з и\n \nп о\n \nм о д у л ю\n \nД о м а ш н и е\n \nз а д а н и я\n \nЗ а ч т е н н ы е\n \nд о м а ш н и е\n \nз а д а н и я\n \nв л и я ю т\n \nн а\n \nи т о г о в у ю\n \nо ц е н к у\n \nп о\n \nм о д у л ю ,\n \nп о э т о м у\n \nу\n \nв а с\n \nе с т ь\n \nв о з м о ж н о с т ь\n"
+  },
+  "DA_Python Fund_Project (5).pdf": {
+    "path": "c:\\Users\\Vitaliy\\OneDrive\\It_career_hub\\Python\\проект\\DA_Python Fund_Project (5).pdf",
+    "md": "c:\\Users\\Vitaliy\\OneDrive\\It_career_hub\\Python\\проект\\DA_Python Fund_Project (5).md",
+    "chars": 12272,
+    "words": 1902,
+    "header": [
+      "Финальный",
+      "проект:",
+      "Приложение",
+      "для",
+      "поиска",
+      "фильмов",
+      "Цель",
+      "проекта"
+    ],
+    "excerpt": " \nФинальный\n \nпроект:\n \nПриложение\n \nдля\n \nпоиска\n \nфильмов\n \nЦель\n \nпроекта\n \nСоздать\n \nи н т е р а к т и в н о е\n \nк о н с о л ь н о е\n \nп р и л о ж е н и е\n \nдля\n \nпоиска\n \nфильмов\n \nпо\n \nбазе\n \nданных\n \nsakila\n \nMySQL\n \nс\n \nвозможностью:\n \n1.\n \nИскать\n \nфильмы:\n \n○\n \nПо\n \nключевому\n \nслову\n \n■\n \nПоиск\n \nпо\n \nназванию\n \nфильма\n \n■\n \nРезультат\n \nограничен\n \n10\n \nфильмами\n \n■\n \nПо\n \nзапросу\n \nпользователя\n \nотображаются\n \nследующие\n \n10\n \nрезультатов,\n \nили\n \nпока\n \nне\n \nзакончатся\n \n○\n \nПо\n \nжанру\n \nи\n \nдиапазону\n \nгодов\n \nвыпуска\n \n■\n \nПеред\n \nвводом\n \nпользователю\n \nпоказываются:\n \n■\n \nСписок\n \nвсех\n \nжанров\n \nиз\n \nтаблицы\n \nжанров\n \n■\n \nМинимальный\n \nи\n \nмаксимальный\n \nгод\n \nвыпуска\n \nфильмов\n \nв\n \nбазе\n \n■\n \nУказывается\n \nнижняя\n \nи\n \nверхняя\n \nграница,\n \nнапример:\n \nот\n \n2005\n \nдо\n \n2012,\n \nили\n \nконкретный\n \nгод\n \n■\n \nПо\n \nзапросу\n \nпользователя\n \nотображаются\n \nследующие\n \n10\n \nрезультатов,\n \nили\n \nпока\n \nне\n \nзакончатся\n \n2.\n \nСохранять\n \nвсе\n \nпоисковые\n \nзапросы\n \nв\n \nM o"
+  }
+}

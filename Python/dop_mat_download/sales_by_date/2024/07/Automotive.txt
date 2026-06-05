@@ -1,0 +1,28 @@
+Victoria Bryant,2024-07-07,956,Automotive,Chicago
+Robert Brooks,2024-07-14,4528,Automotive,London
+Andrew Johnson,2024-07-13,1076,Automotive,Los Angeles
+Nicholas Gardner,2024-07-31,3794,Automotive,Toronto
+Meghan Calhoun,2024-07-23,3765,Automotive,New York
+Thomas Caldwell,2024-07-25,1074,Automotive,Dallas
+Shawn Mccoy,2024-07-19,2657,Automotive,Chicago
+Sarah White,2024-07-22,4632,Automotive,San Francisco
+Brenda Escobar,2024-07-17,1359,Automotive,Miami
+Tara Graham,2024-07-08,4521,Automotive,Toronto
+Mikayla Bird,2024-07-31,4235,Automotive,Dallas
+Angelica Glenn,2024-07-01,2627,Automotive,Chicago
+Monica Erickson,2024-07-17,4353,Automotive,Chicago
+James Nguyen,2024-07-10,1016,Automotive,Miami
+Kristine Allen,2024-07-06,2358,Automotive,London
+Antonio Park,2024-07-23,3958,Automotive,Toronto
+Brooke Dawson,2024-07-27,1538,Automotive,Los Angeles
+Laura Morris,2024-07-03,2666,Automotive,Chicago
+Karen Duncan,2024-07-26,1793,Automotive,Dallas
+Elizabeth Rogers,2024-07-15,3178,Automotive,Los Angeles
+Frank Bailey,2024-07-05,1177,Automotive,New York
+Lisa Meyers,2024-07-10,3648,Automotive,Dallas
+Krista Scott,2024-07-07,2235,Automotive,Los Angeles
+Michael Powell,2024-07-22,4490,Automotive,Chicago
+Heather Smith,2024-07-28,1350,Automotive,Miami
+Paul Guerrero,2024-07-01,2256,Automotive,Toronto
+Gary Johnson,2024-07-19,724,Automotive,Berlin
+Susan White,2024-07-22,892,Automotive,San Francisco

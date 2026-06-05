@@ -1,0 +1,4 @@
+Kelly Olson,2025-03-01,2232,Clothing,New York
+Randall Palmer,2025-03-02,4442,Clothing,Los Angeles
+Felicia Anderson,2025-03-02,1237,Clothing,Berlin
+Michele Brown,2025-03-01,3121,Clothing,Miami

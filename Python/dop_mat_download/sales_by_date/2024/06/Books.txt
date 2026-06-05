@@ -1,0 +1,48 @@
+Crystal Lopez,2024-06-25,1511,Books,Toronto
+Tanya Barnes,2024-06-22,789,Books,Toronto
+Darlene Carter,2024-06-01,4338,Books,Berlin
+Lydia Kerr,2024-06-04,1749,Books,Dallas
+Julie Figueroa,2024-06-09,2964,Books,Dallas
+Sonya Alexander,2024-06-29,906,Books,London
+Matthew Castillo,2024-06-05,3739,Books,Chicago
+Samuel Webb,2024-06-05,2951,Books,Miami
+Rachel Mejia,2024-06-09,2033,Books,London
+Maria Smith,2024-06-15,2782,Books,Miami
+Laura Miller,2024-06-25,4772,Books,London
+Steven Berry,2024-06-24,2846,Books,Los Angeles
+Kenneth Morales,2024-06-04,1041,Books,Chicago
+Charles Jones,2024-06-18,1912,Books,Dallas
+Stephen Graves,2024-06-12,3856,Books,New York
+Geoffrey Powell,2024-06-17,2888,Books,Los Angeles
+John Williams,2024-06-17,3851,Books,Chicago
+Heather Campbell,2024-06-14,4391,Books,Chicago
+Elizabeth Watson,2024-06-08,3187,Books,Los Angeles
+Pamela Myers,2024-06-08,1935,Books,Miami
+Cody Robinson,2024-06-03,3412,Books,San Francisco
+Laura Torres,2024-06-24,1822,Books,Chicago
+Caleb Benton,2024-06-01,3938,Books,Miami
+Kristina Allen,2024-06-17,3065,Books,New York
+Sandra Baker,2024-06-14,2924,Books,Los Angeles
+Kristen Anderson,2024-06-09,2187,Books,Chicago
+Gerald Roach MD,2024-06-04,2532,Books,Chicago
+Mary Baker,2024-06-03,4844,Books,Berlin
+Mr. Robert Morris DDS,2024-06-28,4352,Books,Los Angeles
+Jacqueline Mayo,2024-06-11,3811,Books,Berlin
+Scott Guerra,2024-06-15,2411,Books,Dallas
+Martha Taylor,2024-06-07,2378,Books,Los Angeles
+Dana Johnson,2024-06-18,4940,Books,New York
+Chelsea Wilson,2024-06-08,1406,Books,Toronto
+Lisa Gill,2024-06-26,4682,Books,New York
+Katrina Newton,2024-06-02,1637,Books,San Francisco
+Martha Montoya,2024-06-29,3034,Books,San Francisco
+Chad Wright,2024-06-07,4375,Books,Toronto
+Kayla Mendoza,2024-06-27,1924,Books,Los Angeles
+Jessica Martin,2024-06-13,3345,Books,Miami
+Cameron Edwards,2024-06-03,4716,Books,Miami
+Tasha Ellis,2024-06-03,900,Books,Chicago
+Charles Hunter,2024-06-26,3729,Books,New York
+Mark Barron,2024-06-05,1896,Books,San Francisco
+Breanna Hall,2024-06-14,1727,Books,Berlin
+Lisa Smith,2024-06-28,3418,Books,Toronto
+Benjamin Wilson,2024-06-24,4065,Books,Chicago
+Jeremy Wilkerson,2024-06-05,1423,Books,Berlin

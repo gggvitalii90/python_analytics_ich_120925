@@ -1,0 +1,43 @@
+Jeremy Johnston,2024-05-19,1211,Sports,London
+Taylor Cruz,2024-05-18,1741,Sports,New York
+Mary Farmer,2024-05-09,2735,Sports,Chicago
+Anthony Vasquez,2024-05-26,2042,Sports,Dallas
+Gregory Clayton,2024-05-27,1919,Sports,San Francisco
+Charles Walker,2024-05-30,644,Sports,Miami
+Cynthia Michael,2024-05-04,2324,Sports,Chicago
+Valerie Fitzgerald,2024-05-03,3260,Sports,Los Angeles
+Jennifer Carroll,2024-05-03,2200,Sports,Toronto
+Sydney Blair,2024-05-15,2105,Sports,Berlin
+Dana Simpson,2024-05-27,3190,Sports,New York
+Lawrence Osborn,2024-05-07,2142,Sports,Berlin
+Jennifer Craig,2024-05-22,1806,Sports,Toronto
+James Martinez,2024-05-04,2834,Sports,Dallas
+Brad Gross,2024-05-20,1145,Sports,New York
+Catherine Reed,2024-05-17,740,Sports,New York
+Dr. Gregory Johnson,2024-05-21,3962,Sports,San Francisco
+Eric Spencer,2024-05-08,2396,Sports,Dallas
+Nicole Davis,2024-05-09,523,Sports,Berlin
+Aaron Tucker,2024-05-09,2592,Sports,Chicago
+Christina Harper PhD,2024-05-03,1655,Sports,Miami
+Mary Dudley,2024-05-06,2158,Sports,London
+David Parrish,2024-05-18,3027,Sports,Chicago
+Ann Herrera,2024-05-18,1971,Sports,Toronto
+Eric Dunn,2024-05-26,4270,Sports,London
+Jon Sanders DDS,2024-05-17,3758,Sports,Miami
+David Watkins,2024-05-23,4916,Sports,New York
+Jessica Hahn,2024-05-20,1226,Sports,San Francisco
+Austin Villarreal,2024-05-24,1304,Sports,New York
+Ernest Padilla,2024-05-19,3287,Sports,Los Angeles
+Michelle Roberts,2024-05-28,2744,Sports,Chicago
+Noah Werner,2024-05-29,1578,Sports,New York
+Laurie Rogers,2024-05-18,1347,Sports,Toronto
+Stephanie Clarke,2024-05-31,4846,Sports,San Francisco
+Thomas Hayden,2024-05-17,2716,Sports,Toronto
+Michael Walters,2024-05-08,898,Sports,San Francisco
+Tyler Smith,2024-05-04,3522,Sports,Los Angeles
+Jeffrey Villa,2024-05-16,4519,Sports,Berlin
+Kathryn Hunt,2024-05-10,1581,Sports,San Francisco
+Kyle Morrison,2024-05-19,533,Sports,San Francisco
+Kristen Griffin,2024-05-13,2717,Sports,San Francisco
+Courtney Villanueva,2024-05-12,1953,Sports,Miami
+Alisha Hicks,2024-05-21,3526,Sports,San Francisco

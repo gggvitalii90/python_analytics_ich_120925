@@ -1,0 +1,40 @@
+Christopher Smith,2024-08-25,4145,Sports,Miami
+Jeffrey Stewart,2024-08-15,1614,Sports,New York
+John Flores,2024-08-05,4696,Sports,New York
+Sean Smith,2024-08-15,2533,Sports,Los Angeles
+Jordan Acosta,2024-08-15,1201,Sports,San Francisco
+Richard Gaines,2024-08-26,954,Sports,Los Angeles
+Christina Palmer,2024-08-13,1930,Sports,Toronto
+Elizabeth Carr,2024-08-24,2339,Sports,Berlin
+Ashley Lopez,2024-08-11,1531,Sports,Dallas
+James Wilson,2024-08-27,2464,Sports,New York
+Richard Fry MD,2024-08-14,4171,Sports,Toronto
+Jacob Tran,2024-08-30,3705,Sports,Miami
+Ian Farmer,2024-08-26,2933,Sports,San Francisco
+Katherine Cole,2024-08-07,4302,Sports,Chicago
+Jacob Whitehead,2024-08-09,3853,Sports,Los Angeles
+Thomas Floyd,2024-08-21,3417,Sports,London
+Stephanie Hernandez,2024-08-20,2118,Sports,Dallas
+Ricky Fox,2024-08-10,3959,Sports,Dallas
+David Murray,2024-08-12,1168,Sports,Dallas
+Maria Scott,2024-08-30,4940,Sports,Chicago
+Joseph Robinson,2024-08-01,2752,Sports,Berlin
+Christy Kennedy,2024-08-18,1636,Sports,Berlin
+Jay Anderson,2024-08-29,4423,Sports,Toronto
+Tamara Kim,2024-08-11,2312,Sports,London
+Alan Parker,2024-08-31,1211,Sports,New York
+Mrs. Denise Peterson MD,2024-08-30,2485,Sports,Los Angeles
+Jacob Peterson,2024-08-02,1567,Sports,Dallas
+Robert Hines,2024-08-14,3653,Sports,Chicago
+Scott Floyd,2024-08-23,1123,Sports,Miami
+Amy Dickerson,2024-08-26,3083,Sports,New York
+Erin Garza,2024-08-06,1420,Sports,San Francisco
+Jennifer Pierce,2024-08-11,3458,Sports,San Francisco
+Kim Walter,2024-08-17,1732,Sports,Berlin
+Wendy Johnson,2024-08-14,4572,Sports,Berlin
+Natalie Nelson,2024-08-15,3170,Sports,Berlin
+Kimberly Fields,2024-08-27,3820,Sports,Dallas
+Kristen Bernard,2024-08-15,931,Sports,Berlin
+George Smith,2024-08-29,2021,Sports,Los Angeles
+Jeffrey Edwards,2024-08-01,2841,Sports,Dallas
+Heather David,2024-08-26,3809,Sports,Toronto

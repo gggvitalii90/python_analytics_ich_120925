@@ -1,0 +1,25 @@
+Christopher Camacho,2024-11-22,3111,Sports,Toronto
+Eric Townsend,2024-11-25,1602,Sports,London
+Andrew Valencia,2024-11-04,3639,Sports,Berlin
+Amy Tucker,2024-11-14,3310,Sports,New York
+Michelle Williams,2024-11-01,3688,Sports,Berlin
+Noah Frank,2024-11-11,988,Sports,Los Angeles
+Tracy Sherman,2024-11-24,3278,Sports,New York
+James Castillo,2024-11-30,4146,Sports,New York
+Wendy Simmons,2024-11-20,2654,Sports,Toronto
+Michelle Williams,2024-11-08,4081,Sports,Berlin
+Shelley Williams,2024-11-25,3580,Sports,Chicago
+Karen Prince,2024-11-06,1551,Sports,Dallas
+Shannon Rose,2024-11-20,4606,Sports,San Francisco
+Tami Parker,2024-11-12,3147,Sports,Miami
+John Warner,2024-11-23,1794,Sports,London
+Randy Miller,2024-11-25,627,Sports,Berlin
+Anne Cooper,2024-11-09,4324,Sports,New York
+Anthony Potter,2024-11-03,1818,Sports,New York
+Ashley Moore,2024-11-30,4653,Sports,Miami
+Susan Peters,2024-11-28,4254,Sports,Toronto
+George Harris,2024-11-23,864,Sports,New York
+Morgan Dyer,2024-11-08,1938,Sports,London
+Rebecca Patrick,2024-11-09,3027,Sports,Dallas
+John Harrison,2024-11-14,554,Sports,Berlin
+Tanya Green,2024-11-15,3849,Sports,San Francisco

@@ -1,0 +1,36 @@
+Steven Campbell,2024-09-15,4706,Sports,Toronto
+Erin Long,2024-09-23,4429,Sports,New York
+Ashley Fuentes,2024-09-01,3091,Sports,Berlin
+Donna Weber,2024-09-26,1960,Sports,Berlin
+Mark Grimes,2024-09-21,2995,Sports,Los Angeles
+Stuart White,2024-09-20,2963,Sports,Miami
+Alicia Brown,2024-09-25,3683,Sports,London
+Jenny Clark,2024-09-18,2251,Sports,New York
+Abigail Cole,2024-09-01,3001,Sports,London
+Louis Lewis,2024-09-26,4976,Sports,San Francisco
+Tammy Whitaker MD,2024-09-10,4509,Sports,Los Angeles
+Micheal Leon,2024-09-04,1157,Sports,Chicago
+Alexa Mata,2024-09-25,705,Sports,San Francisco
+Ashley Gardner,2024-09-21,2554,Sports,Chicago
+Emily Chapman,2024-09-09,3645,Sports,San Francisco
+Alan Boyd,2024-09-05,3088,Sports,Berlin
+Samantha Miller,2024-09-24,4597,Sports,San Francisco
+Michael Wilkerson,2024-09-07,2422,Sports,Dallas
+Eric Lawson,2024-09-10,2091,Sports,Toronto
+Krystal Davis,2024-09-04,4778,Sports,Berlin
+Joseph Melton,2024-09-20,1714,Sports,Chicago
+Jillian Flores,2024-09-23,2070,Sports,San Francisco
+Harry Davis,2024-09-10,3259,Sports,San Francisco
+Mary Williams,2024-09-30,3747,Sports,Toronto
+Brooke Martinez,2024-09-11,2016,Sports,Dallas
+Zachary Meyer,2024-09-11,4782,Sports,Miami
+Julian Hart,2024-09-12,1153,Sports,London
+Kathryn Owens,2024-09-01,3302,Sports,New York
+Elizabeth Chaney,2024-09-01,620,Sports,San Francisco
+Christina Clark,2024-09-11,1232,Sports,New York
+Daniel Hall,2024-09-24,816,Sports,Toronto
+Larry Bowman,2024-09-15,3797,Sports,London
+Holly Christensen,2024-09-15,1457,Sports,New York
+Brian Morales,2024-09-22,4547,Sports,New York
+Charles Barnes,2024-09-07,4326,Sports,New York
+Kara Perez,2024-09-02,2255,Sports,Berlin

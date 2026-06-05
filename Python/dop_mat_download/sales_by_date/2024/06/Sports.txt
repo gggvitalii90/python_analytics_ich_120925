@@ -1,0 +1,32 @@
+Carolyn Long,2024-06-25,962,Sports,Berlin
+Kevin Dyer,2024-06-25,3057,Sports,San Francisco
+Daniel Houston,2024-06-22,2560,Sports,Berlin
+Catherine Arroyo,2024-06-18,1083,Sports,Dallas
+Ashley Sutton,2024-06-08,1874,Sports,San Francisco
+Emily Lewis,2024-06-09,534,Sports,Los Angeles
+Jane Thompson,2024-06-22,4299,Sports,Berlin
+Emily Burton,2024-06-03,4332,Sports,London
+Michael Sanchez,2024-06-05,2340,Sports,Chicago
+Danielle Johnson,2024-06-28,1698,Sports,Dallas
+Mary White,2024-06-29,3271,Sports,Chicago
+Sean Delgado,2024-06-07,2113,Sports,Los Angeles
+Brittany Vaughan,2024-06-29,3454,Sports,Toronto
+Adam Moore,2024-06-04,3974,Sports,San Francisco
+Justin Roberts,2024-06-01,4572,Sports,London
+Scott Williams,2024-06-16,3067,Sports,Toronto
+Jay Nash,2024-06-08,3522,Sports,Berlin
+Tony Hanna,2024-06-11,4959,Sports,Dallas
+Jessica Forbes,2024-06-06,3161,Sports,Miami
+Sandra Estrada,2024-06-04,1880,Sports,Chicago
+Thomas Burke,2024-06-02,4317,Sports,San Francisco
+Elizabeth Smith DVM,2024-06-17,3146,Sports,London
+Martha Krause,2024-06-25,4461,Sports,New York
+Jeffrey Hawkins,2024-06-20,843,Sports,Miami
+Lauren Burke,2024-06-21,3345,Sports,Dallas
+Andrew Peters,2024-06-09,4526,Sports,Los Angeles
+Deborah Caldwell,2024-06-02,3215,Sports,San Francisco
+Keith Ray,2024-06-30,2886,Sports,Los Angeles
+Emily Dillon,2024-06-07,2067,Sports,Dallas
+Lisa Robertson,2024-06-12,2505,Sports,Miami
+Kimberly Garcia,2024-06-08,3923,Sports,Chicago
+Larry Wagner,2024-06-26,2848,Sports,San Francisco

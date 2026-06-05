@@ -1,0 +1,35 @@
+Holly Cook,2024-06-07,4107,Clothing,New York
+James Morris,2024-06-24,4379,Clothing,London
+Rebecca Brown,2024-06-04,4599,Clothing,Dallas
+Patrick Simpson,2024-06-18,4060,Clothing,Berlin
+Robert Riley,2024-06-08,3301,Clothing,Chicago
+Tiffany Santiago,2024-06-19,1755,Clothing,Berlin
+Mikayla Castillo,2024-06-02,1539,Clothing,Dallas
+Robert Hall,2024-06-09,2446,Clothing,Chicago
+Joshua Martinez,2024-06-21,3133,Clothing,Chicago
+Adam Wallace,2024-06-03,4619,Clothing,Chicago
+Clifford Lamb,2024-06-11,4128,Clothing,Berlin
+Arthur Harris,2024-06-19,2557,Clothing,Chicago
+Bryan Brooks,2024-06-03,4209,Clothing,Miami
+Anna Cox,2024-06-01,2687,Clothing,San Francisco
+Erika George,2024-06-19,4492,Clothing,San Francisco
+Bradley Gray,2024-06-25,1984,Clothing,Dallas
+Jesus Huff,2024-06-12,3493,Clothing,Berlin
+Rickey Ramos,2024-06-04,635,Clothing,San Francisco
+Maria Thomas,2024-06-01,3247,Clothing,Dallas
+Michael Mccarthy,2024-06-29,1998,Clothing,Los Angeles
+Dr. Emily Gomez,2024-06-09,3420,Clothing,Los Angeles
+Ronald Lara,2024-06-21,2349,Clothing,Chicago
+Craig Wiggins,2024-06-14,2786,Clothing,Los Angeles
+Eric Harrell,2024-06-17,1983,Clothing,Los Angeles
+William Carroll,2024-06-30,915,Clothing,Miami
+Stephanie Sloan,2024-06-27,4825,Clothing,New York
+Eric Landry,2024-06-26,3592,Clothing,Toronto
+Karen Burke,2024-06-08,4794,Clothing,San Francisco
+Kristina Murphy,2024-06-05,1639,Clothing,Toronto
+Craig Perry,2024-06-27,4998,Clothing,London
+Cory Turner,2024-06-01,3340,Clothing,Toronto
+Robert Mason,2024-06-06,3308,Clothing,Los Angeles
+Victoria Bowen,2024-06-23,1733,Clothing,Dallas
+William Saunders,2024-06-12,4295,Clothing,Dallas
+Edwin Arellano,2024-06-28,4341,Clothing,Miami

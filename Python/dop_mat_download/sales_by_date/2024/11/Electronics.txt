@@ -1,0 +1,28 @@
+David Robinson,2024-11-05,2582,Electronics,Chicago
+Brenda Miles,2024-11-19,1432,Electronics,London
+Heather Gray,2024-11-30,1241,Electronics,New York
+Gary Haynes,2024-11-29,643,Electronics,Chicago
+Angela Vazquez,2024-11-14,4844,Electronics,Los Angeles
+Nicholas Green,2024-11-23,2945,Electronics,London
+Sarah Morton,2024-11-25,4838,Electronics,Berlin
+Stephanie Gibson,2024-11-26,4178,Electronics,New York
+Julie Smith,2024-11-12,2963,Electronics,Toronto
+Donna Nunez,2024-11-03,1712,Electronics,San Francisco
+Daniel Perez,2024-11-14,4951,Electronics,Miami
+Jamie Summers,2024-11-17,2065,Electronics,San Francisco
+Scott Medina,2024-11-23,2084,Electronics,London
+Jennifer Rodriguez,2024-11-20,1658,Electronics,Los Angeles
+Alexander Woods,2024-11-05,3370,Electronics,Dallas
+Craig Hill,2024-11-28,667,Electronics,Dallas
+Andres Cooper,2024-11-23,2162,Electronics,Chicago
+Elizabeth Burns,2024-11-12,1375,Electronics,New York
+Shelby Weeks,2024-11-05,2422,Electronics,Dallas
+David Harrell,2024-11-10,1730,Electronics,Berlin
+Christy Williams,2024-11-02,3777,Electronics,Los Angeles
+Sonya Grant,2024-11-11,2260,Electronics,San Francisco
+William Everett,2024-11-29,1423,Electronics,Los Angeles
+Levi Smith,2024-11-07,3049,Electronics,Chicago
+Anne Cummings,2024-11-13,2496,Electronics,New York
+Joshua Watson,2024-11-22,1520,Electronics,Dallas
+John Hester,2024-11-24,4876,Electronics,Miami
+Brooke Miller,2024-11-03,3935,Electronics,Berlin

@@ -1,0 +1,31 @@
+Patrick Hurley,2024-09-22,655,Groceries,Toronto
+Meredith Tate,2024-09-27,3756,Groceries,San Francisco
+Lauren Malone,2024-09-18,519,Groceries,Chicago
+Mario Henry,2024-09-05,1180,Groceries,Berlin
+Andrew Watson,2024-09-18,1131,Groceries,New York
+Vanessa Ramos,2024-09-20,500,Groceries,Dallas
+Timothy Hansen,2024-09-18,1993,Groceries,New York
+Bradley Fisher,2024-09-17,3906,Groceries,London
+Sarah Munoz,2024-09-25,805,Groceries,Miami
+Rhonda Kane,2024-09-16,3720,Groceries,Miami
+Michael Wilson,2024-09-07,1813,Groceries,Toronto
+Andrew Hobbs,2024-09-17,3260,Groceries,San Francisco
+Jordan Cox,2024-09-24,1404,Groceries,Dallas
+Peter Proctor,2024-09-19,1434,Groceries,Chicago
+Paul Frank,2024-09-09,1115,Groceries,Miami
+David Clark,2024-09-15,2695,Groceries,San Francisco
+Michelle Greene,2024-09-30,4501,Groceries,Miami
+Casey Clark,2024-09-06,1626,Groceries,Chicago
+Katherine Flores,2024-09-17,3431,Groceries,New York
+Colin Smith,2024-09-09,4838,Groceries,Los Angeles
+Christopher Yang,2024-09-06,2613,Groceries,Miami
+Heather Owen,2024-09-10,4930,Groceries,Berlin
+Melissa Case,2024-09-17,3921,Groceries,Berlin
+Mary Knight,2024-09-05,4083,Groceries,Toronto
+Sandra Nelson,2024-09-12,3975,Groceries,New York
+Nicole Miller,2024-09-24,989,Groceries,New York
+Matthew Jenkins,2024-09-09,2287,Groceries,San Francisco
+Brian Murphy,2024-09-06,2448,Groceries,Miami
+Herbert Odonnell,2024-09-28,4828,Groceries,Chicago
+Sarah Spears,2024-09-28,2079,Groceries,San Francisco
+Jeffrey Wise,2024-09-16,3434,Groceries,Chicago

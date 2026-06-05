@@ -1,0 +1,35 @@
+Mr. Michael Barr,2024-04-26,4986,Groceries,New York
+Lisa Smith,2024-04-28,932,Groceries,Toronto
+Michael Rodgers,2024-04-23,1329,Groceries,New York
+Benjamin Mccoy,2024-04-04,2369,Groceries,Dallas
+Tyler Gonzalez,2024-04-24,2677,Groceries,Miami
+Taylor Conner,2024-04-18,4143,Groceries,San Francisco
+Timothy Wilkins,2024-04-13,1805,Groceries,Miami
+Kenneth Wilson,2024-04-24,1153,Groceries,Chicago
+Alexander Farley,2024-04-01,2179,Groceries,Miami
+Linda Rush,2024-04-17,4193,Groceries,Dallas
+Geoffrey Cook,2024-04-14,2829,Groceries,Berlin
+Michael Summers,2024-04-01,4668,Groceries,Dallas
+Stephanie Navarro,2024-04-29,1826,Groceries,Miami
+Margaret Bell,2024-04-18,616,Groceries,San Francisco
+Kristi Horn,2024-04-12,2543,Groceries,Berlin
+Tanya Gray,2024-04-21,1656,Groceries,London
+Karen Jones,2024-04-28,577,Groceries,New York
+Alicia Miles,2024-04-13,1580,Groceries,Miami
+Jordan Smith MD,2024-04-11,2772,Groceries,Berlin
+Gary Thornton,2024-04-01,4991,Groceries,San Francisco
+Nicholas Cross,2024-04-05,976,Groceries,Los Angeles
+Alexis Atkinson,2024-04-02,2229,Groceries,Los Angeles
+Ashlee Hicks,2024-04-17,1573,Groceries,San Francisco
+Nathan Carey,2024-04-15,3321,Groceries,New York
+Brittney Baxter,2024-04-22,1308,Groceries,Dallas
+Mike Garrett,2024-04-15,4407,Groceries,San Francisco
+Justin Garza,2024-04-26,2657,Groceries,San Francisco
+William Rivas,2024-04-18,2772,Groceries,Berlin
+Adrian Mclean,2024-04-18,1514,Groceries,Berlin
+Judith Frey,2024-04-22,4857,Groceries,Berlin
+Diana Fields,2024-04-01,963,Groceries,Los Angeles
+Chloe Hill,2024-04-03,1968,Groceries,Dallas
+Alicia Patterson,2024-04-14,4878,Groceries,Toronto
+Michael Thomas,2024-04-24,4061,Groceries,Chicago
+Mr. Randy Pollard,2024-04-15,1753,Groceries,Los Angeles

@@ -1,0 +1,42 @@
+Tom Wise,2024-07-23,3508,Home Appliances,Los Angeles
+Zoe Francis,2024-07-31,940,Home Appliances,Los Angeles
+Neil Williams,2024-07-17,2054,Home Appliances,Dallas
+Bethany Torres,2024-07-28,625,Home Appliances,Los Angeles
+Robert Dean MD,2024-07-20,4078,Home Appliances,Chicago
+Michelle Burch,2024-07-07,3341,Home Appliances,New York
+Kathleen Hamilton,2024-07-25,4771,Home Appliances,New York
+Anthony Whitney,2024-07-17,4571,Home Appliances,London
+Melanie Johnson,2024-07-22,3981,Home Appliances,Berlin
+Jessica Smith,2024-07-03,633,Home Appliances,Los Angeles
+Judith Krueger,2024-07-18,1849,Home Appliances,London
+Bobby Hernandez,2024-07-01,2794,Home Appliances,Chicago
+Carolyn Banks,2024-07-22,2048,Home Appliances,San Francisco
+Larry Diaz,2024-07-14,3489,Home Appliances,Los Angeles
+Kimberly Benson,2024-07-27,1208,Home Appliances,Chicago
+Sergio Henderson,2024-07-10,1985,Home Appliances,Los Angeles
+Denise Sutton,2024-07-27,3807,Home Appliances,Toronto
+Sarah Riley,2024-07-03,1057,Home Appliances,Los Angeles
+Shelley Foster,2024-07-18,4336,Home Appliances,Berlin
+Leah Morrison,2024-07-25,2057,Home Appliances,San Francisco
+Amy Heath,2024-07-26,2816,Home Appliances,Miami
+Stacy Johnson,2024-07-04,3189,Home Appliances,Berlin
+Haley Smith,2024-07-18,3519,Home Appliances,San Francisco
+Adam Foster,2024-07-04,2246,Home Appliances,San Francisco
+Jennifer Edwards,2024-07-07,1876,Home Appliances,Dallas
+Heather Williams,2024-07-09,4019,Home Appliances,San Francisco
+Amy Garcia,2024-07-16,3992,Home Appliances,San Francisco
+Thomas Hicks,2024-07-14,4592,Home Appliances,Dallas
+Rebecca Moore,2024-07-29,4598,Home Appliances,Dallas
+Michelle Walton,2024-07-11,922,Home Appliances,New York
+David Winters,2024-07-12,3575,Home Appliances,Miami
+Kevin Jackson,2024-07-22,4540,Home Appliances,Los Angeles
+Cynthia Wallace,2024-07-13,4454,Home Appliances,Chicago
+Ryan Hull,2024-07-07,3758,Home Appliances,Berlin
+Kimberly Mayo,2024-07-08,1907,Home Appliances,Chicago
+Vincent Hawkins,2024-07-24,4577,Home Appliances,London
+Melissa Lawson,2024-07-14,3795,Home Appliances,New York
+Amanda Carter,2024-07-25,4083,Home Appliances,San Francisco
+Ashley Johnson,2024-07-13,627,Home Appliances,San Francisco
+Zachary Flores,2024-07-01,4207,Home Appliances,Los Angeles
+Kelly Young,2024-07-16,1750,Home Appliances,San Francisco
+Bailey Velez,2024-07-01,4373,Home Appliances,Dallas
