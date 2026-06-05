@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "source": "Official Python documentation references: standard library",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "stdlib-datetime",
+      "title": "datetime",
+      "package": "Python stdlib",
+      "terms": ["datetime", "date", "time", "дата", "время"],
+      "summary": "Official Python documentation for date and time types.",
+      "import": "from datetime import datetime, date, timedelta",
+      "syntax": "now = datetime.now()\ncreated = datetime.strptime(\"2026-06-06\", \"%Y-%m-%d\")\nnext_week = created + timedelta(days=7)",
+      "related": ["time", "calendar", "pandas.to_datetime"],
+      "docsUrl": "https://docs.python.org/3/library/datetime.html"
+    },
+    {
+      "id": "stdlib-math",
+      "title": "math",
+      "package": "Python stdlib",
+      "terms": ["math", "sqrt", "ceil", "floor", "log", "sin", "cos"],
+      "summary": "Official Python documentation for mathematical functions.",
+      "import": "import math",
+      "syntax": "root = math.sqrt(25)\nvalue = math.log(100)\nrounded_up = math.ceil(2.3)",
+      "related": ["statistics", "numpy", "decimal"],
+      "docsUrl": "https://docs.python.org/3/library/math.html"
+    },
+    {
+      "id": "stdlib-random",
+      "title": "random",
+      "package": "Python stdlib",
+      "terms": ["random", "randint", "choice", "shuffle", "sample"],
+      "summary": "Official Python documentation for pseudo-random values.",
+      "import": "import random",
+      "syntax": "value = random.randint(1, 10)\nitem = random.choice(items)\nrandom.shuffle(items)",
+      "related": ["numpy.random", "statistics"],
+      "docsUrl": "https://docs.python.org/3/library/random.html"
+    },
+    {
+      "id": "stdlib-statistics",
+      "title": "statistics",
+      "package": "Python stdlib",
+      "terms": ["statistics", "mean", "median", "stdev", "variance"],
+      "summary": "Official Python documentation for statistics functions.",
+      "import": "import statistics as stats",
+      "syntax": "avg = stats.mean(values)\nmed = stats.median(values)\nstd = stats.stdev(values)",
+      "related": ["numpy.mean", "pandas.DataFrame.describe"],
+      "docsUrl": "https://docs.python.org/3/library/statistics.html"
+    },
+    {
+      "id": "stdlib-re",
+      "title": "re",
+      "package": "Python stdlib",
+      "terms": ["re", "regex", "regular expression", "регулярные выражения", "match", "findall"],
+      "summary": "Official Python documentation for regular expressions.",
+      "import": "import re",
+      "syntax": "matches = re.findall(r\"\\d+\", text)\nclean = re.sub(r\"\\s+\", \" \", text)",
+      "related": ["str.replace", "str.contains", "pandas.Series.str"],
+      "docsUrl": "https://docs.python.org/3/library/re.html"
+    },
+    {
+      "id": "stdlib-json",
+      "title": "json",
+      "package": "Python stdlib",
+      "terms": ["json", "loads", "dumps", "load", "dump"],
+      "summary": "Official Python documentation for JSON encoding and decoding.",
+      "import": "import json",
+      "syntax": "data = json.loads(text)\ntext = json.dumps(data, ensure_ascii=False, indent=2)",
+      "related": ["dict", "pandas.read_json"],
+      "docsUrl": "https://docs.python.org/3/library/json.html"
+    },
+    {
+      "id": "stdlib-csv",
+      "title": "csv",
+      "package": "Python stdlib",
+      "terms": ["csv", "reader", "writer", "dictreader", "dictwriter"],
+      "summary": "Official Python documentation for CSV files.",
+      "import": "import csv",
+      "syntax": "with open(\"data.csv\", newline=\"\", encoding=\"utf-8\") as file:\n    rows = list(csv.DictReader(file))",
+      "related": ["pandas.read_csv", "open"],
+      "docsUrl": "https://docs.python.org/3/library/csv.html"
+    },
+    {
+      "id": "stdlib-pathlib",
+      "title": "pathlib.Path",
+      "package": "Python stdlib",
+      "terms": ["pathlib", "Path", "file path", "путь", "exists", "glob"],
+      "summary": "Official Python documentation for object-oriented filesystem paths.",
+      "import": "from pathlib import Path",
+      "syntax": "path = Path(\"data\") / \"file.csv\"\nif path.exists():\n    print(path.read_text(encoding=\"utf-8\"))",
+      "related": ["os", "open", "glob"],
+      "docsUrl": "https://docs.python.org/3/library/pathlib.html"
+    },
+    {
+      "id": "stdlib-os",
+      "title": "os",
+      "package": "Python stdlib",
+      "terms": ["os", "environment", "getenv", "listdir", "makedirs"],
+      "summary": "Official Python documentation for operating system interfaces.",
+      "import": "import os",
+      "syntax": "token = os.getenv(\"API_TOKEN\")\nos.makedirs(\"output\", exist_ok=True)",
+      "related": ["pathlib", "sys", "subprocess"],
+      "docsUrl": "https://docs.python.org/3/library/os.html"
+    },
+    {
+      "id": "stdlib-sys",
+      "title": "sys",
+      "package": "Python stdlib",
+      "terms": ["sys", "argv", "path", "exit"],
+      "summary": "Official Python documentation for system-specific parameters.",
+      "import": "import sys",
+      "syntax": "print(sys.version)\nargs = sys.argv[1:]",
+      "related": ["os", "argparse"],
+      "docsUrl": "https://docs.python.org/3/library/sys.html"
+    },
+    {
+      "id": "stdlib-collections-counter",
+      "title": "collections.Counter",
+      "package": "Python stdlib",
+      "terms": ["Counter", "collections.Counter", "count values", "частота"],
+      "summary": "Official Python documentation for counting hashable objects.",
+      "import": "from collections import Counter",
+      "syntax": "counts = Counter(items)\nmost_common = counts.most_common(5)",
+      "related": ["defaultdict", "dict", "value_counts"],
+      "docsUrl": "https://docs.python.org/3/library/collections.html#collections.Counter"
+    },
+    {
+      "id": "stdlib-collections-defaultdict",
+      "title": "collections.defaultdict",
+      "package": "Python stdlib",
+      "terms": ["defaultdict", "collections.defaultdict", "default dict"],
+      "summary": "Official Python documentation for dictionaries with default factories.",
+      "import": "from collections import defaultdict",
+      "syntax": "groups = defaultdict(list)\nfor key, value in rows:\n    groups[key].append(value)",
+      "related": ["dict", "Counter"],
+      "docsUrl": "https://docs.python.org/3/library/collections.html#collections.defaultdict"
+    },
+    {
+      "id": "stdlib-itertools",
+      "title": "itertools",
+      "package": "Python stdlib",
+      "terms": ["itertools", "product", "combinations", "permutations", "chain"],
+      "summary": "Official Python documentation for iterator building blocks.",
+      "import": "import itertools",
+      "syntax": "pairs = list(itertools.combinations(items, 2))\ncartesian = itertools.product(a, b)",
+      "related": ["for", "zip", "enumerate"],
+      "docsUrl": "https://docs.python.org/3/library/itertools.html"
+    },
+    {
+      "id": "stdlib-functools-reduce",
+      "title": "functools.reduce",
+      "package": "Python stdlib",
+      "terms": ["reduce", "functools.reduce", "aggregate"],
+      "summary": "Official Python documentation for reduce.",
+      "import": "from functools import reduce",
+      "syntax": "total = reduce(lambda a, b: a + b, values)",
+      "related": ["lambda", "sum", "map"],
+      "docsUrl": "https://docs.python.org/3/library/functools.html#functools.reduce"
+    },
+    {
+      "id": "stdlib-argparse",
+      "title": "argparse",
+      "package": "Python stdlib",
+      "terms": ["argparse", "command line", "arguments", "cli"],
+      "summary": "Official Python documentation for command-line argument parsing.",
+      "import": "import argparse",
+      "syntax": "parser = argparse.ArgumentParser()\nparser.add_argument(\"--file\")\nargs = parser.parse_args()",
+      "related": ["sys.argv", "click"],
+      "docsUrl": "https://docs.python.org/3/library/argparse.html"
+    }
+  ]
+}
