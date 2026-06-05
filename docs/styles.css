@@ -1,13 +1,13 @@
 :root {
-  --bg: #f6f8fa;
-  --ink: #24292f;
-  --muted: #57606a;
-  --stroke: #d0d7de;
-  --accent: #2f7f80;
-  --accent-dark: #1f5f60;
+  --bg: #0b0f0d;
+  --ink: #d8efb0;
+  --muted: #b7d995;
+  --stroke: #6f8f2b;
+  --accent: #a8e04a;
+  --accent-dark: #8ac52d;
   --header-a: #155799;
   --header-b: #159957;
-  --panel: #ffffff;
+  --panel: #0f1512;
 }
 
 * {
@@ -18,9 +18,18 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, "Courier New", monospace;
   color: var(--ink);
-  background: var(--bg);
+  background:
+    radial-gradient(1000px 600px at 10% -10%, #15331e 0%, transparent 60%),
+    radial-gradient(1200px 700px at 100% 0%, #121f17 0%, transparent 55%),
+    repeating-linear-gradient(
+      0deg,
+      #0b0f0d,
+      #0b0f0d 2px,
+      #0d120f 2px,
+      #0d120f 4px
+    );
   line-height: 1.5;
 }
 
@@ -97,7 +106,7 @@ body {
 }
 
 .btn-primary {
-  color: #fff;
+  color: #0b1209;
   background: var(--accent);
 }
 
@@ -106,17 +115,17 @@ body {
 }
 
 .btn-secondary {
-  color: #fff;
-  background: #1f6feb;
+  color: #0b1209;
+  background: #96d83d;
 }
 
 .btn-secondary:hover {
-  background: #1158c7;
+  background: #85c330;
 }
 
 .btn-ghost {
   color: var(--ink);
-  background: #fff;
+  background: #121913;
   border-color: var(--stroke);
 }
 
@@ -126,12 +135,14 @@ body {
   border-radius: 0.45rem;
   padding: 1rem;
   margin: 0 0 1rem;
+  box-shadow: inset 0 0 0 1px #000;
 }
 
 .panel-head h2 {
   margin: 0;
   font-size: 1.3rem;
   font-weight: 600;
+  color: var(--accent);
 }
 
 .panel-head p {
@@ -153,11 +164,13 @@ body {
   font-size: 1rem;
   padding: 0.62rem 0.75rem;
   outline: none;
+  color: var(--ink);
+  background: #090d0b;
 }
 
 #search:focus {
-  border-color: #1f6feb;
-  box-shadow: 0 0 0 3px #1f6feb21;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #a8e04a2a;
 }
 
 .folder-list {
@@ -169,7 +182,7 @@ body {
   border: 1px solid var(--stroke);
   border-radius: 0.4rem;
   overflow: hidden;
-  background: #fff;
+  background: #0d1310;
 }
 
 .folder-summary {
@@ -180,8 +193,8 @@ body {
   align-items: baseline;
   gap: 0.7rem;
   padding: 0.75rem 0.85rem;
-  border-bottom: 1px solid var(--stroke);
-  background: #f6f8fa;
+  border-bottom: 1px dashed var(--stroke);
+  background: #111913;
 }
 
 .folder-summary::-webkit-details-marker {
@@ -190,7 +203,7 @@ body {
 
 .folder-summary::before {
   content: "▾";
-  color: var(--muted);
+  color: var(--accent);
   margin-right: 0.4rem;
 }
 
@@ -202,6 +215,7 @@ body {
   margin: 0;
   font-size: 1.06rem;
   font-weight: 600;
+  color: var(--accent);
 }
 
 .folder-hint {
@@ -237,9 +251,9 @@ body {
 
 .nb-row {
   padding: 0.55rem;
-  border: 1px solid var(--stroke);
+  border: 1px solid #4e6726;
   border-radius: 0.35rem;
-  background: #fff;
+  background: #0b100d;
 }
 
 .nb-name {
@@ -264,7 +278,7 @@ body {
   text-decoration: none;
   color: var(--ink);
   border: 1px solid var(--stroke);
-  background: #fff;
+  background: #111913;
   border-radius: 0.35rem;
   padding: 0.32rem 0.56rem;
   font-size: 0.82rem;
@@ -273,24 +287,24 @@ body {
 }
 
 .row-btn:hover {
-  background: #f3f4f6;
+  background: #1a241c;
 }
 
 .row-btn-accent {
-  color: #0f5132;
-  background: #dcfce7;
-  border-color: #86efac;
+  color: #0f170e;
+  background: var(--accent);
+  border-color: #93cf36;
 }
 
 .row-btn-accent:hover {
-  background: #bbf7d0;
+  background: var(--accent-dark);
 }
 
 .error-card {
   border: 1px solid var(--stroke);
   border-radius: 0.4rem;
   padding: 0.9rem;
-  background: #fff;
+  background: #0f1512;
 }
 
 .error-title {
