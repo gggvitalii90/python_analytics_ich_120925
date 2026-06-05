@@ -1,0 +1,46 @@
+name: Update notebook search index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "*.ipynb"
+      - "**/*.ipynb"
+      - "scripts/build_search_index.py"
+      - ".github/workflows/update-search-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-search-index:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'Update notebook search index') }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build search index
+        run: python scripts/build_search_index.py --root . --out docs/search-index.json
+
+      - name: Commit updated index
+        run: |
+          if git diff --quiet -- docs/search-index.json; then
+            echo "Search index is already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/search-index.json
+          git commit -m "Update notebook search index"
+          git push

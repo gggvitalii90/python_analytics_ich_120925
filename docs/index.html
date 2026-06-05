@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python Analytics ICH</title>
-    <meta name="description" content="Учебный портал курса Python Analytics ICH: лекции, практика, ДЗ и запуск в Binder." />
+    <meta name="description" content="Учебный портал курса Python Analytics ICH: лекции, практика, ДЗ, поиск по notebook и запуск в Colab или Binder." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
         <p class="tag">Python Analytics ICH</p>
         <h1>Учебный портал курса</h1>
         <p class="subtitle">
-          Откройте нужный notebook в один клик: просмотр на GitHub, скачивание файла или запуск в онлайн Jupyter через Binder.
+          Найдите нужный notebook по теме, функции или методу. Откройте файл онлайн, найдите нужную ячейку и скопируйте пример для своей задачи.
         </p>
         <a class="view-btn" href="https://github.com/gggvitalii90/python_analytics_ich_120925" target="_blank" rel="noreferrer">View on GitHub</a>
       </div>
@@ -24,20 +24,47 @@
 
     <main class="container">
       <section class="hero-actions">
-        <a class="btn btn-primary" href="https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab" target="_blank" rel="noreferrer">Запустить весь курс в Binder</a>
-        <a class="btn btn-secondary" href="https://github.com/gggvitalii90/python_analytics_ich_120925/archive/refs/heads/main.zip" target="_blank" rel="noreferrer">Скачать курс ZIP</a>
-        <a class="btn btn-ghost" href="https://github.com/gggvitalii90/python_analytics_ich_120925" target="_blank" rel="noreferrer">Открыть репозиторий</a>
+        <a class="btn btn-primary" href="#notebook-list">Выбрать notebook</a>
+        <a class="btn btn-secondary" href="https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab" target="_blank" rel="noreferrer">Запустить Binder</a>
+        <a class="btn btn-ghost" href="https://github.com/gggvitalii90/python_analytics_ich_120925/archive/refs/heads/main.zip" target="_blank" rel="noreferrer">Скачать ZIP</a>
+        <a class="btn btn-ghost" href="https://github.com/gggvitalii90/python_analytics_ich_120925" target="_blank" rel="noreferrer">Открыть GitHub</a>
+      </section>
+
+      <section class="panel guide-panel">
+        <div class="panel-head">
+          <h2>Как открывать материалы</h2>
+          <p>Для большинства занятий выбирайте Colab. Binder полезен, когда нужен интерфейс JupyterLab, но первый запуск может быть долгим.</p>
+        </div>
+        <div class="guide-grid">
+          <article>
+            <strong>Colab</strong>
+            <span>Быстрее и привычнее для учеников. Хорошо, чтобы открыть файл, найти ячейку и скопировать код.</span>
+          </article>
+          <article>
+            <strong>Binder</strong>
+            <span>Похож на Jupyter Notebook/JupyterLab. Может долго собирать окружение, особенно первый раз.</span>
+          </article>
+          <article>
+            <strong>GitHub</strong>
+            <span>Самый стабильный просмотр файла без запуска кода. Удобно для чтения и ссылок.</span>
+          </article>
+          <article>
+            <strong>Download</strong>
+            <span>Скачать конкретный notebook, если нужно работать локально.</span>
+          </article>
+        </div>
       </section>
 
       <section class="panel">
         <div class="panel-head">
           <h2>Быстрый поиск по notebook</h2>
-          <p>Введите часть названия: например L20, PR16, HW_20 или Summary.</p>
+          <p>Ищите по названию файла или по содержимому ячеек: например L20, PR16, duplicated, groupby, merge, дубликаты.</p>
         </div>
         <label class="search-wrap">
           <span>Поиск</span>
-          <input id="search" type="search" placeholder="Введите название файла..." autocomplete="off" />
+          <input id="search" type="search" placeholder="Введите тему, функцию или название файла..." autocomplete="off" />
         </label>
+        <p id="index-status" class="index-status">Загрузка индекса поиска...</p>
       </section>
 
       <section class="panel">
@@ -55,8 +82,9 @@
         <div class="nb-path"></div>
         <div class="nb-actions">
           <a class="row-btn" data-action="view" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="row-btn row-btn-colab" data-action="colab" target="_blank" rel="noreferrer">Colab</a>
+          <a class="row-btn row-btn-accent" data-action="binder" target="_blank" rel="noreferrer">Binder</a>
           <a class="row-btn" data-action="raw" target="_blank" rel="noreferrer">Download</a>
-          <a class="row-btn row-btn-accent" data-action="binder" target="_blank" rel="noreferrer">Launch Binder</a>
         </div>
       </article>
     </template>
