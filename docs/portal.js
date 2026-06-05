@@ -10,6 +10,7 @@ const indexStatusEl = document.getElementById("index-status");
 const assistantEl = document.getElementById("search-assistant");
 
 let allNotebooks = [];
+let referenceCards = [];
 
 const encodePath = (path) => path.split("/").map(encodeURIComponent).join("/");
 
@@ -45,124 +46,9 @@ const queryAliases = {
   "сортировать": ["sort_values", "sort_index"],
   "пропуски": ["isna", "isnull", "dropna", "fillna"],
   "пустые": ["isna", "isnull", "dropna", "fillna"],
+  "dublicated": ["duplicated", "drop_duplicates"],
+  "histogramm": ["hist", "histogram", "histplot"],
 };
-
-const helperCards = [
-  {
-    terms: ["duplicated", "drop_duplicates", "дубликат", "дубликаты", "повторы"],
-    title: "Дубликаты в pandas",
-    note: "Проверить повторяющиеся строки и удалить их.",
-    code: `import pandas as pd
-
-# Проверить, сколько строк повторяются
-df.duplicated().sum()
-
-# Посмотреть дубликаты
-df[df.duplicated()]
-
-# Удалить дубликаты
-df = df.drop_duplicates()`,
-  },
-  {
-    terms: ["drop", "dropna", "fillna", "isna", "isnull", "пропуски", "пустые"],
-    title: "Пропуски и удаление данных",
-    note: "Базовые методы pandas для пропусков, колонок и строк.",
-    code: `import pandas as pd
-
-# Проверить пропуски
-df.isna().sum()
-
-# Заполнить пропуски
-df["column"] = df["column"].fillna(0)
-
-# Удалить строки с пропусками
-df = df.dropna()
-
-# Удалить колонку
-df = df.drop(columns=["column_name"])`,
-  },
-  {
-    terms: ["groupby", "группировка", "группировать"],
-    title: "Группировка данных",
-    note: "Посчитать агрегаты по категориям.",
-    code: `import pandas as pd
-
-result = (
-    df
-    .groupby("category", as_index=False)
-    .agg(
-        total=("value", "sum"),
-        avg_value=("value", "mean"),
-        count=("value", "count"),
-    )
-)`,
-  },
-  {
-    terms: ["merge", "join", "concat", "объединение", "объединить"],
-    title: "Объединение таблиц",
-    note: "Соединить таблицы по ключу или склеить по строкам.",
-    code: `import pandas as pd
-
-# SQL-like join по ключу
-merged = left.merge(right, on="id", how="left")
-
-# Склеить таблицы по строкам
-combined = pd.concat([df1, df2], ignore_index=True)`,
-  },
-  {
-    terms: ["datetime", "date", "dt", "дата", "даты", "время"],
-    title: "Работа с датами",
-    note: "Преобразовать колонку в дату и достать год/месяц/день.",
-    code: `import pandas as pd
-
-df["date"] = pd.to_datetime(df["date"])
-df["year"] = df["date"].dt.year
-df["month"] = df["date"].dt.month
-df["weekday"] = df["date"].dt.day_name()`,
-  },
-  {
-    terms: ["boxplot", "hist", "scatter", "matplotlib", "seaborn", "график"],
-    title: "Быстрые графики",
-    note: "Посмотреть распределение или связь между признаками.",
-    code: `import matplotlib.pyplot as plt
-import seaborn as sns
-
-sns.boxplot(data=df, x="category", y="value")
-plt.show()
-
-sns.scatterplot(data=df, x="x_column", y="y_column")
-plt.show()`,
-  },
-  {
-    terms: ["dash", "dashboard", "дашборд"],
-    title: "Минимальный Dash",
-    note: "Базовый каркас приложения Dash.",
-    code: `from dash import Dash, html, dcc
-import plotly.express as px
-
-app = Dash(__name__)
-
-app.layout = html.Div([
-    html.H1("Dashboard"),
-    dcc.Graph(figure=px.scatter(df, x="x", y="y")),
-])
-
-app.run(debug=True)`,
-  },
-  {
-    terms: ["prophet", "forecast", "прогноз"],
-    title: "Прогноз в Prophet",
-    note: "Prophet ожидает колонки ds для даты и y для значения.",
-    code: `from prophet import Prophet
-
-model = Prophet()
-model.fit(df[["ds", "y"]])
-
-future = model.make_future_dataframe(periods=30)
-forecast = model.predict(future)
-model.plot(forecast)`,
-  },
-];
 
 const categoryOf = (path, name) => {
   if (path.startsWith("DZ_python_DA/")) return "homework";
@@ -219,8 +105,25 @@ const matchedCells = (entry, terms) => {
     .slice(0, 3);
 };
 
-const bestHelper = (terms) =>
-  helperCards.find((card) => card.terms.some((term) => terms.includes(term)));
+const referenceScore = (card, terms) => {
+  const cardTerms = [card.title, card.package, ...(card.terms || []), ...(card.related || [])]
+    .join(" ")
+    .toLowerCase();
+  return terms.reduce((score, term) => {
+    if ((card.terms || []).some((cardTerm) => cardTerm.toLowerCase() === term)) return score + 8;
+    if (card.title.toLowerCase().includes(term)) return score + 5;
+    if (cardTerms.includes(term)) return score + 2;
+    return score;
+  }, 0);
+};
+
+const bestReferences = (terms) =>
+  referenceCards
+    .map((card) => ({ card, score: referenceScore(card, terms) }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || a.card.title.localeCompare(b.card.title))
+    .slice(0, 4)
+    .map((item) => item.card);
 
 const createCodeBlock = (label, code) => {
   const cell = document.createElement("article");
@@ -253,43 +156,52 @@ const renderAssistant = (query, filtered, terms) => {
   title.textContent = "Помощник по запросу";
   assistantEl.appendChild(title);
 
-  const helper = bestHelper(terms);
-  if (helper) {
+  const refs = bestReferences(terms);
+  if (refs.length > 0) {
     const note = document.createElement("p");
     note.className = "assistant-note";
-    note.textContent = `${helper.title}. ${helper.note}`;
+    note.textContent = "Краткая справка из локальной базы с ссылками на официальную документацию.";
     assistantEl.appendChild(note);
-    assistantEl.appendChild(createCodeBlock("Синтаксис / импорт", helper.code));
+
+    refs.forEach((ref) => {
+      const card = document.createElement("article");
+      card.className = "reference-card";
+
+      const head = document.createElement("div");
+      head.className = "reference-head";
+
+      const titleLink = document.createElement("a");
+      titleLink.href = ref.docsUrl;
+      titleLink.target = "_blank";
+      titleLink.rel = "noreferrer";
+      titleLink.textContent = ref.title;
+
+      const pkg = document.createElement("span");
+      pkg.textContent = ref.package;
+
+      head.appendChild(titleLink);
+      head.appendChild(pkg);
+
+      const summary = document.createElement("p");
+      summary.textContent = ref.summary;
+
+      const related = document.createElement("p");
+      related.className = "reference-related";
+      related.textContent = `Похожие запросы: ${(ref.related || []).join(", ")}`;
+
+      card.appendChild(head);
+      card.appendChild(summary);
+      card.appendChild(createCodeBlock("Импорт", ref.import));
+      card.appendChild(createCodeBlock("Синтаксис", ref.syntax));
+      if ((ref.related || []).length > 0) card.appendChild(related);
+      assistantEl.appendChild(card);
+    });
   }
 
-  const realCells = [];
-  filtered.forEach((entry) => {
-    matchedCells(entry, terms).forEach((match) => {
-      if (match.type === "code") {
-        realCells.push({ entry, match });
-      }
-    });
-  });
-
-  if (realCells.length > 0) {
-    const sourceTitle = document.createElement("p");
-    sourceTitle.className = "assistant-note";
-    sourceTitle.textContent = helper
-      ? "Ниже реальные похожие ячейки из материалов курса."
-      : "Готового шаблона нет, но вот реальные ячейки из материалов курса.";
-    assistantEl.appendChild(sourceTitle);
-
-    realCells.slice(0, 3).forEach(({ entry, match }) => {
-      assistantEl.appendChild(
-        createCodeBlock(`${entry.name} · ячейка ${match.cell}`, match.text)
-      );
-    });
-  }
-
-  if (!helper && realCells.length === 0) {
+  if (refs.length === 0) {
     const empty = document.createElement("p");
     empty.className = "assistant-note";
-    empty.textContent = `По запросу "${query}" нет подсказки и совпадений в ячейках. Попробуйте другое слово или английское название метода.`;
+    empty.textContent = `По запросу "${query}" нет справочной карточки. Ниже остаются файлы курса, если в них найдено совпадение.`;
     assistantEl.appendChild(empty);
   }
 };
@@ -435,8 +347,29 @@ const loadFromSearchIndex = async () => {
   }));
 };
 
+const loadReferences = async () => {
+  const urls = [
+    `reference-index.json?v=${Date.now()}`,
+    `https://${owner}.github.io/${repo}/reference-index.json?v=${Date.now()}`,
+    `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/reference-index.json`,
+  ];
+
+  for (const url of urls) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      const data = await response.json();
+      referenceCards = data.references || [];
+      return;
+    } catch (error) {
+      referenceCards = [];
+    }
+  }
+};
+
 const loadNotebooks = async () => {
   try {
+    await loadReferences();
     try {
       allNotebooks = await loadFromSearchIndex();
     } catch (indexError) {
