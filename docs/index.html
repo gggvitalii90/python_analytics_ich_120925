@@ -45,18 +45,18 @@
           <h2>Ноутбуки курса по разделам</h2>
           <p id="stats">Загрузка списка...</p>
         </div>
-        <div id="notebook-list" class="grid"></div>
+        <div id="notebook-list" class="folder-list"></div>
       </section>
     </main>
 
-    <template id="card-template">
-      <article class="card">
-        <h3 class="card-title"></h3>
-        <p class="card-path"></p>
-        <div class="card-actions">
-          <a class="mini-btn" data-action="view" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="mini-btn" data-action="raw" target="_blank" rel="noreferrer">Download</a>
-          <a class="mini-btn accent" data-action="binder" target="_blank" rel="noreferrer">Launch Binder</a>
+    <template id="row-template">
+      <article class="nb-row">
+        <div class="nb-name"></div>
+        <div class="nb-path"></div>
+        <div class="nb-actions">
+          <a class="row-btn" data-action="view" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="row-btn" data-action="raw" target="_blank" rel="noreferrer">Download</a>
+          <a class="row-btn row-btn-accent" data-action="binder" target="_blank" rel="noreferrer">Launch Binder</a>
         </div>
       </article>
     </template>

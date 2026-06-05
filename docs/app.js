@@ -5,7 +5,7 @@ const branch = "main";
 const listEl = document.getElementById("notebook-list");
 const statsEl = document.getElementById("stats");
 const searchEl = document.getElementById("search");
-const cardTpl = document.getElementById("card-template");
+const rowTpl = document.getElementById("row-template");
 
 const encodePath = (path) => path.split("/").map(encodeURIComponent).join("/");
 
@@ -54,10 +54,10 @@ const sortNotebooks = (a, b) => {
   return a.name.localeCompare(b.name, "ru", { numeric: true, sensitivity: "base" });
 };
 
-const createCard = (entry) => {
-  const frag = cardTpl.content.cloneNode(true);
-  frag.querySelector(".card-title").textContent = entry.name;
-  frag.querySelector(".card-path").textContent = entry.path;
+const createRow = (entry) => {
+  const frag = rowTpl.content.cloneNode(true);
+  frag.querySelector(".nb-name").textContent = entry.name;
+  frag.querySelector(".nb-path").textContent = entry.path;
 
   frag.querySelector('[data-action="view"]').href = githubViewUrl(entry.path);
   frag.querySelector('[data-action="raw"]').href = githubRawUrl(entry.path);
@@ -67,19 +67,44 @@ const createCard = (entry) => {
 };
 
 const createSection = (categoryKey, items) => {
-  const section = document.createElement("section");
-  section.className = "group-section";
+  const section = document.createElement("details");
+  section.className = "folder";
+  section.open = true;
 
-  const heading = document.createElement("h3");
-  heading.className = "group-title";
-  heading.textContent = `${categoryMeta[categoryKey].title} (${items.length})`;
+  const summary = document.createElement("summary");
+  summary.className = "folder-summary";
 
-  const grid = document.createElement("div");
-  grid.className = "grid";
-  items.forEach((item) => grid.appendChild(createCard(item)));
+  const title = document.createElement("h3");
+  title.className = "folder-title";
+  title.textContent = `${categoryMeta[categoryKey].title} (${items.length})`;
 
-  section.appendChild(heading);
-  section.appendChild(grid);
+  const hint = document.createElement("p");
+  hint.className = "folder-hint";
+  hint.textContent = "Нажмите, чтобы свернуть или развернуть";
+
+  summary.appendChild(title);
+  summary.appendChild(hint);
+
+  const body = document.createElement("div");
+  body.className = "folder-body";
+
+  const header = document.createElement("div");
+  header.className = "nb-header";
+  header.innerHTML = `
+    <span>Файл</span>
+    <span>Путь</span>
+    <span>Действия</span>
+  `;
+
+  const rows = document.createElement("div");
+  rows.className = "nb-rows";
+  items.forEach((item) => rows.appendChild(createRow(item)));
+
+  body.appendChild(header);
+  body.appendChild(rows);
+
+  section.appendChild(summary);
+  section.appendChild(body);
   return section;
 };
 
@@ -143,11 +168,11 @@ const loadNotebooks = async () => {
   } catch (error) {
     statsEl.textContent = "Не удалось загрузить список notebook. Откройте репозиторий напрямую.";
     listEl.innerHTML = `
-      <article class="card">
-        <h3 class="card-title">Ошибка загрузки списка</h3>
-        <p class="card-path">${error.message}</p>
-        <div class="card-actions">
-          <a class="mini-btn accent" href="https://github.com/${owner}/${repo}" target="_blank" rel="noreferrer">Открыть GitHub</a>
+      <article class="error-card">
+        <h3 class="error-title">Ошибка загрузки списка</h3>
+        <p class="error-text">${error.message}</p>
+        <div class="error-actions">
+          <a class="row-btn row-btn-accent" href="https://github.com/${owner}/${repo}" target="_blank" rel="noreferrer">Открыть GitHub</a>
         </div>
       </article>
     `;
