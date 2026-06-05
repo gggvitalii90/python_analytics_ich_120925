@@ -1,7 +1,7 @@
-"""
-Spotify Songs — Интерактивный дашборд
-Запуск: python Spotify_Dashboard_RU_2026.py
-Адрес:  http://127.0.0.1:8054
+﻿"""
+Spotify Songs вЂ” РРЅС‚РµСЂР°РєС‚РёРІРЅС‹Р№ РґР°С€Р±РѕСЂРґ
+Р—Р°РїСѓСЃРє: python Spotify_Dashboard_RU_2026.py
+РђРґСЂРµСЃ:  http://127.0.0.1:8054
 """
 
 import pandas as pd
@@ -14,8 +14,8 @@ import dash
 from dash import dcc, html, Input, Output, callback
 import dash_bootstrap_components as dbc
 
-# ── Данные ────────────────────────────────────────────────────────────────────
-df = pd.read_csv("spotify_songs.csv")
+# в”Ђв”Ђ Р”Р°РЅРЅС‹Рµ в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
+df = pd.read_csv("data/spotify_songs.csv")
 df["year"] = pd.to_datetime(df["track_album_release_date"], errors="coerce").dt.year
 df["duration_min"] = df["duration_ms"] / 60_000
 df["party_index"] = (df["danceability"] + df["energy"] + df["valence"]) / 3
@@ -25,23 +25,23 @@ AUDIO_FEATURES = [
     "acousticness", "instrumentalness", "liveness", "valence", "tempo",
 ]
 AUDIO_RU = {
-    "danceability": "Танцевальность",
-    "energy": "Энергия",
-    "loudness": "Громкость (дБ)",
-    "speechiness": "Речевитость",
-    "acousticness": "Акустичность",
-    "instrumentalness": "Инструментальность",
-    "liveness": "Живость",
-    "valence": "Настроение",
-    "tempo": "Темп (BPM)",
+    "danceability": "РўР°РЅС†РµРІР°Р»СЊРЅРѕСЃС‚СЊ",
+    "energy": "Р­РЅРµСЂРіРёСЏ",
+    "loudness": "Р“СЂРѕРјРєРѕСЃС‚СЊ (РґР‘)",
+    "speechiness": "Р РµС‡РµРІРёС‚РѕСЃС‚СЊ",
+    "acousticness": "РђРєСѓСЃС‚РёС‡РЅРѕСЃС‚СЊ",
+    "instrumentalness": "РРЅСЃС‚СЂСѓРјРµРЅС‚Р°Р»СЊРЅРѕСЃС‚СЊ",
+    "liveness": "Р–РёРІРѕСЃС‚СЊ",
+    "valence": "РќР°СЃС‚СЂРѕРµРЅРёРµ",
+    "tempo": "РўРµРјРї (BPM)",
 }
 GENRE_RU = {
     "edm": "EDM",
-    "latin": "Латин",
-    "pop": "Поп",
+    "latin": "Р›Р°С‚РёРЅ",
+    "pop": "РџРѕРї",
     "r&b": "R&B",
-    "rap": "Рэп",
-    "rock": "Рок",
+    "rap": "Р СЌРї",
+    "rock": "Р РѕРє",
 }
 GENRE_ORDER = ["edm", "latin", "pop", "r&b", "rap", "rock"]
 PALETTE = {
@@ -59,7 +59,7 @@ LAYOUT = dict(
 )
 
 
-# ── KPI-карточка ─────────────────────────────────────────────────────────────
+# в”Ђв”Ђ KPI-РєР°СЂС‚РѕС‡РєР° в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 def kpi_card(title, value, icon, color):
     return dbc.Card([
         dbc.CardBody([
@@ -70,51 +70,51 @@ def kpi_card(title, value, icon, color):
     ], style={"backgroundColor": "#232323", "border": f"1px solid {color}44", "borderRadius": "12px"})
 
 
-# ── Приложение ────────────────────────────────────────────────────────────────
+# в”Ђв”Ђ РџСЂРёР»РѕР¶РµРЅРёРµ в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 app = dash.Dash(
     __name__,
     external_stylesheets=[dbc.themes.CYBORG],
-    title="Spotify Дашборд",
+    title="Spotify Р”Р°С€Р±РѕСЂРґ",
 )
 
 app.layout = dbc.Container([
 
-    # Заголовок
+    # Р—Р°РіРѕР»РѕРІРѕРє
     dbc.Row([
         dbc.Col([
-            html.H1("🎵 Spotify Songs — Аналитический дашборд",
+            html.H1("рџЋµ Spotify Songs вЂ” РђРЅР°Р»РёС‚РёС‡РµСЃРєРёР№ РґР°С€Р±РѕСЂРґ",
                     style={"color": "#1DB954", "fontWeight": "bold", "marginTop": "20px"}),
-            html.P("32 833 трека · 6 жанров · аудио-фичи Spotify API",
+            html.P("32 833 С‚СЂРµРєР° В· 6 Р¶Р°РЅСЂРѕРІ В· Р°СѓРґРёРѕ-С„РёС‡Рё Spotify API",
                    style={"color": "#aaa", "marginBottom": "20px"}),
         ])
     ]),
 
-    # KPI-карточки
+    # KPI-РєР°СЂС‚РѕС‡РєРё
     dbc.Row([
-        dbc.Col(kpi_card("Всего треков", f"{df.shape[0]:,}", "🎵", "#1DB954"), md=2),
-        dbc.Col(kpi_card("Артистов", f"{df['track_artist'].nunique():,}", "🎤", "#4ECDC4"), md=2),
-        dbc.Col(kpi_card("Альбомов", f"{df['track_album_name'].nunique():,}", "💿", "#9B59B6"), md=2),
-        dbc.Col(kpi_card("Ср. популярность", f"{df['track_popularity'].mean():.1f}/100", "⭐", "#F39C12"), md=2),
-        dbc.Col(kpi_card("Ср. длина (мин)", f"{df['duration_min'].mean():.2f}", "⏱️", "#FF6B6B"), md=2),
-        dbc.Col(kpi_card("Годы", f"{int(df['year'].min())}–{int(df['year'].max())}", "📅", "#E74C3C"), md=2),
+        dbc.Col(kpi_card("Р’СЃРµРіРѕ С‚СЂРµРєРѕРІ", f"{df.shape[0]:,}", "рџЋµ", "#1DB954"), md=2),
+        dbc.Col(kpi_card("РђСЂС‚РёСЃС‚РѕРІ", f"{df['track_artist'].nunique():,}", "рџЋ¤", "#4ECDC4"), md=2),
+        dbc.Col(kpi_card("РђР»СЊР±РѕРјРѕРІ", f"{df['track_album_name'].nunique():,}", "рџ’ї", "#9B59B6"), md=2),
+        dbc.Col(kpi_card("РЎСЂ. РїРѕРїСѓР»СЏСЂРЅРѕСЃС‚СЊ", f"{df['track_popularity'].mean():.1f}/100", "в­ђ", "#F39C12"), md=2),
+        dbc.Col(kpi_card("РЎСЂ. РґР»РёРЅР° (РјРёРЅ)", f"{df['duration_min'].mean():.2f}", "вЏ±пёЏ", "#FF6B6B"), md=2),
+        dbc.Col(kpi_card("Р“РѕРґС‹", f"{int(df['year'].min())}вЂ“{int(df['year'].max())}", "рџ“…", "#E74C3C"), md=2),
     ], className="mb-4 g-2"),
 
     html.Hr(style={"borderColor": "#333"}),
 
-    # Фильтры
+    # Р¤РёР»СЊС‚СЂС‹
     dbc.Row([
         dbc.Col([
-            html.Label("🎸 Жанры:", style={"color": "#1DB954", "fontWeight": "bold"}),
+            html.Label("рџЋё Р–Р°РЅСЂС‹:", style={"color": "#1DB954", "fontWeight": "bold"}),
             dcc.Dropdown(
                 id="genre-filter",
                 options=[{"label": GENRE_RU[g], "value": g} for g in GENRE_ORDER],
                 value=GENRE_ORDER,
                 multi=True,
-                placeholder="Выберите жанры...",
+                placeholder="Р’С‹Р±РµСЂРёС‚Рµ Р¶Р°РЅСЂС‹...",
             ),
         ], md=4),
         dbc.Col([
-            html.Label("📅 Диапазон лет:", style={"color": "#1DB954", "fontWeight": "bold"}),
+            html.Label("рџ“… Р”РёР°РїР°Р·РѕРЅ Р»РµС‚:", style={"color": "#1DB954", "fontWeight": "bold"}),
             dcc.RangeSlider(
                 id="year-slider",
                 min=2000, max=2020, step=1,
@@ -124,7 +124,7 @@ app.layout = dbc.Container([
             ),
         ], md=4),
         dbc.Col([
-            html.Label("⭐ Мин. популярность:", style={"color": "#1DB954", "fontWeight": "bold"}),
+            html.Label("в­ђ РњРёРЅ. РїРѕРїСѓР»СЏСЂРЅРѕСЃС‚СЊ:", style={"color": "#1DB954", "fontWeight": "bold"}),
             dcc.Slider(
                 id="popularity-slider",
                 min=0, max=100, step=5, value=0,
@@ -136,28 +136,28 @@ app.layout = dbc.Container([
 
     html.Hr(style={"borderColor": "#333"}),
 
-    # Вкладки
+    # Р’РєР»Р°РґРєРё
     dbc.Tabs([
 
-        # Вкладка 1: Жанры
-        dbc.Tab(label="🎭 Жанры", tab_id="tab-genres", children=[
+        # Р’РєР»Р°РґРєР° 1: Р–Р°РЅСЂС‹
+        dbc.Tab(label="рџЋ­ Р–Р°РЅСЂС‹", tab_id="tab-genres", children=[
             dbc.Row([
                 dbc.Col(dcc.Graph(id="genre-pie"), md=5),
                 dbc.Col(dcc.Graph(id="genre-radar"), md=7),
             ], className="mt-3"),
         ]),
 
-        # Вкладка 2: Популярность
-        dbc.Tab(label="⭐ Популярность", tab_id="tab-popularity", children=[
+        # Р’РєР»Р°РґРєР° 2: РџРѕРїСѓР»СЏСЂРЅРѕСЃС‚СЊ
+        dbc.Tab(label="в­ђ РџРѕРїСѓР»СЏСЂРЅРѕСЃС‚СЊ", tab_id="tab-popularity", children=[
             dbc.Row([
                 dbc.Col([
-                    html.Label("Тип графика:", style={"color": "#aaa", "marginTop": "16px"}),
+                    html.Label("РўРёРї РіСЂР°С„РёРєР°:", style={"color": "#aaa", "marginTop": "16px"}),
                     dbc.RadioItems(
                         id="pop-chart-type",
                         options=[
-                            {"label": " Скрипичный", "value": "violin"},
-                            {"label": " Ящик с усами", "value": "box"},
-                            {"label": " Гистограмма", "value": "histogram"},
+                            {"label": " РЎРєСЂРёРїРёС‡РЅС‹Р№", "value": "violin"},
+                            {"label": " РЇС‰РёРє СЃ СѓСЃР°РјРё", "value": "box"},
+                            {"label": " Р“РёСЃС‚РѕРіСЂР°РјРјР°", "value": "histogram"},
                         ],
                         value="violin",
                         inline=True,
@@ -172,11 +172,11 @@ app.layout = dbc.Container([
             ]),
         ]),
 
-        # Вкладка 3: Карта настроений
-        dbc.Tab(label="😊 Карта настроений", tab_id="tab-mood", children=[
+        # Р’РєР»Р°РґРєР° 3: РљР°СЂС‚Р° РЅР°СЃС‚СЂРѕРµРЅРёР№
+        dbc.Tab(label="рџЉ РљР°СЂС‚Р° РЅР°СЃС‚СЂРѕРµРЅРёР№", tab_id="tab-mood", children=[
             dbc.Row([
                 dbc.Col([
-                    html.Label("Ось X:", style={"color": "#aaa"}),
+                    html.Label("РћСЃСЊ X:", style={"color": "#aaa"}),
                     dcc.Dropdown(
                         id="mood-x",
                         options=[{"label": AUDIO_RU[f], "value": f} for f in AUDIO_FEATURES],
@@ -184,7 +184,7 @@ app.layout = dbc.Container([
                     ),
                 ], md=3),
                 dbc.Col([
-                    html.Label("Ось Y:", style={"color": "#aaa"}),
+                    html.Label("РћСЃСЊ Y:", style={"color": "#aaa"}),
                     dcc.Dropdown(
                         id="mood-y",
                         options=[{"label": AUDIO_RU[f], "value": f} for f in AUDIO_FEATURES],
@@ -192,19 +192,19 @@ app.layout = dbc.Container([
                     ),
                 ], md=3),
                 dbc.Col([
-                    html.Label("Размер точек:", style={"color": "#aaa"}),
+                    html.Label("Р Р°Р·РјРµСЂ С‚РѕС‡РµРє:", style={"color": "#aaa"}),
                     dcc.Dropdown(
                         id="mood-size",
                         options=[
-                            {"label": "Популярность", "value": "track_popularity"},
-                            {"label": "Темп (BPM)", "value": "tempo"},
-                            {"label": "Одинаковый", "value": "none"},
+                            {"label": "РџРѕРїСѓР»СЏСЂРЅРѕСЃС‚СЊ", "value": "track_popularity"},
+                            {"label": "РўРµРјРї (BPM)", "value": "tempo"},
+                            {"label": "РћРґРёРЅР°РєРѕРІС‹Р№", "value": "none"},
                         ],
                         value="track_popularity", clearable=False,
                     ),
                 ], md=3),
                 dbc.Col([
-                    html.Label("Кол-во точек:", style={"color": "#aaa"}),
+                    html.Label("РљРѕР»-РІРѕ С‚РѕС‡РµРє:", style={"color": "#aaa"}),
                     dcc.Slider(id="mood-sample", min=500, max=5000, step=500,
                                value=2000, marks={500: "500", 2000: "2k", 5000: "5k"},
                                tooltip={"always_visible": False}),
@@ -213,11 +213,11 @@ app.layout = dbc.Container([
             dbc.Row([dbc.Col(dcc.Graph(id="mood-scatter"), md=12)]),
         ]),
 
-        # Вкладка 4: Тренды
-        dbc.Tab(label="📈 Тренды", tab_id="tab-trends", children=[
+        # Р’РєР»Р°РґРєР° 4: РўСЂРµРЅРґС‹
+        dbc.Tab(label="рџ“€ РўСЂРµРЅРґС‹", tab_id="tab-trends", children=[
             dbc.Row([
                 dbc.Col([
-                    html.Label("Показатели для отображения:", style={"color": "#aaa", "marginTop": "16px"}),
+                    html.Label("РџРѕРєР°Р·Р°С‚РµР»Рё РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ:", style={"color": "#aaa", "marginTop": "16px"}),
                     dcc.Checklist(
                         id="trend-features",
                         options=[{"label": f"  {AUDIO_RU[f]}", "value": f}
@@ -232,32 +232,32 @@ app.layout = dbc.Container([
             dbc.Row([dbc.Col(dcc.Graph(id="trends-chart"), md=12)]),
         ]),
 
-        # Вкладка 5: Корреляции
-        dbc.Tab(label="🔥 Корреляции", tab_id="tab-corr", children=[
+        # Р’РєР»Р°РґРєР° 5: РљРѕСЂСЂРµР»СЏС†РёРё
+        dbc.Tab(label="рџ”Ґ РљРѕСЂСЂРµР»СЏС†РёРё", tab_id="tab-corr", children=[
             dbc.Row([
                 dbc.Col(dcc.Graph(id="corr-heatmap"), md=7),
                 dbc.Col(dcc.Graph(id="party-index"), md=5),
             ], className="mt-3"),
         ]),
 
-        # Вкладка 6: Топ треки
-        dbc.Tab(label="🏆 Топ треки", tab_id="tab-top", children=[
+        # Р’РєР»Р°РґРєР° 6: РўРѕРї С‚СЂРµРєРё
+        dbc.Tab(label="рџЏ† РўРѕРї С‚СЂРµРєРё", tab_id="tab-top", children=[
             dbc.Row([
                 dbc.Col([
-                    html.Label("Количество треков:", style={"color": "#aaa", "marginTop": "16px"}),
+                    html.Label("РљРѕР»РёС‡РµСЃС‚РІРѕ С‚СЂРµРєРѕРІ:", style={"color": "#aaa", "marginTop": "16px"}),
                     dcc.Slider(id="top-n", min=5, max=30, step=5, value=10,
                                marks={5: "5", 10: "10", 20: "20", 30: "30"},
                                tooltip={"always_visible": True}),
                 ], md=4),
                 dbc.Col([
-                    html.Label("Метрика:", style={"color": "#aaa", "marginTop": "16px"}),
+                    html.Label("РњРµС‚СЂРёРєР°:", style={"color": "#aaa", "marginTop": "16px"}),
                     dbc.RadioItems(
                         id="top-metric",
                         options=[
-                            {"label": " Популярность", "value": "track_popularity"},
-                            {"label": " Танцевальность", "value": "danceability"},
-                            {"label": " Энергия", "value": "energy"},
-                            {"label": " Настроение", "value": "valence"},
+                            {"label": " РџРѕРїСѓР»СЏСЂРЅРѕСЃС‚СЊ", "value": "track_popularity"},
+                            {"label": " РўР°РЅС†РµРІР°Р»СЊРЅРѕСЃС‚СЊ", "value": "danceability"},
+                            {"label": " Р­РЅРµСЂРіРёСЏ", "value": "energy"},
+                            {"label": " РќР°СЃС‚СЂРѕРµРЅРёРµ", "value": "valence"},
                         ],
                         value="track_popularity",
                         inline=True,
@@ -280,7 +280,7 @@ app.layout = dbc.Container([
 ], fluid=True, style={"backgroundColor": "#121212", "minHeight": "100vh", "padding": "0 20px"})
 
 
-# ── Хелпер фильтрации ────────────────────────────────────────────────────────
+# в”Ђв”Ђ РҐРµР»РїРµСЂ С„РёР»СЊС‚СЂР°С†РёРё в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 def filter_df(genres, years, min_pop):
     mask = (
         df["playlist_genre"].isin(genres) &
@@ -290,7 +290,7 @@ def filter_df(genres, years, min_pop):
     return df[mask]
 
 
-# ── Callbacks ─────────────────────────────────────────────────────────────────
+# в”Ђв”Ђ Callbacks в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 
 @callback(Output("genre-pie", "figure"),
           Input("genre-filter", "value"), Input("year-slider", "value"), Input("popularity-slider", "value"))
@@ -304,7 +304,7 @@ def update_pie(genres, years, min_pop):
         marker_colors=[PALETTE.get(g, "#888") for g in counts["genre"]],
         textinfo="label+percent", textfont_size=12,
     ))
-    fig.update_layout(title="Распределение по жанрам", showlegend=False, height=380, **LAYOUT)
+    fig.update_layout(title="Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ РїРѕ Р¶Р°РЅСЂР°Рј", showlegend=False, height=380, **LAYOUT)
     return fig
 
 
@@ -314,7 +314,7 @@ def update_radar(genres, years, min_pop):
     d = filter_df(genres, years, min_pop).copy()
     d["loudness_norm"] = (d["loudness"] - d["loudness"].min()) / (d["loudness"].max() - d["loudness"].min())
     RF = ["danceability", "energy", "loudness_norm", "speechiness", "acousticness", "valence", "liveness"]
-    RL = ["Танцевальность", "Энергия", "Громкость", "Речевитость", "Акустичность", "Настроение", "Живость"]
+    RL = ["РўР°РЅС†РµРІР°Р»СЊРЅРѕСЃС‚СЊ", "Р­РЅРµСЂРіРёСЏ", "Р“СЂРѕРјРєРѕСЃС‚СЊ", "Р РµС‡РµРІРёС‚РѕСЃС‚СЊ", "РђРєСѓСЃС‚РёС‡РЅРѕСЃС‚СЊ", "РќР°СЃС‚СЂРѕРµРЅРёРµ", "Р–РёРІРѕСЃС‚СЊ"]
     means = d.groupby("playlist_genre")[RF].mean()
     fig = go.Figure()
     for g in genres:
@@ -327,7 +327,7 @@ def update_radar(genres, years, min_pop):
             line=dict(color=PALETTE[g], width=2), opacity=0.45, name=GENRE_RU[g],
         ))
     fig.update_layout(
-        title="Аудио ДНК жанров",
+        title="РђСѓРґРёРѕ Р”РќРљ Р¶Р°РЅСЂРѕРІ",
         polar=dict(bgcolor="#242424",
                    radialaxis=dict(visible=True, range=[0, 1], gridcolor="#444"),
                    angularaxis=dict(gridcolor="#444")),
@@ -351,7 +351,7 @@ def update_pop_dist(genres, years, min_pop, chart_type):
             fig.add_trace(go.Box(y=sub, name=GENRE_RU[g], marker_color=PALETTE[g]))
         else:
             fig.add_trace(go.Histogram(x=sub, name=GENRE_RU[g], marker_color=PALETTE[g], opacity=0.6, nbinsx=20))
-    fig.update_layout(title="Популярность по жанрам", barmode="overlay", height=420, **LAYOUT)
+    fig.update_layout(title="РџРѕРїСѓР»СЏСЂРЅРѕСЃС‚СЊ РїРѕ Р¶Р°РЅСЂР°Рј", barmode="overlay", height=420, **LAYOUT)
     return fig
 
 
@@ -367,7 +367,7 @@ def update_top_artists(genres, years, min_pop):
         marker=dict(color=top["avg_pop"], colorscale="Viridis", showscale=False),
         text=top["avg_pop"].round(1), textposition="outside",
     ))
-    fig.update_layout(title="Топ-15 артистов по популярности",
+    fig.update_layout(title="РўРѕРї-15 Р°СЂС‚РёСЃС‚РѕРІ РїРѕ РїРѕРїСѓР»СЏСЂРЅРѕСЃС‚Рё",
                       xaxis=dict(range=[top["avg_pop"].min() - 3, 103]), height=420, **LAYOUT)
     return fig
 
@@ -381,8 +381,8 @@ def update_mood(genres, years, min_pop, xf, yf, size_feat, n_sample):
     if len(d) > n_sample:
         d = d.sample(n_sample, random_state=42)
     kw = dict(x=xf, y=yf, color="playlist_genre", color_discrete_map=PALETTE, opacity=0.65,
-              labels={xf: AUDIO_RU.get(xf, xf), yf: AUDIO_RU.get(yf, yf), "playlist_genre": "Жанр"},
-              title=f"Карта настроений: {AUDIO_RU.get(xf)} vs {AUDIO_RU.get(yf)}",
+              labels={xf: AUDIO_RU.get(xf, xf), yf: AUDIO_RU.get(yf, yf), "playlist_genre": "Р–Р°РЅСЂ"},
+              title=f"РљР°СЂС‚Р° РЅР°СЃС‚СЂРѕРµРЅРёР№: {AUDIO_RU.get(xf)} vs {AUDIO_RU.get(yf)}",
               hover_data={"track_name": True, "track_artist": True},
               category_orders={"playlist_genre": genres})
     if size_feat != "none":
@@ -391,7 +391,7 @@ def update_mood(genres, years, min_pop, xf, yf, size_feat, n_sample):
     fig = px.scatter(d, **kw)
     fig.add_hline(y=d[yf].mean(), line_dash="dot", line_color="#555")
     fig.add_vline(x=d[xf].mean(), line_dash="dot", line_color="#555")
-    fig.update_layout(height=550, legend_title_text="Жанр", **LAYOUT)
+    fig.update_layout(height=550, legend_title_text="Р–Р°РЅСЂ", **LAYOUT)
     return fig
 
 
@@ -405,7 +405,7 @@ def update_trends(genres, features):
     year_df = d.groupby("year").agg(**agg).reset_index()
     COLORS_T = ["#1DB954", "#FF6B6B", "#4ECDC4", "#9B59B6", "#F39C12"]
     fig = make_subplots(rows=2, cols=1,
-                        subplot_titles=["Аудио-характеристики (2000–2020)", "Количество треков по годам"],
+                        subplot_titles=["РђСѓРґРёРѕ-С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё (2000вЂ“2020)", "РљРѕР»РёС‡РµСЃС‚РІРѕ С‚СЂРµРєРѕРІ РїРѕ РіРѕРґР°Рј"],
                         vertical_spacing=0.12, shared_xaxes=True)
     for i, feat in enumerate(features):
         if feat in year_df.columns:
@@ -414,10 +414,10 @@ def update_trends(genres, features):
                                      line=dict(color=COLORS_T[i % len(COLORS_T)], width=2),
                                      marker=dict(size=5)), row=1, col=1)
     fig.add_trace(go.Bar(x=year_df["year"], y=year_df["track_count"],
-                         name="Треков", marker_color="#F39C12", opacity=0.7), row=2, col=1)
+                         name="РўСЂРµРєРѕРІ", marker_color="#F39C12", opacity=0.7), row=2, col=1)
     fig.update_layout(height=560, legend=dict(orientation="h", y=1.08), **LAYOUT)
-    fig.update_yaxes(title_text="Значение (0–1)", row=1, col=1)
-    fig.update_yaxes(title_text="Количество", row=2, col=1)
+    fig.update_yaxes(title_text="Р—РЅР°С‡РµРЅРёРµ (0вЂ“1)", row=1, col=1)
+    fig.update_yaxes(title_text="РљРѕР»РёС‡РµСЃС‚РІРѕ", row=2, col=1)
     return fig
 
 
@@ -429,7 +429,7 @@ def update_corr(genres, min_pop):
     labels = [AUDIO_RU[f] for f in AUDIO_FEATURES]
     fig = px.imshow(corr, x=labels, y=labels, text_auto=True,
                     color_continuous_scale="RdBu_r", zmin=-1, zmax=1,
-                    aspect="auto", title="Корреляционная матрица аудио-фичей")
+                    aspect="auto", title="РљРѕСЂСЂРµР»СЏС†РёРѕРЅРЅР°СЏ РјР°С‚СЂРёС†Р° Р°СѓРґРёРѕ-С„РёС‡РµР№")
     fig.update_layout(height=520, **LAYOUT)
     fig.update_traces(textfont_size=10)
     return fig
@@ -447,14 +447,14 @@ def update_party(genres, years, min_pop):
         x=party["mean"], y=party["playlist_genre"].map(GENRE_RU), orientation="h",
         marker=dict(color=party["mean"],
                     colorscale=[[0, "#2C3E50"], [0.4, "#F39C12"], [1.0, "#1DB954"]],
-                    showscale=True, colorbar=dict(title="Индекс", tickformat=".2f")),
+                    showscale=True, colorbar=dict(title="РРЅРґРµРєСЃ", tickformat=".2f")),
         error_x=dict(type="data", array=party["std"], visible=True, color="#aaa"),
         text=party["mean"].apply(lambda x: f"{x:.3f}"), textposition="outside",
     ))
     fig.add_vline(x=party["mean"].mean(), line_dash="dash", line_color="white", opacity=0.4,
-                  annotation_text="Среднее", annotation_position="top")
-    fig.update_layout(title="Индекс вечеринки",
-                      xaxis=dict(title="(Танцевальность + Энергия + Настроение) / 3"),
+                  annotation_text="РЎСЂРµРґРЅРµРµ", annotation_position="top")
+    fig.update_layout(title="РРЅРґРµРєСЃ РІРµС‡РµСЂРёРЅРєРё",
+                      xaxis=dict(title="(РўР°РЅС†РµРІР°Р»СЊРЅРѕСЃС‚СЊ + Р­РЅРµСЂРіРёСЏ + РќР°СЃС‚СЂРѕРµРЅРёРµ) / 3"),
                       height=520, **LAYOUT)
     return fig
 
@@ -469,21 +469,22 @@ def update_top_tracks(genres, years, min_pop, top_n, metric):
            .sort_values(metric, ascending=False)
            .drop_duplicates("track_name").head(top_n)
            .sort_values(metric, ascending=True))
-    top["label"] = top["track_name"].str[:40] + "  —  " + top["track_artist"].str[:18]
+    top["label"] = top["track_name"].str[:40] + "  вЂ”  " + top["track_artist"].str[:18]
     fig = go.Figure(go.Bar(
         x=top[metric], y=top["label"], orientation="h",
         marker=dict(color=[PALETTE.get(g, "#888") for g in top["playlist_genre"]], opacity=0.85),
         text=top[metric].round(2), textposition="outside",
     ))
-    fig.update_layout(title=f"Топ-{top_n} треков: {AUDIO_RU.get(metric, metric)}",
+    fig.update_layout(title=f"РўРѕРї-{top_n} С‚СЂРµРєРѕРІ: {AUDIO_RU.get(metric, metric)}",
                       height=max(400, top_n * 30 + 100), **LAYOUT)
     return fig
 
 
-# ── Запуск ────────────────────────────────────────────────────────────────────
+# в”Ђв”Ђ Р—Р°РїСѓСЃРє в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 if __name__ == "__main__":
     print("\n" + "=" * 55)
-    print("  Spotify Дашборд запущен!")
-    print("  Открой в браузере: http://127.0.0.1:8054")
+    print("  Spotify Р”Р°С€Р±РѕСЂРґ Р·Р°РїСѓС‰РµРЅ!")
+    print("  РћС‚РєСЂРѕР№ РІ Р±СЂР°СѓР·РµСЂРµ: http://127.0.0.1:8054")
     print("=" * 55 + "\n")
     app.run(debug=True, port=8054)
+

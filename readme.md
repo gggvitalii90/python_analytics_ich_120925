@@ -44,7 +44,7 @@
 Важно: первая загрузка может занимать 2-7 минут. Сессия временная, поэтому нужные результаты лучше скачивать на компьютер.
 
 Пример прямой ссылки на конкретный ноутбук в Binder:
-https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab/tree/Python%20for%20DA_L20_2-for_students.ipynb
+https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath=lab/tree/notebooks/Python%20for%20DA_L20_2-for_students.ipynb
 
 ## Самый простой сценарий для ученика (без Git и без терминала)
 
@@ -67,8 +67,10 @@ https://mybinder.org/v2/gh/gggvitalii90/python_analytics_ich_120925/main?urlpath
 
 ## Структура репозитория
 
+- notebooks: лекции, практика и проекты в формате .ipynb
 - DZ_python_DA: домашние задания
-- *.ipynb: лекции и практические ноутбуки
-- *.csv, *.xlsx, *.json: учебные датасеты
+- data: учебные датасеты (.csv, .xlsx, .json, .pkl)
+- Images: изображения для markdown и задач
+- docs: сайт курса (GitHub Pages)
 
 Материалы обновляются регулярно.
