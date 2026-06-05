@@ -46,6 +46,9 @@ const queryAliases = {
   "сортировать": ["sort_values", "sort_index"],
   "пропуски": ["isna", "isnull", "dropna", "fillna"],
   "пустые": ["isna", "isnull", "dropna", "fillna"],
+  "dubl": ["duplicated", "drop_duplicates"],
+  "dupl": ["duplicated", "drop_duplicates"],
+  "duplicat": ["duplicated", "drop_duplicates"],
   "dublicated": ["duplicated", "drop_duplicates"],
   "histogramm": ["hist", "histogram", "histplot"],
 };
