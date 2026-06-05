@@ -267,6 +267,61 @@
       "syntax": "with open(\"data.txt\", \"r\", encoding=\"utf-8\") as file:\n    text = file.read()",
       "related": ["pathlib", "csv", "with"],
       "docsUrl": "https://docs.python.org/3/library/functions.html#open"
+    },
+    {
+      "id": "python-filter",
+      "title": "filter",
+      "package": "Python",
+      "terms": ["filter", "фильтр", "filter function", "отфильтровать"],
+      "summary": "Official Python documentation for the filter built-in.",
+      "import": "# built-in, no import needed",
+      "syntax": "numbers = [1, 2, 3, 4]\neven = list(filter(lambda x: x % 2 == 0, numbers))",
+      "related": ["lambda", "map", "list comprehension"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#filter"
+    },
+    {
+      "id": "python-map",
+      "title": "map",
+      "package": "Python",
+      "terms": ["map", "map function", "применить функцию"],
+      "summary": "Official Python documentation for the map built-in.",
+      "import": "# built-in, no import needed",
+      "syntax": "numbers = [1, 2, 3]\nsquares = list(map(lambda x: x ** 2, numbers))",
+      "related": ["lambda", "filter", "list comprehension"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#map"
+    },
+    {
+      "id": "python-sorted",
+      "title": "sorted",
+      "package": "Python",
+      "terms": ["sorted", "sort", "сортировка", "key"],
+      "summary": "Official Python documentation for sorted.",
+      "import": "# built-in, no import needed",
+      "syntax": "items_sorted = sorted(items)\nrows_sorted = sorted(rows, key=lambda row: row[\"score\"], reverse=True)",
+      "related": ["list.sort", "lambda", "pandas.DataFrame.sort_values"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#sorted"
+    },
+    {
+      "id": "python-enumerate",
+      "title": "enumerate",
+      "package": "Python",
+      "terms": ["enumerate", "index in loop", "индекс в цикле"],
+      "summary": "Official Python documentation for enumerate.",
+      "import": "# built-in, no import needed",
+      "syntax": "for index, value in enumerate(items, start=1):\n    print(index, value)",
+      "related": ["for", "range", "zip"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#enumerate"
+    },
+    {
+      "id": "python-zip",
+      "title": "zip",
+      "package": "Python",
+      "terms": ["zip", "combine lists", "объединить списки"],
+      "summary": "Official Python documentation for zip.",
+      "import": "# built-in, no import needed",
+      "syntax": "for name, score in zip(names, scores):\n    print(name, score)",
+      "related": ["enumerate", "for", "itertools"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#zip"
     }
   ]
 }

@@ -229,6 +229,43 @@ h1 {
   font-size: 0.86rem;
 }
 
+.helper-guide {
+  margin-top: 0.7rem;
+  border: 1px solid #d8e8ec;
+  border-radius: 10px;
+  background: #f8fcfc;
+}
+
+.helper-guide summary {
+  cursor: pointer;
+  padding: 0.7rem 0.85rem;
+  color: #0d5867;
+  font-weight: 700;
+  list-style-position: inside;
+}
+
+.helper-guide-body {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0 0.85rem 0.85rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.helper-guide-body p {
+  margin: 0;
+}
+
+.helper-guide code {
+  padding: 0.1rem 0.32rem;
+  border-radius: 6px;
+  background: #edf7f7;
+  color: #0d5867;
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 0.86em;
+}
+
 .course-switcher {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
