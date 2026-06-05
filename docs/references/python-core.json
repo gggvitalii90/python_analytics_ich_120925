@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "source": "Official Python documentation references: core syntax, built-ins, and base types",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "python-int",
+      "title": "int",
+      "package": "Python",
+      "terms": ["int", "integer", "целое число", "type conversion"],
+      "summary": "Official Python documentation for the int built-in.",
+      "import": "# built-in, no import needed",
+      "syntax": "age = int(\"25\")\nnumber = int(12.7)",
+      "related": ["float", "str", "type"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#int"
+    },
+    {
+      "id": "python-float",
+      "title": "float",
+      "package": "Python",
+      "terms": ["float", "decimal", "вещественное число", "type conversion"],
+      "summary": "Official Python documentation for the float built-in.",
+      "import": "# built-in, no import needed",
+      "syntax": "price = float(\"19.95\")\nratio = float(3)",
+      "related": ["int", "round", "decimal"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#float"
+    },
+    {
+      "id": "python-bool",
+      "title": "bool",
+      "package": "Python",
+      "terms": ["bool", "boolean", "true", "false", "логический тип"],
+      "summary": "Official Python documentation for the bool built-in.",
+      "import": "# built-in, no import needed",
+      "syntax": "is_active = bool(value)\nif is_active:\n    print(\"yes\")",
+      "related": ["if", "comparison operators", "truth value testing"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#bool"
+    },
+    {
+      "id": "python-str",
+      "title": "str",
+      "package": "Python",
+      "terms": ["str", "string", "строка", "text"],
+      "summary": "Official Python documentation for the str built-in.",
+      "import": "# built-in, no import needed",
+      "syntax": "name = str(value)\ntext = \"hello\"",
+      "related": ["str.split", "str.replace", "f-string"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#func-str"
+    },
+    {
+      "id": "python-type",
+      "title": "type",
+      "package": "Python",
+      "terms": ["type", "тип", "check type"],
+      "summary": "Official Python documentation for the type built-in.",
+      "import": "# built-in, no import needed",
+      "syntax": "print(type(value))\nif type(value) is int:\n    print(\"integer\")",
+      "related": ["isinstance", "int", "float"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#type"
+    },
+    {
+      "id": "python-isinstance",
+      "title": "isinstance",
+      "package": "Python",
+      "terms": ["isinstance", "check type", "проверка типа"],
+      "summary": "Official Python documentation for isinstance.",
+      "import": "# built-in, no import needed",
+      "syntax": "if isinstance(value, (int, float)):\n    print(\"number\")",
+      "related": ["type", "class", "object"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#isinstance"
+    },
+    {
+      "id": "python-list",
+      "title": "list",
+      "package": "Python",
+      "terms": ["list", "список", "array", "append"],
+      "summary": "Official Python documentation for list objects.",
+      "import": "# built-in, no import needed",
+      "syntax": "items = [1, 2, 3]\nitems.append(4)\nfirst = items[0]",
+      "related": ["tuple", "dict", "set"],
+      "docsUrl": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"
+    },
+    {
+      "id": "python-tuple",
+      "title": "tuple",
+      "package": "Python",
+      "terms": ["tuple", "кортеж", "immutable"],
+      "summary": "Official Python documentation for tuples.",
+      "import": "# built-in, no import needed",
+      "syntax": "point = (10, 20)\nx, y = point",
+      "related": ["list", "unpacking", "set"],
+      "docsUrl": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
+    },
+    {
+      "id": "python-dict",
+      "title": "dict",
+      "package": "Python",
+      "terms": ["dict", "dictionary", "словарь", "keys", "values", "items"],
+      "summary": "Official Python documentation for dictionaries.",
+      "import": "# built-in, no import needed",
+      "syntax": "user = {\"name\": \"Anna\", \"age\": 25}\nuser[\"city\"] = \"Berlin\"\nfor key, value in user.items():\n    print(key, value)",
+      "related": ["list", "set", "tuple"],
+      "docsUrl": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries"
+    },
+    {
+      "id": "python-set",
+      "title": "set",
+      "package": "Python",
+      "terms": ["set", "множество", "unique", "duplicates"],
+      "summary": "Official Python documentation for sets.",
+      "import": "# built-in, no import needed",
+      "syntax": "unique_values = set(values)\nunique_values.add(\"new\")",
+      "related": ["frozenset", "dict", "list"],
+      "docsUrl": "https://docs.python.org/3/tutorial/datastructures.html#sets"
+    },
+    {
+      "id": "python-range",
+      "title": "range",
+      "package": "Python",
+      "terms": ["range", "диапазон", "loop", "for"],
+      "summary": "Official Python documentation for range.",
+      "import": "# built-in, no import needed",
+      "syntax": "for i in range(5):\n    print(i)",
+      "related": ["for", "enumerate", "len"],
+      "docsUrl": "https://docs.python.org/3/library/stdtypes.html#range"
+    },
+    {
+      "id": "python-len",
+      "title": "len",
+      "package": "Python",
+      "terms": ["len", "length", "длина", "size"],
+      "summary": "Official Python documentation for len.",
+      "import": "# built-in, no import needed",
+      "syntax": "count = len(items)",
+      "related": ["range", "list", "str"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#len"
+    },
+    {
+      "id": "python-print",
+      "title": "print",
+      "package": "Python",
+      "terms": ["print", "output", "вывод"],
+      "summary": "Official Python documentation for print.",
+      "import": "# built-in, no import needed",
+      "syntax": "print(\"Hello\")\nprint(name, age, sep=\", \")",
+      "related": ["input", "f-string", "format"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#print"
+    },
+    {
+      "id": "python-input",
+      "title": "input",
+      "package": "Python",
+      "terms": ["input", "ввод", "keyboard"],
+      "summary": "Official Python documentation for input.",
+      "import": "# built-in, no import needed",
+      "syntax": "name = input(\"Name: \")\nage = int(input(\"Age: \"))",
+      "related": ["print", "int", "str"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#input"
+    },
+    {
+      "id": "python-if",
+      "title": "if / elif / else",
+      "package": "Python",
+      "terms": ["if", "elif", "else", "условие", "conditional"],
+      "summary": "Official Python tutorial for if statements.",
+      "import": "# syntax, no import needed",
+      "syntax": "if score >= 90:\n    grade = \"A\"\nelif score >= 70:\n    grade = \"B\"\nelse:\n    grade = \"C\"",
+      "related": ["bool", "comparison operators", "match"],
+      "docsUrl": "https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+    },
+    {
+      "id": "python-for",
+      "title": "for",
+      "package": "Python",
+      "terms": ["for", "loop", "цикл", "итерация"],
+      "summary": "Official Python tutorial for for statements.",
+      "import": "# syntax, no import needed",
+      "syntax": "for item in items:\n    print(item)",
+      "related": ["range", "enumerate", "while"],
+      "docsUrl": "https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+    },
+    {
+      "id": "python-while",
+      "title": "while",
+      "package": "Python",
+      "terms": ["while", "loop", "цикл while"],
+      "summary": "Official Python documentation for while statements.",
+      "import": "# syntax, no import needed",
+      "syntax": "while condition:\n    do_work()\n    if done:\n        break",
+      "related": ["for", "break", "continue"],
+      "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#while"
+    },
+    {
+      "id": "python-break-continue",
+      "title": "break / continue",
+      "package": "Python",
+      "terms": ["break", "continue", "loop control", "прервать цикл"],
+      "summary": "Official Python tutorial for break and continue.",
+      "import": "# syntax, no import needed",
+      "syntax": "for item in items:\n    if item is None:\n        continue\n    if item == target:\n        break",
+      "related": ["for", "while", "else on loops"],
+      "docsUrl": "https://docs.python.org/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops"
+    },
+    {
+      "id": "python-def",
+      "title": "def",
+      "package": "Python",
+      "terms": ["def", "function", "функция", "return"],
+      "summary": "Official Python tutorial for defining functions.",
+      "import": "# syntax, no import needed",
+      "syntax": "def add(a, b):\n    return a + b\n\nresult = add(2, 3)",
+      "related": ["lambda", "return", "arguments"],
+      "docsUrl": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+    },
+    {
+      "id": "python-lambda",
+      "title": "lambda",
+      "package": "Python",
+      "terms": ["lambda", "лямбда", "anonymous function"],
+      "summary": "Official Python documentation for lambda expressions.",
+      "import": "# syntax, no import needed",
+      "syntax": "square = lambda x: x ** 2\nresult = square(5)",
+      "related": ["def", "map", "filter"],
+      "docsUrl": "https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions"
+    },
+    {
+      "id": "python-list-comprehension",
+      "title": "list comprehension",
+      "package": "Python",
+      "terms": ["list comprehension", "comprehension", "генератор списка"],
+      "summary": "Official Python tutorial for list comprehensions.",
+      "import": "# syntax, no import needed",
+      "syntax": "squares = [x ** 2 for x in numbers if x > 0]",
+      "related": ["for", "list", "map"],
+      "docsUrl": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+    },
+    {
+      "id": "python-try-except",
+      "title": "try / except",
+      "package": "Python",
+      "terms": ["try", "except", "exception", "ошибка", "исключение"],
+      "summary": "Official Python tutorial for handling exceptions.",
+      "import": "# syntax, no import needed",
+      "syntax": "try:\n    value = int(text)\nexcept ValueError:\n    value = None",
+      "related": ["raise", "finally", "ValueError"],
+      "docsUrl": "https://docs.python.org/3/tutorial/errors.html#handling-exceptions"
+    },
+    {
+      "id": "python-with",
+      "title": "with",
+      "package": "Python",
+      "terms": ["with", "context manager", "менеджер контекста"],
+      "summary": "Official Python documentation for the with statement.",
+      "import": "# syntax, no import needed",
+      "syntax": "with open(\"data.txt\", encoding=\"utf-8\") as file:\n    text = file.read()",
+      "related": ["open", "contextlib", "file"],
+      "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#with"
+    },
+    {
+      "id": "python-open",
+      "title": "open",
+      "package": "Python",
+      "terms": ["open", "file", "read", "write", "файл", "читать файл"],
+      "summary": "Official Python documentation for reading and writing files.",
+      "import": "# built-in, no import needed",
+      "syntax": "with open(\"data.txt\", \"r\", encoding=\"utf-8\") as file:\n    text = file.read()",
+      "related": ["pathlib", "csv", "with"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#open"
+    }
+  ]
+}

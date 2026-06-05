@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "source": "Official documentation references: visualization, machine learning, dashboards, forecasting",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "matplotlib-plot",
+      "title": "matplotlib.pyplot.plot",
+      "package": "Matplotlib",
+      "terms": ["plot", "plt.plot", "line plot", "line chart", "график", "линейный график"],
+      "summary": "Official Matplotlib reference for line plotting.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.plot(x, y, marker=\"o\")\nplt.xlabel(\"X\")\nplt.ylabel(\"Y\")\nplt.show()",
+      "related": ["matplotlib.pyplot.scatter", "matplotlib.pyplot.bar", "matplotlib.pyplot.hist"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html"
+    },
+    {
+      "id": "matplotlib-figure",
+      "title": "matplotlib.pyplot.figure",
+      "package": "Matplotlib",
+      "terms": ["figsize", "figure", "plt.figure", "figure size", "размер графика"],
+      "summary": "Official Matplotlib reference for creating figures and setting figure size.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.figure(figsize=(10, 6))\nplt.plot(x, y)\nplt.show()",
+      "related": ["matplotlib.pyplot.subplots", "matplotlib.figure.Figure.set_size_inches"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html"
+    },
+    {
+      "id": "matplotlib-subplots",
+      "title": "matplotlib.pyplot.subplots",
+      "package": "Matplotlib",
+      "terms": ["subplots", "subplot", "plt.subplots", "несколько графиков"],
+      "summary": "Official Matplotlib reference for creating figures and axes.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "fig, axes = plt.subplots(2, 2, figsize=(10, 8))\naxes[0, 0].plot(x, y)",
+      "related": ["matplotlib.pyplot.figure", "matplotlib.axes.Axes"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html"
+    },
+    {
+      "id": "matplotlib-hist",
+      "title": "matplotlib.pyplot.hist",
+      "package": "Matplotlib",
+      "terms": ["hist", "histogram", "histogramm", "гистограмма", "plt.hist"],
+      "summary": "Official Matplotlib reference for histogram plotting.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.hist(x, bins=30, color=\"steelblue\", edgecolor=\"black\")\nplt.show()",
+      "related": ["seaborn.histplot", "numpy.histogram"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html"
+    },
+    {
+      "id": "matplotlib-scatter",
+      "title": "matplotlib.pyplot.scatter",
+      "package": "Matplotlib",
+      "terms": ["scatter", "plt.scatter", "scatter plot", "точечный график"],
+      "summary": "Official Matplotlib reference for scatter plots.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.scatter(df[\"x\"], df[\"y\"], alpha=0.7)\nplt.show()",
+      "related": ["seaborn.scatterplot", "matplotlib.pyplot.plot"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html"
+    },
+    {
+      "id": "matplotlib-bar",
+      "title": "matplotlib.pyplot.bar",
+      "package": "Matplotlib",
+      "terms": ["bar", "bar chart", "plt.bar", "столбчатая диаграмма"],
+      "summary": "Official Matplotlib reference for bar charts.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.bar(categories, values)\nplt.show()",
+      "related": ["seaborn.barplot", "matplotlib.pyplot.hist"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html"
+    },
+    {
+      "id": "matplotlib-boxplot",
+      "title": "matplotlib.pyplot.boxplot",
+      "package": "Matplotlib",
+      "terms": ["boxplot", "box plot", "plt.boxplot", "ящик с усами"],
+      "summary": "Official Matplotlib reference for box plots.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.boxplot(values)\nplt.show()",
+      "related": ["seaborn.boxplot", "outliers"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html"
+    },
+    {
+      "id": "seaborn-histplot",
+      "title": "seaborn.histplot",
+      "package": "Seaborn",
+      "terms": ["histplot", "sns.histplot", "hist", "histogram", "гистограмма"],
+      "summary": "Official Seaborn reference for histogram plotting.",
+      "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
+      "syntax": "sns.histplot(data=df, x=\"column\", bins=30, kde=True)\nplt.show()",
+      "related": ["matplotlib.pyplot.hist", "seaborn.kdeplot"],
+      "docsUrl": "https://seaborn.pydata.org/generated/seaborn.histplot.html"
+    },
+    {
+      "id": "seaborn-boxplot",
+      "title": "seaborn.boxplot",
+      "package": "Seaborn",
+      "terms": ["boxplot", "sns.boxplot", "box plot", "ящик с усами", "выбросы"],
+      "summary": "Official Seaborn reference for box plots.",
+      "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
+      "syntax": "sns.boxplot(data=df, x=\"category\", y=\"value\")\nplt.show()",
+      "related": ["matplotlib.pyplot.boxplot", "seaborn.violinplot"],
+      "docsUrl": "https://seaborn.pydata.org/generated/seaborn.boxplot.html"
+    },
+    {
+      "id": "seaborn-scatterplot",
+      "title": "seaborn.scatterplot",
+      "package": "Seaborn",
+      "terms": ["scatterplot", "sns.scatterplot", "scatter", "точечный график"],
+      "summary": "Official Seaborn reference for scatter plots.",
+      "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
+      "syntax": "sns.scatterplot(data=df, x=\"x\", y=\"y\", hue=\"group\")\nplt.show()",
+      "related": ["matplotlib.pyplot.scatter", "seaborn.regplot"],
+      "docsUrl": "https://seaborn.pydata.org/generated/seaborn.scatterplot.html"
+    },
+    {
+      "id": "seaborn-heatmap",
+      "title": "seaborn.heatmap",
+      "package": "Seaborn",
+      "terms": ["heatmap", "sns.heatmap", "correlation matrix", "тепловая карта"],
+      "summary": "Official Seaborn reference for heatmaps.",
+      "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
+      "syntax": "sns.heatmap(df.corr(numeric_only=True), annot=True, cmap=\"Blues\")\nplt.show()",
+      "related": ["pandas.DataFrame.corr", "correlation"],
+      "docsUrl": "https://seaborn.pydata.org/generated/seaborn.heatmap.html"
+    },
+    {
+      "id": "plotly-express-scatter",
+      "title": "plotly.express.scatter",
+      "package": "Plotly",
+      "terms": ["plotly", "px.scatter", "interactive scatter", "интерактивный график"],
+      "summary": "Official Plotly Express reference for scatter plots.",
+      "import": "import plotly.express as px",
+      "syntax": "fig = px.scatter(df, x=\"x\", y=\"y\", color=\"group\")\nfig.show()",
+      "related": ["plotly.express.line", "Dash app"],
+      "docsUrl": "https://plotly.com/python-api-reference/generated/plotly.express.scatter.html"
+    },
+    {
+      "id": "plotly-express-line",
+      "title": "plotly.express.line",
+      "package": "Plotly",
+      "terms": ["px.line", "plotly line", "line chart", "интерактивная линия"],
+      "summary": "Official Plotly Express reference for line charts.",
+      "import": "import plotly.express as px",
+      "syntax": "fig = px.line(df, x=\"date\", y=\"value\")\nfig.show()",
+      "related": ["matplotlib.pyplot.plot", "Dash app"],
+      "docsUrl": "https://plotly.com/python-api-reference/generated/plotly.express.line.html"
+    },
+    {
+      "id": "dash-app",
+      "title": "Dash app",
+      "package": "Dash",
+      "terms": ["dash", "dashboard", "дашборд", "app.layout"],
+      "summary": "Official Dash documentation for Python web apps.",
+      "import": "from dash import Dash, html, dcc\nimport plotly.express as px",
+      "syntax": "app = Dash(__name__)\napp.layout = html.Div([dcc.Graph(figure=px.scatter(df, x=\"x\", y=\"y\"))])\napp.run(debug=True)",
+      "related": ["plotly.express", "dcc.Graph"],
+      "docsUrl": "https://dash.plotly.com/"
+    },
+    {
+      "id": "sklearn-train-test-split",
+      "title": "sklearn.model_selection.train_test_split",
+      "package": "scikit-learn",
+      "terms": ["train_test_split", "split data", "train test", "обучающая выборка"],
+      "summary": "Official scikit-learn reference for splitting arrays into train and test subsets.",
+      "import": "from sklearn.model_selection import train_test_split",
+      "syntax": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)",
+      "related": ["StandardScaler", "LinearRegression"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"
+    },
+    {
+      "id": "sklearn-standard-scaler",
+      "title": "sklearn.preprocessing.StandardScaler",
+      "package": "scikit-learn",
+      "terms": ["StandardScaler", "scaler", "standardization", "масштабирование"],
+      "summary": "Official scikit-learn reference for standardizing features.",
+      "import": "from sklearn.preprocessing import StandardScaler",
+      "syntax": "scaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_train)",
+      "related": ["MinMaxScaler", "train_test_split"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html"
+    },
+    {
+      "id": "sklearn-linear-regression",
+      "title": "sklearn.linear_model.LinearRegression",
+      "package": "scikit-learn",
+      "terms": ["LinearRegression", "linear regression", "регрессия"],
+      "summary": "Official scikit-learn reference for ordinary least squares linear regression.",
+      "import": "from sklearn.linear_model import LinearRegression",
+      "syntax": "model = LinearRegression()\nmodel.fit(X_train, y_train)\npredictions = model.predict(X_test)",
+      "related": ["Ridge", "train_test_split", "mean_squared_error"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"
+    },
+    {
+      "id": "sklearn-metrics",
+      "title": "sklearn.metrics",
+      "package": "scikit-learn",
+      "terms": ["metrics", "accuracy_score", "mean_squared_error", "classification_report"],
+      "summary": "Official scikit-learn documentation for model evaluation metrics.",
+      "import": "from sklearn.metrics import accuracy_score, mean_squared_error",
+      "syntax": "accuracy = accuracy_score(y_test, y_pred)\nrmse = mean_squared_error(y_test, y_pred, squared=False)",
+      "related": ["LinearRegression", "classification"],
+      "docsUrl": "https://scikit-learn.org/stable/api/sklearn.metrics.html"
+    },
+    {
+      "id": "statsmodels-arima",
+      "title": "statsmodels.tsa.arima.model.ARIMA",
+      "package": "statsmodels",
+      "terms": ["arima", "sarima", "arma", "time series", "временные ряды"],
+      "summary": "Official statsmodels reference for ARIMA time series models.",
+      "import": "from statsmodels.tsa.arima.model import ARIMA",
+      "syntax": "model = ARIMA(series, order=(1, 1, 1))\nresult = model.fit()\nforecast = result.forecast(steps=10)",
+      "related": ["statsmodels.tsa.statespace.sarimax.SARIMAX", "acf", "pacf"],
+      "docsUrl": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html"
+    },
+    {
+      "id": "prophet-forecasting",
+      "title": "Prophet",
+      "package": "Prophet",
+      "terms": ["prophet", "forecast", "forecasting", "time series", "временные ряды", "прогноз"],
+      "summary": "Official Prophet documentation for forecasting time series data.",
+      "import": "from prophet import Prophet",
+      "syntax": "model = Prophet()\nmodel.fit(df)\nfuture = model.make_future_dataframe(periods=30)\nforecast = model.predict(future)",
+      "related": ["ARIMA", "SARIMA", "time series"],
+      "docsUrl": "https://facebook.github.io/prophet/docs/quick_start.html"
+    }
+  ]
+}

@@ -16,6 +16,14 @@ let allNotebooks = [];
 let referenceCards = [];
 let activeCourse = "analytics";
 
+const referenceIndexFiles = [
+  "references/python-core.json",
+  "references/python-stdlib.json",
+  "references/data-analytics.json",
+  "references/visualization-ml.json",
+  "reference-index.json",
+];
+
 const encodePath = (path) => path.split("/").map(encodeURIComponent).join("/");
 
 const githubViewUrl = (path) =>
@@ -153,7 +161,7 @@ const referenceScore = (card, terms) => {
     if (exactTerms.includes(term)) return score + 12;
     if (title === term || title.endsWith(`.${term}`)) return score + 10;
     if (weakTerms.includes(term)) return score + 5;
-    if (exactTerms.some((cardTerm) => cardTerm.startsWith(term))) return score + 3;
+    if (term.length >= 4 && exactTerms.some((cardTerm) => cardTerm.startsWith(term))) return score + 3;
     if (relatedTerms.includes(term)) return score + 1;
     return score;
   }, 0);
@@ -166,6 +174,26 @@ const bestReferences = (terms) =>
     .sort((a, b) => b.score - a.score || a.card.title.localeCompare(b.card.title))
     .slice(0, 4)
     .map((item) => item.card);
+
+const referenceUrls = (path) => [
+  `${path}?v=${Date.now()}`,
+  `https://${owner}.github.io/${repo}/${path}?v=${Date.now()}`,
+  `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/${path}`,
+];
+
+const loadReferenceFile = async (path) => {
+  for (const url of referenceUrls(path)) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+      const data = await response.json();
+      return data.references || [];
+    } catch (error) {
+      // Try the next mirror.
+    }
+  }
+  return [];
+};
 
 const createCodeBlock = (label, code) => {
   const cell = document.createElement("article");
@@ -448,23 +476,15 @@ const loadFromSearchIndex = async () => {
 };
 
 const loadReferences = async () => {
-  const urls = [
-    `reference-index.json?v=${Date.now()}`,
-    `https://${owner}.github.io/${repo}/reference-index.json?v=${Date.now()}`,
-    `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/reference-index.json`,
-  ];
+  const loaded = await Promise.all(referenceIndexFiles.map(loadReferenceFile));
+  const byId = new Map();
 
-  for (const url of urls) {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-      const data = await response.json();
-      referenceCards = data.references || [];
-      return;
-    } catch (error) {
-      referenceCards = [];
-    }
-  }
+  loaded.flat().forEach((card) => {
+    if (!card.id || byId.has(card.id)) return;
+    byId.set(card.id, card);
+  });
+
+  referenceCards = [...byId.values()];
 };
 
 const loadNotebooks = async () => {

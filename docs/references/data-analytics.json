@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "source": "Official documentation references: NumPy and pandas",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "numpy-array",
+      "title": "numpy.array",
+      "package": "NumPy",
+      "terms": ["np.array", "numpy.array", "array", "массив"],
+      "summary": "Official NumPy reference for creating arrays.",
+      "import": "import numpy as np",
+      "syntax": "arr = np.array([1, 2, 3])\narr2d = np.array([[1, 2], [3, 4]])",
+      "related": ["numpy.arange", "numpy.ndarray", "dtype"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.array.html"
+    },
+    {
+      "id": "numpy-dtype",
+      "title": "numpy.dtype",
+      "package": "NumPy",
+      "terms": ["dtype", "np.dtype", "data type", "тип данных"],
+      "summary": "Official NumPy reference for data type objects.",
+      "import": "import numpy as np",
+      "syntax": "arr = np.array([1, 2, 3], dtype=np.float64)\nprint(arr.dtype)",
+      "related": ["numpy.array", "pandas.DataFrame.astype", "type"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/arrays.dtypes.html"
+    },
+    {
+      "id": "numpy-arange",
+      "title": "numpy.arange",
+      "package": "NumPy",
+      "terms": ["np.arange", "arange", "range array"],
+      "summary": "Official NumPy reference for evenly spaced values.",
+      "import": "import numpy as np",
+      "syntax": "values = np.arange(0, 10, 2)",
+      "related": ["range", "numpy.linspace"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.arange.html"
+    },
+    {
+      "id": "numpy-linspace",
+      "title": "numpy.linspace",
+      "package": "NumPy",
+      "terms": ["np.linspace", "linspace", "evenly spaced"],
+      "summary": "Official NumPy reference for linearly spaced values.",
+      "import": "import numpy as np",
+      "syntax": "x = np.linspace(0, 1, 100)",
+      "related": ["numpy.arange", "matplotlib.pyplot.plot"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.linspace.html"
+    },
+    {
+      "id": "numpy-reshape",
+      "title": "numpy.reshape",
+      "package": "NumPy",
+      "terms": ["reshape", "np.reshape", "shape"],
+      "summary": "Official NumPy reference for changing array shape.",
+      "import": "import numpy as np",
+      "syntax": "reshaped = np.reshape(arr, (3, 4))\n# or\nreshaped = arr.reshape(3, 4)",
+      "related": ["numpy.ndarray.shape", "numpy.ravel"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.reshape.html"
+    },
+    {
+      "id": "numpy-random",
+      "title": "numpy.random",
+      "package": "NumPy",
+      "terms": ["np.random", "numpy.random", "random", "randint", "normal", "randn"],
+      "summary": "Official NumPy documentation for random sampling.",
+      "import": "import numpy as np",
+      "syntax": "rng = np.random.default_rng(42)\nvalues = rng.normal(size=100)\nintegers = rng.integers(0, 10, size=5)",
+      "related": ["random", "numpy.random.Generator"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/random/index.html"
+    },
+    {
+      "id": "numpy-mean",
+      "title": "numpy.mean",
+      "package": "NumPy",
+      "terms": ["np.mean", "mean", "average", "среднее"],
+      "summary": "Official NumPy reference for arithmetic mean.",
+      "import": "import numpy as np",
+      "syntax": "avg = np.mean(values)\ncolumn_avg = np.mean(matrix, axis=0)",
+      "related": ["numpy.median", "pandas.Series.mean"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.mean.html"
+    },
+    {
+      "id": "numpy-where",
+      "title": "numpy.where",
+      "package": "NumPy",
+      "terms": ["np.where", "where", "condition", "условие"],
+      "summary": "Official NumPy reference for choosing values by condition.",
+      "import": "import numpy as np",
+      "syntax": "labels = np.where(values > 0, \"positive\", \"other\")",
+      "related": ["pandas.DataFrame.where", "if"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.where.html"
+    },
+    {
+      "id": "pandas-dataframe",
+      "title": "pandas.DataFrame",
+      "package": "pandas",
+      "terms": ["DataFrame", "pd.DataFrame", "dataframe", "таблица"],
+      "summary": "Official pandas reference for DataFrame objects.",
+      "import": "import pandas as pd",
+      "syntax": "df = pd.DataFrame({\"name\": names, \"age\": ages})",
+      "related": ["pandas.Series", "pandas.read_csv"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html"
+    },
+    {
+      "id": "pandas-series",
+      "title": "pandas.Series",
+      "package": "pandas",
+      "terms": ["Series", "pd.Series", "series", "серия"],
+      "summary": "Official pandas reference for Series objects.",
+      "import": "import pandas as pd",
+      "syntax": "s = pd.Series([10, 20, 30], name=\"score\")",
+      "related": ["pandas.DataFrame", "numpy.array"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html"
+    },
+    {
+      "id": "pandas-read-csv",
+      "title": "pandas.read_csv",
+      "package": "pandas",
+      "terms": ["read_csv", "pd.read_csv", "csv", "читать csv"],
+      "summary": "Official pandas reference for reading CSV files.",
+      "import": "import pandas as pd",
+      "syntax": "df = pd.read_csv(\"data.csv\")",
+      "related": ["pandas.to_csv", "csv"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html"
+    },
+    {
+      "id": "pandas-head",
+      "title": "pandas.DataFrame.head",
+      "package": "pandas",
+      "terms": ["head", "df.head", "первые строки"],
+      "summary": "Official pandas reference for returning first rows.",
+      "import": "import pandas as pd",
+      "syntax": "df.head()\ndf.head(10)",
+      "related": ["pandas.DataFrame.tail", "pandas.DataFrame.sample"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html"
+    },
+    {
+      "id": "pandas-info",
+      "title": "pandas.DataFrame.info",
+      "package": "pandas",
+      "terms": ["info", "df.info", "columns", "non-null"],
+      "summary": "Official pandas reference for concise DataFrame summaries.",
+      "import": "import pandas as pd",
+      "syntax": "df.info()",
+      "related": ["pandas.DataFrame.describe", "pandas.DataFrame.dtypes"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html"
+    },
+    {
+      "id": "pandas-describe",
+      "title": "pandas.DataFrame.describe",
+      "package": "pandas",
+      "terms": ["describe", "df.describe", "summary statistics", "статистика"],
+      "summary": "Official pandas reference for descriptive statistics.",
+      "import": "import pandas as pd",
+      "syntax": "df.describe()\ndf.describe(include=\"all\")",
+      "related": ["mean", "median", "value_counts"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html"
+    },
+    {
+      "id": "pandas-loc",
+      "title": "pandas.DataFrame.loc",
+      "package": "pandas",
+      "terms": ["loc", "df.loc", "label selection", "индексация"],
+      "summary": "Official pandas reference for label-based selection.",
+      "import": "import pandas as pd",
+      "syntax": "rows = df.loc[df[\"age\"] > 18, [\"name\", \"age\"]]",
+      "related": ["pandas.DataFrame.iloc", "boolean indexing"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html"
+    },
+    {
+      "id": "pandas-iloc",
+      "title": "pandas.DataFrame.iloc",
+      "package": "pandas",
+      "terms": ["iloc", "df.iloc", "position selection", "индексация"],
+      "summary": "Official pandas reference for integer-location based selection.",
+      "import": "import pandas as pd",
+      "syntax": "first_rows = df.iloc[:5, :3]",
+      "related": ["pandas.DataFrame.loc", "slice"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html"
+    },
+    {
+      "id": "pandas-groupby",
+      "title": "pandas.DataFrame.groupby",
+      "package": "pandas",
+      "terms": ["groupby", "group by", "группировка", "агрегация"],
+      "summary": "Official pandas reference for grouping rows and calculating aggregates.",
+      "import": "import pandas as pd",
+      "syntax": "result = df.groupby(\"category\", as_index=False).agg(total=(\"value\", \"sum\"))",
+      "related": ["pandas.DataFrame.agg", "pandas.DataFrame.pivot_table"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html"
+    },
+    {
+      "id": "pandas-merge",
+      "title": "pandas.merge",
+      "package": "pandas",
+      "terms": ["merge", "join", "объединение", "соединить таблицы"],
+      "summary": "Official pandas reference for joining DataFrames.",
+      "import": "import pandas as pd",
+      "syntax": "merged = pd.merge(left, right, on=\"id\", how=\"left\")",
+      "related": ["pandas.concat", "pandas.DataFrame.join"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.merge.html"
+    },
+    {
+      "id": "pandas-concat",
+      "title": "pandas.concat",
+      "package": "pandas",
+      "terms": ["concat", "pd.concat", "append rows", "объединить"],
+      "summary": "Official pandas reference for concatenating objects.",
+      "import": "import pandas as pd",
+      "syntax": "combined = pd.concat([df1, df2], ignore_index=True)",
+      "related": ["pandas.merge", "pandas.DataFrame.join"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html"
+    },
+    {
+      "id": "pandas-pivot-table",
+      "title": "pandas.DataFrame.pivot_table",
+      "package": "pandas",
+      "terms": ["pivot_table", "pivot table", "сводная таблица"],
+      "summary": "Official pandas reference for spreadsheet-style pivot tables.",
+      "import": "import pandas as pd",
+      "syntax": "pivot = df.pivot_table(index=\"category\", values=\"sales\", aggfunc=\"sum\")",
+      "related": ["pandas.pivot", "pandas.DataFrame.groupby"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot_table.html"
+    },
+    {
+      "id": "pandas-value-counts",
+      "title": "pandas.Series.value_counts",
+      "package": "pandas",
+      "terms": ["value_counts", "counts", "частота", "уникальные значения"],
+      "summary": "Official pandas reference for counting unique values.",
+      "import": "import pandas as pd",
+      "syntax": "counts = df[\"category\"].value_counts()",
+      "related": ["collections.Counter", "pandas.Series.unique"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html"
+    },
+    {
+      "id": "pandas-sort-values",
+      "title": "pandas.DataFrame.sort_values",
+      "package": "pandas",
+      "terms": ["sort_values", "sort", "сортировка"],
+      "summary": "Official pandas reference for sorting by values.",
+      "import": "import pandas as pd",
+      "syntax": "sorted_df = df.sort_values(\"score\", ascending=False)",
+      "related": ["pandas.DataFrame.sort_index", "sorted"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sort_values.html"
+    },
+    {
+      "id": "pandas-isna",
+      "title": "pandas.isna",
+      "package": "pandas",
+      "terms": ["isna", "isnull", "missing", "nan", "пропуски"],
+      "summary": "Official pandas reference for detecting missing values.",
+      "import": "import pandas as pd",
+      "syntax": "mask = df[\"age\"].isna()\nmissing_count = df.isna().sum()",
+      "related": ["pandas.DataFrame.fillna", "pandas.DataFrame.dropna"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.isna.html"
+    },
+    {
+      "id": "pandas-fillna",
+      "title": "pandas.DataFrame.fillna",
+      "package": "pandas",
+      "terms": ["fillna", "fill missing", "заполнить пропуски"],
+      "summary": "Official pandas reference for filling missing values.",
+      "import": "import pandas as pd",
+      "syntax": "df[\"age\"] = df[\"age\"].fillna(df[\"age\"].median())",
+      "related": ["pandas.isna", "pandas.DataFrame.dropna"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html"
+    },
+    {
+      "id": "pandas-dropna",
+      "title": "pandas.DataFrame.dropna",
+      "package": "pandas",
+      "terms": ["dropna", "drop missing", "удалить пропуски"],
+      "summary": "Official pandas reference for dropping missing values.",
+      "import": "import pandas as pd",
+      "syntax": "clean = df.dropna(subset=[\"age\"])",
+      "related": ["pandas.isna", "pandas.DataFrame.fillna"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html"
+    },
+    {
+      "id": "pandas-astype",
+      "title": "pandas.DataFrame.astype",
+      "package": "pandas",
+      "terms": ["astype", "dtype", "convert type", "тип данных"],
+      "summary": "Official pandas reference for casting DataFrame columns.",
+      "import": "import pandas as pd",
+      "syntax": "df[\"age\"] = df[\"age\"].astype(\"int64\")",
+      "related": ["numpy.dtype", "pandas.to_datetime"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.astype.html"
+    },
+    {
+      "id": "pandas-to-datetime",
+      "title": "pandas.to_datetime",
+      "package": "pandas",
+      "terms": ["to_datetime", "datetime", "date", "dt", "дата"],
+      "summary": "Official pandas reference for converting values to datetime.",
+      "import": "import pandas as pd",
+      "syntax": "df[\"date\"] = pd.to_datetime(df[\"date\"])\ndf[\"year\"] = df[\"date\"].dt.year",
+      "related": ["datetime", "pandas.Series.dt"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html"
+    },
+    {
+      "id": "pandas-duplicated",
+      "title": "pandas.DataFrame.duplicated",
+      "package": "pandas",
+      "terms": ["duplicated", "dublicated", "duplicates", "дубликат", "дубликаты"],
+      "summary": "Official pandas reference for detecting duplicated rows.",
+      "import": "import pandas as pd",
+      "syntax": "mask = df.duplicated()\nduplicates = df[df.duplicated()]",
+      "related": ["pandas.DataFrame.drop_duplicates"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.duplicated.html"
+    },
+    {
+      "id": "pandas-drop-duplicates",
+      "title": "pandas.DataFrame.drop_duplicates",
+      "package": "pandas",
+      "terms": ["drop_duplicates", "drop duplicates", "duplicates", "удалить дубликаты"],
+      "summary": "Official pandas reference for removing duplicate rows.",
+      "import": "import pandas as pd",
+      "syntax": "df_unique = df.drop_duplicates(subset=[\"id\"], keep=\"first\")",
+      "related": ["pandas.DataFrame.duplicated"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop_duplicates.html"
+    }
+  ]
+}
