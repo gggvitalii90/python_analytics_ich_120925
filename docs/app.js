@@ -69,7 +69,6 @@ const createRow = (entry) => {
 const createSection = (categoryKey, items) => {
   const section = document.createElement("details");
   section.className = "folder";
-  section.open = true;
 
   const summary = document.createElement("summary");
   summary.className = "folder-summary";
