@@ -169,6 +169,16 @@ h1 {
   gap: 0.8rem;
 }
 
+.group-section {
+  margin: 0.95rem 0 1.2rem;
+}
+
+.group-title {
+  margin: 0 0 0.7rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+}
+
 .card {
   border: 1px solid var(--stroke);
   border-radius: 12px;
