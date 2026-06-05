@@ -229,6 +229,61 @@ h1 {
   font-size: 0.86rem;
 }
 
+.search-assistant {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.95rem;
+  padding: 0.85rem;
+  border: 1px solid #d7e6e8;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fbfefe 0%, #f3faf9 100%);
+}
+
+.search-assistant h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+}
+
+.assistant-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.assistant-cell {
+  overflow: hidden;
+  border: 1px solid #cbdde3;
+  border-radius: 10px;
+  background: #101820;
+  box-shadow: 0 8px 20px #11202a12;
+}
+
+.assistant-cell-meta {
+  display: block;
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid #31414b;
+  color: #a9dbe0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.assistant-cell pre {
+  margin: 0;
+  max-height: 260px;
+  overflow: auto;
+  padding: 0.75rem;
+}
+
+.assistant-cell code {
+  color: #eef7f8;
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 0.88rem;
+  line-height: 1.48;
+  white-space: pre-wrap;
+}
+
 .folder-list {
   display: grid;
   gap: 0.8rem;
