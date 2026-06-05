@@ -163,7 +163,7 @@ const renderAssistant = (query, filtered, terms) => {
   if (refs.length > 0) {
     const note = document.createElement("p");
     note.className = "assistant-note";
-    note.textContent = "Краткая справка из локальной базы с ссылками на официальную документацию.";
+    note.textContent = "Справка из локальной базы. Источник: официальная документация по ссылке в карточке.";
     assistantEl.appendChild(note);
 
     refs.forEach((ref) => {
@@ -179,10 +179,18 @@ const renderAssistant = (query, filtered, terms) => {
       titleLink.rel = "noreferrer";
       titleLink.textContent = ref.title;
 
+      const docsLink = document.createElement("a");
+      docsLink.className = "official-link";
+      docsLink.href = ref.docsUrl;
+      docsLink.target = "_blank";
+      docsLink.rel = "noreferrer";
+      docsLink.textContent = "Official docs";
+
       const pkg = document.createElement("span");
       pkg.textContent = ref.package;
 
       head.appendChild(titleLink);
+      head.appendChild(docsLink);
       head.appendChild(pkg);
 
       const summary = document.createElement("p");

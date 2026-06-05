@@ -300,7 +300,8 @@ h1 {
   gap: 0.75rem;
 }
 
-.reference-head a {
+.reference-head a:first-child {
+  flex: 1 1 auto;
   color: #0b6778;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.05rem;
@@ -310,6 +311,14 @@ h1 {
 
 .reference-head a:hover {
   text-decoration: underline;
+}
+
+.official-link {
+  flex: 0 0 auto;
+  color: #1a5569;
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .reference-head span {
