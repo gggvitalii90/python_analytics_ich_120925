@@ -5,6 +5,17 @@
   },
   "references": [
     {
+      "id": "matplotlib-plot",
+      "title": "matplotlib.pyplot.plot",
+      "package": "Matplotlib",
+      "terms": ["plot", "plt.plot", "line plot", "line chart", "график", "линейный график"],
+      "summary": "Official Matplotlib reference for line plotting.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.plot(x, y, marker=\"o\")\nplt.xlabel(\"X\")\nplt.ylabel(\"Y\")\nplt.show()",
+      "related": ["matplotlib.pyplot.scatter", "matplotlib.pyplot.bar", "matplotlib.pyplot.hist"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html"
+    },
+    {
       "id": "matplotlib-hist",
       "title": "matplotlib.pyplot.hist",
       "package": "Matplotlib",

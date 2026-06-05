@@ -108,14 +108,24 @@ const matchedCells = (entry, terms) => {
     .slice(0, 3);
 };
 
+const referenceTokens = (value) =>
+  value
+    .toLowerCase()
+    .split(/[^a-zа-яё0-9_]+/i)
+    .filter(Boolean);
+
 const referenceScore = (card, terms) => {
-  const cardTerms = [card.title, card.package, ...(card.terms || []), ...(card.related || [])]
-    .join(" ")
-    .toLowerCase();
+  const title = card.title.toLowerCase();
+  const exactTerms = (card.terms || []).map((term) => term.toLowerCase());
+  const weakTerms = [...referenceTokens(card.title), ...referenceTokens(card.package)];
+  const relatedTerms = (card.related || []).map((term) => term.toLowerCase());
+
   return terms.reduce((score, term) => {
-    if ((card.terms || []).some((cardTerm) => cardTerm.toLowerCase() === term)) return score + 8;
-    if (card.title.toLowerCase().includes(term)) return score + 5;
-    if (cardTerms.includes(term)) return score + 2;
+    if (exactTerms.includes(term)) return score + 12;
+    if (title === term || title.endsWith(`.${term}`)) return score + 10;
+    if (weakTerms.includes(term)) return score + 5;
+    if (exactTerms.some((cardTerm) => cardTerm.startsWith(term))) return score + 3;
+    if (relatedTerms.includes(term)) return score + 1;
     return score;
   }, 0);
 };
