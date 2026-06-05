@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-05T17:52:34.010525+00:00",
+    "generatedAt": "2026-06-05T17:54:02.096205+00:00",
     "notebookCount": 99
   },
   "notebooks": [
@@ -1344,63 +1344,6 @@
           "cell": 31,
           "type": "code",
           "text": "# Постройте график данных + усредненный прогноз"
-        }
-      ]
-    },
-    {
-      "name": "bubble_sort.ipynb",
-      "path": "notebooks/bubble_sort.ipynb",
-      "searchText": "bubble_sort.ipynb notebooks/bubble_sort.ipynb bubble_sort([64, 34, 25, 12, 22, 11, 90]) def bubble_sort(arr): n = len(arr) for i in range(n): for j in range(0, n - i - 1): print(f\"Сравниваем {arr[j]} и {arr[j+1]}\") if arr[j] > arr[j + 1]: arr[j], arr[j + 1] = arr[j + 1], arr[j] print(f\"Меняем местами: {arr}\") print(f\"После {i+1}-й итерации: {arr}\") return arr # START # READ number n # IF n == 1 THEN return # FOR i = 1, i <= n, i + 1 # FOR j = 1; j <= n; j + 1 # print \"*\" # BREAK # END n = int(input(\"Введите число n: \")) if n == 1: pass # return, ничего не делаем else: for i in range(1, n + 1): for j in range(1, n + 1): print(\"*\") break # task #2 # START # READ number n # numbers i = 0, j = 0, a = 0 # FOR i = n/2, i <= n, i + 1 # FOR j = 2, j <= n, j * 2 # a = a + n / 2 # END n = int(input(\"Введите число n: \")) a = 0 for i in range(n // 2, n + 1): j = 2 while j <= n: a = a + n // 2 j = j * 2 print(\"Результат a:\", a) # task #3 # START # READ number n # number a = 0 # FOR i = 0, i < n, i + 1 # FOR j = n, j > i, j - 1 # a = a + i + j # END n = 2 a = 0 for i in range(n): for j in range(n, i, -1): a = a + i + j print(a) # task #4 # START # READ number n # numbers a = 0, i = n # WHILE i > 0 # a = a + i # i = i / 2 # END n = 56 a = 0 i = n while i > 0: a = a + i i = i // 2 print(a)",
-      "matches": [
-        {
-          "cell": 1,
-          "type": "code",
-          "text": "bubble_sort([64, 34, 25, 12, 22, 11, 90])"
-        },
-        {
-          "cell": 2,
-          "type": "code",
-          "text": "def bubble_sort(arr): n = len(arr) for i in range(n): for j in range(0, n - i - 1): print(f\"Сравниваем {arr[j]} и {arr[j+1]}\") if arr[j] > arr[j + 1]: arr[j], arr[j + 1] = arr[j + 1], arr[j] print(f\"Меняем местами: {arr}\") print(f\"После {i+1}-й итерации: {arr}\") return arr"
-        },
-        {
-          "cell": 3,
-          "type": "code",
-          "text": "# START # READ number n # IF n == 1 THEN return # FOR i = 1, i <= n, i + 1 # FOR j = 1; j <= n; j + 1 # print \"*\" # BREAK # END"
-        },
-        {
-          "cell": 4,
-          "type": "code",
-          "text": "n = int(input(\"Введите число n: \")) if n == 1: pass # return, ничего не делаем else: for i in range(1, n + 1): for j in range(1, n + 1): print(\"*\") break"
-        },
-        {
-          "cell": 5,
-          "type": "code",
-          "text": "# task #2 # START # READ number n # numbers i = 0, j = 0, a = 0 # FOR i = n/2, i <= n, i + 1 # FOR j = 2, j <= n, j * 2 # a = a + n / 2 # END"
-        },
-        {
-          "cell": 6,
-          "type": "code",
-          "text": "n = int(input(\"Введите число n: \")) a = 0 for i in range(n // 2, n + 1): j = 2 while j <= n: a = a + n // 2 j = j * 2 print(\"Результат a:\", a)"
-        },
-        {
-          "cell": 7,
-          "type": "code",
-          "text": "# task #3 # START # READ number n # number a = 0 # FOR i = 0, i < n, i + 1 # FOR j = n, j > i, j - 1 # a = a + i + j # END"
-        },
-        {
-          "cell": 8,
-          "type": "code",
-          "text": "n = 2 a = 0 for i in range(n): for j in range(n, i, -1): a = a + i + j print(a)"
-        },
-        {
-          "cell": 9,
-          "type": "code",
-          "text": "# task #4 # START # READ number n # numbers a = 0, i = n # WHILE i > 0 # a = a + i # i = i / 2 # END"
-        },
-        {
-          "cell": 10,
-          "type": "code",
-          "text": "n = 56 a = 0 i = n while i > 0: a = a + i i = i // 2 print(a)"
         }
       ]
     },
@@ -15170,6 +15113,63 @@
           "cell": 12,
           "type": "code",
           "text": "# Проверяем: зависит ли цена от праздников (ндия 2024) # Государственные праздники ндии 2024 india_holidays = [ \"2024-01-26\", # Republic Day \"2024-03-25\", # Holi \"2024-04-14\", # Dr. Ambedkar Jayanti \"2024-04-17\", # Ram Navami \"2024-04-21\", # Mahavir Jayanti \"2024-05-23\", # Buddha Purnima \"2024-08-15\", # Independence Day \"2024-10-02\", # Gandhi Jayanti \"2024-10-12\", # Dussehra \"2024-11-01\", # Diwali \"2024-11-15\", # Guru Nanak Jayanti \"2024-12-25\", # Christmas ] df_holiday = df_uber[df_uber[\"Booking Status\"] == \"Completed\"] df_holiday = df_holiday.dropna(subset=[\"Booking Value\", \"Date\"]) df_holiday[\"Date\"] = pd.to_datetime(df_holiday[\"Date\"]) df_holiday[\"date_str\"] = df_holiday[\"Date\"].dt.strftime(\"%Y-%m-%d\") # Маркируем праздник или обычный день is_holiday = [] for d in df_holiday[\"date_str\"]: if d in india_holidays: is_holiday.append(\"Праздник\") else: is_holiday.append(\"Обычный день\") df_"
+        }
+      ]
+    },
+    {
+      "name": "bubble_sort.ipynb",
+      "path": "notebooks/bubble_sort.ipynb",
+      "searchText": "bubble_sort.ipynb notebooks/bubble_sort.ipynb bubble_sort([64, 34, 25, 12, 22, 11, 90]) def bubble_sort(arr): n = len(arr) for i in range(n): for j in range(0, n - i - 1): print(f\"Сравниваем {arr[j]} и {arr[j+1]}\") if arr[j] > arr[j + 1]: arr[j], arr[j + 1] = arr[j + 1], arr[j] print(f\"Меняем местами: {arr}\") print(f\"После {i+1}-й итерации: {arr}\") return arr # START # READ number n # IF n == 1 THEN return # FOR i = 1, i <= n, i + 1 # FOR j = 1; j <= n; j + 1 # print \"*\" # BREAK # END n = int(input(\"Введите число n: \")) if n == 1: pass # return, ничего не делаем else: for i in range(1, n + 1): for j in range(1, n + 1): print(\"*\") break # task #2 # START # READ number n # numbers i = 0, j = 0, a = 0 # FOR i = n/2, i <= n, i + 1 # FOR j = 2, j <= n, j * 2 # a = a + n / 2 # END n = int(input(\"Введите число n: \")) a = 0 for i in range(n // 2, n + 1): j = 2 while j <= n: a = a + n // 2 j = j * 2 print(\"Результат a:\", a) # task #3 # START # READ number n # number a = 0 # FOR i = 0, i < n, i + 1 # FOR j = n, j > i, j - 1 # a = a + i + j # END n = 2 a = 0 for i in range(n): for j in range(n, i, -1): a = a + i + j print(a) # task #4 # START # READ number n # numbers a = 0, i = n # WHILE i > 0 # a = a + i # i = i / 2 # END n = 56 a = 0 i = n while i > 0: a = a + i i = i // 2 print(a)",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "code",
+          "text": "bubble_sort([64, 34, 25, 12, 22, 11, 90])"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "def bubble_sort(arr): n = len(arr) for i in range(n): for j in range(0, n - i - 1): print(f\"Сравниваем {arr[j]} и {arr[j+1]}\") if arr[j] > arr[j + 1]: arr[j], arr[j + 1] = arr[j + 1], arr[j] print(f\"Меняем местами: {arr}\") print(f\"После {i+1}-й итерации: {arr}\") return arr"
+        },
+        {
+          "cell": 3,
+          "type": "code",
+          "text": "# START # READ number n # IF n == 1 THEN return # FOR i = 1, i <= n, i + 1 # FOR j = 1; j <= n; j + 1 # print \"*\" # BREAK # END"
+        },
+        {
+          "cell": 4,
+          "type": "code",
+          "text": "n = int(input(\"Введите число n: \")) if n == 1: pass # return, ничего не делаем else: for i in range(1, n + 1): for j in range(1, n + 1): print(\"*\") break"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# task #2 # START # READ number n # numbers i = 0, j = 0, a = 0 # FOR i = n/2, i <= n, i + 1 # FOR j = 2, j <= n, j * 2 # a = a + n / 2 # END"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "n = int(input(\"Введите число n: \")) a = 0 for i in range(n // 2, n + 1): j = 2 while j <= n: a = a + n // 2 j = j * 2 print(\"Результат a:\", a)"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# task #3 # START # READ number n # number a = 0 # FOR i = 0, i < n, i + 1 # FOR j = n, j > i, j - 1 # a = a + i + j # END"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "n = 2 a = 0 for i in range(n): for j in range(n, i, -1): a = a + i + j print(a)"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# task #4 # START # READ number n # numbers a = 0, i = n # WHILE i > 0 # a = a + i # i = i / 2 # END"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "n = 56 a = 0 i = n while i > 0: a = a + i i = i // 2 print(a)"
         }
       ]
     },
