@@ -21,6 +21,7 @@ const referenceIndexFiles = [
   "references/python-stdlib.json",
   "references/data-analytics.json",
   "references/visualization-ml.json",
+  "references/workflows-faq.json",
   "reference-index.json",
 ];
 
@@ -117,10 +118,13 @@ const sortNotebooks = (a, b) => {
 };
 
 const normalizeSearch = (value) => value.toLowerCase().trim();
+const searchStopWords = new Set(["to", "in", "into", "from", "как", "в", "из", "и"]);
 
 const queryTerms = (query) => {
-  const baseTerms = normalizeSearch(query).split(/\s+/).filter(Boolean);
+  const normalized = normalizeSearch(query);
+  const baseTerms = normalized.split(/\s+/).filter((term) => term && !searchStopWords.has(term));
   const expanded = new Set(baseTerms);
+  if (baseTerms.length > 1) expanded.add(normalized);
 
   baseTerms.forEach((term) => {
     (queryAliases[term] || []).forEach((alias) => expanded.add(alias));

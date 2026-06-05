@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "source": "Official documentation based workflow cards for common student questions",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "workflow-numpy-to-pandas",
+      "title": "NumPy array -> pandas DataFrame",
+      "package": "Workflow",
+      "terms": ["numpy to pandas", "np to df", "array to dataframe", "массив в dataframe", "numpy в pandas"],
+      "summary": "Use pandas.DataFrame to wrap a NumPy array with column names.",
+      "import": "import numpy as np\nimport pandas as pd",
+      "syntax": "arr = np.array([[1, 10], [2, 20], [3, 30]])\ndf = pd.DataFrame(arr, columns=[\"id\", \"value\"])",
+      "related": ["pandas.DataFrame", "numpy.array", "pandas.DataFrame.to_numpy"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html"
+    },
+    {
+      "id": "workflow-pandas-to-numpy",
+      "title": "pandas DataFrame -> NumPy array",
+      "package": "Workflow",
+      "terms": ["pandas to numpy", "df to numpy", "to_numpy", "dataframe to array", "pandas в numpy"],
+      "summary": "Use DataFrame.to_numpy when a library expects a NumPy array.",
+      "import": "import pandas as pd",
+      "syntax": "X = df[[\"feature_1\", \"feature_2\"]].to_numpy()\ny = df[\"target\"].to_numpy()",
+      "related": ["numpy.array", "pandas.DataFrame", "sklearn"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_numpy.html"
+    },
+    {
+      "id": "workflow-pandas-to-plotly",
+      "title": "pandas DataFrame -> Plotly chart",
+      "package": "Workflow",
+      "terms": ["pandas to plotly", "df to plotly", "plot dataframe", "dataframe plotly", "pandas в plotly"],
+      "summary": "Plotly Express accepts a pandas DataFrame directly through data_frame.",
+      "import": "import plotly.express as px",
+      "syntax": "fig = px.line(df, x=\"date\", y=\"sales\", color=\"region\")\nfig.show()",
+      "related": ["plotly.express.line", "plotly.express.scatter", "pandas.DataFrame"],
+      "docsUrl": "https://plotly.com/python/px-arguments/"
+    },
+    {
+      "id": "workflow-numpy-to-plotly",
+      "title": "NumPy array -> Plotly chart",
+      "package": "Workflow",
+      "terms": ["numpy to plotly", "array to plotly", "np to plotly", "numpy в plotly"],
+      "summary": "Plotly Express can receive arrays directly, and can also convert array-like data internally.",
+      "import": "import numpy as np\nimport plotly.express as px",
+      "syntax": "x = np.arange(10)\ny = x ** 2\nfig = px.line(x=x, y=y, labels={\"x\": \"x\", \"y\": \"x squared\"})\nfig.show()",
+      "related": ["plotly.express.line", "numpy.arange", "pandas.DataFrame"],
+      "docsUrl": "https://plotly.com/python/px-arguments/"
+    },
+    {
+      "id": "workflow-rolling-before-plotly",
+      "title": "Rolling window -> Plotly",
+      "package": "Workflow",
+      "terms": ["rolling plotly", "window function plotly", "rolling mean plotly", "оконная функция", "скользящее среднее"],
+      "summary": "Compute rolling/window values in pandas, then visualize the prepared column in Plotly.",
+      "import": "import pandas as pd\nimport plotly.express as px",
+      "syntax": "df = df.sort_values(\"date\")\ndf[\"rolling_mean\"] = df[\"value\"].rolling(window=7, min_periods=1).mean()\nfig = px.line(df, x=\"date\", y=[\"value\", \"rolling_mean\"])\nfig.show()",
+      "related": ["pandas.DataFrame.rolling", "plotly.express.line", "time series"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rolling.html"
+    },
+    {
+      "id": "workflow-expanding-ewm",
+      "title": "Expanding / EWM window",
+      "package": "Workflow",
+      "terms": ["expanding", "ewm", "exponential moving average", "накопительное среднее", "экспоненциальное среднее"],
+      "summary": "Use pandas expanding or ewm when the window grows over time or uses exponential weighting.",
+      "import": "import pandas as pd",
+      "syntax": "df[\"expanding_mean\"] = df[\"value\"].expanding().mean()\ndf[\"ema\"] = df[\"value\"].ewm(span=10, adjust=False).mean()",
+      "related": ["pandas.DataFrame.rolling", "time series", "Plotly"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/window.html"
+    },
+    {
+      "id": "workflow-groupby-plotly-bar",
+      "title": "GroupBy -> Plotly bar chart",
+      "package": "Workflow",
+      "terms": ["groupby plotly", "groupby chart", "aggregation plot", "группировка график"],
+      "summary": "Aggregate in pandas first, then pass the summarized table to Plotly.",
+      "import": "import pandas as pd\nimport plotly.express as px",
+      "syntax": "summary = df.groupby(\"category\", as_index=False).agg(total=(\"sales\", \"sum\"))\nfig = px.bar(summary, x=\"category\", y=\"total\")\nfig.show()",
+      "related": ["pandas.DataFrame.groupby", "plotly.express.bar", "pandas.DataFrame.agg"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html"
+    },
+    {
+      "id": "workflow-monthly-aggregation",
+      "title": "Date column -> monthly aggregation",
+      "package": "Workflow",
+      "terms": ["monthly aggregation", "resample", "group by month", "по месяцам", "агрегация по датам"],
+      "summary": "Convert a date column, set it as index, and resample by month.",
+      "import": "import pandas as pd",
+      "syntax": "df[\"date\"] = pd.to_datetime(df[\"date\"])\nmonthly = df.set_index(\"date\").resample(\"ME\")[\"sales\"].sum().reset_index()",
+      "related": ["pandas.to_datetime", "pandas.DataFrame.resample", "Plotly"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.resample.html"
+    },
+    {
+      "id": "workflow-wide-to-long",
+      "title": "Wide table -> long table",
+      "package": "Workflow",
+      "terms": ["wide to long", "melt", "unpivot", "широкий формат", "длинный формат"],
+      "summary": "Use pandas.melt to reshape wide data into a long format that works well for Plotly and groupby.",
+      "import": "import pandas as pd",
+      "syntax": "long_df = pd.melt(\n    df,\n    id_vars=[\"date\"],\n    value_vars=[\"sales_a\", \"sales_b\"],\n    var_name=\"series\",\n    value_name=\"sales\"\n)",
+      "related": ["pandas.melt", "pandas.DataFrame.pivot_table", "plotly.express.line"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html"
+    },
+    {
+      "id": "workflow-long-to-wide",
+      "title": "Long table -> pivot table",
+      "package": "Workflow",
+      "terms": ["long to wide", "pivot", "pivot_table", "сводная таблица"],
+      "summary": "Use pivot_table to reshape long data into a summarized wide table.",
+      "import": "import pandas as pd",
+      "syntax": "pivot = df.pivot_table(\n    index=\"date\",\n    columns=\"category\",\n    values=\"sales\",\n    aggfunc=\"sum\"\n)",
+      "related": ["pandas.DataFrame.pivot_table", "pandas.melt", "groupby"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot_table.html"
+    },
+    {
+      "id": "workflow-pandas-to-sklearn",
+      "title": "pandas DataFrame -> scikit-learn",
+      "package": "Workflow",
+      "terms": ["pandas to sklearn", "dataframe sklearn", "X y", "features target", "модель sklearn"],
+      "summary": "Select feature columns and target from pandas, then split them for model training.",
+      "import": "from sklearn.model_selection import train_test_split",
+      "syntax": "X = df[[\"feature_1\", \"feature_2\"]]\ny = df[\"target\"]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)",
+      "related": ["train_test_split", "StandardScaler", "LinearRegression"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"
+    },
+    {
+      "id": "workflow-scale-numeric-features",
+      "title": "Scale numeric features",
+      "package": "Workflow",
+      "terms": ["scale features", "standardscaler", "normalize", "масштабирование", "нормализация"],
+      "summary": "Fit the scaler on train data and transform train/test separately.",
+      "import": "from sklearn.preprocessing import StandardScaler",
+      "syntax": "scaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)",
+      "related": ["StandardScaler", "train_test_split", "NumPy array"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html"
+    },
+    {
+      "id": "workflow-one-hot-encoding",
+      "title": "Categorical columns -> dummy variables",
+      "package": "Workflow",
+      "terms": ["get_dummies", "one hot", "categorical encoding", "категории в числа"],
+      "summary": "Use pandas.get_dummies for quick one-hot encoding of categorical columns.",
+      "import": "import pandas as pd",
+      "syntax": "encoded = pd.get_dummies(df, columns=[\"city\", \"segment\"], drop_first=True)",
+      "related": ["OneHotEncoder", "pandas.DataFrame.astype", "sklearn"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html"
+    },
+    {
+      "id": "workflow-missing-values",
+      "title": "Missing values cleanup",
+      "package": "Workflow",
+      "terms": ["missing values", "nan cleanup", "fillna dropna", "пропуски", "пустые значения"],
+      "summary": "Detect missing values, then either fill or drop depending on the task.",
+      "import": "import pandas as pd",
+      "syntax": "missing = df.isna().sum()\ndf[\"age\"] = df[\"age\"].fillna(df[\"age\"].median())\nclean = df.dropna(subset=[\"target\"])",
+      "related": ["pandas.isna", "pandas.DataFrame.fillna", "pandas.DataFrame.dropna"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html"
+    },
+    {
+      "id": "workflow-correlation-heatmap",
+      "title": "Correlation matrix -> heatmap",
+      "package": "Workflow",
+      "terms": ["correlation heatmap", "corr heatmap", "матрица корреляции", "тепловая карта"],
+      "summary": "Compute correlations in pandas and draw the matrix with Seaborn.",
+      "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
+      "syntax": "corr = df.corr(numeric_only=True)\nsns.heatmap(corr, annot=True, cmap=\"Blues\")\nplt.show()",
+      "related": ["pandas.DataFrame.corr", "seaborn.heatmap"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html"
+    },
+    {
+      "id": "workflow-duplicates-cleanup",
+      "title": "Find and remove duplicates",
+      "package": "Workflow",
+      "terms": ["duplicates cleanup", "find duplicates", "remove duplicates", "дубликаты"],
+      "summary": "Use duplicated to inspect repeated rows and drop_duplicates to clean them.",
+      "import": "import pandas as pd",
+      "syntax": "duplicates = df[df.duplicated(subset=[\"id\"], keep=False)]\nclean = df.drop_duplicates(subset=[\"id\"], keep=\"first\")",
+      "related": ["pandas.DataFrame.duplicated", "pandas.DataFrame.drop_duplicates"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.duplicated.html"
+    },
+    {
+      "id": "workflow-read-csv-parse-dates",
+      "title": "Read CSV with dates",
+      "package": "Workflow",
+      "terms": ["read csv dates", "parse_dates", "csv date", "прочитать csv с датой"],
+      "summary": "Use parse_dates when reading CSV files that contain date columns.",
+      "import": "import pandas as pd",
+      "syntax": "df = pd.read_csv(\"sales.csv\", parse_dates=[\"date\"])",
+      "related": ["pandas.read_csv", "pandas.to_datetime"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html"
+    },
+    {
+      "id": "workflow-save-results",
+      "title": "Save DataFrame result",
+      "package": "Workflow",
+      "terms": ["save dataframe", "to_csv", "to_json", "export", "сохранить dataframe"],
+      "summary": "Use pandas export methods to save prepared results.",
+      "import": "import pandas as pd",
+      "syntax": "result.to_csv(\"result.csv\", index=False)\nresult.to_json(\"result.json\", orient=\"records\", force_ascii=False)",
+      "related": ["pandas.DataFrame.to_csv", "pandas.DataFrame.to_json"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html"
+    },
+    {
+      "id": "workflow-sql-to-pandas",
+      "title": "SQL query -> pandas DataFrame",
+      "package": "Workflow",
+      "terms": ["sql to pandas", "read_sql", "database to dataframe", "sql в pandas"],
+      "summary": "Use pandas.read_sql to read query results into a DataFrame.",
+      "import": "import pandas as pd\nfrom sqlalchemy import create_engine",
+      "syntax": "engine = create_engine(DB_URL)\ndf = pd.read_sql(\"SELECT * FROM table_name\", engine)",
+      "related": ["pandas.read_sql", "SQLAlchemy", "DataFrame"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_sql.html"
+    },
+    {
+      "id": "workflow-mongo-to-pandas",
+      "title": "MongoDB query -> pandas DataFrame",
+      "package": "Workflow",
+      "terms": ["mongodb to pandas", "pymongo dataframe", "mongo to df", "mongo в pandas"],
+      "summary": "Use PyMongo to fetch documents, then pass the list of dictionaries to pandas.DataFrame.",
+      "import": "import pandas as pd\nfrom pymongo import MongoClient",
+      "syntax": "client = MongoClient(MONGO_URI)\ndocs = list(client[\"db_name\"][\"collection_name\"].find({}, {\"_id\": 0}))\ndf = pd.DataFrame(docs)",
+      "related": ["pandas.DataFrame", "PyMongo find", "MongoClient"],
+      "docsUrl": "https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.find"
+    },
+    {
+      "id": "workflow-dataframe-to-dash",
+      "title": "DataFrame -> Dash dashboard",
+      "package": "Workflow",
+      "terms": ["dataframe dash", "dash dashboard", "df dashboard", "дашборд"],
+      "summary": "Prepare data in pandas, build figures with Plotly, and place them into Dash components.",
+      "import": "from dash import Dash, dcc, html\nimport plotly.express as px",
+      "syntax": "fig = px.bar(df, x=\"category\", y=\"sales\")\napp = Dash(__name__)\napp.layout = html.Div([dcc.Graph(figure=fig)])\napp.run(debug=True)",
+      "related": ["Dash app", "plotly.express.bar", "pandas.DataFrame"],
+      "docsUrl": "https://dash.plotly.com/"
+    }
+  ]
+}
