@@ -60,12 +60,35 @@ def test_build_index_finds_allowed_notebooks_and_skips_checkpoints(tmp_path: Pat
     assert "groupby" in index["notebooks"][0]["searchText"]
 
 
+def test_build_index_marks_fundamental_python_and_skips_project_notebooks(tmp_path: Path) -> None:
+    fundamental = tmp_path / "Python" / "2025.10.06.ipynb"
+    fundamental.parent.mkdir()
+    write_notebook(fundamental, [{"cell_type": "code", "source": ["print('hello')"]}])
+
+    project = tmp_path / "Python" / "проект" / "demo.ipynb"
+    project.parent.mkdir()
+    write_notebook(project, [{"cell_type": "code", "source": ["secret project code"]}])
+
+    index = build_index(tmp_path)
+
+    assert index["meta"]["notebookCount"] == 1
+    assert index["notebooks"][0]["path"] == "Python/2025.10.06.ipynb"
+    assert index["notebooks"][0]["course"] == "fundamental"
+
+
 def test_sanitize_text_removes_public_database_credentials() -> None:
-    text = 'mysql+pymysql://ich1:password@YOUR_MYSQL_HOST/sakila password="password"'
+    text = (
+        'mysql+pymysql://ich1:password@YOUR_MYSQL_HOST/sakila '
+        'mongodb+srv://user:pass@cluster0.example.mongodb.net/ '
+        'API_KEY = "abc123" TELEGRAM_TOKEN = "token123" password="password"'
+    )
 
     sanitized = sanitize_text(text)
 
     assert "YOUR_MYSQL_HOST" not in sanitized
     assert "ich1:password" not in sanitized
+    assert "mongodb+srv://user:pass" not in sanitized
+    assert "abc123" not in sanitized
+    assert "token123" not in sanitized
     assert 'password="password"' not in sanitized
     assert "[DB_CONNECTION_REDACTED]" in sanitized

@@ -8,9 +8,13 @@ const searchEl = document.getElementById("search");
 const rowTpl = document.getElementById("row-template");
 const indexStatusEl = document.getElementById("index-status");
 const assistantEl = document.getElementById("search-assistant");
+const courseTabs = [...document.querySelectorAll(".course-tab")];
+const analyticsCountEl = document.getElementById("analytics-count");
+const fundamentalCountEl = document.getElementById("fundamental-count");
 
 let allNotebooks = [];
 let referenceCards = [];
+let activeCourse = "analytics";
 
 const encodePath = (path) => path.split("/").map(encodeURIComponent).join("/");
 
@@ -34,6 +38,11 @@ const categoryMeta = {
   extra: { title: "Дополнительно", order: 5 },
 };
 
+const courseMeta = {
+  analytics: { title: "Python для аналитиков", order: 1 },
+  fundamental: { title: "Фундаментальный Python", order: 2 },
+};
+
 const queryAliases = {
   "дубликат": ["duplicated", "drop_duplicates"],
   "дубликаты": ["duplicated", "drop_duplicates"],
@@ -54,6 +63,22 @@ const queryAliases = {
 };
 
 const categoryOf = (path, name) => {
+  const lower = `${path} ${name}`.toLowerCase();
+  if (path.startsWith("Python/DZ_Python/")) return "homework";
+  if (path.startsWith("Python/")) {
+    if (lower.includes("summary") || lower.includes("summury")) return "summary";
+    if (
+      lower.includes("practicum") ||
+      lower.includes("practica") ||
+      lower.includes("practice") ||
+      lower.includes("практика") ||
+      lower.includes("_pr_") ||
+      lower.includes(" pr_")
+    ) {
+      return "practice";
+    }
+    return "lessons";
+  }
   if (path.startsWith("DZ_python_DA/")) return "homework";
   if (path.startsWith("notebooks/")) {
     if (name.startsWith("Python for DA_L")) return "lessons";
@@ -69,10 +94,14 @@ const allowedNotebook = (path) => {
   if (!path.toLowerCase().endsWith(".ipynb")) return false;
   if (path.includes(".ipynb_checkpoints")) return false;
   if (path.includes("backup_before_restore")) return false;
+  if (path.startsWith("Python/проект/")) return false;
   return true;
 };
 
 const sortNotebooks = (a, b) => {
+  const courseA = courseMeta[a.course]?.order || 99;
+  const courseB = courseMeta[b.course]?.order || 99;
+  if (courseA !== courseB) return courseA - courseB;
   const cA = categoryMeta[a.category].order;
   const cB = categoryMeta[b.category].order;
   if (cA !== cB) return cA - cB;
@@ -281,25 +310,57 @@ const createSection = (categoryKey, items, terms) => {
   return section;
 };
 
-const render = (items, terms = []) => {
-  listEl.innerHTML = "";
-  const fragment = document.createDocumentFragment();
+const createCourseGroup = (courseKey, items, terms) => {
+  const wrapper = document.createElement("section");
+  wrapper.className = "course-group";
+
+  const heading = document.createElement("h3");
+  heading.className = "course-group-title";
+  heading.textContent = `${courseMeta[courseKey].title} (${items.length})`;
+  wrapper.appendChild(heading);
 
   Object.keys(categoryMeta)
     .sort((a, b) => categoryMeta[a].order - categoryMeta[b].order)
     .forEach((categoryKey) => {
       const groupItems = items.filter((item) => item.category === categoryKey);
       if (groupItems.length > 0) {
-        fragment.appendChild(createSection(categoryKey, groupItems, terms));
+        wrapper.appendChild(createSection(categoryKey, groupItems, terms));
+      }
+    });
+
+  return wrapper;
+};
+
+const render = (items, terms = []) => {
+  listEl.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+  const coursesToRender = terms.length > 0 ? Object.keys(courseMeta) : [activeCourse];
+
+  coursesToRender
+    .sort((a, b) => courseMeta[a].order - courseMeta[b].order)
+    .forEach((courseKey) => {
+      const courseItems = items.filter((item) => item.course === courseKey);
+      if (courseItems.length > 0) {
+        fragment.appendChild(createCourseGroup(courseKey, courseItems, terms));
       }
     });
 
   listEl.appendChild(fragment);
 };
 
-const setStats = (count, filteredCount = count) => {
+const updateCourseCounts = () => {
+  const analyticsCount = allNotebooks.filter((item) => item.course === "analytics").length;
+  const fundamentalCount = allNotebooks.filter((item) => item.course === "fundamental").length;
+  analyticsCountEl.textContent = analyticsCount;
+  fundamentalCountEl.textContent = fundamentalCount;
+};
+
+const setStats = (count, filteredCount = count, terms = []) => {
   if (count === filteredCount) {
-    statsEl.textContent = `Найдено notebook: ${count}`;
+    statsEl.textContent =
+      terms.length > 0
+        ? `Найдено notebook: ${count}`
+        : `Найдено notebook: ${count} в разделе "${courseMeta[activeCourse].title}"`;
     return;
   }
   statsEl.textContent = `Найдено notebook: ${filteredCount} из ${count}`;
@@ -308,17 +369,34 @@ const setStats = (count, filteredCount = count) => {
 const applySearch = () => {
   const query = searchEl.value;
   const terms = queryTerms(searchEl.value);
-  const filtered = allNotebooks.filter((item) => matchesQuery(item, terms));
+  const pool =
+    terms.length > 0
+      ? allNotebooks
+      : allNotebooks.filter((item) => item.course === activeCourse);
+  const filtered = pool.filter((item) => matchesQuery(item, terms));
   renderAssistant(query, filtered, terms);
   render(filtered, terms);
-  setStats(allNotebooks.length, filtered.length);
+  setStats(pool.length, filtered.length, terms);
 };
+
+const setActiveCourse = (course) => {
+  activeCourse = course;
+  courseTabs.forEach((tab) => {
+    const isActive = tab.dataset.course === course;
+    tab.classList.toggle("is-active", isActive);
+    tab.setAttribute("aria-pressed", String(isActive));
+  });
+  applySearch();
+};
+
+const courseOf = (path) => (path.startsWith("Python/") ? "fundamental" : "analytics");
 
 const notebookFromPath = (path) => {
   const name = normalizeName(path);
   return {
     name,
     path,
+    course: courseOf(path),
     category: categoryOf(path, name),
     searchText: `${name} ${path}`,
     matches: [],
@@ -364,6 +442,7 @@ const loadFromSearchIndex = async () => {
   indexStatusEl.textContent = `Поиск по содержимому активен: ${data.meta.notebookCount} notebooks. Индекс обновляется автоматически после push.`;
   return (data.notebooks || []).map((entry) => ({
     ...entry,
+    course: entry.course || courseOf(entry.path),
     category: categoryOf(entry.path, entry.name),
   }));
 };
@@ -400,10 +479,15 @@ const loadNotebooks = async () => {
     }
 
     allNotebooks = allNotebooks.sort(sortNotebooks);
-    render(allNotebooks);
-    setStats(allNotebooks.length);
+    updateCourseCounts();
+    render(allNotebooks.filter((item) => item.course === activeCourse));
+    setStats(allNotebooks.filter((item) => item.course === activeCourse).length);
 
     searchEl.addEventListener("input", applySearch);
+    courseTabs.forEach((tab) => {
+      tab.setAttribute("aria-pressed", String(tab.dataset.course === activeCourse));
+      tab.addEventListener("click", () => setActiveCourse(tab.dataset.course));
+    });
   } catch (error) {
     statsEl.textContent =
       "Не удалось загрузить список notebook. Откройте репозиторий напрямую.";

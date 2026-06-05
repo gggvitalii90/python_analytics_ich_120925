@@ -12,8 +12,12 @@ MAX_CELL_TEXT = 900
 MAX_SEARCH_TEXT = 24000
 REDACTIONS = [
     re.compile(r"mysql\+pymysql://[^@\s\"']+@[^/\s\"']+/[^\s\"']+", re.I),
+    re.compile(r"mongodb(?:\+srv)?://[^\s\"']+", re.I),
     re.compile(r"ich-db\.edu\.itcareerhub\.de", re.I),
+    re.compile(r"mongo\.itcareerhub\.de", re.I),
     re.compile(r'password\s*=\s*["\']password["\']', re.I),
+    re.compile(r"API_KEY\s*=\s*['\"][^'\"]+['\"]", re.I),
+    re.compile(r"TELEGRAM_TOKEN\s*=\s*['\"][^'\"]+['\"]", re.I),
 ]
 
 
@@ -28,6 +32,13 @@ def allowed_notebook(path: Path) -> bool:
     if ".ipynb_checkpoints" in path.parts:
         return False
     if "backup_before_restore" in path_text:
+        return False
+    parts = path.parts
+    if "Python" in parts:
+        python_index = parts.index("Python")
+        if len(parts) > python_index + 1 and parts[python_index + 1] == "проект":
+            return False
+    if "Python" in parts and ".git" in parts:
         return False
     return True
 
@@ -82,6 +93,7 @@ def notebook_to_record(root: Path, path: Path) -> dict[str, Any]:
     return {
         "name": name,
         "path": relative,
+        "course": "fundamental" if relative.startswith("Python/") else "analytics",
         "searchText": search_text,
         "matches": matches,
     }
