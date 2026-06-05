@@ -13,6 +13,14 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
+# Secrets and local databases
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.sqlite3
+
 # VS Code
 .vscode/
 .vscode/*.code-workspace
@@ -27,4 +35,11 @@ Thumbs.db
 # Large or local artifacts
 *.log
 *.tmp
+_tmp_manual_test*/
+_tmp_pytest*/
+pytest-cache-files-*/
+Python/проект/**/.env
+Python/проект/**/.env.*
+Python/проект/**/.git/
+Python/проект/**/__pycache__/
 лекции/
