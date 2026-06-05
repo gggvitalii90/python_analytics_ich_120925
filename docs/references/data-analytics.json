@@ -322,6 +322,72 @@
       "syntax": "df_unique = df.drop_duplicates(subset=[\"id\"], keep=\"first\")",
       "related": ["pandas.DataFrame.duplicated"],
       "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop_duplicates.html"
+    },
+    {
+      "id": "pandas-columns",
+      "title": "pandas.DataFrame.columns",
+      "package": "pandas",
+      "terms": ["columns", "column", "col", "cols", "df.columns", "dataframe columns", "столбцы", "колонки"],
+      "summary": "Official pandas reference for DataFrame column labels.",
+      "import": "import pandas as pd",
+      "syntax": "columns = df.columns\nfirst_column = df.columns[0]\ndf.columns = [\"id\", \"name\", \"score\"]",
+      "related": ["pandas.DataFrame.rename", "pandas.DataFrame.filter", "polars.col"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.columns.html"
+    },
+    {
+      "id": "pandas-rename",
+      "title": "pandas.DataFrame.rename",
+      "package": "pandas",
+      "terms": ["rename", "rename columns", "column rename", "переименовать столбцы", "переименовать колонки"],
+      "summary": "Official pandas reference for renaming columns or indexes.",
+      "import": "import pandas as pd",
+      "syntax": "df = df.rename(columns={\"old_name\": \"new_name\"})",
+      "related": ["pandas.DataFrame.columns"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html"
+    },
+    {
+      "id": "pandas-filter",
+      "title": "pandas.DataFrame.filter",
+      "package": "pandas",
+      "terms": ["df.filter", "dataframe filter", "filter columns", "filter dataframe", "фильтр колонок", "отфильтровать колонки"],
+      "summary": "Official pandas reference for selecting rows or columns by labels.",
+      "import": "import pandas as pd",
+      "syntax": "selected = df.filter(items=[\"name\", \"score\"])\nregex_selected = df.filter(regex=\"score|grade\")",
+      "related": ["pandas.DataFrame.query", "pandas.DataFrame.loc", "filter"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.filter.html"
+    },
+    {
+      "id": "pandas-query",
+      "title": "pandas.DataFrame.query",
+      "package": "pandas",
+      "terms": ["query", "df.query", "filter rows", "row filter", "condition", "фильтр строк", "условие"],
+      "summary": "Official pandas reference for filtering rows with a boolean expression.",
+      "import": "import pandas as pd",
+      "syntax": "adult = df.query(\"age >= 18\")\nactive = df.query(\"status == 'active' and score > 80\")",
+      "related": ["pandas.DataFrame.loc", "pandas.DataFrame.filter"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.query.html"
+    },
+    {
+      "id": "polars-dataframe",
+      "title": "polars.DataFrame",
+      "package": "Polars",
+      "terms": ["polars", "pl.DataFrame", "polars dataframe", "polars python", "поларс"],
+      "summary": "Official Polars reference for DataFrame objects.",
+      "import": "import polars as pl",
+      "syntax": "df = pl.DataFrame({\"name\": [\"a\", \"b\"], \"value\": [1, 2]})\nresult = df.filter(pl.col(\"value\") > 1)",
+      "related": ["polars.col", "pandas.DataFrame"],
+      "docsUrl": "https://docs.pola.rs/api/python/stable/reference/dataframe/index.html"
+    },
+    {
+      "id": "polars-col",
+      "title": "polars.col",
+      "package": "Polars",
+      "terms": ["pl.col", "polars.col", "polars col", "polars column", "polars filter", "column expression"],
+      "summary": "Official Polars reference for selecting columns in expressions.",
+      "import": "import polars as pl",
+      "syntax": "result = df.filter(pl.col(\"value\") > 10)\nselected = df.select(pl.col(\"name\"), pl.col(\"value\"))",
+      "related": ["polars.DataFrame", "pandas.DataFrame.columns"],
+      "docsUrl": "https://docs.pola.rs/api/python/stable/reference/expressions/api/polars.col.html"
     }
   ]
 }
