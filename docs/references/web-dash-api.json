@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "source": "Official documentation references: Dash and web app patterns",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "dash-callback",
+      "title": "Dash callback",
+      "package": "Dash",
+      "type": "function",
+      "terms": ["callback", "dash callback", "Input", "Output", "State", "интерактивность"],
+      "aliases": ["обновить график", "кнопка dash", "реакция на ввод"],
+      "summary": "Official Dash documentation for callbacks and interactivity.",
+      "import": "from dash import Input, Output, State",
+      "syntax": "@app.callback(Output(\"graph\", \"figure\"), Input(\"city\", \"value\"))\ndef update_graph(city):\n    return build_figure(city)",
+      "related": ["Dash app", "dcc.Graph"],
+      "docsUrl": "https://dash.plotly.com/basic-callbacks"
+    },
+    {
+      "id": "dash-dcc-graph",
+      "title": "dcc.Graph",
+      "package": "Dash",
+      "type": "component",
+      "terms": ["dcc.Graph", "Graph", "dash graph", "plotly graph"],
+      "aliases": ["график dash", "вставить график"],
+      "summary": "Official Dash documentation for rendering Plotly figures.",
+      "import": "from dash import dcc",
+      "syntax": "dcc.Graph(id=\"sales-graph\", figure=fig)",
+      "related": ["plotly.express", "Dash callback"],
+      "docsUrl": "https://dash.plotly.com/dash-core-components/graph"
+    },
+    {
+      "id": "dash-layout",
+      "title": "Dash layout",
+      "package": "Dash",
+      "type": "concept",
+      "terms": ["layout", "app.layout", "html.Div", "dcc.Input", "dash layout"],
+      "aliases": ["страница dash", "разметка dash"],
+      "summary": "Official Dash documentation for building app layouts.",
+      "import": "from dash import html, dcc",
+      "syntax": "app.layout = html.Div([\n    dcc.Input(id=\"search\"),\n    dcc.Graph(id=\"graph\")\n])",
+      "related": ["Dash app", "Dash callback"],
+      "docsUrl": "https://dash.plotly.com/layout"
+    },
+    {
+      "id": "streamlit-app",
+      "title": "Streamlit app",
+      "package": "Streamlit",
+      "type": "library",
+      "terms": ["streamlit", "st.write", "st.dataframe", "st.plotly_chart"],
+      "aliases": ["быстрый дашборд", "streamlit dashboard"],
+      "summary": "Official Streamlit documentation for building Python data apps.",
+      "import": "import streamlit as st",
+      "syntax": "st.title(\"Dashboard\")\nst.dataframe(df)\nst.plotly_chart(fig)",
+      "related": ["Dash app", "plotly.express"],
+      "docsUrl": "https://docs.streamlit.io/"
+    }
+  ]
+}

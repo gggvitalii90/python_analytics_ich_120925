@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "source": "Official Python documentation references: extended standard library",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "stdlib-collections",
+      "title": "collections",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["collections", "deque", "Counter", "defaultdict", "namedtuple"],
+      "aliases": ["специальные словари", "счетчик значений"],
+      "summary": "Official Python documentation for specialized container datatypes.",
+      "import": "import collections",
+      "syntax": "from collections import Counter, defaultdict, deque\ncounts = Counter(items)\ngroups = defaultdict(list)",
+      "related": ["collections.Counter", "collections.defaultdict", "dict"],
+      "docsUrl": "https://docs.python.org/3/library/collections.html"
+    },
+    {
+      "id": "stdlib-time",
+      "title": "time",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["time", "sleep", "timestamp", "perf_counter"],
+      "aliases": ["пауза", "измерить время"],
+      "summary": "Official Python documentation for time access and conversions.",
+      "import": "import time",
+      "syntax": "start = time.perf_counter()\ntime.sleep(1)\nelapsed = time.perf_counter() - start",
+      "related": ["datetime", "calendar"],
+      "docsUrl": "https://docs.python.org/3/library/time.html"
+    },
+    {
+      "id": "stdlib-calendar",
+      "title": "calendar",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["calendar", "monthrange", "weekday", "календарь"],
+      "aliases": ["день недели", "количество дней в месяце"],
+      "summary": "Official Python documentation for calendar-related functions.",
+      "import": "import calendar",
+      "syntax": "weekday, days = calendar.monthrange(2026, 6)",
+      "related": ["datetime", "time"],
+      "docsUrl": "https://docs.python.org/3/library/calendar.html"
+    },
+    {
+      "id": "stdlib-decimal",
+      "title": "decimal",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["decimal", "Decimal", "money", "precision", "точность"],
+      "aliases": ["точные десятичные числа", "деньги"],
+      "summary": "Official Python documentation for fixed-point and floating-point decimal arithmetic.",
+      "import": "from decimal import Decimal",
+      "syntax": "price = Decimal(\"10.50\")\ntotal = price * Decimal(\"1.20\")",
+      "related": ["float", "math", "fractions"],
+      "docsUrl": "https://docs.python.org/3/library/decimal.html"
+    },
+    {
+      "id": "stdlib-copy",
+      "title": "copy",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["copy", "deepcopy", "shallow copy", "копия"],
+      "aliases": ["скопировать объект", "глубокая копия"],
+      "summary": "Official Python documentation for shallow and deep copy operations.",
+      "import": "import copy",
+      "syntax": "new_items = copy.copy(items)\nfull_copy = copy.deepcopy(config)",
+      "related": ["list.copy", "dict.copy"],
+      "docsUrl": "https://docs.python.org/3/library/copy.html"
+    },
+    {
+      "id": "stdlib-pickle",
+      "title": "pickle",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["pickle", "dump", "load", "serialize", "сериализация"],
+      "aliases": ["сохранить объект python", "загрузить объект"],
+      "summary": "Official Python documentation for Python object serialization.",
+      "import": "import pickle",
+      "syntax": "with open(\"model.pkl\", \"wb\") as file:\n    pickle.dump(model, file)",
+      "related": ["json", "joblib"],
+      "docsUrl": "https://docs.python.org/3/library/pickle.html"
+    },
+    {
+      "id": "stdlib-typing",
+      "title": "typing",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["typing", "type hints", "List", "Dict", "Optional", "аннотации типов"],
+      "aliases": ["подсказки типов", "типизация"],
+      "summary": "Official Python documentation for type hints.",
+      "import": "from typing import Optional",
+      "syntax": "def find_user(user_id: int) -> Optional[str]:\n    return users.get(user_id)",
+      "related": ["dataclasses", "mypy"],
+      "docsUrl": "https://docs.python.org/3/library/typing.html"
+    },
+    {
+      "id": "stdlib-logging",
+      "title": "logging",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["logging", "log", "logger", "debug", "info"],
+      "aliases": ["логирование", "записать лог"],
+      "summary": "Official Python documentation for logging.",
+      "import": "import logging",
+      "syntax": "logging.basicConfig(level=logging.INFO)\nlogging.info(\"Pipeline started\")",
+      "related": ["print", "warnings"],
+      "docsUrl": "https://docs.python.org/3/library/logging.html"
+    },
+    {
+      "id": "stdlib-sqlite3",
+      "title": "sqlite3",
+      "package": "Python stdlib",
+      "type": "module",
+      "terms": ["sqlite3", "sqlite", "database", "sql", "база данных"],
+      "aliases": ["локальная база данных"],
+      "summary": "Official Python documentation for SQLite database access.",
+      "import": "import sqlite3",
+      "syntax": "with sqlite3.connect(\"data.db\") as con:\n    rows = con.execute(\"SELECT * FROM users\").fetchall()",
+      "related": ["SQL SELECT", "pandas.read_sql"],
+      "docsUrl": "https://docs.python.org/3/library/sqlite3.html"
+    },
+    {
+      "id": "http-requests",
+      "title": "requests",
+      "package": "Requests",
+      "type": "library",
+      "terms": ["requests", "request", "get", "post", "api", "http"],
+      "aliases": ["запрос к api", "скачать страницу", "http запрос"],
+      "summary": "Official Requests documentation for HTTP requests in Python.",
+      "import": "import requests",
+      "syntax": "response = requests.get(url, timeout=10)\ndata = response.json()",
+      "related": ["urllib.request", "json", "API"],
+      "docsUrl": "https://requests.readthedocs.io/en/latest/"
+    }
+  ]
+}

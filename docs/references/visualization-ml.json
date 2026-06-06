@@ -223,6 +223,72 @@
       "syntax": "model = Prophet()\nmodel.fit(df)\nfuture = model.make_future_dataframe(periods=30)\nforecast = model.predict(future)",
       "related": ["ARIMA", "SARIMA", "time series"],
       "docsUrl": "https://facebook.github.io/prophet/docs/quick_start.html"
+    },
+    {
+      "id": "sklearn-one-hot-encoder",
+      "title": "sklearn.preprocessing.OneHotEncoder",
+      "package": "scikit-learn",
+      "terms": ["OneHotEncoder", "one hot", "one-hot", "categorical encoding", "кодирование категорий"],
+      "summary": "Official scikit-learn reference for one-hot encoding categorical features.",
+      "import": "from sklearn.preprocessing import OneHotEncoder",
+      "syntax": "encoder = OneHotEncoder(handle_unknown=\"ignore\")\nencoded = encoder.fit_transform(df[[\"category\"]])",
+      "related": ["LabelEncoder", "pandas.get_dummies", "StandardScaler"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html"
+    },
+    {
+      "id": "sklearn-label-encoder",
+      "title": "sklearn.preprocessing.LabelEncoder",
+      "package": "scikit-learn",
+      "terms": ["LabelEncoder", "label encoding", "encode labels", "кодирование меток"],
+      "summary": "Official scikit-learn reference for encoding target labels.",
+      "import": "from sklearn.preprocessing import LabelEncoder",
+      "syntax": "encoder = LabelEncoder()\ny_encoded = encoder.fit_transform(y)",
+      "related": ["OneHotEncoder", "OrdinalEncoder"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html"
+    },
+    {
+      "id": "sklearn-logistic-regression",
+      "title": "sklearn.linear_model.LogisticRegression",
+      "package": "scikit-learn",
+      "terms": ["LogisticRegression", "logistic regression", "classification", "классификация"],
+      "summary": "Official scikit-learn reference for logistic regression classification.",
+      "import": "from sklearn.linear_model import LogisticRegression",
+      "syntax": "model = LogisticRegression(max_iter=1000)\nmodel.fit(X_train, y_train)\npredictions = model.predict(X_test)",
+      "related": ["accuracy_score", "train_test_split"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+    },
+    {
+      "id": "sklearn-random-forest",
+      "title": "sklearn.ensemble.RandomForestClassifier",
+      "package": "scikit-learn",
+      "terms": ["RandomForest", "RandomForestClassifier", "forest", "случайный лес"],
+      "summary": "Official scikit-learn reference for random forest classification.",
+      "import": "from sklearn.ensemble import RandomForestClassifier",
+      "syntax": "model = RandomForestClassifier(random_state=42)\nmodel.fit(X_train, y_train)",
+      "related": ["classification", "train_test_split"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html"
+    },
+    {
+      "id": "sklearn-kmeans",
+      "title": "sklearn.cluster.KMeans",
+      "package": "scikit-learn",
+      "terms": ["KMeans", "k-means", "clustering", "кластеризация"],
+      "summary": "Official scikit-learn reference for K-Means clustering.",
+      "import": "from sklearn.cluster import KMeans",
+      "syntax": "model = KMeans(n_clusters=3, random_state=42)\nclusters = model.fit_predict(X)",
+      "related": ["StandardScaler", "clustering"],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"
+    },
+    {
+      "id": "statsmodels-sarimax",
+      "title": "statsmodels.tsa.statespace.sarimax.SARIMAX",
+      "package": "statsmodels",
+      "terms": ["SARIMAX", "sarima", "seasonal arima", "seasonality", "сезонность"],
+      "summary": "Official statsmodels reference for seasonal ARIMA models.",
+      "import": "from statsmodels.tsa.statespace.sarimax import SARIMAX",
+      "syntax": "model = SARIMAX(series, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12))\nresult = model.fit()",
+      "related": ["ARIMA", "time series", "Prophet"],
+      "docsUrl": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html"
     }
   ]
 }

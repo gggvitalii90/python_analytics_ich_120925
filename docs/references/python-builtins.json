@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "source": "Official Python documentation references: built-in functions and types",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "python-all-any",
+      "title": "all and any",
+      "package": "Python built-ins",
+      "type": "function",
+      "terms": ["all", "any", "boolean check", "все", "любой"],
+      "aliases": ["проверить все условия", "проверить хотя бы одно условие"],
+      "summary": "Official Python documentation for checking whether all or any values are true.",
+      "import": "# built-in, no import needed",
+      "syntax": "all_positive = all(x > 0 for x in values)\nhas_missing = any(x is None for x in values)",
+      "related": ["bool", "filter", "list comprehension"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#all"
+    },
+    {
+      "id": "python-abs-round",
+      "title": "abs and round",
+      "package": "Python built-ins",
+      "type": "function",
+      "terms": ["abs", "round", "absolute", "округление", "модуль числа"],
+      "aliases": ["округлить", "абсолютное значение"],
+      "summary": "Official Python documentation for absolute values and rounding.",
+      "import": "# built-in, no import needed",
+      "syntax": "distance = abs(-12)\nprice = round(10.567, 2)",
+      "related": ["math.ceil", "math.floor", "numpy.round"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#abs"
+    },
+    {
+      "id": "python-sum-min-max",
+      "title": "sum, min, max",
+      "package": "Python built-ins",
+      "type": "function",
+      "terms": ["sum", "min", "max", "minimum", "maximum", "сумма", "минимум", "максимум"],
+      "aliases": ["сложить значения", "найти максимум", "найти минимум"],
+      "summary": "Official Python documentation for common aggregate built-ins.",
+      "import": "# built-in, no import needed",
+      "syntax": "total = sum(values)\nsmallest = min(values)\nlargest = max(values)",
+      "related": ["statistics.mean", "numpy.sum", "pandas.DataFrame.sum"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#sum"
+    },
+    {
+      "id": "python-dir-help",
+      "title": "dir and help",
+      "package": "Python built-ins",
+      "type": "function",
+      "terms": ["dir", "help", "methods", "attributes", "справка", "методы"],
+      "aliases": ["посмотреть методы", "помощь python"],
+      "summary": "Official Python documentation for interactive object inspection.",
+      "import": "# built-in, no import needed",
+      "syntax": "dir(df)\nhelp(list.append)",
+      "related": ["type", "isinstance"],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#dir"
+    },
+    {
+      "id": "python-list-methods",
+      "title": "list methods",
+      "package": "Python built-ins",
+      "type": "type",
+      "terms": ["list.append", "append", "extend", "remove", "pop", "insert", "список"],
+      "aliases": ["добавить в список", "удалить из списка"],
+      "summary": "Official Python tutorial section for list methods.",
+      "import": "# built-in, no import needed",
+      "syntax": "items.append(\"new\")\nitems.remove(\"old\")\nlast = items.pop()",
+      "related": ["list", "del", "sorted"],
+      "docsUrl": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"
+    },
+    {
+      "id": "python-dict-methods",
+      "title": "dict methods",
+      "package": "Python built-ins",
+      "type": "type",
+      "terms": ["dict", "keys", "values", "items", "get", "pop", "словарь"],
+      "aliases": ["ключи словаря", "значения словаря"],
+      "summary": "Official Python documentation for dictionary operations.",
+      "import": "# built-in, no import needed",
+      "syntax": "value = row.get(\"name\", \"unknown\")\nfor key, value in row.items():\n    print(key, value)",
+      "related": ["collections.defaultdict", "json"],
+      "docsUrl": "https://docs.python.org/3/library/stdtypes.html#mapping-types-dict"
+    },
+    {
+      "id": "python-str-methods",
+      "title": "str methods",
+      "package": "Python built-ins",
+      "type": "type",
+      "terms": ["str", "string", "split", "join", "replace", "strip", "lower", "строка"],
+      "aliases": ["работа со строками", "разделить строку", "заменить текст"],
+      "summary": "Official Python documentation for string methods.",
+      "import": "# built-in, no import needed",
+      "syntax": "clean = text.strip().lower()\nparts = text.split(\",\")\njoined = \", \".join(parts)",
+      "related": ["re", "pandas.Series.str"],
+      "docsUrl": "https://docs.python.org/3/library/stdtypes.html#string-methods"
+    }
+  ]
+}
