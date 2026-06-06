@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-05T22:35:18.314001+00:00",
+    "generatedAt": "2026-06-06T00:16:19.265094+00:00",
     "notebookCount": 199
   },
   "notebooks": [
@@ -1212,7 +1212,7 @@
       "name": "HW_20_students.ipynb",
       "path": "DZ_python_DA/HW_20_students.ipynb",
       "course": "analytics",
-      "searchText": "HW_20_students.ipynb DZ_python_DA/HW_20_students.ipynb # <b><font color='teal'>Homework 20</font></b> Объедините прогнозы, полученные с помощью моделей ARIMA, SARIMA и Prophet, чтобы повысить точность предсказаний. # Импорт библиотек import pandas as pd from statsmodels.tsa.arima.model import ARIMA import matplotlib.pyplot as plt from statsmodels.tsa.statespace.sarimax import SARIMAX from prophet import Prophet import numpy as np # Загрузите датасет в датафрейм df_Dingling from pathlib import Path candidates = [ Path('data/PRSA_Data_Dingling_20130301-20170228.csv'), Path('../data/PRSA_Data_Dingling_20130301-20170228.csv'), ] display(df_Dingling) # В df_Dingling создайте новый столбец datetime, # в который соедините значения из столбцов year, month, day, hour # Для этого используйте функцию pd.to_datetime df_Dingling['datetime'] = pd.to_datetime(df_Dingling[['year', 'month', 'day', 'hour']]) display(df_Dingling) # Созданный столбец сделайте индексом датафрейма (df.set_index()) df_Dingling.set_index('datetime', inplace=True) display(df_Dingling) # Поле PM2.5 выделите в отдельный объект типа Series и назовите его series_pm25 series_pm25 = df_Dingling['PM2.5'] display(series_pm25) # Изучите series_pm25 на наличие отсутствующих значений # Примите решение об удалении/заполнении отсутствующих значений и выполните это действие # Агрегируйте данные по месяцам в переменную monthly_data #### <b><font color='teal'>Модель ARIMA</font></b> # Постройте модель ARIMA (назовите model_pm25_arima) # p - компонент авторегрессии (кол-во предыдущих значений) # d - интегральный компонент (кол-во раз, которое необходимо продифференцировать данные) # q - компонент скользящего среднего (сколько прошлых членов ошибки используется для прогнозирования) # Натренируйте модель # Результат запишите в переменную model_pm25_arima_fit # В переменную forecast_arima_pm25 спрогнозируйте значения pm25 на ближайший год # Нарисуйте график временного ряда + график прогнозов #### <b><font color='teal'>Модель SARIMA</font></b> # Создайте модель SARIMA с параметрами: # p = 1 # d = 1 # q = 1 # P = 1 # D = 1 # Q = 1 # s = 12 # Назовите переменную model_pm25_sarima # Натренируйте модель на данных и запишите результат в model_pm25_sarima_fit # В переменную forecast_pm25_sarima спрогнозируйте данные на 12 месяцев вперед # Постройте график данных + прогнозы #### <b><font color='teal'>Модель Prophet</font></b> # Из monthly_data создайте датафрейм df_pm25 со столбцами 'ds' и 'y' # Создайте экземпляр Prophet. Назовите model_prophet # Обучите модель # Создайте фрейм future_pm25 данных для хранения прогнозов # с периодом 12 и с частотой в месяц (ME) # Сделайте прогнозы в переменную forecast_prophet_pm25 # Визуализируйте прогноз и нарисуйте графики компонентов #### <b><font color='teal'>Объединение прогнозов моделей</font></b> # Подготовьте прогнозы модели Prophet к формату данных других моделей # Создайте Series из столбца yhat (причем последних 12 значений - tail(12)) # Индексами созданного Series будет столбец ds датафрейма forecast_prophet_pm25 # В переменную mean_forecast вычислите среднее арифметическое всех трех прогнозов (ARIMA, SARIMA, Prophet) # Постройте график данных + усредненный прогноз",
+      "searchText": "HW_20_students.ipynb DZ_python_DA/HW_20_students.ipynb # <b><font color='teal'>Homework 20</font></b> Объедините прогнозы, полученные с помощью моделей ARIMA, SARIMA и Prophet, чтобы повысить точность предсказаний. # Импорт библиотек import pandas as pd from statsmodels.tsa.arima.model import ARIMA import matplotlib.pyplot as plt from statsmodels.tsa.statespace.sarimax import SARIMAX from prophet import Prophet import numpy as np # Загрузите датасет в датафрейм df_Dingling df_Dingling = pd.read_csv('../data/PRSA_Data_Dingling_20130301-20170228.csv') display(df_Dingling) # В df_Dingling создайте новый столбец datetime, # в который соедините значения из столбцов year, month, day, hour # Для этого используйте функцию pd.to_datetime df_Dingling['datetime'] = pd.to_datetime(df_Dingling[['year', 'month', 'day', 'hour']]) display(df_Dingling) # Созданный столбец сделайте индексом датафрейма (df.set_index()) df_Dingling.set_index('datetime', inplace=True) display(df_Dingling) # Поле PM2.5 выделите в отдельный объект типа Series и назовите его series_pm25 series_pm25 = df_Dingling['PM2.5'] display(series_pm25) # Изучите series_pm25 на наличие отсутствующих значений series_pm25.isna().sum() # Примите решение об удалении/заполнении отсутствующих значений и выполните это действие display(df_Dingling[df_Dingling['PM2.5'].isna()]) display(df_Dingling.info()) display(df_Dingling.describe()) display(df_Dingling.duplicated().sum()) # Будет два варианта с dropna и fillna. Я выберу dropna, так как пропущенных значений не так много, и удаление их не повлияет на общую картину данных. series_pm25_drop = series_pm25.dropna() series_pm25_fill = series_pm25.interpolate(method='time').ffill().bfill() series_pm25_fill # Агрегируйте данные по месяцам в переменную monthly_data monthly_data_drop = series_pm25_drop.resample('M').sum() display(monthly_data_drop.head(3)) monthly_data_fill = series_pm25_fill.resample('M').sum() display(monthly_data_fill.head(3)) #### <b><font color='teal'>Модель ARIMA</font></b> # Постройте модель ARIMA (назовите model_pm25_arima) # p - компонент авторегрессии (кол-во предыдущих значений) # d - интегральный компонент (кол-во раз, которое необходимо продифференцировать данные) # q - компонент скользящего среднего (сколько прошлых членов ошибки используется для прогнозирования) model_pm25_drop_arima = ARIMA(series_pm25_drop, order=(1, 1, 1)).fit() model_pm25_fill_arima = ARIMA(series_pm25_fill, order=(1, 1, 1)).fit() # Натренируйте модель # Результат запишите в переменную model_pm25_arima_fit model_pm25_drop_arima_fit = ARIMA(series_pm25_drop, order=(1, 1, 1)).fit() model_pm25_fill_arima_fit = ARIMA(series_pm25_fill, order=(1, 1, 1)).fit() # В переменную forecast_arima_pm25 спрогнозируйте значения pm25 на ближайший год forecast_arima_pm25_drop = model_pm25_drop_arima_fit.forecast(steps=365) forecast_arima_pm25_fill = model_pm25_fill_arima_fit.forecast(steps=365) # Нарисуйте график временного ряда + график прогнозов plt.figure(figsize=(12, 6)) plt.Subplot(2, 1, 1) plt.plot(series_pm25_drop, label='PM2.5 (dropna)', color='blue') plt.plot(forecast_arima_pm25_drop, label='ARIMA Forecast (dropna)', color='orange') plt.title('ARIMA Forecast for PM2.5 (dropna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.Subplot(2, 1, 2) plt.plot(series_pm25_fill, label='PM2.5 (fillna)', color='green') plt.plot(forecast_arima_pm25_fill, label='ARIMA Forecast (fillna)', color='red') plt.title('ARIMA Forecast for PM2.5 (fillna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.tight_layout() plt.show() #### <b><font color='teal'>Модель SARIMA</font></b> # Создайте модель SARIMA с параметрами: # p = 1 # d = 1 # q = 1 # P = 1 # D = 1 # Q = 1 # s = 12 # Назовите переменную model_pm25_sarima # Натренируйте модель на данных и запишите результат в model_pm25_sarima_fit # В переменную forecast_pm25_sarima спрогнозируйте данные на 12 месяцев вперед # Постройте график данных + прогнозы #### <b><font color='teal'>Модель Prophet</font></b> # Из monthly_data создайте датафрейм df_pm25 со столбцами 'ds' и 'y' # Создайте экземпляр Prophet. Назовите model_prophet # Обучите модель # Создайте фрейм future_pm25 данных для хранения прогнозов # с периодом 12 и с частотой в месяц (ME) # Сделайте прогнозы в переменную forecast_prophet_pm25 # Визуализируйте прогноз и нарисуйте графики компонентов #### <b><font color='teal'>Объединение прогнозов моделей</font></b> # Подготовьте прогнозы модели Prophet к формату данных других моделей # Создайте Series из столбца yhat (причем последних 12 значений - tail(12)) # Индексами созданного Series будет столбец ds датафрейма forecast_prophet_pm25 # В переменную mean_forecast вычислите среднее арифметическое всех трех прогнозов (ARIMA, SARIMA, Prophet) # Постройте график данных + усредненный прогноз",
       "matches": [
         {
           "cell": 1,
@@ -1232,7 +1232,7 @@
         {
           "cell": 4,
           "type": "code",
-          "text": "# Загрузите датасет в датафрейм df_Dingling from pathlib import Path candidates = [ Path('data/PRSA_Data_Dingling_20130301-20170228.csv'), Path('../data/PRSA_Data_Dingling_20130301-20170228.csv'), ] display(df_Dingling)"
+          "text": "# Загрузите датасет в датафрейм df_Dingling df_Dingling = pd.read_csv('../data/PRSA_Data_Dingling_20130301-20170228.csv') display(df_Dingling)"
         },
         {
           "cell": 5,
@@ -1252,120 +1252,125 @@
         {
           "cell": 8,
           "type": "code",
-          "text": "# Изучите series_pm25 на наличие отсутствующих значений"
+          "text": "# Изучите series_pm25 на наличие отсутствующих значений series_pm25.isna().sum()"
         },
         {
           "cell": 9,
           "type": "code",
-          "text": "# Примите решение об удалении/заполнении отсутствующих значений и выполните это действие"
+          "text": "# Примите решение об удалении/заполнении отсутствующих значений и выполните это действие display(df_Dingling[df_Dingling['PM2.5'].isna()]) display(df_Dingling.info()) display(df_Dingling.describe()) display(df_Dingling.duplicated().sum())"
         },
         {
           "cell": 10,
           "type": "code",
-          "text": "# Агрегируйте данные по месяцам в переменную monthly_data"
+          "text": "# Будет два варианта с dropna и fillna. Я выберу dropna, так как пропущенных значений не так много, и удаление их не повлияет на общую картину данных. series_pm25_drop = series_pm25.dropna() series_pm25_fill = series_pm25.interpolate(method='time').ffill().bfill() series_pm25_fill"
         },
         {
           "cell": 11,
+          "type": "code",
+          "text": "# Агрегируйте данные по месяцам в переменную monthly_data monthly_data_drop = series_pm25_drop.resample('M').sum() display(monthly_data_drop.head(3)) monthly_data_fill = series_pm25_fill.resample('M').sum() display(monthly_data_fill.head(3))"
+        },
+        {
+          "cell": 12,
           "type": "markdown",
           "text": "#### <b><font color='teal'>Модель ARIMA</font></b>"
         },
         {
-          "cell": 12,
-          "type": "code",
-          "text": "# Постройте модель ARIMA (назовите model_pm25_arima) # p - компонент авторегрессии (кол-во предыдущих значений) # d - интегральный компонент (кол-во раз, которое необходимо продифференцировать данные) # q - компонент скользящего среднего (сколько прошлых членов ошибки используется для прогнозирования)"
-        },
-        {
           "cell": 13,
           "type": "code",
-          "text": "# Натренируйте модель # Результат запишите в переменную model_pm25_arima_fit"
+          "text": "# Постройте модель ARIMA (назовите model_pm25_arima) # p - компонент авторегрессии (кол-во предыдущих значений) # d - интегральный компонент (кол-во раз, которое необходимо продифференцировать данные) # q - компонент скользящего среднего (сколько прошлых членов ошибки используется для прогнозирования) model_pm25_drop_arima = ARIMA(series_pm25_drop, order=(1, 1, 1)).fit() model_pm25_fill_arima = ARIMA(series_pm25_fill, order=(1, 1, 1)).fit()"
         },
         {
           "cell": 14,
           "type": "code",
-          "text": "# В переменную forecast_arima_pm25 спрогнозируйте значения pm25 на ближайший год"
+          "text": "# Натренируйте модель # Результат запишите в переменную model_pm25_arima_fit model_pm25_drop_arima_fit = ARIMA(series_pm25_drop, order=(1, 1, 1)).fit() model_pm25_fill_arima_fit = ARIMA(series_pm25_fill, order=(1, 1, 1)).fit()"
         },
         {
           "cell": 15,
           "type": "code",
-          "text": "# Нарисуйте график временного ряда + график прогнозов"
+          "text": "# В переменную forecast_arima_pm25 спрогнозируйте значения pm25 на ближайший год forecast_arima_pm25_drop = model_pm25_drop_arima_fit.forecast(steps=365) forecast_arima_pm25_fill = model_pm25_fill_arima_fit.forecast(steps=365)"
         },
         {
           "cell": 16,
+          "type": "code",
+          "text": "# Нарисуйте график временного ряда + график прогнозов plt.figure(figsize=(12, 6)) plt.Subplot(2, 1, 1) plt.plot(series_pm25_drop, label='PM2.5 (dropna)', color='blue') plt.plot(forecast_arima_pm25_drop, label='ARIMA Forecast (dropna)', color='orange') plt.title('ARIMA Forecast for PM2.5 (dropna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.Subplot(2, 1, 2) plt.plot(series_pm25_fill, label='PM2.5 (fillna)', color='green') plt.plot(forecast_arima_pm25_fill, label='ARIMA Forecast (fillna)', color='red') plt.title('ARIMA Forecast for PM2.5 (fillna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.tight_layout() plt.show()"
+        },
+        {
+          "cell": 17,
           "type": "markdown",
           "text": "#### <b><font color='teal'>Модель SARIMA</font></b>"
         },
         {
-          "cell": 17,
+          "cell": 18,
           "type": "code",
           "text": "# Создайте модель SARIMA с параметрами: # p = 1 # d = 1 # q = 1 # P = 1 # D = 1 # Q = 1 # s = 12 # Назовите переменную model_pm25_sarima"
         },
         {
-          "cell": 18,
+          "cell": 19,
           "type": "code",
           "text": "# Натренируйте модель на данных и запишите результат в model_pm25_sarima_fit"
         },
         {
-          "cell": 19,
+          "cell": 20,
           "type": "code",
           "text": "# В переменную forecast_pm25_sarima спрогнозируйте данные на 12 месяцев вперед"
         },
         {
-          "cell": 20,
+          "cell": 21,
           "type": "code",
           "text": "# Постройте график данных + прогнозы"
         },
         {
-          "cell": 21,
+          "cell": 22,
           "type": "markdown",
           "text": "#### <b><font color='teal'>Модель Prophet</font></b>"
         },
         {
-          "cell": 22,
+          "cell": 23,
           "type": "code",
           "text": "# Из monthly_data создайте датафрейм df_pm25 со столбцами 'ds' и 'y'"
         },
         {
-          "cell": 23,
+          "cell": 24,
           "type": "code",
           "text": "# Создайте экземпляр Prophet. Назовите model_prophet"
         },
         {
-          "cell": 24,
+          "cell": 25,
           "type": "code",
           "text": "# Обучите модель"
         },
         {
-          "cell": 25,
+          "cell": 26,
           "type": "code",
           "text": "# Создайте фрейм future_pm25 данных для хранения прогнозов # с периодом 12 и с частотой в месяц (ME)"
         },
         {
-          "cell": 26,
+          "cell": 27,
           "type": "code",
           "text": "# Сделайте прогнозы в переменную forecast_prophet_pm25"
         },
         {
-          "cell": 27,
+          "cell": 28,
           "type": "code",
           "text": "# Визуализируйте прогноз и нарисуйте графики компонентов"
         },
         {
-          "cell": 28,
+          "cell": 29,
           "type": "markdown",
           "text": "#### <b><font color='teal'>Объединение прогнозов моделей</font></b>"
         },
         {
-          "cell": 29,
+          "cell": 30,
           "type": "code",
           "text": "# Подготовьте прогнозы модели Prophet к формату данных других моделей # Создайте Series из столбца yhat (причем последних 12 значений - tail(12)) # Индексами созданного Series будет столбец ds датафрейма forecast_prophet_pm25"
         },
         {
-          "cell": 30,
+          "cell": 31,
           "type": "code",
           "text": "# В переменную mean_forecast вычислите среднее арифметическое всех трех прогнозов (ARIMA, SARIMA, Prophet)"
         },
         {
-          "cell": 31,
+          "cell": 32,
           "type": "code",
           "text": "# Постройте график данных + усредненный прогноз"
         }
