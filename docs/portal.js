@@ -18,9 +18,15 @@ let activeCourse = "analytics";
 
 const referenceIndexFiles = [
   "references/python-core.json",
+  "references/python-language.json",
+  "references/python-builtins.json",
   "references/python-stdlib.json",
+  "references/python-stdlib-extended.json",
+  "references/python-ecosystem-catalog.json",
   "references/data-analytics.json",
+  "references/data-databases.json",
   "references/visualization-ml.json",
+  "references/web-dash-api.json",
   "references/workflows-faq.json",
   "reference-index.json",
 ];
@@ -64,6 +70,12 @@ const queryAliases = {
   "сортировать": ["sort_values", "sort_index"],
   "пропуски": ["isna", "isnull", "dropna", "fillna"],
   "пустые": ["isna", "isnull", "dropna", "fillna"],
+  "удалить": ["del", "drop", "remove", "pop"],
+  "удаление": ["del", "drop", "remove", "pop"],
+  "колонки": ["columns", "col", "df.columns"],
+  "столбцы": ["columns", "col", "df.columns"],
+  "тип": ["type", "dtype", "astype"],
+  "график": ["plot", "hist", "scatter", "bar"],
   "dubl": ["duplicated", "drop_duplicates"],
   "dupl": ["duplicated", "drop_duplicates"],
   "duplicat": ["duplicated", "drop_duplicates"],
@@ -158,14 +170,20 @@ const referenceTokens = (value) =>
 const referenceScore = (card, terms) => {
   const title = card.title.toLowerCase();
   const exactTerms = (card.terms || []).map((term) => term.toLowerCase());
+  const aliases = (card.aliases || []).map((term) => term.toLowerCase());
   const weakTerms = [...referenceTokens(card.title), ...referenceTokens(card.package)];
   const relatedTerms = (card.related || []).map((term) => term.toLowerCase());
 
   return terms.reduce((score, term) => {
-    if (exactTerms.includes(term)) return score + 12;
-    if (title === term || title.endsWith(`.${term}`)) return score + 10;
-    if (weakTerms.includes(term)) return score + 5;
-    if (term.length >= 4 && exactTerms.some((cardTerm) => cardTerm.startsWith(term))) return score + 3;
+    const shortTerm = term.length <= 3;
+    if (title === term) return score + 40;
+    if (!shortTerm && (title.endsWith(`.${term}`) || title.endsWith(`-${term}`))) return score + 32;
+    if (exactTerms.includes(term)) return score + 28;
+    if (aliases.includes(term)) return score + 20;
+    if (weakTerms.includes(term)) return score + 10;
+    if (!shortTerm && exactTerms.some((cardTerm) => cardTerm.startsWith(term))) return score + 8;
+    if (!shortTerm && aliases.some((alias) => alias.includes(term))) return score + 6;
+    if (!shortTerm && title.includes(term)) return score + 5;
     if (relatedTerms.includes(term)) return score + 1;
     return score;
   }, 0);

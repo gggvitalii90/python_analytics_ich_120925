@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "source": "Official documentation references: broad Python course ecosystem catalog",
+    "version": 1
+  },
+  "references": [
+    {
+      "id": "numpy-where",
+      "title": "numpy.where",
+      "package": "NumPy",
+      "terms": ["np.where", "where", "condition array", "условие numpy"],
+      "summary": "Official NumPy reference for conditional selection.",
+      "import": "import numpy as np",
+      "syntax": "result = np.where(values > 0, values, 0)",
+      "related": ["pandas.DataFrame.where", "if statement"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.where.html"
+    },
+    {
+      "id": "numpy-unique",
+      "title": "numpy.unique",
+      "package": "NumPy",
+      "terms": ["np.unique", "unique", "уникальные значения"],
+      "summary": "Official NumPy reference for unique values.",
+      "import": "import numpy as np",
+      "syntax": "values = np.unique(arr)",
+      "related": ["pandas.Series.unique", "pandas.Series.value_counts"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.unique.html"
+    },
+    {
+      "id": "numpy-concatenate",
+      "title": "numpy.concatenate",
+      "package": "NumPy",
+      "terms": ["np.concatenate", "concatenate", "stack arrays", "объединить массивы"],
+      "summary": "Official NumPy reference for joining arrays.",
+      "import": "import numpy as np",
+      "syntax": "combined = np.concatenate([a, b])",
+      "related": ["numpy.vstack", "pandas.concat"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html"
+    },
+    {
+      "id": "numpy-linalg",
+      "title": "numpy.linalg",
+      "package": "NumPy",
+      "terms": ["np.linalg", "linear algebra", "matrix", "матрица"],
+      "summary": "Official NumPy reference for linear algebra routines.",
+      "import": "import numpy as np",
+      "syntax": "solution = np.linalg.solve(A, b)\nnorm = np.linalg.norm(vector)",
+      "related": ["numpy.array", "scipy.linalg"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/routines.linalg.html"
+    },
+    {
+      "id": "pandas-loc",
+      "title": "pandas.DataFrame.loc",
+      "package": "pandas",
+      "terms": ["loc", "df.loc", "label selection", "выбор по метке"],
+      "summary": "Official pandas reference for label-based indexing.",
+      "import": "import pandas as pd",
+      "syntax": "rows = df.loc[df[\"age\"] >= 18, [\"name\", \"age\"]]",
+      "related": ["pandas.DataFrame.iloc", "pandas.DataFrame.query"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html"
+    },
+    {
+      "id": "pandas-iloc",
+      "title": "pandas.DataFrame.iloc",
+      "package": "pandas",
+      "terms": ["iloc", "df.iloc", "position selection", "выбор по индексу"],
+      "summary": "Official pandas reference for integer position based indexing.",
+      "import": "import pandas as pd",
+      "syntax": "first_rows = df.iloc[:5, :3]",
+      "related": ["pandas.DataFrame.loc", "pandas.DataFrame.head"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html"
+    },
+    {
+      "id": "pandas-merge",
+      "title": "pandas.merge",
+      "package": "pandas",
+      "terms": ["merge", "pd.merge", "join dataframe", "объединить dataframe"],
+      "summary": "Official pandas reference for database-style joins.",
+      "import": "import pandas as pd",
+      "syntax": "merged = pd.merge(left, right, on=\"id\", how=\"left\")",
+      "related": ["pandas.concat", "SQL JOIN"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.merge.html"
+    },
+    {
+      "id": "pandas-concat",
+      "title": "pandas.concat",
+      "package": "pandas",
+      "terms": ["concat", "pd.concat", "append dataframe", "склеить dataframe"],
+      "summary": "Official pandas reference for concatenating objects.",
+      "import": "import pandas as pd",
+      "syntax": "combined = pd.concat([df1, df2], ignore_index=True)",
+      "related": ["pandas.merge", "numpy.concatenate"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html"
+    },
+    {
+      "id": "pandas-groupby",
+      "title": "pandas.DataFrame.groupby",
+      "package": "pandas",
+      "terms": ["groupby", "group by", "aggregation", "группировка"],
+      "summary": "Official pandas reference for grouping rows.",
+      "import": "import pandas as pd",
+      "syntax": "summary = df.groupby(\"city\")[\"sales\"].sum().reset_index()",
+      "related": ["pandas.DataFrame.agg", "SQL GROUP BY"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html"
+    },
+    {
+      "id": "pandas-rolling",
+      "title": "pandas.DataFrame.rolling",
+      "package": "pandas",
+      "terms": ["rolling", "moving average", "window", "скользящее окно"],
+      "summary": "Official pandas reference for rolling window calculations.",
+      "import": "import pandas as pd",
+      "syntax": "df[\"ma7\"] = df[\"sales\"].rolling(window=7).mean()",
+      "related": ["pandas.DataFrame.expanding", "pandas.DataFrame.ewm"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rolling.html"
+    },
+    {
+      "id": "pandas-pivot-table",
+      "title": "pandas.pivot_table",
+      "package": "pandas",
+      "terms": ["pivot_table", "pivot table", "сводная таблица"],
+      "summary": "Official pandas reference for spreadsheet-style pivot tables.",
+      "import": "import pandas as pd",
+      "syntax": "table = pd.pivot_table(df, values=\"sales\", index=\"city\", columns=\"month\", aggfunc=\"sum\")",
+      "related": ["pandas.DataFrame.pivot", "pandas.melt"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.pivot_table.html"
+    },
+    {
+      "id": "pandas-melt",
+      "title": "pandas.melt",
+      "package": "pandas",
+      "terms": ["melt", "wide to long", "long format", "из широкого в длинный"],
+      "summary": "Official pandas reference for unpivoting data.",
+      "import": "import pandas as pd",
+      "syntax": "long_df = pd.melt(df, id_vars=\"id\", var_name=\"month\", value_name=\"sales\")",
+      "related": ["pandas.pivot_table", "wide to long"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html"
+    },
+    {
+      "id": "pandas-get-dummies",
+      "title": "pandas.get_dummies",
+      "package": "pandas",
+      "terms": ["get_dummies", "dummy variables", "one hot pandas", "категории в числа"],
+      "summary": "Official pandas reference for converting categorical variables to dummy indicators.",
+      "import": "import pandas as pd",
+      "syntax": "encoded = pd.get_dummies(df, columns=[\"category\"])",
+      "related": ["OneHotEncoder", "categorical encoding"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.get_dummies.html"
+    },
+    {
+      "id": "matplotlib-xlabel-ylabel",
+      "title": "matplotlib labels",
+      "package": "Matplotlib",
+      "terms": ["xlabel", "ylabel", "title", "legend", "grid", "подписи графика"],
+      "summary": "Official Matplotlib pyplot reference for plot labels and helpers.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "plt.title(\"Sales\")\nplt.xlabel(\"Month\")\nplt.ylabel(\"Revenue\")\nplt.legend()\nplt.grid(True)",
+      "related": ["matplotlib.pyplot.plot", "matplotlib.pyplot.figure"],
+      "docsUrl": "https://matplotlib.org/stable/api/pyplot_summary.html"
+    },
+    {
+      "id": "plotly-express-histogram",
+      "title": "plotly.express.histogram",
+      "package": "Plotly",
+      "terms": ["px.histogram", "plotly histogram", "interactive histogram"],
+      "summary": "Official Plotly Express reference for histograms.",
+      "import": "import plotly.express as px",
+      "syntax": "fig = px.histogram(df, x=\"age\", nbins=30)\nfig.show()",
+      "related": ["matplotlib.pyplot.hist", "seaborn.histplot"],
+      "docsUrl": "https://plotly.com/python-api-reference/generated/plotly.express.histogram.html"
+    },
+    {
+      "id": "plotly-express-bar",
+      "title": "plotly.express.bar",
+      "package": "Plotly",
+      "terms": ["px.bar", "plotly bar", "interactive bar"],
+      "summary": "Official Plotly Express reference for bar charts.",
+      "import": "import plotly.express as px",
+      "syntax": "fig = px.bar(df, x=\"city\", y=\"sales\")\nfig.show()",
+      "related": ["matplotlib.pyplot.bar", "seaborn.barplot"],
+      "docsUrl": "https://plotly.com/python-api-reference/generated/plotly.express.bar.html"
+    },
+    {
+      "id": "scipy-stats",
+      "title": "scipy.stats",
+      "package": "SciPy",
+      "terms": ["scipy.stats", "ttest", "pearsonr", "normal distribution", "статистика"],
+      "summary": "Official SciPy reference for statistical functions.",
+      "import": "from scipy import stats",
+      "syntax": "stat, p_value = stats.ttest_ind(group_a, group_b)\nr, p = stats.pearsonr(x, y)",
+      "related": ["statistics", "numpy.random"],
+      "docsUrl": "https://docs.scipy.org/doc/scipy/reference/stats.html"
+    },
+    {
+      "id": "bs4-beautifulsoup",
+      "title": "BeautifulSoup",
+      "package": "Beautiful Soup",
+      "terms": ["BeautifulSoup", "bs4", "html parsing", "парсинг html"],
+      "summary": "Official Beautiful Soup documentation for parsing HTML and XML.",
+      "import": "from bs4 import BeautifulSoup",
+      "syntax": "soup = BeautifulSoup(html, \"html.parser\")\ntitles = [tag.text for tag in soup.select(\"h2\")]",
+      "related": ["requests", "pandas.read_html"],
+      "docsUrl": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
+    },
+    {
+      "id": "pandas-read-html",
+      "title": "pandas.read_html",
+      "package": "pandas",
+      "terms": ["read_html", "html table", "таблица с сайта"],
+      "summary": "Official pandas reference for reading HTML tables.",
+      "import": "import pandas as pd",
+      "syntax": "tables = pd.read_html(url)\nfirst_table = tables[0]",
+      "related": ["BeautifulSoup", "requests"],
+      "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_html.html"
+    },
+    {
+      "id": "joblib-dump-load",
+      "title": "joblib.dump and joblib.load",
+      "package": "joblib",
+      "terms": ["joblib", "dump model", "load model", "save model"],
+      "summary": "Official joblib documentation for saving and loading Python objects.",
+      "import": "import joblib",
+      "syntax": "joblib.dump(model, \"model.joblib\")\nmodel = joblib.load(\"model.joblib\")",
+      "related": ["pickle", "scikit-learn"],
+      "docsUrl": "https://joblib.readthedocs.io/en/stable/persistence.html"
+    }
+  ]
+}
