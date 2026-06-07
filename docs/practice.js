@@ -32,8 +32,20 @@ async function loadPyodide() {
     statusEl.className = "pyodide-status loading";
   }
 
+  const PYODIDE_CDN = "https://cdn.jsdelivr.net/pyodide/v0.27.5/full/";
+
   try {
-    pyodide = await loadPyodideLib({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.27.5/full/" });
+    if (typeof window.loadPyodide !== "function") {
+      await new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = PYODIDE_CDN + "pyodide.js";
+        s.onload = resolve;
+        s.onerror = () => reject(new Error("Не удалось загрузить pyodide.js"));
+        document.head.appendChild(s);
+      });
+    }
+
+    pyodide = await window.loadPyodide({ indexURL: PYODIDE_CDN });
     await pyodide.loadPackagesFromImports("import micropip");
 
     pyodideReady = true;
