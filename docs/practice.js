@@ -22,7 +22,7 @@ const levelLabels = {
   "средний": "Средний",
 };
 
-async function loadPyodide() {
+async function initPyodide() {
   if (pyodideReady || pyodideLoading) return;
   pyodideLoading = true;
 
@@ -81,7 +81,7 @@ async function runCode(taskId) {
   if (!pyodideReady) {
     outputEl.textContent = "Python ещё загружается, подождите...";
     outputEl.className = "task-output output-error";
-    await loadPyodide();
+    await initPyodide();
     return;
   }
 
@@ -338,7 +338,7 @@ async function initPractice() {
 
   buildFilters();
   renderTasks();
-  loadPyodide();
+  initPyodide();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
