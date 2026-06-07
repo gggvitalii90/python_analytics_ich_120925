@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практика — Python Analytics ICH</title>
+    <meta name="description" content="75 задач по Python, Pandas, NumPy, визуализации и ООП. Решай прямо в браузере без установки." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="practice-header">
+      <div class="container practice-header-inner">
+        <a class="back-link" href="index.html">← Архив ноутбуков</a>
+        <div class="practice-header-title">
+          <p class="tag">Python Analytics ICH</p>
+          <h1>Практика онлайн</h1>
+          <p class="subtitle">Вспомни тему, реши задачу прямо в браузере. Python загружается один раз — потом всё работает моментально.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="pyodide-status" class="pyodide-status">
+        Python не загружен. Нажми на задачу чтобы начать.
+      </div>
+
+      <section class="practice-filters-sticky">
+        <div class="filter-row">
+          <span class="filter-label">Модуль:</span>
+          <div id="topic-filters" class="filter-btns"></div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">Уровень:</span>
+          <div id="level-filters" class="filter-btns"></div>
+        </div>
+      </section>
+
+      <p class="practice-count-line"><span id="practice-count"></span></p>
+      <div id="practice-list" class="practice-list"></div>
+    </main>
+
+    <script src="practice.js"></script>
+    <script>
+      initPractice();
+    </script>
+  </body>
+</html>

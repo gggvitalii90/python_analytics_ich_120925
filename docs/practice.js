@@ -359,11 +359,4 @@ async function initPractice() {
   initPyodide();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const practiceTab = document.querySelector('[data-tab="practice"]');
-  if (practiceTab) {
-    practiceTab.addEventListener("click", () => {
-      if (allTasks.length === 0) initPractice();
-    });
-  }
-});
+// initPractice() is called directly from practice.html on load

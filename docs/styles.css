@@ -681,42 +681,112 @@ h1 {
   font-size: 0.9rem;
 }
 
-/* ===== MAIN TABS (Archive / Practice) ===== */
-.main-tabs {
+/* ===== COURSE SWITCHER (sticky primary nav on index page) ===== */
+.course-switcher-sticky {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.6rem;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
   margin: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 50;
   padding: 0.6rem 0;
-  background: linear-gradient(to bottom, var(--bg) 80%, transparent 100%);
+  background: linear-gradient(to bottom, var(--bg) 85%, transparent 100%);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
-.sticky-search-input {
-  width: 100%;
-  padding: 0.55rem 0.9rem;
-  border: 1.5px solid var(--stroke);
-  border-radius: 10px;
-  font: inherit;
-  font-size: 0.9rem;
-  background: #fff;
-  color: var(--ink);
-  outline: none;
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+/* ===== PRACTICE CTA BANNER ===== */
+.practice-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.75rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #106fa3 0%, #0f8b8d 100%);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 4px 16px #0f8b8d28;
 }
 
-.sticky-search-input:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px #0f8b8d1a;
+.practice-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #0f8b8d38;
 }
 
-.sticky-search-input::placeholder {
-  color: #9bb0b8;
+.practice-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.practice-cta-text strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.practice-cta-text span {
+  font-size: 0.86rem;
+  opacity: 0.88;
+}
+
+.practice-cta-arrow {
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+/* ===== PRACTICE PAGE HEADER ===== */
+.practice-header {
+  padding: 1.8rem 0 2.2rem;
+  background:
+    radial-gradient(650px 260px at 22% 18%, #42a5d644 0%, transparent 62%),
+    radial-gradient(520px 240px at 78% 25%, #75d2a944 0%, transparent 58%),
+    linear-gradient(120deg, #176aa8 0%, #178d94 50%, #1da06d 100%);
+  color: #fff;
+}
+
+.practice-header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.back-link {
+  color: #ffffffbb;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  width: fit-content;
+  transition: color 140ms ease;
+}
+
+.back-link:hover {
+  color: #fff;
+}
+
+.practice-header-title h1 {
+  margin: 0.4rem 0 0.3rem;
+}
+
+/* ===== PRACTICE FILTERS STICKY ===== */
+.practice-filters-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(to bottom, var(--bg) 85%, transparent 100%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .main-tab {

@@ -8,7 +8,7 @@ const searchEl = document.getElementById("search");
 const rowTpl = document.getElementById("row-template");
 const indexStatusEl = document.getElementById("index-status");
 const assistantEl = document.getElementById("search-assistant");
-const courseTabs = [...document.querySelectorAll(".course-tab")];
+const courseTabs = [...document.querySelectorAll("[data-course]")];
 const analyticsCountEl = document.getElementById("analytics-count");
 const fundamentalCountEl = document.getElementById("fundamental-count");
 

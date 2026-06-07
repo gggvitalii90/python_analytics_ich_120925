@@ -75,66 +75,32 @@
         <div id="search-assistant" class="search-assistant" hidden></div>
       </section>
 
-      <section class="main-tabs" aria-label="Разделы">
-        <button class="main-tab is-active" type="button" data-tab="archive">
-          <span>Архив ноутбуков</span>
+      <a class="practice-cta" href="practice.html">
+        <div class="practice-cta-text">
+          <strong>Попрактикуйся в задачах онлайн</strong>
+          <span>75 задач по Python, Pandas, NumPy и ООП — решай прямо в браузере без установки</span>
+        </div>
+        <span class="practice-cta-arrow">→</span>
+      </a>
+
+      <section class="course-switcher-sticky" aria-label="Разделы курсов">
+        <button class="main-tab is-active" type="button" data-course="analytics">
+          <span>Python для аналитиков</span>
+          <strong class="tab-badge" id="analytics-count">0</strong>
         </button>
-        <input class="sticky-search-input" id="search-sticky" type="search" placeholder="Поиск по ноутбукам..." autocomplete="off" />
-        <button class="main-tab" type="button" data-tab="practice">
-          <span>Практика</span>
-          <strong class="tab-badge" id="practice-tab-badge">75</strong>
+        <button class="main-tab" type="button" data-course="fundamental">
+          <span>Фундаментальный Python</span>
+          <strong class="tab-badge" id="fundamental-count">0</strong>
         </button>
       </section>
 
-      <!-- === ARCHIVE TAB === -->
-      <div id="tab-archive" class="tab-content">
-        <section class="course-switcher" aria-label="Разделы курсов">
-          <button class="course-tab is-active" type="button" data-course="analytics">
-            <span>Python для аналитиков</span>
-            <strong id="analytics-count">0</strong>
-          </button>
-          <button class="course-tab" type="button" data-course="fundamental">
-            <span>Фундаментальный Python</span>
-            <strong id="fundamental-count">0</strong>
-          </button>
-        </section>
-
-        <section class="panel">
-          <div class="panel-head">
-            <h2>Ноутбуки курса по разделам</h2>
-            <p id="stats">Загрузка списка...</p>
-          </div>
-          <div id="notebook-list" class="folder-list"></div>
-        </section>
-      </div>
-
-      <!-- === PRACTICE TAB === -->
-      <div id="tab-practice" class="tab-content" hidden>
-        <section class="panel practice-panel">
-          <div class="panel-head">
-            <h2>Практика — задачи на основе архива</h2>
-            <p>Вспомни тему, реши задачу прямо в браузере. Python загружается один раз — потом всё работает моментально.</p>
-          </div>
-
-          <div id="pyodide-status" class="pyodide-status">
-            Python не загружен. Нажми на задачу чтобы начать.
-          </div>
-
-          <div class="practice-filters">
-            <div class="filter-row">
-              <span class="filter-label">Тема:</span>
-              <div id="topic-filters" class="filter-btns"></div>
-            </div>
-            <div class="filter-row">
-              <span class="filter-label">Уровень:</span>
-              <div id="level-filters" class="filter-btns"></div>
-            </div>
-          </div>
-
-          <p class="practice-count-line"><span id="practice-count"></span></p>
-          <div id="practice-list" class="practice-list"></div>
-        </section>
-      </div>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Ноутбуки курса по разделам</h2>
+          <p id="stats">Загрузка списка...</p>
+        </div>
+        <div id="notebook-list" class="folder-list"></div>
+      </section>
     </main>
 
     <template id="row-template">
@@ -152,33 +118,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.0/dist/umd/index.min.js"></script>
     <script src="portal.js"></script>
-    <script src="practice.js"></script>
-    <script>
-      // Main tab switching
-      const mainTabs = [...document.querySelectorAll('.main-tab')];
-      mainTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          const target = tab.dataset.tab;
-          mainTabs.forEach(t => t.classList.toggle('is-active', t.dataset.tab === target));
-          document.querySelectorAll('.tab-content').forEach(el => {
-            el.hidden = el.id !== `tab-${target}`;
-          });
-        });
-      });
-
-      // Sync sticky search with main search input
-      const stickySearch = document.getElementById('search-sticky');
-      const mainSearch = document.getElementById('search');
-      if (stickySearch && mainSearch) {
-        stickySearch.addEventListener('input', () => {
-          mainSearch.value = stickySearch.value;
-          mainSearch.dispatchEvent(new Event('input'));
-        });
-        mainSearch.addEventListener('input', () => {
-          if (stickySearch.value !== mainSearch.value)
-            stickySearch.value = mainSearch.value;
-        });
-      }
-    </script>
   </body>
 </html>
