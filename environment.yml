@@ -2,7 +2,7 @@ name: python-analytics-ich
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+  - python=3.13
   - jupyterlab
   - notebook
   - numpy

@@ -14,6 +14,7 @@ const fundamentalCountEl = document.getElementById("fundamental-count");
 
 let allNotebooks = [];
 let referenceCards = [];
+let miniSearch = null;
 let activeCourse = "analytics";
 
 const referenceIndexFiles = [
@@ -197,6 +198,43 @@ const bestReferences = (terms) =>
     .slice(0, 4)
     .map((item) => item.card);
 
+const initMiniSearch = (notebooks) => {
+  if (typeof MiniSearch === "undefined") return;
+  miniSearch = new MiniSearch({
+    fields: ["name", "searchText"],
+    storeFields: ["path"],
+    idField: "path",
+    tokenize: (text) =>
+      text
+        .toLowerCase()
+        .split(/[\s_\-./()\[\]{},;'"!?@#$%^&*=+<>|~`\\]+/)
+        .filter((t) => t.length > 0),
+    searchOptions: {
+      boost: { name: 5 },
+      fuzzy: 0.2,
+      prefix: true,
+      combineWith: "OR",
+    },
+  });
+  miniSearch.addAll(notebooks);
+};
+
+const searchNotebooks = (query, pool) => {
+  if (!query.trim()) return pool;
+  const terms = queryTerms(query);
+
+  if (miniSearch) {
+    const expanded = terms.join(" ");
+    const results = miniSearch.search(expanded);
+    const scoreMap = new Map(results.map((r) => [r.id, r.score]));
+    return pool
+      .filter((n) => scoreMap.has(n.path))
+      .sort((a, b) => (scoreMap.get(b.path) || 0) - (scoreMap.get(a.path) || 0));
+  }
+
+  return pool.filter((item) => matchesQuery(item, terms));
+};
+
 const referenceUrls = (path) => [
   `${path}?v=${Date.now()}`,
   `https://${owner}.github.io/${repo}/${path}?v=${Date.now()}`,
@@ -303,6 +341,27 @@ const renderAssistant = (query, filtered, terms) => {
     empty.className = "assistant-note";
     empty.textContent = `По запросу "${query}" нет справочной карточки. Ниже остаются файлы курса, если в них найдено совпадение.`;
     assistantEl.appendChild(empty);
+
+    const extSearch = document.createElement("div");
+    extSearch.className = "external-search";
+    const label = document.createElement("span");
+    label.textContent = "Поискать в официальной документации:";
+    extSearch.appendChild(label);
+    [
+      { text: "Python docs ↗", url: `https://docs.python.org/3/search.html?q=${encodeURIComponent(query)}` },
+      { text: "Pandas docs ↗", url: `https://pandas.pydata.org/docs/search.html?q=${encodeURIComponent(query)}` },
+      { text: "NumPy docs ↗", url: `https://numpy.org/doc/stable/search.html?q=${encodeURIComponent(query)}` },
+      { text: "Stack Overflow ↗", url: `https://stackoverflow.com/search?q=python+${encodeURIComponent(query)}` },
+    ].forEach(({ text, url }) => {
+      const a = document.createElement("a");
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.textContent = text;
+      a.className = "external-link";
+      extSearch.appendChild(a);
+    });
+    assistantEl.appendChild(extSearch);
   }
 };
 
@@ -317,6 +376,97 @@ const createRow = (entry) => {
   frag.querySelector('[data-action="raw"]').href = githubRawUrl(entry.path);
 
   return frag;
+};
+
+const createCopyButton = (text) => {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "copy-btn";
+  btn.textContent = "Копировать";
+  btn.addEventListener("click", () => {
+    const copy = (t) => {
+      btn.textContent = "Скопировано ✓";
+      setTimeout(() => { btn.textContent = "Копировать"; }, 2000);
+    };
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(copy).catch(() => {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        copy();
+      });
+    } else {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      copy();
+    }
+  });
+  return btn;
+};
+
+const createSearchRow = (entry, terms) => {
+  const frag = rowTpl.content.cloneNode(true);
+  frag.querySelector(".nb-name").textContent = entry.name;
+  frag.querySelector(".nb-path").textContent = entry.path;
+  frag.querySelector('[data-action="view"]').href = githubViewUrl(entry.path);
+  frag.querySelector('[data-action="colab"]').href = colabUrl(entry.path);
+  frag.querySelector('[data-action="binder"]').href = binderUrl(entry.path);
+  frag.querySelector('[data-action="raw"]').href = githubRawUrl(entry.path);
+
+  const article = frag.querySelector(".nb-row");
+  if (!article) return frag;
+
+  const cells = matchedCells(entry, terms);
+  if (cells.length > 0) {
+    const snippets = document.createElement("div");
+    snippets.className = "nb-snippets";
+    cells.forEach((cell) => {
+      const snip = document.createElement("div");
+      snip.className = "nb-snippet";
+
+      const header = document.createElement("div");
+      header.className = "nb-snippet-header";
+
+      const meta = document.createElement("span");
+      meta.className = "nb-snippet-meta";
+      meta.textContent = cell.type === "code" ? "Код" : "Текст";
+
+      header.appendChild(meta);
+      header.appendChild(createCopyButton(cell.text));
+
+      const p = document.createElement("p");
+      p.textContent = cell.text;
+
+      snip.appendChild(header);
+      snip.appendChild(p);
+      snippets.appendChild(snip);
+    });
+    article.appendChild(snippets);
+  }
+
+  return frag;
+};
+
+const renderSearchResults = (items, terms) => {
+  listEl.innerHTML = "";
+  if (items.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "search-empty";
+    empty.textContent = "По запросу ничего не найдено в архиве.";
+    listEl.appendChild(empty);
+    return;
+  }
+  const rows = document.createElement("div");
+  rows.className = "nb-rows";
+  items.slice(0, 60).forEach((item) => rows.appendChild(createSearchRow(item, terms)));
+  listEl.appendChild(rows);
 };
 
 const createSection = (categoryKey, items, terms) => {
@@ -418,14 +568,16 @@ const setStats = (count, filteredCount = count, terms = []) => {
 
 const applySearch = () => {
   const query = searchEl.value;
-  const terms = queryTerms(searchEl.value);
-  const pool =
-    terms.length > 0
-      ? allNotebooks
-      : allNotebooks.filter((item) => item.course === activeCourse);
-  const filtered = pool.filter((item) => matchesQuery(item, terms));
+  const terms = queryTerms(query);
+  const isSearch = query.trim().length > 0;
+  const pool = isSearch ? allNotebooks : allNotebooks.filter((item) => item.course === activeCourse);
+  const filtered = isSearch ? searchNotebooks(query, allNotebooks) : pool;
   renderAssistant(query, filtered, terms);
-  render(filtered, terms);
+  if (isSearch) {
+    renderSearchResults(filtered, terms);
+  } else {
+    render(filtered, terms);
+  }
   setStats(pool.length, filtered.length, terms);
 };
 
@@ -521,6 +673,7 @@ const loadNotebooks = async () => {
     }
 
     allNotebooks = allNotebooks.sort(sortNotebooks);
+    initMiniSearch(allNotebooks);
     updateCourseCounts();
     render(allNotebooks.filter((item) => item.course === activeCourse));
     setStats(allNotebooks.filter((item) => item.course === activeCourse).length);

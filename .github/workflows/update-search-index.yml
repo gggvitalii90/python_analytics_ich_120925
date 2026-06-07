@@ -30,6 +30,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install test dependencies
+        run: pip install pytest
+
+      - name: Run tests
+        run: pytest tests/ -v
+
       - name: Build search index
         run: python scripts/build_search_index.py --root . --out docs/search-index.json
 

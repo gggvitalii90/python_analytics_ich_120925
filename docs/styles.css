@@ -604,6 +604,77 @@ h1 {
   font-size: 0.84rem;
   line-height: 1.38;
   word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.nb-snippet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.55rem;
+  border: 1px solid #b8e3e3;
+  border-radius: 6px;
+  background: #e6f5f5;
+  color: #0c6668;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.copy-btn:hover {
+  background: #d0edec;
+  border-color: #8ecece;
+}
+
+.external-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.2rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d8e6e9;
+  border-radius: 10px;
+  background: #f5fbfb;
+}
+
+.external-search span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.external-link {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid #c2dfe4;
+  border-radius: 8px;
+  background: #fff;
+  color: #0e6758;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.external-link:hover {
+  background: #e6f5f5;
+  border-color: #8ecece;
+}
+
+.search-empty {
+  padding: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .error-card {
