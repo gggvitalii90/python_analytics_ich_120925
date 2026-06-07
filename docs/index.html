@@ -79,9 +79,10 @@
         <button class="main-tab is-active" type="button" data-tab="archive">
           <span>Архив ноутбуков</span>
         </button>
+        <input class="sticky-search-input" id="search-sticky" type="search" placeholder="Поиск по ноутбукам..." autocomplete="off" />
         <button class="main-tab" type="button" data-tab="practice">
           <span>Практика</span>
-          <strong class="tab-badge">15</strong>
+          <strong class="tab-badge" id="practice-tab-badge">15</strong>
         </button>
       </section>
 
@@ -164,6 +165,20 @@
           });
         });
       });
+
+      // Sync sticky search with main search input
+      const stickySearch = document.getElementById('search-sticky');
+      const mainSearch = document.getElementById('search');
+      if (stickySearch && mainSearch) {
+        stickySearch.addEventListener('input', () => {
+          mainSearch.value = stickySearch.value;
+          mainSearch.dispatchEvent(new Event('input'));
+        });
+        mainSearch.addEventListener('input', () => {
+          if (stickySearch.value !== mainSearch.value)
+            stickySearch.value = mainSearch.value;
+        });
+      }
     </script>
   </body>
 </html>

@@ -267,54 +267,58 @@ h1 {
 }
 
 .course-switcher {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.25rem 0 1rem;
+  padding: 0.25rem;
+  background: #f0f4f5;
+  border-radius: 10px;
+  width: fit-content;
 }
 
 .course-tab {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 58px;
-  padding: 0.75rem 0.9rem;
-  border: 1px solid var(--stroke);
-  border-radius: 12px;
-  background: #ffffffd8;
-  color: #19576b;
+  gap: 0.45rem;
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
   cursor: pointer;
   font: inherit;
-  font-weight: 800;
-  text-align: left;
-  box-shadow: 0 8px 18px #10202b0d;
-  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 140ms ease, color 140ms ease;
+  white-space: nowrap;
 }
 
 .course-tab:hover {
-  transform: translateY(-1px);
-  border-color: #9bc6cc;
+  background: #ffffff;
+  color: var(--ink);
 }
 
 .course-tab.is-active {
-  border-color: #0f8b8d;
-  background: linear-gradient(135deg, #106fa3 0%, #0f8b8d 100%);
-  color: #fff;
+  background: #fff;
+  color: #0f6e80;
+  box-shadow: 0 1px 4px #0f2a3414;
 }
 
 .course-tab strong {
-  min-width: 2.1rem;
-  padding: 0.22rem 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.6rem;
+  padding: 0.1rem 0.35rem;
   border-radius: 999px;
-  background: #eaf6f5;
+  background: #e2eff1;
   color: #0d5867;
-  text-align: center;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
 }
 
 .course-tab.is-active strong {
-  background: #ffffff2e;
-  color: #fff;
+  background: #d0eef1;
+  color: #0b4f5c;
 }
 
 .search-assistant {
@@ -680,17 +684,39 @@ h1 {
 /* ===== MAIN TABS (Archive / Practice) ===== */
 .main-tabs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
   margin: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 50;
   padding: 0.6rem 0;
-  background:
-    linear-gradient(to bottom, var(--bg) 80%, transparent 100%);
+  background: linear-gradient(to bottom, var(--bg) 80%, transparent 100%);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+
+.sticky-search-input {
+  width: 100%;
+  padding: 0.55rem 0.9rem;
+  border: 1.5px solid var(--stroke);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.9rem;
+  background: #fff;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.sticky-search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #0f8b8d1a;
+}
+
+.sticky-search-input::placeholder {
+  color: #9bb0b8;
 }
 
 .main-tab {
@@ -1054,6 +1080,27 @@ h1 {
   color: #0d5867;
   font-size: 0.76rem;
   font-weight: 700;
+}
+
+.load-more-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: 1.5px dashed var(--stroke);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease;
+}
+
+.load-more-btn:hover {
+  background: #f0fafa;
+  border-color: var(--accent);
 }
 
 .practice-empty {

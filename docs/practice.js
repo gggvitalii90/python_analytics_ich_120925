@@ -266,6 +266,9 @@ function getFilteredTasks() {
   });
 }
 
+const PAGE_SIZE = 6;
+let visibleCount = PAGE_SIZE;
+
 function renderTasks() {
   const listEl = document.getElementById("practice-list");
   const countEl = document.getElementById("practice-count");
@@ -281,11 +284,25 @@ function renderTasks() {
     return;
   }
 
-  tasks.forEach((task) => listEl.appendChild(createTaskCard(task)));
+  const visible = tasks.slice(0, visibleCount);
+  visible.forEach((task) => listEl.appendChild(createTaskCard(task)));
+
+  if (visibleCount < tasks.length) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "load-more-btn";
+    btn.textContent = `Показать ещё (${tasks.length - visibleCount} осталось)`;
+    btn.addEventListener("click", () => {
+      visibleCount += PAGE_SIZE;
+      renderTasks();
+    });
+    listEl.appendChild(btn);
+  }
 }
 
 function setTopicFilter(topic) {
   activeTopic = topic;
+  visibleCount = PAGE_SIZE;
   document.querySelectorAll(".topic-btn").forEach((btn) => {
     btn.classList.toggle("is-active", btn.dataset.topic === topic);
   });
@@ -294,6 +311,7 @@ function setTopicFilter(topic) {
 
 function setLevelFilter(level) {
   activeLevel = level;
+  visibleCount = PAGE_SIZE;
   document.querySelectorAll(".level-btn").forEach((btn) => {
     btn.classList.toggle("is-active", btn.dataset.level === level);
   });
