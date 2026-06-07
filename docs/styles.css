@@ -677,6 +677,393 @@ h1 {
   font-size: 0.9rem;
 }
 
+/* ===== MAIN TABS (Archive / Practice) ===== */
+.main-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.main-tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: #ffffffd8;
+  color: #19576b;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: left;
+  box-shadow: 0 8px 18px #10202b0d;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.main-tab:hover {
+  transform: translateY(-1px);
+  border-color: #9bc6cc;
+}
+
+.main-tab.is-active {
+  border-color: #0f8b8d;
+  background: linear-gradient(135deg, #106fa3 0%, #0f8b8d 100%);
+  color: #fff;
+}
+
+.tab-badge {
+  min-width: 2rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  background: #eaf6f5;
+  color: #0d5867;
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+.main-tab.is-active .tab-badge {
+  background: #ffffff2e;
+  color: #fff;
+}
+
+/* ===== PRACTICE TAB ===== */
+.practice-panel {
+  padding-bottom: 1.5rem;
+}
+
+.pyodide-status {
+  margin: 0.5rem 0 0.85rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  background: #f5f8fa;
+  color: var(--muted);
+  border: 1px solid var(--stroke);
+}
+
+.pyodide-status.loading {
+  background: #fffbeb;
+  border-color: #fcd34d;
+  color: #92400e;
+}
+
+.pyodide-status.ready {
+  background: #f0fdf4;
+  border-color: #86efac;
+  color: #166534;
+}
+
+.pyodide-status.error {
+  background: #fef2f2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}
+
+.practice-filters {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.filter-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 4.5rem;
+}
+
+.filter-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.topic-btn,
+.level-btn {
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: #fff;
+  color: #19576b;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.topic-btn:hover,
+.level-btn:hover {
+  border-color: #9bc6cc;
+  background: #eef9f9;
+}
+
+.topic-btn.is-active,
+.level-btn.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.practice-count-line {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.practice-list {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.practice-card {
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  background: #fff;
+  padding: 1rem 1.1rem 0.9rem;
+  animation: fadeUp 0.3s ease both;
+}
+
+.practice-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.practice-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.practice-num {
+  display: inline-block;
+  min-width: 1.8rem;
+  padding: 0.15rem 0.38rem;
+  border-radius: 6px;
+  background: #e8f5f5;
+  color: #0d5867;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.practice-title {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+}
+
+.practice-badges {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.practice-badge {
+  padding: 0.18rem 0.52rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.badge-topic {
+  background: #f0f6f8;
+  color: #19576b;
+}
+
+.badge-level.badge-базовый {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-level.badge-средний {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.practice-desc {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.hint-btn {
+  display: inline-block;
+  padding: 0.22rem 0.65rem;
+  margin-bottom: 0.5rem;
+  border: 1px dashed #c2dfe4;
+  border-radius: 8px;
+  background: none;
+  color: #0e6758;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.83rem;
+  font-weight: 700;
+}
+
+.hint-btn:hover {
+  background: #f0fdf9;
+}
+
+.practice-hint {
+  margin: 0 0 0.65rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d1fae5;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.editor-wrap {
+  margin-bottom: 0.5rem;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 160px;
+  padding: 0.75rem;
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  background: #101820;
+  color: #eef7f8;
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 0.88rem;
+  line-height: 1.52;
+  resize: vertical;
+  outline: none;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  tab-size: 4;
+}
+
+.code-editor:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #0f8b8d21;
+}
+
+.editor-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.run-btn {
+  padding: 0.5rem 1.1rem;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #106fa3 0%, #0f8b8d 100%);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  transition: opacity 150ms ease;
+}
+
+.run-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.run-btn:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+.reset-btn {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--stroke);
+  border-radius: 9px;
+  background: #fff;
+  color: #4f636f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.reset-btn:hover {
+  border-color: #9bc6cc;
+  background: #f5fbfb;
+}
+
+.task-output {
+  min-height: 2.5rem;
+  margin: 0 0 0.65rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  background: #f8f8f4;
+  color: var(--ink);
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 0.86rem;
+  line-height: 1.48;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.task-output.output-ok {
+  border-color: #86efac;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.task-output.output-error {
+  border-color: #fca5a5;
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.practice-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.practice-tag {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid #d8e8ec;
+  border-radius: 999px;
+  background: #f5fbfb;
+  color: #0d5867;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.practice-empty {
+  padding: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .main-tabs {
+    grid-template-columns: 1fr;
+  }
+  .practice-card-header {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+}
+
 .error-card {
   border: 1px solid var(--stroke);
   border-radius: 12px;

@@ -29,6 +29,8 @@ const referenceIndexFiles = [
   "references/visualization-ml.json",
   "references/web-dash-api.json",
   "references/workflows-faq.json",
+  "references/python-oop.json",
+  "references/python-api-web.json",
   "reference-index.json",
 ];
 

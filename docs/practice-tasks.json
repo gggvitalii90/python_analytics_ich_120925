@@ -1,0 +1,245 @@
+[
+  {
+    "id": 1,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Числа и операции",
+    "description": "Вычисли площадь прямоугольника со сторонами 7 и 4. Результат выведи в формате: `Площадь: X`",
+    "hint": "Площадь = ширина * высота. Используй f-string: f'Площадь: {result}'",
+    "starter": "width = 7\nheight = 4\n\n# твой код здесь\n",
+    "expected_output": "Площадь: 28",
+    "tags": [
+      "int",
+      "print",
+      "f-string"
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Списки: сумма и максимум",
+    "description": "Дан список оценок. Найди сумму и максимальную оценку. Выведи каждую на отдельной строке.",
+    "hint": "Используй встроенные функции sum() и max(). print() на каждый результат.",
+    "starter": "grades = [78, 92, 65, 88, 71, 95, 83]\n\n# твой код здесь\n",
+    "expected_output": "572\n95",
+    "tags": [
+      "list",
+      "sum",
+      "max",
+      "print"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Словарь: частота слов",
+    "description": "Подсчитай сколько раз встречается каждое слово в списке. Выведи пары слово: количество.",
+    "hint": "Используй пустой словарь и цикл for. d[word] = d.get(word, 0) + 1",
+    "starter": "words = ['apple', 'banana', 'apple', 'cherry', 'banana', 'apple']\n\n# твой код здесь — создай словарь с количеством каждого слова\n",
+    "expected_output": "apple: 3\nbanana: 2\ncherry: 1",
+    "tags": [
+      "dict",
+      "for",
+      "get"
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "List comprehension",
+    "description": "Из списка чисел создай новый список только с чётными числами, возведёнными в квадрат. Используй list comprehension.",
+    "hint": "Синтаксис: [выражение for x in список if условие]. Чётное: x % 2 == 0",
+    "starter": "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n# создай список чётных чисел в квадрате\nresult = []\nprint(result)\n",
+    "expected_output": "[4, 16, 36, 64, 100]",
+    "tags": [
+      "list comprehension",
+      "for",
+      "if"
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "python-basics",
+    "level": "средний",
+    "title": "Функция с *args",
+    "description": "Напиши функцию `stats`, которая принимает любое количество чисел и возвращает их среднее (rounded до 2 знаков).",
+    "hint": "Используй *args. Среднее = sum(args) / len(args). round(x, 2)",
+    "starter": "def stats(*args):\n    # твой код здесь\n    pass\n\nprint(stats(10, 20, 30))       # 20.0\nprint(stats(1, 2, 3, 4, 5))   # 3.0\nprint(stats(7.5, 2.5, 10.0))  # 6.67\n",
+    "expected_output": "20.0\n3.0\n6.67",
+    "tags": [
+      "*args",
+      "def",
+      "sum",
+      "len",
+      "round"
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "pandas",
+    "level": "базовый",
+    "title": "Создание DataFrame",
+    "description": "Создай DataFrame из словаря с данными о продуктах. Выведи первые 3 строки и информацию о типах данных.",
+    "hint": "pd.DataFrame({'col': [...]}) . Используй .head(3) и .dtypes",
+    "starter": "import pandas as pd\n\ndata = {\n    'product': ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'],\n    'price': [1.2, 0.5, 3.8, 5.0, 2.1],\n    'stock': [100, 250, 80, 30, 60]\n}\n\n# создай df и выведи первые 3 строки\n",
+    "expected_output": "  product  price  stock\n0   Apple    1.2    100\n1  Banana    0.5    250\n2  Cherry    3.8     80",
+    "tags": [
+      "pd.DataFrame",
+      "head",
+      "dtypes"
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "pandas",
+    "level": "базовый",
+    "title": "Фильтрация DataFrame",
+    "description": "Отфильтруй товары, цена которых выше 2.0 и остаток больше 50. Выведи только колонки product и price.",
+    "hint": "df[(df['price'] > 2.0) & (df['stock'] > 50)][['product', 'price']]",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'product': ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'],\n    'price': [1.2, 0.5, 3.8, 5.0, 2.1],\n    'stock': [100, 250, 80, 30, 60]\n})\n\n# отфильтруй и выведи\n",
+    "expected_output": "  product  price\n2  Cherry    3.8\n4  Elderberry  2.1",
+    "tags": [
+      "filter",
+      "boolean mask",
+      "loc",
+      "iloc"
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "GroupBy: средние продажи по категории",
+    "description": "Сгруппируй данные по категории и найди среднюю цену и суммарные продажи для каждой категории. Отсортируй по убыванию суммы продаж.",
+    "hint": "df.groupby('category').agg({'price': 'mean', 'sales': 'sum'}).sort_values('sales', ascending=False)",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'product': ['A1','A2','B1','B2','B3','C1'],\n    'category': ['Alpha','Alpha','Beta','Beta','Beta','Gamma'],\n    'price': [10, 20, 15, 25, 5, 30],\n    'sales': [100, 150, 200, 80, 300, 50]\n})\n\n# группировка и агрегация\n",
+    "expected_output": "         price  sales\ncategory              \nBeta      15.0    580\nAlpha     15.0    250\nGamma     30.0     50",
+    "tags": [
+      "groupby",
+      "agg",
+      "sort_values",
+      "mean",
+      "sum"
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Обработка пропусков",
+    "description": "Проверь есть ли пропуски в DataFrame. Заполни пропуски в колонке 'score' средним значением, а в 'grade' — строкой 'N/A'.",
+    "hint": "df.isnull().sum() покажет пропуски. Для заполнения: df['col'].fillna(df['col'].mean())",
+    "starter": "import pandas as pd\nimport numpy as np\n\ndf = pd.DataFrame({\n    'name': ['Alice', 'Bob', 'Carol', 'Dave', 'Eve'],\n    'score': [85.0, np.nan, 92.0, np.nan, 78.0],\n    'grade': ['A', 'B', np.nan, np.nan, 'C']\n})\n\n# 1. Выведи количество пропусков по каждой колонке\n# 2. Заполни пропуски\n# 3. Выведи df\n",
+    "expected_output": "score    2\ngrade    2\ndtype: int64",
+    "tags": [
+      "fillna",
+      "dropna",
+      "isnull",
+      "mean",
+      "isna"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Строковые операции (str accessor)",
+    "description": "Очисти и преобразуй данные: переведи имена в нижний регистр, убери пробелы, и создай колонку 'domain' из email.",
+    "hint": "df['email'].str.lower().str.strip() . Для домена: df['email'].str.split('@').str[1]",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'name': [' Alice ', 'BOB', ' Carol', 'DAVE '],\n    'email': ['Alice@Gmail.com', 'bob@Yahoo.com', 'carol@Gmail.com', 'dave@Work.com']\n})\n\n# 1. name: нижний регистр + убери пробелы\n# 2. создай колонку 'domain' из email\nprint(df)\n",
+    "expected_output": "    name           email    domain\n0  alice  alice@gmail.com     gmail.com\n1    bob    bob@yahoo.com     yahoo.com\n2  carol  carol@gmail.com     gmail.com\n3   dave    dave@work.com      work.com",
+    "tags": [
+      "str accessor",
+      "str.lower",
+      "str.strip",
+      "str.split"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "numpy",
+    "level": "базовый",
+    "title": "NumPy: создание и операции",
+    "description": "Создай массив от 0 до 9, возведи каждый элемент в квадрат, выведи только элементы больше 20.",
+    "hint": "np.arange(10) создаст [0..9]. Операции поэлементные. Фильтрация: arr[arr > 20]",
+    "starter": "import numpy as np\n\n# 1. Создай массив [0, 1, 2, ..., 9]\narr = np.arange(10)\n\n# 2. Возведи в квадрат\n\n# 3. Выведи только элементы > 20\n",
+    "expected_output": "[25 36 49 64 81]",
+    "tags": [
+      "numpy",
+      "arange",
+      "array",
+      "filter"
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Матрица и статистика",
+    "description": "Создай матрицу 3x3 из чисел 1-9. Найди сумму по строкам, среднее по столбцам и стандартное отклонение всей матрицы.",
+    "hint": "np.arange(1, 10).reshape(3, 3). axis=1 для строк, axis=0 для столбцов",
+    "starter": "import numpy as np\n\n# Создай матрицу 3x3\nmatrix = np.arange(1, 10).reshape(3, 3)\nprint(matrix)\n\n# Сумма по строкам (axis=1)\n\n# Среднее по столбцам (axis=0)\n\n# Стандартное отклонение всей матрицы\n",
+    "expected_output": "[[1 2 3]\n [4 5 6]\n [7 8 9]]\n[ 6 15 24]\n[4. 5. 6.]\n2.581988897471611",
+    "tags": [
+      "numpy",
+      "reshape",
+      "sum",
+      "mean",
+      "std",
+      "axis"
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "visualization",
+    "level": "базовый",
+    "title": "Matplotlib: базовый график",
+    "description": "Построй линейный график продаж по месяцам. Добавь заголовок, подписи осей и сетку.",
+    "hint": "plt.plot(x, y). plt.title(), plt.xlabel(), plt.ylabel(), plt.grid(True)",
+    "starter": "import matplotlib\nmatplotlib.use('Agg')\nimport matplotlib.pyplot as plt\n\nmonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']\nsales = [1200, 1850, 1600, 2100, 1950, 2400]\n\n# построй линейный график с заголовком и подписями осей\n\nplt.savefig('/tmp/chart.png')\nprint('Chart saved')\n",
+    "expected_output": "Chart saved",
+    "tags": [
+      "matplotlib",
+      "plot",
+      "title",
+      "xlabel",
+      "ylabel",
+      "grid"
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Класс BankAccount",
+    "description": "Создай класс BankAccount с атрибутами owner и balance. Добавь методы deposit(amount) и withdraw(amount). Withdraw должен выбрасывать ValueError если недостаточно средств.",
+    "hint": "class BankAccount: def __init__(self, owner, balance=0). В withdraw: if amount > self.balance: raise ValueError",
+    "starter": "class BankAccount:\n    # твой код здесь\n    pass\n\nacc = BankAccount('Alice', 1000)\nacc.deposit(500)\nprint(acc.balance)  # 1500\nacc.withdraw(200)\nprint(acc.balance)  # 1300\ntry:\n    acc.withdraw(5000)\nexcept ValueError as e:\n    print(e)  # сообщение об ошибке\n",
+    "expected_output": "1500\n1300\nНедостаточно средств",
+    "tags": [
+      "class",
+      "__init__",
+      "self",
+      "raise ValueError",
+      "try except"
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "@dataclass — Product",
+    "description": "Создай dataclass Product с полями: name (str), price (float), quantity (int). Добавь метод total_cost(). Выведи объект и total_cost.",
+    "hint": "from dataclasses import dataclass. @dataclass над классом. Метод total_cost: return self.price * self.quantity",
+    "starter": "from dataclasses import dataclass\n\n# создай dataclass Product\n\np = Product('Laptop', 999.99, 3)\nprint(p)\nprint(f'Total: {p.total_cost():.2f}')\n",
+    "expected_output": "Product(name='Laptop', price=999.99, quantity=3)\nTotal: 2999.97",
+    "tags": [
+      "@dataclass",
+      "dataclasses",
+      "class"
+    ]
+  }
+]

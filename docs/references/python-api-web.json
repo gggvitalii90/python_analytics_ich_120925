@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "description": "REST API, HTTP, FastAPI, Flask, requests"
+  },
+  "references": [
+    {
+      "id": "rest-api-concepts",
+      "title": "REST API — concepts",
+      "package": "Web",
+      "type": "concept",
+      "terms": [
+        "REST API",
+        "REST",
+        "API",
+        "HTTP API",
+        "веб апи",
+        "web api"
+      ],
+      "aliases": [
+        "что такое REST",
+        "принципы REST",
+        "REST архитектура"
+      ],
+      "summary": "REST (Representational State Transfer) — архитектурный стиль для веб-API, основан на HTTP.",
+      "import": "import requests  # pip install requests",
+      "syntax": "# REST API работает через HTTP запросы:\n# GET    — получить данные (безопасный, без изменений)\n# POST   — создать новый ресурс\n# PUT    — обновить ресурс полностью\n# PATCH  — обновить ресурс частично\n# DELETE — удалить ресурс\n\n# URL структура:\n# https://api.example.com/users       GET (список)\n# https://api.example.com/users/42    GET (один)\n# https://api.example.com/users       POST (создать)\n# https://api.example.com/users/42    PUT/DELETE",
+      "related": [
+        "requests.get()",
+        "HTTP status codes",
+        "json"
+      ],
+      "docsUrl": "https://developer.mozilla.org/en-US/docs/Glossary/REST"
+    },
+    {
+      "id": "http-status-codes",
+      "title": "HTTP status codes",
+      "package": "HTTP",
+      "type": "concept",
+      "terms": [
+        "status code",
+        "HTTP status",
+        "код ответа",
+        "200",
+        "404",
+        "500",
+        "401",
+        "403"
+      ],
+      "aliases": [
+        "код ошибки",
+        "response status",
+        "статус ответа"
+      ],
+      "summary": "HTTP response status codes indicate whether a request was successfully completed.",
+      "import": "# используется через requests или другую HTTP-библиотеку",
+      "syntax": "# 2xx — Успех\n200 OK              # запрос выполнен\n201 Created         # ресурс создан\n204 No Content      # успех, нет тела ответа\n\n# 4xx — Ошибка клиента\n400 Bad Request     # неверный запрос\n401 Unauthorized    # нужна аутентификация\n403 Forbidden       # нет доступа\n404 Not Found       # ресурс не найден\n422 Unprocessable   # данные неверны (FastAPI)\n\n# 5xx — Ошибка сервера\n500 Internal Error  # сервер упал\n503 Unavailable     # сервер недоступен",
+      "related": [
+        "requests.get()",
+        "REST API concepts",
+        "try / except"
+      ],
+      "docsUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status"
+    },
+    {
+      "id": "requests-advanced",
+      "title": "requests — headers, auth, params",
+      "package": "requests",
+      "type": "function",
+      "terms": [
+        "requests headers",
+        "requests auth",
+        "requests params",
+        "Bearer token",
+        "API key",
+        "аутентификация запросов"
+      ],
+      "aliases": [
+        "передать заголовки",
+        "авторизация API",
+        "query params"
+      ],
+      "summary": "Official requests documentation for authentication, headers, and query parameters.",
+      "import": "import requests",
+      "syntax": "# Query параметры\nresp = requests.get('https://api.example.com/search',\n    params={'q': 'python', 'page': 1})\n\n# Заголовки + Bearer token\nresp = requests.get('https://api.example.com/data',\n    headers={'Authorization': 'Bearer YOUR_TOKEN',\n             'Content-Type': 'application/json'})\n\n# POST с JSON\nresp = requests.post('https://api.example.com/items',\n    json={'name': 'test', 'value': 42},\n    headers={'X-API-Key': 'secret'})\n\nresp.raise_for_status()  # выбросить исключение при 4xx/5xx\ndata = resp.json()        # распарсить JSON",
+      "related": [
+        "REST API concepts",
+        "json",
+        "HTTP status codes"
+      ],
+      "docsUrl": "https://docs.python-requests.org/en/latest/user/quickstart/"
+    },
+    {
+      "id": "fastapi-basics",
+      "title": "FastAPI — basics",
+      "package": "FastAPI",
+      "type": "framework",
+      "terms": [
+        "FastAPI",
+        "fastapi",
+        "@app.get",
+        "@app.post",
+        "fast api",
+        "asyncronous api"
+      ],
+      "aliases": [
+        "REST API Python",
+        "веб-сервер Python",
+        "API с документацией"
+      ],
+      "summary": "Official FastAPI documentation for building REST APIs with automatic OpenAPI documentation.",
+      "import": "from fastapi import FastAPI\nfrom pydantic import BaseModel\n# pip install fastapi uvicorn",
+      "syntax": "from fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\n@app.get('/')                   # GET endpoint\ndef root():\n    return {'message': 'Hello'}\n\n@app.get('/items/{item_id}')    # путь с параметром\ndef get_item(item_id: int):\n    return {'id': item_id}\n\nclass Item(BaseModel):          # Pydantic модель\n    name: str\n    price: float\n\n@app.post('/items/')            # POST endpoint\ndef create_item(item: Item):\n    return item\n\n# Запуск: uvicorn main:app --reload\n# Документация: http://127.0.0.1:8000/docs",
+      "related": [
+        "Flask basics",
+        "REST API concepts",
+        "HTTP status codes"
+      ],
+      "docsUrl": "https://fastapi.tiangolo.com/tutorial/first-steps/"
+    },
+    {
+      "id": "flask-basics",
+      "title": "Flask — basics",
+      "package": "Flask",
+      "type": "framework",
+      "terms": [
+        "Flask",
+        "flask",
+        "@app.route",
+        "flask route",
+        "flask api",
+        "веб-сервер Flask"
+      ],
+      "aliases": [
+        "простой веб-сервер",
+        "HTTP сервер Python",
+        "micro framework"
+      ],
+      "summary": "Official Flask documentation for creating simple web servers and APIs.",
+      "import": "from flask import Flask, request, jsonify\n# pip install flask",
+      "syntax": "from flask import Flask, request, jsonify\n\napp = Flask(__name__)\n\n@app.route('/hello')             # GET по умолчанию\ndef hello():\n    return 'Hello World'\n\n@app.route('/data', methods=['GET', 'POST'])\ndef data():\n    if request.method == 'POST':\n        body = request.get_json()\n        return jsonify({'received': body}), 201\n    return jsonify({'status': 'ok'})\n\n@app.route('/items/<int:item_id>')\ndef get_item(item_id):\n    return jsonify({'id': item_id})\n\nif __name__ == '__main__':\n    app.run(debug=True)  # http://127.0.0.1:5000",
+      "related": [
+        "FastAPI basics",
+        "REST API concepts",
+        "json"
+      ],
+      "docsUrl": "https://flask.palletsprojects.com/en/latest/quickstart/"
+    },
+    {
+      "id": "json-python",
+      "title": "json — loads, dumps, parse",
+      "package": "json",
+      "type": "module",
+      "terms": [
+        "json.loads",
+        "json.dumps",
+        "json parse",
+        "парсинг JSON",
+        "сериализация JSON",
+        "json python"
+      ],
+      "aliases": [
+        "читать json",
+        "записать json",
+        "конвертация json"
+      ],
+      "summary": "Official Python documentation for the json standard library module.",
+      "import": "import json",
+      "syntax": "import json\n\n# Строка JSON → dict Python\ntext = '{\"name\": \"Alice\", \"age\": 30}'\ndata = json.loads(text)\nprint(data['name'])  # Alice\n\n# dict Python → строка JSON\ndata = {'name': 'Alice', 'scores': [1, 2, 3]}\ntext = json.dumps(data, indent=2, ensure_ascii=False)\n\n# Файл JSON → dict\nwith open('data.json', encoding='utf-8') as f:\n    data = json.load(f)\n\n# dict → файл JSON\nwith open('out.json', 'w', encoding='utf-8') as f:\n    json.dump(data, f, ensure_ascii=False, indent=2)",
+      "related": [
+        "requests advanced",
+        "pandas.read_json",
+        "open"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/json.html"
+    },
+    {
+      "id": "python-dotenv",
+      "title": "python-dotenv",
+      "package": "dotenv",
+      "type": "module",
+      "terms": [
+        "dotenv",
+        "load_dotenv",
+        ".env",
+        "переменные окружения",
+        "environment variables",
+        "os.getenv"
+      ],
+      "aliases": [
+        "хранение секретов",
+        "API ключ в .env",
+        "конфигурация через файл"
+      ],
+      "summary": "python-dotenv documentation for loading environment variables from .env files.",
+      "import": "from dotenv import load_dotenv\nimport os\n# pip install python-dotenv",
+      "syntax": "# .env файл (НЕ добавляй в git!):\n# API_KEY=my_secret_key_123\n# DB_URL=postgresql://user:pass@host/db\n\nfrom dotenv import load_dotenv\nimport os\n\nload_dotenv()  # загрузить .env в текущей директории\n\napi_key = os.getenv('API_KEY')\ndb_url = os.getenv('DB_URL', 'default_value')\n\nprint(api_key)  # my_secret_key_123",
+      "related": [
+        "os module",
+        "REST API",
+        "json"
+      ],
+      "docsUrl": "https://pypi.org/project/python-dotenv/"
+    }
+  ]
+}

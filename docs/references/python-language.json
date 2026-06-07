@@ -9,12 +9,26 @@
       "title": "del statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["del", "delete", "del statement", "удалить", "удаление"],
-      "aliases": ["удалить переменную", "удалить элемент", "delete variable"],
+      "terms": [
+        "del",
+        "delete",
+        "del statement",
+        "удалить",
+        "удаление"
+      ],
+      "aliases": [
+        "удалить переменную",
+        "удалить элемент",
+        "delete variable"
+      ],
       "summary": "Official Python reference for deleting names, attributes, items, or slices.",
       "import": "# syntax, no import needed",
       "syntax": "del variable\ndel items[0]\ndel row[\"column\"]",
-      "related": ["list.remove", "dict.pop", "pandas.DataFrame.drop"],
+      "related": [
+        "list.remove",
+        "dict.pop",
+        "pandas.DataFrame.drop"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/simple_stmts.html#the-del-statement"
     },
     {
@@ -22,12 +36,24 @@
       "title": "if statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["if", "elif", "else", "condition", "условие"],
-      "aliases": ["ветвление", "условный оператор"],
+      "terms": [
+        "if",
+        "elif",
+        "else",
+        "condition",
+        "условие"
+      ],
+      "aliases": [
+        "ветвление",
+        "условный оператор"
+      ],
       "summary": "Official Python reference for conditional execution.",
       "import": "# syntax, no import needed",
       "syntax": "if score >= 80:\n    result = \"pass\"\nelif score >= 60:\n    result = \"review\"\nelse:\n    result = \"fail\"",
-      "related": ["bool", "comparison operators"],
+      "related": [
+        "bool",
+        "comparison operators"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#if"
     },
     {
@@ -35,12 +61,26 @@
       "title": "for statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["for", "loop", "iterate", "цикл", "итерация"],
-      "aliases": ["цикл for", "перебор"],
+      "terms": [
+        "for",
+        "loop",
+        "iterate",
+        "цикл",
+        "итерация"
+      ],
+      "aliases": [
+        "цикл for",
+        "перебор"
+      ],
       "summary": "Official Python reference for iterating over sequences and iterators.",
       "import": "# syntax, no import needed",
       "syntax": "for item in items:\n    print(item)",
-      "related": ["range", "enumerate", "zip", "while"],
+      "related": [
+        "range",
+        "enumerate",
+        "zip",
+        "while"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#the-for-statement"
     },
     {
@@ -48,12 +88,23 @@
       "title": "while statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["while", "loop", "цикл while", "цикл"],
-      "aliases": ["цикл с условием"],
+      "terms": [
+        "while",
+        "loop",
+        "цикл while",
+        "цикл"
+      ],
+      "aliases": [
+        "цикл с условием"
+      ],
       "summary": "Official Python reference for loops that run while a condition is true.",
       "import": "# syntax, no import needed",
       "syntax": "while value < 10:\n    value += 1",
-      "related": ["for", "break", "continue"],
+      "related": [
+        "for",
+        "break",
+        "continue"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#the-while-statement"
     },
     {
@@ -61,12 +112,23 @@
       "title": "break and continue",
       "package": "Python language",
       "type": "statement",
-      "terms": ["break", "continue", "stop loop", "skip iteration"],
-      "aliases": ["остановить цикл", "пропустить итерацию"],
+      "terms": [
+        "break",
+        "continue",
+        "stop loop",
+        "skip iteration"
+      ],
+      "aliases": [
+        "остановить цикл",
+        "пропустить итерацию"
+      ],
       "summary": "Official Python reference for controlling loop execution.",
       "import": "# syntax, no import needed",
       "syntax": "for item in items:\n    if item is None:\n        continue\n    if item == target:\n        break",
-      "related": ["for", "while"],
+      "related": [
+        "for",
+        "while"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/simple_stmts.html#the-break-statement"
     },
     {
@@ -74,12 +136,24 @@
       "title": "def statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["def", "function", "функция", "return"],
-      "aliases": ["создать функцию", "объявить функцию"],
+      "terms": [
+        "def",
+        "function",
+        "функция",
+        "return"
+      ],
+      "aliases": [
+        "создать функцию",
+        "объявить функцию"
+      ],
       "summary": "Official Python reference for defining functions.",
       "import": "# syntax, no import needed",
       "syntax": "def add(a, b):\n    return a + b",
-      "related": ["lambda", "return", "callable"],
+      "related": [
+        "lambda",
+        "return",
+        "callable"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#function-definitions"
     },
     {
@@ -87,12 +161,26 @@
       "title": "class statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["class", "self", "object", "oop", "класс"],
-      "aliases": ["объект", "метод", "атрибут"],
+      "terms": [
+        "class",
+        "self",
+        "object",
+        "oop",
+        "класс"
+      ],
+      "aliases": [
+        "объект",
+        "метод",
+        "атрибут"
+      ],
       "summary": "Official Python reference for defining classes.",
       "import": "# syntax, no import needed",
       "syntax": "class User:\n    def __init__(self, name):\n        self.name = name",
-      "related": ["__init__", "self", "dataclasses"],
+      "related": [
+        "__init__",
+        "self",
+        "dataclasses"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#class-definitions"
     },
     {
@@ -100,12 +188,26 @@
       "title": "try statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["try", "except", "finally", "error", "exception", "ошибка"],
-      "aliases": ["обработка ошибок", "исключение"],
+      "terms": [
+        "try",
+        "except",
+        "finally",
+        "error",
+        "exception",
+        "ошибка"
+      ],
+      "aliases": [
+        "обработка ошибок",
+        "исключение"
+      ],
       "summary": "Official Python reference for handling exceptions.",
       "import": "# syntax, no import needed",
       "syntax": "try:\n    value = int(text)\nexcept ValueError:\n    value = None\nfinally:\n    print(\"done\")",
-      "related": ["raise", "assert", "ValueError"],
+      "related": [
+        "raise",
+        "assert",
+        "ValueError"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#the-try-statement"
     },
     {
@@ -113,12 +215,22 @@
       "title": "with statement",
       "package": "Python language",
       "type": "statement",
-      "terms": ["with", "context manager", "open file", "контекстный менеджер"],
-      "aliases": ["открыть файл безопасно"],
+      "terms": [
+        "with",
+        "context manager",
+        "open file",
+        "контекстный менеджер"
+      ],
+      "aliases": [
+        "открыть файл безопасно"
+      ],
       "summary": "Official Python reference for context managers.",
       "import": "# syntax, no import needed",
       "syntax": "with open(\"data.txt\", \"r\", encoding=\"utf-8\") as file:\n    text = file.read()",
-      "related": ["open", "pathlib.Path"],
+      "related": [
+        "open",
+        "pathlib.Path"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#the-with-statement"
     },
     {
@@ -126,13 +238,185 @@
       "title": "comprehensions",
       "package": "Python language",
       "type": "expression",
-      "terms": ["comprehension", "list comprehension", "dict comprehension", "генератор списка"],
-      "aliases": ["списковое включение", "генератор словаря"],
+      "terms": [
+        "comprehension",
+        "list comprehension",
+        "dict comprehension",
+        "генератор списка"
+      ],
+      "aliases": [
+        "списковое включение",
+        "генератор словаря"
+      ],
       "summary": "Official Python reference for list, set, and dict comprehensions.",
       "import": "# syntax, no import needed",
       "syntax": "squares = [x ** 2 for x in numbers]\nby_id = {row[\"id\"]: row for row in rows}",
-      "related": ["for", "filter", "map"],
+      "related": [
+        "for",
+        "filter",
+        "map"
+      ],
       "docsUrl": "https://docs.python.org/3/reference/expressions.html#displays-for-lists-sets-and-dictionaries"
+    },
+    {
+      "id": "python-fstring",
+      "title": "f-string",
+      "package": "Python",
+      "type": "syntax",
+      "terms": [
+        "f-string",
+        "fstring",
+        "f string",
+        "format string",
+        "форматирование строк",
+        "строковая интерполяция"
+      ],
+      "aliases": [
+        "вставить переменную в строку",
+        "форматирование",
+        "шаблон строки"
+      ],
+      "summary": "Official Python documentation for formatted string literals (f-strings).",
+      "import": "# built-in, no import needed",
+      "syntax": "name = 'Alice'\nage = 30\nprint(f'Hello {name}')          # Hello Alice\nprint(f'Age: {age}')            # Age: 30\nprint(f'Pi: {3.14159:.2f}')    # Pi: 3.14\nprint(f'{age * 2 = }')         # age * 2 = 60  (debug)\nprint(f'{name!r}')              # 'Alice' (repr)",
+      "related": [
+        "str.format",
+        "str",
+        "print"
+      ],
+      "docsUrl": "https://docs.python.org/3/reference/lexical_analysis.html#formatted-string-literals"
+    },
+    {
+      "id": "python-args-kwargs",
+      "title": "*args and **kwargs",
+      "package": "Python",
+      "type": "syntax",
+      "terms": [
+        "*args",
+        "**kwargs",
+        "args kwargs",
+        "произвольные аргументы",
+        "переменное число аргументов"
+      ],
+      "aliases": [
+        "функция с любым количеством аргументов",
+        "unpacking",
+        "распаковка"
+      ],
+      "summary": "Official Python documentation for variable-length argument lists and keyword arguments.",
+      "import": "# built-in, no import needed",
+      "syntax": "# *args — позиционные аргументы как tuple\ndef add(*args):\n    return sum(args)\nadd(1, 2, 3)  # 6\n\n# **kwargs — именованные аргументы как dict\ndef info(**kwargs):\n    for k, v in kwargs.items():\n        print(f'{k}: {v}')\ninfo(name='Alice', age=30)\n\n# Распаковка при вызове\nnumbers = [1, 2, 3]\nprint(*numbers)  # 1 2 3",
+      "related": [
+        "def",
+        "lambda",
+        "dict"
+      ],
+      "docsUrl": "https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists"
+    },
+    {
+      "id": "python-main-guard",
+      "title": "if __name__ == '__main__'",
+      "package": "Python",
+      "type": "idiom",
+      "terms": [
+        "__name__",
+        "__main__",
+        "if __name__",
+        "main guard",
+        "точка входа"
+      ],
+      "aliases": [
+        "запуск скрипта",
+        "импорт модуля",
+        "__init__.py"
+      ],
+      "summary": "Official Python documentation for module entry point and the __name__ special attribute.",
+      "import": "# built-in, no import needed",
+      "syntax": "# Код внутри выполняется ТОЛЬКО когда файл запускается напрямую\n# При import этот блок пропускается\ndef main():\n    print('Script started')\n\nif __name__ == '__main__':\n    main()",
+      "related": [
+        "def",
+        "import",
+        "python-module"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/__main__.html"
+    },
+    {
+      "id": "python-generator",
+      "title": "generators and yield",
+      "package": "Python",
+      "type": "syntax",
+      "terms": [
+        "yield",
+        "generator",
+        "генератор",
+        "generator expression",
+        "ленивые вычисления"
+      ],
+      "aliases": [
+        "экономия памяти",
+        "итератор",
+        "lazy evaluation"
+      ],
+      "summary": "Official Python documentation for generator functions and generator expressions.",
+      "import": "# built-in, no import needed",
+      "syntax": "# Генераторная функция\ndef squares(n):\n    for i in range(n):\n        yield i ** 2\n\nfor x in squares(5):\n    print(x)  # 0 1 4 9 16\n\n# Генераторное выражение (как list, но ленивое)\ngen = (x**2 for x in range(100))  # не создаёт список\nnext(gen)  # 0",
+      "related": [
+        "range",
+        "list comprehension",
+        "itertools"
+      ],
+      "docsUrl": "https://docs.python.org/3/howto/functional.html#generators"
+    },
+    {
+      "id": "python-walrus",
+      "title": "walrus operator :=",
+      "package": "Python",
+      "type": "syntax",
+      "terms": [
+        "walrus",
+        ":=",
+        "walrus operator",
+        "assignment expression",
+        "оператор моржа"
+      ],
+      "aliases": [
+        "присвоение в условии",
+        "named expression"
+      ],
+      "summary": "Official Python documentation for the walrus (assignment expression) operator.",
+      "import": "# built-in, no import needed",
+      "syntax": "# Присвоение и проверка в одном выражении\nif (n := len(data)) > 10:\n    print(f'Too long: {n} items')\n\n# В while\nwhile chunk := file.read(1024):\n    process(chunk)\n\n# В list comprehension\nfiltered = [y for x in data if (y := transform(x)) > 0]",
+      "related": [
+        "if statement",
+        "while statement",
+        "list comprehension"
+      ],
+      "docsUrl": "https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions"
+    },
+    {
+      "id": "python-match-case",
+      "title": "match / case",
+      "package": "Python",
+      "type": "statement",
+      "terms": [
+        "match",
+        "case",
+        "pattern matching",
+        "match case",
+        "switch case"
+      ],
+      "aliases": [
+        "условие по шаблону",
+        "switch python"
+      ],
+      "summary": "Official Python documentation for structural pattern matching (Python 3.10+).",
+      "import": "# Python 3.10+, no import needed",
+      "syntax": "command = 'quit'\nmatch command:\n    case 'quit':\n        print('Quitting')\n    case 'help':\n        print('Help')\n    case _:\n        print('Unknown')\n\n# Matching with values\nmatch point:\n    case (0, 0):\n        print('Origin')\n    case (x, 0):\n        print(f'X={x}')",
+      "related": [
+        "if statement",
+        "elif"
+      ],
+      "docsUrl": "https://docs.python.org/3/reference/compound_stmts.html#match"
     }
   ]
 }
