@@ -241,5 +241,966 @@
       "dataclasses",
       "class"
     ]
+  },
+  {
+    "id": 16,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Работа со строками",
+    "description": "Дана строка с предложением. Подсчитай количество слов, переведи в верхний регистр и выведи оба результата.",
+    "hint": "str.split() разбивает по пробелам. len() считает элементы. str.upper() для верхнего регистра.",
+    "starter": "sentence = 'python is a great programming language'\n\n# 1. Подсчитай количество слов\n# 2. Выведи предложение в верхнем регистре\n# твой код здесь\n",
+    "expected_output": "6\nPYTHON IS A GREAT PROGRAMMING LANGUAGE",
+    "tags": [
+      "str",
+      "split",
+      "upper",
+      "len"
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Цикл while и счётчик",
+    "description": "Используя цикл while, выведи все числа от 1 до 10, которые делятся на 3 или на 5.",
+    "hint": "Условие: i % 3 == 0 or i % 5 == 0. Не забудь увеличивать счётчик i += 1.",
+    "starter": "i = 1\n\n# твой код здесь — цикл while от 1 до 10\n",
+    "expected_output": "3\n5\n6\n9\n10",
+    "tags": [
+      "while",
+      "modulo",
+      "loop",
+      "if"
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Кортежи и распаковка",
+    "description": "Дан список кортежей с координатами точек. Найди точку с максимальным расстоянием от начала координат и выведи её координаты.",
+    "hint": "Расстояние = (x**2 + y**2) ** 0.5. Используй max() с key=lambda.",
+    "starter": "points = [(3, 4), (1, 1), (6, 8), (2, 5), (0, 7)]\n\n# твой код здесь\n# найди точку с максимальным расстоянием от (0,0)\n",
+    "expected_output": "(6, 8)",
+    "tags": [
+      "tuple",
+      "lambda",
+      "max",
+      "list"
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Функция проверки палиндрома",
+    "description": "Напиши функцию is_palindrome, которая возвращает True если строка является палиндромом (читается одинаково в обоих направлениях).",
+    "hint": "Сравни строку с её реверсом: s == s[::-1]. Не забудь привести к нижнему регистру.",
+    "starter": "def is_palindrome(s):\n    # твой код здесь\n    pass\n\nprint(is_palindrome('racecar'))  # True\nprint(is_palindrome('hello'))    # False\nprint(is_palindrome('Madam'))    # True\n",
+    "expected_output": "True\nFalse\nTrue",
+    "tags": [
+      "def",
+      "str",
+      "slicing",
+      "bool"
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "python-basics",
+    "level": "базовый",
+    "title": "Словарь: инверсия",
+    "description": "Дан словарь с именами и возрастами. Создай новый словарь, где ключи и значения поменяны местами. Выведи результат.",
+    "hint": "Используй dict comprehension: {v: k for k, v in d.items()}.",
+    "starter": "ages = {'Alice': 25, 'Bob': 30, 'Carol': 22, 'Dave': 35}\n\n# твой код здесь — инвертируй словарь\ninverted = {}\nprint(inverted)\n",
+    "expected_output": "{25: 'Alice', 30: 'Bob', 22: 'Carol', 35: 'Dave'}",
+    "tags": [
+      "dict",
+      "dict comprehension",
+      "items"
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "python-basics",
+    "level": "средний",
+    "title": "Функция flatten",
+    "description": "Напиши функцию flatten, которая принимает вложенный список и возвращает плоский список всех элементов.",
+    "hint": "Используй цикл for и проверку isinstance(item, list). Для каждого подсписка рекурсивно вызывай flatten.",
+    "starter": "def flatten(nested):\n    # твой код здесь\n    pass\n\nprint(flatten([1, [2, 3], [4, [5, 6]], 7]))\nprint(flatten([[1, 2], [3, 4], [5]]))\n",
+    "expected_output": "[1, 2, 3, 4, 5, 6, 7]\n[1, 2, 3, 4, 5]",
+    "tags": [
+      "recursion",
+      "list",
+      "isinstance",
+      "def"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "python-basics",
+    "level": "средний",
+    "title": "Декоратор таймер",
+    "description": "Напиши декоратор timer, который выводит время выполнения функции в секундах с точностью до 4 знаков.",
+    "hint": "import time. start = time.time(). elapsed = time.time() - start. Используй functools.wraps.",
+    "starter": "import time\nfrom functools import wraps\n\ndef timer(func):\n    # твой код здесь\n    pass\n\n@timer\ndef slow_sum(n):\n    return sum(range(n))\n\nresult = slow_sum(1000000)\nprint(result)\n",
+    "expected_output": "499999500000",
+    "tags": [
+      "decorator",
+      "functools",
+      "wraps",
+      "time"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "python-basics",
+    "level": "средний",
+    "title": "Генератор фибоначчи",
+    "description": "Напиши генератор fibonacci(n), который выдаёт первые n чисел Фибоначчи. Выведи первые 8 чисел через пробел.",
+    "hint": "Используй yield. Храни два предыдущих числа a, b. Обновляй: a, b = b, a + b.",
+    "starter": "def fibonacci(n):\n    # твой код здесь\n    pass\n\nresult = list(fibonacci(8))\nprint(' '.join(map(str, result)))\n",
+    "expected_output": "0 1 1 2 3 5 8 13",
+    "tags": [
+      "generator",
+      "yield",
+      "def",
+      "fibonacci"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "python-basics",
+    "level": "средний",
+    "title": "Подсчёт символов с Counter",
+    "description": "Используй collections.Counter чтобы найти 3 самых частых символа в строке (без учёта пробелов). Выведи их в формате символ: количество.",
+    "hint": "Counter(s) считает все символы. Используй .most_common(3) для топ-3.",
+    "starter": "from collections import Counter\n\ntext = 'programming is fun and programming is cool'\n\n# твой код здесь\n# найди 3 самых частых символа (не пробелы)\n",
+    "expected_output": "g: 5\nn: 4\ni: 4",
+    "tags": [
+      "Counter",
+      "collections",
+      "most_common",
+      "str"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "python-basics",
+    "level": "средний",
+    "title": "Контекстный менеджер",
+    "description": "Создай простой контекстный менеджер Timer с помощью contextlib.contextmanager, который выводит время выполнения блока кода.",
+    "hint": "from contextlib import contextmanager. Используй yield внутри try/finally. time.time() для замера.",
+    "starter": "from contextlib import contextmanager\nimport time\n\n@contextmanager\ndef timer_ctx(name):\n    # твой код здесь\n    pass\n\nwith timer_ctx('test'):\n    total = sum(range(500000))\nprint(total)\n",
+    "expected_output": "124999750000",
+    "tags": [
+      "contextmanager",
+      "contextlib",
+      "with",
+      "time"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "pandas",
+    "level": "базовый",
+    "title": "Выбор колонок и типы данных",
+    "description": "Создай DataFrame из данных о сотрудниках. Выведи только колонки name и salary, затем выведи тип данных колонки salary.",
+    "hint": "df[['name', 'salary']] выбирает несколько колонок. df['salary'].dtype для типа данных.",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'name': ['Alice', 'Bob', 'Carol', 'Dave'],\n    'age': [28, 35, 42, 31],\n    'salary': [55000, 72000, 89000, 61000],\n    'dept': ['HR', 'IT', 'IT', 'Finance']\n})\n\n# твой код здесь — выведи колонки name и salary, затем тип salary\n",
+    "expected_output": "    name  salary\n0  Alice   55000\n1    Bob   72000\n2  Carol   89000\n3   Dave   61000\nint64",
+    "tags": [
+      "DataFrame",
+      "dtypes",
+      "column selection",
+      "pandas"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "pandas",
+    "level": "базовый",
+    "title": "Сортировка DataFrame",
+    "description": "Отсортируй DataFrame по зарплате по убыванию, затем по имени по возрастанию при равных зарплатах. Выведи результат.",
+    "hint": "df.sort_values(['salary', 'name'], ascending=[False, True])",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'name': ['Alice', 'Bob', 'Carol', 'Dave', 'Eve'],\n    'dept': ['HR', 'IT', 'IT', 'Finance', 'HR'],\n    'salary': [55000, 72000, 72000, 61000, 55000]\n})\n\n# твой код здесь — сортировка\n",
+    "expected_output": "    name     dept  salary\n1    Bob       IT   72000\n2  Carol       IT   72000\n3   Dave  Finance   61000\n0  Alice       HR   55000\n4    Eve       HR   55000",
+    "tags": [
+      "sort_values",
+      "ascending",
+      "pandas",
+      "DataFrame"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "pandas",
+    "level": "базовый",
+    "title": "Добавление вычисляемой колонки",
+    "description": "Добавь в DataFrame колонку 'tax' (13% от зарплаты) и колонку 'net_salary' (зарплата минус налог). Выведи DataFrame.",
+    "hint": "df['tax'] = df['salary'] * 0.13. Округли до 2 знаков с .round(2).",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'name': ['Alice', 'Bob', 'Carol'],\n    'salary': [50000, 80000, 65000]\n})\n\n# твой код здесь — добавь колонки tax и net_salary\n",
+    "expected_output": "    name  salary     tax  net_salary\n0  Alice   50000  6500.0     43500.0\n1    Bob   80000  10400.0    69600.0\n2  Carol   65000  8450.0     56550.0",
+    "tags": [
+      "DataFrame",
+      "computed column",
+      "arithmetic",
+      "pandas"
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "pandas",
+    "level": "базовый",
+    "title": "Describe и статистика",
+    "description": "Для данных о студентах выведи описательную статистику только числовых колонок. Затем выведи медиану оценок.",
+    "hint": "df.describe() для статистики. df['score'].median() для медианы.",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'name': ['A', 'B', 'C', 'D', 'E', 'F'],\n    'score': [78, 92, 65, 88, 71, 95],\n    'age': [20, 21, 19, 22, 20, 21]\n})\n\n# выведи медиану оценок\n# твой код здесь\n",
+    "expected_output": "83.0",
+    "tags": [
+      "describe",
+      "median",
+      "statistics",
+      "pandas"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Merge: объединение таблиц",
+    "description": "Объедини две таблицы — с заказами и клиентами — по ключу customer_id. Выведи имя клиента и сумму заказа для всех совпадений.",
+    "hint": "pd.merge(orders, customers, on='customer_id', how='inner'). Выведи колонки name и amount.",
+    "starter": "import pandas as pd\n\norders = pd.DataFrame({\n    'order_id': [1, 2, 3, 4],\n    'customer_id': [101, 102, 101, 103],\n    'amount': [250, 450, 300, 150]\n})\n\ncustomers = pd.DataFrame({\n    'customer_id': [101, 102, 104],\n    'name': ['Alice', 'Bob', 'Dave']\n})\n\n# твой код здесь — inner join, выведи name и amount\n",
+    "expected_output": "    name  amount\n0  Alice     250\n1  Alice     300\n2    Bob     450",
+    "tags": [
+      "merge",
+      "join",
+      "inner join",
+      "pandas"
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Pivot table",
+    "description": "Создай сводную таблицу: строки — категории, столбцы — месяцы, значения — суммарные продажи. Выведи таблицу.",
+    "hint": "pd.pivot_table(df, values='sales', index='category', columns='month', aggfunc='sum', fill_value=0)",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'category': ['A','A','B','B','A','B'],\n    'month': ['Jan','Feb','Jan','Feb','Jan','Feb'],\n    'sales': [100, 150, 200, 80, 120, 90]\n})\n\n# твой код здесь — pivot table\n",
+    "expected_output": "month      Feb  Jan\ncategory           \nA          150  220\nB           170  200",
+    "tags": [
+      "pivot_table",
+      "aggfunc",
+      "pandas",
+      "groupby"
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Apply и lambda",
+    "description": "Добавь колонку 'grade' на основе score: 90+ = 'A', 75-89 = 'B', 60-74 = 'C', ниже 60 = 'F'. Используй apply.",
+    "hint": "df['grade'] = df['score'].apply(lambda x: 'A' if x >= 90 else ...). Можно использовать вложенные тернарные операторы.",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'name': ['Alice', 'Bob', 'Carol', 'Dave', 'Eve'],\n    'score': [95, 82, 67, 54, 91]\n})\n\n# твой код здесь — добавь колонку grade\nprint(df)\n",
+    "expected_output": "    name  score grade\n0  Alice     95     A\n1    Bob     82     B\n2  Carol     67     C\n3   Dave     54     F\n4    Eve     91     A",
+    "tags": [
+      "apply",
+      "lambda",
+      "pandas",
+      "conditional"
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Работа с датами",
+    "description": "Преобразуй столбец date в формат datetime. Добавь колонки month и weekday. Выведи количество записей по месяцам.",
+    "hint": "pd.to_datetime(df['date']). df['date'].dt.month. df.groupby('month').size()",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'date': ['2024-01-15', '2024-01-22', '2024-02-10', '2024-02-28', '2024-01-31'],\n    'value': [100, 200, 150, 300, 250]\n})\n\n# твой код здесь — преобразуй даты и подсчитай записи по месяцам\n",
+    "expected_output": "month\n1    3\n2    2\ndtype: int64",
+    "tags": [
+      "datetime",
+      "dt accessor",
+      "groupby",
+      "pandas"
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Cumsum и rolling mean",
+    "description": "Для временного ряда продаж вычисли накопленную сумму (cumsum) и скользящее среднее за 3 периода. Выведи DataFrame.",
+    "hint": "df['cumsum'] = df['sales'].cumsum(). df['rolling_mean'] = df['sales'].rolling(3).mean().round(1)",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'month': ['Jan','Feb','Mar','Apr','May','Jun'],\n    'sales': [100, 150, 120, 200, 180, 250]\n})\n\n# твой код здесь — добавь cumsum и rolling(3).mean()\nprint(df)\n",
+    "expected_output": "  month  sales  cumsum  rolling_mean\n0   Jan    100     100           NaN\n1   Feb    150     250           NaN\n2   Mar    120     370         123.3\n3   Apr    200     570         156.7\n4   May    180     750         166.7\n5   Jun    250    1000         210.0",
+    "tags": [
+      "cumsum",
+      "rolling",
+      "mean",
+      "pandas"
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "pandas",
+    "level": "средний",
+    "title": "Переименование и удаление колонок",
+    "description": "Переименуй колонки согласно маппингу, удали колонку 'temp_col' и сбрось индекс. Выведи результат.",
+    "hint": "df.rename(columns={'old': 'new'}). df.drop(columns=['col']). df.reset_index(drop=True)",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'nm': ['Alice', 'Bob', 'Carol'],\n    'sal': [50000, 72000, 61000],\n    'dep': ['HR', 'IT', 'Finance'],\n    'temp_col': [None, None, None]\n})\n\n# переименуй nm->name, sal->salary, dep->department\n# удали temp_col\n# твой код здесь\nprint(df)\n",
+    "expected_output": "    name  salary department\n0  Alice   50000         HR\n1    Bob   72000         IT\n2  Carol   61000    Finance",
+    "tags": [
+      "rename",
+      "drop",
+      "columns",
+      "pandas"
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "numpy",
+    "level": "базовый",
+    "title": "Создание массивов NumPy",
+    "description": "Создай три массива: единиц (5 элементов), нулей (4 элемента) и равномерно распределённых чисел от 0 до 1 (6 элементов). Выведи каждый.",
+    "hint": "np.ones(5), np.zeros(4), np.linspace(0, 1, 6). round() или np.round() для округления.",
+    "starter": "import numpy as np\n\n# 1. массив из 5 единиц\n# 2. массив из 4 нулей\n# 3. 6 чисел от 0 до 1 равномерно\n# твой код здесь\n",
+    "expected_output": "[1. 1. 1. 1. 1.]\n[0. 0. 0. 0.]\n[0.  0.2 0.4 0.6 0.8 1. ]",
+    "tags": [
+      "numpy",
+      "ones",
+      "zeros",
+      "linspace"
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "numpy",
+    "level": "базовый",
+    "title": "Булева индексация",
+    "description": "Создай массив из 10 случайных целых чисел от -5 до 5. Замени все отрицательные числа нулём и выведи результат.",
+    "hint": "np.random.seed(42) для воспроизводимости. arr[arr < 0] = 0 для замены элементов.",
+    "starter": "import numpy as np\n\nnp.random.seed(42)\narr = np.random.randint(-5, 6, size=10)\nprint('Original:', arr)\n\n# твой код здесь — замени отрицательные на 0\nprint('Modified:', arr)\n",
+    "expected_output": "Original: [ 0  2  5 -3 -1 -2  3  4  0 -2]\nModified: [0 2 5 0 0 0 3 4 0 0]",
+    "tags": [
+      "numpy",
+      "boolean indexing",
+      "randint",
+      "mask"
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "numpy",
+    "level": "базовый",
+    "title": "Математические функции",
+    "description": "Дан массив углов в градусах. Переведи их в радианы и вычисли синус каждого угла. Округли до 4 знаков после запятой.",
+    "hint": "np.radians() или arr * np.pi / 180. np.sin(). np.round(arr, 4).",
+    "starter": "import numpy as np\n\nangles = np.array([0, 30, 45, 60, 90])\n\n# твой код здесь — переведи в радианы и вычисли синус\n",
+    "expected_output": "[0.     0.5    0.7071 0.8660 1.    ]",
+    "tags": [
+      "numpy",
+      "sin",
+      "radians",
+      "pi"
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "numpy",
+    "level": "базовый",
+    "title": "Срезы и индексация массива",
+    "description": "Создай матрицу 4x4 из чисел 1-16. Извлеки вторую строку, третий столбец и подматрицу 2x2 из центра.",
+    "hint": "matrix[1] или matrix[1, :] для строки. matrix[:, 2] для столбца. matrix[1:3, 1:3] для подматрицы.",
+    "starter": "import numpy as np\n\nmatrix = np.arange(1, 17).reshape(4, 4)\nprint(matrix)\n\n# твой код здесь\n# 1. вторая строка\n# 2. третий столбец\n# 3. центральная подматрица 2x2\n",
+    "expected_output": "[[ 1  2  3  4]\n [ 5  6  7  8]\n [ 9 10 11 12]\n [13 14 15 16]]\n[5 6 7 8]\n[ 3  7 11 15]\n[[ 6  7]\n [10 11]]",
+    "tags": [
+      "numpy",
+      "slicing",
+      "reshape",
+      "indexing"
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "numpy",
+    "level": "базовый",
+    "title": "Конкатенация и стэкинг",
+    "description": "Объедини два массива горизонтально и вертикально. Выведи оба результата с их формами.",
+    "hint": "np.hstack([a, b]) для горизонтального. np.vstack([a, b]) для вертикального. arr.shape для формы.",
+    "starter": "import numpy as np\n\na = np.array([[1, 2, 3],\n              [4, 5, 6]])\n\nb = np.array([[7, 8, 9],\n              [10, 11, 12]])\n\n# твой код здесь — горизонтальный и вертикальный стэкинг\n",
+    "expected_output": "[[ 1  2  3  7  8  9]\n [ 4  5  6 10 11 12]]\n(2, 6)\n[[ 1  2  3]\n [ 4  5  6]\n [ 7  8  9]\n [10 11 12]]\n(4, 3)",
+    "tags": [
+      "numpy",
+      "hstack",
+      "vstack",
+      "shape"
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Нормализация данных",
+    "description": "Нормализуй массив данных методом Min-Max так, чтобы все значения оказались в диапазоне [0, 1]. Выведи результат с 4 знаками.",
+    "hint": "norm = (arr - arr.min()) / (arr.max() - arr.min()). np.round(result, 4).",
+    "starter": "import numpy as np\n\ndata = np.array([10, 25, 5, 50, 30, 15, 45, 20])\n\n# твой код здесь — Min-Max нормализация\n",
+    "expected_output": "[0.1111 0.4444 0.     1.     0.5556 0.2222 0.8889 0.3333]",
+    "tags": [
+      "numpy",
+      "normalization",
+      "min",
+      "max"
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Линейная алгебра: умножение матриц",
+    "description": "Перемножь две матрицы используя np.dot(). Найди определитель и след (trace) результирующей матрицы.",
+    "hint": "np.dot(A, B) или A @ B. np.linalg.det() для определителя. np.trace() для следа.",
+    "starter": "import numpy as np\n\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\n# твой код здесь\n# 1. произведение матриц C = A @ B\n# 2. определитель C (int)\n# 3. след матрицы C\n",
+    "expected_output": "[[19 22]\n [43 50]]\n-6\n69",
+    "tags": [
+      "numpy",
+      "dot",
+      "linalg",
+      "trace",
+      "det"
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Случайные числа и распределения",
+    "description": "Сгенерируй 1000 случайных чисел из нормального распределения. Выведи среднее и стандартное отклонение (округли до 2 знаков), а также долю чисел в диапазоне [-1, 1].",
+    "hint": "np.random.normal(loc=0, scale=1, size=1000). np.mean(), np.std(). (arr > -1) & (arr < 1).",
+    "starter": "import numpy as np\n\nnp.random.seed(0)\ndata = np.random.normal(loc=0, scale=1, size=1000)\n\n# твой код здесь\n# 1. среднее (round 2)\n# 2. std (round 2)\n# 3. доля в диапазоне [-1, 1] (round 2)\n",
+    "expected_output": "Mean: 0.02\nStd: 0.99\nIn [-1,1]: 0.68",
+    "tags": [
+      "numpy",
+      "random",
+      "normal distribution",
+      "statistics"
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Уникальные значения и подсчёт",
+    "description": "Дан массив оценок студентов. Найди уникальные оценки, количество каждой и выведи в формате 'оценка: количество'.",
+    "hint": "np.unique(arr, return_counts=True) возвращает два массива: значения и количества. Используй zip().",
+    "starter": "import numpy as np\n\ngrades = np.array([85, 92, 78, 85, 65, 92, 78, 85, 100, 65, 78])\n\n# твой код здесь — уникальные значения с подсчётом\n",
+    "expected_output": "65: 2\n78: 3\n85: 3\n92: 2\n100: 1",
+    "tags": [
+      "numpy",
+      "unique",
+      "return_counts",
+      "zip"
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Условная замена с where",
+    "description": "Используй np.where(), чтобы создать массив: если элемент > 0, оставь как есть, иначе замени на его квадрат. Выведи результат.",
+    "hint": "np.where(condition, x, y). x применяется где True, y — где False.",
+    "starter": "import numpy as np\n\narr = np.array([-3, -1, 0, 2, 4, -2, 5, -4])\n\n# твой код здесь\n# положительные оставь, отрицательные замени на квадрат\n",
+    "expected_output": "[ 9  1  0  2  4  4  5 16]",
+    "tags": [
+      "numpy",
+      "where",
+      "conditional",
+      "array"
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Скользящее среднее вручную",
+    "description": "Вычисли скользящее среднее с окном 3 для временного ряда без использования pandas. Выведи исходный массив и результат.",
+    "hint": "Используй np.convolve(arr, np.ones(3)/3, mode='valid') или цикл. mode='valid' убирает граничные эффекты.",
+    "starter": "import numpy as np\n\nprices = np.array([10, 12, 11, 14, 16, 13, 15, 18, 17, 20])\nprint('Prices:', prices)\n\n# твой код здесь — скользящее среднее окно=3\n",
+    "expected_output": "Prices: [10 12 11 14 16 13 15 18 17 20]\nMA(3): [11.   12.33 13.67 14.33 14.67 15.33 16.67]",
+    "tags": [
+      "numpy",
+      "convolve",
+      "rolling",
+      "mean"
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Сортировка и argsort",
+    "description": "Дан массив оценок с именами студентов. Отсортируй оценки по убыванию и выведи пары имя-оценка в правильном порядке.",
+    "hint": "np.argsort() возвращает индексы сортировки. [::-1] для обратного порядка. names[idx] для переиндексации.",
+    "starter": "import numpy as np\n\nnames = np.array(['Alice', 'Bob', 'Carol', 'Dave', 'Eve'])\nscores = np.array([85, 92, 78, 95, 88])\n\n# твой код здесь — отсортируй по убыванию score\nfor name, score in zip(sorted_names, sorted_scores):\n    print(f'{name}: {score}')\n",
+    "expected_output": "Dave: 95\nBob: 92\nEve: 88\nAlice: 85\nCarol: 78",
+    "tags": [
+      "numpy",
+      "argsort",
+      "sort",
+      "indexing"
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "numpy",
+    "level": "средний",
+    "title": "Перцентили и квартили",
+    "description": "Для массива данных о доходах вычисли медиану, 25-й и 75-й перцентили (Q1 и Q3), а также межквартильный диапазон (IQR).",
+    "hint": "np.percentile(arr, [25, 50, 75]) возвращает массив квартилей. IQR = Q3 - Q1.",
+    "starter": "import numpy as np\n\nincome = np.array([25000, 32000, 45000, 28000, 55000, 38000, 72000, 41000, 33000, 60000])\n\n# твой код здесь\n# выведи Q1, медиану, Q3 и IQR\n",
+    "expected_output": "Q1: 32250.0\nMedian: 39500.0\nQ3: 53750.0\nIQR: 21500.0",
+    "tags": [
+      "numpy",
+      "percentile",
+      "quartile",
+      "IQR"
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "visualization",
+    "level": "базовый",
+    "title": "Данные для гистограммы",
+    "description": "Вычисли границы бинов для гистограммы распределения оценок (5 бинов от 0 до 100). Подсчитай количество оценок в каждом бине и выведи.",
+    "hint": "Используй np.histogram(data, bins=5, range=(0,100)). Результат — (counts, bin_edges).",
+    "starter": "import numpy as np\n\ngrades = np.array([45, 67, 82, 91, 55, 73, 88, 62, 79, 95, 51, 84, 70, 93, 77])\n\n# твой код здесь — вычисли гистограмму с 5 бинами [0,100]\n# выведи каждый диапазон и количество в формате: [low-high]: count\n",
+    "expected_output": "[0-20]: 0\n[20-40]: 0\n[40-60]: 3\n[60-80]: 6\n[80-100]: 6",
+    "tags": [
+      "numpy",
+      "histogram",
+      "bins",
+      "distribution"
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "visualization",
+    "level": "базовый",
+    "title": "Статистика для диаграммы рассеяния",
+    "description": "Для пар (x, y) вычисли коэффициент корреляции Пирсона и уравнение линии тренда. Выведи корреляцию и параметры линии.",
+    "hint": "np.corrcoef(x, y)[0,1] для корреляции. np.polyfit(x, y, 1) для линии тренда (slope, intercept).",
+    "starter": "import numpy as np\n\nx = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])\ny = np.array([2.1, 3.9, 6.2, 7.8, 10.1, 12.3, 13.8, 16.2, 18.1, 20.0])\n\n# твой код здесь\n# 1. корреляция (round 4)\n# 2. slope и intercept (round 2)\n",
+    "expected_output": "Correlation: 0.9998\nSlope: 1.97\nIntercept: 0.13",
+    "tags": [
+      "numpy",
+      "correlation",
+      "polyfit",
+      "trend"
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "visualization",
+    "level": "базовый",
+    "title": "Текстовая гистограмма",
+    "description": "Создай текстовую гистограмму продаж по месяцам: каждый столбик — строка символов '#', пропорциональная значению (масштаб: 1 # = 100 продаж).",
+    "hint": "Используй int(value / 100) для количества символов. f'{month:<3} | {'#' * count}'",
+    "starter": "sales = {\n    'Jan': 1200, 'Feb': 850, 'Mar': 1500,\n    'Apr': 1100, 'May': 1750, 'Jun': 900\n}\n\n# твой код здесь — текстовая гистограмма\n",
+    "expected_output": "Jan | ############\nFeb | ########\nMar | ###############\nApr | ###########\nMay | #################\nJun | #########",
+    "tags": [
+      "dict",
+      "str",
+      "formatting",
+      "visualization"
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "visualization",
+    "level": "базовый",
+    "title": "RGB цветовая палитра",
+    "description": "Создай градиент из 5 цветов от синего (0,0,255) до красного (255,0,0). Выведи каждый цвет в формате RGB(r, g, b).",
+    "hint": "Используй np.linspace(0, 255, 5). R растёт от 0 до 255, B падает от 255 до 0, G = 0.",
+    "starter": "import numpy as np\n\n# твой код здесь — градиент из 5 цветов от синего к красному\n# формат: RGB(r, g, b)\n",
+    "expected_output": "RGB(0, 0, 255)\nRGB(64, 0, 191)\nRGB(128, 0, 128)\nRGB(191, 0, 64)\nRGB(255, 0, 0)",
+    "tags": [
+      "numpy",
+      "linspace",
+      "RGB",
+      "color"
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "visualization",
+    "level": "базовый",
+    "title": "Данные для круговой диаграммы",
+    "description": "Рассчитай процентное распределение бюджета по категориям и выведи каждую категорию с процентом (1 знак после запятой).",
+    "hint": "Сумма всех значений — знаменатель. percent = value / total * 100. round(x, 1).",
+    "starter": "budget = {\n    'Еда': 15000,\n    'Жильё': 30000,\n    'Транспорт': 8000,\n    'Развлечения': 5000,\n    'Сбережения': 12000\n}\n\n# твой код здесь — процентное распределение\n",
+    "expected_output": "Еда: 21.4%\nЖильё: 42.9%\nТранспорт: 11.4%\nРазвлечения: 7.1%\nСбережения: 17.1%",
+    "tags": [
+      "dict",
+      "percentage",
+      "pie chart",
+      "formatting"
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "visualization",
+    "level": "базовый",
+    "title": "Сохранение графика в файл",
+    "description": "Построй линейный график изменения температуры по дням с заголовком и подписями осей. Сохрани в файл и выведи подтверждение.",
+    "hint": "matplotlib.use('Agg') перед импортом pyplot. plt.savefig('/tmp/temp.png'). print('Saved')",
+    "starter": "import matplotlib\nmatplotlib.use('Agg')\nimport matplotlib.pyplot as plt\n\ndays = list(range(1, 8))\ntemps = [15, 17, 14, 19, 22, 20, 18]\n\n# твой код здесь — линейный график с заголовком\nplt.savefig('/tmp/temp_chart.png')\nprint('График сохранён')\n",
+    "expected_output": "График сохранён",
+    "tags": [
+      "matplotlib",
+      "savefig",
+      "plot",
+      "Agg"
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Статистика выбросов",
+    "description": "Определи выбросы в данных методом IQR (значения ниже Q1 - 1.5*IQR или выше Q3 + 1.5*IQR). Выведи количество выбросов и их значения.",
+    "hint": "Q1, Q3 = np.percentile(data, [25, 75]). IQR = Q3 - Q1. lower = Q1 - 1.5*IQR. upper = Q3 + 1.5*IQR.",
+    "starter": "import numpy as np\n\ndata = np.array([12, 15, 14, 10, 13, 11, 14, 100, 12, 15, 13, -20, 14, 12, 11])\n\n# твой код здесь — метод IQR для выбросов\n# выведи количество выбросов и их значения\n",
+    "expected_output": "Выбросов: 2\nЗначения: [-20 100]",
+    "tags": [
+      "numpy",
+      "IQR",
+      "outliers",
+      "percentile"
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Корреляционная матрица",
+    "description": "Вычисли корреляционную матрицу для трёх числовых переменных. Выведи матрицу с округлением до 2 знаков.",
+    "hint": "np.corrcoef([x, y, z]) или pd.DataFrame.corr(). round(x, 2) или np.round(matrix, 2).",
+    "starter": "import numpy as np\n\nnp.random.seed(1)\nx = np.arange(1, 11)\ny = 2 * x + np.random.normal(0, 1, 10)\nz = -x + np.random.normal(0, 2, 10)\n\n# твой код здесь — корреляционная матрица\n",
+    "expected_output": "[[ 1.   0.99 -0.97]\n [ 0.99  1.  -0.97]\n [-0.97 -0.97  1.  ]]",
+    "tags": [
+      "numpy",
+      "corrcoef",
+      "correlation matrix",
+      "statistics"
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Описание гистограммы",
+    "description": "Для набора данных вычисли все необходимые параметры для построения гистограммы: количество бинов по формуле Стёрджеса, ширину бина и границы. Выведи параметры.",
+    "hint": "Бинов по Стёрджесу: int(1 + 3.322 * np.log10(n)). Ширина = (max - min) / bins. np.round().",
+    "starter": "import numpy as np\n\nnp.random.seed(42)\ndata = np.random.normal(50, 15, 100)\n\n# твой код здесь\n# 1. количество бинов по Стёрджесу\n# 2. ширина бина\n# 3. минимум и максимум данных\n",
+    "expected_output": "Bins (Sturges): 8\nBin width: 8.04\nData range: [8.97, 89.35]",
+    "tags": [
+      "numpy",
+      "histogram",
+      "Sturges",
+      "statistics"
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Нормализация для тепловой карты",
+    "description": "Нормализуй матрицу данных для тепловой карты в диапазон [0, 1]. Выведи исходную и нормализованную матрицы.",
+    "hint": "norm = (matrix - matrix.min()) / (matrix.max() - matrix.min()). np.round(result, 2).",
+    "starter": "import numpy as np\n\nmatrix = np.array([\n    [10, 50, 30],\n    [70, 20, 90],\n    [40, 80, 60]\n])\nprint('Original:')\nprint(matrix)\n\n# твой код здесь — нормализуй матрицу\nprint('Normalized:')\n",
+    "expected_output": "Original:\n[[10 50 30]\n [70 20 90]\n [40 80 60]]\nNormalized:\n[[0.   0.5  0.25]\n [0.75 0.12 1.  ]\n [0.38 0.88 0.62]]",
+    "tags": [
+      "numpy",
+      "normalization",
+      "heatmap",
+      "matrix"
+    ]
+  },
+  {
+    "id": 59,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Аннотации для графика",
+    "description": "Для данных продаж найди месяц с максимальными и минимальными продажами. Выведи данные для аннотаций: месяц, значение и метку.",
+    "hint": "np.argmax() и np.argmin() возвращают индекс максимума и минимума.",
+    "starter": "import numpy as np\n\nmonths = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']\nsales = np.array([1200, 950, 1100, 1400, 1800, 2100, 2300, 2200, 1700, 1500, 1300, 1900])\n\n# твой код здесь\n# найди и выведи данные для аннотаций max и min\n",
+    "expected_output": "MAX: Июл = 2300\nMIN: Фев = 950",
+    "tags": [
+      "numpy",
+      "argmax",
+      "argmin",
+      "annotation"
+    ]
+  },
+  {
+    "id": 60,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Подготовка данных для bar chart",
+    "description": "Из DataFrame с продажами подготовь данные для столбчатой диаграммы: агрегируй по категориям, отсортируй по убыванию и вычисли процентный вклад каждой категории.",
+    "hint": "df.groupby('category')['sales'].sum(). sort_values(ascending=False). contrib = val / total * 100.",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'category': ['A','B','A','C','B','A','C','B','D'],\n    'sales': [100, 150, 200, 80, 120, 90, 160, 110, 70]\n})\n\n# твой код здесь — суммируй, отсортируй, вычисли % вклад\n",
+    "expected_output": "A: 390 (36.8%)\nB: 380 (35.8%)\nC: 240 (22.6%)\nD: 70 (6.6%)",
+    "tags": [
+      "pandas",
+      "groupby",
+      "percentage",
+      "bar chart"
+    ]
+  },
+  {
+    "id": 61,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Матрица scatter plot данных",
+    "description": "Для трёх переменных вычисли все попарные корреляции и выведи их в виде форматированной таблицы (матрица корреляций с именами переменных).",
+    "hint": "Используй pd.DataFrame с данными и .corr() метод. Выведи с round(2).",
+    "starter": "import pandas as pd\nimport numpy as np\n\nnp.random.seed(5)\ndf = pd.DataFrame({\n    'age':    np.random.randint(20, 60, 50),\n    'income': np.random.randint(30000, 100000, 50),\n    'score':  np.random.randint(50, 100, 50)\n})\n\n# твой код здесь — матрица корреляций, round(2)\n",
+    "expected_output": "        age  income  score\nage    1.00   -0.07  -0.14\nincome -0.07   1.00  -0.02\nscore  -0.14  -0.02   1.00",
+    "tags": [
+      "pandas",
+      "corr",
+      "correlation",
+      "scatter"
+    ]
+  },
+  {
+    "id": 62,
+    "topic": "visualization",
+    "level": "средний",
+    "title": "Тепловая карта: форматированный вывод",
+    "description": "Для матрицы оценок качества продуктов выведи текстовую тепловую карту используя символы: '++' (≥8), ' +' (≥6), ' -' (≥4), '--' (<4).",
+    "hint": "Вложенный цикл по строкам и столбцам. Условный выбор символа по значению.",
+    "starter": "scores = [\n    [9, 7, 3, 5],\n    [6, 2, 8, 4],\n    [5, 9, 6, 1],\n    [8, 4, 7, 9]\n]\nlabels_row = ['P1', 'P2', 'P3', 'P4']\nlabels_col = ['Q', 'R', 'S', 'T']\n\n# твой код здесь — текстовая тепловая карта\n",
+    "expected_output": "    Q   R   S   T\nP1 ++  +  --   +\nP2  + --  ++  --\nP3  + ++   + --\nP4 ++  --  +  ++",
+    "tags": [
+      "list",
+      "loop",
+      "formatting",
+      "heatmap"
+    ]
+  },
+  {
+    "id": 63,
+    "topic": "python-oop",
+    "level": "базовый",
+    "title": "Класс Rectangle",
+    "description": "Создай класс Rectangle с атрибутами width и height. Добавь методы area() и perimeter(). Создай экземпляр и выведи результаты.",
+    "hint": "class Rectangle: def __init__(self, width, height). Area = width * height. Perimeter = 2 * (width + height).",
+    "starter": "class Rectangle:\n    # твой код здесь\n    pass\n\nrect = Rectangle(8, 5)\nprint(f'Area: {rect.area()}')\nprint(f'Perimeter: {rect.perimeter()}')\n",
+    "expected_output": "Area: 40\nPerimeter: 26",
+    "tags": [
+      "class",
+      "__init__",
+      "methods",
+      "OOP"
+    ]
+  },
+  {
+    "id": 64,
+    "topic": "python-oop",
+    "level": "базовый",
+    "title": "__str__ и __repr__",
+    "description": "Создай класс Person с полями name и age. Реализуй __str__ для читаемого вывода и __repr__ для технического представления.",
+    "hint": "__str__ вызывается при print(). __repr__ при repr() или в интерактивной консоли. Разные форматы.",
+    "starter": "class Person:\n    # твой код здесь\n    pass\n\np = Person('Alice', 30)\nprint(p)         # __str__\nprint(repr(p))   # __repr__\n",
+    "expected_output": "Person: Alice (age 30)\nPerson(name='Alice', age=30)",
+    "tags": [
+      "class",
+      "__str__",
+      "__repr__",
+      "OOP"
+    ]
+  },
+  {
+    "id": 65,
+    "topic": "python-oop",
+    "level": "базовый",
+    "title": "Наследование: Shape -> Circle",
+    "description": "Создай базовый класс Shape с методом describe(). Создай подкласс Circle с атрибутом radius и методом area(). Вызови оба метода.",
+    "hint": "class Circle(Shape). super().__init__() для вызова конструктора родителя. math.pi для числа π.",
+    "starter": "import math\n\nclass Shape:\n    def describe(self):\n        return f'I am a {self.__class__.__name__}'\n\nclass Circle(Shape):\n    # твой код здесь\n    pass\n\nc = Circle(5)\nprint(c.describe())\nprint(f'Area: {c.area():.2f}')\n",
+    "expected_output": "I am a Circle\nArea: 78.54",
+    "tags": [
+      "inheritance",
+      "class",
+      "super",
+      "math"
+    ]
+  },
+  {
+    "id": 66,
+    "topic": "python-oop",
+    "level": "базовый",
+    "title": "Классовые и статические методы",
+    "description": "Создай класс Temperature с атрибутом celsius. Добавь classmethod from_fahrenheit() и staticmethod is_freezing(celsius). Протестируй оба.",
+    "hint": "@classmethod принимает cls. @staticmethod не принимает self/cls. F to C: (f - 32) * 5/9.",
+    "starter": "class Temperature:\n    def __init__(self, celsius):\n        self.celsius = celsius\n\n    # твой код здесь\n    # classmethod: from_fahrenheit(cls, fahrenheit)\n    # staticmethod: is_freezing(celsius)\n\nt = Temperature.from_fahrenheit(212)\nprint(f'{t.celsius:.1f}°C')\nprint(Temperature.is_freezing(0))\nprint(Temperature.is_freezing(25))\n",
+    "expected_output": "100.0°C\nTrue\nFalse",
+    "tags": [
+      "classmethod",
+      "staticmethod",
+      "class",
+      "OOP"
+    ]
+  },
+  {
+    "id": 67,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Магические методы сравнения",
+    "description": "Создай класс Student с полями name и gpa. Реализуй __lt__, __eq__ и __gt__ для сравнения студентов по GPA. Отсортируй список студентов.",
+    "hint": "__lt__(self, other) return self.gpa < other.gpa. Список можно сортировать sort() если реализованы магические методы.",
+    "starter": "class Student:\n    def __init__(self, name, gpa):\n        self.name = name\n        self.gpa = gpa\n\n    # твой код здесь — __lt__, __eq__, __gt__\n\n    def __repr__(self):\n        return f'{self.name}({self.gpa})'\n\nstudents = [Student('Bob', 3.5), Student('Alice', 3.9), Student('Carol', 3.2)]\nstudents.sort()\nprint(students)\n",
+    "expected_output": "[Carol(3.2), Bob(3.5), Alice(3.9)]",
+    "tags": [
+      "__lt__",
+      "__eq__",
+      "__gt__",
+      "sorting",
+      "OOP"
+    ]
+  },
+  {
+    "id": 68,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Property и setter",
+    "description": "Создай класс Circle с приватным _radius. Используй @property для геттера и @radius.setter с валидацией (радиус > 0). При неверном значении выброси ValueError.",
+    "hint": "@property создаёт getter. @attr.setter создаёт setter. if value <= 0: raise ValueError('Radius must be positive')",
+    "starter": "import math\n\nclass Circle:\n    def __init__(self, radius):\n        self.radius = radius  # вызовет setter\n\n    # твой код здесь — property и setter с валидацией\n\nc = Circle(5)\nprint(f'Area: {math.pi * c.radius**2:.2f}')\nc.radius = 10\nprint(f'New area: {math.pi * c.radius**2:.2f}')\ntry:\n    c.radius = -1\nexcept ValueError as e:\n    print(e)\n",
+    "expected_output": "Area: 78.54\nNew area: 314.16\nRadius must be positive",
+    "tags": [
+      "property",
+      "setter",
+      "validation",
+      "OOP"
+    ]
+  },
+  {
+    "id": 69,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Паттерн Singleton",
+    "description": "Реализуй паттерн Singleton для класса Config, который хранит настройки. Убедись, что все обращения к Config возвращают один и тот же объект.",
+    "hint": "Перегрузи __new__. cls._instance = None. if not cls._instance: cls._instance = super().__new__(cls).",
+    "starter": "class Config:\n    _instance = None\n\n    def __new__(cls):\n        # твой код здесь — singleton\n        pass\n\n    def __init__(self):\n        if not hasattr(self, 'settings'):\n            self.settings = {}\n\nc1 = Config()\nc2 = Config()\nc1.settings['debug'] = True\nprint(c2.settings.get('debug'))  # True\nprint(c1 is c2)                  # True\n",
+    "expected_output": "True\nTrue",
+    "tags": [
+      "singleton",
+      "__new__",
+      "design pattern",
+      "OOP"
+    ]
+  },
+  {
+    "id": 70,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Абстрактный базовый класс",
+    "description": "Создай абстрактный класс Animal с абстрактным методом speak(). Создай подклассы Dog и Cat, реализующие speak(). Вызови speak() для каждого.",
+    "hint": "from abc import ABC, abstractmethod. @abstractmethod над методом. Подкласс обязан реализовать все abstractmethod.",
+    "starter": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    def __init__(self, name):\n        self.name = name\n\n    @abstractmethod\n    def speak(self):\n        pass\n\n# твой код здесь — классы Dog и Cat\n\nanimals = [Dog('Buddy'), Cat('Whiskers'), Dog('Max')]\nfor animal in animals:\n    print(animal.speak())\n",
+    "expected_output": "Buddy says: Woof!\nWhiskers says: Meow!\nMax says: Woof!",
+    "tags": [
+      "ABC",
+      "abstractmethod",
+      "inheritance",
+      "OOP"
+    ]
+  },
+  {
+    "id": 71,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Класс Stack (стек)",
+    "description": "Реализуй класс Stack с методами push(item), pop(), peek(), is_empty() и __len__(). Протестируй все операции.",
+    "hint": "Используй список self._items = [] внутри. pop() должен выбрасывать IndexError если стек пуст.",
+    "starter": "class Stack:\n    def __init__(self):\n        self._items = []\n\n    # твой код здесь\n\ns = Stack()\nprint(s.is_empty())  # True\ns.push(1)\ns.push(2)\ns.push(3)\nprint(len(s))        # 3\nprint(s.peek())      # 3\nprint(s.pop())       # 3\nprint(len(s))        # 2\n",
+    "expected_output": "True\n3\n3\n3\n2",
+    "tags": [
+      "class",
+      "stack",
+      "data structure",
+      "OOP"
+    ]
+  },
+  {
+    "id": 72,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Итерируемый класс Range",
+    "description": "Создай класс NumberRange, который реализует протокол итератора (__iter__ и __next__). Класс должен выдавать числа от start до end с заданным шагом.",
+    "hint": "__iter__ возвращает self. __next__ увеличивает current и проверяет условие. Вызови raise StopIteration когда закончились.",
+    "starter": "class NumberRange:\n    def __init__(self, start, end, step=1):\n        self.start = start\n        self.end = end\n        self.step = step\n        self.current = start\n\n    # твой код здесь — __iter__ и __next__\n\nfor n in NumberRange(0, 10, 2):\n    print(n, end=' ')\nprint()\nprint(list(NumberRange(1, 6)))\n",
+    "expected_output": "0 2 4 6 8 \n[1, 2, 3, 4, 5]",
+    "tags": [
+      "iterator",
+      "__iter__",
+      "__next__",
+      "OOP"
+    ]
+  },
+  {
+    "id": 73,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Множественное наследование и MRO",
+    "description": "Создай классы Flyable и Swimmable с методами fly() и swim(). Создай класс Duck, наследующий оба. Вызови все методы и проверь MRO.",
+    "hint": "class Duck(Flyable, Swimmable). Duck.__mro__ показывает порядок разрешения методов. super() следует MRO.",
+    "starter": "class Flyable:\n    def fly(self):\n        return f'{self.name} is flying'\n\nclass Swimmable:\n    def swim(self):\n        return f'{self.name} is swimming'\n\n# твой код здесь — класс Duck\n\nd = Duck('Donald')\nprint(d.fly())\nprint(d.swim())\nprint(d.quack())\nprint([c.__name__ for c in Duck.__mro__])\n",
+    "expected_output": "Donald is flying\nDonald is swimming\nDonald says: Quack!\n['Duck', 'Flyable', 'Swimmable', 'object']",
+    "tags": [
+      "multiple inheritance",
+      "MRO",
+      "mixin",
+      "OOP"
+    ]
+  },
+  {
+    "id": 74,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "Паттерн Observer",
+    "description": "Реализуй паттерн Observer: класс EventEmitter с методами subscribe(event, handler) и emit(event, data). При emit вызывай всех подписчиков.",
+    "hint": "Храни handlers как dict: {event: [list of functions]}. При emit итерируй список handlers[event] и вызывай каждый.",
+    "starter": "class EventEmitter:\n    def __init__(self):\n        self._handlers = {}\n\n    # твой код здесь — subscribe и emit\n\nemitter = EventEmitter()\n\ndef on_data(data):\n    print(f'Handler 1: {data}')\n\ndef on_data_2(data):\n    print(f'Handler 2: {data.upper()}')\n\nemitter.subscribe('data', on_data)\nemitter.subscribe('data', on_data_2)\nemitter.emit('data', 'hello world')\n",
+    "expected_output": "Handler 1: hello world\nHandler 2: HELLO WORLD",
+    "tags": [
+      "observer",
+      "design pattern",
+      "event",
+      "OOP"
+    ]
+  },
+  {
+    "id": 75,
+    "topic": "python-oop",
+    "level": "средний",
+    "title": "__slots__ для оптимизации",
+    "description": "Создай класс Point3D с __slots__ = ['x', 'y', 'z']. Сравни потребление памяти с обычным классом. Выведи координаты и расстояние до начала координат.",
+    "hint": "__slots__ заменяет __dict__ и экономит память. sys.getsizeof() для размера. math.sqrt(x**2 + y**2 + z**2).",
+    "starter": "import math\nimport sys\n\nclass Point3D:\n    __slots__ = ['x', 'y', 'z']\n\n    # твой код здесь\n\nclass Point3DRegular:\n    def __init__(self, x, y, z):\n        self.x, self.y, self.z = x, y, z\n\np = Point3D(3, 4, 5)\nprint(f'Point: ({p.x}, {p.y}, {p.z})')\nprint(f'Distance: {p.distance():.4f}')\nprint(f'Slots saves memory: {sys.getsizeof(Point3DRegular(1,2,3)) > sys.getsizeof(p)}')\n",
+    "expected_output": "Point: (3, 4, 5)\nDistance: 7.0711\nSlots saves memory: True",
+    "tags": [
+      "__slots__",
+      "memory",
+      "optimization",
+      "OOP"
+    ]
   }
 ]
