@@ -50,3 +50,4 @@ jobs:
           git add docs/search-index.json
           git commit -m "Update notebook search index"
           git push
+
