@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник по проекту - Поиск фильмов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #34495e;
+        }
+        td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .file-section {
+            background-color: #ecf0f1;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .method {
+            color: #27ae60;
+        }
+        .property {
+            color: #2980b9;
+        }
+        .return-type {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>📋 Справочник проекта "Поиск фильмов"</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Файл</th>
+                <th>Назначение</th>
+                <th>Класс/Функция</th>
+                <th>Метод/Поле</th>
+                <th>Тип</th>
+                <th>Параметры</th>
+                <th>Возвращает</th>
+                <th>Описание</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- config.py -->
+            <tr class="file-section">
+                <td colspan="8">🔧 config.py — Загрузка конфигурации из .env</td>
+            </tr>
+            <tr>
+                <td>config.py</td>
+                <td>Конфигурация</td>
+                <td><code>MYSQL_CONFIG</code></td>
+                <td>dict</td>
+                <td>dict</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Параметры подключения MySQL: host, port, user, password, db</td>
+            </tr>
+            <tr>
+                <td>config.py</td>
+                <td>Конфигурация</td>
+                <td><code>MONGO_URI</code></td>
+                <td>str</td>
+                <td>str</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Строка подключения к MongoDB</td>
+            </tr>
+            <tr>
+                <td>config.py</td>
+                <td>Конфигурация</td>
+                <td><code>MONGO_DB</code></td>
+                <td>str</td>
+                <td>str</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Название базы данных MongoDB</td>
+            </tr>
+            <tr>
+                <td>config.py</td>
+                <td>Конфигурация</td>
+                <td><code>MONGO_COLLECTION</code></td>
+                <td>str</td>
+                <td>str</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Коллекция для логов (default: final_project_group_name)</td>
+            </tr>
+            <tr>
+                <td>config.py</td>
+                <td>Конфигурация</td>
+                <td colspan="2" class="method"><code>show_config()</code></td>
+                <td>function</td>
+                <td>-</td>
+                <td><span class="return-type">dict</span></td>
+                <td>Для разработчика: показывает хосты, БД, коллекции (без паролей)</td>
+            </tr>
+
+            <!-- mysql_connector.py -->
+            <tr class="file-section">
+                <td colspan="8">🗄️ mysql_connector.py — Работа с MySQL sakila</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td colspan="2"><code>MySQLConnector</code> (класс)</td>
+                <td>class</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Работа с MySQL базой данных sakila</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="property">conn (поле)</td>
+                <td><span class="return-type">Connection</span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Объект соединения с MySQL</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">__init__()</td>
+                <td>method</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Инициализация, создает пустое поле conn</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">connect()</td>
+                <td>method</td>
+                <td>-</td>
+                <td><span class="return-type">Connection</span></td>
+                <td>Подключается к MySQL, возвращает объект соединения</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">close()</td>
+                <td>method</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Закрывает соединение с MySQL</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">get_genres()</td>
+                <td>method</td>
+                <td>-</td>
+                <td><span class="return-type">list[dict]</span></td>
+                <td>Возвращает список жанров с min/max годом</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">search_by_keyword()</td>
+                <td>method</td>
+                <td>keyword, limit, offset</td>
+                <td><span class="return-type">list[dict]</span></td>
+                <td>Ищет фильмы по ключевому слову с пагинацией</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">count_by_keyword()</td>
+                <td>method</td>
+                <td>keyword</td>
+                <td><span class="return-type">int</span></td>
+                <td>Подсчитывает количество фильмов по ключевому слову</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">search_by_genre_and_year()</td>
+                <td>method</td>
+                <td>category_name, year_from, year_to, limit, offset</td>
+                <td><span class="return-type">list[dict]</span></td>
+                <td>Ищет фильмы по жанру и диапазону годов</td>
+            </tr>
+            <tr>
+                <td>mysql_connector.py</td>
+                <td>MySQL</td>
+                <td><code>MySQLConnector</code></td>
+                <td class="method">count_by_genre_and_year()</td>
+                <td>method</td>
+                <td>category_name, year_from, year_to</td>
+                <td><span class="return-type">int</span></td>
+                <td>Подсчитывает количество фильмов по жанру/годам</td>
+            </tr>
+
+            <!-- mongo_connector.py -->
+            <tr class="file-section">
+                <td colspan="8">🔌 mongo_connector.py — Единая точка подключения MongoDB</td>
+            </tr>
+            <tr>
+                <td>mongo_connector.py</td>
+                <td>MongoDB</td>
+                <td colspan="2"><code>MongoConnector</code> (класс)</td>
+                <td>class</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Единая точка для LogWriter и LogStats (один коннектор)</td>
+            </tr>
+            <tr>
+                <td>mongo_connector.py</td>
+                <td>MongoDB</td>
+                <td><code>MongoConnector</code></td>
+                <td class="property">client (поле)</td>
+                <td><span class="return-type">MongoClient</span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Объект подключения к MongoDB</td>
+            </tr>
+            <tr>
+                <td>mongo_connector.py</td>
+                <td>MongoDB</td>
+                <td><code>MongoConnector</code></td>
+                <td class="property">col (поле)</td>
+                <td><span class="return-type">Collection</span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Ссылка на коллекцию MongoDB</td>
+            </tr>
+            <tr>
+                <td>mongo_connector.py</td>
+                <td>MongoDB</td>
+                <td><code>MongoConnector</code></td>
+                <td class="property">connected (поле)</td>
+                <td><span class="return-type">bool</span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Флаг успешного подключения (True/False)</td>
+            </tr>
+            <tr>
+                <td>mongo_connector.py</td>
+                <td>MongoDB</td>
+                <td><code>MongoConnector</code></td>
+                <td class="method">__init__()</td>
+                <td>method</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Инициализация, все поля = None/False</td>
+            </tr>
+            <tr>
+                <td>mongo_connector.py</td>
+                <td>MongoDB</td>
+                <td><code>MongoConnector</code></td>
+                <td class="method">connect()</td>
+                <td>method</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Подключается к MongoDB (timeout=2000мс), делает ping для проверки</td>
+            </tr>
+            <tr>
+                <td>mongo_connector.py</td>
+                <td>MongoDB</td>
+                <td><code>MongoConnector</code></td>
+                <td class="method">close()</td>
+                <td>method</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Закрывает соединение с MongoDB</td>
+            </tr>
+
+            <!-- log_writer.py -->
+            <tr class="file-section">
+                <td colspan="8">📝 log_writer.py — Запись логов в MongoDB</td>
+            </tr>
+            <tr>
+                <td>log_writer.py</td>
+                <td>Логирование</td>
+                <td colspan="2"><code>LogWriter</code> (класс)</td>
+                <td>class</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Записывает логи поисков в MongoDB</td>
+            </tr>
+            <tr>
+                <td>log_writer.py</td>
+                <td>Логирование</td>
+                <td><code>LogWriter</code></td>
+                <td class="property">mongo_connector (поле)</td>
+                <td><span class="return-type">MongoConnector</span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Общий объект коннектора (dependency injection)</td>
+            </tr>
+            <tr>
+                <td>log_writer.py</td>
+                <td>Логирование</td>
+                <td><code>LogWriter</code></td>
+                <td class="property">connected (@property)</td>
+                <td><span class="return-type">bool</span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Возвращает статус подключения из mongo_connector</td>
+            </tr>
+            <tr>
+                <td>log_writer.py</td>
+                <td>Логирование</td>
+                <td><code>LogWriter</code></td>
+                <td class="method">__init__()</td>
+                <td>method</td>
+                <td>mongo_connector: MongoConnector</td>
+                <td>-</td>
+                <td>Принимает готовый MongoConnector</td>
+            </tr>
+            <tr>
+                <td>log_writer.py</td>
+                <td>Логирование</td>
+                <td><code>LogWriter</code></td>
+                <td class="method">write_search_log()</td>
+                <td>method</td>
+                <td>search_type, params, results_count</td>
+                <td>-</td>
+                <td>Записывает лог поиска в MongoDB с UTC timestamp</td>
+            </tr>
+
+            <!-- log_stats.py -->
+            <tr class="file-section">
+                <td colspan="8">📊 log_stats.py — Чтение статистики из MongoDB</td>
+            </tr>
+            <tr>
+                <td>log_stats.py</td>
+                <td>Статистика</td>
+                <td colspan="2"><code>LogStats</code> (класс)</td>
+                <td>class</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Читает статистику поисков из MongoDB</td>
+            </tr>
+            <tr>
+                <td>log_stats.py</td>
+                <td>Статистика</td>
+                <td><code>LogStats</code></td>
+                <td class="property">mongo_connector (поле)</td>
+                <td><span class="return-type">MongoConnector</span></td>
+                <td>-</td>
+                <td>-</td>
+                <td>Общий объект коннектора</td>
+            </tr>
+            <tr>
+                <td>log_stats.py</td>
+                <td>Статистика</td>
+                <td><code>LogStats</code></td>
+                <td class="method">__init__()</td>
+                <td>method</td>
+                <td>mongo_connector: MongoConnector</td>
+                <td>-</td>
+                <td>Принимает готовый MongoConnector</td>
+            </tr>
+            <tr>
+                <td>log_stats.py</td>
+                <td>Статистика</td>
+                <td><code>LogStats</code></td>
+                <td class="method">is_connected()</td>
+                <td>method</td>
+                <td>-</td>
+                <td><span class="return-type">bool</span></td>
+                <td>Проверяет подключен ли MongoDB (перед входом в меню статистики)</td>
+            </tr>
+            <tr>
+                <td>log_stats.py</td>
+                <td>Статистика</td>
+                <td><code>LogStats</code></td>
+                <td class="method">get_top()</td>
+                <td>method</td>
+                <td>n, search_type</td>
+                <td><span class="return-type">list[dict]</span></td>
+                <td>TOP-N популярных запросов (keyword или genre_and_year)</td>
+            </tr>
+            <tr>
+                <td>log_stats.py</td>
+                <td>Статистика</td>
+                <td><code>LogStats</code></td>
+                <td class="method">get_recent()</td>
+                <td>method</td>
+                <td>n</td>
+                <td><span class="return-type">list[dict]</span></td>
+                <td>Последние N уникальных поисков (любого типа)</td>
+            </tr>
+            <tr>
+                <td>log_stats.py</td>
+                <td>Статистика</td>
+                <td><code>LogStats</code></td>
+                <td class="method">close()</td>
+                <td>method</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Пустая функция, закрытие делает MongoConnector</td>
+            </tr>
+
+            <!-- formatter.py -->
+            <tr class="file-section">
+                <td colspan="8">🎨 formatter.py — Форматирование таблиц (все методы static)</td>
+            </tr>
+            <tr>
+                <td>formatter.py</td>
+                <td>Форматирование</td>
+                <td colspan="2"><code>Formatter</code> (класс)</td>
+                <td>class</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Форматирование вывода таблиц в консоль</td>
+            </tr>
+            <tr>
+                <td>formatter.py</td>
+                <td>Форматирование</td>
+                <td><code>Formatter</code></td>
+                <td class="method">format_search_params()</td>
+                <td>method</td>
+                <td>search_type, params</td>
+                <td><span class="return-type">str</span></td>
+                <td>Преобразует параметры поиска в читаемую строку</td>
+            </tr>
+            <tr>
+                <td>formatter.py</td>
+                <td>Форматирование</td>
+                <td><code>Formatter</code></td>
+                <td class="method">pretty_print_stats()</td>
+                <td>method</td>
+                <td>headers, rows, empty_message</td>
+                <td>-</td>
+                <td>Выводит статистическую таблицу (5 колонок)</td>
+            </tr>
+            <tr>
+                <td>formatter.py</td>
+                <td>Форматирование</td>
+                <td><code>Formatter</code></td>
+                <td class="method">pretty_print_results()</td>
+                <td>method</td>
+                <td>results, start_index</td>
+                <td>-</td>
+                <td>Выводит результаты поиска фильмов (5 колонок)</td>
+            </tr>
+
+            <!-- main.py -->
+            <tr class="file-section">
+                <td colspan="8">▶️ main.py — Главная программа</td>
+            </tr>
+            <tr>
+                <td>main.py</td>
+                <td>Главная</td>
+                <td colspan="2"><code>menu()</code> (функция)</td>
+                <td>function</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Выводит главное меню (4 пункта: поиск keyword, жанр, статистика, выход)</td>
+            </tr>
+            <tr>
+                <td>main.py</td>
+                <td>Главная</td>
+                <td colspan="2"><code>menu_stats()</code> (функция)</td>
+                <td>function</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Выводит меню статистики (TOP-N, последние, назад)</td>
+            </tr>
+            <tr>
+                <td>main.py</td>
+                <td>Главная</td>
+                <td colspan="2"><code>main()</code> (функция)</td>
+                <td>function</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Основная функция: инициализация → подключение → меню → очистка</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

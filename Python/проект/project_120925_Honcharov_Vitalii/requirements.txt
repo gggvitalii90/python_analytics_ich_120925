@@ -1,0 +1,5 @@
+pymysql
+pymongo
+python-dotenv
+tabulate
+flask
