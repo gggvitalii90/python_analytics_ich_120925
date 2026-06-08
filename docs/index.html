@@ -75,14 +75,22 @@
         <div id="search-assistant" class="search-assistant" hidden></div>
       </section>
 
-      <section class="course-switcher" aria-label="Разделы курсов">
-        <button class="course-tab is-active" type="button" data-course="analytics">
+      <a class="practice-cta" href="practice.html">
+        <div class="practice-cta-text">
+          <strong>Попрактикуйся в задачах онлайн</strong>
+          <span>75 задач по Python, Pandas, NumPy и ООП — решай прямо в браузере без установки</span>
+        </div>
+        <span class="practice-cta-arrow">→</span>
+      </a>
+
+      <section class="course-switcher-sticky" aria-label="Разделы курсов">
+        <button class="main-tab is-active" type="button" data-course="analytics">
           <span>Python для аналитиков</span>
-          <strong id="analytics-count">0</strong>
+          <strong class="tab-badge" id="analytics-count">0</strong>
         </button>
-        <button class="course-tab" type="button" data-course="fundamental">
+        <button class="main-tab" type="button" data-course="fundamental">
           <span>Фундаментальный Python</span>
-          <strong id="fundamental-count">0</strong>
+          <strong class="tab-badge" id="fundamental-count">0</strong>
         </button>
       </section>
 
@@ -108,6 +116,7 @@
       </article>
     </template>
 
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.0/dist/umd/index.min.js"></script>
     <script src="portal.js"></script>
   </body>
 </html>

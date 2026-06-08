@@ -1,0 +1,197 @@
+{
+  "meta": {
+    "description": "Python OOP — classes, inheritance, magic methods"
+  },
+  "references": [
+    {
+      "id": "python-oop-dunder",
+      "title": "dunder / magic methods",
+      "package": "Python",
+      "type": "concept",
+      "terms": [
+        "dunder",
+        "magic methods",
+        "__str__",
+        "__repr__",
+        "__len__",
+        "__eq__",
+        "магические методы",
+        "специальные методы"
+      ],
+      "aliases": [
+        "__str__",
+        "__repr__",
+        "__len__",
+        "__eq__",
+        "__add__"
+      ],
+      "summary": "Official Python documentation for special (dunder) methods that customize class behavior.",
+      "import": "# built-in, no import needed",
+      "syntax": "class Book:\n    def __init__(self, title, pages):\n        self.title = title\n        self.pages = pages\n    def __str__(self):\n        return f'{self.title}'    # print(book)\n    def __repr__(self):\n        return f'Book({self.title!r})'  # repr(book)\n    def __len__(self):\n        return self.pages          # len(book)\n    def __eq__(self, other):\n        return self.title == other.title",
+      "related": [
+        "class statement",
+        "@property",
+        "isinstance"
+      ],
+      "docsUrl": "https://docs.python.org/3/reference/datamodel.html#special-method-names"
+    },
+    {
+      "id": "python-oop-property",
+      "title": "@property",
+      "package": "Python",
+      "type": "decorator",
+      "terms": [
+        "@property",
+        "property",
+        "getter setter",
+        "геттер сеттер",
+        "свойство класса"
+      ],
+      "aliases": [
+        "property decorator",
+        "get set method"
+      ],
+      "summary": "Official Python documentation for property decorator — getter/setter pattern.",
+      "import": "# built-in, no import needed",
+      "syntax": "class Circle:\n    def __init__(self, radius):\n        self._radius = radius\n\n    @property\n    def radius(self):\n        return self._radius\n\n    @radius.setter\n    def radius(self, value):\n        if value < 0:\n            raise ValueError('Radius must be positive')\n        self._radius = value\n\n    @property\n    def area(self):\n        return 3.14159 * self._radius ** 2\n\nc = Circle(5)\nprint(c.radius)  # 5  — как атрибут, не метод\nc.radius = 10",
+      "related": [
+        "class statement",
+        "dunder methods",
+        "@staticmethod"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#property"
+    },
+    {
+      "id": "python-oop-staticmethod",
+      "title": "@staticmethod and @classmethod",
+      "package": "Python",
+      "type": "decorator",
+      "terms": [
+        "@staticmethod",
+        "@classmethod",
+        "staticmethod",
+        "classmethod",
+        "static method",
+        "class method"
+      ],
+      "aliases": [
+        "метод без self",
+        "метод класса",
+        "cls"
+      ],
+      "summary": "Official Python documentation for static and class methods.",
+      "import": "# built-in, no import needed",
+      "syntax": "class MathHelper:\n    multiplier = 2\n\n    @staticmethod\n    def add(a, b):       # Нет self, нет cls — просто функция\n        return a + b\n\n    @classmethod\n    def double(cls, x):  # cls — ссылка на класс, не на объект\n        return x * cls.multiplier\n\nMathHelper.add(3, 4)     # 7\nMathHelper.double(5)     # 10",
+      "related": [
+        "class statement",
+        "@property",
+        "def"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/functions.html#staticmethod"
+    },
+    {
+      "id": "python-oop-inheritance",
+      "title": "Inheritance and super()",
+      "package": "Python",
+      "type": "concept",
+      "terms": [
+        "inheritance",
+        "super()",
+        "наследование",
+        "родительский класс",
+        "подкласс",
+        "extends"
+      ],
+      "aliases": [
+        "дочерний класс",
+        "базовый класс",
+        "super().__init__"
+      ],
+      "summary": "Official Python documentation for class inheritance and super().",
+      "import": "# built-in, no import needed",
+      "syntax": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        return '...'\n\nclass Dog(Animal):           # Dog наследует Animal\n    def __init__(self, name, breed):\n        super().__init__(name)  # вызов __init__ родителя\n        self.breed = breed\n    def speak(self):             # переопределение метода\n        return 'Woof!'\n\nd = Dog('Rex', 'Husky')\nprint(d.name)   # Rex  (из Animal)\nprint(d.speak())  # Woof!",
+      "related": [
+        "class statement",
+        "super()",
+        "isinstance"
+      ],
+      "docsUrl": "https://docs.python.org/3/tutorial/classes.html#inheritance"
+    },
+    {
+      "id": "python-oop-dataclass",
+      "title": "@dataclass",
+      "package": "dataclasses",
+      "type": "decorator",
+      "terms": [
+        "dataclass",
+        "@dataclass",
+        "dataclasses",
+        "датакласс",
+        "data class"
+      ],
+      "aliases": [
+        "автогенерация __init__",
+        "современный класс",
+        "класс данных"
+      ],
+      "summary": "Official Python documentation for dataclasses — auto-generate __init__, __repr__, __eq__.",
+      "import": "from dataclasses import dataclass, field",
+      "syntax": "from dataclasses import dataclass, field\n\n@dataclass\nclass Product:\n    name: str\n    price: float\n    tags: list = field(default_factory=list)\n\n# __init__, __repr__, __eq__ созданы автоматически\np = Product('Coffee', 5.99)\nprint(p)  # Product(name='Coffee', price=5.99, tags=[])\n\n@dataclass(frozen=True)  # неизменяемый\nclass Point:\n    x: float\n    y: float",
+      "related": [
+        "class statement",
+        "typing",
+        "@property"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/dataclasses.html"
+    },
+    {
+      "id": "python-oop-abc",
+      "title": "ABC — Abstract Base Class",
+      "package": "abc",
+      "type": "class",
+      "terms": [
+        "ABC",
+        "abstract class",
+        "абстрактный класс",
+        "abstractmethod",
+        "@abstractmethod"
+      ],
+      "aliases": [
+        "интерфейс Python",
+        "абстрактный метод",
+        "abstract base class"
+      ],
+      "summary": "Official Python documentation for abstract base classes.",
+      "import": "from abc import ABC, abstractmethod",
+      "syntax": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self) -> float:   # Обязательно переопределить\n        pass\n\n    @abstractmethod\n    def perimeter(self) -> float:\n        pass\n\nclass Circle(Shape):\n    def __init__(self, r):\n        self.r = r\n    def area(self):\n        return 3.14 * self.r ** 2\n    def perimeter(self):\n        return 2 * 3.14 * self.r\n\n# Shape()  # TypeError: Can't instantiate abstract class",
+      "related": [
+        "class statement",
+        "Inheritance",
+        "isinstance"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/abc.html"
+    },
+    {
+      "id": "python-oop-slots",
+      "title": "__slots__",
+      "package": "Python",
+      "type": "attribute",
+      "terms": [
+        "__slots__",
+        "slots",
+        "оптимизация памяти класса"
+      ],
+      "aliases": [
+        "фиксированные атрибуты класса"
+      ],
+      "summary": "Official Python documentation for __slots__ — restricts attributes and reduces memory usage.",
+      "import": "# built-in, no import needed",
+      "syntax": "class Point:\n    __slots__ = ('x', 'y')  # только эти атрибуты разрешены\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\np = Point(1, 2)\n# p.z = 3  # AttributeError: slots prevent this",
+      "related": [
+        "class statement",
+        "@dataclass"
+      ],
+      "docsUrl": "https://docs.python.org/3/reference/datamodel.html#slots"
+    }
+  ]
+}

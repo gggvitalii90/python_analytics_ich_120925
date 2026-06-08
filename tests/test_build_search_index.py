@@ -92,3 +92,24 @@ def test_sanitize_text_removes_public_database_credentials() -> None:
     assert "token123" not in sanitized
     assert 'password="password"' not in sanitized
     assert "[DB_CONNECTION_REDACTED]" in sanitized
+
+
+def test_search_index_does_not_contain_known_credentials(tmp_path: Path) -> None:
+    notebook = tmp_path / "notebooks" / "test_lesson.ipynb"
+    notebook.parent.mkdir()
+    sensitive_text = (
+        "mysql+pymysql://ich1:mypassword@YOUR_MYSQL_HOST/sakila\n"
+        "mongodb+srv://user:secret@cluster0.mongodb.net/\n"
+        'API_KEY = "my_secret_key"\n'
+        "normal code: df.groupby('col').sum()"
+    )
+    write_notebook(notebook, [{"cell_type": "code", "source": [sensitive_text]}])
+
+    index = build_index(tmp_path)
+    index_text = json.dumps(index)
+
+    assert "YOUR_MYSQL_HOST" not in index_text
+    assert "mypassword" not in index_text
+    assert "my_secret_key" not in index_text
+    assert "mongodb+srv://user:secret" not in index_text
+    assert "groupby" in index_text
