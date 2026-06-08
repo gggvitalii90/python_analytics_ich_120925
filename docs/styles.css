@@ -1247,6 +1247,15 @@ h1 {
     flex-direction: column;
     gap: 0.45rem;
   }
+  .main-tab {
+    font-size: 0.82rem;
+    padding: 0.55rem 0.65rem;
+  }
+  .tab-badge {
+    font-size: 0.78rem;
+    min-width: 1.6rem;
+    padding: 0.15rem 0.35rem;
+  }
 }
 
 .error-card {
