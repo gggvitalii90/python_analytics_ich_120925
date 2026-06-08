@@ -38,5 +38,6 @@ Thumbs.db
 _tmp_manual_test*/
 _tmp_pytest*/
 pytest-cache-files-*/
-Python/проект/
 лекции/
+*.mp4
+*.mov
