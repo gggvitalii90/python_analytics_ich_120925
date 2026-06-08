@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-06-08T16:57:48.179353+00:00",
-    "notebookCount": 201
+    "generatedAt": "2026-06-08T18:38:52.993349+00:00",
+    "notebookCount": 202
   },
   "notebooks": [
     {
@@ -1373,6 +1373,89 @@
           "cell": 32,
           "type": "code",
           "text": "# Постройте график данных + усредненный прогноз"
+        }
+      ]
+    },
+    {
+      "name": "HW_21.ipynb",
+      "path": "DZ_python_DA/HW_21.ipynb",
+      "course": "analytics",
+      "searchText": "HW_21.ipynb DZ_python_DA/HW_21.ipynb # <b><font color='teal'>Homework 21</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing from sklearn.model_selection import train_test_split from sklearn.linear_model import LinearRegression from sklearn.tree import DecisionTreeRegressor, plot_tree 1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье. <b>Описание данных: </b><br> Датасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br> Поля: - MedInc - медианный доход домохозяйства в block group - HouseAge - медианный возраст домов (лет) в block group - AveRooms - среднее число комнат на домохозяйство - AveBedrms - среднее число спален - Population - число людей в block group - AveOccup - среднее число людей на домохозяйство - Latitude - широта - Longitude - долгота # В переменную df_california запишите датасет fetch_california_housing # В переменную X запишите все данные из компонента data датасета # В переменную y запишите цену из компонента target датасета # В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные # Инициализируйте модель линейной регрессии в переменную model_lin_regr # Инициализируйте модель дерево решений в переменную model_tree_des # Обучите обе модели на обучающих данных # Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_dec # Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_dec и визуально сравните значения # Оцените работу моделей с помощью метрик эффективности и сравните результаты 2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность.",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='teal'>Homework 21</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nfrom sklearn.datasets import fetch_california_housing\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor, plot_tree"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье."
+        },
+        {
+          "cell": 4,
+          "type": "markdown",
+          "text": "<b>Описание данных: </b><br>\nДатасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br>\n\nПоля:\n- MedInc - медианный доход домохозяйства в block group\n- HouseAge - медианный возраст домов (лет) в block group\n- AveRooms - среднее число комнат на домохозяйство\n- AveBedrms - среднее число спален\n- Population - число людей в block group\n- AveOccup - среднее число людей на домохозяйство\n- Latitude - широта\n- Longitude - долгота"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# В переменную df_california запишите датасет fetch_california_housing"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# В переменную X запишите все данные из компонента data датасета"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# В переменную y запишите цену из компонента target датасета"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "# В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# Инициализируйте модель линейной регрессии в переменную model_lin_regr"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Инициализируйте модель дерево решений в переменную model_tree_des"
+        },
+        {
+          "cell": 11,
+          "type": "code",
+          "text": "# Обучите обе модели на обучающих данных"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "# Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_dec"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "# Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_dec и визуально сравните значения"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "# Оцените работу моделей с помощью метрик эффективности и сравните результаты"
+        },
+        {
+          "cell": 15,
+          "type": "markdown",
+          "text": "2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность."
         }
       ]
     },
