@@ -19,7 +19,8 @@ docs/               ← GitHub Pages (main ветка, /docs папка)
   styles.css        ← Все стили
   practice-tasks.json  ← 75 задач по 5 темам
   search-index.json    ← Индекс поиска (200+ ноутбуков, 2.8 MB)
-  references/          ← JSON карточки документации (11 файлов, ~184 записи)
+  reference-index.json ← Дополнительный файл карточек документации (загружается в portal.js)
+  references/          ← JSON карточки документации (13 файлов)
 scripts/
   build_search_index.py  ← Сборка search-index.json + редакция credentials
 .github/workflows/
