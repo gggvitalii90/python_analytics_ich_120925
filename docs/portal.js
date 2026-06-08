@@ -84,6 +84,23 @@ const queryAliases = {
   "duplicat": ["duplicated", "drop_duplicates"],
   "dublicated": ["duplicated", "drop_duplicates"],
   "histogramm": ["hist", "histogram", "histplot"],
+  "applymap": ["map", "apply", "applymap"],
+  "transpose": ["T", "transpose", "transposing"],
+  "transposing": ["T", "transpose"],
+  "vectorization": ["vectorize", "np.vectorize", "vectorized"],
+  "vectorize": ["vectorization", "np.vectorize"],
+  "etl": ["extract", "transform", "load", "pipeline"],
+  "cross_val_score": ["cross_val_score", "cross validation", "kfold", "k-fold"],
+  "crossvalidation": ["cross_val_score", "cross validation", "kfold"],
+  "gridsearchcv": ["GridSearchCV", "grid search", "hyperparameter"],
+  "gridsearch": ["GridSearchCV", "grid search", "hyperparameter tuning"],
+  "pipeline": ["Pipeline", "make_pipeline", "pipe"],
+  "to_excel": ["to_excel", "excel", "xlsx", "openpyxl"],
+  "pct_change": ["pct_change", "percent change", "returns"],
+  "set_index": ["set_index", "index", "reset_index"],
+  "reset_index": ["reset_index", "set_index", "index"],
+  "nunique": ["nunique", "unique count", "distinct"],
+  "crosstab": ["crosstab", "cross table", "contingency"],
 };
 
 const categoryOf = (path, name) => {

@@ -812,6 +812,230 @@
         "pandas.str accessor"
       ],
       "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.explode.html"
+    },
+    {
+      "id": "pandas-set-index",
+      "title": "DataFrame.set_index / reset_index",
+      "package": "pandas",
+      "terms": [
+        "set_index",
+        "reset_index",
+        "df.set_index",
+        "df.reset_index",
+        "индекс DataFrame",
+        "установить индекс",
+        "сбросить индекс"
+      ],
+      "aliases": [
+        "сделать столбец индексом",
+        "вернуть индекс в столбец",
+        "reindex"
+      ],
+      "summary": "Official pandas documentation for setting and resetting DataFrame index.",
+      "import": "import pandas as pd",
+      "syntax": "# Назначить столбец индексом\ndf = df.set_index('user_id')\n\n# Назначить несколько столбцов (MultiIndex)\ndf = df.set_index(['year', 'month'])\n\n# Вернуть индекс обратно в столбец\ndf = df.reset_index()\n\n# Сбросить и выбросить старый индекс\ndf = df.reset_index(drop=True)",
+      "related": [
+        "pandas.DataFrame.index",
+        "pandas.DataFrame.loc",
+        "pandas.MultiIndex"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html"
+    },
+    {
+      "id": "pandas-dtypes",
+      "title": "DataFrame.dtypes",
+      "package": "pandas",
+      "terms": [
+        "dtypes",
+        "df.dtypes",
+        "pandas dtypes",
+        "типы данных DataFrame",
+        "column types",
+        "dtype pandas"
+      ],
+      "aliases": [
+        "какие типы в датафрейме",
+        "проверить типы столбцов"
+      ],
+      "summary": "Official pandas documentation for inspecting and changing column data types.",
+      "import": "import pandas as pd",
+      "syntax": "# Просмотреть типы всех столбцов\nprint(df.dtypes)\n# age       int64\n# name     object\n# score   float64\n\n# Тип одного столбца\nprint(df['age'].dtype)  # dtype('int64')\n\n# Изменить тип\ndf['age'] = df['age'].astype(float)\ndf['date'] = pd.to_datetime(df['date'])\n\n# Столбцы определённого типа\nnumeric_cols = df.select_dtypes(include='number').columns",
+      "related": [
+        "pandas.DataFrame.astype",
+        "pandas.to_datetime",
+        "numpy.dtype"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html"
+    },
+    {
+      "id": "pandas-crosstab",
+      "title": "pandas.crosstab",
+      "package": "pandas",
+      "terms": [
+        "crosstab",
+        "pd.crosstab",
+        "cross table",
+        "таблица частот",
+        "перекрёстная таблица",
+        "contingency table"
+      ],
+      "aliases": [
+        "таблица сопряжённости",
+        "частота двух категорий",
+        "cross tabulation"
+      ],
+      "summary": "Official pandas documentation for computing a cross-tabulation of two or more factors.",
+      "import": "import pandas as pd",
+      "syntax": "# Частота пересечений двух категориальных столбцов\nct = pd.crosstab(df['gender'], df['department'])\n\n# Нормализация (% по строкам)\nct_pct = pd.crosstab(df['gender'], df['department'],\n                     normalize='index')\n\n# С агрегацией\nct_sum = pd.crosstab(df['gender'], df['department'],\n                     values=df['salary'], aggfunc='mean')",
+      "related": [
+        "pandas.DataFrame.pivot_table",
+        "pandas.DataFrame.groupby",
+        "pandas.Series.value_counts"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html"
+    },
+    {
+      "id": "pandas-nunique",
+      "title": "DataFrame.nunique",
+      "package": "pandas",
+      "terms": [
+        "nunique",
+        "df.nunique",
+        "количество уникальных",
+        "unique count",
+        "cardinality"
+      ],
+      "aliases": [
+        "сколько уникальных значений",
+        "unique values count",
+        "мощность столбца"
+      ],
+      "summary": "Official pandas documentation for counting distinct values.",
+      "import": "import pandas as pd",
+      "syntax": "# Число уникальных значений в каждом столбце\ndf.nunique()\n\n# В одном столбце\ndf['category'].nunique()  # int\n\n# Сами уникальные значения\ndf['category'].unique()   # array\n\n# Число уникальных без NaN\ndf['col'].nunique(dropna=True)  # default",
+      "related": [
+        "pandas.Series.value_counts",
+        "pandas.Series.unique",
+        "pandas.DataFrame.describe"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nunique.html"
+    },
+    {
+      "id": "pandas-diff-shift",
+      "title": "DataFrame.diff / shift / pct_change",
+      "package": "pandas",
+      "terms": [
+        "diff",
+        "shift",
+        "pct_change",
+        "df.diff",
+        "df.shift",
+        "df.pct_change",
+        "изменение по периодам",
+        "разница строк",
+        "lag"
+      ],
+      "aliases": [
+        "временной ряд разница",
+        "процентное изменение",
+        "сдвиг строк",
+        "first difference"
+      ],
+      "summary": "Official pandas documentation for computing differences, shifts, and percent changes between rows.",
+      "import": "import pandas as pd",
+      "syntax": "# diff — разница с предыдущей строкой\ndf['price_change'] = df['price'].diff()        # price[i] - price[i-1]\ndf['diff_2'] = df['price'].diff(periods=2)     # через 2 строки\n\n# shift — сдвиг значений (лаг)\ndf['prev_price'] = df['price'].shift(1)        # лаг 1\ndf['next_price'] = df['price'].shift(-1)       # опережение\n\n# pct_change — процентное изменение\ndf['return'] = df['price'].pct_change()        # (p[i]-p[i-1])/p[i-1]\ndf['return_pct'] = df['price'].pct_change() * 100",
+      "related": [
+        "pandas.DataFrame.rolling",
+        "pandas.to_datetime",
+        "pandas.resample"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.diff.html"
+    },
+    {
+      "id": "pandas-excel-io",
+      "title": "pandas.read_excel / to_excel",
+      "package": "pandas",
+      "terms": [
+        "read_excel",
+        "to_excel",
+        "pd.read_excel",
+        "df.to_excel",
+        "excel",
+        "xlsx",
+        "xls",
+        "openpyxl",
+        "чтение Excel",
+        "запись Excel"
+      ],
+      "aliases": [
+        "открыть Excel файл",
+        "сохранить в Excel",
+        "работа с xlsx"
+      ],
+      "summary": "Official pandas documentation for reading and writing Excel files.",
+      "import": "import pandas as pd\n# pip install openpyxl  (для xlsx)",
+      "syntax": "# Читать Excel\ndf = pd.read_excel('data.xlsx')\ndf = pd.read_excel('data.xlsx', sheet_name='Sheet2')\ndf = pd.read_excel('data.xlsx', usecols=['A', 'B', 'C'])\n\n# Читать несколько листов\nsheets = pd.read_excel('data.xlsx', sheet_name=None)  # dict\n\n# Записать в Excel\ndf.to_excel('output.xlsx', index=False)\n\n# Несколько листов\nwith pd.ExcelWriter('output.xlsx') as writer:\n    df1.to_excel(writer, sheet_name='Sales')\n    df2.to_excel(writer, sheet_name='Costs')",
+      "related": [
+        "pandas.read_csv",
+        "pandas.DataFrame.to_csv",
+        "openpyxl"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.read_excel.html"
+    },
+    {
+      "id": "pandas-transpose",
+      "title": "DataFrame.T — transpose",
+      "package": "pandas",
+      "terms": [
+        "transpose",
+        ".T",
+        "df.T",
+        "df.transpose",
+        "transposing",
+        "транспонирование",
+        "поменять строки и столбцы"
+      ],
+      "aliases": [
+        "перевернуть датафрейм",
+        "строки в столбцы"
+      ],
+      "summary": "Official pandas documentation for transposing a DataFrame — swapping rows and columns.",
+      "import": "import pandas as pd",
+      "syntax": "# Транспонировать DataFrame\ndf_t = df.T          # краткая запись\ndf_t = df.transpose()  # полная запись\n\n# Пример: сделать из wide в long вид\n# Было:  index=city, columns=year -> каждый год в строку\ndf_long = df.set_index('city').T.reset_index()\ndf_long.columns.name = None\n\n# Транспонирование NumPy массива\narr_t = arr.T",
+      "related": [
+        "pandas.DataFrame.melt",
+        "pandas.DataFrame.pivot",
+        "numpy.ndarray.T"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transpose.html"
+    },
+    {
+      "id": "pandas-map",
+      "title": "DataFrame.map / Series.map",
+      "package": "pandas",
+      "terms": [
+        "applymap",
+        "DataFrame.map",
+        "Series.map",
+        "df.map",
+        "pandas map",
+        "применить функцию к элементам",
+        "element-wise"
+      ],
+      "aliases": [
+        "применить функцию к каждому элементу",
+        "applymap pandas 2",
+        "поэлементное применение"
+      ],
+      "summary": "Official pandas documentation for element-wise function application. In pandas 2.x, DataFrame.applymap() was renamed to DataFrame.map().",
+      "import": "import pandas as pd",
+      "syntax": "# pandas 2.x: DataFrame.map() — к каждому элементу\ndf_clean = df.map(lambda x: x.strip() if isinstance(x, str) else x)\n\n# Series.map() — заменить значения по словарю или функции\ndf['grade'] = df['score'].map({1: 'A', 2: 'B', 3: 'C'})\ndf['doubled'] = df['score'].map(lambda x: x * 2)\n\n# pandas < 2.0: DataFrame.applymap() (deprecated)\n# df.applymap(func)  →  df.map(func)  в pandas 2+",
+      "related": [
+        "DataFrame.apply",
+        "pandas.Series.map",
+        "lambda"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.map.html"
     }
   ]
 }

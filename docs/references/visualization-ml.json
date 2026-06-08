@@ -289,6 +289,121 @@
       "syntax": "model = SARIMAX(series, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12))\nresult = model.fit()",
       "related": ["ARIMA", "time series", "Prophet"],
       "docsUrl": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html"
+    },
+    {
+      "id": "seaborn-barplot",
+      "title": "seaborn.barplot",
+      "package": "Seaborn",
+      "terms": [
+        "barplot",
+        "sns.barplot",
+        "seaborn barplot",
+        "bar chart seaborn",
+        "seaborn",
+        "sns",
+        "столбчатая диаграмма"
+      ],
+      "aliases": [
+        "bar chart with error bars",
+        "среднее по группам",
+        "categorical plot"
+      ],
+      "summary": "Official Seaborn documentation for barplot — shows point estimates and confidence intervals as bars.",
+      "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
+      "syntax": "# Среднее по категориям\nsns.barplot(data=df, x='category', y='value')\nplt.show()\n\n# Разбивка по цвету\nsns.barplot(data=df, x='category', y='value', hue='group')\n\n# Горизонтальный\nsns.barplot(data=df, x='value', y='category', orient='h')\n\n# Отключить планки ошибок\nsns.barplot(data=df, x='cat', y='val', errorbar=None)",
+      "related": [
+        "seaborn.countplot",
+        "matplotlib.pyplot.bar",
+        "seaborn.boxplot"
+      ],
+      "docsUrl": "https://seaborn.pydata.org/generated/seaborn.barplot.html"
+    },
+    {
+      "id": "sklearn-cross-val-score",
+      "title": "sklearn.model_selection.cross_val_score",
+      "package": "scikit-learn",
+      "terms": [
+        "cross_val_score",
+        "cross validation",
+        "cross-validation",
+        "кросс-валидация",
+        "cv score",
+        "k-fold",
+        "sklearn",
+        "scikit-learn"
+      ],
+      "aliases": [
+        "перекрёстная проверка",
+        "оценка модели",
+        "надёжная оценка качества"
+      ],
+      "summary": "Official scikit-learn documentation for evaluating a model using cross-validation.",
+      "import": "from sklearn.model_selection import cross_val_score",
+      "syntax": "from sklearn.model_selection import cross_val_score\nfrom sklearn.linear_model import LinearRegression\n\nmodel = LinearRegression()\n\n# 5-fold кросс-валидация (CV=5)\nscores = cross_val_score(model, X, y, cv=5, scoring='r2')\nprint(scores)         # [0.82, 0.79, 0.85, 0.81, 0.83]\nprint(scores.mean())  # среднее качество\nprint(scores.std())   # разброс (стабильность)\n\n# Другие метрики\ncross_val_score(model, X, y, cv=5, scoring='neg_mean_squared_error')\ncross_val_score(clf, X, y, cv=5, scoring='accuracy')",
+      "related": [
+        "sklearn.model_selection.train_test_split",
+        "sklearn.model_selection.GridSearchCV",
+        "sklearn.metrics"
+      ],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html"
+    },
+    {
+      "id": "sklearn-gridsearchcv",
+      "title": "sklearn.model_selection.GridSearchCV",
+      "package": "scikit-learn",
+      "terms": [
+        "GridSearchCV",
+        "grid search",
+        "gridsearchcv",
+        "hyperparameter tuning",
+        "подбор гиперпараметров",
+        "sklearn",
+        "scikit-learn"
+      ],
+      "aliases": [
+        "перебор параметров",
+        "оптимизация модели",
+        "best params"
+      ],
+      "summary": "Official scikit-learn documentation for exhaustive search over specified parameter values for an estimator.",
+      "import": "from sklearn.model_selection import GridSearchCV",
+      "syntax": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.ensemble import RandomForestClassifier\n\n# Сетка параметров для поиска\nparam_grid = {\n    'n_estimators': [50, 100, 200],\n    'max_depth': [None, 5, 10],\n    'min_samples_split': [2, 5]\n}\n\nmodel = RandomForestClassifier(random_state=42)\ngs = GridSearchCV(model, param_grid, cv=5, scoring='accuracy', n_jobs=-1)\ngs.fit(X_train, y_train)\n\nprint(gs.best_params_)   # {'max_depth': 10, 'n_estimators': 100, ...}\nprint(gs.best_score_)    # 0.87\nbest_model = gs.best_estimator_",
+      "related": [
+        "sklearn.model_selection.cross_val_score",
+        "sklearn.model_selection.RandomizedSearchCV",
+        "sklearn.pipeline.Pipeline"
+      ],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html"
+    },
+    {
+      "id": "sklearn-pipeline",
+      "title": "sklearn.pipeline.Pipeline",
+      "package": "scikit-learn",
+      "terms": [
+        "Pipeline",
+        "sklearn pipeline",
+        "make_pipeline",
+        "pipeline",
+        "pipe",
+        "конвейер ML",
+        "sklearn",
+        "scikit-learn",
+        "etl"
+      ],
+      "aliases": [
+        "цепочка преобразований",
+        "preprocessing + model",
+        "ml pipeline"
+      ],
+      "summary": "Official scikit-learn documentation for chaining estimators into a single pipeline object.",
+      "import": "from sklearn.pipeline import Pipeline, make_pipeline",
+      "syntax": "from sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.linear_model import LogisticRegression\n\n# Создать пайплайн\npipe = Pipeline([\n    ('scaler', StandardScaler()),    # шаг 1: нормализация\n    ('model', LogisticRegression())  # шаг 2: модель\n])\n\n# fit и predict как обычно\npipe.fit(X_train, y_train)\npredictions = pipe.predict(X_test)\n\n# Краткий синтаксис\nfrom sklearn.pipeline import make_pipeline\npipe = make_pipeline(StandardScaler(), LogisticRegression())\n\n# Использование с GridSearchCV\nparam_grid = {'model__C': [0.1, 1, 10]}\ngs = GridSearchCV(pipe, param_grid, cv=5)",
+      "related": [
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.model_selection.GridSearchCV",
+        "sklearn.model_selection.cross_val_score"
+      ],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html"
     }
   ]
 }

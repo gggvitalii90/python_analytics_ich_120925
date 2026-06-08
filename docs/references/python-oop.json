@@ -192,6 +192,67 @@
         "@dataclass"
       ],
       "docsUrl": "https://docs.python.org/3/reference/datamodel.html#slots"
+    },
+    {
+      "id": "python-oop-iterator",
+      "title": "__iter__ / __next__ — Iterator Protocol",
+      "package": "Python",
+      "type": "concept",
+      "terms": [
+        "__iter__",
+        "__next__",
+        "iterator",
+        "iterable",
+        "iter()",
+        "next()",
+        "итератор",
+        "итерируемый объект"
+      ],
+      "aliases": [
+        "сделать класс итерируемым",
+        "собственный итератор",
+        "for loop custom class"
+      ],
+      "summary": "Official Python documentation for implementing the iterator protocol — making objects usable in for loops.",
+      "import": "# built-in, no import needed",
+      "syntax": "class Countdown:\n    def __init__(self, start):\n        self.current = start\n\n    def __iter__(self):       # делает объект итерируемым\n        return self\n\n    def __next__(self):       # вызывается на каждом шаге for\n        if self.current <= 0:\n            raise StopIteration  # сигнал конца итерации\n        val = self.current\n        self.current -= 1\n        return val\n\nfor n in Countdown(3):\n    print(n)  # 3 2 1\n\n# Короткий способ: генераторная функция (yield)\ndef countdown(n):\n    while n > 0:\n        yield n\n        n -= 1",
+      "related": [
+        "yield",
+        "generator",
+        "for loop",
+        "dunder methods"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/stdtypes.html#iterator-types"
+    },
+    {
+      "id": "python-oop-context-manager",
+      "title": "__enter__ / __exit__ — Context Manager",
+      "package": "Python",
+      "type": "concept",
+      "terms": [
+        "__enter__",
+        "__exit__",
+        "context manager",
+        "with statement",
+        "менеджер контекста",
+        "with блок",
+        "contextmanager"
+      ],
+      "aliases": [
+        "сделать класс менеджером контекста",
+        "with ... as",
+        "автоматическое закрытие ресурса"
+      ],
+      "summary": "Official Python documentation for implementing context managers via __enter__ and __exit__ or @contextmanager.",
+      "import": "# built-in, or: from contextlib import contextmanager",
+      "syntax": "class ManagedFile:\n    def __init__(self, path):\n        self.path = path\n\n    def __enter__(self):          # вход в with-блок\n        self.file = open(self.path)\n        return self.file\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        self.file.close()         # вызывается ВСЕГДА (даже при исключении)\n        return False              # не подавлять исключения\n\nwith ManagedFile('data.txt') as f:\n    content = f.read()\n\n# Короткий способ через декоратор\nfrom contextlib import contextmanager\n\n@contextmanager\ndef managed_file(path):\n    f = open(path)\n    try:\n        yield f\n    finally:\n        f.close()",
+      "related": [
+        "with statement",
+        "try / finally",
+        "dunder methods",
+        "open"
+      ],
+      "docsUrl": "https://docs.python.org/3/reference/datamodel.html#context-managers"
     }
   ]
 }
