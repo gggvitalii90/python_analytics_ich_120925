@@ -98,9 +98,14 @@ python -m http.server 8080
 # открыть http://localhost:8080
 ```
 
-## Папки которые можно удалить (gitignored мусор)
+## Что можно удалить локально (не в репо — только на компьютере)
 
+Папки (gitignored мусор, безопасно удалять):
 - `_tmp_manual_test/`, `_tmp_manual_test2/`
 - `.pytest_tmp/`, `.tmp_pr19/`, `.tmp_pytest/`, `.tmp_pytest_run/`
 - `.ipynb_checkpoints/`
 - `лекции/` (если не нужны локально — в GitHub их нет)
+
+Файлы в репо которые можно удалить:
+- `docs/app.js` — нигде не подключён, не используется (orphan файл)
+- `docs/vercel.json` — конфиг Vercel, но портал на GitHub Pages, не нужен
