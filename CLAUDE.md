@@ -52,17 +52,19 @@ scripts/
 - Записать в Loom / HeyGen самостоятельно
 
 ### Pagefind (замена поиска)
-Текущий поиск: MiniSearch по search-index.json.
+Текущий поиск: MiniSearch по search-index.json. Pagefind НЕ подключён.
 Цель: Pagefind — нечёткий поиск, подсветка фрагментов, ранжирование.
 Что нужно:
 - Добавить шаг `npx pagefind --site docs/` в CI workflow
 - Заменить функцию matchesQuery() в portal.js на Pagefind API
 - Подключить pagefind.js в index.html
 
-### Расширение reference базы (~90-100 новых карточек)
-- docs/references/data-analytics.json: pandas .str accessor, .dt accessor, .apply, .transform
-- Новый файл docs/references/python-oop.json (class, __init__, @property, super, @dataclass)
-- Новый файл docs/references/python-api-web.json (requests, FastAPI, Flask, REST, JSON)
+### Расширение reference базы (частично сделано)
+Файлы созданы но неполные:
+- docs/references/python-oop.json — 7 карточек (нужно ~12: ABC, @dataclass, super, @property и др.)
+- docs/references/python-api-web.json — 10 карточек (нужно проверить полноту)
+Ещё нужно добавить в docs/references/data-analytics.json:
+- pandas .str accessor, .dt accessor, DataFrame.apply, .transform
 
 ### Превью кода в результатах поиска
 Поле `matches` в search-index.json содержит фрагменты ячеек.
