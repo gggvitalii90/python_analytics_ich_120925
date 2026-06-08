@@ -38,8 +38,5 @@ Thumbs.db
 _tmp_manual_test*/
 _tmp_pytest*/
 pytest-cache-files-*/
-Python/проект/**/.env
-Python/проект/**/.env.*
-Python/проект/**/.git/
-Python/проект/**/__pycache__/
+Python/проект/
 лекции/
