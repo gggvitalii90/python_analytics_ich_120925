@@ -196,9 +196,9 @@ const referenceScore = (card, terms) => {
 const bestReferences = (terms) =>
   referenceCards
     .map((card) => ({ card, score: referenceScore(card, terms) }))
-    .filter((item) => item.score > 0)
+    .filter((item) => item.score >= 15)
     .sort((a, b) => b.score - a.score || a.card.title.localeCompare(b.card.title))
-    .slice(0, 4)
+    .slice(0, 2)
     .map((item) => item.card);
 
 const initMiniSearch = (notebooks) => {
