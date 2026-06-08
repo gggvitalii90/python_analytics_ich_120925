@@ -578,11 +578,48 @@ h1 {
   color: #a34c11;
 }
 
-.nb-snippets {
+.nb-snippets-toggle {
   grid-column: 1 / -1;
+  margin-top: 0.5rem;
+}
+
+.nb-snippets-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.22rem 0.6rem;
+  border: 1px solid #b8e3e3;
+  border-radius: 6px;
+  background: #eef8f8;
+  color: #0c6668;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  transition: background 120ms ease;
+}
+
+.nb-snippets-summary::-webkit-details-marker { display: none; }
+
+.nb-snippets-summary::before {
+  content: "▶";
+  font-size: 0.6rem;
+  transition: transform 150ms ease;
+}
+
+.nb-snippets-toggle[open] .nb-snippets-summary::before {
+  transform: rotate(90deg);
+}
+
+.nb-snippets-summary:hover {
+  background: #d8f0f0;
+}
+
+.nb-snippets {
   display: grid;
   gap: 0.45rem;
-  margin-top: 0.12rem;
+  margin-top: 0.5rem;
 }
 
 .nb-snippet {
@@ -590,6 +627,8 @@ h1 {
   border-radius: 8px;
   background: #f5fbfa;
   padding: 0.55rem 0.65rem;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .nb-snippet-meta {
@@ -609,6 +648,22 @@ h1 {
   line-height: 1.38;
   word-break: break-word;
   white-space: pre-wrap;
+}
+
+.nb-snippet pre {
+  margin: 0;
+  padding: 0.5rem 0.6rem;
+  background: #1e2b2b;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.nb-snippet pre code {
+  color: #a8d8d8;
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 0.83rem;
+  line-height: 1.45;
+  white-space: pre;
 }
 
 .nb-snippet-header {

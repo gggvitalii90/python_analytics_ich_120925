@@ -178,7 +178,7 @@ const referenceScore = (card, terms) => {
   const relatedTerms = (card.related || []).map((term) => term.toLowerCase());
 
   return terms.reduce((score, term) => {
-    const shortTerm = term.length <= 3;
+    const shortTerm = term.length <= 2;
     if (title === term) return score + 40;
     if (!shortTerm && (title.endsWith(`.${term}`) || title.endsWith(`-${term}`))) return score + 32;
     if (exactTerms.includes(term)) return score + 28;
@@ -187,6 +187,7 @@ const referenceScore = (card, terms) => {
     if (!shortTerm && exactTerms.some((cardTerm) => cardTerm.startsWith(term))) return score + 8;
     if (!shortTerm && aliases.some((alias) => alias.includes(term))) return score + 6;
     if (!shortTerm && title.includes(term)) return score + 5;
+    if (!shortTerm && weakTerms.some((wt) => wt.startsWith(term))) return score + 4;
     if (relatedTerms.includes(term)) return score + 1;
     return score;
   }, 0);
@@ -427,6 +428,14 @@ const createSearchRow = (entry, terms) => {
 
   const cells = matchedCells(entry, terms);
   if (cells.length > 0) {
+    const details = document.createElement("details");
+    details.className = "nb-snippets-toggle";
+
+    const summary = document.createElement("summary");
+    summary.className = "nb-snippets-summary";
+    summary.textContent = `Фрагменты кода (${cells.length})`;
+    details.appendChild(summary);
+
     const snippets = document.createElement("div");
     snippets.className = "nb-snippets";
     cells.forEach((cell) => {
@@ -443,14 +452,24 @@ const createSearchRow = (entry, terms) => {
       header.appendChild(meta);
       header.appendChild(createCopyButton(cell.text));
 
-      const p = document.createElement("p");
-      p.textContent = cell.text;
+      if (cell.type === "code") {
+        const pre = document.createElement("pre");
+        const code = document.createElement("code");
+        code.textContent = cell.text;
+        pre.appendChild(code);
+        snip.appendChild(header);
+        snip.appendChild(pre);
+      } else {
+        const p = document.createElement("p");
+        p.textContent = cell.text;
+        snip.appendChild(header);
+        snip.appendChild(p);
+      }
 
-      snip.appendChild(header);
-      snip.appendChild(p);
       snippets.appendChild(snip);
     });
-    article.appendChild(snippets);
+    details.appendChild(snippets);
+    article.appendChild(details);
   }
 
   return frag;

@@ -79,7 +79,7 @@ def notebook_to_record(root: Path, path: Path) -> dict[str, Any]:
         if not text:
             continue
 
-        snippet = text[:MAX_CELL_TEXT]
+        snippet = sanitize_text(cell_source(cell)).strip()[:MAX_CELL_TEXT]
         matches.append(
             {
                 "cell": index,
