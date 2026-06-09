@@ -8,7 +8,7 @@
       "id": "matplotlib-plot",
       "title": "matplotlib.pyplot.plot",
       "package": "Matplotlib",
-      "terms": ["plot", "plt.plot", "line plot", "line chart", "matplotlib", "pyplot", "plt", "график", "линейный график"],
+      "terms": ["plot", "plt.plot", "line plot", "line chart", "matplotlib", "matplotlib.pyplot", "import matplotlib", "pyplot", "plt", "график", "линейный график"],
       "summary": "Official Matplotlib reference for line plotting.",
       "import": "import matplotlib.pyplot as plt",
       "syntax": "plt.plot(x, y, marker=\"o\")\nplt.xlabel(\"X\")\nplt.ylabel(\"Y\")\nplt.show()",
@@ -157,6 +157,144 @@
       "syntax": "app = Dash(__name__)\napp.layout = html.Div([dcc.Graph(figure=px.scatter(df, x=\"x\", y=\"y\"))])\napp.run(debug=True)",
       "related": ["plotly.express", "dcc.Graph"],
       "docsUrl": "https://dash.plotly.com/"
+    },
+    {
+      "id": "matplotlib-axes-methods",
+      "title": "Matplotlib Axes methods — set_title, xticks, axvline",
+      "package": "Matplotlib",
+      "terms": [
+        "set_title",
+        "set_xlabel",
+        "set_ylabel",
+        "xticks",
+        "yticks",
+        "tick_params",
+        "axvline",
+        "axhline",
+        "xlim",
+        "ylim",
+        "ax.set_title",
+        "ax.set_xlabel",
+        "plt.xticks",
+        "rotation",
+        "fontsize",
+        "подписи осей",
+        "метки оси"
+      ],
+      "aliases": [
+        "повернуть метки оси",
+        "вертикальная линия на графике",
+        "задать пределы оси"
+      ],
+      "summary": "Official Matplotlib documentation for Axes methods — labels, ticks, limits, reference lines.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "fig, ax = plt.subplots(figsize=(10, 5))\nax.plot(x, y)\n\n# Заголовок и подписи\nax.set_title('Sales by Month', fontsize=14)\nax.set_xlabel('Month')\nax.set_ylabel('Revenue')\n\n# Повернуть метки оси X\nplt.xticks(rotation=45, ha='right')\n# или через axes:\nax.tick_params(axis='x', rotation=45)\n\n# Пределы осей\nax.set_xlim(0, 100)\nax.set_ylim(0, 500)\n\n# Вертикальная / горизонтальная линия\nax.axvline(x=50, color='red', linestyle='--', label='Threshold')\nax.axhline(y=200, color='gray', linestyle=':')\n\nplt.tight_layout()\nplt.show()",
+      "related": ["matplotlib.pyplot.subplots", "matplotlib.pyplot.figure"],
+      "docsUrl": "https://matplotlib.org/stable/api/axes_api.html"
+    },
+    {
+      "id": "matplotlib-imshow",
+      "title": "matplotlib.pyplot.imshow",
+      "package": "Matplotlib",
+      "terms": [
+        "imshow",
+        "plt.imshow",
+        "ax.imshow",
+        "image plot",
+        "heatmap matrix",
+        "confusion matrix plot",
+        "отобразить матрицу",
+        "визуализировать массив"
+      ],
+      "aliases": [
+        "нарисовать матрицу",
+        "confusion matrix seaborn",
+        "show image"
+      ],
+      "summary": "Official Matplotlib documentation for displaying data as an image or 2D heatmap.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "import numpy as np\nimport matplotlib.pyplot as plt\n\n# Матрица как тепловая карта\nmatrix = np.random.rand(5, 5)\nplt.imshow(matrix, cmap='Blues')\nplt.colorbar()\nplt.title('Matrix heatmap')\nplt.show()\n\n# Confusion matrix\nfrom sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay\ncm = confusion_matrix(y_test, y_pred)\ndisp = ConfusionMatrixDisplay(cm)\ndisp.plot()",
+      "related": ["seaborn.heatmap", "matplotlib.pyplot.colorbar", "sklearn.metrics.confusion_matrix"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html"
+    },
+    {
+      "id": "plotly-go-figure",
+      "title": "plotly.graph_objects — go.Figure, add_trace, update_layout",
+      "package": "Plotly",
+      "terms": [
+        "add_trace",
+        "update_layout",
+        "update_traces",
+        "go.Figure",
+        "go.Scatter",
+        "go.Bar",
+        "plotly.graph_objects",
+        "graph_objects",
+        "plotly go",
+        "title_text",
+        "update_yaxes",
+        "update_xaxes",
+        "marker_color",
+        "интерактивный дашборд"
+      ],
+      "aliases": [
+        "plotly низкоуровневый",
+        "несколько трасс на одном графике",
+        "настроить plotly вручную"
+      ],
+      "summary": "Official Plotly documentation for graph_objects — low-level API with full control over traces and layout.",
+      "import": "import plotly.graph_objects as go",
+      "syntax": "import plotly.graph_objects as go\n\n# Создать фигуру и добавить трассы\nfig = go.Figure()\nfig.add_trace(go.Scatter(x=df['date'], y=df['sales'],\n                         mode='lines', name='Sales'))\nfig.add_trace(go.Bar(x=df['category'], y=df['count'],\n                     name='Count', marker_color='steelblue'))\n\n# Настроить внешний вид\nfig.update_layout(\n    title_text='Dashboard',\n    xaxis_title='Date',\n    yaxis_title='Value',\n    template='plotly_white'\n)\nfig.update_traces(opacity=0.8)\nfig.show()",
+      "related": ["plotly.express", "dash-app", "plotly.express.scatter"],
+      "docsUrl": "https://plotly.com/python/graph-objects/"
+    },
+    {
+      "id": "plotly-make-subplots",
+      "title": "plotly.subplots.make_subplots",
+      "package": "Plotly",
+      "terms": [
+        "make_subplots",
+        "plotly subplots",
+        "plotly несколько графиков",
+        "несколько панелей plotly",
+        "subplot plotly"
+      ],
+      "aliases": [
+        "несколько графиков в одном",
+        "plotly grid layout"
+      ],
+      "summary": "Official Plotly documentation for creating figures with multiple subplots.",
+      "import": "from plotly.subplots import make_subplots\nimport plotly.graph_objects as go",
+      "syntax": "from plotly.subplots import make_subplots\nimport plotly.graph_objects as go\n\n# 2 строки, 2 столбца\nfig = make_subplots(rows=2, cols=2,\n                    subplot_titles=['A', 'B', 'C', 'D'])\n\nfig.add_trace(go.Scatter(x=x, y=y1), row=1, col=1)\nfig.add_trace(go.Bar(x=cats, y=vals), row=1, col=2)\nfig.add_trace(go.Histogram(x=data), row=2, col=1)\n\nfig.update_layout(height=600, title_text='Multi-panel')\nfig.show()",
+      "related": ["plotly.graph_objects", "matplotlib.pyplot.subplots"],
+      "docsUrl": "https://plotly.com/python/subplots/"
+    },
+    {
+      "id": "seaborn-load-dataset",
+      "title": "seaborn.load_dataset",
+      "package": "Seaborn",
+      "terms": [
+        "load_dataset",
+        "sns.load_dataset",
+        "seaborn load_dataset",
+        "seaborn datasets",
+        "iris dataset",
+        "tips dataset",
+        "titanic dataset",
+        "gapminder",
+        "тестовые данные",
+        "учебный датасет"
+      ],
+      "aliases": [
+        "загрузить учебные данные",
+        "seaborn built-in datasets",
+        "iris tips titanic"
+      ],
+      "summary": "Official Seaborn documentation for loading built-in example datasets.",
+      "import": "import seaborn as sns",
+      "syntax": "# Загрузить встроенные датасеты\ndf = sns.load_dataset('iris')     # 150 образцов цветов\ndf = sns.load_dataset('tips')     # ресторанные чаевые\ndf = sns.load_dataset('titanic')  # данные Титаника\ndf = sns.load_dataset('penguins') # пингвины\n\n# Список всех доступных датасетов\nprint(sns.get_dataset_names())\n\n# Пример использования\nsns.pairplot(sns.load_dataset('iris'), hue='species')",
+      "related": ["pandas.read_csv", "sklearn.datasets"],
+      "docsUrl": "https://seaborn.pydata.org/generated/seaborn.load_dataset.html"
     },
     {
       "id": "sklearn-train-test-split",

@@ -25,6 +25,12 @@
         "np.argmax",
         "broadcast",
         "broadcasting",
+        "log1p",
+        "np.log1p",
+        "log",
+        "np.log",
+        "np.exp",
+        "np.sqrt",
         "массив",
         "vectorization",
         "vectorize",
@@ -148,8 +154,15 @@
       "terms": [
         "np.mean",
         "mean",
+        "std",
+        "np.std",
+        "sem",
+        "np.sem",
+        "standard deviation",
+        "standard error",
         "average",
-        "среднее"
+        "среднее",
+        "стандартное отклонение"
       ],
       "summary": "Official NumPy reference for arithmetic mean.",
       "import": "import numpy as np",
@@ -187,6 +200,8 @@
         "DataFrame",
         "pd.DataFrame",
         "dataframe",
+        "pandas",
+        "import pandas",
         "таблица"
       ],
       "summary": "Official pandas reference for DataFrame objects.",
@@ -683,6 +698,207 @@
       "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.query.html"
     },
     {
+      "id": "pandas-corr",
+      "title": "DataFrame.corr — correlation matrix",
+      "package": "pandas",
+      "terms": [
+        "corr",
+        "df.corr",
+        "pandas corr",
+        "correlation",
+        "correlation matrix",
+        "матрица корреляции",
+        "корреляция"
+      ],
+      "aliases": [
+        "связь между признаками",
+        "коэффициент корреляции",
+        "pearson pandas",
+        "spearman pandas"
+      ],
+      "summary": "Official pandas documentation for computing pairwise correlations between columns.",
+      "import": "import pandas as pd",
+      "syntax": "# Матрица корреляции (Pearson по умолчанию)\ncorr_matrix = df.corr(numeric_only=True)\n\n# Spearman\ncorr_sp = df.corr(method='spearman', numeric_only=True)\n\n# Корреляция двух столбцов\nr = df['price'].corr(df['sales'])\n\n# Тепловая карта\nimport seaborn as sns\nsns.heatmap(corr_matrix, annot=True, cmap='Blues')",
+      "related": ["seaborn.heatmap", "scipy.stats.pearsonr", "pandas.DataFrame.cov"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html"
+    },
+    {
+      "id": "pandas-quantile",
+      "title": "DataFrame.quantile / percentile",
+      "package": "pandas",
+      "terms": [
+        "quantile",
+        "df.quantile",
+        "pandas quantile",
+        "percentile",
+        "quartile",
+        "median",
+        "квантиль",
+        "перцентиль",
+        "медиана"
+      ],
+      "aliases": [
+        "Q1 Q3 pandas",
+        "IQR pandas",
+        "25 percentile",
+        "75 percentile"
+      ],
+      "summary": "Official pandas documentation for computing quantiles / percentiles.",
+      "import": "import pandas as pd",
+      "syntax": "# Медиана (50-й перцентиль)\nmedian = df['price'].quantile(0.5)\n\n# Квартили\nQ1 = df['price'].quantile(0.25)\nQ3 = df['price'].quantile(0.75)\nIQR = Q3 - Q1\n\n# Несколько квантилей сразу\ndf['price'].quantile([0.1, 0.25, 0.5, 0.75, 0.9])\n\n# По всем столбцам\ndf.quantile([0.25, 0.75], numeric_only=True)",
+      "related": ["pandas.DataFrame.describe", "numpy.percentile", "pandas.DataFrame.clip"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.quantile.html"
+    },
+    {
+      "id": "pandas-select-dtypes",
+      "title": "DataFrame.select_dtypes",
+      "package": "pandas",
+      "terms": [
+        "select_dtypes",
+        "df.select_dtypes",
+        "pandas select_dtypes",
+        "numeric columns",
+        "числовые столбцы",
+        "выбрать столбцы по типу"
+      ],
+      "aliases": [
+        "только числовые колонки",
+        "только объектные колонки",
+        "столбцы определённого типа"
+      ],
+      "summary": "Official pandas documentation for selecting columns by data type.",
+      "import": "import pandas as pd",
+      "syntax": "# Только числовые столбцы\nnum_cols = df.select_dtypes(include='number').columns\n\n# Числовые + булевы\ndf_num = df.select_dtypes(include=['number', 'bool'])\n\n# Только строковые (object)\nstr_cols = df.select_dtypes(include='object').columns\n\n# Исключить определённый тип\ndf_no_obj = df.select_dtypes(exclude='object')",
+      "related": ["pandas.DataFrame.dtypes", "pandas.DataFrame.astype"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.select_dtypes.html"
+    },
+    {
+      "id": "pandas-isin",
+      "title": "Series.isin / DataFrame.between",
+      "package": "pandas",
+      "terms": [
+        "isin",
+        "df.isin",
+        "series.isin",
+        "pandas isin",
+        "between",
+        "series.between",
+        "in list",
+        "contains values",
+        "фильтр по списку"
+      ],
+      "aliases": [
+        "найти строки по значениям",
+        "is in list",
+        "значение в диапазоне"
+      ],
+      "summary": "Official pandas documentation for isin (membership test) and between (range filter).",
+      "import": "import pandas as pd",
+      "syntax": "# isin — строки где значение есть в списке\nselected = df[df['city'].isin(['Berlin', 'Paris', 'London'])]\n\n# Обратное: NOT in\nexcluded = df[~df['city'].isin(['Berlin', 'Paris'])]\n\n# between — значение в диапазоне (включительно)\ndf[df['score'].between(70, 90)]\n\n# between с исключёнными границами\ndf[df['age'].between(18, 65, inclusive='left')]",
+      "related": ["pandas.DataFrame.query", "pandas.DataFrame.loc", "pandas.DataFrame.filter"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.Series.isin.html"
+    },
+    {
+      "id": "pandas-date-range",
+      "title": "pandas.date_range",
+      "package": "pandas",
+      "terms": [
+        "date_range",
+        "pd.date_range",
+        "pandas date_range",
+        "bdate_range",
+        "date sequence",
+        "генерация дат",
+        "диапазон дат"
+      ],
+      "aliases": [
+        "создать последовательность дат",
+        "calendar dates",
+        "business days"
+      ],
+      "summary": "Official pandas documentation for generating fixed-frequency DatetimeIndex.",
+      "import": "import pandas as pd",
+      "syntax": "# Ежедневные даты\ndates = pd.date_range(start='2024-01-01', end='2024-12-31', freq='D')\n\n# 12 месяцев\nmonths = pd.date_range(start='2024-01-01', periods=12, freq='ME')\n\n# Рабочие дни\nbiz = pd.date_range('2024-01-01', '2024-03-31', freq='B')\n\n# Почасовые\nhours = pd.date_range('2024-01-01', periods=24, freq='h')",
+      "related": ["pandas.to_datetime", "pandas.DataFrame.resample", "pandas.dt accessor"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.date_range.html"
+    },
+    {
+      "id": "pandas-to-numeric",
+      "title": "pandas.to_numeric",
+      "package": "pandas",
+      "terms": [
+        "to_numeric",
+        "pd.to_numeric",
+        "pandas to_numeric",
+        "convert to number",
+        "errors coerce",
+        "конвертировать в число",
+        "строка в число"
+      ],
+      "aliases": [
+        "преобразовать строку в число",
+        "NaN вместо ошибки",
+        "coerce errors to NaN"
+      ],
+      "summary": "Official pandas documentation for converting values to numeric, coercing errors to NaN.",
+      "import": "import pandas as pd",
+      "syntax": "# Преобразовать столбец, ошибки → NaN\ndf['price'] = pd.to_numeric(df['price'], errors='coerce')\n\n# Преобразовать в меньший тип\ndf['count'] = pd.to_numeric(df['count'], downcast='integer')\n\n# Проверить результат\nprint(df['price'].isna().sum())  # сколько не конвертировалось",
+      "related": ["pandas.DataFrame.astype", "pandas.to_datetime", "pandas.DataFrame.fillna"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.to_numeric.html"
+    },
+    {
+      "id": "pandas-ffill-bfill",
+      "title": "DataFrame.ffill / bfill — forward/backward fill",
+      "package": "pandas",
+      "terms": [
+        "ffill",
+        "bfill",
+        "df.ffill",
+        "df.bfill",
+        "forward fill",
+        "backward fill",
+        "pad",
+        "fill forward",
+        "fill backward",
+        "заполнить пропуски вперёд",
+        "заполнить предыдущим значением"
+      ],
+      "aliases": [
+        "propagate last value",
+        "fill NaN from previous",
+        "временные ряды заполнение"
+      ],
+      "summary": "Official pandas documentation for forward fill and backward fill of missing values.",
+      "import": "import pandas as pd",
+      "syntax": "# ffill — заполнить из предыдущего значения\ndf['price'] = df['price'].ffill()\n\n# bfill — заполнить из следующего значения\ndf['price'] = df['price'].bfill()\n\n# Ограничить количество заполнений подряд\ndf['price'] = df['price'].ffill(limit=3)\n\n# В контексте временного ряда\ndf_sorted = df.sort_values('date')\ndf_sorted['value'] = df_sorted['value'].ffill()",
+      "related": ["pandas.DataFrame.fillna", "pandas.DataFrame.interpolate", "pandas.DataFrame.rolling"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.ffill.html"
+    },
+    {
+      "id": "numpy-random-seed",
+      "title": "numpy.random.seed / random_state",
+      "package": "NumPy",
+      "terms": [
+        "seed",
+        "np.random.seed",
+        "random_state",
+        "random seed",
+        "reproducible",
+        "воспроизводимость",
+        "random generator"
+      ],
+      "aliases": [
+        "фиксировать случайность",
+        "один и тот же результат",
+        "reproducible results"
+      ],
+      "summary": "Official NumPy documentation for seeding the random number generator for reproducibility.",
+      "import": "import numpy as np",
+      "syntax": "# Старый способ (numpy < 1.17)\nnp.random.seed(42)\narr = np.random.randn(100)\n\n# Современный способ (рекомендуется)\nrng = np.random.default_rng(seed=42)\narr = rng.normal(size=100)\n\n# В scikit-learn\nfrom sklearn.model_selection import train_test_split\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42)",
+      "related": ["numpy.random", "sklearn.model_selection.train_test_split"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/random/generator.html"
+    },
+    {
       "id": "polars-dataframe",
       "title": "polars.DataFrame",
       "package": "Polars",
@@ -691,6 +907,13 @@
         "pl.DataFrame",
         "polars dataframe",
         "polars python",
+        "with_columns",
+        "pl.with_columns",
+        "group_by",
+        "pl.group_by",
+        "polars group_by",
+        "fill_null",
+        "null_count",
         "поларс"
       ],
       "summary": "Official Polars reference for DataFrame objects.",
