@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-06-09T13:03:51.582399+00:00",
-    "notebookCount": 203
+    "generatedAt": "2026-06-09T18:58:28.675235+00:00",
+    "notebookCount": 198
   },
   "notebooks": [
     {
@@ -741,6 +741,99 @@
       ]
     },
     {
+      "name": "DZ_21_Honcharov_DA.ipynb",
+      "path": "DZ_python_DA/DZ_21_Honcharov_DA.ipynb",
+      "course": "analytics",
+      "searchText": "DZ_21_Honcharov_DA.ipynb DZ_python_DA/DZ_21_Honcharov_DA.ipynb # <b><font color='teal'>Homework 21</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing, load_wine from sklearn.model_selection import train_test_split from sklearn.linear_model import LinearRegression from sklearn.tree import DecisionTreeRegressor, plot_tree from sklearn.metrics import mean_squared_error, r2_score from sklearn.metrics import accuracy_score, classification_report, confusion_matrix 1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье. <b>Описание данных: </b><br> Датасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br> Поля: - MedInc - медианный доход домохозяйства в block group - HouseAge - медианный возраст домов (лет) в block group - AveRooms - среднее число комнат на домохозяйство - AveBedrms - среднее число спален - Population - число людей в block group - AveOccup - среднее число людей на домохозяйство - Latitude - широта - Longitude - долгота # В переменную df_california запишите датасет fetch_california_housing california = fetch_california_housing(as_frame=True) df_california = california.frame display(df_california) # В переменную X запишите все данные из компонента data датасета X = california.data # В переменную y запишите цену из компонента target датасета y = california.target # В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # Инициализируйте модель линейной регрессии в переменную model_lin_regr model_lin_regr = LinearRegression() # Инициализируйте модель дерево решений в переменную model_tree_des model_tree_des = DecisionTreeRegressor() # Обучите обе модели на обучающих данных model_lin_regr.fit(X_train, y_train) model_tree_des.fit(X_train, y_train) # Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_des y_pred_lin_regr = model_lin_regr.predict(X_test) y_pred_tree_des = model_tree_des.predict(X_test) X_test['pred'] = y_pred_tree_des X_test # Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_des и визуально сравните значения print(\"y_test:\", y_test) print(\"y_pred_lin_regr:\", y_pred_lin_regr) print(\"y_pred_tree_des:\", y_pred_tree_des) # Оцените работу моделей с помощью метрик эффективности и сравните результаты MSE_lin_regr = mean_squared_error(y_test, y_pred_lin_regr) r2_lin_regr = r2_score(y_test, y_pred_lin_regr) print(f\"Mean Squared Error Lin: {MSE_lin_regr}\") print(f\"R-squared Lin: {r2_lin_regr}\") print(\"-\"*30) MSE_tree_des = mean_squared_error(y_test, y_pred_tree_des) r2_tree_des = r2_score(y_test, y_pred_tree_des) print(f\"Mean Squared Error Tree: {MSE_tree_des}\") print(f\"R-squared Tree: {r2_tree_des}\") print(\"\"\"Модель дерево решенией показала лучшие результаты по метрикам MSE и R-squared, что может свидетельствовать о том, что она лучше справляется с данной задачей регрессии по сравнению с линейной регрессией.\"\"\") 2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность. # Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. # Выберите две модели из пройденных и сравните их эффективность import pandas as pd from sklearn.tree import DecisionTreeClassifier wine = load_wine(as_frame=True) df_wine = wine.frame display(df_wine) X_wine = wine.data y_wine = wine.target X_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42) model_tree_des_wine = DecisionTreeClassifier() model_tree_des_wine.fit(X_train_wine, y_train_wine) y_pred_tree_des_wine = model_tree_des_wine.predict(X_test_wine) accuracy_tree_des_wine = accuracy_score(y_test_wine, y_pred_tree_des_wine) print(f\"Accuracy Tree Wine: {accuracy_tree_des_wine}\") print('Отчет о классификации:') print(classification_report(y_test_wine, y_pred_tree_des_wine)) # KNN модель тоже используем для сравнения from sklearn.neighbors import KNeighborsClassifier model_knn_wine = KNeighborsClassifier() model_knn_wine.fit(X_train_wine, y_train_wine) y_pred_knn_wine = model_knn_wine.predict(X_test_wine) accuracy_knn_wine = accuracy_score(y_test_wine, y_pred_knn_wine) print(f\"Accuracy KNN Wine: {accuracy_knn_wine}\") print('Отчет о классификации:') print(classification_report(y_test_wine, y_pred_knn_wine)) print(\"\"\" И тут лучше себя показало дерево решений, по сравнению с KNN. Получается что если это универсальный инструмент и для линейной регресии и для классификации, то он может быть более эффективным в ряде задач.\"\"\")",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='teal'>Homework 21</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nfrom sklearn.datasets import fetch_california_housing, load_wine\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor, plot_tree\nfrom sklearn.metrics import mean_squared_error, r2_score\nfrom sklearn.metrics import accuracy_score, classification_report, confusion_matrix"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье."
+        },
+        {
+          "cell": 4,
+          "type": "markdown",
+          "text": "<b>Описание данных: </b><br>\nДатасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br>\n\nПоля:\n- MedInc - медианный доход домохозяйства в block group\n- HouseAge - медианный возраст домов (лет) в block group\n- AveRooms - среднее число комнат на домохозяйство\n- AveBedrms - среднее число спален\n- Population - число людей в block group\n- AveOccup - среднее число людей на домохозяйство\n- Latitude - широта\n- Longitude - долгота"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# В переменную df_california запишите датасет fetch_california_housing\ncalifornia = fetch_california_housing(as_frame=True)\ndf_california = california.frame\ndisplay(df_california)"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# В переменную X запишите все данные из компонента data датасета\nX = california.data"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# В переменную y запишите цену из компонента target датасета\ny = california.target"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "# В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# Инициализируйте модель линейной регрессии в переменную model_lin_regr\nmodel_lin_regr = LinearRegression()"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Инициализируйте модель дерево решений в переменную model_tree_des\nmodel_tree_des = DecisionTreeRegressor()"
+        },
+        {
+          "cell": 11,
+          "type": "code",
+          "text": "# Обучите обе модели на обучающих данных\nmodel_lin_regr.fit(X_train, y_train)\nmodel_tree_des.fit(X_train, y_train)"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "# Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_des\ny_pred_lin_regr = model_lin_regr.predict(X_test)\ny_pred_tree_des = model_tree_des.predict(X_test)"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "X_test['pred'] = y_pred_tree_des\nX_test"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "# Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_des и визуально сравните значения\nprint(\"y_test:\", y_test)\nprint(\"y_pred_lin_regr:\", y_pred_lin_regr)\nprint(\"y_pred_tree_des:\", y_pred_tree_des)"
+        },
+        {
+          "cell": 15,
+          "type": "code",
+          "text": "# Оцените работу моделей с помощью метрик эффективности и сравните результаты\nMSE_lin_regr = mean_squared_error(y_test, y_pred_lin_regr)\nr2_lin_regr = r2_score(y_test, y_pred_lin_regr)\nprint(f\"Mean Squared Error Lin: {MSE_lin_regr}\")\nprint(f\"R-squared Lin: {r2_lin_regr}\")\nprint(\"-\"*30)\nMSE_tree_des = mean_squared_error(y_test, y_pred_tree_des)\nr2_tree_des = r2_score(y_test, y_pred_tree_des)\nprint(f\"Mean Squared Error Tree: {MSE_tree_des}\")\nprint(f\"R-squared Tree: {r2_tree_des}\")\n\nprint(\"\"\"Модель дерево решенией показала лучшие результаты по метрикам MSE и R-squared,\nчто может свидетельствовать о том, что она лучше справляется с данной задачей регрессии по сравнению с линейной регрессией.\"\"\")"
+        },
+        {
+          "cell": 16,
+          "type": "markdown",
+          "text": "2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность."
+        },
+        {
+          "cell": 17,
+          "type": "code",
+          "text": "# Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. \n# Выберите две модели из пройденных и сравните их эффективность\nimport pandas as pd\nfrom sklearn.tree import DecisionTreeClassifier\n\nwine = load_wine(as_frame=True)\ndf_wine = wine.frame\ndisplay(df_wine)\n\nX_wine = wine.data\ny_wine = wine.target\n\nX_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42)\nmodel_tree_des_wine = DecisionTreeClassifier()\nmodel_tree_des_wine.fit(X_train_wine, y_train_wine)\ny_pred_tree_des_wine = model_tree_des_wine.predict(X_test_wine)\naccuracy_tree_des_wine = accuracy_score(y_test_wine, y_pred_tree_des_wine)\nprint(f\"Accuracy Tree Wine: {accuracy_tree_des_wine}\")\nprint('Отчет о классификации:')\nprint(classification_report(y_test_wine, y_pred_tree_des_wine))\n\n\n# KNN модель тоже используем для сравнения\nf"
+        }
+      ]
+    },
+    {
       "name": "DZ_2_Honcharov_DA.ipynb",
       "path": "DZ_python_DA/DZ_2_Honcharov_DA.ipynb",
       "course": "analytics",
@@ -1086,559 +1179,6 @@
           "cell": 13,
           "type": "code",
           "text": "df_titanic['sex_encoded'] = pd.factorize(df_titanic['sex'])[0]\ndf_titanic['class_encoded'] = pd.factorize(df_titanic['class'])[0]\ndf_titanic['embark_town_encoded'] = pd.factorize(df_titanic['embark_town'])[0]\ndf_titanic"
-        }
-      ]
-    },
-    {
-      "name": "HW_15_students.ipynb",
-      "path": "DZ_python_DA/HW_15_students.ipynb",
-      "course": "analytics",
-      "searchText": "HW_15_students.ipynb DZ_python_DA/HW_15_students.ipynb # <b><font color='teal'>Homework 15</font></b> # Импорт библиотек import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns ##### <b><font color='teal'>Задание 1</font></b> Сгенерируйте 10 000 пар значений из равномерного распределения от 0 до 1. Вычислите сумму каждой пары и постройте гистограмму сумм. # В переменные a и b запишите значения 0 и 1 соответственно # В переменную data_uniform_1 сгенерируйте 10000 случайных чисел из равномерного распределения # (Синтаксис в файле \"Основы статистики\" - п.Равномерное распределение) # В переменную data_uniform_2 сгенерируйте 10000 случайных чисел из равномерного распределения # (Синтаксис в файле \"Основы статистики\" - п.Равномерное распределение) # В переменную data_uniform просуммируйте два сгенерированных набора данных # Постройте гистаграмму для получившегося набора данных # (Синтаксис в файле \"Основы статистики\" - п.Равномерное распределение) ##### <b><font color='teal'>Задание 2</font></b> При определенных условиях распределение Пуассона можно использовать в качестве приближения к биномиальному распределению: - Число испытаний 𝑛 велико. - Вероятность успеха 𝑝 мала. - Произведение 𝑛𝑝 (среднее значение биномиального распределения) конечное и равно 𝜆. <br> <i>Пример:</i> Если у вас есть биномиальное распределение с 𝑛=1000 и 𝑝=0.003, вы можете аппроксимировать его, используя распределение Пуассона с 𝜆=𝑛𝑝=3. <br> <i>Задача:</i> сгенерировать случайные величины с биномиальным распределением, сгенерировать пуассоновские распределенные случайные величины с 𝜆 = 𝑛𝑝, построить графики распределений рядом друг с другом. # В переменные n и p запишите значения 1000 и 0.003 соответственно # Сгенерируйте 10000 случайных биномиальных значений в переменную data_binom # (Синтаксис в файле \"Основы статистики\" - п.Биномиальное распределение) # Сгенерируйте 10000 случайных пуассоновских значений в переменную data_poisson, где 𝜆 = 𝑛𝑝 # (Синтаксис в файле \"Основы статистики\" - п.Пуассоновское распределение) # С использованием subplot() из библиотеки matplotlib постройте 2 гистограммы в один ряд: # первый - для биномиального распределения # второй - для пуассоновского распределения # (Синтаксис в файле \"Продвинутые возможности matplotlib\" - п.2)",
-      "matches": [
-        {
-          "cell": 1,
-          "type": "markdown",
-          "text": "# <b><font color='teal'>Homework 15</font></b>"
-        },
-        {
-          "cell": 2,
-          "type": "code",
-          "text": "# Импорт библиотек\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns"
-        },
-        {
-          "cell": 3,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 1</font></b>\nСгенерируйте 10 000 пар значений из равномерного распределения от 0 до 1. Вычислите сумму каждой пары и постройте гистограмму сумм."
-        },
-        {
-          "cell": 4,
-          "type": "code",
-          "text": "# В переменные a и b запишите значения 0 и 1 соответственно"
-        },
-        {
-          "cell": 5,
-          "type": "code",
-          "text": "# В переменную data_uniform_1 сгенерируйте 10000 случайных чисел из равномерного распределения\n# (Синтаксис в файле \"Основы статистики\" - п.Равномерное распределение)"
-        },
-        {
-          "cell": 6,
-          "type": "code",
-          "text": "# В переменную data_uniform_2 сгенерируйте 10000 случайных чисел из равномерного распределения\n# (Синтаксис в файле \"Основы статистики\" - п.Равномерное распределение)"
-        },
-        {
-          "cell": 7,
-          "type": "code",
-          "text": "# В переменную data_uniform просуммируйте два сгенерированных набора данных"
-        },
-        {
-          "cell": 8,
-          "type": "code",
-          "text": "# Постройте гистаграмму для получившегося набора данных\n# (Синтаксис в файле \"Основы статистики\" - п.Равномерное распределение)"
-        },
-        {
-          "cell": 9,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 2</font></b>\nПри определенных условиях распределение Пуассона можно использовать в качестве приближения к биномиальному распределению:\n- Число испытаний 𝑛 велико.\n- Вероятность успеха 𝑝 мала.\n- Произведение 𝑛𝑝 (среднее значение биномиального распределения) конечное и равно 𝜆.\n<br>\n<i>Пример:</i>\nЕсли у вас есть биномиальное распределение с 𝑛=1000 и 𝑝=0.003, вы можете аппроксимировать его, используя распределение Пуассона с 𝜆=𝑛𝑝=3.\n<br>\n<i>Задача:</i> сгенерировать случайные величины с биномиальным распределением, сгенерировать пуассоновские распределенные случайные величины с 𝜆 = 𝑛𝑝, построить графики распределений рядом друг с другом."
-        },
-        {
-          "cell": 10,
-          "type": "code",
-          "text": "# В переменные n и p запишите значения 1000 и 0.003 соответственно"
-        },
-        {
-          "cell": 11,
-          "type": "code",
-          "text": "# Сгенерируйте 10000 случайных биномиальных значений в переменную data_binom\n# (Синтаксис в файле \"Основы статистики\" - п.Биномиальное распределение)"
-        },
-        {
-          "cell": 12,
-          "type": "code",
-          "text": "# Сгенерируйте 10000 случайных пуассоновских значений в переменную data_poisson, где 𝜆 = 𝑛𝑝\n# (Синтаксис в файле \"Основы статистики\" - п.Пуассоновское распределение)"
-        },
-        {
-          "cell": 13,
-          "type": "code",
-          "text": "# С использованием subplot() из библиотеки matplotlib постройте 2 гистограммы в один ряд:\n# первый - для биномиального распределения\n# второй - для пуассоновского распределения\n# (Синтаксис в файле \"Продвинутые возможности matplotlib\" - п.2)"
-        }
-      ]
-    },
-    {
-      "name": "HW_17_students.ipynb",
-      "path": "DZ_python_DA/HW_17_students.ipynb",
-      "course": "analytics",
-      "searchText": "HW_17_students.ipynb DZ_python_DA/HW_17_students.ipynb # <b><font color='teal'>Homework 17</font></b> # Импорт библиотек import numpy as np import matplotlib.pyplot as plt from statsmodels.stats.proportion import proportion_confint ##### <b><font color='teal'>Задание 1</font></b> Рассчитайте 95% доверительный интервал для доли генеральной совокупности.<br> Инструкции: - Смоделируйте опрос населения, в котором 1000 человек отвечают на бинарный вопрос (да/нет). Предположим, что 600 человек ответили \"Да\". - Из этой популяции сделайте выборку из 100 ответов. - Рассчитайте долю ответов \"Да\" в выборке. - Вычислите 95%-ный доверительный интервал для популяционной доли ответов \"Да\". - Обсудите, как доверительный интервал дает информацию о доле населения. <b>Короткий ответ:</b> доверительный интервал показывает не одно точное число, а разумный диапазон, в котором, скорее всего, находится истинная доля населения. Чем уже интервал, тем точнее оценка. Если интервал широкий, значит неопределенность выше. # В переменные population_size, yes_count, no_count, sample_size, confidence # запишите размер популяции, кол-во ответов \"Да\", кол-во ответов \"Нет\", размер выборки и точность ДИ соответственно population_size = 1000 yes_count = 600 no_count = 400 sample_size = 100 confidence = 0.95 # Создайте массив population в котором будет соответствующее значение 0 и 1 (400 и 600) population = np.array([1] * yes_count + [0] * no_count) # display(population) # Сгенерируйте случайную выборку с помощью np.random.choice # Результат запишите в переменную sample # (Синтаксис в файле \"ЦПТ\" - п.1.1) np.random.seed(42) sample = np.random.choice(population, size=sample_size, replace=False) display(sample) # Посчитайте долю ответов \"Да\" в выборке (sample) # Результат запишите в переменную p p = np.mean(sample) print(f\"Доля ответов 'Да' в выборке: {p*100:.2f}%\") # С помощью функции proportion_confint вычислите 95% ДИ для доли # (Синтаксис в файле \"ДИ\" - п. \"ДИ для доли ГС\") alpha = 1 - confidence ci = proportion_confint(count=int(sample.sum()), nobs=sample_size, alpha=alpha, method=\"normal\") print(f\"95% ДИ для доли 'Да': ({ci[0]*100:.2f}%, {ci[1]*100:.2f}%)\") ##### <b><font color='teal'>Задание 2</font></b> Продемонстрируйте влияние размера выборки на форму распределения средних, используя равномерное распределение. # Задание 2. Влияние размера выборки на распределение средних np.random.seed(42) # Это продолжение идеи из задания 1: мы снова много раз моделируем выборки # только теперь вместо бинарных ответов берем значения из равномерного распределения U(a, b) # a и b - нижняя и верхняя границы равномерного распределения a = 0 b = 1 # sample_sizes - размеры выборок, чтобы сравнить, как меняется форма распределения средних # Маленькая выборка дает более широкий разброс, большая - более узкое и гладкое распределение # Набор размеров взят для наглядного сравнения: от средней к крупной выборке sample_sizes = [50, 100, 300] num_samples = 1000 fig, axes = plt.subplots(1, len(sample_sizes), figsize=(15, 4), sharey=True) for axis, sample_size in zip(axes, sample_sizes): sample_means = [] for _ in range(num_samples): sample = np.random.uniform(a, b, size=sample_size) sample_means.append(sample.mean()) axis.hist(sample_means, bins=30, color='teal', edgecolor='white') axis.set_title(f'n = {sample_size}') axis.set_xlabel('Среднее значение') axis.grid(alpha=0.2) axes[0].set_ylabel('Частота') fig.suptitle('Как размер выборки влияет на распределение выборочных средних', fontsize=14) plt.tight_layout() plt.show() print('При увеличении размера выборки распределение средних становится более узким и ближе к нормальному.')",
-      "matches": [
-        {
-          "cell": 1,
-          "type": "markdown",
-          "text": "# <b><font color='teal'>Homework 17</font></b>"
-        },
-        {
-          "cell": 2,
-          "type": "code",
-          "text": "# Импорт библиотек\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom statsmodels.stats.proportion import proportion_confint"
-        },
-        {
-          "cell": 3,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 1</font></b>\nРассчитайте 95% доверительный интервал для доли генеральной совокупности.<br>\nИнструкции:\n- Смоделируйте опрос населения, в котором 1000 человек отвечают на бинарный вопрос (да/нет). Предположим, что 600 человек ответили \"Да\".\n- Из этой популяции сделайте выборку из 100 ответов.\n- Рассчитайте долю ответов \"Да\" в выборке.\n- Вычислите 95%-ный доверительный интервал для популяционной доли ответов \"Да\".\n- Обсудите, как доверительный интервал дает информацию о доле населения.\n\n<b>Короткий ответ:</b> доверительный интервал показывает не одно точное число, а разумный диапазон, в котором, скорее всего, находится истинная доля населения. Чем уже интервал, тем точнее оценка. Если интервал широкий, значит неопределенность выше."
-        },
-        {
-          "cell": 4,
-          "type": "code",
-          "text": "# В переменные population_size, yes_count, no_count, sample_size, confidence\n# запишите размер популяции, кол-во ответов \"Да\", кол-во ответов \"Нет\", размер выборки и точность ДИ соответственно\npopulation_size = 1000\nyes_count = 600\nno_count = 400\nsample_size = 100\nconfidence = 0.95"
-        },
-        {
-          "cell": 5,
-          "type": "code",
-          "text": "# Создайте массив population в котором будет соответствующее значение 0 и 1 (400 и 600)\npopulation = np.array([1] * yes_count + [0] * no_count)\n# display(population)"
-        },
-        {
-          "cell": 6,
-          "type": "code",
-          "text": "# Сгенерируйте случайную выборку с помощью np.random.choice\n# Результат запишите в переменную sample\n# (Синтаксис в файле \"ЦПТ\" - п.1.1)\nnp.random.seed(42)\nsample = np.random.choice(population, size=sample_size, replace=False)\ndisplay(sample)"
-        },
-        {
-          "cell": 7,
-          "type": "code",
-          "text": "# Посчитайте долю ответов \"Да\" в выборке (sample)\n# Результат запишите в переменную p\np = np.mean(sample)\nprint(f\"Доля ответов 'Да' в выборке: {p*100:.2f}%\")"
-        },
-        {
-          "cell": 8,
-          "type": "code",
-          "text": "# С помощью функции proportion_confint вычислите 95% ДИ для доли\n# (Синтаксис в файле \"ДИ\" - п. \"ДИ для доли ГС\")\nalpha = 1 - confidence\nci = proportion_confint(count=int(sample.sum()), nobs=sample_size, alpha=alpha, method=\"normal\")\nprint(f\"95% ДИ для доли 'Да': ({ci[0]*100:.2f}%, {ci[1]*100:.2f}%)\")"
-        },
-        {
-          "cell": 9,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 2</font></b>\nПродемонстрируйте влияние размера выборки на форму распределения средних, используя равномерное распределение."
-        },
-        {
-          "cell": 10,
-          "type": "code",
-          "text": "# Задание 2. Влияние размера выборки на распределение средних\nnp.random.seed(42)\n\n# Это продолжение идеи из задания 1: мы снова много раз моделируем выборки\n# только теперь вместо бинарных ответов берем значения из равномерного распределения U(a, b)\n# a и b - нижняя и верхняя границы равномерного распределения\na = 0\nb = 1\n\n# sample_sizes - размеры выборок, чтобы сравнить, как меняется форма распределения средних\n# Маленькая выборка дает более широкий разброс, большая - более узкое и гладкое распределение\n# Набор размеров взят для наглядного сравнения: от средней к крупной выборке\nsample_sizes = [50, 100, 300]\nnum_samples = 1000\n\nfig, axes = plt.subplots(1, len(sample_sizes), figsize=(15, 4), sharey=True)\n\nfor axis, sample_size in zip(axes, sample_sizes):\n    sample_means = []\n    for _ in range(num_samples):\n        sample = np.random.uniform(a, b, size=sample_size)\n        sample_means."
-        }
-      ]
-    },
-    {
-      "name": "HW_18_students.ipynb",
-      "path": "DZ_python_DA/HW_18_students.ipynb",
-      "course": "analytics",
-      "searchText": "HW_18_students.ipynb DZ_python_DA/HW_18_students.ipynb # <b><font color='teal'>Homework 18</font></b> # Импорт библиотек import seaborn as sns import pandas as pd import scipy.stats as stats from statsmodels.stats.weightstats import ztest ##### <b><font color='teal'>Задание 1</font></b> С помощью библиотеки scipy.stats выполните независимый t-тест на наборе данных tips из seaborn. Сравните средний общий счет между курящими и некурящими. * Если в условии задачи не сказано про равенство дисперсий, то лучше предполагать, что дисперсии НЕ равны # Загрузите набор данных tips в датафрейм df_tips df_tips = sns.load_dataset('tips') display(df_tips.head()) # В объект типа Series s_no_smoker запишите данные по общему счету для некурящих клиентов s_no_smoker = df_tips[df_tips['smoker'] == 'No']['total_bill'] # В объект типа Series s_smoker запишите данные по общему счету для курящих клиентов s_smoker = df_tips[df_tips['smoker'] == 'Yes']['total_bill'] # Рассчитайте двухвыборочный t-тест с НЕ равной дисперсией # (Синтаксис в файле \"Проверка гипотез\" - п. 1.3.) t_stat_1, p_value_1 = stats.ttest_ind(s_no_smoker, s_smoker, equal_var=False) # Выведите результат с интерпретацией print(f't-statistic: {t_stat_1:.4f}') print(f'p-value: {p_value_1:.6f}') if p_value_1 < 0.05: print('H0 отклоняем. Принимаем H1: средний общий счет у курящих и некурящих различается.') else: print('H0 принимаем: средний общий счет у курящих и некурящих одинаков.') ##### <b><font color='teal'>Задание 2</font></b> С помощью библиотеки statsmodels выполните одновыборочный z-тест для набора данных по бриллиантам из seaborn. Проверьте, значительно ли отличается средняя цена бриллиантов от $4000. # Загрузите в датафрейм df_diamonds набор данных diamonds из библиотеки seaborn df_diamonds = sns.load_dataset('diamonds') display(df_diamonds.head()) # В переменную mu запишите ожидаемое значение цены бриллиантов mu = 4000 # В объект типа Series diamonds_prices запишите данные о ценах бриллиантов diamonds_prices = df_diamonds['price'] # Рассчитайте одновыборочный z-тест # На уроке мы рассчитывали вручную, потому что у нас были уже рассчитанные значения # Здесь нам дается выборка целиком, поэтому используем z_test с параметрами: # x1 - объект Series с ценами бриллиантов # value - ожидаемое значение цены z_stat_2, p_value_2 = ztest(x1=diamonds_prices, value=mu) # Выведите результат с интерпретацией print(f'z-statistic: {z_stat_2:.4f}') print(f'p-value: {p_value_2:.6f}') if p_value_2 < 0.05: print('H0 отклоняем. Принимаем H1: средняя цена бриллиантов отличается от 4000.') else: print('H0 принимаем: средняя цена бриллиантов равна 4000.') ##### <b><font color='teal'>Задание 3</font></b> Используйте библиотеку scipy.stats для расчета коэффициента корреляции Пирсона между total_bill и tip в наборе данных tips. # Рассчитайте коэффициент корреляции Пирсона для переменных total_bill и tip в датафрейме df_tips # (Синтаксис в файле \"Основы корреляции\" - п. 1) corr_coef_3, p_value_3 = stats.pearsonr(df_tips['total_bill'], df_tips['tip']) # Выведите и интерпретируйте результат: # 1. На основании p-value определите, можно ли доверять высчитанному коэффициенту # 2. Если ответ на предыдущий вопрос - да, то какова сила и направленность корреляции между этими двумя переменными print(f'Pearson correlation: {corr_coef_3:.4f}') print(f'p-value: {p_value_3}') if p_value_3 < 0.05: print('Коэффициент статистически значим, ему можно доверять.') if abs(corr_coef_3) < 0.3: strength = 'слабая' elif abs(corr_coef_3) < 0.7: strength = 'умеренная' else: strength = 'сильная' direction = 'положительная' if corr_coef_3 > 0 else 'отрицательная' print(f'Сила корреляции: {strength}. Направленность: {direction}.') else: print('Коэффициент статистически незначим, делать вывод о силе и направленности нельзя.')",
-      "matches": [
-        {
-          "cell": 1,
-          "type": "markdown",
-          "text": "# <b><font color='teal'>Homework 18</font></b>"
-        },
-        {
-          "cell": 2,
-          "type": "code",
-          "text": "# Импорт библиотек\nimport seaborn as sns\nimport pandas as pd\nimport scipy.stats as stats\nfrom statsmodels.stats.weightstats import ztest"
-        },
-        {
-          "cell": 3,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 1</font></b>\nС помощью библиотеки scipy.stats выполните независимый t-тест на наборе данных tips из seaborn. Сравните средний общий счет между курящими и некурящими.\n* Если в условии задачи не сказано про равенство дисперсий, то лучше предполагать, что дисперсии НЕ равны"
-        },
-        {
-          "cell": 4,
-          "type": "code",
-          "text": "# Загрузите набор данных tips в датафрейм df_tips\ndf_tips = sns.load_dataset('tips')\ndisplay(df_tips.head())"
-        },
-        {
-          "cell": 5,
-          "type": "code",
-          "text": "# В объект типа Series s_no_smoker запишите данные по общему счету для некурящих клиентов\ns_no_smoker = df_tips[df_tips['smoker'] == 'No']['total_bill']"
-        },
-        {
-          "cell": 6,
-          "type": "code",
-          "text": "# В объект типа Series s_smoker запишите данные по общему счету для курящих клиентов\ns_smoker = df_tips[df_tips['smoker'] == 'Yes']['total_bill']"
-        },
-        {
-          "cell": 8,
-          "type": "code",
-          "text": "# Рассчитайте двухвыборочный t-тест с НЕ равной дисперсией\n# (Синтаксис в файле \"Проверка гипотез\" - п. 1.3.)\nt_stat_1, p_value_1 = stats.ttest_ind(s_no_smoker, s_smoker, equal_var=False)"
-        },
-        {
-          "cell": 9,
-          "type": "code",
-          "text": "# Выведите результат с интерпретацией\nprint(f't-statistic: {t_stat_1:.4f}')\nprint(f'p-value: {p_value_1:.6f}')\nif p_value_1 < 0.05:\n    print('H0 отклоняем. Принимаем H1: средний общий счет у курящих и некурящих различается.')\nelse:\n    print('H0 принимаем: средний общий счет у курящих и некурящих одинаков.')"
-        },
-        {
-          "cell": 10,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 2</font></b>\nС помощью библиотеки statsmodels выполните одновыборочный z-тест для набора данных по бриллиантам из seaborn. Проверьте, значительно ли отличается средняя цена бриллиантов от $4000."
-        },
-        {
-          "cell": 11,
-          "type": "code",
-          "text": "# Загрузите в датафрейм df_diamonds набор данных diamonds из библиотеки seaborn\ndf_diamonds = sns.load_dataset('diamonds')\ndisplay(df_diamonds.head())"
-        },
-        {
-          "cell": 12,
-          "type": "code",
-          "text": "# В переменную mu запишите ожидаемое значение цены бриллиантов\nmu = 4000"
-        },
-        {
-          "cell": 13,
-          "type": "code",
-          "text": "# В объект типа Series diamonds_prices запишите данные о ценах бриллиантов\ndiamonds_prices = df_diamonds['price']"
-        },
-        {
-          "cell": 15,
-          "type": "code",
-          "text": "# Рассчитайте одновыборочный z-тест \n# На уроке мы рассчитывали вручную, потому что у нас были уже рассчитанные значения\n# Здесь нам дается выборка целиком, поэтому используем z_test с параметрами:\n# x1 - объект Series с ценами бриллиантов\n# value - ожидаемое значение цены\nz_stat_2, p_value_2 = ztest(x1=diamonds_prices, value=mu)"
-        },
-        {
-          "cell": 16,
-          "type": "code",
-          "text": "# Выведите результат с интерпретацией\nprint(f'z-statistic: {z_stat_2:.4f}')\nprint(f'p-value: {p_value_2:.6f}')\nif p_value_2 < 0.05:\n    print('H0 отклоняем. Принимаем H1: средняя цена бриллиантов отличается от 4000.')\nelse:\n    print('H0 принимаем: средняя цена бриллиантов равна 4000.')"
-        },
-        {
-          "cell": 17,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 3</font></b>\nИспользуйте библиотеку scipy.stats для расчета коэффициента корреляции Пирсона между total_bill и tip в наборе данных tips."
-        },
-        {
-          "cell": 18,
-          "type": "code",
-          "text": "# Рассчитайте коэффициент корреляции Пирсона для переменных total_bill и tip в датафрейме df_tips\n# (Синтаксис в файле \"Основы корреляции\" - п. 1)\ncorr_coef_3, p_value_3 = stats.pearsonr(df_tips['total_bill'], df_tips['tip'])"
-        },
-        {
-          "cell": 19,
-          "type": "code",
-          "text": "# Выведите и интерпретируйте результат:\n# 1. На основании p-value определите, можно ли доверять высчитанному коэффициенту\n# 2. Если ответ на предыдущий вопрос - да, то какова сила и направленность корреляции между этими двумя переменными\nprint(f'Pearson correlation: {corr_coef_3:.4f}')\nprint(f'p-value: {p_value_3}')\n\nif p_value_3 < 0.05:\n    print('Коэффициент статистически значим, ему можно доверять.')\n    if abs(corr_coef_3) < 0.3:\n        strength = 'слабая'\n    elif abs(corr_coef_3) < 0.7:\n        strength = 'умеренная'\n    else:\n        strength = 'сильная'\n    direction = 'положительная' if corr_coef_3 > 0 else 'отрицательная'\n    print(f'Сила корреляции: {strength}. Направленность: {direction}.')\nelse:\n    print('Коэффициент статистически незначим, делать вывод о силе и направленности нельзя.')"
-        }
-      ]
-    },
-    {
-      "name": "HW_19.ipynb",
-      "path": "DZ_python_DA/HW_19.ipynb",
-      "course": "analytics",
-      "searchText": "HW_19.ipynb DZ_python_DA/HW_19.ipynb # <b><font color='teal'>Homework 19</font></b> # Импорт библиотек import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns # Загрузите файл df_cars.pkl cars = pd.read_pickle('C:\\\\Users\\\\Vitaliy\\\\OneDrive\\\\career\\\\it_career_hub\\\\Python Analytics\\\\df_cars.pkl') # cars = pd.read_csv('C:\\\\Users\\\\Vitaliy\\\\OneDrive\\\\career\\\\it_career_hub\\\\Python Analytics\\\\used_cars_data.csv') # Выведите первые 5 строк датафрейма display(cars.head()) ##### <b><font color='teal'>Задание 1</font></b> Повторите первичный анализ датасета used_cars_data после всех преобразований, сделанных на уроке. Определите, типы каких столбцов теперь можно изменить. Сделайте это. # С помощью метода info посмотрите на данные cars.info() # Измените тип данных столбцов, которые нужно/можно изменить с помощью метода astype # Проверка после преобразований с лекции: есть ли столбцы, которые еще можно привести через astype obj_cols = cars.select_dtypes(include='object').columns.tolist() # Ищем object-столбцы, которые полностью числовые по содержимому numeric_like_cols = [ col for col in obj_cols if pd.to_numeric(cars[col], errors='coerce').notna().sum() == cars[col].notna().sum() ] if numeric_like_cols: cars[numeric_like_cols] = cars[numeric_like_cols].apply(pd.to_numeric, errors='coerce') print('Преобразованы в числовой тип:', numeric_like_cols) else: print('Дополнительные преобразования astype/pd.to_numeric не требуются: типы уже корректны.') cars.info() ##### <b><font color='teal'>Задание 2</font></b> Повторите одномерный анализ прологорифмированных столбцов и столбцов, в которых были заполнены пропущенные значения. # Визуализируйте числовые переменные с помощью гистограмм и боксплотов # (Синтаксис в файле \"EDA - п.3.2\") # 1) Определяем числовые столбцы num_cols = cars.select_dtypes(include='number').columns.tolist() print('Числовые столбцы:') print(num_cols) # Заметил аномалию на гистограмме для столбца 'Kilometers_Driven' проверил и исправил опечатку. # Нашел такую же модельмарку машины такого же года выпуска и за пробег взял ее значение display(cars.sort_values(by='Kilometers_Driven', ascending=False).head(3)) display(cars[(cars['Brand'] == 'BMW') & (cars['Model'] == 'X5xDrive') & (cars['Year'] == 2017)]) cars.loc[2328, 'Kilometers_Driven'] = 21000 display(cars[(cars['Brand'] == 'BMW') & (cars['Model'] == 'X5xDrive') & (cars['Year'] == 2017)]) # 2) Гистограмма + боксплот для каждого числового столбца for col in num_cols: fig, axes = plt.subplots(1, 2, figsize=(12, 4)) sns.histplot(cars[col].dropna(), bins=30, kde=True, ax=axes[0]) axes[0].set_title(f'Гистограмма: {col}') sns.boxplot(x=cars[col].dropna(), ax=axes[1]) axes[1].set_title(f'Боксплот: {col}') plt.tight_layout() plt.show() ##### <b><font color='teal'>Задание 3</font></b> Выведите информацию о самых крайних выбросах всех столбцов. Проанализируйте, есть ли среди них ошибки ввода. Ликвидируйте их любым способом, учитывающим специфику данных # На основании боксплотов посмотрите крайние выбросы, и выведите строки по этим таблицам num_cols = cars.select_dtypes(include='number').columns for col in num_cols: q1 = cars[col].quantile(0.25) q3 = cars[col].quantile(0.75) iqr = q3 - q1 low = q1 - 1.5 * iqr high = q3 + 1.5 * iqr outliers = cars[(cars[col] < low) | (cars[col] > high)] print(f'\\n{col}: выбросов = {len(outliers)}') if len(outliers) > 0: display(outliers.sort_values(col, ascending=False).head(5)) # Примите решение по каждому выбросу и реализуйте это # Добавьте комментарий по вашему решению # Мое решение: # 1) Исправил явную опечатку в пробеге: BMW X5xDrive 2017 (6_500_000 -> 21_000). # 2) Все остальные выбросы в числовых столбцах не удалял, т.к. они в полне правдоподнобные #",
-      "matches": [
-        {
-          "cell": 1,
-          "type": "markdown",
-          "text": "# <b><font color='teal'>Homework 19</font></b>"
-        },
-        {
-          "cell": 2,
-          "type": "code",
-          "text": "# Импорт библиотек\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns"
-        },
-        {
-          "cell": 3,
-          "type": "code",
-          "text": "# Загрузите файл df_cars.pkl\ncars = pd.read_pickle('C:\\\\Users\\\\Vitaliy\\\\OneDrive\\\\career\\\\it_career_hub\\\\Python Analytics\\\\df_cars.pkl')\n# cars = pd.read_csv('C:\\\\Users\\\\Vitaliy\\\\OneDrive\\\\career\\\\it_career_hub\\\\Python Analytics\\\\used_cars_data.csv')\n# Выведите первые 5 строк датафрейма\ndisplay(cars.head())"
-        },
-        {
-          "cell": 4,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 1</font></b>\nПовторите первичный анализ датасета used_cars_data после всех преобразований, сделанных на уроке. Определите, типы каких столбцов теперь можно изменить. Сделайте это."
-        },
-        {
-          "cell": 5,
-          "type": "code",
-          "text": "# С помощью метода info посмотрите на данные\ncars.info()"
-        },
-        {
-          "cell": 6,
-          "type": "code",
-          "text": "# Измените тип данных столбцов, которые нужно/можно изменить с помощью метода astype\n# Проверка после преобразований с лекции: есть ли столбцы, которые еще можно привести через astype\nobj_cols = cars.select_dtypes(include='object').columns.tolist()\n\n# Ищем object-столбцы, которые полностью числовые по содержимому\nnumeric_like_cols = [\n    col for col in obj_cols\n    if pd.to_numeric(cars[col], errors='coerce').notna().sum() == cars[col].notna().sum()\n]\n\nif numeric_like_cols:\n    cars[numeric_like_cols] = cars[numeric_like_cols].apply(pd.to_numeric, errors='coerce')\n    print('Преобразованы в числовой тип:', numeric_like_cols)\nelse:\n    print('Дополнительные преобразования astype/pd.to_numeric не требуются: типы уже корректны.')\n\ncars.info()"
-        },
-        {
-          "cell": 7,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 2</font></b>\nПовторите одномерный анализ прологорифмированных столбцов и столбцов, в которых были заполнены пропущенные значения."
-        },
-        {
-          "cell": 8,
-          "type": "code",
-          "text": "# Визуализируйте числовые переменные с помощью гистограмм и боксплотов \n# (Синтаксис в файле \"EDA - п.3.2\")\n\n# 1) Определяем числовые столбцы\nnum_cols = cars.select_dtypes(include='number').columns.tolist()\nprint('Числовые столбцы:')\nprint(num_cols)\n\n# Заметил аномалию на гистограмме для столбца 'Kilometers_Driven' проверил и исправил опечатку. \n# Нашел такую же модельмарку машины такого же года выпуска и за пробег взял ее значение\ndisplay(cars.sort_values(by='Kilometers_Driven', ascending=False).head(3))\ndisplay(cars[(cars['Brand'] == 'BMW') & (cars['Model'] == 'X5xDrive') & (cars['Year'] == 2017)])\ncars.loc[2328, 'Kilometers_Driven'] = 21000\ndisplay(cars[(cars['Brand'] == 'BMW') & (cars['Model'] == 'X5xDrive') & (cars['Year'] == 2017)])\n\n# 2) Гистограмма + боксплот для каждого числового столбца\nfor col in num_cols:\n    fig, axes = plt.subplots(1, 2, figsize=(12, 4))\n\n    sns.histplot(c"
-        },
-        {
-          "cell": 9,
-          "type": "markdown",
-          "text": "##### <b><font color='teal'>Задание 3</font></b>\nВыведите информацию о самых крайних выбросах всех столбцов. Проанализируйте, есть ли среди них ошибки ввода. Ликвидируйте их любым способом, учитывающим специфику данных"
-        },
-        {
-          "cell": 10,
-          "type": "code",
-          "text": "# На основании боксплотов посмотрите крайние выбросы, и выведите строки по этим таблицам\nnum_cols = cars.select_dtypes(include='number').columns\n\nfor col in num_cols:\n    q1 = cars[col].quantile(0.25)\n    q3 = cars[col].quantile(0.75)\n    iqr = q3 - q1\n    low = q1 - 1.5 * iqr\n    high = q3 + 1.5 * iqr\n\n    outliers = cars[(cars[col] < low) | (cars[col] > high)]\n    print(f'\\n{col}: выбросов = {len(outliers)}')\n    if len(outliers) > 0:\n        display(outliers.sort_values(col, ascending=False).head(5))"
-        },
-        {
-          "cell": 11,
-          "type": "code",
-          "text": "# Примите решение по каждому выбросу и реализуйте это\n# Добавьте комментарий по вашему решению\n\n# Мое решение:\n# 1) Исправил явную опечатку в пробеге: BMW X5xDrive 2017 (6_500_000 -> 21_000).\n# 2) Все остальные выбросы в числовых столбцах не удалял, т.к. они в полне правдоподнобные\n#"
-        }
-      ]
-    },
-    {
-      "name": "HW_20_students.ipynb",
-      "path": "DZ_python_DA/HW_20_students.ipynb",
-      "course": "analytics",
-      "searchText": "HW_20_students.ipynb DZ_python_DA/HW_20_students.ipynb # <b><font color='teal'>Homework 20</font></b> Объедините прогнозы, полученные с помощью моделей ARIMA, SARIMA и Prophet, чтобы повысить точность предсказаний. # Импорт библиотек import pandas as pd from statsmodels.tsa.arima.model import ARIMA import matplotlib.pyplot as plt from statsmodels.tsa.statespace.sarimax import SARIMAX from prophet import Prophet import numpy as np # Загрузите датасет в датафрейм df_Dingling df_Dingling = pd.read_csv('../data/PRSA_Data_Dingling_20130301-20170228.csv') display(df_Dingling) # В df_Dingling создайте новый столбец datetime, # в который соедините значения из столбцов year, month, day, hour # Для этого используйте функцию pd.to_datetime df_Dingling['datetime'] = pd.to_datetime(df_Dingling[['year', 'month', 'day', 'hour']]) display(df_Dingling) # Созданный столбец сделайте индексом датафрейма (df.set_index()) df_Dingling.set_index('datetime', inplace=True) display(df_Dingling) # Поле PM2.5 выделите в отдельный объект типа Series и назовите его series_pm25 series_pm25 = df_Dingling['PM2.5'] display(series_pm25) # Изучите series_pm25 на наличие отсутствующих значений series_pm25.isna().sum() # Примите решение об удалении/заполнении отсутствующих значений и выполните это действие display(df_Dingling[df_Dingling['PM2.5'].isna()]) display(df_Dingling.info()) display(df_Dingling.describe()) display(df_Dingling.duplicated().sum()) # Будет два варианта с dropna и fillna. Я выберу dropna, так как пропущенных значений не так много, и удаление их не повлияет на общую картину данных. series_pm25_drop = series_pm25.dropna().sort_index() display(series_pm25_drop) series_pm25_fill = series_pm25.interpolate(method='time').ffill().bfill().sort_index() display(series_pm25_fill) # Агрегируйте данные по месяцам в переменную monthly_data monthly_data_drop = series_pm25_drop.resample('ME').mean() display(monthly_data_drop.head(3)) monthly_data_fill = series_pm25_fill.resample('ME').mean() display(monthly_data_fill.head(3)) #### <b><font color='teal'>Модель ARIMA</font></b> # Постройте модель ARIMA (назовите model_pm25_arima) # p - компонент авторегрессии (кол-во предыдущих значений) # d - интегральный компонент (кол-во раз, которое необходимо продифференцировать данные) # q - компонент скользящего среднего (сколько прошлых членов ошибки используется для прогнозирования) model_pm25_drop_arima = ARIMA(monthly_data_drop, order=(4, 2, 0)) model_pm25_fill_arima = ARIMA(monthly_data_fill, order=(4, 2, 0)) # Натренируйте модель # Результат запишите в переменную model_pm25_arima_fit model_pm25_drop_arima_fit = model_pm25_drop_arima.fit() model_pm25_fill_arima_fit = model_pm25_fill_arima.fit() # В переменную forecast_arima_pm25 спрогнозируйте значения pm25 на ближайший год forecast_arima_pm25_drop = model_pm25_drop_arima_fit.forecast(steps=12) forecast_arima_pm25_fill = model_pm25_fill_arima_fit.forecast(steps=12) # Нарисуйте график временного ряда + график прогнозов plt.figure(figsize=(12, 6)) plt.subplot(2, 1, 1) plt.plot(monthly_data_drop, label='PM2.5 (dropna)', color='blue') plt.plot(forecast_arima_pm25_drop, label='ARIMA Forecast (dropna)', color='orange') plt.title('ARIMA Forecast for PM2.5 (dropna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.subplot(2, 1, 2) plt.plot(monthly_data_fill, label='PM2.5 (fillna)', color='green') plt.plot(forecast_arima_pm25_fill, label='ARIMA Forecast (fillna)', color='red') plt.title('ARIMA Forecast for PM2.5 (fillna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.tight_layout() plt.show() #### <b><font color='teal'>Модель SARIMA</font></b> # Создайте модель SARIMA с параметрами: # p = 1 # d = 1 # q = 1 # P = 1 # D = 1 # Q = 1 # s = 12 # Назовите переменную model_pm25_sarima model_pm25_sarima_drop = SARIMAX(monthly_data_drop, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12)) model_pm25_sarima_fill = SARIMAX(monthly_data_fill, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12)) # Натренируйте модель на данных и запишите результат в model_pm25_sarima_fit model_pm25_sarima_fit = model_pm25_sarima_drop.fit() model_pm25_sarima_fill_fit = model_pm25_sarima_fill.fit() # В переменную forecast_pm25_sarima спрогнозируйте данные на 12 месяцев вперед forecast_pm25_sarima_drop = model_pm25_sarima_fit.forecast(steps=12) forecast_pm25_sarima_fill = model_pm25_sarima_fill_fit.forecast(steps=12) # Постройте график данных + прогнозы plt.figure(figsize=(12, 6)) plt.subplot(2, 1, 1) plt.plot(monthly_data_drop, label='PM2.5 (dropna)', color='blue') plt.plot(forecast_pm25_sarima_drop, label='ARIMA Forecast (dropna)', color='orange') plt.title('ARIMA Forecast for PM2.5 (dropna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.subplot(2, 1, 2) plt.plot(monthly_data_fill, label='PM2.5 (fillna)', color='green') plt.plot(forecast_pm25_sarima_fill, label='ARIMA Forecast (fillna)', color='red') plt.title('ARIMA Forecast for PM2.5 (fillna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.tight_layout() plt.show() #### <b><font color='teal'>Модель Prophet</font></b> # Из monthly_data создайте датафрейм df_pm25 со столбцами 'ds' и 'y' df_pm25_drop = monthly_data_drop.reset_index().rename(columns={'datetime': 'ds', 'PM2.5': 'y'}) display(df_pm25_drop.head(3)) df_pm25_fill = monthly_data_fill.reset_index().rename(columns={'datetime': 'ds', 'PM2.5': 'y'}) display(df_pm25_fill.head(3)) # Создайте экземпляр Prophet. Назовите model_prophet model_prophet_drop = Prophet() model_prophet_fill = Prophet() # Обучите модель model_prophet_drop.fit(df_pm25_drop) model_prophet_fill.fit(df_pm25_fill) # Создайте фрейм future_pm25 данных для хранения прогнозов # с периодом 12 и с частотой в месяц (ME) future_pm25_drop = model_prophet_drop.make_future_dataframe(periods=12, freq='ME') future_pm25_fill = model_prophet_fill.make_future_dataframe(periods=12, freq='ME') # Сделайте прогнозы в переменную forecast_prophet_pm25 forecast_prophet_pm25_drop = model_prophet_drop.predict(future_pm25_drop) forecast_prophet_pm25_fill = model_prophet_fill.predict(future_pm25_fill) # Визуализируйте прогноз и нарисуйте графики компонентов plt.figure(figsize=(15, 8)) plt.subplot(2, 1, 1) model_prophet_drop.plot(forecast_prophet_pm25_drop, ax=plt.gca()) plt.title('Prophet Forecast for PM2.5 (dropna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.subplot(2, 1, 2) model_prophet_fill.plot(forecast_prophet_pm25_fill, ax=plt.gca()) plt.title('Prophet Forecast for PM2.5 (fillna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.tight_layout() plt.show() model_prophet_drop.plot_components(forecast_prophet_pm25_drop) model_prophet_fill.plot_components(forecast_prophet_pm25_fill) plt.show() #### <b><font color='teal'>Объединение прогнозов моделей</font></b> # Подготовьте прогнозы модели Prophet к формату данных других моделей # Создайте Series из столбца yhat (причем последних 12 значений - tail(12)) # Индексами созданного Series будет столбец ds датафрейма forecast_prophet_pm25 series_pm25_drop = pd.Series(forecast_prophet_pm25_drop['yhat'].tail(12).values, index=forecast_prophet_pm25_drop['ds'].tail(12)) display(series_pm25_drop) series_pm25_fill = pd.Series(forecast_prophet_pm25_fill['yhat'].tail(12).values, index=forecast_prophet_pm25_fill['ds'].tail(12)) display(series_pm25_fill) # В переменную mean_forecast вычислите среднее арифметическое всех трех прогнозов (ARIMA, SARIMA, Prophet) mean_forecast_drop = (forecast_arima_pm25_drop.values + forecast_pm25_sarima_drop.values + series_pm25_drop.values) / 3 mean_forecast_fill = (forecast_arima_pm25_fill.values + forecast_pm25_sarima_fill.values + series_pm25_fill.values) / 3 display(mean_forecast_drop) display(mean_forecast_fill) # Постройте график данных + усредненный прогноз plt.figure(figsize=(15, 8)) plt.subplot(2, 1, 1) plt.plot(monthly_data_drop, label='PM2.5 (dropna)', color='blue') # plt.plot(forecast_arima_pm25_drop, label='ARIMA Forecast (dropna)', color='orange') # plt.plot(forecast_pm25_sarima_drop, label='SARIMA Forecast (dropna)', color='green') # plt.plot(series_pm25_drop, label='Prophet Forecast (dropna)', color='red') plt.plot(forecast_arima_pm25_drop.index, mean_forecast_drop, label='Mean Forecast (dropna)', color='purple', linestyle='--') plt.title('Forecast Comparison for PM2.5 (dropna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.subplot(2, 1, 2) plt.plot(monthly_data_fill, label='PM2.5 (fillna)', color='blue') # plt.plot(forecast_arima_pm25_fill, label='ARIMA Forecast (fillna)', color='orange') # plt.plot(forecast_pm25_sarima_fill, label='SARIMA Forecast (fillna)', color='green') # plt.plot(series_pm25_fill, label='Prophet Forecast (fillna)', color='red') plt.plot(forecast_arima_pm25_fill.index, mean_forecast_fill, label='Mean Forecast (fillna)', color='purple', linestyle='--') plt.title('Forecast Comparison for PM2.5 (fillna)') plt.xlabel('Date') plt.ylabel('PM2.5') plt.legend() plt.tight_layout() plt.show()",
-      "matches": [
-        {
-          "cell": 1,
-          "type": "markdown",
-          "text": "# <b><font color='teal'>Homework 20</font></b>"
-        },
-        {
-          "cell": 2,
-          "type": "markdown",
-          "text": "Объедините прогнозы, полученные с помощью моделей ARIMA, SARIMA и Prophet, чтобы повысить точность предсказаний."
-        },
-        {
-          "cell": 3,
-          "type": "code",
-          "text": "# Импорт библиотек\nimport pandas as pd\nfrom statsmodels.tsa.arima.model import ARIMA\nimport matplotlib.pyplot as plt\nfrom statsmodels.tsa.statespace.sarimax import SARIMAX\nfrom prophet import Prophet\nimport numpy as np"
-        },
-        {
-          "cell": 4,
-          "type": "code",
-          "text": "# Загрузите датасет в датафрейм df_Dingling\ndf_Dingling = pd.read_csv('../data/PRSA_Data_Dingling_20130301-20170228.csv')\n\ndisplay(df_Dingling)"
-        },
-        {
-          "cell": 5,
-          "type": "code",
-          "text": "# В df_Dingling создайте новый столбец datetime,\n# в который соедините значения из столбцов year, month, day, hour\n# Для этого используйте функцию pd.to_datetime\ndf_Dingling['datetime'] = pd.to_datetime(df_Dingling[['year', 'month', 'day', 'hour']])\ndisplay(df_Dingling)"
-        },
-        {
-          "cell": 6,
-          "type": "code",
-          "text": "# Созданный столбец сделайте индексом датафрейма (df.set_index())\ndf_Dingling.set_index('datetime', inplace=True)\ndisplay(df_Dingling)"
-        },
-        {
-          "cell": 7,
-          "type": "code",
-          "text": "# Поле PM2.5 выделите в отдельный объект типа Series и назовите его series_pm25\nseries_pm25 = df_Dingling['PM2.5']\ndisplay(series_pm25)"
-        },
-        {
-          "cell": 8,
-          "type": "code",
-          "text": "# Изучите series_pm25 на наличие отсутствующих значений\nseries_pm25.isna().sum()"
-        },
-        {
-          "cell": 9,
-          "type": "code",
-          "text": "# Примите решение об удалении/заполнении отсутствующих значений и выполните это действие\ndisplay(df_Dingling[df_Dingling['PM2.5'].isna()])\ndisplay(df_Dingling.info())\ndisplay(df_Dingling.describe())\ndisplay(df_Dingling.duplicated().sum())"
-        },
-        {
-          "cell": 10,
-          "type": "code",
-          "text": "# Будет два варианта с dropna и fillna. Я выберу dropna, так как пропущенных значений не так много, и удаление их не повлияет на общую картину данных.\nseries_pm25_drop = series_pm25.dropna().sort_index()\ndisplay(series_pm25_drop)\nseries_pm25_fill = series_pm25.interpolate(method='time').ffill().bfill().sort_index()\ndisplay(series_pm25_fill)"
-        },
-        {
-          "cell": 11,
-          "type": "code",
-          "text": "# Агрегируйте данные по месяцам в переменную monthly_data\nmonthly_data_drop = series_pm25_drop.resample('ME').mean()\ndisplay(monthly_data_drop.head(3))\nmonthly_data_fill = series_pm25_fill.resample('ME').mean()\ndisplay(monthly_data_fill.head(3))"
-        },
-        {
-          "cell": 12,
-          "type": "markdown",
-          "text": "#### <b><font color='teal'>Модель ARIMA</font></b>"
-        },
-        {
-          "cell": 13,
-          "type": "code",
-          "text": "# Постройте модель ARIMA (назовите model_pm25_arima)\n# p - компонент авторегрессии (кол-во предыдущих значений)\n# d - интегральный компонент (кол-во раз, которое необходимо продифференцировать данные)\n# q - компонент скользящего среднего (сколько прошлых членов ошибки используется для прогнозирования)\nmodel_pm25_drop_arima = ARIMA(monthly_data_drop, order=(4, 2, 0))\n\nmodel_pm25_fill_arima = ARIMA(monthly_data_fill, order=(4, 2, 0))"
-        },
-        {
-          "cell": 14,
-          "type": "code",
-          "text": "# Натренируйте модель\n# Результат запишите в переменную model_pm25_arima_fit\nmodel_pm25_drop_arima_fit = model_pm25_drop_arima.fit()\nmodel_pm25_fill_arima_fit = model_pm25_fill_arima.fit()"
-        },
-        {
-          "cell": 15,
-          "type": "code",
-          "text": "# В переменную forecast_arima_pm25 спрогнозируйте значения pm25 на ближайший год\nforecast_arima_pm25_drop = model_pm25_drop_arima_fit.forecast(steps=12)\nforecast_arima_pm25_fill = model_pm25_fill_arima_fit.forecast(steps=12)"
-        },
-        {
-          "cell": 16,
-          "type": "code",
-          "text": "# Нарисуйте график временного ряда + график прогнозов\nplt.figure(figsize=(12, 6))\nplt.subplot(2, 1, 1)\nplt.plot(monthly_data_drop, label='PM2.5 (dropna)', color='blue')\nplt.plot(forecast_arima_pm25_drop, label='ARIMA Forecast (dropna)', color='orange')\nplt.title('ARIMA Forecast for PM2.5 (dropna)')\nplt.xlabel('Date')\nplt.ylabel('PM2.5')\nplt.legend()\nplt.subplot(2, 1, 2)\nplt.plot(monthly_data_fill, label='PM2.5 (fillna)', color='green')\nplt.plot(forecast_arima_pm25_fill, label='ARIMA Forecast (fillna)', color='red')\nplt.title('ARIMA Forecast for PM2.5 (fillna)')\nplt.xlabel('Date')\nplt.ylabel('PM2.5')\nplt.legend()\nplt.tight_layout()\nplt.show()"
-        },
-        {
-          "cell": 17,
-          "type": "markdown",
-          "text": "#### <b><font color='teal'>Модель SARIMA</font></b>"
-        },
-        {
-          "cell": 18,
-          "type": "code",
-          "text": "# Создайте модель SARIMA с параметрами:\n# p = 1\n# d = 1\n# q = 1\n# P = 1\n# D = 1 \n# Q = 1\n# s = 12\n# Назовите переменную model_pm25_sarima\nmodel_pm25_sarima_drop = SARIMAX(monthly_data_drop, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12))\nmodel_pm25_sarima_fill = SARIMAX(monthly_data_fill, order=(1, 1, 1), seasonal_order=(1, 1, 1, 12))"
-        },
-        {
-          "cell": 19,
-          "type": "code",
-          "text": "# Натренируйте модель на данных и запишите результат в model_pm25_sarima_fit\nmodel_pm25_sarima_fit = model_pm25_sarima_drop.fit()\nmodel_pm25_sarima_fill_fit = model_pm25_sarima_fill.fit()"
-        },
-        {
-          "cell": 20,
-          "type": "code",
-          "text": "# В переменную forecast_pm25_sarima спрогнозируйте данные на 12 месяцев вперед\nforecast_pm25_sarima_drop = model_pm25_sarima_fit.forecast(steps=12)\nforecast_pm25_sarima_fill = model_pm25_sarima_fill_fit.forecast(steps=12)"
-        },
-        {
-          "cell": 21,
-          "type": "code",
-          "text": "# Постройте график данных + прогнозы\nplt.figure(figsize=(12, 6))\nplt.subplot(2, 1, 1)\nplt.plot(monthly_data_drop, label='PM2.5 (dropna)', color='blue')\nplt.plot(forecast_pm25_sarima_drop, label='ARIMA Forecast (dropna)', color='orange')\nplt.title('ARIMA Forecast for PM2.5 (dropna)')\nplt.xlabel('Date')\nplt.ylabel('PM2.5')\nplt.legend()\nplt.subplot(2, 1, 2)\nplt.plot(monthly_data_fill, label='PM2.5 (fillna)', color='green')\nplt.plot(forecast_pm25_sarima_fill, label='ARIMA Forecast (fillna)', color='red')\nplt.title('ARIMA Forecast for PM2.5 (fillna)')\nplt.xlabel('Date')\nplt.ylabel('PM2.5')\nplt.legend()\nplt.tight_layout()\nplt.show()"
-        },
-        {
-          "cell": 22,
-          "type": "markdown",
-          "text": "#### <b><font color='teal'>Модель Prophet</font></b>"
-        },
-        {
-          "cell": 23,
-          "type": "code",
-          "text": "# Из monthly_data создайте датафрейм df_pm25 со столбцами 'ds' и 'y'\ndf_pm25_drop = monthly_data_drop.reset_index().rename(columns={'datetime': 'ds', 'PM2.5': 'y'})\ndisplay(df_pm25_drop.head(3))\ndf_pm25_fill = monthly_data_fill.reset_index().rename(columns={'datetime': 'ds', 'PM2.5': 'y'})\ndisplay(df_pm25_fill.head(3))"
-        },
-        {
-          "cell": 24,
-          "type": "code",
-          "text": "# Создайте экземпляр Prophet. Назовите model_prophet\nmodel_prophet_drop = Prophet()\nmodel_prophet_fill = Prophet()"
-        },
-        {
-          "cell": 25,
-          "type": "code",
-          "text": "# Обучите модель\nmodel_prophet_drop.fit(df_pm25_drop)\nmodel_prophet_fill.fit(df_pm25_fill)"
-        },
-        {
-          "cell": 26,
-          "type": "code",
-          "text": "# Создайте фрейм future_pm25 данных для хранения прогнозов\n# с периодом 12 и с частотой в месяц (ME)\nfuture_pm25_drop = model_prophet_drop.make_future_dataframe(periods=12, freq='ME')\nfuture_pm25_fill = model_prophet_fill.make_future_dataframe(periods=12, freq='ME')"
-        },
-        {
-          "cell": 27,
-          "type": "code",
-          "text": "# Сделайте прогнозы в переменную forecast_prophet_pm25\nforecast_prophet_pm25_drop = model_prophet_drop.predict(future_pm25_drop)\nforecast_prophet_pm25_fill = model_prophet_fill.predict(future_pm25_fill)"
-        },
-        {
-          "cell": 28,
-          "type": "code",
-          "text": "# Визуализируйте прогноз и нарисуйте графики компонентов\nplt.figure(figsize=(15, 8))\nplt.subplot(2, 1, 1)\nmodel_prophet_drop.plot(forecast_prophet_pm25_drop, ax=plt.gca())\nplt.title('Prophet Forecast for PM2.5 (dropna)')\nplt.xlabel('Date')\nplt.ylabel('PM2.5')\nplt.subplot(2, 1, 2)\nmodel_prophet_fill.plot(forecast_prophet_pm25_fill, ax=plt.gca())\nplt.title('Prophet Forecast for PM2.5 (fillna)')\nplt.xlabel('Date')\nplt.ylabel('PM2.5')\nplt.tight_layout()\nplt.show()\n\n\nmodel_prophet_drop.plot_components(forecast_prophet_pm25_drop)\nmodel_prophet_fill.plot_components(forecast_prophet_pm25_fill)\nplt.show()"
-        },
-        {
-          "cell": 29,
-          "type": "markdown",
-          "text": "#### <b><font color='teal'>Объединение прогнозов моделей</font></b>"
-        },
-        {
-          "cell": 30,
-          "type": "code",
-          "text": "# Подготовьте прогнозы модели Prophet к формату данных других моделей\n# Создайте Series из столбца yhat (причем последних 12 значений - tail(12))\n# Индексами созданного Series будет столбец ds датафрейма forecast_prophet_pm25\nseries_pm25_drop = pd.Series(forecast_prophet_pm25_drop['yhat'].tail(12).values, index=forecast_prophet_pm25_drop['ds'].tail(12))\ndisplay(series_pm25_drop)\nseries_pm25_fill = pd.Series(forecast_prophet_pm25_fill['yhat'].tail(12).values, index=forecast_prophet_pm25_fill['ds'].tail(12))\ndisplay(series_pm25_fill)"
-        },
-        {
-          "cell": 31,
-          "type": "code",
-          "text": "# В переменную mean_forecast вычислите среднее арифметическое всех трех прогнозов (ARIMA, SARIMA, Prophet)\nmean_forecast_drop = (forecast_arima_pm25_drop.values + forecast_pm25_sarima_drop.values + series_pm25_drop.values) / 3\nmean_forecast_fill = (forecast_arima_pm25_fill.values + forecast_pm25_sarima_fill.values + series_pm25_fill.values) / 3\ndisplay(mean_forecast_drop)\ndisplay(mean_forecast_fill)"
-        },
-        {
-          "cell": 32,
-          "type": "code",
-          "text": "# Постройте график данных + усредненный прогноз\nplt.figure(figsize=(15, 8))\nplt.subplot(2, 1, 1)\nplt.plot(monthly_data_drop, label='PM2.5 (dropna)', color='blue')\n# plt.plot(forecast_arima_pm25_drop, label='ARIMA Forecast (dropna)', color='orange')\n# plt.plot(forecast_pm25_sarima_drop, label='SARIMA Forecast (dropna)', color='green')\n# plt.plot(series_pm25_drop, label='Prophet Forecast (dropna)', color='red')\nplt.plot(forecast_arima_pm25_drop.index, mean_forecast_drop, label='Mean Forecast (dropna)', color='purple', linestyle='--')\nplt.title('Forecast Comparison for PM2.5 (dropna)')\nplt.xlabel('Date')\nplt.ylabel('PM2.5')\nplt.legend()\nplt.subplot(2, 1, 2)\nplt.plot(monthly_data_fill, label='PM2.5 (fillna)', color='blue')\n# plt.plot(forecast_arima_pm25_fill, label='ARIMA Forecast (fillna)', color='orange')\n# plt.plot(forecast_pm25_sarima_fill, label='SARIMA Forecast (fillna)', color='green'"
-        }
-      ]
-    },
-    {
-      "name": "HW_21.ipynb",
-      "path": "DZ_python_DA/HW_21.ipynb",
-      "course": "analytics",
-      "searchText": "HW_21.ipynb DZ_python_DA/HW_21.ipynb # <b><font color='teal'>Homework 21</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing, load_wine from sklearn.model_selection import train_test_split from sklearn.linear_model import LinearRegression from sklearn.tree import DecisionTreeRegressor, plot_tree from sklearn.metrics import mean_squared_error, r2_score from sklearn.metrics import accuracy_score, classification_report, confusion_matrix 1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье. <b>Описание данных: </b><br> Датасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br> Поля: - MedInc - медианный доход домохозяйства в block group - HouseAge - медианный возраст домов (лет) в block group - AveRooms - среднее число комнат на домохозяйство - AveBedrms - среднее число спален - Population - число людей в block group - AveOccup - среднее число людей на домохозяйство - Latitude - широта - Longitude - долгота # В переменную df_california запишите датасет fetch_california_housing california = fetch_california_housing(as_frame=True) df_california = california.frame display(df_california) # В переменную X запишите все данные из компонента data датасета X = california.data # В переменную y запишите цену из компонента target датасета y = california.target # В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # Инициализируйте модель линейной регрессии в переменную model_lin_regr model_lin_regr = LinearRegression() # Инициализируйте модель дерево решений в переменную model_tree_des model_tree_des = DecisionTreeRegressor() # Обучите обе модели на обучающих данных model_lin_regr.fit(X_train, y_train) model_tree_des.fit(X_train, y_train) # Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_des y_pred_lin_regr = model_lin_regr.predict(X_test) y_pred_tree_des = model_tree_des.predict(X_test) X_test['pred'] = y_pred_tree_des X_test # Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_des и визуально сравните значения print(\"y_test:\", y_test) print(\"y_pred_lin_regr:\", y_pred_lin_regr) print(\"y_pred_tree_des:\", y_pred_tree_des) # Оцените работу моделей с помощью метрик эффективности и сравните результаты MSE_lin_regr = mean_squared_error(y_test, y_pred_lin_regr) r2_lin_regr = r2_score(y_test, y_pred_lin_regr) print(f\"Mean Squared Error Lin: {MSE_lin_regr}\") print(f\"R-squared Lin: {r2_lin_regr}\") print(\"-\"*30) MSE_tree_des = mean_squared_error(y_test, y_pred_tree_des) r2_tree_des = r2_score(y_test, y_pred_tree_des) print(f\"Mean Squared Error Tree: {MSE_tree_des}\") print(f\"R-squared Tree: {r2_tree_des}\") print(\"\"\"Модель дерево решенией показала лучшие результаты по метрикам MSE и R-squared, что может свидетельствовать о том, что она лучше справляется с данной задачей регрессии по сравнению с линейной регрессией.\"\"\") 2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность. # Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. # Выберите две модели из пройденных и сравните их эффективность import pandas as pd from sklearn.tree import DecisionTreeClassifier wine = load_wine() df_wine = pd.DataFrame(wine.data, columns = wine.feature_names) display(df_wine) X_wine = wine.data y_wine = wine.target X_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42) model_tree_des_wine = DecisionTreeClassifier() model_tree_des_wine.fit(X_train_wine, y_train_wine) y_pred_tree_des_wine = model_tree_des_wine.predict(X_test_wine) accuracy_tree_des_wine = accuracy_score(y_test_wine, y_pred_tree_des_wine) print(f\"Accuracy Tree Wine: {accuracy_tree_des_wine}\") print(f\"R-squared Tree Wine: {r2_tree_des_wine}\") # KNN модель тоже используем для сравнения from sklearn.neighbors import KNeighborsClassifier model_knn_wine = KNeighborsClassifier() model_knn_wine.fit(X_train_wine, y_train_wine) y_pred_knn_wine = model_knn_wine.predict(X_test_wine) accuracy_knn_wine = accuracy_score(y_test_wine, y_pred_knn_wine) print(f\"Accuracy KNN Wine: {accuracy_knn_wine}\") print('Отчет о классификации:') print(classification_report(y_test_wine, y_pred_knn_wine)) print(wine.feature_names) # список признаков print(wine.target_names) # названия классов print(X_wine.shape, y_wine.shape) print(set(y_wine))",
-      "matches": [
-        {
-          "cell": 1,
-          "type": "markdown",
-          "text": "# <b><font color='teal'>Homework 21</font></b>"
-        },
-        {
-          "cell": 2,
-          "type": "code",
-          "text": "# Импорт библиотек\nfrom sklearn.datasets import fetch_california_housing, load_wine\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor, plot_tree\nfrom sklearn.metrics import mean_squared_error, r2_score\nfrom sklearn.metrics import accuracy_score, classification_report, confusion_matrix"
-        },
-        {
-          "cell": 3,
-          "type": "markdown",
-          "text": "1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье."
-        },
-        {
-          "cell": 4,
-          "type": "markdown",
-          "text": "<b>Описание данных: </b><br>\nДатасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br>\n\nПоля:\n- MedInc - медианный доход домохозяйства в block group\n- HouseAge - медианный возраст домов (лет) в block group\n- AveRooms - среднее число комнат на домохозяйство\n- AveBedrms - среднее число спален\n- Population - число людей в block group\n- AveOccup - среднее число людей на домохозяйство\n- Latitude - широта\n- Longitude - долгота"
-        },
-        {
-          "cell": 5,
-          "type": "code",
-          "text": "# В переменную df_california запишите датасет fetch_california_housing\ncalifornia = fetch_california_housing(as_frame=True)\ndf_california = california.frame\ndisplay(df_california)"
-        },
-        {
-          "cell": 6,
-          "type": "code",
-          "text": "# В переменную X запишите все данные из компонента data датасета\nX = california.data"
-        },
-        {
-          "cell": 7,
-          "type": "code",
-          "text": "# В переменную y запишите цену из компонента target датасета\ny = california.target"
-        },
-        {
-          "cell": 8,
-          "type": "code",
-          "text": "# В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
-        },
-        {
-          "cell": 9,
-          "type": "code",
-          "text": "# Инициализируйте модель линейной регрессии в переменную model_lin_regr\nmodel_lin_regr = LinearRegression()"
-        },
-        {
-          "cell": 10,
-          "type": "code",
-          "text": "# Инициализируйте модель дерево решений в переменную model_tree_des\nmodel_tree_des = DecisionTreeRegressor()"
-        },
-        {
-          "cell": 11,
-          "type": "code",
-          "text": "# Обучите обе модели на обучающих данных\nmodel_lin_regr.fit(X_train, y_train)\nmodel_tree_des.fit(X_train, y_train)"
-        },
-        {
-          "cell": 12,
-          "type": "code",
-          "text": "# Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_des\ny_pred_lin_regr = model_lin_regr.predict(X_test)\ny_pred_tree_des = model_tree_des.predict(X_test)"
-        },
-        {
-          "cell": 13,
-          "type": "code",
-          "text": "X_test['pred'] = y_pred_tree_des\nX_test"
-        },
-        {
-          "cell": 14,
-          "type": "code",
-          "text": "# Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_des и визуально сравните значения\nprint(\"y_test:\", y_test)\nprint(\"y_pred_lin_regr:\", y_pred_lin_regr)\nprint(\"y_pred_tree_des:\", y_pred_tree_des)"
-        },
-        {
-          "cell": 15,
-          "type": "code",
-          "text": "# Оцените работу моделей с помощью метрик эффективности и сравните результаты\nMSE_lin_regr = mean_squared_error(y_test, y_pred_lin_regr)\nr2_lin_regr = r2_score(y_test, y_pred_lin_regr)\nprint(f\"Mean Squared Error Lin: {MSE_lin_regr}\")\nprint(f\"R-squared Lin: {r2_lin_regr}\")\nprint(\"-\"*30)\nMSE_tree_des = mean_squared_error(y_test, y_pred_tree_des)\nr2_tree_des = r2_score(y_test, y_pred_tree_des)\nprint(f\"Mean Squared Error Tree: {MSE_tree_des}\")\nprint(f\"R-squared Tree: {r2_tree_des}\")\n\nprint(\"\"\"Модель дерево решенией показала лучшие результаты по метрикам MSE и R-squared,\nчто может свидетельствовать о том, что она лучше справляется с данной задачей регрессии по сравнению с линейной регрессией.\"\"\")"
-        },
-        {
-          "cell": 16,
-          "type": "markdown",
-          "text": "2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность."
-        },
-        {
-          "cell": 17,
-          "type": "code",
-          "text": "# Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. \n# Выберите две модели из пройденных и сравните их эффективность\nimport pandas as pd\nfrom sklearn.tree import DecisionTreeClassifier\n\nwine = load_wine()\ndf_wine = pd.DataFrame(wine.data, columns = wine.feature_names)\ndisplay(df_wine)\n\nX_wine = wine.data\ny_wine = wine.target\n\nX_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42)\nmodel_tree_des_wine = DecisionTreeClassifier()\nmodel_tree_des_wine.fit(X_train_wine, y_train_wine)\ny_pred_tree_des_wine = model_tree_des_wine.predict(X_test_wine)\naccuracy_tree_des_wine = accuracy_score(y_test_wine, y_pred_tree_des_wine)\nprint(f\"Accuracy Tree Wine: {accuracy_tree_des_wine}\")\nprint(f\"R-squared Tree Wine: {r2_tree_des_wine}\")\n\n\n# KNN модель тоже используем для сравнения\nfrom sklearn.neig"
-        },
-        {
-          "cell": 18,
-          "type": "code",
-          "text": "print(wine.feature_names)     # список признаков\nprint(wine.target_names)      # названия классов\nprint(X_wine.shape, y_wine.shape)\nprint(set(y_wine))"
         }
       ]
     },
