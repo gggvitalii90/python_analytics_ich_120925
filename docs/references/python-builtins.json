@@ -87,13 +87,50 @@
       "title": "str methods",
       "package": "Python built-ins",
       "type": "type",
-      "terms": ["str", "string", "split", "join", "replace", "strip", "lower", "строка"],
-      "aliases": ["работа со строками", "разделить строку", "заменить текст"],
-      "summary": "Official Python documentation for string methods.",
+      "terms": [
+        "str", "string", "split", "join", "replace", "strip", "lower", "upper",
+        "startswith", "endswith", "find", "count", "format", "строка",
+        "lstrip", "rstrip", "title", "capitalize", "swapcase",
+        "center", "ljust", "rjust", "zfill",
+        "encode", "decode", "in operator"
+      ],
+      "aliases": [
+        "работа со строками", "разделить строку", "заменить текст",
+        "методы строки", "string methods python"
+      ],
+      "summary": "Official Python documentation for string methods — transform, search, split, format.",
       "import": "# built-in, no import needed",
-      "syntax": "clean = text.strip().lower()\nparts = text.split(\",\")\njoined = \", \".join(parts)",
-      "related": ["re", "pandas.Series.str"],
+      "syntax": "# Transform\ntext.strip()          # убрать пробелы по краям\ntext.lstrip()         # убрать слева\ntext.upper()          # ВСЁ В ВЕРХНИЙ РЕГИСТР\ntext.lower()          # всё в нижний регистр\ntext.title()          # Первая Буква Каждого Слова\ntext.replace('a','b') # заменить подстроку\n\n# Search\ntext.find('word')     # индекс или -1\ntext.count('a')       # сколько раз встречается\ntext.startswith('Hi') # True/False\ntext.endswith('.py')  # True/False\n\n# Split / Join\nparts = text.split(',')      # строка → список\nresult = ', '.join(parts)    # список → строка\n\n# Format\nf'Hello {name}'              # f-string\n'Hello {}'.format(name)      # .format()",
+      "related": ["re", "pandas.str accessor", "f-string"],
       "docsUrl": "https://docs.python.org/3/library/stdtypes.html#string-methods"
+    },
+    {
+      "id": "python-str-validation",
+      "title": "str.isalnum / isalpha / isdigit — validation",
+      "package": "Python built-ins",
+      "type": "type",
+      "terms": [
+        "isalnum", "isalpha", "isdigit", "isnumeric", "isspace",
+        "islower", "isupper", "istitle", "isdecimal",
+        "is methods", "str.isalnum", "str.isalpha", "str.isdigit",
+        "проверка строки", "валидация строки"
+      ],
+      "aliases": [
+        "проверить состоит ли строка из цифр",
+        "проверить состоит ли строка из букв",
+        "строка только цифры",
+        "строка только буквы",
+        "is* методы строки"
+      ],
+      "summary": "Official Python documentation for string validation methods — check what characters a string contains.",
+      "import": "# built-in, no import needed",
+      "syntax": "# Проверки состава строки\n'Hello123'.isalnum()   # True  — только буквы И цифры (без пробелов)\n'Hello'.isalpha()      # True  — только буквы\n'12345'.isdigit()      # True  — только цифры (0-9)\n'12345'.isnumeric()    # True  — числовые символы (включая ², ½)\n'12.5'.isdecimal()     # False — точка не является decimal\n'   '.isspace()        # True  — только пробельные символы\n'hello'.islower()      # True  — все буквы строчные\n'HELLO'.isupper()      # True  — все буквы заглавные\n'Hello World'.istitle()# True  — каждое слово с заглавной\n\n# Типичное использование\nif user_input.isdigit():\n    age = int(user_input)\n\nclean = [w for w in words if w.isalpha()]  # только слова, без цифр",
+      "related": [
+        "str methods",
+        "re",
+        "pandas.str accessor"
+      ],
+      "docsUrl": "https://docs.python.org/3/library/stdtypes.html#str.isalnum"
     }
   ]
 }
