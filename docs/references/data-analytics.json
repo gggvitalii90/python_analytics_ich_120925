@@ -12,6 +12,19 @@
         "np.array",
         "numpy.array",
         "array",
+        "numpy",
+        "ndarray",
+        "np.ndarray",
+        "zeros",
+        "np.zeros",
+        "ones",
+        "np.ones",
+        "argmin",
+        "np.argmin",
+        "argmax",
+        "np.argmax",
+        "broadcast",
+        "broadcasting",
         "массив",
         "vectorization",
         "vectorize",
@@ -92,7 +105,11 @@
       "terms": [
         "reshape",
         "np.reshape",
-        "shape"
+        "shape",
+        "flatten",
+        "ravel",
+        "np.flatten",
+        "np.ravel"
       ],
       "summary": "Official NumPy reference for changing array shape.",
       "import": "import numpy as np",
@@ -226,7 +243,10 @@
       "terms": [
         "head",
         "df.head",
-        "первые строки"
+        "tail",
+        "df.tail",
+        "первые строки",
+        "последние строки"
       ],
       "summary": "Official pandas reference for returning first rows.",
       "import": "import pandas as pd",
@@ -283,7 +303,12 @@
       "terms": [
         "loc",
         "df.loc",
+        "at",
+        "df.at",
+        "iat",
+        "df.iat",
         "label selection",
+        "scalar selection",
         "индексация"
       ],
       "summary": "Official pandas reference for label-based selection.",
@@ -321,6 +346,9 @@
       "terms": [
         "groupby",
         "group by",
+        "agg",
+        "df.agg",
+        "aggregate",
         "группировка",
         "агрегация"
       ],
@@ -414,6 +442,8 @@
       "package": "pandas",
       "terms": [
         "sort_values",
+        "sort_index",
+        "df.sort_index",
         "sort",
         "сортировка"
       ],
@@ -433,8 +463,13 @@
       "terms": [
         "isna",
         "isnull",
+        "notna",
+        "notnull",
+        "not null",
         "missing",
         "nan",
+        "mask",
+        "df.mask",
         "пропуски"
       ],
       "summary": "Official pandas reference for detecting missing values.",
@@ -630,6 +665,8 @@
       "terms": [
         "query",
         "df.query",
+        "eval",
+        "df.eval",
         "filter rows",
         "row filter",
         "condition",
@@ -828,6 +865,8 @@
         "df.set_index",
         "df.reset_index",
         "индекс DataFrame",
+        "index",
+        "df.index",
         "установить индекс",
         "сбросить индекс"
       ],
@@ -936,6 +975,12 @@
         "df.diff",
         "df.shift",
         "df.pct_change",
+        "cumsum",
+        "cumprod",
+        "df.cumsum",
+        "df.cumprod",
+        "cumulative sum",
+        "накопительная сумма",
         "изменение по периодам",
         "разница строк",
         "lag"
@@ -1013,6 +1058,132 @@
         "numpy.ndarray.T"
       ],
       "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transpose.html"
+    },
+    {
+      "id": "pandas-drop",
+      "title": "DataFrame.drop",
+      "package": "pandas",
+      "terms": [
+        "drop",
+        "df.drop",
+        "pandas drop",
+        "drop column",
+        "drop row",
+        "удалить столбец",
+        "удалить строку"
+      ],
+      "aliases": [
+        "убрать столбец",
+        "удалить колонку",
+        "remove column pandas"
+      ],
+      "summary": "Official pandas documentation for dropping rows or columns from a DataFrame.",
+      "import": "import pandas as pd",
+      "syntax": "# Удалить столбец\ndf = df.drop(columns=['col_name'])\ndf = df.drop(columns=['a', 'b'])\n\n# Удалить строки по индексу\ndf = df.drop(index=[0, 1, 2])\ndf = df.drop(index=df[df['score'] < 0].index)\n\n# Inplace\ndf.drop(columns=['temp'], inplace=True)",
+      "related": [
+        "pandas.DataFrame.drop_duplicates",
+        "pandas.DataFrame.loc",
+        "pandas.DataFrame.filter"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html"
+    },
+    {
+      "id": "pandas-binning",
+      "title": "pandas.cut / qcut — binning",
+      "package": "pandas",
+      "terms": [
+        "cut",
+        "qcut",
+        "pd.cut",
+        "pd.qcut",
+        "binning",
+        "bins",
+        "категоризация",
+        "разбивка на интервалы",
+        "discretize"
+      ],
+      "aliases": [
+        "разделить на группы",
+        "создать категории из числа",
+        "возраст в группы",
+        "quantile bins"
+      ],
+      "summary": "Official pandas documentation for cut (equal-width bins) and qcut (equal-frequency quantile bins).",
+      "import": "import pandas as pd",
+      "syntax": "# cut — равные интервалы\ndf['age_group'] = pd.cut(df['age'], bins=4)\ndf['age_group'] = pd.cut(df['age'], bins=[0, 18, 35, 60, 100],\n                         labels=['teen', 'young', 'adult', 'senior'])\n\n# qcut — равные квантили (одинаковое кол-во объектов)\ndf['quartile'] = pd.qcut(df['score'], q=4, labels=['Q1','Q2','Q3','Q4'])\n\n# Просмотр\nprint(df['age_group'].value_counts())",
+      "related": [
+        "pandas.Series.value_counts",
+        "pandas.DataFrame.groupby",
+        "numpy.histogram"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.cut.html"
+    },
+    {
+      "id": "pandas-stack-unstack",
+      "title": "DataFrame.stack / unstack",
+      "package": "pandas",
+      "terms": [
+        "stack",
+        "unstack",
+        "df.stack",
+        "df.unstack",
+        "pivot",
+        "MultiIndex",
+        "wide to long",
+        "long to wide",
+        "стек",
+        "анстек"
+      ],
+      "aliases": [
+        "из широкого в длинный формат",
+        "из длинного в широкий",
+        "multiindex pandas"
+      ],
+      "summary": "Official pandas documentation for stack/unstack — reshape between wide and long format using MultiIndex.",
+      "import": "import pandas as pd",
+      "syntax": "# stack: из колонок в индекс (wide → long)\ndf_long = df.stack()           # все нечисловые тоже\ndf_long = df.stack(level=-1)   # последний уровень колонок\n\n# unstack: из индекса в колонки (long → wide)\ndf_wide = df_long.unstack()\ndf_wide = df.unstack(level=0)  # первый уровень индекса\n\n# Пример с MultiIndex\nmulti = df.set_index(['year', 'city'])['sales']\ndf_wide = multi.unstack('city')  # город → колонки",
+      "related": [
+        "pandas.melt",
+        "pandas.DataFrame.pivot_table",
+        "pandas.DataFrame.set_index"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.stack.html"
+    },
+    {
+      "id": "pandas-advanced-ops",
+      "title": "DataFrame.assign / nlargest / nsmallest / clip / factorize",
+      "package": "pandas",
+      "terms": [
+        "assign",
+        "df.assign",
+        "nlargest",
+        "nsmallest",
+        "df.nlargest",
+        "df.nsmallest",
+        "clip",
+        "df.clip",
+        "factorize",
+        "pd.factorize",
+        "top n rows",
+        "clamp values",
+        "добавить столбец",
+        "обрезать значения"
+      ],
+      "aliases": [
+        "топ-N строк",
+        "ограничить значения",
+        "добавить вычисляемый столбец",
+        "integer codes"
+      ],
+      "summary": "Official pandas documentation for assign, nlargest/nsmallest, clip, and factorize.",
+      "import": "import pandas as pd",
+      "syntax": "# assign — добавить/заменить столбец (без inplace)\ndf = df.assign(profit=df['revenue'] - df['cost'],\n               margin=lambda x: x['profit'] / x['revenue'])\n\n# nlargest / nsmallest — топ-N строк\ntop5 = df.nlargest(5, 'score')\nbottom3 = df.nsmallest(3, 'price')\n\n# clip — обрезать выбросы\ndf['price'] = df['price'].clip(lower=0, upper=1000)\n\n# factorize — числовые коды категорий\ncodes, uniques = pd.factorize(df['city'])\ndf['city_code'] = codes",
+      "related": [
+        "pandas.DataFrame.apply",
+        "pandas.Series.value_counts",
+        "pandas.DataFrame.sort_values"
+      ],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.assign.html"
     },
     {
       "id": "pandas-map",

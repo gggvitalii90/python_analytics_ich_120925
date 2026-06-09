@@ -63,6 +63,7 @@
       "type": "statement",
       "terms": [
         "for",
+        "for loop",
         "loop",
         "iterate",
         "цикл",
@@ -90,6 +91,7 @@
       "type": "statement",
       "terms": [
         "while",
+        "while loop",
         "loop",
         "цикл while",
         "цикл"
@@ -163,6 +165,8 @@
       "type": "statement",
       "terms": [
         "class",
+        "__init__",
+        "init method",
         "self",
         "object",
         "oop",
@@ -191,6 +195,7 @@
       "terms": [
         "try",
         "except",
+        "try except",
         "finally",
         "error",
         "exception",

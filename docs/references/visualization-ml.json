@@ -19,7 +19,7 @@
       "id": "matplotlib-figure",
       "title": "matplotlib.pyplot.figure",
       "package": "Matplotlib",
-      "terms": ["figsize", "figure", "plt.figure", "figure size", "размер графика"],
+      "terms": ["figsize", "figure", "plt.figure", "figure size", "savefig", "plt.savefig", "tight_layout", "plt.tight_layout", "размер графика"],
       "summary": "Official Matplotlib reference for creating figures and setting figure size.",
       "import": "import matplotlib.pyplot as plt",
       "syntax": "plt.figure(figsize=(10, 6))\nplt.plot(x, y)\nplt.show()",
@@ -30,7 +30,7 @@
       "id": "matplotlib-subplots",
       "title": "matplotlib.pyplot.subplots",
       "package": "Matplotlib",
-      "terms": ["subplots", "subplot", "plt.subplots", "несколько графиков"],
+      "terms": ["subplots", "subplot", "plt.subplots", "axes", "ax", "gca", "plt.gca", "matplotlib.axes", "несколько графиков"],
       "summary": "Official Matplotlib reference for creating figures and axes.",
       "import": "import matplotlib.pyplot as plt",
       "syntax": "fig, axes = plt.subplots(2, 2, figsize=(10, 8))\naxes[0, 0].plot(x, y)",
@@ -107,7 +107,7 @@
       "id": "seaborn-scatterplot",
       "title": "seaborn.scatterplot",
       "package": "Seaborn",
-      "terms": ["scatterplot", "sns.scatterplot", "scatter", "точечный график"],
+      "terms": ["scatterplot", "sns.scatterplot", "scatter", "sns.regplot", "regplot", "точечный график"],
       "summary": "Official Seaborn reference for scatter plots.",
       "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
       "syntax": "sns.scatterplot(data=df, x=\"x\", y=\"y\", hue=\"group\")\nplt.show()",
@@ -129,7 +129,7 @@
       "id": "plotly-express-scatter",
       "title": "plotly.express.scatter",
       "package": "Plotly",
-      "terms": ["plotly", "px.scatter", "interactive scatter", "интерактивный график"],
+      "terms": ["plotly", "plotly.express", "px", "px.scatter", "px.box", "px.pie", "interactive scatter", "интерактивный график"],
       "summary": "Official Plotly Express reference for scatter plots.",
       "import": "import plotly.express as px",
       "syntax": "fig = px.scatter(df, x=\"x\", y=\"y\", color=\"group\")\nfig.show()",
@@ -173,7 +173,7 @@
       "id": "sklearn-standard-scaler",
       "title": "sklearn.preprocessing.StandardScaler",
       "package": "scikit-learn",
-      "terms": ["StandardScaler", "scaler", "standardization", "масштабирование"],
+      "terms": ["StandardScaler", "MinMaxScaler", "minmaxscaler", "scaler", "standardization", "normalization", "масштабирование", "нормализация"],
       "summary": "Official scikit-learn reference for standardizing features.",
       "import": "from sklearn.preprocessing import StandardScaler",
       "syntax": "scaler = StandardScaler()\nX_scaled = scaler.fit_transform(X_train)",
@@ -184,7 +184,7 @@
       "id": "sklearn-linear-regression",
       "title": "sklearn.linear_model.LinearRegression",
       "package": "scikit-learn",
-      "terms": ["LinearRegression", "linear regression", "регрессия"],
+      "terms": ["LinearRegression", "linear regression", "fit", "model.fit", "predict", "model.predict", "регрессия"],
       "summary": "Official scikit-learn reference for ordinary least squares linear regression.",
       "import": "from sklearn.linear_model import LinearRegression",
       "syntax": "model = LinearRegression()\nmodel.fit(X_train, y_train)\npredictions = model.predict(X_test)",
@@ -195,7 +195,7 @@
       "id": "sklearn-metrics",
       "title": "sklearn.metrics",
       "package": "scikit-learn",
-      "terms": ["metrics", "accuracy_score", "mean_squared_error", "classification_report", "sklearn", "scikit-learn", "scikit", "ml"],
+      "terms": ["metrics", "accuracy_score", "mean_squared_error", "classification_report", "classification report", "confusion_matrix", "confusion matrix", "r2_score", "roc_auc_score", "score", "sklearn", "scikit-learn", "scikit", "ml"],
       "summary": "Official scikit-learn documentation for model evaluation metrics.",
       "import": "from sklearn.metrics import accuracy_score, mean_squared_error",
       "syntax": "accuracy = accuracy_score(y_test, y_pred)\nrmse = mean_squared_error(y_test, y_pred, squared=False)",
@@ -206,7 +206,7 @@
       "id": "statsmodels-arima",
       "title": "statsmodels.tsa.arima.model.ARIMA",
       "package": "statsmodels",
-      "terms": ["arima", "sarima", "arma", "time series", "временные ряды"],
+      "terms": ["arima", "sarima", "arma", "statsmodels", "acf", "pacf", "adf test", "stationarity", "time series", "временные ряды"],
       "summary": "Official statsmodels reference for ARIMA time series models.",
       "import": "from statsmodels.tsa.arima.model import ARIMA",
       "syntax": "model = ARIMA(series, order=(1, 1, 1))\nresult = model.fit()\nforecast = result.forecast(steps=10)",
@@ -261,7 +261,7 @@
       "id": "sklearn-random-forest",
       "title": "sklearn.ensemble.RandomForestClassifier",
       "package": "scikit-learn",
-      "terms": ["RandomForest", "RandomForestClassifier", "forest", "случайный лес"],
+      "terms": ["RandomForest", "RandomForestClassifier", "random forest", "forest", "decision tree", "DecisionTreeClassifier", "случайный лес", "дерево решений"],
       "summary": "Official scikit-learn reference for random forest classification.",
       "import": "from sklearn.ensemble import RandomForestClassifier",
       "syntax": "model = RandomForestClassifier(random_state=42)\nmodel.fit(X_train, y_train)",
@@ -301,12 +301,15 @@
         "bar chart seaborn",
         "seaborn",
         "sns",
+        "countplot",
+        "sns.countplot",
         "столбчатая диаграмма"
       ],
       "aliases": [
         "bar chart with error bars",
         "среднее по группам",
-        "categorical plot"
+        "categorical plot",
+        "count by category"
       ],
       "summary": "Official Seaborn documentation for barplot — shows point estimates and confidence intervals as bars.",
       "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
@@ -317,6 +320,143 @@
         "seaborn.boxplot"
       ],
       "docsUrl": "https://seaborn.pydata.org/generated/seaborn.barplot.html"
+    },
+    {
+      "id": "matplotlib-pie",
+      "title": "matplotlib.pyplot.pie",
+      "package": "Matplotlib",
+      "terms": [
+        "pie",
+        "plt.pie",
+        "pie chart",
+        "donut",
+        "круговая диаграмма"
+      ],
+      "aliases": [
+        "диаграмма доли",
+        "piechart"
+      ],
+      "summary": "Official Matplotlib reference for pie and donut charts.",
+      "import": "import matplotlib.pyplot as plt",
+      "syntax": "labels = ['A', 'B', 'C']\nvalues = [30, 45, 25]\n\nplt.pie(values, labels=labels, autopct='%1.1f%%')\nplt.title('Distribution')\nplt.tight_layout()\nplt.savefig('chart.png', dpi=150)  # сохранить\nplt.show()",
+      "related": ["matplotlib.pyplot.bar", "plotly.express.pie"],
+      "docsUrl": "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pie.html"
+    },
+    {
+      "id": "seaborn-multi",
+      "title": "seaborn.lineplot / pairplot / catplot",
+      "package": "Seaborn",
+      "terms": [
+        "lineplot",
+        "sns.lineplot",
+        "seaborn lineplot",
+        "pairplot",
+        "sns.pairplot",
+        "seaborn pairplot",
+        "catplot",
+        "sns.catplot",
+        "seaborn catplot",
+        "seaborn",
+        "sns",
+        "линейный график",
+        "матрица корреляции визуализация"
+      ],
+      "aliases": [
+        "линия seaborn",
+        "парные диаграммы",
+        "категориальный график"
+      ],
+      "summary": "Official Seaborn documentation for lineplot, pairplot, and catplot.",
+      "import": "import seaborn as sns\nimport matplotlib.pyplot as plt",
+      "syntax": "# lineplot — линейный график\nsns.lineplot(data=df, x='date', y='sales', hue='region')\nplt.show()\n\n# pairplot — матрица диаграмм рассеяния\nsns.pairplot(df, hue='category', diag_kind='hist')\nplt.show()\n\n# catplot — гибкий категориальный (kind: bar, box, violin, strip)\nsns.catplot(data=df, x='category', y='value', kind='box', col='group')\nplt.show()",
+      "related": [
+        "seaborn.scatterplot",
+        "seaborn.barplot",
+        "matplotlib.pyplot.plot"
+      ],
+      "docsUrl": "https://seaborn.pydata.org/generated/seaborn.lineplot.html"
+    },
+    {
+      "id": "sklearn-pca",
+      "title": "sklearn.decomposition.PCA",
+      "package": "scikit-learn",
+      "terms": [
+        "PCA",
+        "pca",
+        "sklearn pca",
+        "dimensionality reduction",
+        "principal component",
+        "снижение размерности",
+        "главные компоненты"
+      ],
+      "aliases": [
+        "уменьшить признаки",
+        "principal component analysis"
+      ],
+      "summary": "Official scikit-learn documentation for PCA — dimensionality reduction via principal component analysis.",
+      "import": "from sklearn.decomposition import PCA",
+      "syntax": "from sklearn.decomposition import PCA\nfrom sklearn.preprocessing import StandardScaler\n\n# Масштабировать перед PCA\nX_scaled = StandardScaler().fit_transform(X)\n\n# Сократить до 2 компонент\npca = PCA(n_components=2)\nX_pca = pca.fit_transform(X_scaled)\n\n# Объяснённая дисперсия\nprint(pca.explained_variance_ratio_)  # [0.72, 0.15]\nprint(pca.explained_variance_ratio_.sum())  # 0.87",
+      "related": [
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.cluster.KMeans",
+        "sklearn.model_selection.train_test_split"
+      ],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html"
+    },
+    {
+      "id": "sklearn-svm",
+      "title": "sklearn.svm.SVC / SVR",
+      "package": "scikit-learn",
+      "terms": [
+        "SVM",
+        "svm",
+        "SVC",
+        "SVR",
+        "support vector",
+        "support vector machine",
+        "метод опорных векторов"
+      ],
+      "aliases": [
+        "классификация SVM",
+        "регрессия SVR"
+      ],
+      "summary": "Official scikit-learn documentation for Support Vector Machines.",
+      "import": "from sklearn.svm import SVC, SVR",
+      "syntax": "from sklearn.svm import SVC\nfrom sklearn.preprocessing import StandardScaler\n\n# SVC для классификации\nmodel = SVC(kernel='rbf', C=1.0)\nmodel.fit(X_train, y_train)\npredictions = model.predict(X_test)\n\n# SVR для регрессии\nfrom sklearn.svm import SVR\nregressor = SVR(kernel='rbf')\nregressor.fit(X_train, y_train)",
+      "related": [
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.model_selection.GridSearchCV",
+        "sklearn.model_selection.cross_val_score"
+      ],
+      "docsUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html"
+    },
+    {
+      "id": "pmdarima-auto-arima",
+      "title": "pmdarima.auto_arima",
+      "package": "pmdarima",
+      "terms": [
+        "pmdarima",
+        "auto_arima",
+        "auto arima",
+        "automatic arima",
+        "AutoARIMA",
+        "time series",
+        "временные ряды",
+        "прогноз"
+      ],
+      "aliases": [
+        "автоматический подбор ARIMA",
+        "автоарима"
+      ],
+      "summary": "Official pmdarima documentation for auto_arima — automatically selects ARIMA orders.",
+      "import": "import pmdarima as pm",
+      "syntax": "import pmdarima as pm\n\n# Автоматически найти p, d, q\nmodel = pm.auto_arima(series,\n                      seasonal=True, m=12,  # m — период сезонности\n                      stepwise=True,\n                      information_criterion='aic',\n                      trace=True)\n\nprint(model.summary())\n\n# Прогноз\nforecast, conf_int = model.predict(n_periods=12, return_conf_int=True)",
+      "related": [
+        "statsmodels.tsa.arima.model.ARIMA",
+        "statsmodels.tsa.statespace.sarimax.SARIMAX",
+        "Prophet"
+      ],
+      "docsUrl": "https://alkaline-ml.com/pmdarima/modules/generated/pmdarima.arima.auto_arima.html"
     },
     {
       "id": "sklearn-cross-val-score",

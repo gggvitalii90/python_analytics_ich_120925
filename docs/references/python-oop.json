@@ -11,6 +11,7 @@
       "terms": [
         "dunder",
         "magic methods",
+        "__init__",
         "__str__",
         "__repr__",
         "__len__",
@@ -43,6 +44,8 @@
       "terms": [
         "@property",
         "property",
+        "decorator",
+        "декоратор",
         "getter setter",
         "геттер сеттер",
         "свойство класса"
@@ -96,6 +99,7 @@
       "type": "concept",
       "terms": [
         "inheritance",
+        "super",
         "super()",
         "наследование",
         "родительский класс",

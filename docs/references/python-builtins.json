@@ -48,7 +48,7 @@
       "title": "dir and help",
       "package": "Python built-ins",
       "type": "function",
-      "terms": ["dir", "help", "methods", "attributes", "справка", "методы"],
+      "terms": ["dir", "help", "getattr", "hasattr", "setattr", "reversed", "methods", "attributes", "справка", "методы"],
       "aliases": ["посмотреть методы", "помощь python"],
       "summary": "Official Python documentation for interactive object inspection.",
       "import": "# built-in, no import needed",

@@ -48,7 +48,7 @@
       "title": "sqlalchemy.create_engine",
       "package": "SQLAlchemy",
       "type": "function",
-      "terms": ["sqlalchemy", "create_engine", "engine", "mysql", "postgresql"],
+      "terms": ["sqlalchemy", "create_engine", "engine", "mysql", "pymysql", "PyMySQL", "postgresql", "psycopg2"],
       "aliases": ["подключение к базе", "sqlalchemy engine"],
       "summary": "Official SQLAlchemy documentation for creating database engines.",
       "import": "from sqlalchemy import create_engine",

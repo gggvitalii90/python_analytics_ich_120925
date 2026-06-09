@@ -225,6 +225,66 @@
       "docsUrl": "https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.find"
     },
     {
+      "id": "jupyter-magic-commands",
+      "title": "Jupyter magic commands",
+      "package": "Jupyter",
+      "terms": [
+        "jupyter",
+        "jupyter notebook",
+        "magic commands",
+        "%timeit",
+        "%%time",
+        "%matplotlib inline",
+        "%run",
+        "%load_ext",
+        "ipython",
+        "магические команды",
+        "ноутбук"
+      ],
+      "aliases": [
+        "jupyter tips",
+        "notebook shortcuts",
+        "ipython magic"
+      ],
+      "summary": "Official IPython documentation for Jupyter magic commands — special % and %% commands for timing, plotting, and utilities.",
+      "import": "# В ячейке Jupyter — без импорта",
+      "syntax": "# Измерить время выполнения одной строки\n%timeit sorted(data)\n\n# Измерить время всей ячейки\n%%time\nfor i in range(1000):\n    x = i ** 2\n\n# Встроить matplotlib прямо в ноутбук\n%matplotlib inline\n\n# Показать все переменные\n%who\n%whos\n\n# Запустить другой скрипт\n%run my_script.py\n\n# Показать справку функции\n?pd.read_csv\npd.read_csv?",
+      "related": [
+        "IPython",
+        "time.perf_counter",
+        "matplotlib.pyplot"
+      ],
+      "docsUrl": "https://ipython.readthedocs.io/en/stable/interactive/magics.html"
+    },
+    {
+      "id": "tqdm-progress-bar",
+      "title": "tqdm progress bar",
+      "package": "tqdm",
+      "terms": [
+        "tqdm",
+        "progress bar",
+        "индикатор прогресса",
+        "прогресс-бар",
+        "tqdm.tqdm",
+        "trange",
+        "tqdm_notebook"
+      ],
+      "aliases": [
+        "показать прогресс цикла",
+        "прогресс загрузки",
+        "loading bar"
+      ],
+      "summary": "Official tqdm documentation for adding progress bars to loops and iterables.",
+      "import": "from tqdm import tqdm",
+      "syntax": "from tqdm import tqdm\n\n# Обернуть любой итерируемый объект\nfor item in tqdm(items, desc='Processing'):\n    process(item)\n\n# С range\nfor i in tqdm(range(1000)):\n    pass\n\n# В Jupyter notebook\nfrom tqdm.notebook import tqdm\nfor item in tqdm(items):\n    process(item)\n\n# pandas apply с прогресс-баром\nfrom tqdm import tqdm\ntqdm.pandas()\ndf['result'] = df['col'].progress_apply(my_func)",
+      "related": [
+        "for loop",
+        "pandas.DataFrame.apply",
+        "time.perf_counter"
+      ],
+      "docsUrl": "https://tqdm.github.io/"
+    },
+    {
       "id": "workflow-dataframe-to-dash",
       "title": "DataFrame -> Dash dashboard",
       "package": "Workflow",
