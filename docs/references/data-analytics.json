@@ -12,14 +12,19 @@
         "np.array",
         "numpy.array",
         "array",
-        "массив"
+        "массив",
+        "vectorization",
+        "vectorize",
+        "np.vectorize",
+        "векторизация"
       ],
-      "summary": "Official NumPy reference for creating arrays.",
+      "summary": "Official NumPy reference for creating arrays. NumPy enables vectorization — applying operations to entire arrays without Python for-loops.",
       "import": "import numpy as np",
-      "syntax": "arr = np.array([1, 2, 3])\narr2d = np.array([[1, 2], [3, 4]])",
+      "syntax": "arr = np.array([1, 2, 3])\narr2d = np.array([[1, 2], [3, 4]])\n\n# Vectorization: operations on whole arrays (fast, no loop)\narr * 2           # [2, 4, 6]\narr[arr > 1]      # [2, 3]   — boolean indexing\n\n# np.vectorize: wrap any scalar function\nf = np.vectorize(lambda x: x ** 2 if x > 0 else 0)\nf(np.array([-1, 2, 3]))  # [0, 4, 9]",
       "related": [
         "numpy.arange",
         "numpy.ndarray",
+        "numpy.where",
         "dtype"
       ],
       "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.array.html"
