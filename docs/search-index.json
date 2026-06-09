@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-09T12:18:35.475735+00:00",
+    "generatedAt": "2026-06-09T13:03:51.582399+00:00",
     "notebookCount": 203
   },
   "notebooks": [
@@ -1548,7 +1548,7 @@
       "name": "HW_21.ipynb",
       "path": "DZ_python_DA/HW_21.ipynb",
       "course": "analytics",
-      "searchText": "HW_21.ipynb DZ_python_DA/HW_21.ipynb # <b><font color='teal'>Homework 21</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing from sklearn.model_selection import train_test_split from sklearn.linear_model import LinearRegression from sklearn.tree import DecisionTreeRegressor, plot_tree 1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье. <b>Описание данных: </b><br> Датасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br> Поля: - MedInc - медианный доход домохозяйства в block group - HouseAge - медианный возраст домов (лет) в block group - AveRooms - среднее число комнат на домохозяйство - AveBedrms - среднее число спален - Population - число людей в block group - AveOccup - среднее число людей на домохозяйство - Latitude - широта - Longitude - долгота # В переменную df_california запишите датасет fetch_california_housing df_california = fetch_california_housing(as_frame=True).frame display(df_california) # В переменную X запишите все данные из компонента data датасета X = df_california.data # В переменную y запишите цену из компонента target датасета y = df_california.target # В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # Инициализируйте модель линейной регрессии в переменную model_lin_regr model_lin_regr = LinearRegression() # Инициализируйте модель дерево решений в переменную model_tree_des model_tree_des = DecisionTreeRegressor() # Обучите обе модели на обучающих данных # Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_dec # Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_dec и визуально сравните значения # Оцените работу моделей с помощью метрик эффективности и сравните результаты 2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность.",
+      "searchText": "HW_21.ipynb DZ_python_DA/HW_21.ipynb # <b><font color='teal'>Homework 21</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing, load_wine from sklearn.model_selection import train_test_split from sklearn.linear_model import LinearRegression from sklearn.tree import DecisionTreeRegressor, plot_tree from sklearn.metrics import mean_squared_error, r2_score from sklearn.metrics import accuracy_score, classification_report, confusion_matrix 1. Используйте набор данных California Housing, чтобы сравнить эффективность линейной регрессии и деревьев решений при прогнозировании цен на жилье. <b>Описание данных: </b><br> Датасет California Housing содержит данные о ценах и других параметрах на жилье в Калифорнии.<br> Поля: - MedInc - медианный доход домохозяйства в block group - HouseAge - медианный возраст домов (лет) в block group - AveRooms - среднее число комнат на домохозяйство - AveBedrms - среднее число спален - Population - число людей в block group - AveOccup - среднее число людей на домохозяйство - Latitude - широта - Longitude - долгота # В переменную df_california запишите датасет fetch_california_housing california = fetch_california_housing(as_frame=True) df_california = california.frame display(df_california) # В переменную X запишите все данные из компонента data датасета X = california.data # В переменную y запишите цену из компонента target датасета y = california.target # В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # Инициализируйте модель линейной регрессии в переменную model_lin_regr model_lin_regr = LinearRegression() # Инициализируйте модель дерево решений в переменную model_tree_des model_tree_des = DecisionTreeRegressor() # Обучите обе модели на обучающих данных model_lin_regr.fit(X_train, y_train) model_tree_des.fit(X_train, y_train) # Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_des y_pred_lin_regr = model_lin_regr.predict(X_test) y_pred_tree_des = model_tree_des.predict(X_test) X_test['pred'] = y_pred_tree_des X_test # Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_des и визуально сравните значения print(\"y_test:\", y_test) print(\"y_pred_lin_regr:\", y_pred_lin_regr) print(\"y_pred_tree_des:\", y_pred_tree_des) # Оцените работу моделей с помощью метрик эффективности и сравните результаты MSE_lin_regr = mean_squared_error(y_test, y_pred_lin_regr) r2_lin_regr = r2_score(y_test, y_pred_lin_regr) print(f\"Mean Squared Error Lin: {MSE_lin_regr}\") print(f\"R-squared Lin: {r2_lin_regr}\") print(\"-\"*30) MSE_tree_des = mean_squared_error(y_test, y_pred_tree_des) r2_tree_des = r2_score(y_test, y_pred_tree_des) print(f\"Mean Squared Error Tree: {MSE_tree_des}\") print(f\"R-squared Tree: {r2_tree_des}\") print(\"\"\"Модель дерево решенией показала лучшие результаты по метрикам MSE и R-squared, что может свидетельствовать о том, что она лучше справляется с данной задачей регрессии по сравнению с линейной регрессией.\"\"\") 2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность. # Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. # Выберите две модели из пройденных и сравните их эффективность import pandas as pd from sklearn.tree import DecisionTreeClassifier wine = load_wine() df_wine = pd.DataFrame(wine.data, columns = wine.feature_names) display(df_wine) X_wine = wine.data y_wine = wine.target X_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42) model_tree_des_wine = DecisionTreeClassifier() model_tree_des_wine.fit(X_train_wine, y_train_wine) y_pred_tree_des_wine = model_tree_des_wine.predict(X_test_wine) accuracy_tree_des_wine = accuracy_score(y_test_wine, y_pred_tree_des_wine) print(f\"Accuracy Tree Wine: {accuracy_tree_des_wine}\") print(f\"R-squared Tree Wine: {r2_tree_des_wine}\") # KNN модель тоже используем для сравнения from sklearn.neighbors import KNeighborsClassifier model_knn_wine = KNeighborsClassifier() model_knn_wine.fit(X_train_wine, y_train_wine) y_pred_knn_wine = model_knn_wine.predict(X_test_wine) accuracy_knn_wine = accuracy_score(y_test_wine, y_pred_knn_wine) print(f\"Accuracy KNN Wine: {accuracy_knn_wine}\") print('Отчет о классификации:') print(classification_report(y_test_wine, y_pred_knn_wine)) print(wine.feature_names) # список признаков print(wine.target_names) # названия классов print(X_wine.shape, y_wine.shape) print(set(y_wine))",
       "matches": [
         {
           "cell": 1,
@@ -1558,7 +1558,7 @@
         {
           "cell": 2,
           "type": "code",
-          "text": "# Импорт библиотек\nfrom sklearn.datasets import fetch_california_housing\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor, plot_tree"
+          "text": "# Импорт библиотек\nfrom sklearn.datasets import fetch_california_housing, load_wine\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor, plot_tree\nfrom sklearn.metrics import mean_squared_error, r2_score\nfrom sklearn.metrics import accuracy_score, classification_report, confusion_matrix"
         },
         {
           "cell": 3,
@@ -1573,17 +1573,17 @@
         {
           "cell": 5,
           "type": "code",
-          "text": "# В переменную df_california запишите датасет fetch_california_housing\ndf_california = fetch_california_housing(as_frame=True).frame\ndisplay(df_california)"
+          "text": "# В переменную df_california запишите датасет fetch_california_housing\ncalifornia = fetch_california_housing(as_frame=True)\ndf_california = california.frame\ndisplay(df_california)"
         },
         {
           "cell": 6,
           "type": "code",
-          "text": "# В переменную X запишите все данные из компонента data датасета\nX = df_california.data"
+          "text": "# В переменную X запишите все данные из компонента data датасета\nX = california.data"
         },
         {
           "cell": 7,
           "type": "code",
-          "text": "# В переменную y запишите цену из компонента target датасета\ny = df_california.target"
+          "text": "# В переменную y запишите цену из компонента target датасета\ny = california.target"
         },
         {
           "cell": 8,
@@ -1603,27 +1603,42 @@
         {
           "cell": 11,
           "type": "code",
-          "text": "# Обучите обе модели на обучающих данных"
+          "text": "# Обучите обе модели на обучающих данных\nmodel_lin_regr.fit(X_train, y_train)\nmodel_tree_des.fit(X_train, y_train)"
         },
         {
           "cell": 12,
           "type": "code",
-          "text": "# Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_dec"
+          "text": "# Сделайте прогнозы для тестового набора в переменные y_pred_lin_regr, y_pred_tree_des\ny_pred_lin_regr = model_lin_regr.predict(X_test)\ny_pred_tree_des = model_tree_des.predict(X_test)"
         },
         {
           "cell": 13,
           "type": "code",
-          "text": "# Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_dec и визуально сравните значения"
+          "text": "X_test['pred'] = y_pred_tree_des\nX_test"
         },
         {
           "cell": 14,
           "type": "code",
-          "text": "# Оцените работу моделей с помощью метрик эффективности и сравните результаты"
+          "text": "# Выведите на экран y_test, y_pred_lin_regr, y_pred_tree_des и визуально сравните значения\nprint(\"y_test:\", y_test)\nprint(\"y_pred_lin_regr:\", y_pred_lin_regr)\nprint(\"y_pred_tree_des:\", y_pred_tree_des)"
         },
         {
           "cell": 15,
+          "type": "code",
+          "text": "# Оцените работу моделей с помощью метрик эффективности и сравните результаты\nMSE_lin_regr = mean_squared_error(y_test, y_pred_lin_regr)\nr2_lin_regr = r2_score(y_test, y_pred_lin_regr)\nprint(f\"Mean Squared Error Lin: {MSE_lin_regr}\")\nprint(f\"R-squared Lin: {r2_lin_regr}\")\nprint(\"-\"*30)\nMSE_tree_des = mean_squared_error(y_test, y_pred_tree_des)\nr2_tree_des = r2_score(y_test, y_pred_tree_des)\nprint(f\"Mean Squared Error Tree: {MSE_tree_des}\")\nprint(f\"R-squared Tree: {r2_tree_des}\")\n\nprint(\"\"\"Модель дерево решенией показала лучшие результаты по метрикам MSE и R-squared,\nчто может свидетельствовать о том, что она лучше справляется с данной задачей регрессии по сравнению с линейной регрессией.\"\"\")"
+        },
+        {
+          "cell": 16,
           "type": "markdown",
           "text": "2. Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. Выберите две модели из пройденных и сравните их эффективность."
+        },
+        {
+          "cell": 17,
+          "type": "code",
+          "text": "# Используйте набор данных Wine, чтобы предсказать качество вина на основе его химических свойств. \n# Выберите две модели из пройденных и сравните их эффективность\nimport pandas as pd\nfrom sklearn.tree import DecisionTreeClassifier\n\nwine = load_wine()\ndf_wine = pd.DataFrame(wine.data, columns = wine.feature_names)\ndisplay(df_wine)\n\nX_wine = wine.data\ny_wine = wine.target\n\nX_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42)\nmodel_tree_des_wine = DecisionTreeClassifier()\nmodel_tree_des_wine.fit(X_train_wine, y_train_wine)\ny_pred_tree_des_wine = model_tree_des_wine.predict(X_test_wine)\naccuracy_tree_des_wine = accuracy_score(y_test_wine, y_pred_tree_des_wine)\nprint(f\"Accuracy Tree Wine: {accuracy_tree_des_wine}\")\nprint(f\"R-squared Tree Wine: {r2_tree_des_wine}\")\n\n\n# KNN модель тоже используем для сравнения\nfrom sklearn.neig"
+        },
+        {
+          "cell": 18,
+          "type": "code",
+          "text": "print(wine.feature_names)     # список признаков\nprint(wine.target_names)      # названия классов\nprint(X_wine.shape, y_wine.shape)\nprint(set(y_wine))"
         }
       ]
     },
@@ -12821,7 +12836,7 @@
       "name": "Python for DA_L21_2-for_students.ipynb",
       "path": "notebooks/Python for DA_L21_2-for_students.ipynb",
       "course": "analytics",
-      "searchText": "Python for DA_L21_2-for_students.ipynb notebooks/Python for DA_L21_2-for_students.ipynb # <b><font color='lightcoral'>Обучение с учителем</font></b> # Импорт библиотек import pandas as pd import numpy as np import matplotlib.pyplot as plt from sklearn.model_selection import train_test_split from sklearn.linear_model import LinearRegression from sklearn.metrics import mean_squared_error, r2_score # pip install --upgrade scikit-learn ### <b><font color='lightcoral'>1. Линейная регрессия</font></b> # Создание примера набора данных data = { 'Mother': [170.2, 168.9, 162.6, 162.6, 148.6, 172.7], 'Daughter': [175.3, 166.4, 172.7, 170.2, 158.8, 176.5] } df = pd.DataFrame(data) df.head() # Определяем переменные независимые (X) и зависимые (y) X = df[['Mother']] y = df['Daughter'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем модель линейной регрессии model = LinearRegression() # Обучаем модель на обучающих данных model.fit(X_train, y_train) # Делаем прогнозы на тестовом наборе y_pred = model.predict(X_test) # Считаем метрики оценки mse = mean_squared_error(y_test, y_pred) r2 = r2_score(y_test, y_pred) print(f\"Mean Squared Error: {mse}\") print(f\"R-squared: {r2}\") # Построим график обучающих данных и линии регрессии plt.scatter(X_train, y_train, color = 'blue', label = 'Обучающие данные') plt.scatter(X_test, y_test, color = 'green', label = 'Тестовые данные') plt.plot(X_train, model.predict(X_train), color = 'red', linewidth = 2, label = 'Линия регрессии') plt.xlabel('Рост матери (см)') plt.ylabel('Рост дочери (см)') plt.legend() plt.show() print(y_test, y_pred) ### <b><font color='lightcoral'>2. Логистическая регрессия</font></b> Реализуем логистическую регрессию в Python, чтобы предсказать, сдаст или не сдаст студент экзамен, на основе количества часов, которые он изучал предмет. # Импорт библиотек from sklearn.linear_model import LogisticRegression from sklearn.metrics import accuracy_score, classification_report, confusion_matrix # Создание примера набора данных data = { 'Hours_Studied': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'Pass_Fail': [0, 0, 0, 0, 1, 1, 1, 1, 1, 1] } df = pd.DataFrame(data) # Определяем переменные-предикторы (X) и переменные-ответы (y) X = df[['Hours_Studied']] y = df['Pass_Fail'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем модель логистической регрессии model = LogisticRegression() # Обучаем модель на обучающих данных model.fit(X_train, y_train) # Делаем предсказания на тестовом наборе y_pred = model.predict(X_test) model.predict_proba(X_test) # Вычислить точность accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) # Визуализация результатов plt.scatter(X, y, color='blue', label='Data points') # Построение кривой логистической регрессии X_range = np.linspace(X.min(), X.max(), 300) y_prob = model.predict_proba(X_range.reshape(-1, 1))[:, 1] plt.plot(X_range, y_prob, color='red', linewidth=2, label='Кривая логистической регрессии') plt.xlabel('Изученные часы') plt.ylabel('Вероятность сдачи') plt.legend() plt.show() ### <b><font color='lightcoral'>3. Дерево решений</font></b> Реализуем дерево решений на Python, чтобы предсказать, сдаст или не сдаст студент экзамен, основываясь на количестве часов, которые он изучал, и его посещаемости. from sklearn.tree import DecisionTreeClassifier, plot_tree # Создание примера набора данных data = { 'Hours_Studied': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'Attendance': ['Плохая', 'Плохая', 'Плохая', 'Хорошая', 'Хорошая', 'Хорошая', 'Хорошая', 'Хорошая', 'Хорошая', 'Плохая'], 'Pass_Fail': [0, 0, 0, 0, 1, 1, 1, 1, 1, 1] } df = pd.DataFrame(data) # Преобразуем категориальные данные в числовые df['Attendance'] = df['Attendance'].map({'Плохая': 0, 'Хорошая': 1}) # Определяем переменные-предикторы (X) и переменные-ответы (y) X = df[['Hours_Studied', 'Attendance']] y = df['Pass_Fail'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем классификатор дерева решений model = DecisionTreeClassifier(random_state = 42) # Обучаем модель на обучающих данных model.fit(X_train, y_train) # Делаем предсказания на тестовом наборе y_pred = model.predict(X_test) X_test['pred'] = y_pred X_test # Вычисляем точность accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) # Построим дерево решений plt.figure(figsize = (12, 8)) plot_tree(model, feature_names = ['Hours_Studied', 'Attendance'], class_names = ['Fail', 'Pass'], filled = True) plt.show() ### <b><font color='lightcoral'>4. K-Nearest Neighbours (KNN)</font></b> Реализуем KNN в Python, чтобы предсказать, является ли новый фрукт яблоком или апельсином, основываясь на его весе и цвете. from sklearn.neighbors import KNeighborsClassifier # Создание примера набора данных data = { 'Weight': [150, 160, 170, 180, 190, 200, 210, 220, 230, 240], 'Color_Score': [0.8, 0.85, 0.9, 0.95, 1.0, 0.75, 0.7, 0.65, 0.6, 0.55], 'Label': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] # 0 для яблока, 1 для апельсина } df = pd.DataFrame(data) df # Построение графика точек данных plt.scatter(df['Weight'], df['Color_Score'], c = df['Label'], cmap = 'coolwarm', edgecolors = 'k') plt.xlabel('Вес') plt.ylabel('Цветовой балл') plt.title('Классификация фруктов') plt.show() # Определяем переменные предиктора (X) и отклика (y) X = df[['Weight', 'Color_Score']] y = df['Label'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем KNN-классификатор knn = KNeighborsClassifier(n_neighbors = 3) # Обучение модели на обучающих данных knn.fit(X_train, y_train) # Делаем предсказания на тестовом наборе y_pred = knn.predict(X_test) y_pred # Вычисляем точность accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) # Построение графика границы принятия решения h = 0.01 # размер шага в сетке x_min, x_max = X['Weight'].min() - 1, X['Weight'].max() + 1 y_min, y_max = X['Color_Score'].min() - 0.1, X['Color_Score'].max() + 0.1 xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h)) Z = knn.predict(np.c_[xx.ravel(), yy.ravel()]) Z = Z.reshape(xx.shape) plt.contourf(xx, yy, Z, alpha=0.3, cmap='coolwarm') plt.scatter(X['Weight'], X['Color_Score'], c=y, edgecolors='k', cmap='coolwarm') plt.xlabel('Вес') plt.ylabel('Цветовая оценка') plt.title('Граница принятия решения для KNN') plt.show() ### <b><font color='lightcoral'>5. Решение задач</font></b> Используйте набор данных Iris, чтобы предсказать вид цветков ириса на основе их физических характеристик. # Импорт библиотек import pandas as pd from sklearn.datasets import load_iris # Загрузите данные в переменную iris iris = load_iris() df_iris = pd.DataFrame(data=iris.data, columns=iris.feature_names) df_iris # В переменную X запишите компонент data из набора данных iris X = iris.data # В переменную y запишите компонент target из набора данных iris y = iris.target # Разделите данные на обучающие и тестовые в переменные X_train, X_test, y_train, y_test X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # Опреледите модель машинного обучения в переменную model model = LogisticRegression() # Обучите модель model.fit(X_train, y_train) # Предскажите результаты на тестовых данных в переменную y_pred y_pred = model.predict(X_test) y_pred # Вычислите accuracy в переменную accuracy accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) # Выведите отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) model_tree = DecisionTreeClassifier(random_state=42) model_tree.fit(X_train, y_train) y_pred_tree = model_tree.predict(X_test) accuracy_tree = accuracy_score(y_test, y_pred_tree) print('Accuracy для дерева решений:', accuracy_tree) # надо визуализировать дерево решений, но в ноутбуке не работает функция plot_tree. Поэтому код для визуализации дерева решений закомментирован. plt.figure(figsize=(12, 8)) plot_tree(model_tree, feature_names=iris.feature_names, class_names=iris.target_names, filled=True) plt.show()",
+      "searchText": "Python for DA_L21_2-for_students.ipynb notebooks/Python for DA_L21_2-for_students.ipynb # <b><font color='lightcoral'>Обучение с учителем</font></b> # Импорт библиотек import pandas as pd import numpy as np import matplotlib.pyplot as plt from sklearn.model_selection import train_test_split from sklearn.linear_model import LinearRegression from sklearn.metrics import mean_squared_error, r2_score # pip install --upgrade scikit-learn ### <b><font color='lightcoral'>1. Линейная регрессия</font></b> # Создание примера набора данных data = { 'Mother': [170.2, 168.9, 162.6, 162.6, 148.6, 172.7], 'Daughter': [175.3, 166.4, 172.7, 170.2, 158.8, 176.5] } df = pd.DataFrame(data) df.head() # Определяем переменные независимые (X) и зависимые (y) X = df[['Mother']] y = df['Daughter'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем модель линейной регрессии model = LinearRegression() # Обучаем модель на обучающих данных model.fit(X_train, y_train) # Делаем прогнозы на тестовом наборе y_pred = model.predict(X_test) # Считаем метрики оценки mse = mean_squared_error(y_test, y_pred) r2 = r2_score(y_test, y_pred) print(f\"Mean Squared Error: {mse}\") print(f\"R-squared: {r2}\") # Построим график обучающих данных и линии регрессии plt.scatter(X_train, y_train, color = 'blue', label = 'Обучающие данные') plt.scatter(X_test, y_test, color = 'green', label = 'Тестовые данные') plt.plot(X_train, model.predict(X_train), color = 'red', linewidth = 2, label = 'Линия регрессии') plt.xlabel('Рост матери (см)') plt.ylabel('Рост дочери (см)') plt.legend() plt.show() print(y_test, y_pred) ### <b><font color='lightcoral'>2. Логистическая регрессия</font></b> Реализуем логистическую регрессию в Python, чтобы предсказать, сдаст или не сдаст студент экзамен, на основе количества часов, которые он изучал предмет. # Импорт библиотек from sklearn.linear_model import LogisticRegression from sklearn.metrics import accuracy_score, classification_report, confusion_matrix # Создание примера набора данных data = { 'Hours_Studied': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'Pass_Fail': [0, 0, 0, 0, 1, 1, 1, 1, 1, 1] } df = pd.DataFrame(data) # Определяем переменные-предикторы (X) и переменные-ответы (y) X = df[['Hours_Studied']] y = df['Pass_Fail'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем модель логистической регрессии model = LogisticRegression() # Обучаем модель на обучающих данных model.fit(X_train, y_train) # Делаем предсказания на тестовом наборе y_pred = model.predict(X_test) model.predict_proba(X_test) # Вычислить точность accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) # Визуализация результатов plt.scatter(X, y, color='blue', label='Data points') # Построение кривой логистической регрессии X_range = np.linspace(X.min(), X.max(), 300) y_prob = model.predict_proba(X_range.reshape(-1, 1))[:, 1] plt.plot(X_range, y_prob, color='red', linewidth=2, label='Кривая логистической регрессии') plt.xlabel('Изученные часы') plt.ylabel('Вероятность сдачи') plt.legend() plt.show() ### <b><font color='lightcoral'>3. Дерево решений</font></b> Реализуем дерево решений на Python, чтобы предсказать, сдаст или не сдаст студент экзамен, основываясь на количестве часов, которые он изучал, и его посещаемости. from sklearn.tree import DecisionTreeClassifier, plot_tree # Создание примера набора данных data = { 'Hours_Studied': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'Attendance': ['Плохая', 'Плохая', 'Плохая', 'Хорошая', 'Хорошая', 'Хорошая', 'Хорошая', 'Хорошая', 'Хорошая', 'Плохая'], 'Pass_Fail': [0, 0, 0, 0, 1, 1, 1, 1, 1, 1] } df = pd.DataFrame(data) # Преобразуем категориальные данные в числовые df['Attendance'] = df['Attendance'].map({'Плохая': 0, 'Хорошая': 1}) # Определяем переменные-предикторы (X) и переменные-ответы (y) X = df[['Hours_Studied', 'Attendance']] y = df['Pass_Fail'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем классификатор дерева решений model = DecisionTreeClassifier(random_state = 42) # Обучаем модель на обучающих данных model.fit(X_train, y_train) # Делаем предсказания на тестовом наборе y_pred = model.predict(X_test) X_test['pred'] = y_pred X_test # Вычисляем точность accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) y_pred # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) # Построим дерево решений plt.figure(figsize = (12, 8)) plot_tree(model, feature_names = ['Hours_Studied', 'Attendance'], class_names = ['Fail', 'Pass'], filled = True) plt.show() ### <b><font color='lightcoral'>4. K-Nearest Neighbours (KNN)</font></b> Реализуем KNN в Python, чтобы предсказать, является ли новый фрукт яблоком или апельсином, основываясь на его весе и цвете. from sklearn.neighbors import KNeighborsClassifier # Создание примера набора данных data = { 'Weight': [150, 160, 170, 180, 190, 200, 210, 220, 230, 240], 'Color_Score': [0.8, 0.85, 0.9, 0.95, 1.0, 0.75, 0.7, 0.65, 0.6, 0.55], 'Label': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] # 0 для яблока, 1 для апельсина } df = pd.DataFrame(data) df # Построение графика точек данных plt.scatter(df['Weight'], df['Color_Score'], c = df['Label'], cmap = 'coolwarm', edgecolors = 'k') plt.xlabel('Вес') plt.ylabel('Цветовой балл') plt.title('Классификация фруктов') plt.show() # Определяем переменные предиктора (X) и отклика (y) X = df[['Weight', 'Color_Score']] y = df['Label'] # Делим данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируем KNN-классификатор knn = KNeighborsClassifier(n_neighbors = 3) # Обучение модели на обучающих данных knn.fit(X_train, y_train) # Делаем предсказания на тестовом наборе y_pred = knn.predict(X_test) y_pred # Вычисляем точность accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) # Построение графика границы принятия решения h = 0.01 # размер шага в сетке x_min, x_max = X['Weight'].min() - 1, X['Weight'].max() + 1 y_min, y_max = X['Color_Score'].min() - 0.1, X['Color_Score'].max() + 0.1 xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h)) Z = knn.predict(np.c_[xx.ravel(), yy.ravel()]) Z = Z.reshape(xx.shape) plt.contourf(xx, yy, Z, alpha=0.3, cmap='coolwarm') plt.scatter(X['Weight'], X['Color_Score'], c=y, edgecolors='k', cmap='coolwarm') plt.xlabel('Вес') plt.ylabel('Цветовая оценка') plt.title('Граница принятия решения для KNN') plt.show() ### <b><font color='lightcoral'>5. Решение задач</font></b> Используйте набор данных Iris, чтобы предсказать вид цветков ириса на основе их физических характеристик. # Импорт библиотек import pandas as pd from sklearn.datasets import load_iris # Загрузите данные в переменную iris iris = load_iris() df_iris = pd.DataFrame(data=iris.data, columns=iris.feature_names) df_iris # В переменную X запишите компонент data из набора данных iris X = iris.data # В переменную y запишите компонент target из набора данных iris y = iris.target # Разделите данные на обучающие и тестовые в переменные X_train, X_test, y_train, y_test X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # Опреледите модель машинного обучения в переменную model model = LogisticRegression() # Обучите модель model.fit(X_train, y_train) # Предскажите результаты на тестовых данных в переменную y_pred y_pred = model.predict(X_test) y_pred # Вычислите accuracy в переменную accuracy accuracy = accuracy_score(y_test, y_pred) print('Accuracy:', accuracy) # Выведите отчет о классификации print('Отчет о классификации:') print(classification_report(y_test, y_pred)) model_tree = DecisionTreeClassifier(random_state=42) model_tree.fit(X_train, y_train) y_pred_tree = model_tree.predict(X_test) accuracy_tree = accuracy_score(y_test, y_pred_tree) print('Accuracy для дерева решений:', accuracy_tree) # надо визуализировать дерево решений, но в ноутбуке не работает функция plot_tree. Поэтому код для визуализации дерева решений закомментирован. plt.figure(figsize=(12, 8)) plot_tree(model_tree, feature_names=iris.feature_names, class_names=iris.target_names, filled=True) plt.show()",
       "matches": [
         {
           "cell": 1,
@@ -12996,135 +13011,140 @@
         {
           "cell": 35,
           "type": "code",
-          "text": "# Отчет о классификации\nprint('Отчет о классификации:')\nprint(classification_report(y_test, y_pred))"
+          "text": "y_pred"
         },
         {
           "cell": 36,
           "type": "code",
-          "text": "# Построим дерево решений\nplt.figure(figsize = (12, 8))\nplot_tree(model, feature_names = ['Hours_Studied', 'Attendance'], class_names = ['Fail', 'Pass'], filled = True)\nplt.show()"
+          "text": "# Отчет о классификации\nprint('Отчет о классификации:')\nprint(classification_report(y_test, y_pred))"
         },
         {
           "cell": 37,
+          "type": "code",
+          "text": "# Построим дерево решений\nplt.figure(figsize = (12, 8))\nplot_tree(model, feature_names = ['Hours_Studied', 'Attendance'], class_names = ['Fail', 'Pass'], filled = True)\nplt.show()"
+        },
+        {
+          "cell": 38,
           "type": "markdown",
           "text": "### <b><font color='lightcoral'>4. K-Nearest Neighbours (KNN)</font></b>\nРеализуем KNN в Python, чтобы предсказать, является ли новый фрукт яблоком или апельсином, основываясь на его весе и цвете."
         },
         {
-          "cell": 38,
+          "cell": 39,
           "type": "code",
           "text": "from sklearn.neighbors import KNeighborsClassifier"
         },
         {
-          "cell": 39,
+          "cell": 40,
           "type": "code",
           "text": "# Создание примера набора данных\ndata = {\n    'Weight': [150, 160, 170, 180, 190, 200, 210, 220, 230, 240],\n    'Color_Score': [0.8, 0.85, 0.9, 0.95, 1.0, 0.75, 0.7, 0.65, 0.6, 0.55],\n    'Label': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] # 0 для яблока, 1 для апельсина\n}\ndf = pd.DataFrame(data)\ndf"
         },
         {
-          "cell": 40,
+          "cell": 41,
           "type": "code",
           "text": "# Построение графика точек данных\nplt.scatter(df['Weight'], df['Color_Score'], c = df['Label'], cmap = 'coolwarm', edgecolors = 'k')\nplt.xlabel('Вес')\nplt.ylabel('Цветовой балл')\nplt.title('Классификация фруктов')\nplt.show()"
         },
         {
-          "cell": 41,
+          "cell": 42,
           "type": "code",
           "text": "# Определяем переменные предиктора (X) и отклика (y)\nX = df[['Weight', 'Color_Score']]\ny = df['Label']"
         },
         {
-          "cell": 42,
+          "cell": 43,
           "type": "code",
           "text": "# Делим данные на обучающий и тестовый наборы\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)"
         },
         {
-          "cell": 43,
+          "cell": 44,
           "type": "code",
           "text": "# Инициализируем KNN-классификатор\nknn = KNeighborsClassifier(n_neighbors = 3)"
         },
         {
-          "cell": 44,
+          "cell": 45,
           "type": "code",
           "text": "# Обучение модели на обучающих данных\nknn.fit(X_train, y_train)"
         },
         {
-          "cell": 45,
+          "cell": 46,
           "type": "code",
           "text": "# Делаем предсказания на тестовом наборе\ny_pred = knn.predict(X_test)\ny_pred"
         },
         {
-          "cell": 46,
+          "cell": 47,
           "type": "code",
           "text": "# Вычисляем точность\naccuracy = accuracy_score(y_test, y_pred)\nprint('Accuracy:', accuracy)"
         },
         {
-          "cell": 47,
+          "cell": 48,
           "type": "code",
           "text": "# Отчет о классификации\nprint('Отчет о классификации:')\nprint(classification_report(y_test, y_pred))"
         },
         {
-          "cell": 48,
+          "cell": 49,
           "type": "code",
           "text": "# Построение графика границы принятия решения\nh = 0.01 # размер шага в сетке\nx_min, x_max = X['Weight'].min() - 1, X['Weight'].max() + 1\ny_min, y_max = X['Color_Score'].min() - 0.1, X['Color_Score'].max() + 0.1\nxx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))\nZ = knn.predict(np.c_[xx.ravel(), yy.ravel()])\nZ = Z.reshape(xx.shape)\n\nplt.contourf(xx, yy, Z, alpha=0.3, cmap='coolwarm')\nplt.scatter(X['Weight'], X['Color_Score'], c=y, edgecolors='k', cmap='coolwarm')\nplt.xlabel('Вес')\nplt.ylabel('Цветовая оценка')\nplt.title('Граница принятия решения для KNN')\nplt.show()"
         },
         {
-          "cell": 49,
+          "cell": 50,
           "type": "markdown",
           "text": "### <b><font color='lightcoral'>5. Решение задач</font></b>\nИспользуйте набор данных Iris, чтобы предсказать вид цветков ириса на основе их физических характеристик."
         },
         {
-          "cell": 50,
+          "cell": 51,
           "type": "code",
           "text": "# Импорт библиотек\nimport pandas as pd\nfrom sklearn.datasets import load_iris"
         },
         {
-          "cell": 51,
+          "cell": 52,
           "type": "code",
           "text": "# Загрузите данные в переменную iris\niris =  load_iris()\ndf_iris = pd.DataFrame(data=iris.data, columns=iris.feature_names)\ndf_iris"
         },
         {
-          "cell": 52,
+          "cell": 53,
           "type": "code",
           "text": "# В переменную X запишите компонент data из набора данных iris\nX = iris.data"
         },
         {
-          "cell": 53,
+          "cell": 54,
           "type": "code",
           "text": "# В переменную y запишите компонент target из набора данных iris\ny = iris.target"
         },
         {
-          "cell": 54,
+          "cell": 55,
           "type": "code",
           "text": "# Разделите данные на обучающие и тестовые в переменные X_train, X_test, y_train, y_test\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
         },
         {
-          "cell": 55,
+          "cell": 56,
           "type": "code",
           "text": "# Опреледите модель машинного обучения в переменную model\nmodel = LogisticRegression()"
         },
         {
-          "cell": 56,
+          "cell": 57,
           "type": "code",
           "text": "# Обучите модель\nmodel.fit(X_train, y_train)"
         },
         {
-          "cell": 57,
+          "cell": 58,
           "type": "code",
           "text": "# Предскажите результаты на тестовых данных в переменную y_pred\ny_pred = model.predict(X_test)\ny_pred"
         },
         {
-          "cell": 58,
+          "cell": 59,
           "type": "code",
           "text": "# Вычислите accuracy в переменную accuracy\naccuracy = accuracy_score(y_test, y_pred)\nprint('Accuracy:', accuracy)"
         },
         {
-          "cell": 59,
+          "cell": 60,
           "type": "code",
           "text": "# Выведите отчет о классификации\n\nprint('Отчет о классификации:')\nprint(classification_report(y_test, y_pred))"
         },
         {
-          "cell": 60,
+          "cell": 61,
           "type": "code",
           "text": "model_tree = DecisionTreeClassifier(random_state=42)\nmodel_tree.fit(X_train, y_train)\ny_pred_tree = model_tree.predict(X_test)\naccuracy_tree = accuracy_score(y_test, y_pred_tree)\nprint('Accuracy для дерева решений:', accuracy_tree)"
         },
         {
-          "cell": 61,
+          "cell": 62,
           "type": "code",
           "text": "# надо визуализировать дерево решений, но в ноутбуке не работает функция plot_tree. Поэтому код для визуализации дерева решений закомментирован.\nplt.figure(figsize=(12, 8))\nplot_tree(model_tree, feature_names=iris.feature_names, class_names=iris.target_names, filled=True)\nplt.show()"
         }
