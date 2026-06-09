@@ -285,6 +285,61 @@
       "docsUrl": "https://tqdm.github.io/"
     },
     {
+      "id": "dash-components",
+      "title": "Dash components — Dropdown, Slider, RadioItems",
+      "package": "Dash",
+      "terms": [
+        "dropdown",
+        "dcc.Dropdown",
+        "slider",
+        "dcc.Slider",
+        "radioitems",
+        "dcc.RadioItems",
+        "options",
+        "dcc.Input",
+        "dcc.Checklist",
+        "dash components",
+        "интерактивные компоненты"
+      ],
+      "aliases": [
+        "выпадающий список dash",
+        "ползунок dash",
+        "фильтр на дашборде"
+      ],
+      "summary": "Official Dash documentation for interactive input components — Dropdown, Slider, RadioItems.",
+      "import": "from dash import dcc, html",
+      "syntax": "from dash import dcc, html\n\n# Выпадающий список\ndcc.Dropdown(\n    id='city-selector',\n    options=[{'label': c, 'value': c} for c in cities],\n    value=cities[0],\n    multi=False\n)\n\n# Ползунок\ndcc.Slider(\n    id='year-slider',\n    min=2018, max=2024, step=1,\n    value=2022,\n    marks={y: str(y) for y in range(2018, 2025)}\n)\n\n# Радио-кнопки\ndcc.RadioItems(\n    id='chart-type',\n    options=[{'label': 'Bar', 'value': 'bar'},\n             {'label': 'Line', 'value': 'line'}],\n    value='bar'\n)",
+      "related": ["dash-app", "plotly.graph_objects"],
+      "docsUrl": "https://dash.plotly.com/dash-core-components"
+    },
+    {
+      "id": "workflow-log-transform",
+      "title": "Log transform — numpy.log1p",
+      "package": "Workflow",
+      "terms": [
+        "log1p",
+        "np.log1p",
+        "log transform",
+        "log scale",
+        "log1p transform",
+        "numpy.log",
+        "np.log",
+        "np.exp",
+        "логарифм",
+        "логарифмическое преобразование"
+      ],
+      "aliases": [
+        "убрать скошенность",
+        "skewed distribution fix",
+        "log(1+x)"
+      ],
+      "summary": "Official NumPy documentation for log1p — apply log(1+x) transform to handle skewed distributions.",
+      "import": "import numpy as np",
+      "syntax": "# log1p = log(1 + x), безопасно для x=0\ndf['price_log'] = np.log1p(df['price'])\n\n# Обратное преобразование\ndf['price_original'] = np.expm1(df['price_log'])\n\n# Обычный логарифм (требует x > 0)\ndf['log_price'] = np.log(df['price'])\n\n# Для всего DataFrame\ndf_log = df[num_cols].apply(np.log1p)",
+      "related": ["numpy.array", "pandas.DataFrame.apply", "seaborn.histplot"],
+      "docsUrl": "https://numpy.org/doc/stable/reference/generated/numpy.log1p.html"
+    },
+    {
       "id": "workflow-dataframe-to-dash",
       "title": "DataFrame -> Dash dashboard",
       "package": "Workflow",

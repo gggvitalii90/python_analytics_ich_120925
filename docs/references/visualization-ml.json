@@ -19,7 +19,7 @@
       "id": "matplotlib-figure",
       "title": "matplotlib.pyplot.figure",
       "package": "Matplotlib",
-      "terms": ["figsize", "figure", "plt.figure", "figure size", "savefig", "plt.savefig", "tight_layout", "plt.tight_layout", "размер графика"],
+      "terms": ["figsize", "figure", "plt.figure", "figure size", "savefig", "plt.savefig", "tight_layout", "plt.tight_layout", "colorbar", "plt.colorbar", "размер графика"],
       "summary": "Official Matplotlib reference for creating figures and setting figure size.",
       "import": "import matplotlib.pyplot as plt",
       "syntax": "plt.figure(figsize=(10, 6))\nplt.plot(x, y)\nplt.show()",

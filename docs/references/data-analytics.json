@@ -383,6 +383,13 @@
       "terms": [
         "merge",
         "join",
+        "left_on",
+        "right_on",
+        "on",
+        "how",
+        "inner join",
+        "left join",
+        "outer join",
         "объединение",
         "соединить таблицы"
       ],
@@ -696,6 +703,62 @@
         "pandas.DataFrame.filter"
       ],
       "docsUrl": "https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.query.html"
+    },
+    {
+      "id": "pandas-style",
+      "title": "DataFrame.style — conditional formatting",
+      "package": "pandas",
+      "terms": [
+        "style",
+        "df.style",
+        "pandas style",
+        "conditional formatting",
+        "highlight",
+        "background_gradient",
+        "highlight_max",
+        "bar chart in cell",
+        "условное форматирование",
+        "стилизация таблицы"
+      ],
+      "aliases": [
+        "раскрасить ячейки",
+        "выделить максимум",
+        "цветовая шкала"
+      ],
+      "summary": "Official pandas documentation for DataFrame.style — apply conditional formatting for Jupyter display.",
+      "import": "import pandas as pd",
+      "syntax": "# Цветовой градиент по значениям\ndf.style.background_gradient(cmap='Blues')\n\n# Выделить максимальное значение\ndf.style.highlight_max(color='lightgreen')\n\n# Минимальное\ndf.style.highlight_min(color='lightyellow')\n\n# Несколько правил сразу\n(df.style\n   .background_gradient(cmap='RdYlGn')\n   .highlight_null(color='lightcoral')\n   .format({'price': '{:.2f}', 'pct': '{:.1%}'})\n)",
+      "related": ["pandas.DataFrame.describe", "seaborn.heatmap"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.io.formats.style.Styler.html"
+    },
+    {
+      "id": "pandas-std-var",
+      "title": "DataFrame.std / var / sem",
+      "package": "pandas",
+      "terms": [
+        "std",
+        "df.std",
+        "pandas std",
+        "var",
+        "df.var",
+        "sem",
+        "df.sem",
+        "standard deviation",
+        "variance",
+        "standard error",
+        "стандартное отклонение",
+        "дисперсия"
+      ],
+      "aliases": [
+        "разброс данных",
+        "вариабельность",
+        "standard error of the mean"
+      ],
+      "summary": "Official pandas documentation for std (standard deviation), var (variance), and sem (standard error of mean).",
+      "import": "import pandas as pd",
+      "syntax": "# Стандартное отклонение\ndf['price'].std()          # по одному столбцу\ndf.std(numeric_only=True)  # по всем числовым\n\n# Дисперсия\ndf['price'].var()\n\n# Стандартная ошибка среднего\ndf['price'].sem()\n\n# Всё сразу\ndf.agg(['mean', 'std', 'sem', 'var'])",
+      "related": ["pandas.DataFrame.describe", "pandas.DataFrame.mean", "numpy.std"],
+      "docsUrl": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.std.html"
     },
     {
       "id": "pandas-corr",

@@ -41,7 +41,7 @@
       "id": "stdlib-statistics",
       "title": "statistics",
       "package": "Python stdlib",
-      "terms": ["statistics", "mean", "median", "mode", "stdev", "variance", "statistics.mode", "statistics.mean"],
+      "terms": ["statistics", "mean", "median", "mode", "stdev", "variance", "sem", "statistics.mode", "statistics.mean", "statistics.stdev"],
       "summary": "Official Python documentation for statistics functions.",
       "import": "import statistics as stats",
       "syntax": "avg = stats.mean(values)\nmed = stats.median(values)\nstd = stats.stdev(values)",
