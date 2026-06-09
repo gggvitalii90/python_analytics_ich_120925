@@ -11,13 +11,23 @@ from typing import Any
 MAX_CELL_TEXT = 900
 MAX_SEARCH_TEXT = 24000
 REDACTIONS = [
+    # Connection strings
     re.compile(r"mysql\+pymysql://[^@\s\"']+@[^/\s\"']+/[^\s\"']+", re.I),
-    re.compile(r"mongodb(?:\+srv)?://[^\s\"']+", re.I),
+    re.compile(r"mongodb(?:\+srv)?://[^\s\"'<>\[\]]+", re.I),
+    # ICH school server domains
     re.compile(r"ich-db\.edu\.itcareerhub\.de", re.I),
+    re.compile(r"ich-edit\.edu\.itcareerhub\.de", re.I),
     re.compile(r"mongo\.itcareerhub\.de", re.I),
-    re.compile(r'password\s*=\s*["\']password["\']', re.I),
+    # Known real passwords / usernames
+    re.compile(r"YOUR_PASSWORD", re.I),
+    re.compile(r"ich1_password_\w+", re.I),
+    re.compile(r"(['\"])YOUR_USERNAME(['\"])", re.I),
+    # Generic credential assignments
+    re.compile(r'password\s*=\s*["\'][^"\'<>{]{4,}["\']', re.I),
     re.compile(r"API_KEY\s*=\s*['\"][^'\"]+['\"]", re.I),
     re.compile(r"TELEGRAM_TOKEN\s*=\s*['\"][^'\"]+['\"]", re.I),
+    re.compile(r"token\s*=\s*['\"][A-Za-z0-9_\-]{20,}['\"]", re.I),
+    re.compile(r"secret\s*=\s*['\"][^'\"<>{]{8,}['\"]", re.I),
 ]
 
 

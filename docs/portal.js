@@ -244,7 +244,14 @@ const searchNotebooks = (query, pool) => {
   const terms = queryTerms(query);
 
   if (miniSearch) {
-    const expanded = terms.join(" ");
+    // Split each term by the same delimiters the tokenizer uses, then drop
+    // tokens shorter than 3 chars (e.g. "to" from "to_excel") so they don't
+    // flood results via OR matching.
+    const miniTokens = terms
+      .flatMap((t) => t.split(/[\s_\-./()\[\]{},;'"!?@#$%^&*=+<>|~`\\]+/))
+      .filter((t) => t.length >= 3);
+    if (miniTokens.length === 0) return pool.filter((item) => matchesQuery(item, terms));
+    const expanded = miniTokens.join(" ");
     const results = miniSearch.search(expanded);
     const scoreMap = new Map(results.map((r) => [r.id, r.score]));
     return pool
