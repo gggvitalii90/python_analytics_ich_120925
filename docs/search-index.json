@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-06-09T18:58:28.675235+00:00",
-    "notebookCount": 198
+    "generatedAt": "2026-06-11T08:03:23.488144+00:00",
+    "notebookCount": 201
   },
   "notebooks": [
     {
@@ -1179,6 +1179,149 @@
           "cell": 13,
           "type": "code",
           "text": "df_titanic['sex_encoded'] = pd.factorize(df_titanic['sex'])[0]\ndf_titanic['class_encoded'] = pd.factorize(df_titanic['class'])[0]\ndf_titanic['embark_town_encoded'] = pd.factorize(df_titanic['embark_town'])[0]\ndf_titanic"
+        }
+      ]
+    },
+    {
+      "name": "HW_22_students.ipynb",
+      "path": "DZ_python_DA/HW_22_students.ipynb",
+      "course": "analytics",
+      "searchText": "HW_22_students.ipynb DZ_python_DA/HW_22_students.ipynb # <b><font color='teal'>Homework 22</font></b> # Импорт библиотек 1. Обучите модель логистической регрессии на наборе данных Breast Cancer. Оцените модель с помощью показателей точности, precision, recall и F1-score. Постройте кривую Precision-Recall. # В переменную df_breast_cancer запишите датасет BreastCancer # В переменную X запишите все данные из компонента data датасета # (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия) # В переменную y запишите компонент target датасета # (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия) # В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные # (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия) # Инициализируйте модель логистической регрессии в переменную model_log_regr # (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия) # Обучите модель на обучающих данных # (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия) # Сделайте прогнозы для тестового набора в переменные y_pred_log_regr # (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия) # В переменную y_scores_log_regr запишите результат работы функции predict_proba # (Синтаксис в файле \"Метрики оценки модели\" - п.2 - Precision-Recall) # Выведите отчет о классификации и сделайте вывод о точности модели на основе метрик precision, recall, F1-score # (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия) # Рассчитайте кривую Precision-Recall в переменные precisions_log_regr, recalls_log_regr, thresholds_log_regr # (Синтаксис в файле \"Метрики оценки модели\" - п.2 - Precision-Recall) # Постройте график кривой Precision-Recall 2. Проведите кросс-валидацию с использованием набора данных banknote_authentication.csv и модели логистической регрессии. Оцените модель с помощью оценок кросс-валидации и постройте кривую обучения. # Загрузите данные в датафрейм df_banknote # В переменную X запишите столбцы A, B, C, D # В переменную y запишите столбец target # Инициализируйте модель логистической регрессии в переменную model # Выполните перекрестную валидацию в переменную cv_scores # (Синтаксис в файле \"Переобучение и недообучение\" - п.1.2. - Кросс-валидация) # Выведите оценки кросс-валидации # Разделите данные на обучающий и тестовый наборы # Обучите модель на обучающих данных # Сделайте предсказания на обучающем и тестовом наборах в переменные y_train_pred и y_test_pred # (Синтаксис в файле \"Переобучение и недообучение\" - п.1.2. - Кросс-валидация) # Рассчитайте accuracy на обучающем и тестовом наборах в переменные train_accuracy и test_accuracy # Выведите результаты на экран # (Синтаксис в файле \"Переобучение и недообучение\" - п.1.2. - Кросс-валидация) # Определите функцию для построения кривых обучения # (Синтаксис в файле \"Переобучение и недообучение\" - п.1.1. - Кривые обучения) # Постройте кривые обучения и сделайте вывод о недообученности/переобученности модели # (Синтаксис в файле \"Переобучение и недообучение\" - п.1.1. - Кривые обучения)",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='teal'>Homework 22</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "1. Обучите модель логистической регрессии на наборе данных Breast Cancer. Оцените модель с помощью показателей точности, precision, recall и F1-score. Постройте кривую Precision-Recall."
+        },
+        {
+          "cell": 4,
+          "type": "code",
+          "text": "# В переменную df_breast_cancer запишите датасет BreastCancer"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# В переменную X запишите все данные из компонента data датасета\n# (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия)"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# В переменную y запишите компонент target датасета\n# (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия)"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# В переменные X_train, X_test, y_train, y_test запишите обучающие и тестовые данные\n# (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия)"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "# Инициализируйте модель логистической регрессии в переменную model_log_regr\n# (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия)"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# Обучите модель на обучающих данных\n# (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия)"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Сделайте прогнозы для тестового набора в переменные y_pred_log_regr\n# (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия)"
+        },
+        {
+          "cell": 11,
+          "type": "code",
+          "text": "# В переменную y_scores_log_regr запишите результат работы функции predict_proba\n# (Синтаксис в файле \"Метрики оценки модели\" - п.2 - Precision-Recall)"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "# Выведите отчет о классификации и сделайте вывод о точности модели на основе метрик precision, recall, F1-score\n# (Синтаксис в файле \"Обучение с учителем\" - п.2 - Логистическая регрессия)"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "# Рассчитайте кривую Precision-Recall в переменные precisions_log_regr, recalls_log_regr, thresholds_log_regr\n# (Синтаксис в файле \"Метрики оценки модели\" - п.2 - Precision-Recall)"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "# Постройте график кривой Precision-Recall"
+        },
+        {
+          "cell": 15,
+          "type": "markdown",
+          "text": "2. Проведите кросс-валидацию с использованием набора данных banknote_authentication.csv и модели логистической регрессии. Оцените модель с помощью оценок кросс-валидации и постройте кривую обучения."
+        },
+        {
+          "cell": 16,
+          "type": "code",
+          "text": "# Загрузите данные в датафрейм df_banknote"
+        },
+        {
+          "cell": 17,
+          "type": "code",
+          "text": "# В переменную X запишите столбцы A, B, C, D"
+        },
+        {
+          "cell": 18,
+          "type": "code",
+          "text": "# В переменную y запишите столбец target"
+        },
+        {
+          "cell": 19,
+          "type": "code",
+          "text": "# Инициализируйте модель логистической регрессии в переменную model"
+        },
+        {
+          "cell": 20,
+          "type": "code",
+          "text": "# Выполните перекрестную валидацию в переменную cv_scores\n# (Синтаксис в файле \"Переобучение и недообучение\" - п.1.2. - Кросс-валидация)"
+        },
+        {
+          "cell": 21,
+          "type": "code",
+          "text": "# Выведите оценки кросс-валидации"
+        },
+        {
+          "cell": 22,
+          "type": "code",
+          "text": "# Разделите данные на обучающий и тестовый наборы"
+        },
+        {
+          "cell": 23,
+          "type": "code",
+          "text": "# Обучите модель на обучающих данных"
+        },
+        {
+          "cell": 24,
+          "type": "code",
+          "text": "# Сделайте предсказания на обучающем и тестовом наборах в переменные y_train_pred и y_test_pred\n# (Синтаксис в файле \"Переобучение и недообучение\" - п.1.2. - Кросс-валидация)"
+        },
+        {
+          "cell": 25,
+          "type": "code",
+          "text": "# Рассчитайте accuracy на обучающем и тестовом наборах в переменные train_accuracy и test_accuracy\n# Выведите результаты на экран\n# (Синтаксис в файле \"Переобучение и недообучение\" - п.1.2. - Кросс-валидация)"
+        },
+        {
+          "cell": 26,
+          "type": "code",
+          "text": "# Определите функцию для построения кривых обучения\n# (Синтаксис в файле \"Переобучение и недообучение\" - п.1.1. - Кривые обучения)"
+        },
+        {
+          "cell": 27,
+          "type": "code",
+          "text": "# Постройте кривые обучения и сделайте вывод о недообученности/переобученности модели\n# (Синтаксис в файле \"Переобучение и недообучение\" - п.1.1. - Кривые обучения)"
         }
       ]
     },
@@ -21557,6 +21700,432 @@
           "cell": 5,
           "type": "code",
           "text": "revenue = orders * avg_check\nprint(\"Выручка:\", revenue)\nmax_revenue_day = days[np.argmax(revenue)]\nprint(\"День с максимальной выручкой:\", max_revenue_day)\navg_revenue = round(np.mean(revenue), 2)\nprint(\"Средняя выручка:\", avg_revenue)\ncustomer_orders = np.round(orders / customers, 2)\nprint(\"Заказы на одного покупателя:\", customer_orders)\nsum_revenue = np.cumsum(revenue)\nprint(\"Накопленная выручка:\", sum_revenue)"
+        }
+      ]
+    },
+    {
+      "name": "Метрики оценки модели_students.ipynb",
+      "path": "notebooks/Метрики оценки модели_students.ipynb",
+      "course": "analytics",
+      "searchText": "Метрики оценки модели_students.ipynb notebooks/Метрики оценки модели_students.ipynb # <b><font color='lightcoral'>Метрики оценки модели</font></b> # Импорт библиотек import numpy as np import pandas as pd import matplotlib.pyplot as plt import seaborn as sns from sklearn.model_selection import train_test_split from sklearn.linear_model import LogisticRegression from sklearn.tree import DecisionTreeClassifier, plot_tree from sklearn.metrics import accuracy_score, \\ confusion_matrix, \\ precision_recall_curve, \\ precision_score, \\ recall_score, \\ classification_report, f1_score ### <b><font color='lightcoral'>1. Accuracy</font></b> from sklearn.datasets import load_iris # Загрузите набор данных iris в переменную iris iris = load_iris(as_frame=True) df_iris = iris.frame df_iris # Определите переменные независимые (X) и зависимые (y) X = iris.data y = iris.target # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) # Инициализируйте модель дерева решений model_iris = DecisionTreeClassifier(random_state=42) # Обучите модель на обучающих данных model_iris.fit(X_train, y_train) # Сделайте прогнозы на тестовом наборе y_pred = model_iris.predict(X_test) # Вычислите точность (accuracy) accuracy = accuracy_score(y_test, y_pred) print(f'Accuracy: {accuracy:.2f}') # Отображение матрицы ошибок (prediction matrix) conf_matrix = confusion_matrix(y_test, y_pred) print('Матрица ошибок:') print(conf_matrix) # Визуализация матрицы ошибок sns.heatmap(conf_matrix, annot = True, fmt = 'd', cmap = 'Blues', xticklabels = iris.target_names, yticklabels = iris.target_names) plt.xlabel('Прогноз') plt.ylabel('Факт') plt.title('Матрица ошибок') plt.show() plt.figure(figsize = (12, 8)) plot_tree(model_iris, feature_names = iris.feature_names, class_names = iris.target_names, filled = True) plt.savefig(\"decision_tree.png\", dpi=300, bbox_inches=\"tight\") plt.show() ### <b><font color='lightcoral'>2. Precision-Recall</font></b> # Загрузите данные в переменную df_bancing df_bancing = pd.read_csv('../data/Banking.csv') df_bancing.head() df_bancing['y'].value_counts() # Предобработка данных df_bancing['job_code'] = pd.factorize(df_bancing['job'])[0] df_bancing['marital_code'] = pd.factorize(df_bancing['marital'])[0] df_bancing['education_code'] = pd.factorize(df_bancing['education'])[0] df_bancing['contact_code'] = pd.factorize(df_bancing['contact'])[0] df_bancing['housing_code'] = pd.factorize(df_bancing['housing'])[0] df_bancing['loan_code'] = pd.factorize(df_bancing['loan'])[0] df_bancing['month'] = df_bancing['month'].replace({'mar':3, 'apr':4, 'may':5, 'jun':6, 'jul':7, 'aug':8, 'sep':9, 'oct':10, 'nov':11, 'dec':12}).astype(int) df_bancing['day_of_week'] = df_bancing['day_of_week'].replace({'mon':1, 'tue':2, 'wed':3, 'thu':4, 'fri':5}).astype(int) df_bancing['y'] = df_bancing['y'].replace({'no':0, 'yes':1}) df_bancing.info() # Определяем переменные-предикторы (X) и переменные-ответы (y) X = df_bancing[['age', 'job_code', 'marital_code', 'education_code', 'housing_code', 'loan_code', 'contact_code', 'month', 'day_of_week', 'duration', 'campaign', 'pdays', 'previous']] y = df_bancing['y'] # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Инициализируйте модель дерево решений и логистическая регрессия model_log_regr = LogisticRegression() model_dec_tree = DecisionTreeClassifier() # Обучите модели на обучающих данных model_log_regr.fit(X_train, y_train) model_dec_tree.fit(X_train, y_train) # Сделайте предсказания на тестовом наборе y_pred_log_regr = model_log_regr.predict(X_test) y_scores_log_regr = model_log_regr.predict_proba(X_test)[:, 1] y_pred_dec_tree = model_dec_tree.predict(X_test) y_scores_dec_tree = model_dec_tree.predict_proba(X_test)[:, 1] model.predict_proba(X_test) # Вычислите precision и recall и выведите результаты precision_log_regr = precision_score(y_test, y_pred_log_regr) recall_log_regr = recall_score(y_test, y_pred_log_regr) print(f'Precision LogisticRegression: {precision_log_regr}') print(f'Recall LogisticRegression: {precision_log_regr}') precision_dec_tree = precision_score(y_test, y_pred_dec_tree) recall_dec_tree = recall_score(y_test, y_pred_dec_tree) print(f'Precision DecisionTree: {precision_dec_tree}') print(f'Recall DecisionTree: {recall_dec_tree}') # Выведите отчет о классификации print('Отчет о классификации LogisticRegression:') print(classification_report(y_test, y_pred_log_regr)) print('Отчет о классификации DecisionTree:') print(classification_report(y_test, y_pred_dec_tree)) # Выведите матрицу ошибок conf_matrix_log_regr = confusion_matrix(y_test, y_pred_log_regr) print('Матрица ошибок LogisticRegression:') print(conf_matrix_log_regr) conf_matrix_dec_tree = confusion_matrix(y_test, y_pred_dec_tree) print('Матрица ошибок DecisionTree:') print(conf_matrix_dec_tree) # Визуализируйте матрицу ошибок sns.heatmap(conf_matrix_log_regr, annot = True, fmt = 'd', cmap = 'Blues') plt.xlabel('Прогноз') plt.ylabel('Факт') plt.title('Матрица ошибок') plt.show() # Постройте кривую «Precision-Recall». # 1. Рассчитайте кривую Precision-Recall precisions_log_regr, recalls_log_regr, thresholds_log_regr = precision_recall_curve(y_test, y_scores_log_regr) precisions_dec_tree, recalls_dec_tree, thresholds_dec_tree = precision_recall_curve(y_test, y_scores_dec_tree) plt.figure(figsize = (12, 6)) plt.subplot(1, 2, 1) # 2. Построить график кривой Precision-Recall plt.plot(recalls_log_regr, precisions_log_regr, marker='.') plt.xlabel('Recall') plt.ylabel('Precision') plt.title('Кривая Precision-Recall LogisticRegression') plt.subplot(1, 2, 2) # 2. Построить график кривой Precision-Recall plt.plot(recalls_dec_tree, precisions_dec_tree, marker='.') plt.xlabel('Recall') plt.ylabel('Precision') plt.title('Кривая Precision-Recall DecisionTree') plt.show() ### <b><font color='lightcoral'>3. Решение задач</font></b> Примените алгоритм K-Nearest Neighbors (KNN) для классификации несбалансированного набора данных и вычисления F1-score. Мы будем использовать набор данных Breast Cancer из Scikit-learn, который является слегка несбалансированным. # Импортируйте библиотеку для модели KNN # В переменную knn инициируйте модель KNN # выберите количество соседей = 5 # Обучите модель # Сделайте предсказания на тестовом наборе # Вычислите precision, recall, f1_score в переменные с такими же названиями # Постройте матрицу ошибок и визуализируйте ее",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='lightcoral'>Метрики оценки модели</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\n\nfrom sklearn.tree import DecisionTreeClassifier, plot_tree\nfrom sklearn.metrics import accuracy_score, \\\n                            confusion_matrix, \\\n                            precision_recall_curve, \\\n                            precision_score, \\\n                            recall_score, \\\n                            classification_report, f1_score"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>1. Accuracy</font></b>"
+        },
+        {
+          "cell": 4,
+          "type": "code",
+          "text": "from sklearn.datasets import load_iris"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# Загрузите набор данных iris в переменную iris\niris = load_iris(as_frame=True)\ndf_iris = iris.frame\ndf_iris"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# Определите переменные независимые (X) и зависимые (y)\nX = iris.data\ny = iris.target"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# Разделите данные на обучающий и тестовый наборы\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "# Инициализируйте модель дерева решений\nmodel_iris = DecisionTreeClassifier(random_state=42)"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# Обучите модель на обучающих данных\nmodel_iris.fit(X_train, y_train)"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Сделайте прогнозы на тестовом наборе\ny_pred = model_iris.predict(X_test)"
+        },
+        {
+          "cell": 11,
+          "type": "code",
+          "text": "# Вычислите точность (accuracy)\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy:.2f}')"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "# Отображение матрицы ошибок (prediction matrix)\nconf_matrix = confusion_matrix(y_test, y_pred)\nprint('Матрица ошибок:')\nprint(conf_matrix)"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "# Визуализация матрицы ошибок\nsns.heatmap(conf_matrix, \n            annot = True, \n            fmt = 'd', \n            cmap = 'Blues', \n            xticklabels = iris.target_names, \n            yticklabels = iris.target_names)\nplt.xlabel('Прогноз')\nplt.ylabel('Факт')\nplt.title('Матрица ошибок')\nplt.show()"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "plt.figure(figsize = (12, 8))\nplot_tree(model_iris, feature_names = iris.feature_names, class_names = iris.target_names, filled = True)\nplt.savefig(\"decision_tree.png\", dpi=300, bbox_inches=\"tight\")\nplt.show()"
+        },
+        {
+          "cell": 15,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>2. Precision-Recall</font></b>"
+        },
+        {
+          "cell": 16,
+          "type": "code",
+          "text": "# Загрузите данные в переменную df_bancing\ndf_bancing = pd.read_csv('../data/Banking.csv')\ndf_bancing.head()"
+        },
+        {
+          "cell": 17,
+          "type": "code",
+          "text": "df_bancing['y'].value_counts()"
+        },
+        {
+          "cell": 18,
+          "type": "code",
+          "text": "# Предобработка данных\ndf_bancing['job_code'] = pd.factorize(df_bancing['job'])[0]\ndf_bancing['marital_code'] = pd.factorize(df_bancing['marital'])[0]\ndf_bancing['education_code'] = pd.factorize(df_bancing['education'])[0]\ndf_bancing['contact_code'] = pd.factorize(df_bancing['contact'])[0]\ndf_bancing['housing_code'] = pd.factorize(df_bancing['housing'])[0]\ndf_bancing['loan_code'] = pd.factorize(df_bancing['loan'])[0]\ndf_bancing['month'] = df_bancing['month'].replace({'mar':3, 'apr':4, 'may':5, 'jun':6, 'jul':7, 'aug':8, 'sep':9,\n                                                   'oct':10, 'nov':11, 'dec':12}).astype(int)\ndf_bancing['day_of_week'] = df_bancing['day_of_week'].replace({'mon':1, 'tue':2, 'wed':3, 'thu':4, 'fri':5}).astype(int)\ndf_bancing['y'] = df_bancing['y'].replace({'no':0, 'yes':1})"
+        },
+        {
+          "cell": 19,
+          "type": "code",
+          "text": "df_bancing.info()"
+        },
+        {
+          "cell": 20,
+          "type": "code",
+          "text": "# Определяем переменные-предикторы (X) и переменные-ответы (y)\nX = df_bancing[['age', 'job_code', 'marital_code', 'education_code', 'housing_code', 'loan_code', 'contact_code', \n               'month', 'day_of_week', 'duration', 'campaign', 'pdays', 'previous']]\ny = df_bancing['y']"
+        },
+        {
+          "cell": 21,
+          "type": "code",
+          "text": "# Разделите данные на обучающий и тестовый наборы\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)"
+        },
+        {
+          "cell": 22,
+          "type": "code",
+          "text": "# Инициализируйте модель дерево решений и логистическая регрессия\nmodel_log_regr = LogisticRegression()\nmodel_dec_tree = DecisionTreeClassifier()"
+        },
+        {
+          "cell": 23,
+          "type": "code",
+          "text": "# Обучите модели на обучающих данных\nmodel_log_regr.fit(X_train, y_train)\nmodel_dec_tree.fit(X_train, y_train)"
+        },
+        {
+          "cell": 24,
+          "type": "code",
+          "text": "# Сделайте предсказания на тестовом наборе\ny_pred_log_regr = model_log_regr.predict(X_test)\ny_scores_log_regr = model_log_regr.predict_proba(X_test)[:, 1]\ny_pred_dec_tree = model_dec_tree.predict(X_test)\ny_scores_dec_tree = model_dec_tree.predict_proba(X_test)[:, 1]"
+        },
+        {
+          "cell": 25,
+          "type": "code",
+          "text": "model.predict_proba(X_test)"
+        },
+        {
+          "cell": 26,
+          "type": "code",
+          "text": "# Вычислите precision и recall и выведите результаты\nprecision_log_regr = precision_score(y_test, y_pred_log_regr)\nrecall_log_regr = recall_score(y_test, y_pred_log_regr)\nprint(f'Precision LogisticRegression: {precision_log_regr}')\nprint(f'Recall LogisticRegression: {precision_log_regr}')\nprecision_dec_tree = precision_score(y_test, y_pred_dec_tree)\nrecall_dec_tree = recall_score(y_test, y_pred_dec_tree)\nprint(f'Precision DecisionTree: {precision_dec_tree}')\nprint(f'Recall DecisionTree: {recall_dec_tree}')"
+        },
+        {
+          "cell": 27,
+          "type": "code",
+          "text": "# Выведите отчет о классификации\nprint('Отчет о классификации LogisticRegression:')\nprint(classification_report(y_test, y_pred_log_regr))\nprint('Отчет о классификации DecisionTree:')\nprint(classification_report(y_test, y_pred_dec_tree))"
+        },
+        {
+          "cell": 28,
+          "type": "code",
+          "text": "# Выведите матрицу ошибок\nconf_matrix_log_regr = confusion_matrix(y_test, y_pred_log_regr)\nprint('Матрица ошибок LogisticRegression:')\nprint(conf_matrix_log_regr)\nconf_matrix_dec_tree = confusion_matrix(y_test, y_pred_dec_tree)\nprint('Матрица ошибок DecisionTree:')\nprint(conf_matrix_dec_tree)"
+        },
+        {
+          "cell": 29,
+          "type": "code",
+          "text": "# Визуализируйте матрицу ошибок\nsns.heatmap(conf_matrix_log_regr, \n            annot = True,\n            fmt = 'd',\n            cmap = 'Blues')\nplt.xlabel('Прогноз')\nplt.ylabel('Факт')\nplt.title('Матрица ошибок')\nplt.show()"
+        },
+        {
+          "cell": 30,
+          "type": "code",
+          "text": "# Постройте кривую «Precision-Recall».\n# 1. Рассчитайте кривую Precision-Recall\nprecisions_log_regr, recalls_log_regr, thresholds_log_regr = precision_recall_curve(y_test, y_scores_log_regr)\nprecisions_dec_tree, recalls_dec_tree, thresholds_dec_tree = precision_recall_curve(y_test, y_scores_dec_tree)\nplt.figure(figsize = (12, 6))\nplt.subplot(1, 2, 1)\n# 2. Построить график кривой Precision-Recall\nplt.plot(recalls_log_regr, precisions_log_regr, marker='.')\nplt.xlabel('Recall')\nplt.ylabel('Precision')\nplt.title('Кривая Precision-Recall LogisticRegression')\n\nplt.subplot(1, 2, 2)\n# 2. Построить график кривой Precision-Recall\nplt.plot(recalls_dec_tree, precisions_dec_tree, marker='.')\nplt.xlabel('Recall')\nplt.ylabel('Precision')\nplt.title('Кривая Precision-Recall DecisionTree')\nplt.show()"
+        },
+        {
+          "cell": 31,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>3. Решение задач</font></b>"
+        },
+        {
+          "cell": 32,
+          "type": "markdown",
+          "text": "Примените алгоритм K-Nearest Neighbors (KNN) для классификации несбалансированного набора данных и вычисления F1-score. Мы будем использовать набор данных Breast Cancer из Scikit-learn, который является слегка несбалансированным."
+        },
+        {
+          "cell": 33,
+          "type": "code",
+          "text": "# Импортируйте библиотеку для модели KNN"
+        },
+        {
+          "cell": 34,
+          "type": "code",
+          "text": "# В переменную knn инициируйте модель KNN\n# выберите количество соседей = 5"
+        },
+        {
+          "cell": 35,
+          "type": "code",
+          "text": "# Обучите модель"
+        },
+        {
+          "cell": 36,
+          "type": "code",
+          "text": "# Сделайте предсказания на тестовом наборе"
+        },
+        {
+          "cell": 37,
+          "type": "code",
+          "text": "# Вычислите precision, recall, f1_score в переменные с такими же названиями"
+        },
+        {
+          "cell": 38,
+          "type": "code",
+          "text": "# Постройте матрицу ошибок и визуализируйте ее"
+        }
+      ]
+    },
+    {
+      "name": "Переобучение и недообучение.ipynb",
+      "path": "notebooks/Переобучение и недообучение.ipynb",
+      "course": "analytics",
+      "searchText": "Переобучение и недообучение.ipynb notebooks/Переобучение и недообучение.ipynb # <b><font color='lightcoral'>Переобучение и недообучение</font></b> # Импорт библиотек import numpy as np import pandas as pd import matplotlib.pyplot as plt from sklearn.model_selection import learning_curve, train_test_split, cross_val_score from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier from sklearn.datasets import fetch_california_housing from sklearn.metrics import accuracy_score ### <b><font color='lightcoral'>1. Диагностика переобучения и недообучения</font></b> ##### <b><font color='lightcoral'>1.1. Кривые обучения</font></b> # Загрузите набор данных fetch_california_housing в переменную data data = fetch_california_housing() data # Определите переменные независимые (X) и зависимые (y) X, y = data.data, data.target # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Определите функцию для построения кривых обучения # estimator - любая модель sklearn # X, y - данные и целевая переменная # train_sizes - какие доли данных будем использовать (по умолчанию от 10% до 100%) # cv = 5 - будем использовать 5-fold cross-validation def plot_learning_curves(estimator, X, y, train_sizes = np.linspace(0.1, 1.0, 10), cv = 5): train_sizes, train_scores, validation_scores = learning_curve( estimator, X, y, train_sizes = train_sizes, cv = cv, scoring = 'neg_mean_squared_error' ) train_scores_mean = -train_scores.mean(axis = 1) validation_scores_mean = -validation_scores.mean(axis = 1) plt.figure(figsize = (12, 6)) plt.plot(train_sizes, train_scores_mean, 'o-', color = 'r', label = 'Training error') plt.plot(train_sizes, validation_scores_mean, 'o-', color = 'g', label = 'Validation error') plt.xlabel('Размер обучающих данных') plt.ylabel('Ошибка') plt.title('Кривые обучения') plt.legend(loc = 'best') plt.grid() plt.show() # Инициализируйте модель дерева решений model = DecisionTreeRegressor(max_depth = 15, random_state = 42) # Постройте кривые обучения plot_learning_curves(model, X_train, y_train) ##### <b><font color='lightcoral'>1.2. Кросс-валидация</font></b> from sklearn.datasets import load_breast_cancer # Загрузите набор данных в переменную data и определите входные (X) и целевые (y) значения data = load_breast_cancer() X, y = data.data, data.target # Инициализируйте модель дерева решений в переменную model model = DecisionTreeClassifier(random_state = 42) # Выполните 5-кратную перекрестную валидацию в переменную cv_scores cv_scores = cross_val_score(model, X, y, cv = 5, scoring = 'accuracy') # Выведите оценки кросс-валидации print(f'Cross-Validation Scores: {cv_scores}') print(f'Средняя оценка кросс-валидации: {cv_scores.mean()}') # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # Обучите модель на обучающих данных model.fit(X_train, y_train) # Сделайте предсказания на обучающем и тестовом наборах y_train_pred = model.predict(X_train) y_test_pred = model.predict(X_test) # Рассчитайте accuracy на обучающем и тестовом наборах train_accuracy = accuracy_score(y_train, y_train_pred) test_accuracy = accuracy_score(y_test, y_test_pred) print(f'Training Accuracy: {train_accuracy}') print(f'Testing Accuracy: {test_accuracy}') ### <b><font color='lightcoral'>2. Регуляризация</font></b> # Импорт дополнительных библиотек from sklearn.preprocessing import StandardScaler from sklearn.linear_model import Lasso, Ridge from sklearn.metrics import mean_squared_error, r2_score from sklearn.datasets import fetch_california_housing ##### <b><font color='lightcoral'>2.1. Подготовка данных</font></b> # Загрузка набора данных data = fetch_california_housing() X, y = data.data, data.target ##### <b><font color='lightcoral'>2.2. Разделение на обучение и тестирование</font></b> # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) ##### <b><font color='lightcoral'>2.3. Стандартизация данных</font></b> # Стандартиазация данных - важно для задач регуляризации scaler = StandardScaler() # Подгонка и преобразование обучающих данных X_train_scaled = scaler.fit_transform(X_train) # Преобразование тестовых данных X_test_scaled = scaler.transform(X_test) ##### <b><font color='lightcoral'>2.4. Обучение и оценка модели регрессии LASSO</font></b> # Инициализируем регрессионную модель LASSO с параметром регуляризации alpha lasso = Lasso(alpha=0.1) # Обучите модель на обучающих данных lasso.fit(X_train_scaled, y_train) # Делаем прогнозы на тестовых данных y_pred_lasso = lasso.predict(X_test_scaled) # Оценить модель mse_lasso = mean_squared_error(y_test, y_pred_lasso) r2_lasso = r2_score(y_test, y_pred_lasso) print(f'Регрессия LASSO - средняя квадратичная ошибка: {mse_lasso}') print(f'Регрессия LASSO - R-квадрат: {r2_lasso}') ##### <b><font color='lightcoral'>2.5. Обучение и оценка модели гребневой регрессии</font></b> # Инициализируем модель ридж-регрессии с параметром регуляризации alpha ridge = Ridge(alpha=0.1) # Обучить модель на обучающих данных ridge.fit(X_train_scaled, y_train) # Делаем прогнозы на тестовых данных y_pred_ridge = ridge.predict(X_test_scaled) # Оценить модель mse_ridge = mean_squared_error(y_test, y_pred_ridge) r2_ridge = r2_score(y_test, y_pred_ridge) print(f'Ridge Regression - Mean Squared Error: {mse_ridge}') print(f'Ridge Regression - R-квадрат: {r2_ridge}') ##### <b><font color='lightcoral'>2.6. Сравнение результатов</font></b> coefficients = pd.DataFrame({ 'Feature': data.feature_names, 'Коэффициенты LASSO': lasso.coef_, 'Ridge Coefficients': ridge.coef_ }) print(coefficients)",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='lightcoral'>Переобучение и недообучение</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom sklearn.model_selection import learning_curve, train_test_split, cross_val_score\nfrom sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier\nfrom sklearn.datasets import fetch_california_housing\nfrom sklearn.metrics import accuracy_score"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>1. Диагностика переобучения и недообучения</font></b>"
+        },
+        {
+          "cell": 4,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>1.1. Кривые обучения</font></b>"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# Загрузите набор данных fetch_california_housing в переменную data\ndata = fetch_california_housing()\ndata"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# Определите переменные независимые (X) и зависимые (y)\nX, y = data.data, data.target"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# Разделите данные на обучающий и тестовый наборы\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "# Определите функцию для построения кривых обучения\n# estimator - любая модель sklearn\n# X, y - данные и целевая переменная\n# train_sizes - какие доли данных будем использовать (по умолчанию от 10% до 100%)\n# cv = 5 - будем использовать 5-fold cross-validation\n\ndef plot_learning_curves(estimator, X, y, train_sizes = np.linspace(0.1, 1.0, 10), cv = 5):\n    train_sizes, train_scores, validation_scores = learning_curve(\n        estimator, X, y, train_sizes = train_sizes, cv = cv, scoring = 'neg_mean_squared_error'\n    )\n    \n    train_scores_mean = -train_scores.mean(axis = 1)\n    validation_scores_mean = -validation_scores.mean(axis = 1)\n    \n    plt.figure(figsize = (12, 6))\n    plt.plot(train_sizes, train_scores_mean, 'o-', color = 'r', label = 'Training error')\n    plt.plot(train_sizes, validation_scores_mean, 'o-', color = 'g', label = 'Validation error')\n    plt.xlabel('Размер обучающ"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# Инициализируйте модель дерева решений\nmodel = DecisionTreeRegressor(max_depth = 15, random_state = 42)"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Постройте кривые обучения\nplot_learning_curves(model, X_train, y_train)"
+        },
+        {
+          "cell": 11,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>1.2. Кросс-валидация</font></b>"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "from sklearn.datasets import load_breast_cancer"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "# Загрузите набор данных в переменную data и определите входные (X) и целевые (y) значения \ndata = load_breast_cancer()\nX, y = data.data, data.target"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "# Инициализируйте модель дерева решений в переменную model\nmodel = DecisionTreeClassifier(random_state = 42)"
+        },
+        {
+          "cell": 15,
+          "type": "code",
+          "text": "# Выполните 5-кратную перекрестную валидацию в переменную cv_scores\ncv_scores = cross_val_score(model, X, y, cv = 5, scoring = 'accuracy')"
+        },
+        {
+          "cell": 16,
+          "type": "code",
+          "text": "# Выведите оценки кросс-валидации\nprint(f'Cross-Validation Scores: {cv_scores}')\nprint(f'Средняя оценка кросс-валидации: {cv_scores.mean()}')"
+        },
+        {
+          "cell": 17,
+          "type": "code",
+          "text": "# Разделите данные на обучающий и тестовый наборы\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)"
+        },
+        {
+          "cell": 18,
+          "type": "code",
+          "text": "# Обучите модель на обучающих данных\nmodel.fit(X_train, y_train)"
+        },
+        {
+          "cell": 19,
+          "type": "code",
+          "text": "# Сделайте предсказания на обучающем и тестовом наборах\ny_train_pred = model.predict(X_train)\ny_test_pred = model.predict(X_test)"
+        },
+        {
+          "cell": 20,
+          "type": "code",
+          "text": "# Рассчитайте accuracy на обучающем и тестовом наборах\ntrain_accuracy = accuracy_score(y_train, y_train_pred)\ntest_accuracy = accuracy_score(y_test, y_test_pred)"
+        },
+        {
+          "cell": 21,
+          "type": "code",
+          "text": "print(f'Training Accuracy: {train_accuracy}')\nprint(f'Testing Accuracy: {test_accuracy}')"
+        },
+        {
+          "cell": 22,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>2. Регуляризация</font></b>"
+        },
+        {
+          "cell": 23,
+          "type": "code",
+          "text": "# Импорт дополнительных библиотек\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.linear_model import Lasso, Ridge\nfrom sklearn.metrics import mean_squared_error, r2_score\nfrom sklearn.datasets import fetch_california_housing"
+        },
+        {
+          "cell": 24,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>2.1. Подготовка данных</font></b>"
+        },
+        {
+          "cell": 25,
+          "type": "code",
+          "text": "# Загрузка набора данных\ndata = fetch_california_housing()\nX, y = data.data, data.target"
+        },
+        {
+          "cell": 26,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>2.2. Разделение на обучение и тестирование</font></b>"
+        },
+        {
+          "cell": 27,
+          "type": "code",
+          "text": "# Разделите данные на обучающий и тестовый наборы\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
+        },
+        {
+          "cell": 28,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>2.3. Стандартизация данных</font></b>"
+        },
+        {
+          "cell": 29,
+          "type": "code",
+          "text": "# Стандартиазация данных - важно для задач регуляризации\nscaler = StandardScaler()"
+        },
+        {
+          "cell": 30,
+          "type": "code",
+          "text": "# Подгонка и преобразование обучающих данных\nX_train_scaled = scaler.fit_transform(X_train)"
+        },
+        {
+          "cell": 31,
+          "type": "code",
+          "text": "# Преобразование тестовых данных\nX_test_scaled = scaler.transform(X_test)"
+        },
+        {
+          "cell": 32,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>2.4. Обучение и оценка модели регрессии LASSO</font></b>"
+        },
+        {
+          "cell": 33,
+          "type": "code",
+          "text": "# Инициализируем регрессионную модель LASSO с параметром регуляризации alpha\nlasso = Lasso(alpha=0.1)"
+        },
+        {
+          "cell": 34,
+          "type": "code",
+          "text": "# Обучите модель на обучающих данных\nlasso.fit(X_train_scaled, y_train)"
+        },
+        {
+          "cell": 35,
+          "type": "code",
+          "text": "# Делаем прогнозы на тестовых данных\ny_pred_lasso = lasso.predict(X_test_scaled)"
+        },
+        {
+          "cell": 36,
+          "type": "code",
+          "text": "# Оценить модель\nmse_lasso = mean_squared_error(y_test, y_pred_lasso)\nr2_lasso = r2_score(y_test, y_pred_lasso)"
+        },
+        {
+          "cell": 37,
+          "type": "code",
+          "text": "print(f'Регрессия LASSO - средняя квадратичная ошибка: {mse_lasso}')\nprint(f'Регрессия LASSO - R-квадрат: {r2_lasso}')"
+        },
+        {
+          "cell": 38,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>2.5. Обучение и оценка модели гребневой регрессии</font></b>"
+        },
+        {
+          "cell": 39,
+          "type": "code",
+          "text": "# Инициализируем модель ридж-регрессии с параметром регуляризации alpha\nridge = Ridge(alpha=0.1)"
+        },
+        {
+          "cell": 40,
+          "type": "code",
+          "text": "# Обучить модель на обучающих данных\nridge.fit(X_train_scaled, y_train)"
+        },
+        {
+          "cell": 41,
+          "type": "code",
+          "text": "# Делаем прогнозы на тестовых данных\ny_pred_ridge = ridge.predict(X_test_scaled)"
+        },
+        {
+          "cell": 42,
+          "type": "code",
+          "text": "# Оценить модель\nmse_ridge = mean_squared_error(y_test, y_pred_ridge)\nr2_ridge = r2_score(y_test, y_pred_ridge)\nprint(f'Ridge Regression - Mean Squared Error: {mse_ridge}')\nprint(f'Ridge Regression - R-квадрат: {r2_ridge}')"
+        },
+        {
+          "cell": 43,
+          "type": "markdown",
+          "text": "##### <b><font color='lightcoral'>2.6. Сравнение результатов</font></b>"
+        },
+        {
+          "cell": 44,
+          "type": "code",
+          "text": "coefficients = pd.DataFrame({\n    'Feature': data.feature_names,\n    'Коэффициенты LASSO': lasso.coef_,\n    'Ridge Coefficients': ridge.coef_\n})\n\nprint(coefficients)"
         }
       ]
     },
