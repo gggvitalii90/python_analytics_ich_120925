@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-06-11T10:20:04.178469+00:00",
-    "notebookCount": 201
+    "generatedAt": "2026-06-11T11:41:39.878623+00:00",
+    "notebookCount": 202
   },
   "notebooks": [
     {
@@ -22141,6 +22141,139 @@
           "cell": 5,
           "type": "code",
           "text": "revenue = orders * avg_check\nprint(\"Выручка:\", revenue)\nmax_revenue_day = days[np.argmax(revenue)]\nprint(\"День с максимальной выручкой:\", max_revenue_day)\navg_revenue = round(np.mean(revenue), 2)\nprint(\"Средняя выручка:\", avg_revenue)\ncustomer_orders = np.round(orders / customers, 2)\nprint(\"Заказы на одного покупателя:\", customer_orders)\nsum_revenue = np.cumsum(revenue)\nprint(\"Накопленная выручка:\", sum_revenue)"
+        }
+      ]
+    },
+    {
+      "name": "Практикум_метрики_недо_переобучение.ipynb",
+      "path": "notebooks/Практикум_метрики_недо_переобучение.ipynb",
+      "course": "analytics",
+      "searchText": "Практикум_метрики_недо_переобучение.ipynb notebooks/Практикум_метрики_недо_переобучение.ipynb # <b><font color='lightcoral'>Практикум Метрики, переобучение, недообучение</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing, load_breast_cancer, load_wine, load_digits, load_iris from sklearn.model_selection import train_test_split, cross_val_score from sklearn.linear_model import LinearRegression, LogisticRegression, Lasso, Ridge from sklearn.tree import DecisionTreeClassifier, plot_tree, DecisionTreeRegressor from sklearn.neighbors import KNeighborsClassifier from sklearn.metrics import mean_squared_error, r2_score, accuracy_score, precision_score, recall_score, f1_score, confusion_matrix from sklearn.model_selection import learning_curve import seaborn as sns import numpy as np import matplotlib.pyplot as plt from sklearn.preprocessing import StandardScaler ### <b><font color='lightcoral'>Задача 1</font></b> Реализуйте линейную регрессию для прогнозирования цен на жилье с помощью набора данных California Housing. Оцените эффективность модели, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте график остатков, чтобы проверить наличие каких-либо закономерностей. california_housing = fetch_california_housing() california_housing X = california_housing.data y = california_housing.target X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) model = LinearRegression() model.fit(X_train, y_train) y_pred = model.predict(X_test) mse_california = mean_squared_error(y_test, y_pred) r2_california = r2_score(y_test, y_pred) print(f\"California Housing - MSE: {mse_california:.4f}\") print(f\"California Housing - R²: {r2_california:.4f}\") delta = y_test - y_pred plt.figure(figsize=(10, 6)) plt.scatter(y_pred, abs(delta), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() scaler = StandardScaler() X_train_scaled = scaler.fit_transform(X_train) X_test_scaled = scaler.transform(X_test) lasso = Lasso(alpha=0.1) lasso.fit(X_train_scaled, y_train) y_pred_lasso = lasso.predict(X_test_scaled) mse_lasso = mean_squared_error(y_test, y_pred_lasso) r2_lasso = r2_score(y_test, y_pred_lasso) print(f'Регрессия LASSO - средняя квадратичная ошибка: {mse_lasso}') print(f'Регрессия LASSO - R-квадрат: {r2_lasso}') ridge = Ridge(alpha=0.1) ridge.fit(X_train_scaled, y_train) y_pred_ridge = ridge.predict(X_test_scaled) mse_ridge = mean_squared_error(y_test, y_pred_ridge) r2_ridge = r2_score(y_test, y_pred_ridge) print(f'Ridge Regression - Mean Squared Error: {mse_ridge}') print(f'Ridge Regression - R-квадрат: {r2_ridge}') delta_lasso = y_test - y_pred_lasso plt.figure(figsize=(10, 6)) plt.scatter(y_pred_lasso, abs(delta_lasso), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() delta_ridge = y_test - y_pred_ridge plt.figure(figsize=(10, 6)) plt.scatter(y_pred_ridge, abs(delta_ridge), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() model_tree = DecisionTreeRegressor(random_state=42) model_tree.fit(X_train, y_train) y_pred_tree = model_tree.predict(X_test) mse_tree = mean_squared_error(y_test, y_pred_tree) r2_tree = r2_score(y_test, y_pred_tree) print(f'Decision Tree - Mean Squared Error: {mse_tree}') print(f'Decision Tree - R²: {r2_tree}') delta_tree = y_test - y_pred_tree plt.figure(figsize=(10, 6)) plt.scatter(y_pred_tree, abs(delta_tree), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() plt.figure(figsize=(20, 10)) plot_tree(model_tree, feature_names=california_housing.feature_names, filled=True) plt.show() ### <b><font color='lightcoral'>Задача 2</font></b> Реализуйте логистическую регрессию для классификации злокачественной или доброкачественной опухоли на наборе данных Breast Cancer. Оцените модель с помощью показателей accuracy, precision, recall и F1-score. #Оцените модель с помощью показателей accuracy, precision, recall и F1-score. # Вычислить точность from sklearn.metrics import classification_report accuracy_bc = accuracy_score(y_test_bc, y_pred_bc) print('Accuracy:', accuracy_bc) precision_bc = precision_score(y_test_bc, y_pred_bc) print('precision', precision_bc) recall_bc = recall_score(y_test_bc, y_pred_bc) print('recall', recall_bc) f1_bc = f1_score(y_test_bc, y_pred_bc) print('F1-score', f1_bc) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test_bc, y_pred_bc)) # Accuracy - меткость # precision - точность # recall - полнота ### <b><font color='lightcoral'>Задача 3</font></b> Реализуйте классификатор на основе дерева решений для предсказания качества вина, используя набор данных Wine. Оцените модель с помощью перекрестной валидации и постройте дерево решений. ### <b><font color='lightcoral'>Задача 4</font></b> Реализуйте модель K-Nearest Neighbors (KNN) для классификации рукописных цифр с помощью набора данных Digits. Оцените модель по точности и постройте матрицу ошибок. ### <b><font color='lightcoral'>Задача 5</font></b> Постройте кривые обучения для диагностики переобучения и недообучения, используя набор данных Iris и модель Decision Tree. Постройте кривые обучения для ошибок обучения и проверки. ### <b><font color='lightcoral'>Задача 6</font></b> Реализуйте регрессию LASSO и ридж-регрессию, используя набор данных Iris. Сравните эффективность обеих моделей, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте графики коэффициентов обеих моделей.",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='lightcoral'>Практикум Метрики, переобучение, недообучение</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nfrom sklearn.datasets import fetch_california_housing, load_breast_cancer, load_wine, load_digits, load_iris\nfrom sklearn.model_selection import train_test_split, cross_val_score\nfrom sklearn.linear_model import LinearRegression, LogisticRegression, Lasso, Ridge\nfrom sklearn.tree import DecisionTreeClassifier, plot_tree, DecisionTreeRegressor\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import mean_squared_error, r2_score, accuracy_score, precision_score, recall_score, f1_score, confusion_matrix\nfrom sklearn.model_selection import learning_curve\nimport seaborn as sns\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom sklearn.preprocessing import StandardScaler"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>Задача 1</font></b>\nРеализуйте линейную регрессию для прогнозирования цен на жилье с помощью набора данных California Housing. Оцените эффективность модели, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте график остатков, чтобы проверить наличие каких-либо закономерностей."
+        },
+        {
+          "cell": 4,
+          "type": "code",
+          "text": "california_housing = fetch_california_housing()\ncalifornia_housing"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "X = california_housing.data\ny = california_housing.target"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "model = LinearRegression()"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "model.fit(X_train, y_train)"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "y_pred = model.predict(X_test)"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "mse_california = mean_squared_error(y_test, y_pred)\nr2_california = r2_score(y_test, y_pred)\nprint(f\"California Housing - MSE: {mse_california:.4f}\")\nprint(f\"California Housing - R²: {r2_california:.4f}\")"
+        },
+        {
+          "cell": 11,
+          "type": "code",
+          "text": "delta = y_test - y_pred\nplt.figure(figsize=(10, 6))\nplt.scatter(y_pred, abs(delta), alpha=0.5)\nplt.axhline(0, color='red', linestyle='--')\nplt.xlabel('Predicted Values')  \nplt.show()"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "scaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "lasso = Lasso(alpha=0.1)\nlasso.fit(X_train_scaled, y_train)\ny_pred_lasso = lasso.predict(X_test_scaled)\nmse_lasso = mean_squared_error(y_test, y_pred_lasso)\nr2_lasso = r2_score(y_test, y_pred_lasso)\nprint(f'Регрессия LASSO - средняя квадратичная ошибка: {mse_lasso}')\nprint(f'Регрессия LASSO - R-квадрат: {r2_lasso}')"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "ridge = Ridge(alpha=0.1)\nridge.fit(X_train_scaled, y_train)\ny_pred_ridge = ridge.predict(X_test_scaled)\nmse_ridge = mean_squared_error(y_test, y_pred_ridge)\nr2_ridge = r2_score(y_test, y_pred_ridge)\nprint(f'Ridge Regression - Mean Squared Error: {mse_ridge}')\nprint(f'Ridge Regression - R-квадрат: {r2_ridge}')"
+        },
+        {
+          "cell": 15,
+          "type": "code",
+          "text": "delta_lasso = y_test - y_pred_lasso\nplt.figure(figsize=(10, 6))\nplt.scatter(y_pred_lasso, abs(delta_lasso), alpha=0.5)\nplt.axhline(0, color='red', linestyle='--')\nplt.xlabel('Predicted Values')  \nplt.show()"
+        },
+        {
+          "cell": 16,
+          "type": "code",
+          "text": "delta_ridge = y_test - y_pred_ridge\nplt.figure(figsize=(10, 6))\nplt.scatter(y_pred_ridge, abs(delta_ridge), alpha=0.5)\nplt.axhline(0, color='red', linestyle='--')\nplt.xlabel('Predicted Values')  \nplt.show()"
+        },
+        {
+          "cell": 17,
+          "type": "code",
+          "text": "model_tree = DecisionTreeRegressor(random_state=42)\nmodel_tree.fit(X_train, y_train)\ny_pred_tree = model_tree.predict(X_test)\nmse_tree = mean_squared_error(y_test, y_pred_tree) \nr2_tree = r2_score(y_test, y_pred_tree)\nprint(f'Decision Tree - Mean Squared Error: {mse_tree}')\nprint(f'Decision Tree - R²: {r2_tree}')"
+        },
+        {
+          "cell": 18,
+          "type": "code",
+          "text": "delta_tree = y_test - y_pred_tree\nplt.figure(figsize=(10, 6))\nplt.scatter(y_pred_tree, abs(delta_tree), alpha=0.5)\nplt.axhline(0, color='red', linestyle='--')\nplt.xlabel('Predicted Values')  \nplt.show()"
+        },
+        {
+          "cell": 19,
+          "type": "code",
+          "text": "plt.figure(figsize=(20, 10))\nplot_tree(model_tree, feature_names=california_housing.feature_names, filled=True)\nplt.show()"
+        },
+        {
+          "cell": 20,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>Задача 2</font></b>\nРеализуйте логистическую регрессию для классификации злокачественной или доброкачественной опухоли на наборе данных Breast Cancer. Оцените модель с помощью показателей accuracy, precision, recall и F1-score."
+        },
+        {
+          "cell": 21,
+          "type": "code",
+          "text": "#Оцените модель с помощью показателей accuracy, precision, recall и F1-score.\n# Вычислить точность\nfrom sklearn.metrics import classification_report\n\n\naccuracy_bc = accuracy_score(y_test_bc, y_pred_bc)\nprint('Accuracy:', accuracy_bc)\nprecision_bc = precision_score(y_test_bc, y_pred_bc)\nprint('precision', precision_bc)\nrecall_bc = recall_score(y_test_bc, y_pred_bc)\nprint('recall', recall_bc)\nf1_bc = f1_score(y_test_bc, y_pred_bc)\nprint('F1-score', f1_bc)\n# Отчет о классификации\nprint('Отчет о классификации:')\nprint(classification_report(y_test_bc, y_pred_bc))\n# Accuracy - меткость\n# precision  - точность\n# recall - полнота"
+        },
+        {
+          "cell": 22,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>Задача 3</font></b>\nРеализуйте классификатор на основе дерева решений для предсказания качества вина, используя набор данных Wine. Оцените модель с помощью перекрестной валидации и постройте дерево решений."
+        },
+        {
+          "cell": 24,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>Задача 4</font></b>\nРеализуйте модель K-Nearest Neighbors (KNN) для классификации рукописных цифр с помощью набора данных Digits. Оцените модель по точности и постройте матрицу ошибок."
+        },
+        {
+          "cell": 26,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>Задача 5</font></b>\nПостройте кривые обучения для диагностики переобучения и недообучения, используя набор данных Iris и модель Decision Tree. Постройте кривые обучения для ошибок обучения и проверки."
+        },
+        {
+          "cell": 28,
+          "type": "markdown",
+          "text": "### <b><font color='lightcoral'>Задача 6</font></b>\nРеализуйте регрессию LASSO и ридж-регрессию, используя набор данных Iris. Сравните эффективность обеих моделей, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте графики коэффициентов обеих моделей."
         }
       ]
     },
