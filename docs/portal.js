@@ -744,3 +744,43 @@ const loadNotebooks = async () => {
 };
 
 loadNotebooks();
+
+const loadLectures = async () => {
+  const listEl = document.getElementById("lectures-list");
+  const countEl = document.getElementById("lectures-count");
+  if (!listEl) return;
+  try {
+    const resp = await fetch("lectures.json");
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const groups = await resp.json();
+    const total = groups.reduce((s, g) => s + g.items.length, 0);
+    if (countEl) countEl.textContent = `${total} файлов`;
+    listEl.innerHTML = "";
+    groups.forEach((group) => {
+      const details = document.createElement("details");
+      details.className = "folder";
+      const summary = document.createElement("summary");
+      summary.className = "folder-summary";
+      summary.innerHTML = `<h3 class="folder-title">${group.group} <span class="folder-count">(${group.items.length})</span></h3>`;
+      details.appendChild(summary);
+      const rows = document.createElement("div");
+      rows.className = "nb-rows";
+      group.items.forEach((item) => {
+        const row = document.createElement("article");
+        row.className = "nb-row";
+        row.innerHTML = `
+          <div class="nb-name">${item.title}</div>
+          <div class="nb-actions">
+            <a class="row-btn row-btn-colab" href="lectures/${encodeURIComponent(item.file)}" target="_blank" rel="noreferrer">Открыть</a>
+          </div>`;
+        rows.appendChild(row);
+      });
+      details.appendChild(rows);
+      listEl.appendChild(details);
+    });
+  } catch (e) {
+    if (listEl) listEl.innerHTML = "<p>Лекции появятся после добавления PDF файлов.</p>";
+  }
+};
+
+loadLectures();

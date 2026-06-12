@@ -1,0 +1,67 @@
+[
+  {
+    "group": "Материалы лекций",
+    "items": [
+      { "title": "Лекция 14, часть 1", "file": "Python for DA_14-1_M.pdf" },
+      { "title": "Лекция 14, часть 2", "file": "Python for DA_14-2_M (1).pdf" },
+      { "title": "Лекция 15, часть 1", "file": "Python for DA_15-1_M.pdf" },
+      { "title": "Лекция 15, часть 2", "file": "Python for DA_15-2_M.pdf" },
+      { "title": "Лекция 16, часть 1", "file": "Python for DA_16-1_M (1).pdf" },
+      { "title": "Лекция 16, часть 2", "file": "Python for DA_16-2_M.pdf" },
+      { "title": "Лекция 17, часть 1", "file": "Python for DA_17-1_M.pdf" },
+      { "title": "Лекция 17, часть 2", "file": "Python for DA_17-2_M.pdf" },
+      { "title": "Лекция 18, часть 1", "file": "Python for DA_18-1_M.pdf" },
+      { "title": "Лекция 18, часть 2", "file": "Python for DA_18-2_M.pdf" },
+      { "title": "Лекция 19, часть 1", "file": "Python for DA_19-1_M.pdf" },
+      { "title": "Лекция 19, часть 2", "file": "Python for DA_19-2_M.pdf" },
+      { "title": "Лекция 20, часть 1", "file": "Python for DA_20-1_M.pdf" },
+      { "title": "Лекция 20, часть 2", "file": "Python for DA_20-2_M.pdf" },
+      { "title": "Лекция 21, часть 1", "file": "Python for DA_21-1_M.pdf" },
+      { "title": "Лекция 21, часть 2", "file": "Python for DA_21-2_M.pdf" },
+      { "title": "Лекция 22, часть 1", "file": "Python for DA_22-1_M.pdf" },
+      { "title": "Лекция 22, часть 2", "file": "Python for DA_22-2_M.pdf" },
+      { "title": "Лекция 23, часть 1", "file": "Python for DA_L23-1.pdf" },
+      { "title": "Лекция 23, часть 2", "file": "Python for DA_23-2_M.pdf" },
+      { "title": "Лекция 24, часть 1", "file": "Python for DA_24-1_M.pdf" },
+      { "title": "Лекция 24, часть 2", "file": "Python for DA_24-2_M.pdf" }
+    ]
+  },
+  {
+    "group": "Практические занятия",
+    "items": [
+      { "title": "Практика PR1", "file": "Python for DA_PR1.pdf" },
+      { "title": "Практика PR2", "file": "Python for DA_PR2.pdf" },
+      { "title": "Практика PR3", "file": "Python for DA_PR3.pdf" },
+      { "title": "Практика PR4", "file": "Python for DA_PR4.pdf" },
+      { "title": "Практика PR5", "file": "Python for DA_PR5.pdf" },
+      { "title": "Практика PR14", "file": "Python for DA_PR14.pdf" },
+      { "title": "Практика PR15", "file": "Python for DA_PR15.pdf" },
+      { "title": "Практика PR16", "file": "Python for DA_PR16.pdf" },
+      { "title": "Практика PR17", "file": "Python for DA_PR17.pdf" },
+      { "title": "Практика PR18", "file": "Python for DA_PR18.pdf" },
+      { "title": "Практика PR19", "file": "Python for DA_PR19.pdf" },
+      { "title": "Практика PR20", "file": "Python for DA_PR20.pdf" },
+      { "title": "Практика PR21", "file": "Python for DA_PR21.pdf" },
+      { "title": "Практика PR22", "file": "Python for DA_PR22.pdf" },
+      { "title": "Практика PR23", "file": "Python for DA_PR23.pdf" },
+      { "title": "Практика PR24", "file": "Python for DA_PR24.pdf" }
+    ]
+  },
+  {
+    "group": "Сводные уроки",
+    "items": [
+      { "title": "Сводный урок 1", "file": "Python for DA_Summary1.pdf" },
+      { "title": "Сводный урок 2", "file": "Python for DA_Summary2.pdf" },
+      { "title": "Сводный урок 3", "file": "Python for DA_Summary3.pdf" },
+      { "title": "Сводный урок 4", "file": "Python for DA_Summary4.pdf" },
+      { "title": "Сводный урок 5", "file": "Python for DA_Summary5.pdf" },
+      { "title": "Сводный урок 6", "file": "Python for DA_Summary6 2.pdf" },
+      { "title": "Сводный урок 7", "file": "Python for DA_Summary7.pdf" },
+      { "title": "Сводный урок 8", "file": "Python for DA_Summary8.pdf" },
+      { "title": "Сводный урок 9", "file": "Python for DA_Summary9.pdf" },
+      { "title": "Сводный урок 10", "file": "Python for DA_Summary10.pdf" },
+      { "title": "Сводный урок 11", "file": "Python for DA_Summary11.pdf" },
+      { "title": "Сводный урок 12", "file": "Python for DA_Summary12.pdf" }
+    ]
+  }
+]
