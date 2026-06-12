@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-06-11T11:41:39.878623+00:00",
-    "notebookCount": 202
+    "generatedAt": "2026-06-12T07:12:54.133939+00:00",
+    "notebookCount": 203
   },
   "notebooks": [
     {
@@ -22112,6 +22112,59 @@
       ]
     },
     {
+      "name": "Градиентный бустинг.ipynb",
+      "path": "notebooks/Градиентный бустинг.ipynb",
+      "course": "analytics",
+      "searchText": "Градиентный бустинг.ipynb notebooks/Градиентный бустинг.ipynb # <b><font color='lightcoral'>Градиентный бустинг</font></b> # Импорт библиотек import numpy as np from sklearn.ensemble import GradientBoostingRegressor from sklearn.model_selection import train_test_split from sklearn.tree import plot_tree import matplotlib.pyplot as plt # 1. Подготовка данных X = np.array([[0], [1], [2], [3], [4], [5]]) # признак: бюджет (тыс. у.е.), форматируем как колонку y = np.array([4, 6, 8, 12, 18, 24]) # целевая переменная: продажи (тыс. единиц) # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # 2. Создание и настройка модели градиентного бустинга model = GradientBoostingRegressor( n_estimators = 5, # число деревьев в ансамбле (итераций бустинга) max_depth = 1, # максимальная глубина деревьев (1 = решающий пень) random_state = 0 # фиксируем случайность для воспроизводимости ) # 3. Обучение модели на данных model.fit(X_train, y_train) # 4. Получение прогнозов модели y_pred = model.predict(X_test) print(\"Прогнозы модели:\", y_pred) print(\"Фактические значения:\", y_test) fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(24, 6)) for i in range(3): # Извлекаем i-е дерево из ансамбля tree_to_plot = model.estimators_[i, 0] # Рисуем дерево в соответствующем подграфике axes[i] plot_tree(tree_to_plot, feature_names=[f'Признак {j}' for j in range(X.shape[1])], filled=True, rounded=True, fontsize=10, ax=axes[i]) axes[i].set_title(f\"Дерево №{i+1} (Итерация {i})\") # Корректируем расположение, чтобы тексты не накладывались plt.tight_layout() plt.show()",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='lightcoral'>Градиентный бустинг</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nimport numpy as np\nfrom sklearn.ensemble import GradientBoostingRegressor\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.tree import plot_tree\nimport matplotlib.pyplot as plt"
+        },
+        {
+          "cell": 3,
+          "type": "code",
+          "text": "# 1. Подготовка данных\nX = np.array([[0], [1], [2], [3], [4], [5]])   # признак: бюджет (тыс. у.е.), форматируем как колонку\ny = np.array([4, 6, 8, 12, 18, 24])           # целевая переменная: продажи (тыс. единиц)"
+        },
+        {
+          "cell": 4,
+          "type": "code",
+          "text": "# Разделите данные на обучающий и тестовый наборы\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# 2. Создание и настройка модели градиентного бустинга\nmodel = GradientBoostingRegressor(\n    n_estimators = 5,    # число деревьев в ансамбле (итераций бустинга)\n    max_depth = 1,       # максимальная глубина деревьев (1 = решающий пень)\n    random_state = 0     # фиксируем случайность для воспроизводимости\n)"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# 3. Обучение модели на данных\nmodel.fit(X_train, y_train)"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# 4. Получение прогнозов модели\ny_pred = model.predict(X_test)"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "print(\"Прогнозы модели:\", y_pred)\nprint(\"Фактические значения:\", y_test)"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(24, 6))\nfor i in range(3):\n    # Извлекаем i-е дерево из ансамбля\n    tree_to_plot = model.estimators_[i, 0]\n    \n    # Рисуем дерево в соответствующем подграфике axes[i]\n    plot_tree(tree_to_plot, \n              feature_names=[f'Признак {j}' for j in range(X.shape[1])],\n              filled=True, \n              rounded=True,\n              fontsize=10,\n              ax=axes[i])\n    \n    axes[i].set_title(f\"Дерево №{i+1} (Итерация {i})\")\n\n# Корректируем расположение, чтобы тексты не накладывались\nplt.tight_layout()\nplt.show()"
+        }
+      ]
+    },
+    {
       "name": "Задача для разминки.ipynb",
       "path": "notebooks/Задача для разминки.ipynb",
       "course": "analytics",
@@ -22148,7 +22201,7 @@
       "name": "Практикум_метрики_недо_переобучение.ipynb",
       "path": "notebooks/Практикум_метрики_недо_переобучение.ipynb",
       "course": "analytics",
-      "searchText": "Практикум_метрики_недо_переобучение.ipynb notebooks/Практикум_метрики_недо_переобучение.ipynb # <b><font color='lightcoral'>Практикум Метрики, переобучение, недообучение</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing, load_breast_cancer, load_wine, load_digits, load_iris from sklearn.model_selection import train_test_split, cross_val_score from sklearn.linear_model import LinearRegression, LogisticRegression, Lasso, Ridge from sklearn.tree import DecisionTreeClassifier, plot_tree, DecisionTreeRegressor from sklearn.neighbors import KNeighborsClassifier from sklearn.metrics import mean_squared_error, r2_score, accuracy_score, precision_score, recall_score, f1_score, confusion_matrix from sklearn.model_selection import learning_curve import seaborn as sns import numpy as np import matplotlib.pyplot as plt from sklearn.preprocessing import StandardScaler ### <b><font color='lightcoral'>Задача 1</font></b> Реализуйте линейную регрессию для прогнозирования цен на жилье с помощью набора данных California Housing. Оцените эффективность модели, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте график остатков, чтобы проверить наличие каких-либо закономерностей. california_housing = fetch_california_housing() california_housing X = california_housing.data y = california_housing.target X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) model = LinearRegression() model.fit(X_train, y_train) y_pred = model.predict(X_test) mse_california = mean_squared_error(y_test, y_pred) r2_california = r2_score(y_test, y_pred) print(f\"California Housing - MSE: {mse_california:.4f}\") print(f\"California Housing - R²: {r2_california:.4f}\") delta = y_test - y_pred plt.figure(figsize=(10, 6)) plt.scatter(y_pred, abs(delta), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() scaler = StandardScaler() X_train_scaled = scaler.fit_transform(X_train) X_test_scaled = scaler.transform(X_test) lasso = Lasso(alpha=0.1) lasso.fit(X_train_scaled, y_train) y_pred_lasso = lasso.predict(X_test_scaled) mse_lasso = mean_squared_error(y_test, y_pred_lasso) r2_lasso = r2_score(y_test, y_pred_lasso) print(f'Регрессия LASSO - средняя квадратичная ошибка: {mse_lasso}') print(f'Регрессия LASSO - R-квадрат: {r2_lasso}') ridge = Ridge(alpha=0.1) ridge.fit(X_train_scaled, y_train) y_pred_ridge = ridge.predict(X_test_scaled) mse_ridge = mean_squared_error(y_test, y_pred_ridge) r2_ridge = r2_score(y_test, y_pred_ridge) print(f'Ridge Regression - Mean Squared Error: {mse_ridge}') print(f'Ridge Regression - R-квадрат: {r2_ridge}') delta_lasso = y_test - y_pred_lasso plt.figure(figsize=(10, 6)) plt.scatter(y_pred_lasso, abs(delta_lasso), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() delta_ridge = y_test - y_pred_ridge plt.figure(figsize=(10, 6)) plt.scatter(y_pred_ridge, abs(delta_ridge), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() model_tree = DecisionTreeRegressor(random_state=42) model_tree.fit(X_train, y_train) y_pred_tree = model_tree.predict(X_test) mse_tree = mean_squared_error(y_test, y_pred_tree) r2_tree = r2_score(y_test, y_pred_tree) print(f'Decision Tree - Mean Squared Error: {mse_tree}') print(f'Decision Tree - R²: {r2_tree}') delta_tree = y_test - y_pred_tree plt.figure(figsize=(10, 6)) plt.scatter(y_pred_tree, abs(delta_tree), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() plt.figure(figsize=(20, 10)) plot_tree(model_tree, feature_names=california_housing.feature_names, filled=True) plt.show() ### <b><font color='lightcoral'>Задача 2</font></b> Реализуйте логистическую регрессию для классификации злокачественной или доброкачественной опухоли на наборе данных Breast Cancer. Оцените модель с помощью показателей accuracy, precision, recall и F1-score. #Оцените модель с помощью показателей accuracy, precision, recall и F1-score. # Вычислить точность from sklearn.metrics import classification_report accuracy_bc = accuracy_score(y_test_bc, y_pred_bc) print('Accuracy:', accuracy_bc) precision_bc = precision_score(y_test_bc, y_pred_bc) print('precision', precision_bc) recall_bc = recall_score(y_test_bc, y_pred_bc) print('recall', recall_bc) f1_bc = f1_score(y_test_bc, y_pred_bc) print('F1-score', f1_bc) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test_bc, y_pred_bc)) # Accuracy - меткость # precision - точность # recall - полнота ### <b><font color='lightcoral'>Задача 3</font></b> Реализуйте классификатор на основе дерева решений для предсказания качества вина, используя набор данных Wine. Оцените модель с помощью перекрестной валидации и постройте дерево решений. ### <b><font color='lightcoral'>Задача 4</font></b> Реализуйте модель K-Nearest Neighbors (KNN) для классификации рукописных цифр с помощью набора данных Digits. Оцените модель по точности и постройте матрицу ошибок. ### <b><font color='lightcoral'>Задача 5</font></b> Постройте кривые обучения для диагностики переобучения и недообучения, используя набор данных Iris и модель Decision Tree. Постройте кривые обучения для ошибок обучения и проверки. ### <b><font color='lightcoral'>Задача 6</font></b> Реализуйте регрессию LASSO и ридж-регрессию, используя набор данных Iris. Сравните эффективность обеих моделей, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте графики коэффициентов обеих моделей.",
+      "searchText": "Практикум_метрики_недо_переобучение.ipynb notebooks/Практикум_метрики_недо_переобучение.ipynb # <b><font color='lightcoral'>Практикум Метрики, переобучение, недообучение</font></b> # Импорт библиотек from sklearn.datasets import fetch_california_housing, load_breast_cancer, load_wine, load_digits, load_iris from sklearn.model_selection import train_test_split, cross_val_score from sklearn.linear_model import LinearRegression, LogisticRegression, Lasso, Ridge from sklearn.tree import DecisionTreeClassifier, plot_tree, DecisionTreeRegressor from sklearn.neighbors import KNeighborsClassifier from sklearn.metrics import mean_squared_error, r2_score, accuracy_score, precision_score, recall_score, f1_score, confusion_matrix from sklearn.model_selection import learning_curve import seaborn as sns import numpy as np import matplotlib.pyplot as plt from sklearn.preprocessing import StandardScaler ### <b><font color='lightcoral'>Задача 1</font></b> Реализуйте линейную регрессию для прогнозирования цен на жилье с помощью набора данных California Housing. Оцените эффективность модели, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте график остатков, чтобы проверить наличие каких-либо закономерностей. california_housing = fetch_california_housing() california_housing X = california_housing.data y = california_housing.target X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42) model = LinearRegression() model.fit(X_train, y_train) y_pred = model.predict(X_test) mse_california = mean_squared_error(y_test, y_pred) r2_california = r2_score(y_test, y_pred) print(f\"California Housing - MSE: {mse_california:.4f}\") print(f\"California Housing - R²: {r2_california:.4f}\") delta = y_test - y_pred plt.figure(figsize=(10, 6)) plt.scatter(y_pred, abs(delta), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() scaler = StandardScaler() X_train_scaled = scaler.fit_transform(X_train) X_test_scaled = scaler.transform(X_test) lasso = Lasso(alpha=0.1) lasso.fit(X_train_scaled, y_train) y_pred_lasso = lasso.predict(X_test_scaled) mse_lasso = mean_squared_error(y_test, y_pred_lasso) r2_lasso = r2_score(y_test, y_pred_lasso) print(f'Регрессия LASSO - средняя квадратичная ошибка: {mse_lasso}') print(f'Регрессия LASSO - R-квадрат: {r2_lasso}') ridge = Ridge(alpha=0.1) ridge.fit(X_train_scaled, y_train) y_pred_ridge = ridge.predict(X_test_scaled) mse_ridge = mean_squared_error(y_test, y_pred_ridge) r2_ridge = r2_score(y_test, y_pred_ridge) print(f'Ridge Regression - Mean Squared Error: {mse_ridge}') print(f'Ridge Regression - R-квадрат: {r2_ridge}') delta_lasso = y_test - y_pred_lasso plt.figure(figsize=(10, 6)) plt.scatter(y_pred_lasso, abs(delta_lasso), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() delta_ridge = y_test - y_pred_ridge plt.figure(figsize=(10, 6)) plt.scatter(y_pred_ridge, abs(delta_ridge), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() model_tree = DecisionTreeRegressor(random_state=42) model_tree.fit(X_train, y_train) y_pred_tree = model_tree.predict(X_test) mse_tree = mean_squared_error(y_test, y_pred_tree) r2_tree = r2_score(y_test, y_pred_tree) print(f'Decision Tree - Mean Squared Error: {mse_tree}') print(f'Decision Tree - R²: {r2_tree}') delta_tree = y_test - y_pred_tree plt.figure(figsize=(10, 6)) plt.scatter(y_pred_tree, abs(delta_tree), alpha=0.5) plt.axhline(0, color='red', linestyle='--') plt.xlabel('Predicted Values') plt.show() plt.figure(figsize=(20, 10)) plot_tree(model_tree, feature_names=california_housing.feature_names, filled=True) plt.show() ### <b><font color='lightcoral'>Задача 2</font></b> Реализуйте логистическую регрессию для классификации злокачественной или доброкачественной опухоли на наборе данных Breast Cancer. Оцените модель с помощью показателей accuracy, precision, recall и F1-score. #Оцените модель с помощью показателей accuracy, precision, recall и F1-score. # Вычислить точность from sklearn.metrics import classification_report accuracy_bc = accuracy_score(y_test_bc, y_pred_bc) print('Accuracy:', accuracy_bc) precision_bc = precision_score(y_test_bc, y_pred_bc) print('precision', precision_bc) recall_bc = recall_score(y_test_bc, y_pred_bc) print('recall', recall_bc) f1_bc = f1_score(y_test_bc, y_pred_bc) print('F1-score', f1_bc) # Отчет о классификации print('Отчет о классификации:') print(classification_report(y_test_bc, y_pred_bc)) # Accuracy - меткость # precision - точность # recall - полнота ### <b><font color='lightcoral'>Задача 3</font></b> Реализуйте классификатор на основе дерева решений для предсказания качества вина, используя набор данных Wine. Оцените модель с помощью перекрестной валидации и постройте дерево решений. wine = load_wine(as_frame=True) display(wine.frame) X_wine = wine.data y_wine = wine.target X_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42) model_wine = DecisionTreeClassifier(random_state=42) model_wine.fit(X_train_wine, y_train_wine) y_pred_wine = model_wine.predict(X_test_wine) accuracy_wine = accuracy_score(y_test_wine, y_pred_wine) print('Accuracy Wine:', accuracy_wine) print('Отчет о классификации Wine:') print(classification_report(y_test_wine, y_pred_wine)) matrix_wine = confusion_matrix(y_test_wine, y_pred_wine) plt.figure(figsize=(8, 6)) sns.heatmap(matrix_wine, annot=True, fmt='d', cmap='Blues', xticklabels=wine.target_names, yticklabels=wine.target_names) plt.xlabel('Predicted') plt.ylabel('Actual') plt.title('Confusion Matrix for Wine Dataset') plt.show() ### <b><font color='lightcoral'>Задача 4</font></b> Реализуйте модель K-Nearest Neighbors (KNN) для классификации рукописных цифр с помощью набора данных Digits. Оцените модель по точности и постройте матрицу ошибок. ### <b><font color='lightcoral'>Задача 5</font></b> Постройте кривые обучения для диагностики переобучения и недообучения, используя набор данных Iris и модель Decision Tree. Постройте кривые обучения для ошибок обучения и проверки. ### <b><font color='lightcoral'>Задача 6</font></b> Реализуйте регрессию LASSO и ридж-регрессию, используя набор данных Iris. Сравните эффективность обеих моделей, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте графики коэффициентов обеих моделей.",
       "matches": [
         {
           "cell": 1,
@@ -22261,17 +22314,27 @@
           "text": "### <b><font color='lightcoral'>Задача 3</font></b>\nРеализуйте классификатор на основе дерева решений для предсказания качества вина, используя набор данных Wine. Оцените модель с помощью перекрестной валидации и постройте дерево решений."
         },
         {
+          "cell": 23,
+          "type": "code",
+          "text": "wine = load_wine(as_frame=True)\ndisplay(wine.frame)\nX_wine = wine.data\ny_wine = wine.target\nX_train_wine, X_test_wine, y_train_wine, y_test_wine = train_test_split(X_wine, y_wine, test_size=0.2, random_state=42)\nmodel_wine = DecisionTreeClassifier(random_state=42)\nmodel_wine.fit(X_train_wine, y_train_wine)\ny_pred_wine = model_wine.predict(X_test_wine)\naccuracy_wine = accuracy_score(y_test_wine, y_pred_wine)\nprint('Accuracy Wine:', accuracy_wine)\nprint('Отчет о классификации Wine:')\nprint(classification_report(y_test_wine, y_pred_wine))"
+        },
+        {
           "cell": 24,
+          "type": "code",
+          "text": "matrix_wine = confusion_matrix(y_test_wine, y_pred_wine)\nplt.figure(figsize=(8, 6)) \nsns.heatmap(matrix_wine, annot=True, fmt='d', cmap='Blues', xticklabels=wine.target_names, yticklabels=wine.target_names)\nplt.xlabel('Predicted')\nplt.ylabel('Actual')\nplt.title('Confusion Matrix for Wine Dataset')\nplt.show()"
+        },
+        {
+          "cell": 25,
           "type": "markdown",
           "text": "### <b><font color='lightcoral'>Задача 4</font></b>\nРеализуйте модель K-Nearest Neighbors (KNN) для классификации рукописных цифр с помощью набора данных Digits. Оцените модель по точности и постройте матрицу ошибок."
         },
         {
-          "cell": 26,
+          "cell": 27,
           "type": "markdown",
           "text": "### <b><font color='lightcoral'>Задача 5</font></b>\nПостройте кривые обучения для диагностики переобучения и недообучения, используя набор данных Iris и модель Decision Tree. Постройте кривые обучения для ошибок обучения и проверки."
         },
         {
-          "cell": 28,
+          "cell": 29,
           "type": "markdown",
           "text": "### <b><font color='lightcoral'>Задача 6</font></b>\nРеализуйте регрессию LASSO и ридж-регрессию, используя набор данных Iris. Сравните эффективность обеих моделей, используя среднюю квадратичную ошибку (MSE) и R-квадрат (R²). Постройте графики коэффициентов обеих моделей."
         }
