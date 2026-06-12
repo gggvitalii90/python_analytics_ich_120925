@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-06-12T07:35:33.103617+00:00",
+    "generatedAt": "2026-06-12T08:38:50.118386+00:00",
     "notebookCount": 203
   },
   "notebooks": [
@@ -22258,7 +22258,7 @@
       "name": "Градиентный бустинг.ipynb",
       "path": "notebooks/Градиентный бустинг.ipynb",
       "course": "analytics",
-      "searchText": "Градиентный бустинг.ipynb notebooks/Градиентный бустинг.ipynb # <b><font color='lightcoral'>Градиентный бустинг</font></b> # Импорт библиотек import numpy as np from sklearn.ensemble import GradientBoostingRegressor from sklearn.model_selection import train_test_split from sklearn.tree import plot_tree import matplotlib.pyplot as plt # 1. Подготовка данных X = np.array([[0], [1], [2], [3], [4], [5]]) # признак: бюджет (тыс. у.е.), форматируем как колонку y = np.array([4, 6, 8, 12, 18, 24]) # целевая переменная: продажи (тыс. единиц) # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # 2. Создание и настройка модели градиентного бустинга model = GradientBoostingRegressor( n_estimators = 5, # число деревьев в ансамбле (итераций бустинга) max_depth = 1, # максимальная глубина деревьев (1 = решающий пень) random_state = 42 # фиксируем случайность для воспроизводимости ) # 3. Обучение модели на данных model.fit(X_train, y_train) # 4. Получение прогнозов модели y_pred = model.predict(X_test) print(\"Прогнозы модели:\", y_pred) print(\"Фактические значения:\", y_test) fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(24, 6)) for i in range(3): # Извлекаем i-е дерево из ансамбля tree_to_plot = model.estimators_[i, 0] # Рисуем дерево в соответствующем подграфике axes[i] plot_tree(tree_to_plot, feature_names=[f'Признак {j}' for j in range(X.shape[1])], filled=True, rounded=True, fontsize=10, ax=axes[i]) axes[i].set_title(f\"Дерево №{i+1} (Итерация {i})\") # Корректируем расположение, чтобы тексты не накладывались plt.tight_layout() plt.show() from sklearn.datasets import fetch_california_housing california_housing = fetch_california_housing(as_frame=True) df_california = california_housing.frame display(df_california) X = california_housing.data y = california_housing.target X_train_cal, X_test_cal, y_train_cal, y_test_cal = train_test_split(X, y, test_size=0.2, random_state=42) model_lin_reg = GradientBoostingRegressor( n_estimators=100, # число деревьев в ансамбле max_depth=3, # максимальная глубина деревьев random_state=42 # фиксируем случайность для воспроизводимости ) model_lin_reg.fit(X_train_cal, y_train_cal) y_pred_lin_reg_cal = model_lin_reg.predict(X_test_cal) MSE_lin_reg_cal = np.mean((y_test_cal - y_pred_lin_reg_cal) ** 2) print(\"MSE на тестовом наборе для градиентного бустинга:\", MSE_lin_reg_cal) R2_lin_reg_cal = model_lin_reg.score(X_test_cal, y_test_cal) print(\"R² на тестовом наборе для градиентного бустинга:\", R2_lin_reg_cal)",
+      "searchText": "Градиентный бустинг.ipynb notebooks/Градиентный бустинг.ipynb # <b><font color='lightcoral'>Градиентный бустинг</font></b> # Импорт библиотек import numpy as np from sklearn.ensemble import GradientBoostingRegressor from sklearn.model_selection import train_test_split from sklearn.tree import plot_tree import matplotlib.pyplot as plt # 1. Подготовка данных X = np.array([[0], [1], [2], [3], [4], [5]]) # признак: бюджет (тыс. у.е.), форматируем как колонку y = np.array([4, 6, 8, 12, 18, 24]) # целевая переменная: продажи (тыс. единиц) # Разделите данные на обучающий и тестовый наборы X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) # 2. Создание и настройка модели градиентного бустинга model = GradientBoostingRegressor( n_estimators = 5, # число деревьев в ансамбле (итераций бустинга) max_depth = 1, # максимальная глубина деревьев (1 = решающий пень) random_state = 42 # фиксируем случайность для воспроизводимости ) # 3. Обучение модели на данных model.fit(X_train, y_train) # 4. Получение прогнозов модели y_pred = model.predict(X_test) print(\"Прогнозы модели:\", y_pred) print(\"Фактические значения:\", y_test) fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(24, 6)) for i in range(3): # Извлекаем i-е дерево из ансамбля tree_to_plot = model.estimators_[i, 0] # Рисуем дерево в соответствующем подграфике axes[i] plot_tree(tree_to_plot, feature_names=[f'Признак {j}' for j in range(X.shape[1])], filled=True, rounded=True, fontsize=10, ax=axes[i]) axes[i].set_title(f\"Дерево №{i+1} (Итерация {i})\") # Корректируем расположение, чтобы тексты не накладывались plt.tight_layout() plt.show() from sklearn.datasets import fetch_california_housing df_california = fetch_california_housing() df_california # В переменную X запишите все данные из компонента data датасета X = df_california.data # Характеристики y = df_california.target X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42) model_lin_reg = GradientBoostingRegressor( n_estimators=10, # число деревьев в ансамбле max_depth=3, # максимальная глубина деревьев random_state=42 # фиксируем случайность для воспроизводимости ) model_lin_reg.fit(X_train, y_train) y_pred = model_lin_reg.predict(X_test) # Считаем метрики оценки линейной регрессии для цифровых данных from sklearn.metrics import mean_squared_error, r2_score mse = mean_squared_error(y_test, y_pred) r2 = r2_score(y_test, y_pred) print(f\"Mean Squared Error: {mse}\") print(f\"R-squared: {r2}\") ![image.png](attachment:image.png) # надо посотртиь график в две линии на котором будет видно как меняются предсказания модели и фактические значения в зависимости от признака. # надо ограничить чтоб было только две линии предсказания модели и фактические значения plt.plot(y_pred[0:50], label='Прогнозируемые значения') plt.plot(y_test[0:50], label='Фактические значения') plt.legend() plt.show() # from sklearn.metrics import mean_squared_error # mean_squared_error_ = 100 # best_i = 1 # best_j = 1 # for i in range(1, 50): # for j in range(1, 50): # model = GradientBoostingRegressor( # n_estimators=i, # число деревьев в ансамбле (итераций бустинга) # max_depth=j, # максимальная глубина деревьев (1 = решающий пень) # random_state=42 # фиксируем случайность для воспроизводимости # ) # model.fit(X_train, y_train) # y_pred = model.predict(X_test) # mse = mean_squared_error(y_test, y_pred) # print(f\"Mean Squared Error: {mse}\") # if mse <= mean_squared_error_: # mean_squared_error_ = mse # best_i = i # best_j = j # print(\"Лучший MSE:\", mean_squared_error_) # print(\"Лучшие параметры:\", best_i, best_j) import time import numpy as np from sklearn.model_selection import RandomizedSearchCV, train_test_split from sklearn.ensemble import GradientBoostingRegressor from sklearn.metrics import mean_squared_error start = time.time() # Ускоряем тюнинг: берем часть train X_small, _, y_small, _ = train_test_split( X_train, y_train, train_size=5000, random_state=42 ) param_dist = { \"n_estimators\": list(range(1, 51)), \"max_depth\": list(range(1, 51)) } search = RandomizedSearchCV( estimator=GradientBoostingRegressor(random_state=42), param_distributions=param_dist, n_iter=35, # 35 случайных комбинаций вместо 2401 scoring=\"neg_mean_squared_error\", cv=2, # быстрее, чем 3-5 n_jobs=-1, # все ядра random_state=42, verbose=1 ) search.fit(X_small, y_small) best_model = search.best_estimator_ y_pred = best_model.predict(X_test) mse = mean_squared_error(y_test, y_pred) print(\"Лучшие параметры:\", search.best_params_) print(\"MSE на тесте:\", mse) print(\"Время, сек:\", round(time.time() - start, 1)) from sklearn.model_selection import GridSearchCV from sklearn.ensemble import GradientBoostingRegressor from sklearn.metrics import mean_squared_error param_grid = { \"n_estimators\": range(1, 50), \"max_depth\": range(1, 50) } grid = GridSearchCV( estimator=GradientBoostingRegressor(random_state=42), param_grid=param_grid, scoring=\"neg_mean_squared_error\", cv=3, n_jobs=-1, verbose=1 ) grid.fit(X_train, y_train) best_model = grid.best_estimator_ y_pred = best_model.predict(X_test) mse = mean_squared_error(y_test, y_pred) print(\"Лучшие параметры:\", grid.best_params_) print(\"Лучший CV MSE:\", -grid.best_score_) print(\"MSE на тесте:\", mse)",
       "matches": [
         {
           "cell": 1,
@@ -22313,37 +22313,67 @@
         {
           "cell": 11,
           "type": "code",
-          "text": "california_housing = fetch_california_housing(as_frame=True)\ndf_california = california_housing.frame\ndisplay(df_california)"
+          "text": "df_california = fetch_california_housing()\ndf_california"
         },
         {
           "cell": 12,
           "type": "code",
-          "text": "X = california_housing.data\ny = california_housing.target"
+          "text": "# В переменную X запишите все данные из компонента data датасета\nX = df_california.data # Характеристики"
         },
         {
           "cell": 13,
           "type": "code",
-          "text": "X_train_cal, X_test_cal, y_train_cal, y_test_cal = train_test_split(X, y, test_size=0.2, random_state=42)"
+          "text": "y = df_california.target"
         },
         {
           "cell": 14,
           "type": "code",
-          "text": "model_lin_reg = GradientBoostingRegressor(\n    n_estimators=100,  # число деревьев в ансамбле\n    max_depth=3,       # максимальная глубина деревьев\n    random_state=42    # фиксируем случайность для воспроизводимости\n)"
+          "text": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)"
         },
         {
           "cell": 15,
           "type": "code",
-          "text": "model_lin_reg.fit(X_train_cal, y_train_cal)"
+          "text": "model_lin_reg = GradientBoostingRegressor(\n    n_estimators=10,  # число деревьев в ансамбле\n    max_depth=3,       # максимальная глубина деревьев\n    random_state=42    # фиксируем случайность для воспроизводимости\n)"
         },
         {
           "cell": 16,
           "type": "code",
-          "text": "y_pred_lin_reg_cal = model_lin_reg.predict(X_test_cal)"
+          "text": "model_lin_reg.fit(X_train, y_train)"
         },
         {
           "cell": 17,
           "type": "code",
-          "text": "MSE_lin_reg_cal = np.mean((y_test_cal - y_pred_lin_reg_cal) ** 2)\nprint(\"MSE на тестовом наборе для градиентного бустинга:\", MSE_lin_reg_cal)\nR2_lin_reg_cal = model_lin_reg.score(X_test_cal, y_test_cal)\nprint(\"R² на тестовом наборе для градиентного бустинга:\", R2_lin_reg_cal)"
+          "text": "y_pred = model_lin_reg.predict(X_test)"
+        },
+        {
+          "cell": 18,
+          "type": "code",
+          "text": "# Считаем метрики оценки линейной регрессии для цифровых данных\nfrom sklearn.metrics import mean_squared_error, r2_score\nmse = mean_squared_error(y_test, y_pred)\nr2 = r2_score(y_test, y_pred)\n\nprint(f\"Mean Squared Error: {mse}\")  \nprint(f\"R-squared: {r2}\")"
+        },
+        {
+          "cell": 19,
+          "type": "markdown",
+          "text": "![image.png](attachment:image.png)"
+        },
+        {
+          "cell": 20,
+          "type": "code",
+          "text": "# надо посотртиь график в две линии на котором будет видно как меняются предсказания модели и фактические значения в зависимости от признака.\n# надо ограничить чтоб было только две линии предсказания модели и фактические значения\nplt.plot(y_pred[0:50], label='Прогнозируемые значения')\nplt.plot(y_test[0:50], label='Фактические значения')\nplt.legend()\nplt.show()"
+        },
+        {
+          "cell": 21,
+          "type": "code",
+          "text": "# from sklearn.metrics import mean_squared_error\n\n# mean_squared_error_ = 100\n# best_i = 1\n# best_j = 1\n\n# for i in range(1, 50):\n#     for j in range(1, 50):\n#         model = GradientBoostingRegressor(\n#             n_estimators=i,    # число деревьев в ансамбле (итераций бустинга)\n#             max_depth=j,       # максимальная глубина деревьев (1 = решающий пень)\n#             random_state=42    # фиксируем случайность для воспроизводимости\n#         )\n#         model.fit(X_train, y_train)\n#         y_pred = model.predict(X_test)\n#         mse = mean_squared_error(y_test, y_pred)\n#         print(f\"Mean Squared Error: {mse}\")\n\n#         if mse <= mean_squared_error_:\n#             mean_squared_error_ = mse\n#             best_i = i\n#             best_j = j\n\n# print(\"Лучший MSE:\", mean_squared_error_)\n# print(\"Лучшие параметры:\", best_i, best_j)"
+        },
+        {
+          "cell": 22,
+          "type": "code",
+          "text": "import time\nimport numpy as np\nfrom sklearn.model_selection import RandomizedSearchCV, train_test_split\nfrom sklearn.ensemble import GradientBoostingRegressor\nfrom sklearn.metrics import mean_squared_error\n\nstart = time.time()\n\n# Ускоряем тюнинг: берем часть train\nX_small, _, y_small, _ = train_test_split(\n    X_train, y_train, train_size=5000, random_state=42\n)\n\nparam_dist = {\n    \"n_estimators\": list(range(1, 51)),\n    \"max_depth\": list(range(1, 51))\n}\n\nsearch = RandomizedSearchCV(\n    estimator=GradientBoostingRegressor(random_state=42),\n    param_distributions=param_dist,\n    n_iter=35,                  # 35 случайных комбинаций вместо 2401\n    scoring=\"neg_mean_squared_error\",\n    cv=2,                       # быстрее, чем 3-5\n    n_jobs=-1,                  # все ядра\n    random_state=42,\n    verbose=1\n)\n\nsearch.fit(X_small, y_small)\n\nbest_model = search.best_estimator_\ny_pred = be"
+        },
+        {
+          "cell": 23,
+          "type": "code",
+          "text": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.ensemble import GradientBoostingRegressor\nfrom sklearn.metrics import mean_squared_error\n\nparam_grid = {\n    \"n_estimators\": range(1, 50),\n    \"max_depth\": range(1, 50)\n}\n\ngrid = GridSearchCV(\n    estimator=GradientBoostingRegressor(random_state=42),\n    param_grid=param_grid,\n    scoring=\"neg_mean_squared_error\",\n    cv=3,\n    n_jobs=-1,\n    verbose=1\n)\n\ngrid.fit(X_train, y_train)\n\nbest_model = grid.best_estimator_\ny_pred = best_model.predict(X_test)\nmse = mean_squared_error(y_test, y_pred)\n\nprint(\"Лучшие параметры:\", grid.best_params_)\nprint(\"Лучший CV MSE:\", -grid.best_score_)\nprint(\"MSE на тесте:\", mse)"
         }
       ]
     },
