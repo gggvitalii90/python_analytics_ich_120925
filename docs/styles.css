@@ -739,7 +739,7 @@ h1 {
 /* ===== COURSE SWITCHER (sticky primary nav on index page) ===== */
 .course-switcher-sticky {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
   margin: 1rem 0;
   position: sticky;
@@ -1044,6 +1044,10 @@ details[open] .lectures-summary::after {
 }
 
 /* ===== FILE VIEWER MODAL ===== */
+.fv-modal[hidden] {
+  display: none;
+}
+
 .fv-modal {
   position: fixed;
   inset: 0;
