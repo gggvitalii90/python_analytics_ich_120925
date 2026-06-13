@@ -109,18 +109,50 @@ def notebook_to_record(root: Path, path: Path) -> dict[str, Any]:
     }
 
 
+def sql_to_record(root: Path, path: Path) -> dict[str, Any]:
+    relative = posix_path(path.relative_to(root))
+    raw = path.read_text(encoding="utf-8-sig", errors="replace")
+    text = sanitize_text(raw)
+    name = path.name
+
+    # Split into chunks by blank lines or statement boundaries
+    chunks = [c.strip() for c in re.split(r"\n{2,}|;\s*\n", text) if c.strip()]
+    matches = [
+        {"cell": i + 1, "type": "code", "text": chunk[:MAX_CELL_TEXT]}
+        for i, chunk in enumerate(chunks[:30])
+    ]
+
+    search_text = compact_text(f"{name} {relative} {text}")[:MAX_SEARCH_TEXT]
+    return {
+        "name": name,
+        "path": relative,
+        "course": "sql",
+        "searchText": search_text,
+        "matches": matches,
+    }
+
+
 def build_index(root: Path) -> dict[str, Any]:
     notebooks = [
         notebook_to_record(root, path)
         for path in sorted(root.rglob("*.ipynb"))
         if allowed_notebook(path)
     ]
+
+    sql_dir = root / "docs" / "sql"
+    sql_files = []
+    if sql_dir.exists():
+        for path in sorted(sql_dir.iterdir()):
+            if path.suffix.lower() in {".sql", ".js"} and path.is_file():
+                sql_files.append(sql_to_record(root, path))
+
     return {
         "meta": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "notebookCount": len(notebooks),
+            "sqlCount": len(sql_files),
         },
-        "notebooks": notebooks,
+        "notebooks": notebooks + sql_files,
     }
 
 
