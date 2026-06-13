@@ -38,6 +38,9 @@ Thumbs.db
 _tmp_manual_test*/
 _tmp_pytest*/
 pytest-cache-files-*/
-лекции/
 *.mp4
 *.mov
+
+# Large SQL data files (not needed in repo)
+SQL/sample_airbnb.listingsAndReviews.csv
+SQL/ich.bookings.csv

@@ -116,6 +116,18 @@
         </div>
         <div id="notebook-list" class="folder-list"></div>
       </section>
+
+      <section class="panel" id="materials-panel">
+        <div class="panel-head">
+          <h2>Лекции и материалы курса</h2>
+          <p>Слайды лекций, практические задания, сводные таблицы и SQL-скрипты — открываются прямо в браузере.</p>
+        </div>
+        <div class="materials-tabs" role="tablist">
+          <button class="mat-tab is-active" type="button" data-mat="lectures" role="tab" aria-selected="true">📊 Лекции PDF</button>
+          <button class="mat-tab" type="button" data-mat="sql" role="tab" aria-selected="false">🗄️ SQL / MongoDB</button>
+        </div>
+        <div id="materials-list" class="materials-list"></div>
+      </section>
     </main>
 
     <template id="row-template">

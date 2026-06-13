@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {
+      "id": "sql-lectures",
+      "title": "SQL — занятия",
+      "icon": "🗄️",
+      "files": [
+        { "title": "Занятие 22.09.2025", "file": "2025.09.22.sql" },
+        { "title": "Занятие 25.09.2025", "file": "2025.09.25.sql" },
+        { "title": "Практикум 26.09.2025", "file": "2025.09.26_practikum.sql" },
+        { "title": "Занятие 01.10.2025", "file": "2025.10.01.sql" },
+        { "title": "Занятие 08.10.2025", "file": "2025.10.08.sql" },
+        { "title": "Сводная 10.10.2025", "file": "2025.10.10_summary.sql" },
+        { "title": "CREATE TABLE 15.10.2025", "file": "2025.10.15_create_table.sql" },
+        { "title": "Практикум 15.10.2025", "file": "2025.10.15_practikum.sql" },
+        { "title": "Занятие 22.10.2025", "file": "2025.10.22.sql" },
+        { "title": "Практикум 22.10.2025", "file": "2025.10.22_practikum.sql" },
+        { "title": "Занятие 29.10.2025", "file": "2025.10.29.sql" },
+        { "title": "Практикум 29.10.2025", "file": "2025.10.29_practikum.sql" },
+        { "title": "Сводная 31.10.2025", "file": "2025.10.31_summary.sql" },
+        { "title": "Занятие 12.11.2025", "file": "2025.11.12.sql" },
+        { "title": "Сводная 14.11.2025", "file": "2025.11.14_summary.sql" },
+        { "title": "Занятие 19.11.2025", "file": "2025.11.19.sql" },
+        { "title": "Практикум 19.11.2025", "file": "2025.11.19_practikum.sql" },
+        { "title": "Занятие 26.11.2025", "file": "2025.11.26.sql" },
+        { "title": "Практикум 26.11.2025", "file": "2025.11.26_practicum.sql" },
+        { "title": "Занятие 03.12.2025", "file": "2025.12.03.sql" },
+        { "title": "Практикум 03.12.2025", "file": "2025.12.03_practicum.sql" },
+        { "title": "Функции 10.12.2025", "file": "2025.12.10_function.sql" },
+        { "title": "Функции — практика 10.12.2025", "file": "2025.12.10_function_practica.sql" },
+        { "title": "Индексы и оптимизация 10.12.2025", "file": "2025.12.10_опитимизация(index).sql" },
+        { "title": "Занятие 17.12.2025", "file": "2025.12.17.sql" },
+        { "title": "Практикум 17.12.2025", "file": "2025.12.17_practicum.sql" }
+      ]
+    },
+    {
+      "id": "mongodb",
+      "title": "MongoDB — занятия",
+      "icon": "🍃",
+      "files": [
+        { "title": "MongoDB — запись 04.02.2026", "file": "2026.02.04_mongo_write.mongodb.js" },
+        { "title": "MongoDB — запись PR 06.02.2026", "file": "2026.02.06_mongo_write_pr.mongodb.js" },
+        { "title": "MongoDB Atlas Clusters 11.02.2026", "file": "2026.02.11_mongo_atlas_Clusters0.mongodb.js" },
+        { "title": "MongoDB — практика 25.02.2026", "file": "2026.02.25_mongo_pr.mongodb.js" }
+      ]
+    }
+  ]
+}

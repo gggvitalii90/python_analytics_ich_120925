@@ -745,42 +745,130 @@ const loadNotebooks = async () => {
 
 loadNotebooks();
 
-const loadLectures = async () => {
-  const listEl = document.getElementById("lectures-list");
-  const countEl = document.getElementById("lectures-count");
-  if (!listEl) return;
-  try {
-    const resp = await fetch("lectures.json");
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const groups = await resp.json();
-    const total = groups.reduce((s, g) => s + g.items.length, 0);
-    if (countEl) countEl.textContent = `${total} файлов`;
-    listEl.innerHTML = "";
-    groups.forEach((group) => {
-      const details = document.createElement("details");
-      details.className = "folder";
-      const summary = document.createElement("summary");
-      summary.className = "folder-summary";
-      summary.innerHTML = `<h3 class="folder-title">${group.group} <span class="folder-count">(${group.items.length})</span></h3>`;
-      details.appendChild(summary);
-      const rows = document.createElement("div");
-      rows.className = "nb-rows";
-      group.items.forEach((item) => {
-        const row = document.createElement("article");
-        row.className = "nb-row";
-        row.innerHTML = `
-          <div class="nb-name">${item.title}</div>
-          <div class="nb-actions">
-            <a class="row-btn row-btn-colab" href="lectures/${encodeURIComponent(item.file)}" target="_blank" rel="noreferrer">Открыть</a>
-          </div>`;
-        rows.appendChild(row);
-      });
-      details.appendChild(rows);
-      listEl.appendChild(details);
-    });
-  } catch (e) {
-    if (listEl) listEl.innerHTML = "<p>Лекции появятся после добавления PDF файлов.</p>";
-  }
+// ── Materials section (Lectures PDF + SQL) ──────────────────────────────────
+
+const materialsListEl = document.getElementById("materials-list");
+const matTabs = [...document.querySelectorAll("[data-mat]")];
+let materialsData = { lectures: null, sql: null };
+
+const materialBaseUrl = () => {
+  if (window.location.protocol === "file:") return "./";
+  return "";
 };
 
-loadLectures();
+const fileOpenUrl = (folder, filename) => {
+  const base = materialBaseUrl();
+  return `${base}${folder}/${encodeURIComponent(filename)}`;
+};
+
+const renderMaterialGroup = (group, folder) => {
+  const section = document.createElement("details");
+  section.className = "folder mat-group";
+  section.open = true;
+
+  const sum = document.createElement("summary");
+  sum.className = "folder-summary";
+  const h3 = document.createElement("h3");
+  h3.className = "folder-title";
+  h3.textContent = `${group.icon} ${group.title} (${group.files.length})`;
+  sum.appendChild(h3);
+  section.appendChild(sum);
+
+  const body = document.createElement("div");
+  body.className = "folder-body";
+
+  const rows = document.createElement("div");
+  rows.className = "nb-rows";
+
+  group.files.forEach(({ title, file }) => {
+    const row = document.createElement("article");
+    row.className = "nb-row mat-row";
+
+    const name = document.createElement("div");
+    name.className = "nb-name";
+    name.textContent = title;
+
+    const fname = document.createElement("div");
+    fname.className = "nb-path";
+    fname.textContent = file;
+
+    const actions = document.createElement("div");
+    actions.className = "nb-actions";
+
+    const openBtn = document.createElement("a");
+    openBtn.className = "row-btn row-btn-accent";
+    openBtn.textContent = "Открыть";
+    openBtn.href = fileOpenUrl(folder, file);
+    openBtn.target = "_blank";
+    openBtn.rel = "noreferrer";
+
+    actions.appendChild(openBtn);
+    row.appendChild(name);
+    row.appendChild(fname);
+    row.appendChild(actions);
+    rows.appendChild(row);
+  });
+
+  body.appendChild(rows);
+  section.appendChild(body);
+  return section;
+};
+
+const renderMaterials = (key) => {
+  materialsListEl.innerHTML = "";
+  const data = materialsData[key];
+  if (!data) {
+    const p = document.createElement("p");
+    p.className = "index-status";
+    p.textContent = "Загрузка...";
+    materialsListEl.appendChild(p);
+    return;
+  }
+  const folder = key === "lectures" ? "lectures" : "sql";
+  const fragment = document.createDocumentFragment();
+  (data.groups || []).forEach((group) => {
+    fragment.appendChild(renderMaterialGroup(group, folder));
+  });
+  materialsListEl.appendChild(fragment);
+};
+
+const loadMaterialsJson = async (key, filename) => {
+  const urls = [
+    `${filename}?v=${Date.now()}`,
+    `https://${owner}.github.io/${repo}/${filename}?v=${Date.now()}`,
+    `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/${filename}`,
+  ];
+  for (const url of urls) {
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(resp.status);
+      return await resp.json();
+    } catch {}
+  }
+  return null;
+};
+
+const initMaterials = async () => {
+  const [lectures, sql] = await Promise.all([
+    loadMaterialsJson("lectures", "lectures.json"),
+    loadMaterialsJson("sql", "sql.json"),
+  ]);
+  materialsData.lectures = lectures;
+  materialsData.sql = sql;
+
+  let activeMatKey = "lectures";
+  renderMaterials(activeMatKey);
+
+  matTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      activeMatKey = tab.dataset.mat;
+      matTabs.forEach((t) => {
+        t.classList.toggle("is-active", t === tab);
+        t.setAttribute("aria-selected", String(t === tab));
+      });
+      renderMaterials(activeMatKey);
+    });
+  });
+};
+
+initMaterials();

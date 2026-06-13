@@ -1000,6 +1000,49 @@ details[open] .lectures-summary::after {
   color: #fff;
 }
 
+/* ===== MATERIALS TABS (Lectures / SQL) ===== */
+.materials-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.mat-tab {
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #c8dde2;
+  background: #f7fbfc;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #345;
+  cursor: pointer;
+  transition: background 140ms, border-color 140ms, color 140ms;
+}
+
+.mat-tab:hover {
+  border-color: #9bc6cc;
+  background: #eef6f8;
+}
+
+.mat-tab.is-active {
+  border-color: #0f8b8d;
+  background: linear-gradient(135deg, #106fa3 0%, #0f8b8d 100%);
+  color: #fff;
+}
+
+.materials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mat-row .nb-path {
+  font-size: 0.78rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
 /* ===== PRACTICE TAB ===== */
 .practice-panel {
   padding-bottom: 1.5rem;
