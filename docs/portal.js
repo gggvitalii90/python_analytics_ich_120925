@@ -11,6 +11,7 @@ const assistantEl = document.getElementById("search-assistant");
 const courseTabs = [...document.querySelectorAll("[data-course]")];
 const analyticsCountEl = document.getElementById("analytics-count");
 const fundamentalCountEl = document.getElementById("fundamental-count");
+const sqlCountEl = document.getElementById("sql-count");
 
 let allNotebooks = [];
 let referenceCards = [];
@@ -59,6 +60,7 @@ const categoryMeta = {
 const courseMeta = {
   analytics: { title: "Python для аналитиков", order: 1 },
   fundamental: { title: "Фундаментальный Python", order: 2 },
+  sql: { title: "SQL / MongoDB", order: 3 },
 };
 
 const queryAliases = {
@@ -594,10 +596,14 @@ const render = (items, terms = []) => {
 };
 
 const updateCourseCounts = () => {
-  const analyticsCount = allNotebooks.filter((item) => item.course === "analytics").length;
-  const fundamentalCount = allNotebooks.filter((item) => item.course === "fundamental").length;
-  analyticsCountEl.textContent = analyticsCount;
-  fundamentalCountEl.textContent = fundamentalCount;
+  analyticsCountEl.textContent = allNotebooks.filter((item) => item.course === "analytics").length;
+  fundamentalCountEl.textContent = allNotebooks.filter((item) => item.course === "fundamental").length;
+  if (sqlCountEl) {
+    const sqlTotal = materialsData.sql
+      ? (materialsData.sql.groups || []).reduce((s, g) => s + g.files.length, 0)
+      : 0;
+    sqlCountEl.textContent = sqlTotal;
+  }
 };
 
 const setStats = (count, filteredCount = count, terms = []) => {
@@ -612,6 +618,7 @@ const setStats = (count, filteredCount = count, terms = []) => {
 };
 
 const applySearch = () => {
+  if (activeCourse === "sql") { renderSqlView(); return; }
   const query = searchEl.value;
   const terms = queryTerms(query);
   const isSearch = query.trim().length > 0;
@@ -633,7 +640,13 @@ const setActiveCourse = (course) => {
     tab.classList.toggle("is-active", isActive);
     tab.setAttribute("aria-pressed", String(isActive));
   });
-  applySearch();
+  if (course === "sql") {
+    searchEl.value = "";
+    renderAssistant("", [], []);
+    renderSqlView();
+  } else {
+    applySearch();
+  }
 };
 
 const courseOf = (path) => (path.startsWith("Python/") ? "fundamental" : "analytics");
@@ -745,94 +758,12 @@ const loadNotebooks = async () => {
 
 loadNotebooks();
 
-// ── Materials section (Lectures PDF + SQL) ──────────────────────────────────
+// ── Materials section (PDF lectures by course) + SQL file viewer ─────────────
 
 const materialsListEl = document.getElementById("materials-list");
-const matTabs = [...document.querySelectorAll("[data-mat]")];
 let materialsData = { lectures: null, sql: null };
 
-const materialBaseUrl = () => {
-  if (window.location.protocol === "file:") return "./";
-  return "";
-};
-
-const fileOpenUrl = (folder, filename) => {
-  const base = materialBaseUrl();
-  return `${base}${folder}/${encodeURIComponent(filename)}`;
-};
-
-const renderMaterialGroup = (group, folder) => {
-  const section = document.createElement("details");
-  section.className = "folder mat-group";
-  section.open = true;
-
-  const sum = document.createElement("summary");
-  sum.className = "folder-summary";
-  const h3 = document.createElement("h3");
-  h3.className = "folder-title";
-  h3.textContent = `${group.icon} ${group.title} (${group.files.length})`;
-  sum.appendChild(h3);
-  section.appendChild(sum);
-
-  const body = document.createElement("div");
-  body.className = "folder-body";
-
-  const rows = document.createElement("div");
-  rows.className = "nb-rows";
-
-  group.files.forEach(({ title, file }) => {
-    const row = document.createElement("article");
-    row.className = "nb-row mat-row";
-
-    const name = document.createElement("div");
-    name.className = "nb-name";
-    name.textContent = title;
-
-    const fname = document.createElement("div");
-    fname.className = "nb-path";
-    fname.textContent = file;
-
-    const actions = document.createElement("div");
-    actions.className = "nb-actions";
-
-    const openBtn = document.createElement("a");
-    openBtn.className = "row-btn row-btn-accent";
-    openBtn.textContent = "Открыть";
-    openBtn.href = fileOpenUrl(folder, file);
-    openBtn.target = "_blank";
-    openBtn.rel = "noreferrer";
-
-    actions.appendChild(openBtn);
-    row.appendChild(name);
-    row.appendChild(fname);
-    row.appendChild(actions);
-    rows.appendChild(row);
-  });
-
-  body.appendChild(rows);
-  section.appendChild(body);
-  return section;
-};
-
-const renderMaterials = (key) => {
-  materialsListEl.innerHTML = "";
-  const data = materialsData[key];
-  if (!data) {
-    const p = document.createElement("p");
-    p.className = "index-status";
-    p.textContent = "Загрузка...";
-    materialsListEl.appendChild(p);
-    return;
-  }
-  const folder = key === "lectures" ? "lectures" : "sql";
-  const fragment = document.createDocumentFragment();
-  (data.groups || []).forEach((group) => {
-    fragment.appendChild(renderMaterialGroup(group, folder));
-  });
-  materialsListEl.appendChild(fragment);
-};
-
-const loadMaterialsJson = async (key, filename) => {
+const loadMaterialsJson = async (filename) => {
   const urls = [
     `${filename}?v=${Date.now()}`,
     `https://${owner}.github.io/${repo}/${filename}?v=${Date.now()}`,
@@ -848,25 +779,222 @@ const loadMaterialsJson = async (key, filename) => {
   return null;
 };
 
+const renderPdfGroup = (group) => {
+  const details = document.createElement("details");
+  details.className = "folder mat-group";
+  details.open = true;
+
+  const sum = document.createElement("summary");
+  sum.className = "folder-summary";
+  const h3 = document.createElement("h3");
+  h3.className = "folder-title";
+  h3.textContent = `${group.icon} ${group.title} (${group.files.length})`;
+  const hint = document.createElement("p");
+  hint.className = "folder-hint";
+  hint.textContent = "Нажмите, чтобы свернуть или развернуть";
+  sum.appendChild(h3);
+  sum.appendChild(hint);
+
+  const body = document.createElement("div");
+  body.className = "folder-body";
+  const rows = document.createElement("div");
+  rows.className = "nb-rows";
+
+  group.files.forEach(({ title, file }) => {
+    const row = document.createElement("article");
+    row.className = "nb-row";
+
+    const name = document.createElement("div");
+    name.className = "nb-name";
+    name.textContent = title;
+
+    const fname = document.createElement("div");
+    fname.className = "nb-path";
+    fname.textContent = file;
+
+    const actions = document.createElement("div");
+    actions.className = "nb-actions";
+
+    const btn = document.createElement("a");
+    btn.className = "row-btn row-btn-accent";
+    btn.textContent = "Открыть";
+    btn.href = `lectures/${encodeURIComponent(file)}`;
+    btn.target = "_blank";
+    btn.rel = "noreferrer";
+
+    actions.appendChild(btn);
+    row.appendChild(name);
+    row.appendChild(fname);
+    row.appendChild(actions);
+    rows.appendChild(row);
+  });
+
+  body.appendChild(rows);
+  details.appendChild(sum);
+  details.appendChild(body);
+  return details;
+};
+
+const renderMaterials = (courseKey) => {
+  materialsListEl.innerHTML = "";
+  const data = materialsData.lectures;
+  if (!data) {
+    const p = document.createElement("p");
+    p.className = "index-status";
+    p.textContent = "Загрузка...";
+    materialsListEl.appendChild(p);
+    return;
+  }
+  const course = data[courseKey];
+  if (!course || !course.groups || course.groups.length === 0) {
+    const p = document.createElement("p");
+    p.className = "index-status";
+    p.textContent = "Лекции для этого раздела будут добавлены позже.";
+    materialsListEl.appendChild(p);
+    return;
+  }
+  const fragment = document.createDocumentFragment();
+  course.groups.forEach((group) => fragment.appendChild(renderPdfGroup(group)));
+  materialsListEl.appendChild(fragment);
+};
+
+// ── SQL file viewer modal ────────────────────────────────────────────────────
+
+const openFileViewer = async (filePath, title) => {
+  const modal = document.getElementById("file-viewer-modal");
+  document.getElementById("fv-title").textContent = title;
+  const codeEl = document.getElementById("fv-code");
+  codeEl.textContent = "Загрузка...";
+  modal.hidden = false;
+  document.body.style.overflow = "hidden";
+
+  const urls = [
+    `${filePath}?v=${Date.now()}`,
+    `https://${owner}.github.io/${repo}/${filePath}?v=${Date.now()}`,
+    `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/${filePath}`,
+  ];
+  for (const url of urls) {
+    try {
+      const resp = await fetch(url);
+      if (resp.ok) { codeEl.textContent = await resp.text(); return; }
+    } catch {}
+  }
+  codeEl.textContent = "Не удалось загрузить файл.";
+};
+
+const closeFileViewer = () => {
+  document.getElementById("file-viewer-modal").hidden = true;
+  document.body.style.overflow = "";
+};
+
+document.getElementById("fv-close").addEventListener("click", closeFileViewer);
+document.getElementById("fv-backdrop").addEventListener("click", closeFileViewer);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeFileViewer(); });
+
+// ── SQL course view (top section, 3rd tab) ───────────────────────────────────
+
+const renderSqlView = () => {
+  listEl.innerHTML = "";
+  const data = materialsData.sql;
+  if (!data) {
+    const p = document.createElement("p");
+    p.className = "index-status";
+    p.textContent = "Загрузка SQL файлов...";
+    listEl.appendChild(p);
+    return;
+  }
+
+  const wrapper = document.createElement("section");
+  wrapper.className = "course-group";
+  const heading = document.createElement("h3");
+  heading.className = "course-group-title";
+  const total = (data.groups || []).reduce((s, g) => s + g.files.length, 0);
+  heading.textContent = `SQL / MongoDB (${total})`;
+  wrapper.appendChild(heading);
+
+  (data.groups || []).forEach((group) => {
+    const details = document.createElement("details");
+    details.className = "folder";
+    details.open = true;
+
+    const sum = document.createElement("summary");
+    sum.className = "folder-summary";
+    const h3 = document.createElement("h3");
+    h3.className = "folder-title";
+    h3.textContent = `${group.icon} ${group.title} (${group.files.length})`;
+    const hint = document.createElement("p");
+    hint.className = "folder-hint";
+    hint.textContent = "Нажмите, чтобы свернуть или развернуть";
+    sum.appendChild(h3);
+    sum.appendChild(hint);
+
+    const body = document.createElement("div");
+    body.className = "folder-body";
+    const rows = document.createElement("div");
+    rows.className = "nb-rows";
+
+    group.files.forEach(({ title: fileTitle, file }) => {
+      const row = document.createElement("article");
+      row.className = "nb-row";
+
+      const name = document.createElement("div");
+      name.className = "nb-name";
+      name.textContent = fileTitle;
+
+      const path = document.createElement("div");
+      path.className = "nb-path";
+      path.textContent = file;
+
+      const actions = document.createElement("div");
+      actions.className = "nb-actions";
+
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "row-btn row-btn-accent";
+      btn.textContent = "Открыть";
+      btn.addEventListener("click", () => openFileViewer(`sql/${encodeURIComponent(file)}`, fileTitle));
+
+      actions.appendChild(btn);
+      row.appendChild(name);
+      row.appendChild(path);
+      row.appendChild(actions);
+      rows.appendChild(row);
+    });
+
+    body.appendChild(rows);
+    details.appendChild(sum);
+    details.appendChild(body);
+    wrapper.appendChild(details);
+  });
+
+  listEl.appendChild(wrapper);
+  statsEl.textContent = `SQL / MongoDB: ${total} файлов`;
+};
+
+// ── Init materials ───────────────────────────────────────────────────────────
+
 const initMaterials = async () => {
   const [lectures, sql] = await Promise.all([
-    loadMaterialsJson("lectures", "lectures.json"),
-    loadMaterialsJson("sql", "sql.json"),
+    loadMaterialsJson("lectures.json"),
+    loadMaterialsJson("sql.json"),
   ]);
   materialsData.lectures = lectures;
   materialsData.sql = sql;
 
-  let activeMatKey = "lectures";
-  renderMaterials(activeMatKey);
+  updateCourseCounts();
+  if (activeCourse === "sql") renderSqlView();
 
-  matTabs.forEach((tab) => {
+  let activeMatCourse = "analytics";
+  renderMaterials(activeMatCourse);
+
+  document.querySelectorAll("[data-mat-course]").forEach((tab) => {
     tab.addEventListener("click", () => {
-      activeMatKey = tab.dataset.mat;
-      matTabs.forEach((t) => {
+      activeMatCourse = tab.dataset.matCourse;
+      document.querySelectorAll("[data-mat-course]").forEach((t) => {
         t.classList.toggle("is-active", t === tab);
         t.setAttribute("aria-selected", String(t === tab));
       });
-      renderMaterials(activeMatKey);
+      renderMaterials(activeMatCourse);
     });
   });
 };

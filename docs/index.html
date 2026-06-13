@@ -92,6 +92,10 @@
           <span>Фундаментальный Python</span>
           <strong class="tab-badge" id="fundamental-count">0</strong>
         </button>
+        <button class="main-tab" type="button" data-course="sql">
+          <span>SQL / MongoDB</span>
+          <strong class="tab-badge" id="sql-count">0</strong>
+        </button>
       </section>
 
       <section class="panel">
@@ -104,16 +108,28 @@
 
       <section class="panel" id="materials-panel">
         <div class="panel-head">
-          <h2>Лекции и материалы курса</h2>
-          <p>Слайды лекций, практические задания, сводные таблицы и SQL-скрипты — открываются прямо в браузере.</p>
+          <h2>Лекции и материалы курса (PDF)</h2>
+          <p>Слайды лекций, практические задания и сводные таблицы — открываются прямо в браузере.</p>
         </div>
         <div class="materials-tabs" role="tablist">
-          <button class="mat-tab is-active" type="button" data-mat="lectures" role="tab" aria-selected="true">📊 Лекции PDF</button>
-          <button class="mat-tab" type="button" data-mat="sql" role="tab" aria-selected="false">🗄️ SQL / MongoDB</button>
+          <button class="mat-tab is-active" type="button" data-mat-course="analytics" role="tab" aria-selected="true">Python для аналитиков</button>
+          <button class="mat-tab" type="button" data-mat-course="fundamental" role="tab" aria-selected="false">Фундаментальный Python</button>
+          <button class="mat-tab" type="button" data-mat-course="sql" role="tab" aria-selected="false">SQL / MongoDB</button>
         </div>
         <div id="materials-list" class="materials-list"></div>
       </section>
     </main>
+
+    <div id="file-viewer-modal" class="fv-modal" hidden>
+      <div class="fv-backdrop" id="fv-backdrop"></div>
+      <div class="fv-dialog">
+        <div class="fv-header">
+          <h3 id="fv-title"></h3>
+          <button class="fv-close" id="fv-close" type="button" aria-label="Закрыть">✕</button>
+        </div>
+        <pre class="fv-pre"><code id="fv-code"></code></pre>
+      </div>
+    </div>
 
     <template id="row-template">
       <article class="nb-row">
