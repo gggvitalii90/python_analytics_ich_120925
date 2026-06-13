@@ -916,7 +916,7 @@ const renderSqlView = () => {
   (data.groups || []).forEach((group) => {
     const details = document.createElement("details");
     details.className = "folder";
-    details.open = true;
+    details.open = false;
 
     const sum = document.createElement("summary");
     sum.className = "folder-summary";
