@@ -818,7 +818,7 @@ const renderPdfGroup = (group) => {
     const btn = document.createElement("a");
     btn.className = "row-btn row-btn-accent";
     btn.textContent = "Открыть";
-    btn.href = `lectures/${encodeURIComponent(file)}`;
+    btn.href = `${group.folder}/${encodeURIComponent(file)}`;
     btn.target = "_blank";
     btn.rel = "noreferrer";
 
