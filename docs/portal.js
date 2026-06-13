@@ -647,6 +647,7 @@ const setActiveCourse = (course) => {
   } else {
     applySearch();
   }
+  if (materialsData.lectures) renderMaterials(course);
 };
 
 const courseOf = (path) => (path.startsWith("Python/") ? "fundamental" : "analytics");
@@ -782,7 +783,7 @@ const loadMaterialsJson = async (filename) => {
 const renderPdfGroup = (group) => {
   const details = document.createElement("details");
   details.className = "folder mat-group";
-  details.open = true;
+  details.open = false;
 
   const sum = document.createElement("summary");
   sum.className = "folder-summary";
@@ -983,20 +984,7 @@ const initMaterials = async () => {
 
   updateCourseCounts();
   if (activeCourse === "sql") renderSqlView();
-
-  let activeMatCourse = "analytics";
-  renderMaterials(activeMatCourse);
-
-  document.querySelectorAll("[data-mat-course]").forEach((tab) => {
-    tab.addEventListener("click", () => {
-      activeMatCourse = tab.dataset.matCourse;
-      document.querySelectorAll("[data-mat-course]").forEach((t) => {
-        t.classList.toggle("is-active", t === tab);
-        t.setAttribute("aria-selected", String(t === tab));
-      });
-      renderMaterials(activeMatCourse);
-    });
-  });
+  renderMaterials(activeCourse);
 };
 
 initMaterials();
