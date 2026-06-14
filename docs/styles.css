@@ -1128,6 +1128,106 @@ details[open] .lectures-summary::after {
   tab-size: 2;
 }
 
+.fv-body {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.fv-block {
+  border-bottom: 1px solid #e2edf0;
+  padding: 0;
+}
+.fv-block:last-child { border-bottom: none; }
+
+.fv-block pre {
+  margin: 0;
+  padding: 1rem 1.25rem 0.75rem;
+  background: #f8fbfc;
+  font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #1a2e38;
+  white-space: pre-wrap;
+  word-break: break-word;
+  tab-size: 2;
+}
+
+.fv-run-btn {
+  margin: 0 1.25rem 0.75rem;
+  padding: 0.35rem 1rem;
+  background: #1b7a5e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.fv-run-btn:hover:not(:disabled) { background: #155f49; }
+.fv-run-btn:disabled { opacity: 0.6; cursor: wait; }
+
+.fv-result {
+  margin: 0 1.25rem 1rem;
+}
+
+.fv-result-info {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  color: #5a7a85;
+}
+
+.fv-table-wrap {
+  overflow-x: auto;
+  border-radius: 6px;
+  border: 1px solid #d0e8ed;
+}
+
+.fv-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.fv-table th {
+  background: #e8f4f7;
+  padding: 0.45rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #1a2e38;
+  white-space: nowrap;
+  border-bottom: 2px solid #b8dce6;
+}
+.fv-table td {
+  padding: 0.35rem 0.75rem;
+  border-bottom: 1px solid #edf4f6;
+  color: #2a4a58;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fv-table tr:last-child td { border-bottom: none; }
+.fv-table tr:hover td { background: #f4fafb; }
+.fv-null { color: #aaa; font-style: italic; }
+
+.fv-error {
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  background: #fff3f3;
+  border: 1px solid #f5c6c6;
+  border-radius: 6px;
+  color: #c0392b;
+  font-size: 0.82rem;
+}
+.fv-loading {
+  padding: 2rem;
+  text-align: center;
+  color: #5a7a85;
+  font-size: 0.9rem;
+}
+
 /* ===== PRACTICE TAB ===== */
 .practice-panel {
   padding-bottom: 1.5rem;

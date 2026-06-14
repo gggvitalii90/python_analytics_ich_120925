@@ -873,28 +873,243 @@ const renderMaterials = (courseKey) => {
   materialsListEl.appendChild(fragment);
 };
 
-// ── SQL file viewer modal ────────────────────────────────────────────────────
+// ── SQL / Mongo file viewer modal with live query execution ─────────────────
+
+const API_BASE = "https://ich-portal-api.vercel.app";
+
+const MONGO_COLLECTION_DB = {
+  listingsAndReviews: "sample_airbnb",
+  airbnb_Istanbul: "sample_airbnb",
+  airbnb_reviews: "sample_airbnb",
+  BankChurners: "Bank_gitHub",
+  restaurants: "sample_restaurants",
+  bookings: "ich",
+  customers: "ich",
+  orders: "ich",
+  order_details: "ich",
+};
+
+const renderResultTable = (columns, rows, container) => {
+  container.innerHTML = "";
+  if (!rows || rows.length === 0) {
+    container.innerHTML = '<p class="fv-error">Результат пустой (0 строк)</p>';
+    return;
+  }
+  const info = document.createElement("p");
+  info.className = "fv-result-info";
+  info.textContent = `${rows.length} строк`;
+  container.appendChild(info);
+
+  const wrap = document.createElement("div");
+  wrap.className = "fv-table-wrap";
+  const table = document.createElement("table");
+  table.className = "fv-table";
+
+  const thead = document.createElement("thead");
+  const hr = document.createElement("tr");
+  columns.forEach(col => {
+    const th = document.createElement("th");
+    th.textContent = col;
+    hr.appendChild(th);
+  });
+  thead.appendChild(hr);
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+  rows.slice(0, 100).forEach(row => {
+    const tr = document.createElement("tr");
+    columns.forEach(col => {
+      const td = document.createElement("td");
+      const val = row[col];
+      if (val === null || val === undefined) {
+        td.className = "fv-null";
+        td.textContent = "NULL";
+      } else if (typeof val === "object") {
+        td.textContent = JSON.stringify(val).slice(0, 120);
+      } else {
+        td.textContent = String(val).slice(0, 200);
+      }
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+  container.appendChild(wrap);
+};
+
+const addRunButton = (wrapper, onClick) => {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "fv-run-btn";
+  btn.textContent = "▶ Выполнить";
+  const resultDiv = document.createElement("div");
+  resultDiv.className = "fv-result";
+  btn.addEventListener("click", async () => {
+    btn.disabled = true;
+    btn.textContent = "⏳ Выполняется...";
+    resultDiv.innerHTML = "";
+    try {
+      await onClick(resultDiv);
+    } catch (err) {
+      resultDiv.innerHTML = `<p class="fv-error">Ошибка: ${err.message}</p>`;
+    }
+    btn.disabled = false;
+    btn.textContent = "▶ Выполнить";
+    btn.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+  wrapper.appendChild(btn);
+  wrapper.appendChild(resultDiv);
+};
+
+const renderSqlViewer = (content, container) => {
+  let currentDb = "northwind";
+  let currentLines = [];
+
+  const flush = (db) => {
+    const sql = currentLines.join("\n").trim();
+    currentLines = [];
+    if (!sql) return;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "fv-block";
+    const pre = document.createElement("pre");
+    const code = document.createElement("code");
+    code.textContent = sql;
+    pre.appendChild(code);
+    wrapper.appendChild(pre);
+
+    const clean = sql.replace(/\/\*[\s\S]*?\*\//g, "").replace(/--[^\n]*/g, "").trim();
+    const first = clean.split(/\s+/)[0].toUpperCase();
+    if (["SELECT", "SHOW", "DESCRIBE", "DESC", "WITH", "EXPLAIN"].includes(first)) {
+      addRunButton(wrapper, async (resultDiv) => {
+        const resp = await fetch(`${API_BASE}/api/sql`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: sql, database: db }),
+        });
+        const data = await resp.json();
+        if (data.error) {
+          resultDiv.innerHTML = `<p class="fv-error">Ошибка: ${data.error}</p>`;
+        } else {
+          renderResultTable(data.columns, data.rows, resultDiv);
+        }
+      });
+    }
+    container.appendChild(wrapper);
+  };
+
+  for (const line of content.split("\n")) {
+    const trimmed = line.trim();
+    const useMatch = trimmed.match(/^USE\s+`?(\w+)`?\s*;?\s*$/i);
+    if (useMatch) {
+      flush(currentDb);
+      currentDb = useMatch[1].toLowerCase();
+    }
+    currentLines.push(line);
+    if (trimmed.endsWith(";")) {
+      flush(currentDb);
+    }
+  }
+  flush(currentDb);
+};
+
+const captureMongoOp = (code) => {
+  const captured = [];
+  const makeCol = (name) => {
+    const self = {
+      find(f = {}, p = {}) { captured.push({ operation: "find", collection: name, filter: f, projection: p }); return self; },
+      aggregate(pipe = []) { captured.push({ operation: "aggregate", collection: name, pipeline: pipe }); return self; },
+      countDocuments(f = {}) { captured.push({ operation: "countDocuments", collection: name, filter: f }); return self; },
+      sort(s) { if (captured.length) captured[captured.length - 1].sort = s; return self; },
+      limit(l) { if (captured.length) captured[captured.length - 1].limit = l; return self; },
+      toArray() { return []; }, deleteMany() { return {}; }, updateMany() { return {}; },
+      update() { return {}; }, insertOne() { return {}; }, insertMany() { return {}; },
+    };
+    return self;
+  };
+  const db = new Proxy({ getCollection: (n) => makeCol(n) }, {
+    get(t, p) { return p in t ? t[p] : makeCol(p); },
+  });
+  try {
+    // eslint-disable-next-line no-new-func
+    new Function("db", "ISODate", code)(db, () => new Date());
+  } catch (_) { /* ignore */ }
+  return captured.find(op => ["find", "aggregate", "countDocuments"].includes(op.operation)) || null;
+};
+
+const renderMongoViewer = (content, container) => {
+  const blocks = content.split(/\/\*[-=\s*-]{3,}\*\//g).map(b => b.trim()).filter(b => b);
+  blocks.forEach(block => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "fv-block";
+    const pre = document.createElement("pre");
+    const code = document.createElement("code");
+    code.textContent = block;
+    pre.appendChild(code);
+    wrapper.appendChild(pre);
+
+    const op = captureMongoOp(block);
+    if (op && MONGO_COLLECTION_DB[op.collection]) {
+      const dbName = MONGO_COLLECTION_DB[op.collection];
+      addRunButton(wrapper, async (resultDiv) => {
+        const resp = await fetch(`${API_BASE}/api/mongo`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            database: dbName,
+            collection: op.collection,
+            operation: op.operation,
+            filter: op.filter || {},
+            pipeline: op.pipeline || [],
+            sort: op.sort,
+            limit: op.limit || 50,
+          }),
+        });
+        const data = await resp.json();
+        if (data.error) {
+          resultDiv.innerHTML = `<p class="fv-error">Ошибка: ${data.error}</p>`;
+        } else {
+          const cols = data.docs.length > 0 ? Object.keys(data.docs[0]).filter(k => k !== "_id") : [];
+          renderResultTable(cols, data.docs, resultDiv);
+        }
+      });
+    }
+    container.appendChild(wrapper);
+  });
+};
 
 const openFileViewer = async (filePath, title) => {
   const modal = document.getElementById("file-viewer-modal");
   document.getElementById("fv-title").textContent = title;
-  const codeEl = document.getElementById("fv-code");
-  codeEl.textContent = "Загрузка...";
+  const bodyEl = document.getElementById("fv-body");
+  bodyEl.innerHTML = '<p class="fv-loading">Загрузка...</p>';
   modal.hidden = false;
   document.body.style.overflow = "hidden";
 
+  const isMongo = filePath.endsWith(".mongodb.js");
   const urls = [
     `${filePath}?v=${Date.now()}`,
     `https://${owner}.github.io/${repo}/${filePath}?v=${Date.now()}`,
     `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/${filePath}`,
   ];
+  let content = null;
   for (const url of urls) {
     try {
       const resp = await fetch(url);
-      if (resp.ok) { codeEl.textContent = await resp.text(); return; }
+      if (resp.ok) { content = await resp.text(); break; }
     } catch {}
   }
-  codeEl.textContent = "Не удалось загрузить файл.";
+  bodyEl.innerHTML = "";
+  if (!content) {
+    bodyEl.innerHTML = '<p class="fv-error">Не удалось загрузить файл.</p>';
+    return;
+  }
+  if (isMongo) {
+    renderMongoViewer(content, bodyEl);
+  } else {
+    renderSqlViewer(content, bodyEl);
+  }
 };
 
 const closeFileViewer = () => {
