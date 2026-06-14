@@ -444,10 +444,24 @@ const createSearchRow = (entry, terms) => {
   const frag = rowTpl.content.cloneNode(true);
   frag.querySelector(".nb-name").textContent = entry.name;
   frag.querySelector(".nb-path").textContent = entry.path;
-  frag.querySelector('[data-action="view"]').href = githubViewUrl(entry.path);
-  frag.querySelector('[data-action="colab"]').href = colabUrl(entry.path);
-  frag.querySelector('[data-action="binder"]').href = binderUrl(entry.path);
-  frag.querySelector('[data-action="raw"]').href = githubRawUrl(entry.path);
+
+  const isSqlEntry = entry.course === "sql" && entry.path.startsWith("docs/sql/");
+  if (isSqlEntry) {
+    const actionsEl = frag.querySelector(".nb-actions");
+    actionsEl.innerHTML = "";
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "row-btn row-btn-accent";
+    btn.textContent = "Открыть";
+    const relPath = entry.path.replace(/^docs\//, "");
+    btn.addEventListener("click", () => openFileViewer(relPath, entry.name));
+    actionsEl.appendChild(btn);
+  } else {
+    frag.querySelector('[data-action="view"]').href = githubViewUrl(entry.path);
+    frag.querySelector('[data-action="colab"]').href = colabUrl(entry.path);
+    frag.querySelector('[data-action="binder"]').href = binderUrl(entry.path);
+    frag.querySelector('[data-action="raw"]').href = githubRawUrl(entry.path);
+  }
 
   const article = frag.querySelector(".nb-row");
   if (!article) return frag;
@@ -618,10 +632,10 @@ const setStats = (count, filteredCount = count, terms = []) => {
 };
 
 const applySearch = () => {
-  if (activeCourse === "sql") { renderSqlView(); return; }
   const query = searchEl.value;
   const terms = queryTerms(query);
   const isSearch = query.trim().length > 0;
+  if (!isSearch && activeCourse === "sql") { renderSqlView(); return; }
   const pool = isSearch ? allNotebooks : allNotebooks.filter((item) => item.course === activeCourse);
   const filtered = isSearch ? searchNotebooks(query, allNotebooks) : pool;
   renderAssistant(query, filtered, terms);
