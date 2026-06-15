@@ -11,11 +11,11 @@
       "type": "language",
       "terms": ["sql", "select", "where", "group by", "order by", "join", "запрос"],
       "aliases": ["выбрать данные", "sql запрос", "фильтр в sql"],
-      "summary": "Official PostgreSQL documentation for SELECT queries.",
+      "summary": "Official MySQL documentation for SELECT queries.",
       "import": "# SQL syntax",
       "syntax": "SELECT city, COUNT(*) AS users\nFROM users\nWHERE active = TRUE\nGROUP BY city\nORDER BY users DESC;",
       "related": ["pandas.read_sql", "sqlite3", "SQL JOIN"],
-      "docsUrl": "https://www.postgresql.org/docs/current/sql-select.html"
+      "docsUrl": "https://dev.mysql.com/doc/refman/8.0/en/select.html"
     },
     {
       "id": "sql-join",
@@ -24,11 +24,11 @@
       "type": "language",
       "terms": ["join", "inner join", "left join", "sql join", "объединить таблицы"],
       "aliases": ["соединить таблицы", "джойн"],
-      "summary": "Official PostgreSQL tutorial section for joining tables.",
+      "summary": "Official MySQL documentation for JOIN operations.",
       "import": "# SQL syntax",
       "syntax": "SELECT orders.id, users.name\nFROM orders\nJOIN users ON users.id = orders.user_id;",
       "related": ["pandas.DataFrame.merge", "SQL SELECT"],
-      "docsUrl": "https://www.postgresql.org/docs/current/tutorial-join.html"
+      "docsUrl": "https://dev.mysql.com/doc/refman/8.0/en/join.html"
     },
     {
       "id": "pandas-read-sql",
@@ -48,11 +48,11 @@
       "title": "sqlalchemy.create_engine",
       "package": "SQLAlchemy",
       "type": "function",
-      "terms": ["sqlalchemy", "create_engine", "engine", "mysql", "pymysql", "PyMySQL", "postgresql", "psycopg2"],
+      "terms": ["sqlalchemy", "create_engine", "engine", "mysql", "pymysql", "PyMySQL"],
       "aliases": ["подключение к базе", "sqlalchemy engine"],
       "summary": "Official SQLAlchemy documentation for creating database engines.",
       "import": "from sqlalchemy import create_engine",
-      "syntax": "engine = create_engine(\"postgresql+psycopg2://user:password@host/db\")\ndf = pd.read_sql(\"SELECT * FROM users\", engine)",
+      "syntax": "engine = create_engine(\"mysql+pymysql://user:password@host/db\")\ndf = pd.read_sql(\"SELECT * FROM users\", engine)",
       "related": ["pandas.read_sql", "sqlite3"],
       "docsUrl": "https://docs.sqlalchemy.org/en/20/core/engines.html"
     },
