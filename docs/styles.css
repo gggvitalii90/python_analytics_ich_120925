@@ -1207,7 +1207,7 @@ details[open] .lectures-summary::after {
 }
 
 .fv-run-btn {
-  margin: 0 1.25rem 0.75rem;
+  margin: 0.65rem 1.25rem 0.75rem;
   padding: 0.35rem 1rem;
   background: #1b7a5e;
   color: #fff;
