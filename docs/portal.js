@@ -962,6 +962,18 @@ const addRunButton = (wrapper, onClick) => {
   wrapper.appendChild(resultDiv);
 };
 
+const makeCodeEditor = (text) => {
+  const ta = document.createElement("textarea");
+  ta.className = "fv-code-editor";
+  ta.value = text;
+  ta.rows = Math.min(text.split("\n").length + 1, 30);
+  ta.addEventListener("input", () => {
+    ta.style.height = "auto";
+    ta.style.height = ta.scrollHeight + "px";
+  });
+  return ta;
+};
+
 const renderSqlViewer = (content, container) => {
   let currentDb = "northwind";
   let currentLines = [];
@@ -973,11 +985,8 @@ const renderSqlViewer = (content, container) => {
 
     const wrapper = document.createElement("div");
     wrapper.className = "fv-block";
-    const pre = document.createElement("pre");
-    const code = document.createElement("code");
-    code.textContent = sql;
-    pre.appendChild(code);
-    wrapper.appendChild(pre);
+    const ta = makeCodeEditor(sql);
+    wrapper.appendChild(ta);
 
     const clean = sql.replace(/\/\*[\s\S]*?\*\//g, "").replace(/--[^\n]*/g, "").trim();
     const first = clean.split(/\s+/)[0].toUpperCase();
@@ -986,7 +995,7 @@ const renderSqlViewer = (content, container) => {
         const resp = await fetch(`${API_BASE}/api/sql`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: sql, database: db }),
+          body: JSON.stringify({ query: ta.value, database: db }),
         });
         const data = await resp.json();
         if (data.error) {
@@ -1043,27 +1052,30 @@ const renderMongoViewer = (content, container) => {
   blocks.forEach(block => {
     const wrapper = document.createElement("div");
     wrapper.className = "fv-block";
-    const pre = document.createElement("pre");
-    const code = document.createElement("code");
-    code.textContent = block;
-    pre.appendChild(code);
-    wrapper.appendChild(pre);
+    const ta = makeCodeEditor(block);
+    wrapper.appendChild(ta);
 
     const op = captureMongoOp(block);
     if (op && MONGO_COLLECTION_DB[op.collection]) {
-      const dbName = MONGO_COLLECTION_DB[op.collection];
+      const fallbackDb = MONGO_COLLECTION_DB[op.collection];
       addRunButton(wrapper, async (resultDiv) => {
+        const currentOp = captureMongoOp(ta.value);
+        if (!currentOp) {
+          resultDiv.innerHTML = '<p class="fv-error">Не удалось распознать find/aggregate в запросе</p>';
+          return;
+        }
+        const dbName = MONGO_COLLECTION_DB[currentOp.collection] || fallbackDb;
         const resp = await fetch(`${API_BASE}/api/mongo`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             database: dbName,
-            collection: op.collection,
-            operation: op.operation,
-            filter: op.filter || {},
-            pipeline: op.pipeline || [],
-            sort: op.sort,
-            limit: op.limit || 50,
+            collection: currentOp.collection,
+            operation: currentOp.operation,
+            filter: currentOp.filter || {},
+            pipeline: currentOp.pipeline || [],
+            sort: currentOp.sort,
+            limit: currentOp.limit || 50,
           }),
         });
         const data = await resp.json();
@@ -1086,6 +1098,14 @@ const openFileViewer = async (filePath, title) => {
   bodyEl.innerHTML = '<p class="fv-loading">Загрузка...</p>';
   modal.hidden = false;
   document.body.style.overflow = "hidden";
+
+  const githubUrl = `https://github.com/${owner}/${repo}/blob/${branch}/docs/${filePath}`;
+  const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/${filePath}`;
+  const linksEl = document.getElementById("fv-header-links");
+  linksEl.innerHTML = `
+    <a class="fv-header-btn" href="${githubUrl}" target="_blank" rel="noreferrer">GitHub</a>
+    <a class="fv-header-btn" href="${rawUrl}" download>Скачать</a>
+  `;
 
   const isMongo = filePath.endsWith(".mongodb.js");
   const urls = [

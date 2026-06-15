@@ -1080,7 +1080,7 @@ details[open] .lectures-summary::after {
 
 .fv-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.25rem;
@@ -1088,13 +1088,40 @@ details[open] .lectures-summary::after {
   flex-shrink: 0;
 }
 
+.fv-header-left {
+  flex: 1;
+  min-width: 0;
+}
+
 .fv-header h3 {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
   color: #1a2e38;
-  word-break: break-all;
+  word-break: break-word;
 }
+
+.fv-header-links {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.fv-header-btn {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid #b8dce6;
+  border-radius: 4px;
+  color: #1b7a5e;
+  text-decoration: none;
+  background: #fff;
+  font-weight: 600;
+  line-height: 1.7;
+  white-space: nowrap;
+  transition: background 120ms;
+}
+.fv-header-btn:hover { background: #e8f4f7; }
 
 .fv-close {
   flex-shrink: 0;
@@ -1141,17 +1168,28 @@ details[open] .lectures-summary::after {
 }
 .fv-block:last-child { border-bottom: none; }
 
-.fv-block pre {
+.fv-code-editor {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0;
-  padding: 1rem 1.25rem 0.75rem;
-  background: #f8fbfc;
-  font-family: "Fira Code", "Cascadia Code", Consolas, monospace;
+  padding: 1rem 1.25rem;
+  background: #0f1923;
+  color: #c9e2ec;
+  font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
   font-size: 0.82rem;
-  line-height: 1.6;
-  color: #1a2e38;
-  white-space: pre-wrap;
-  word-break: break-word;
+  line-height: 1.65;
+  white-space: pre;
+  resize: none;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  min-height: 2.5rem;
   tab-size: 2;
+}
+.fv-code-editor:focus {
+  background: #111f2e;
+  box-shadow: inset 0 0 0 2px #1b7a5e;
 }
 
 .fv-run-btn {
