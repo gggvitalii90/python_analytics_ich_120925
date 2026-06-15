@@ -45,12 +45,3 @@ pytest-cache-files-*/
 SQL/sample_airbnb*.csv
 SQL/ich.bookings.csv
 _db_export/
-
-# Large notebook data CSVs (>5MB) — local only, keep on disk but don't track in git
-data/AB_NYC_2019.csv
-data/Devideos.csv
-data/KaggleV2-May-2016.csv
-data/lyft_cab_rides.csv
-data/ncr_ride_bookings.csv
-data/spotify_songs.csv
-data/uber_cab_rides.csv
