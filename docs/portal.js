@@ -50,11 +50,11 @@ const binderUrl = (path) =>
   `https://mybinder.org/v2/gh/${owner}/${repo}/${branch}?urlpath=lab/tree/${encodePath(path)}`;
 
 const categoryMeta = {
-  lessons: { title: "Лекции", order: 1 },
-  practice: { title: "Практика", order: 2 },
-  homework: { title: "Домашние задания", order: 3 },
-  summary: { title: "Сводные уроки", order: 4 },
-  extra: { title: "Дополнительно", order: 5 },
+  lessons:  { title: "Лекции",           icon: "📖", order: 1 },
+  practice: { title: "Практика",          icon: "🛠️", order: 2 },
+  homework: { title: "Домашние задания",  icon: "📝", order: 3 },
+  summary:  { title: "Сводные уроки",     icon: "📋", order: 4 },
+  extra:    { title: "Дополнительно",     icon: "⭐", order: 5 },
 };
 
 const courseMeta = {
@@ -540,7 +540,7 @@ const createSection = (categoryKey, items, terms) => {
 
   const title = document.createElement("h3");
   title.className = "folder-title";
-  title.textContent = `${categoryMeta[categoryKey].title} (${items.length})`;
+  title.textContent = `${categoryMeta[categoryKey].icon} ${categoryMeta[categoryKey].title} (${items.length})`;
 
   const hint = document.createElement("p");
   hint.className = "folder-hint";
