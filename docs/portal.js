@@ -1024,6 +1024,11 @@ const renderSqlViewer = (content, container) => {
 };
 
 const captureMongoOp = (code) => {
+  // Lines starting with Cyrillic are plain-text notes — make them JS comments
+  const cleaned = code.split("\n").map(line =>
+    /^\s*[А-Яа-яёЁ]/.test(line) ? "// " + line : line
+  ).join("\n");
+
   const captured = [];
   const makeCol = (name) => {
     const self = {
@@ -1042,7 +1047,7 @@ const captureMongoOp = (code) => {
   });
   try {
     // eslint-disable-next-line no-new-func
-    new Function("db", "ISODate", code)(db, () => new Date());
+    new Function("db", "ISODate", cleaned)(db, () => new Date());
   } catch (_) { /* ignore */ }
   return captured.find(op => ["find", "aggregate", "countDocuments"].includes(op.operation)) || null;
 };

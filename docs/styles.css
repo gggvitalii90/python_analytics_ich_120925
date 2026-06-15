@@ -1197,8 +1197,10 @@ details[open] .lectures-summary::after {
   resize: none;
   border: none;
   outline: none;
-  overflow: hidden;
-  min-height: 2.5rem;
+  overflow-y: auto;
+  overflow-x: auto;
+  min-height: 3rem;
+  max-height: 380px;
   tab-size: 2;
 }
 .fv-code-editor:focus {
