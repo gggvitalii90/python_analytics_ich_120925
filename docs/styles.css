@@ -572,6 +572,20 @@ h1 {
   color: #0c6668;
 }
 
+.row-btn-mysql {
+  background: #e8f0fd;
+  border-color: #b8ccf5;
+  color: #1a4db5;
+  font-weight: 700;
+}
+
+.row-btn-mongo {
+  background: #e8f5ee;
+  border-color: #a8ddb8;
+  color: #1b7a3e;
+  font-weight: 700;
+}
+
 .row-btn-colab {
   background: #fff3e8;
   border-color: #ffd3ad;
@@ -1174,7 +1188,7 @@ details[open] .lectures-summary::after {
   box-sizing: border-box;
   margin: 0;
   padding: 1rem 1.25rem;
-  background: #0f1923;
+  background: #1a2b3a;
   color: #c9e2ec;
   font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
   font-size: 0.82rem;
@@ -1188,7 +1202,7 @@ details[open] .lectures-summary::after {
   tab-size: 2;
 }
 .fv-code-editor:focus {
-  background: #111f2e;
+  background: #1e3248;
   box-shadow: inset 0 0 0 2px #1b7a5e;
 }
 

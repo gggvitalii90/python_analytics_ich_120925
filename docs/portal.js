@@ -1198,12 +1198,31 @@ const renderSqlView = () => {
       const actions = document.createElement("div");
       actions.className = "nb-actions";
 
+      const isMongo = file.endsWith(".mongodb.js");
+      const githubUrl = `https://github.com/${owner}/${repo}/blob/${branch}/docs/sql/${file}`;
+      const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/docs/sql/${encodeURIComponent(file)}`;
+
+      const ghLink = document.createElement("a");
+      ghLink.className = "row-btn";
+      ghLink.href = githubUrl;
+      ghLink.target = "_blank";
+      ghLink.rel = "noreferrer";
+      ghLink.textContent = "GitHub";
+
+      const dlLink = document.createElement("a");
+      dlLink.className = "row-btn";
+      dlLink.href = rawUrl;
+      dlLink.setAttribute("download", file);
+      dlLink.textContent = "Скачать";
+
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "row-btn row-btn-accent";
-      btn.textContent = "Открыть";
+      btn.className = isMongo ? "row-btn row-btn-mongo" : "row-btn row-btn-mysql";
+      btn.textContent = isMongo ? "MongoDB" : "MySQL";
       btn.addEventListener("click", () => openFileViewer(`sql/${encodeURIComponent(file)}`, fileTitle));
 
+      actions.appendChild(ghLink);
+      actions.appendChild(dlLink);
       actions.appendChild(btn);
       row.appendChild(name);
       row.appendChild(path);
