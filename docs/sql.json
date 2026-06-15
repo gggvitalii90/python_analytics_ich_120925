@@ -38,10 +38,10 @@
       "title": "MongoDB — занятия",
       "icon": "🍃",
       "files": [
-        { "title": "MongoDB — запись 04.02.2026", "file": "2026.02.04_mongo_write.mongodb.js" },
-        { "title": "MongoDB — запись PR 06.02.2026", "file": "2026.02.06_mongo_write_pr.mongodb.js" },
-        { "title": "MongoDB Atlas Clusters 11.02.2026", "file": "2026.02.11_mongo_atlas_Clusters0.mongodb.js" },
-        { "title": "MongoDB — практика 25.02.2026", "file": "2026.02.25_mongo_pr.mongodb.js" }
+        { "title": "MongoDB — запись 04.02.2026", "file": "2026.02.04_mongo_write.mongodb.js", "runnable": false },
+        { "title": "MongoDB — запись PR 06.02.2026", "file": "2026.02.06_mongo_write_pr.mongodb.js", "runnable": false },
+        { "title": "MongoDB Atlas Clusters 11.02.2026", "file": "2026.02.11_mongo_atlas_Clusters0.mongodb.js", "runnable": true },
+        { "title": "MongoDB — практика 25.02.2026", "file": "2026.02.25_mongo_pr.mongodb.js", "runnable": true }
       ]
     }
   ]

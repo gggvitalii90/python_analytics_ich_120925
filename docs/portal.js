@@ -1183,7 +1183,7 @@ const renderSqlView = () => {
     const rows = document.createElement("div");
     rows.className = "nb-rows";
 
-    group.files.forEach(({ title: fileTitle, file }) => {
+    group.files.forEach(({ title: fileTitle, file, runnable }) => {
       const row = document.createElement("article");
       row.className = "nb-row";
 
@@ -1216,9 +1216,20 @@ const renderSqlView = () => {
       dlLink.textContent = "Скачать";
 
       const btn = document.createElement("button");
+      let btnClass, btnText;
+      if (!isMongo) {
+        btnClass = "row-btn row-btn-mysql";
+        btnText = "MySQL";
+      } else if (runnable) {
+        btnClass = "row-btn row-btn-mongo";
+        btnText = "MongoDB";
+      } else {
+        btnClass = "row-btn";
+        btnText = "Просмотр";
+      }
       btn.type = "button";
-      btn.className = isMongo ? "row-btn row-btn-mongo" : "row-btn row-btn-mysql";
-      btn.textContent = isMongo ? "MongoDB" : "MySQL";
+      btn.className = btnClass;
+      btn.textContent = btnText;
       btn.addEventListener("click", () => openFileViewer(`sql/${encodeURIComponent(file)}`, fileTitle));
 
       actions.appendChild(ghLink);
