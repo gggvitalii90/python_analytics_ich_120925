@@ -41,6 +41,7 @@ pytest-cache-files-*/
 *.mp4
 *.mov
 
-# Large SQL data files (not needed in repo)
-SQL/sample_airbnb.listingsAndReviews.csv
+# Large data files — local only, not needed in repo
+SQL/sample_airbnb*.csv
 SQL/ich.bookings.csv
+_db_export/
