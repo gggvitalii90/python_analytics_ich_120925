@@ -57,7 +57,7 @@ db.getCollection('Spotify_Youtube').aggregate(
 from pymongo import MongoClient
 
 client = MongoClient(
-    "mongodb://ich1:password@mongo.itcareerhub.de/?readPreference=primary&ssl=false&authMechanism=DEFAULT&authSource=ich"
+    "mongodb://YOUR_USER:YOUR_PASSWORD@YOUR_HOST/?readPreference=primary&ssl=false&authMechanism=DEFAULT&authSource=ich"
 )
 db = client["ich"]
 coll = db["Spotify_Youtube"]
@@ -82,7 +82,7 @@ top20spotify = client['ich']['Spotify_Youtube'].aggregate(
 )
 
 edit_client = MongoClient(
-    "mongodb://ich_editor:verystrongpassword@mongo.itcareerhub.de/?readPreference=primary&ssl=false&authSource=ich_edit"
+    "mongodb://YOUR_EDITOR_USER:YOUR_PASSWORD@YOUR_HOST/?readPreference=primary&ssl=false&authSource=ich_edit"
 )
 edit_db = edit_client["ich_edit"]
 

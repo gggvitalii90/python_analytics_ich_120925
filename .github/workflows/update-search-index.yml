@@ -7,6 +7,8 @@ on:
     paths:
       - "*.ipynb"
       - "**/*.ipynb"
+      - "docs/sql/*.sql"
+      - "docs/sql/*.mongodb.js"
       - "scripts/build_search_index.py"
       - ".github/workflows/update-search-index.yml"
   workflow_dispatch:

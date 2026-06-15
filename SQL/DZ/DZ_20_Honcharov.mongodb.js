@@ -81,7 +81,7 @@ ORDER BY c.customer_id, p.payment_date DESC;
 MongoDB:
 
 Работаем с коллекцией sample_data.restaurants, подключение:
-mongodb://ich1:password@3.67.41.21:27017/?readPreference=primary&ssl=false&authMechanism=DEFAULT&authSource=ich
+mongodb://YOUR_USER:YOUR_PASSWORD@YOUR_HOST:27017/?readPreference=primary&ssl=false&authMechanism=DEFAULT&authSource=ich
 
 /*
 6. Найти рестораны на 'Staten Island' в названии которых есть слово pizza (Pizza и PIZZA тоже считаются)
