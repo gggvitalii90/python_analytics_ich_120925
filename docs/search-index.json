@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-06-16T00:51:17.529037+00:00",
-    "notebookCount": 205,
+    "generatedAt": "2026-06-17T09:11:27.744126+00:00",
+    "notebookCount": 209,
     "sqlCount": 30
   },
   "notebooks": [
@@ -1466,6 +1466,84 @@
           "cell": 27,
           "type": "code",
           "text": "# Постройте кривые обучения и сделайте вывод о недообученности/переобученности модели\n# (Синтаксис в файле \"Переобучение и недообучение\" - п.1.1. - Кривые обучения)\nplot_learning_curve(model, X, y, title='Learning Curves for Logistic Regression')\nprint('Если train accuracy заметно выше validation accuracy, модель склонна к переобучению.')\nprint('Если обе кривые низкие и близкие друг к другу, это признак недообучения.')"
+        }
+      ]
+    },
+    {
+      "name": "HW_23_students.ipynb",
+      "path": "DZ_python_DA/HW_23_students.ipynb",
+      "course": "analytics",
+      "searchText": "HW_23_students.ipynb DZ_python_DA/HW_23_students.ipynb # <b><font color='teal'>Homework 23</font></b> # Импорт библиотек Задача 1. Подгоните полином к набору точек данных и постройте график результатов. Используйте функцию np.polyfit. N = 100 # Это независимая переменная, по которой мы будем считать y x = np.linspace(-10, 10, N) # Это зависимая переменная, мы считаем ее на основании полинома + добавляем немного \"шума\" в данные y = 3 * x**3 + 2 * x**2 + x + np.random.normal(0, 100, N) # Наша цель - найти полином, который оптимально описывает общую зависимость между x и y. # Вычислите коэффициенты полинома с помощью функции np.polyfit # Данная функция принимает следующие параметры: # - x - независимая переменная # - y - зависимая переменная # - deg - степень полинома # Результат запишите в переменную coef # Создайте функцию полинома в переменную func # Используйте функцию np.poly1d с параметром coef # В переменную y_func вычислите значения с помощью новой функции на основании переменной x # Постройте график получившейся функции (plot) + график изначальных точек (scatterplot) на одной системе координат Задача 2. На основании датасета titanic создайте возрастные группы и рассчитайте коэффициент выживаемости для каждой комбинации возрастной группы и класса. # Загрузите датасет titanic из библиотеки seaborn в переменную df_titanic # В список bins запишите границы возрастов # В список labels запишите названия для групп # С помощью функции pd.cut() создайте новый столбец age_group и запишите туда возрастные группы # Коэффициент выживаемости - это доля пассажиров, которые выжили в каждой группе.\\ # В переменную survived_rate вычислите коэффициент выживаемости для каждой возрастной группы и класса внутри группы",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='teal'>Homework 23</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "Задача 1. Подгоните полином к набору точек данных и постройте график результатов. Используйте функцию np.polyfit."
+        },
+        {
+          "cell": 4,
+          "type": "code",
+          "text": "N = 100\n# Это независимая переменная, по которой мы будем считать y\nx = np.linspace(-10, 10, N)\n# Это зависимая переменная, мы считаем ее на основании полинома + добавляем немного \"шума\" в данные\ny = 3 * x**3 + 2 * x**2 + x + np.random.normal(0, 100, N)\n# Наша цель - найти полином, который оптимально описывает общую зависимость между x и y."
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# Вычислите коэффициенты полинома с помощью функции np.polyfit\n# Данная функция принимает следующие параметры:\n# - x - независимая переменная\n# - y - зависимая переменная\n# - deg - степень полинома\n# Результат запишите в переменную coef"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# Создайте функцию полинома в переменную func\n# Используйте функцию np.poly1d с параметром coef"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# В переменную y_func вычислите значения с помощью новой функции на основании переменной x"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "# Постройте график получившейся функции (plot) + график изначальных точек (scatterplot) на одной системе координат"
+        },
+        {
+          "cell": 9,
+          "type": "markdown",
+          "text": "Задача 2. На основании датасета titanic создайте возрастные группы и рассчитайте коэффициент выживаемости для каждой комбинации возрастной группы и класса."
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Загрузите датасет titanic из библиотеки seaborn в переменную df_titanic"
+        },
+        {
+          "cell": 11,
+          "type": "code",
+          "text": "# В список bins запишите границы возрастов"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "# В список labels запишите названия для групп"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "# С помощью функции pd.cut() создайте новый столбец age_group и запишите туда возрастные группы"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "# Коэффициент выживаемости - это доля пассажиров, которые выжили в каждой группе.\\\n# В переменную survived_rate вычислите коэффициент выживаемости для каждой возрастной группы и класса внутри группы"
         }
       ]
     },
@@ -13419,6 +13497,1117 @@
       ]
     },
     {
+      "name": "Python for DA_L23_1-for_students.ipynb",
+      "path": "notebooks/Python for DA_L23_1-for_students.ipynb",
+      "course": "analytics",
+      "searchText": "Python for DA_L23_1-for_students.ipynb notebooks/Python for DA_L23_1-for_students.ipynb # <b><font color='skyblue'>Numpy. Revision</font></b> # Импорт библиотек import numpy as np ### <b><font color='skyblue'>1. Создание массивов</font></b> ##### <b><u><font color='skyblue'>Синтаксис</font></b></u> <b> numpy.array(object, dtype = None, copy = True, order = 'K', ndmin = 0) </b> - <b> object</b> - входные данные, обычно список или кортеж. - <b> dtype</b> - желаемый тип данных массива (необязательно). - <b> copy</b> - если True (по умолчанию), объект копируется. Если False, копирование производится только в случае необходимости. - <b> order</b> - порядок расположения в памяти ('C' для row-major, 'F' для column-major, 'A' - как в исходном объекте, 'K' - как в исходных данных в памяти). - <b> ndmin</b> - указывает минимальное количество измерений, которое должен иметь результирующий массив. # Демонстрация dtype a = np.array([1, 2, 3, 4, 5], dtype = 'str') a # Демонстрация copy = True/False a = np.array([1, 2, 3, 4, 5], dtype = 'float') b = np.array(a, copy = False) b[0] = 10 a, b # Демонстрация ndmin a = np.array([1,2,3], ndmin = 3) print(a.shape) a # Создание одномерного массива из списка list_data = [1, 2, 3, 4, 5] array_from_list = np.array(list_data) print(\"Массив из списка:\", array_from_list) # Создание одномерного массива из кортежа tuple_data = (6, 7, 8, 9, 10) array_from_tuple = np.array(tuple_data) print(\"Массив из кортежа:\", array_from_tuple) # Создание двумерного массива из списка списков list_of_lists = [[1, 2, 3], [4, 5, 6]] array_2d = np.array(list_of_lists) print(\"Двумерный массив из списка списков:\\n\", array_2d) ### <b><font color='skyblue'>2. Атрибуты массивов</font></b> ##### <b><font color='skyblue'>Атрибут ndim</font></b> Возвращает количество измерений (осей) массива # Создание одномерного массива array1 = np.array([1, 2, 3]) print(array1.ndim) # Создание двумерного массива array2 = np.array([[2, 3, 4], [5, 6, 7]]) print(array2.ndim) ##### <b><font color='skyblue'>Атрибут shape</font></b> Возвращает кортеж целых чисел, указывающих размер массива в каждом измерении. # Создание одномерного массива array1 = np.array([1, 2, 3]) print(array1.shape) # Создание двумерного массива array2 = np.array([[3, 4, 5], [6, 7, 8]]) print(array2.shape) ##### <b><font color='skyblue'>Атрибут size</font></b> Возвращает общее количество элементов в массиве # Создание одномерного массива array1 = np.array([1, 2, 3]) print(array1.size) # Создание двумерного массива array2 = np.array([[3, 5, 7], [8, 9, 10]]) print(array2.size) ##### <b><font color='skyblue'>Атрибут dtype</font></b> Возвращает тип данных элементов массива # Создание массива целых чисел array1 = np.array([10, 20, 30]) print(array1.dtype) # Создание массива строк array2 = np.array([\"Python\", \"NumPy\", \"Data\"]) print(array2.dtype) array2[0] = 'Assembler' array2 array2_copy = np.append(array2,['Fortran', 'Assembler']) array2_copy ##### <b><font color='skyblue'>Атрибут itemsize</font></b> Возвращает размер (в байтах) каждого элемента в массиве # Создание массива 64-битных целых чисел array1 = np.array([1, 2, 3], dtype = np.int64) print(array1.itemsize) # Создание массива 32-битных целых чисел array2 = np.array([1, 2, 3], dtype = np.int32) print(array2.itemsize) ### <b><font color='skyblue'>3. Шаблоны массивов</font></b> ##### <u><b><font color='skyblue'>np.zeros()</font></b></u> Создает массив, заполненный нулями # Создание одномерного массива нулей array1 = np.zeros(5) print(\"1D массив нулей:\", array1) # Создание двумерного массива нулей array2 = np.zeros((3, 4)) print(\"Двумерный массив нулей:\\n\", array2) ##### <b><font color='skyblue'>np.ones()</font></b> Создает массив, заполненный единицами # Создание одномерного массива единиц array1 = np.ones(5) print(\"одномерный массив единиц:\", array1) # Создание двумерного массива единиц array2 = np.ones((3, 4)) print(\"Двумерный массив единиц:\\n\", array2) ##### <b><font color='skyblue'>np.full()</font></b> Создает массив, заполненный заданным значением # Создание одномерного массива, заполненного значением 7 array1 = np.full(5, 7) print(\"Одномерный массив, заполненный значением 7:\", array1) # Создание двумерного массива, заполненного значением 3,14 array2 = np.full((3, 4), 3.14) print(\"Двумерный массив, заполненный значением 3.14:\\n\", array2) ### <b><font color='skyblue'>4. Создание последовательностей</font></b> ##### <b><font color='skyblue'>np.arange()</font></b> Генерирует массив с равномерно распределенными значениями в заданном диапазоне <b> numpy.arange([start, ]stop, [step, ]dtype = None)</b> - <b>start</b>: Начальное значение последовательности (включительно). По умолчанию равно 0. - <b>stop</b>: Конечное значение последовательности (включительно). - <b>step (шаг)</b>: Расстояние между значениями. По умолчанию равно 1. - <b>dtype (тип)</b>: Желаемый тип данных массива (необязательно). # Создание массива со значениями от 0 до 9 array1 = np.arange(10) print(\"Массив со значениями от 0 до 9:\", array1) # Создание массива со значениями от 1 до 9 array2 = np.arange(1, 10) print(\"Массив со значениями от 1 до 9:\", array2) # Создание массива со значениями от 1 до 9 с шагом 2 array3 = np.arange(1, 10, 2) print(\"Массив со значениями от 1 до 9 с шагом 2:\", array3) # Создание массива со значениями с плавающей точкой array4 = np.arange(0, 1, 0.1) print(\"Массив со значениями с плавающей точкой от 0 до 1 с шагом 0,1:\", array4) ##### <b><font color='skyblue'>np.linspace()</font></b> Генерирует массив с заданным количеством равномерно распределенных значений в заданном интервале <b> numpy.linspace(start, stop, num = 50, endpoint = True, retstep = False)</b> - <b>start</b>: Начальное значение последовательности (включительно). По умолчанию равно 0. - <b>stop</b>: Конечное значение последовательности (включительно). - <b>num</b>: Количество равномерно распределенных образцов для генерации. По умолчанию 50 - <b>endpoint</b>: Если True (по умолчанию), то stop - это последний образец. Если False, то он не включается. - <b>retstep</b>: Если True, возвращает размер шага между выборками. # Создание массива с 10 равномерно распределенными значениями от 0 до 1 array1 = np.linspace(0, 1, 10) print(\"Массив с 10 равномерно распределенными значениями от 0 до 1:\", array1) # Создание массива с 5 равномерно распределенными значениями от 1 до 10 array2 = np.linspace(1, 10, 5) print(\"Массив с 5 равномерно распределенными значениями от 1 до 10:\", array2) # Создание массива с 5 равномерно распределенными значениями от 1 до 10, исключая конечную точку array3 = np.linspace(1, 10, 5, endpoint = False) print(\"Массив с 5 равномерно распределенными значениями от 1 до 10, исключая конечную точку:\", array3) # Создание массива и возвращение размера шага array4, step = np.linspace(0, 1, 5, retstep = True) print(\"Массив с 5 равномерно расположенными значениями от 0 до 1:\", array4) print(\"Размер шага:\", step) ### <b><font color='skyblue'>5. Арифметические операции в NumPy</font></b> #### <b><font color='skyblue'>5.1. Поэлементные операции</font></b> Поэлементные операции в NumPy - это операции, которые применяются к каждому соответствующему элементу массивов. ##### <b><font color='skyblue'>Сложение</font></b> # Способ 1 a = np.array([1, 2, 3]) b = np.array([4, 5, 6]) result = a + b print(result) # Способ 2 result = np.add(a, b) print(result) ##### <b><font color='skyblue'>Вычитание</font></b> # Способ 1 result = a - b print(result) # Способ 2 result = np.subtract(a, b) print(result) ##### <b><font color='skyblue'>Умножение</font></b> # Способ 1 result = a * b print(result) # Способ 2 result = np.multiply(a, b) print(result) ##### <b><font color='skyblue'>Деление</font></b> # Способ 1 result = a / b print(result) # Способ 2 result = np.divide(a, b) print(result) ##### <b><font color='skyblue'>Возведение в степень</font></b> # Способ 1 result= a ** b print(result) # Способ 2 result = np.power(a, b) print(result) #### <b><u><font color='skyblue'>5.2. Broadcasting - трансляция</font></b></u> Позволяет выполнять арифметические операции над массивами различной формы<br> <i>Правила broadcasting’а:</i> - Массивы совместимы для broadcasting’а, если для каждой размерности их размеры либо одинаковы, либо один из них равен 1. - Результирующая форма массива - это максимальный размер по каждому измерению входных массивов. # Массив a формы (3, 1) a = np.array([[1], [2], [3]]) # Массив b формы (1, 4) b = np.array([4, 5, 6, 7]) # Передача a и b в форму (3, 4) result = a + b print(result) result = a ** b print(result) ### <b><font color='skyblue'>6. Операции над матрицами</font></b> #### <b><font color='skyblue'>6.1. Умножение матриц</font></b> <b>np.dot(), np.matmul(), @</b><br> Количество столбцов в первой матрице должно быть равно количеству строк во второй матрице. # Создание двух матриц matrix1 = np.array([[1, 2], [3, 4], [5, 6]]) matrix2 = np.array([[1, 2, 3], [4, 5, 6]]) matrix1 # Умножение матриц result = np.dot(matrix1, matrix2) print(\"Матричное умножение:\\n\", result) #### <b><font color='skyblue'>6.2. Транспонирование матрицы</font></b> <b>np.transpose(), .T</b><br> Транспонирование матрицы получается, если поменять местами ее строки и столбцы. # Создание матрицы matrix = np.array([[1, 3], [5, 7]]) matrix # Транспонирование матрицы transpose = np.transpose(matrix) print(\"Транспонирование:\\n\", transpose) ### <b><font color='skyblue'>7. Изменение формы и размера массивов</font></b> ##### <b><font color='skyblue'>reshape()</font></b> Изменяет форму массива, не изменяя его данных. Общее количество элементов должно оставаться неизменным. # 1D в 2D arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) newarr = arr.reshape(4, 3) print(\"От 1D к 2D:\\n\", newarr) # 1D в 3D newarr = arr.reshape(2, 3, 2) print(\"От 1D к 3D:\\n\", newarr) # Использование -1 для неизвестной размерности newarr = arr.reshape(2, 2, -1) print(\"Использование -1 для неизвестной размерности:\\n\", newarr) ##### <b><font color='skyblue'>resize()</font></b> Изменяет форму массива и может изменять общее количество элементов. Если новый размер больше, массив заполняется повторяющимися копиями исходных данных. # Исходный массив arr = np.array([[0, 1], [2, 3]]) arr # Изменение размера массива в большую сторону resized_arr = np.resize(arr, (2, 3)) print(\"Изменен размер массива на больший:\\n\", resized_arr) # Изменение размера массива в меньшую сторону resized_arr = np.resize(arr, (1, 4)) print(\"Изменен размер массива на меньший:\\n\", resized_arr) ##### <b><font color='skyblue'>newaxis()</font></b> Используется для увеличения размерности массива еще на одно измерение # Исходный одномерный массив arr = np.array([1, 2, 3]) # Добавление новой оси newarr = arr[:, np.newaxis] print(\"Добавление новой оси с помощью np.newaxis:\\n\", newarr) ### <b><font color='skyblue'>8. Случайные числа в NumPy</font></b> #### <b><font color='skyblue'>8.1. Генерация случайных чисел</font></b> ##### <b><font color='skyblue'>np.random.rand()</font></b> Генерирует случайные числа из равномерного распределения на интервале [0, 1) # Генерация одного случайного числа random_number = np.random.rand() print(\"Одиночное случайное число:\", random_number) # Генерация одномерного массива случайных чисел random_array_1d = np.random.rand(5) print(\"Одномерный массив случайных чисел:\", random_array_1d) # Генерация двумерного массива случайных чисел random_array_2d = np.random.rand(3, 4) print(\"Двумерный массив случайных чисел:\\n\", random_array_2d) ##### <b><font color='skyblue'>np.random.randn()</font></b> Генерирует случайные числа из стандартного нормального распределения (среднее = 0, стандартное отклонение = 1) # Генерация одного случайного числа из стандартного нормального распределения random_number = np.random.randn() print(\"Одиночное случайное число из стандартного нормального распределения:\", random_number) # Генерация одномерного массива случайных чисел из стандартного нормального распределения random_array_1d = np.random.randn(5) print(\"1D массив случайных чисел из стандартного нормального распределения:\", random_array_1d) # Генерирование двумерного массива случайных чисел из стандартного нормального распределения random_array_2d = np.random.randn(3, 4) print(\"Двумерный массив случайных чисел из стандартного нормального распределения:\\n\", random_array_2d) ##### <b><font color='skyblue'>np.random.randint()</font></b> Генерирует случайные целые числа из заданного диапазона <b>numpy.random.randint(low, high = None, size = None, dtype = int)</b> - <b>low:</b> Наименьшее целое число (включительно). - <b>high:</b> Наибольшее целое число (включительно). Если None, то диапазон будет [0, low). - <b>size:</b> Форма возвращаемого массива (необязательно). - <b>dtype:</b> Желаемый тип данных массива (необязательно, по умолчанию int) # Генерация одного случайного целого числа random_int = np.random.randint(10) print(\"Одиночное случайное целое число:\", random_int) # Генерация одномерного массива случайных целых чисел random_array_1d = np.random.randint(1, 10,10) print(\"1D массив случайных целых чисел:\", random_array_1d) # Генерирование двумерного массива случайных целых чисел random_array_2d = np.random.randint(1, 10, (3, 4)) print(\"Двумерный массив случайных целых чисел:\\n\", random_array_2d) #### <b><font color='skyblue'>8.2. Случайная выборка</font></b> Генерирует случайную выборку из заданного одномерного массива.<br> <b>numpy.random.choice(a, size = None, replace = True, p = None)</b> - <b>a:</b> Входной массив или диапазон. - <b>size:</b> Форма возвращаемого массива (необязательно). - <b>replace:</b> Выборка с повторениями или без повторений (по умолчанию True). - <b>p:</b> Вероятности, связанные с каждой записью в a (необязательно). # Создание массива arr = np.array([1, 2, 3, 4, 5]) # Случайный выбор одного элемента random_choice = np.random.choice(arr) print(\"Случайно выбранный элемент:\", random_choice) # Случайный выбор нескольких элементов с заменой random_choices = np.random.choice(arr, size = 3, replace = True) print(\"Случайно выбранные элементы с повторением:\", random_choices) # Случайный выбор нескольких элементов без замены random_choices = np.random.choice(arr, size = 3, replace = False) print(\"Случайный выбор элементов без повторений:\", random_choices) # Случайный выбор элементов с заданными вероятностями random_choices = np.random.choice(arr, size = 3, p = [0.1, 0.2, 0.3, 0.2, 0.2]) print(\"Случайно выбранные элементы с заданными вероятностями:\", random_choices) #### <b><font color='skyblue'>8.3. Воспроизводимость</font></b> Установка seed обеспечивает воспроизводимость генерируемых случайных чисел, что важно для отладки и обмена результатами. # Установка семени np.random.seed(42) # здесь может быть любое число # Генерация случайных чисел np.random.seed(42) random_array_1 = np.random.rand(10) print(\"Случайный массив 1:\", random_array_1) # Сброс затравки np.random.seed(42) # Снова генерируем случайные числа random_array_2 = np.random.rand(10) print(\"Случайный массив 2:\", random_array_2) ### <b><font color='skyblue'>9. Решение задач</font></b> ##### <b><font color='skyblue'>Задача 1</font></b> Создайте одномерный массив, преобразуйте его в двумерный, а затем “сплющите” обратно в одномерный. # Создайте одномерный массив чисел от 1 до 12 в переменную array_1d array_1d = np.arange(1, 13) print(\"Одномерный массив от 1 до 12:\", array_1d) # Преобразуйте его в двумерный array_2d array_2d = array_1d.reshape(4, 3) print(\"Двумерный массив 4x3:\\n\", array_2d) # С помощью функции flatten преобразуйте двумерный массив в одномерный flattened_array flattened_array = array_2d.flatten() print(\"Плоский массив:\\n\", flattened_array) ##### <b><font color='skyblue'>Задача 2</font></b> Сгенерируйте случайный массив и рассчитайте <u>базовую статистику</u>. # Создайте массив random_array размером 4х5 из случайных чисел random_array = np.random.randint(50,500,(4,5)) print(\"Массив случайных чисел 4x5:\\n\", random_array) # Рассчитайте: # среднее значение в переменную mean_value # стандартное отклонение в переменную std_value # минимальное значение в переменную min_value # максимальное значение в переменную max_value mean_value = np.mean(random_array) std_value = np.std(random_array) min_value = np.min(random_array) max_value = np.max(random_array) print(\"Среднее значение:\", mean_value) print(\"Стандартное отклонение:\", std_value) print(\"Минимальное значение:\", min_value) print(\"Максимальное значение:\", max_value)",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='skyblue'>Numpy. Revision</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nimport numpy as np"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>1. Создание массивов</font></b>"
+        },
+        {
+          "cell": 4,
+          "type": "markdown",
+          "text": "##### <b><u><font color='skyblue'>Синтаксис</font></b></u>\n<b> numpy.array(object, dtype = None, copy = True, order = 'K', ndmin = 0) </b>\n- <b> object</b> - входные данные, обычно список или кортеж.\n- <b> dtype</b> - желаемый тип данных массива (необязательно).\n- <b> copy</b> - если True (по умолчанию), объект копируется. Если False, копирование производится только в случае необходимости.\n- <b> order</b> - порядок расположения в памяти ('C' для row-major, 'F' для column-major, 'A' - как в исходном объекте, 'K' - как в исходных данных в памяти).\n- <b> ndmin</b> - указывает минимальное количество измерений, которое должен иметь результирующий массив."
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# Демонстрация dtype\na = np.array([1, 2, 3, 4, 5], dtype = 'str')\na"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# Демонстрация copy = True/False\na = np.array([1, 2, 3, 4, 5], dtype = 'float')\nb = np.array(a, copy = False)\nb[0] = 10\na, b"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# Демонстрация ndmin\na = np.array([1,2,3], ndmin = 3)\nprint(a.shape)\na"
+        },
+        {
+          "cell": 8,
+          "type": "code",
+          "text": "# Создание одномерного массива из списка\nlist_data = [1, 2, 3, 4, 5]\narray_from_list = np.array(list_data)\nprint(\"Массив из списка:\", array_from_list)"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# Создание одномерного массива из кортежа\ntuple_data = (6, 7, 8, 9, 10)\narray_from_tuple = np.array(tuple_data)\nprint(\"Массив из кортежа:\", array_from_tuple)"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Создание двумерного массива из списка списков\nlist_of_lists = [[1, 2, 3], [4, 5, 6]]\narray_2d = np.array(list_of_lists)\nprint(\"Двумерный массив из списка списков:\\n\", array_2d)"
+        },
+        {
+          "cell": 11,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>2. Атрибуты массивов</font></b>"
+        },
+        {
+          "cell": 12,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Атрибут ndim</font></b>\nВозвращает количество измерений (осей) массива"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "# Создание одномерного массива\narray1 = np.array([1, 2, 3])\nprint(array1.ndim)"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "# Создание двумерного массива\narray2 = np.array([[2, 3, 4], [5, 6, 7]])\nprint(array2.ndim)"
+        },
+        {
+          "cell": 15,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Атрибут shape</font></b>\nВозвращает кортеж целых чисел, указывающих размер массива в каждом измерении."
+        },
+        {
+          "cell": 16,
+          "type": "code",
+          "text": "# Создание одномерного массива\narray1 = np.array([1, 2, 3])\nprint(array1.shape)"
+        },
+        {
+          "cell": 17,
+          "type": "code",
+          "text": "# Создание двумерного массива\narray2 = np.array([[3, 4, 5], [6, 7, 8]])\nprint(array2.shape)"
+        },
+        {
+          "cell": 18,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Атрибут size</font></b>\nВозвращает общее количество элементов в массиве"
+        },
+        {
+          "cell": 19,
+          "type": "code",
+          "text": "# Создание одномерного массива\narray1 = np.array([1, 2, 3])\nprint(array1.size)"
+        },
+        {
+          "cell": 20,
+          "type": "code",
+          "text": "# Создание двумерного массива\narray2 = np.array([[3, 5, 7], [8, 9, 10]])\nprint(array2.size)"
+        },
+        {
+          "cell": 21,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Атрибут dtype</font></b>\nВозвращает тип данных элементов массива"
+        },
+        {
+          "cell": 22,
+          "type": "code",
+          "text": "# Создание массива целых чисел\narray1 = np.array([10, 20, 30])\nprint(array1.dtype)"
+        },
+        {
+          "cell": 23,
+          "type": "code",
+          "text": "# Создание массива строк\narray2 = np.array([\"Python\", \"NumPy\", \"Data\"])\nprint(array2.dtype)"
+        },
+        {
+          "cell": 24,
+          "type": "code",
+          "text": "array2[0] = 'Assembler'\narray2"
+        },
+        {
+          "cell": 25,
+          "type": "code",
+          "text": "array2_copy = np.append(array2,['Fortran', 'Assembler'])\narray2_copy"
+        },
+        {
+          "cell": 26,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Атрибут itemsize</font></b>\nВозвращает размер (в байтах) каждого элемента в массиве"
+        },
+        {
+          "cell": 27,
+          "type": "code",
+          "text": "# Создание массива 64-битных целых чисел\narray1 = np.array([1, 2, 3], dtype = np.int64)\nprint(array1.itemsize)"
+        },
+        {
+          "cell": 28,
+          "type": "code",
+          "text": "# Создание массива 32-битных целых чисел\narray2 = np.array([1, 2, 3], dtype = np.int32)\nprint(array2.itemsize)"
+        },
+        {
+          "cell": 29,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>3. Шаблоны массивов</font></b>"
+        },
+        {
+          "cell": 30,
+          "type": "markdown",
+          "text": "##### <u><b><font color='skyblue'>np.zeros()</font></b></u>\nСоздает массив, заполненный нулями"
+        },
+        {
+          "cell": 31,
+          "type": "code",
+          "text": "# Создание одномерного массива нулей\narray1 = np.zeros(5)\nprint(\"1D массив нулей:\", array1)"
+        },
+        {
+          "cell": 32,
+          "type": "code",
+          "text": "# Создание двумерного массива нулей\narray2 = np.zeros((3, 4))\nprint(\"Двумерный массив нулей:\\n\", array2)"
+        },
+        {
+          "cell": 33,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>np.ones()</font></b>\nСоздает массив, заполненный единицами"
+        },
+        {
+          "cell": 34,
+          "type": "code",
+          "text": "# Создание одномерного массива единиц\narray1 = np.ones(5)\nprint(\"одномерный массив единиц:\", array1)"
+        },
+        {
+          "cell": 35,
+          "type": "code",
+          "text": "# Создание двумерного массива единиц\narray2 = np.ones((3, 4))\nprint(\"Двумерный массив единиц:\\n\", array2)"
+        },
+        {
+          "cell": 36,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>np.full()</font></b>\nСоздает массив, заполненный заданным значением"
+        },
+        {
+          "cell": 37,
+          "type": "code",
+          "text": "# Создание одномерного массива, заполненного значением 7\narray1 = np.full(5, 7)\nprint(\"Одномерный массив, заполненный значением 7:\", array1)"
+        },
+        {
+          "cell": 38,
+          "type": "code",
+          "text": "# Создание двумерного массива, заполненного значением 3,14\narray2 = np.full((3, 4), 3.14)\nprint(\"Двумерный массив, заполненный значением 3.14:\\n\", array2)"
+        },
+        {
+          "cell": 39,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>4. Создание последовательностей</font></b>"
+        },
+        {
+          "cell": 40,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>np.arange()</font></b>\nГенерирует массив с равномерно распределенными значениями в заданном диапазоне"
+        },
+        {
+          "cell": 41,
+          "type": "markdown",
+          "text": "<b> numpy.arange([start, ]stop, [step, ]dtype = None)</b>\n- <b>start</b>: Начальное значение последовательности (включительно). По умолчанию равно 0.\n- <b>stop</b>: Конечное значение последовательности (включительно).\n- <b>step (шаг)</b>: Расстояние между значениями. По умолчанию равно 1.\n- <b>dtype (тип)</b>: Желаемый тип данных массива (необязательно)."
+        },
+        {
+          "cell": 42,
+          "type": "code",
+          "text": "# Создание массива со значениями от 0 до 9\narray1 = np.arange(10)\nprint(\"Массив со значениями от 0 до 9:\", array1)"
+        },
+        {
+          "cell": 43,
+          "type": "code",
+          "text": "# Создание массива со значениями от 1 до 9\narray2 = np.arange(1, 10)\nprint(\"Массив со значениями от 1 до 9:\", array2)"
+        },
+        {
+          "cell": 44,
+          "type": "code",
+          "text": "# Создание массива со значениями от 1 до 9 с шагом 2\narray3 = np.arange(1, 10, 2)\nprint(\"Массив со значениями от 1 до 9 с шагом 2:\", array3)"
+        },
+        {
+          "cell": 45,
+          "type": "code",
+          "text": "# Создание массива со значениями с плавающей точкой\narray4 = np.arange(0, 1, 0.1)\nprint(\"Массив со значениями с плавающей точкой от 0 до 1 с шагом 0,1:\", array4)"
+        },
+        {
+          "cell": 46,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>np.linspace()</font></b>\nГенерирует массив с заданным количеством равномерно распределенных значений в заданном интервале"
+        },
+        {
+          "cell": 47,
+          "type": "markdown",
+          "text": "<b> numpy.linspace(start, stop, num = 50, endpoint = True, retstep = False)</b>\n- <b>start</b>: Начальное значение последовательности (включительно). По умолчанию равно 0.\n- <b>stop</b>: Конечное значение последовательности (включительно).\n- <b>num</b>: Количество равномерно распределенных образцов для генерации. По умолчанию 50\n- <b>endpoint</b>: Если True (по умолчанию), то stop - это последний образец. Если False, то он не включается.\n- <b>retstep</b>: Если True, возвращает размер шага между выборками."
+        },
+        {
+          "cell": 48,
+          "type": "code",
+          "text": "# Создание массива с 10 равномерно распределенными значениями от 0 до 1\narray1 = np.linspace(0, 1, 10)\nprint(\"Массив с 10 равномерно распределенными значениями от 0 до 1:\", array1)"
+        },
+        {
+          "cell": 49,
+          "type": "code",
+          "text": "# Создание массива с 5 равномерно распределенными значениями от 1 до 10\narray2 = np.linspace(1, 10, 5)\nprint(\"Массив с 5 равномерно распределенными значениями от 1 до 10:\", array2)"
+        },
+        {
+          "cell": 50,
+          "type": "code",
+          "text": "# Создание массива с 5 равномерно распределенными значениями от 1 до 10, исключая конечную точку\narray3 = np.linspace(1, 10, 5, endpoint = False)\nprint(\"Массив с 5 равномерно распределенными значениями от 1 до 10, исключая конечную точку:\", array3)"
+        },
+        {
+          "cell": 51,
+          "type": "code",
+          "text": "# Создание массива и возвращение размера шага\narray4, step = np.linspace(0, 1, 5, retstep = True)\nprint(\"Массив с 5 равномерно расположенными значениями от 0 до 1:\", array4)\nprint(\"Размер шага:\", step)"
+        },
+        {
+          "cell": 52,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>5. Арифметические операции в NumPy</font></b>"
+        },
+        {
+          "cell": 53,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>5.1. Поэлементные операции</font></b>\nПоэлементные операции в NumPy - это операции, которые применяются к каждому соответствующему элементу массивов."
+        },
+        {
+          "cell": 54,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Сложение</font></b>"
+        },
+        {
+          "cell": 55,
+          "type": "code",
+          "text": "# Способ 1\na = np.array([1, 2, 3])\nb = np.array([4, 5, 6])\nresult = a + b\nprint(result)"
+        },
+        {
+          "cell": 56,
+          "type": "code",
+          "text": "# Способ 2\nresult = np.add(a, b)\nprint(result)"
+        },
+        {
+          "cell": 57,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Вычитание</font></b>"
+        },
+        {
+          "cell": 58,
+          "type": "code",
+          "text": "# Способ 1\nresult = a - b\nprint(result)"
+        },
+        {
+          "cell": 59,
+          "type": "code",
+          "text": "# Способ 2\nresult = np.subtract(a, b)\nprint(result)"
+        },
+        {
+          "cell": 60,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Умножение</font></b>"
+        },
+        {
+          "cell": 61,
+          "type": "code",
+          "text": "# Способ 1\nresult = a * b\nprint(result)"
+        },
+        {
+          "cell": 62,
+          "type": "code",
+          "text": "# Способ 2\nresult = np.multiply(a, b)\nprint(result)"
+        },
+        {
+          "cell": 63,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Деление</font></b>"
+        },
+        {
+          "cell": 64,
+          "type": "code",
+          "text": "# Способ 1\nresult = a / b\nprint(result)"
+        },
+        {
+          "cell": 65,
+          "type": "code",
+          "text": "# Способ 2\nresult = np.divide(a, b)\nprint(result)"
+        },
+        {
+          "cell": 66,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Возведение в степень</font></b>"
+        },
+        {
+          "cell": 67,
+          "type": "code",
+          "text": "# Способ 1\nresult= a ** b\nprint(result)"
+        },
+        {
+          "cell": 68,
+          "type": "code",
+          "text": "# Способ 2\nresult = np.power(a, b)\nprint(result)"
+        },
+        {
+          "cell": 69,
+          "type": "markdown",
+          "text": "#### <b><u><font color='skyblue'>5.2. Broadcasting - трансляция</font></b></u>\nПозволяет выполнять арифметические операции над массивами различной формы<br>\n<i>Правила broadcasting’а:</i>\n- Массивы совместимы для broadcasting’а, если для каждой размерности их размеры либо одинаковы, либо один из них равен 1.\n- Результирующая форма массива - это максимальный размер по каждому измерению входных массивов."
+        },
+        {
+          "cell": 70,
+          "type": "code",
+          "text": "# Массив a формы (3, 1)\na = np.array([[1], [2], [3]])"
+        },
+        {
+          "cell": 71,
+          "type": "code",
+          "text": "# Массив b формы (1, 4)\nb = np.array([4, 5, 6, 7])"
+        },
+        {
+          "cell": 72,
+          "type": "code",
+          "text": "# Передача a и b в форму (3, 4)\nresult = a + b\nprint(result)"
+        },
+        {
+          "cell": 73,
+          "type": "code",
+          "text": "result = a ** b\nprint(result)"
+        },
+        {
+          "cell": 74,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>6. Операции над матрицами</font></b>"
+        },
+        {
+          "cell": 75,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>6.1. Умножение матриц</font></b>\n<b>np.dot(), np.matmul(), @</b><br>\nКоличество столбцов в первой матрице должно быть равно количеству строк во второй матрице."
+        },
+        {
+          "cell": 76,
+          "type": "code",
+          "text": "# Создание двух матриц\nmatrix1 = np.array([[1, 2], [3, 4], [5, 6]])\nmatrix2 = np.array([[1, 2, 3], [4, 5, 6]])\nmatrix1"
+        },
+        {
+          "cell": 77,
+          "type": "code",
+          "text": "# Умножение матриц\nresult = np.dot(matrix1, matrix2)\nprint(\"Матричное умножение:\\n\", result)"
+        },
+        {
+          "cell": 78,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>6.2. Транспонирование матрицы</font></b>\n<b>np.transpose(), .T</b><br>\nТранспонирование матрицы получается, если поменять местами ее строки и столбцы."
+        },
+        {
+          "cell": 79,
+          "type": "code",
+          "text": "# Создание матрицы\nmatrix = np.array([[1, 3], [5, 7]])\nmatrix"
+        },
+        {
+          "cell": 80,
+          "type": "code",
+          "text": "# Транспонирование матрицы\ntranspose = np.transpose(matrix)\nprint(\"Транспонирование:\\n\", transpose)"
+        },
+        {
+          "cell": 81,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>7. Изменение формы и размера массивов</font></b>"
+        },
+        {
+          "cell": 82,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>reshape()</font></b>\nИзменяет форму массива, не изменяя его данных. Общее количество элементов должно оставаться неизменным."
+        },
+        {
+          "cell": 83,
+          "type": "code",
+          "text": "# 1D в 2D\narr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])\nnewarr = arr.reshape(4, 3)\nprint(\"От 1D к 2D:\\n\", newarr)"
+        },
+        {
+          "cell": 84,
+          "type": "code",
+          "text": "# 1D в 3D\nnewarr = arr.reshape(2, 3, 2)\nprint(\"От 1D к 3D:\\n\", newarr)"
+        },
+        {
+          "cell": 85,
+          "type": "code",
+          "text": "# Использование -1 для неизвестной размерности\nnewarr = arr.reshape(2, 2, -1)\nprint(\"Использование -1 для неизвестной размерности:\\n\", newarr)"
+        },
+        {
+          "cell": 86,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>resize()</font></b>\nИзменяет форму массива и может изменять общее количество элементов. Если новый размер больше, массив заполняется повторяющимися копиями исходных данных."
+        },
+        {
+          "cell": 87,
+          "type": "code",
+          "text": "# Исходный массив\narr = np.array([[0, 1], [2, 3]])\narr"
+        },
+        {
+          "cell": 88,
+          "type": "code",
+          "text": "# Изменение размера массива в большую сторону\nresized_arr = np.resize(arr, (2, 3))\nprint(\"Изменен размер массива на больший:\\n\", resized_arr)"
+        },
+        {
+          "cell": 89,
+          "type": "code",
+          "text": "# Изменение размера массива в меньшую сторону\nresized_arr = np.resize(arr, (1, 4))\nprint(\"Изменен размер массива на меньший:\\n\", resized_arr)"
+        },
+        {
+          "cell": 90,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>newaxis()</font></b>\nИспользуется для увеличения размерности массива еще на одно измерение"
+        },
+        {
+          "cell": 91,
+          "type": "code",
+          "text": "# Исходный одномерный массив\narr = np.array([1, 2, 3])"
+        },
+        {
+          "cell": 92,
+          "type": "code",
+          "text": "# Добавление новой оси\nnewarr = arr[:, np.newaxis]\nprint(\"Добавление новой оси с помощью np.newaxis:\\n\", newarr)"
+        },
+        {
+          "cell": 93,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>8. Случайные числа в NumPy</font></b>"
+        },
+        {
+          "cell": 94,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>8.1. Генерация случайных чисел</font></b>"
+        },
+        {
+          "cell": 95,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>np.random.rand()</font></b>\nГенерирует случайные числа из равномерного распределения на интервале [0, 1)"
+        },
+        {
+          "cell": 96,
+          "type": "code",
+          "text": "# Генерация одного случайного числа\nrandom_number = np.random.rand()\nprint(\"Одиночное случайное число:\", random_number)"
+        },
+        {
+          "cell": 97,
+          "type": "code",
+          "text": "# Генерация одномерного массива случайных чисел\nrandom_array_1d = np.random.rand(5)\nprint(\"Одномерный массив случайных чисел:\", random_array_1d)"
+        },
+        {
+          "cell": 98,
+          "type": "code",
+          "text": "# Генерация двумерного массива случайных чисел\nrandom_array_2d = np.random.rand(3, 4)\nprint(\"Двумерный массив случайных чисел:\\n\", random_array_2d)"
+        },
+        {
+          "cell": 99,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>np.random.randn()</font></b>\nГенерирует случайные числа из стандартного нормального распределения (среднее = 0, стандартное отклонение = 1)"
+        },
+        {
+          "cell": 100,
+          "type": "code",
+          "text": "# Генерация одного случайного числа из стандартного нормального распределения\nrandom_number = np.random.randn()\nprint(\"Одиночное случайное число из стандартного нормального распределения:\", random_number)"
+        },
+        {
+          "cell": 101,
+          "type": "code",
+          "text": "# Генерация одномерного массива случайных чисел из стандартного нормального распределения\nrandom_array_1d = np.random.randn(5)\nprint(\"1D массив случайных чисел из стандартного нормального распределения:\", random_array_1d)"
+        },
+        {
+          "cell": 102,
+          "type": "code",
+          "text": "# Генерирование двумерного массива случайных чисел из стандартного нормального распределения\nrandom_array_2d = np.random.randn(3, 4)\nprint(\"Двумерный массив случайных чисел из стандартного нормального распределения:\\n\", random_array_2d)"
+        },
+        {
+          "cell": 103,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>np.random.randint()</font></b>\nГенерирует случайные целые числа из заданного диапазона\n\n<b>numpy.random.randint(low, high = None, size = None, dtype = int)</b>\n- <b>low:</b> Наименьшее целое число (включительно).\n- <b>high:</b> Наибольшее целое число (включительно). Если None, то диапазон будет [0, low).\n- <b>size:</b> Форма возвращаемого массива (необязательно).\n- <b>dtype:</b> Желаемый тип данных массива (необязательно, по умолчанию int)"
+        },
+        {
+          "cell": 104,
+          "type": "code",
+          "text": "# Генерация одного случайного целого числа\nrandom_int = np.random.randint(10)\nprint(\"Одиночное случайное целое число:\", random_int)"
+        },
+        {
+          "cell": 105,
+          "type": "code",
+          "text": "# Генерация одномерного массива случайных целых чисел\nrandom_array_1d = np.random.randint(1, 10,10)\nprint(\"1D массив случайных целых чисел:\", random_array_1d)"
+        },
+        {
+          "cell": 106,
+          "type": "code",
+          "text": "# Генерирование двумерного массива случайных целых чисел\nrandom_array_2d = np.random.randint(1, 10, (3, 4))\nprint(\"Двумерный массив случайных целых чисел:\\n\", random_array_2d)"
+        },
+        {
+          "cell": 107,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>8.2. Случайная выборка</font></b>\nГенерирует случайную выборку из заданного одномерного массива.<br>\n<b>numpy.random.choice(a, size = None, replace = True, p = None)</b>\n- <b>a:</b> Входной массив или диапазон.\n- <b>size:</b> Форма возвращаемого массива (необязательно).\n- <b>replace:</b> Выборка с повторениями или без повторений (по умолчанию True).\n- <b>p:</b> Вероятности, связанные с каждой записью в a (необязательно)."
+        },
+        {
+          "cell": 108,
+          "type": "code",
+          "text": "# Создание массива\narr = np.array([1, 2, 3, 4, 5])"
+        },
+        {
+          "cell": 109,
+          "type": "code",
+          "text": "# Случайный выбор одного элемента\nrandom_choice = np.random.choice(arr)\nprint(\"Случайно выбранный элемент:\", random_choice)"
+        },
+        {
+          "cell": 110,
+          "type": "code",
+          "text": "# Случайный выбор нескольких элементов с заменой\nrandom_choices = np.random.choice(arr, size = 3, replace = True)\nprint(\"Случайно выбранные элементы с повторением:\", random_choices)"
+        },
+        {
+          "cell": 111,
+          "type": "code",
+          "text": "# Случайный выбор нескольких элементов без замены\nrandom_choices = np.random.choice(arr, size = 3, replace = False)\nprint(\"Случайный выбор элементов без повторений:\", random_choices)"
+        },
+        {
+          "cell": 112,
+          "type": "code",
+          "text": "# Случайный выбор элементов с заданными вероятностями\nrandom_choices = np.random.choice(arr, size = 3, p = [0.1, 0.2, 0.3, 0.2, 0.2])\nprint(\"Случайно выбранные элементы с заданными вероятностями:\", random_choices)"
+        },
+        {
+          "cell": 113,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>8.3. Воспроизводимость</font></b>\nУстановка seed обеспечивает воспроизводимость генерируемых случайных чисел, что важно для отладки и обмена результатами."
+        },
+        {
+          "cell": 114,
+          "type": "code",
+          "text": "# Установка семени\nnp.random.seed(42) # здесь может быть любое число"
+        },
+        {
+          "cell": 115,
+          "type": "code",
+          "text": "# Генерация случайных чисел\nnp.random.seed(42)\nrandom_array_1 = np.random.rand(10)\nprint(\"Случайный массив 1:\", random_array_1)"
+        },
+        {
+          "cell": 116,
+          "type": "code",
+          "text": "# Сброс затравки\nnp.random.seed(42)"
+        },
+        {
+          "cell": 117,
+          "type": "code",
+          "text": "# Снова генерируем случайные числа\nrandom_array_2 = np.random.rand(10)\nprint(\"Случайный массив 2:\", random_array_2)"
+        },
+        {
+          "cell": 118,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>9. Решение задач</font></b>"
+        },
+        {
+          "cell": 119,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Задача 1</font></b>\nСоздайте одномерный массив, преобразуйте его в двумерный, а затем “сплющите” обратно в одномерный."
+        },
+        {
+          "cell": 120,
+          "type": "code",
+          "text": "# Создайте одномерный массив чисел от 1 до 12 в переменную array_1d\narray_1d = np.arange(1, 13)\nprint(\"Одномерный массив от 1 до 12:\", array_1d)"
+        },
+        {
+          "cell": 121,
+          "type": "code",
+          "text": "# Преобразуйте его в двумерный array_2d\narray_2d = array_1d.reshape(4, 3)\nprint(\"Двумерный массив 4x3:\\n\", array_2d)"
+        },
+        {
+          "cell": 122,
+          "type": "code",
+          "text": "# С помощью функции flatten преобразуйте двумерный массив в одномерный flattened_array\nflattened_array = array_2d.flatten()\nprint(\"Плоский массив:\\n\", flattened_array)"
+        },
+        {
+          "cell": 123,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Задача 2</font></b>\nСгенерируйте случайный массив и рассчитайте <u>базовую статистику</u>."
+        },
+        {
+          "cell": 124,
+          "type": "code",
+          "text": "# Создайте массив random_array размером 4х5 из случайных чисел\nrandom_array = np.random.randint(50,500,(4,5))\nprint(\"Массив случайных чисел 4x5:\\n\", random_array)"
+        },
+        {
+          "cell": 125,
+          "type": "code",
+          "text": "# Рассчитайте:\n# среднее значение в переменную mean_value\n# стандартное отклонение в переменную std_value\n# минимальное значение в переменную min_value\n# максимальное значение в переменную max_value\nmean_value = np.mean(random_array)\nstd_value = np.std(random_array)\nmin_value = np.min(random_array)\nmax_value = np.max(random_array)\nprint(\"Среднее значение:\", mean_value)\nprint(\"Стандартное отклонение:\", std_value)\nprint(\"Минимальное значение:\", min_value)\nprint(\"Максимальное значение:\", max_value)"
+        }
+      ]
+    },
+    {
+      "name": "Python for DA_L23_2-for_students.ipynb",
+      "path": "notebooks/Python for DA_L23_2-for_students.ipynb",
+      "course": "analytics",
+      "searchText": "Python for DA_L23_2-for_students.ipynb notebooks/Python for DA_L23_2-for_students.ipynb # <b><font color='skyblue'>Pandas. Revision</font></b> # Импорт библиотек import pandas as pd import numpy as np ### <b><font color='skyblue'>1. Series</font></b> ##### <b><font color='skyblue'>1.1. Создание Series</font></b> # Из списка data = [10, 20, 30, 40, 50] series = pd.Series(data) series # С помощью функций NumPy # Использование numpy.linspace() ser1 = pd.Series(np.linspace(3, 33, 3)) print(ser1) # Использование numpy.random.normal() ser2 = pd.Series(np.random.normal(0.0, 1.0, 5)) print(ser2) ##### <b><font color='skyblue'>1.2. Основные операции</font></b> # Арифметические операции series1 = pd.Series([1, 2, 3, 4, 5]) series2 = pd.Series([10, 20, 30, 40, 50]) # Сложение result= series1 + series2 print(result) # Агрегация series = pd.Series([1, 2, 3, 4, 5]) # Сумма print(series.sum()) # Среднее print(series.mean()) ##### <b><font color='skyblue'>1.3. Индексирование и нарезка</font></b> # Позиционное индексирование series = pd.Series([10, 20, 30, 40, 50]) # Доступ к первому элементу print(series[0]) # Нарезка print(series[1:4]) # Индексация на основе меток series = pd.Series([10, 20, 30, 40, 50], index = ['a', 'b', 'c', 'd', 'e']) # Доступ к элементу с меткой 'b' print(series['b']) # Нарезка с метками print(series['b':'d']) # iloc - по позиции, loc - по меткам (индексам) series = pd.Series([10, 20, 30, 40, 50], index = ['a', 'b', 'c', 'd', 'e']) print('Выбор по позиции - iloc', series.iloc[1]) print('Выбор по метке - loc', series.loc['b']) ### <b><font color='skyblue'>2. DataFrame в Pandas</font></b> #### <b><font color='skyblue'>2.1. Создание DataFrame</font></b> ##### <b><font color='skyblue'>Из словаря</font></b> data = { \"Name\": [\"Том\", \"Ник\", \"Криш\", \"Джек\"], \"Возраст\": [20, 21, 19, 18] } df = pd.DataFrame(data) df ##### <b><font color='skyblue'>Из списка списков</font></b> data = [['Tom', 20], ['Nick', 21], ['Krish', 19], ['Jack', 18]] df = pd.DataFrame(data, columns=['Name', 'Age']) df ##### <b><font color='skyblue'>Из массива numpy</font></b> data = np.array([['', 'Col1', 'Col2'], ['Row1', 1, 2], ['Row2', 3, 4]]) df = pd.DataFrame(data = data[1:, 1:], index = data[1:, 0], columns = data[0, 1:]) df data ##### <u><b><font color='skyblue'>Из файла CSV</font></b></u> df_titanic = pd.read_csv('..//data//titanic.csv') df_titanic #### <b><font color='skyblue'>2.2. Основные операции</font></b> ##### <b><font color='skyblue'>Арифметические операции</font></b> df1 = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]}) df2 = pd.DataFrame({'A': [10, 20, 30], 'B': [40, 50, 60]}) # Сложение result= df1 + df2 print(result) ##### <b><font color='skyblue'>Агрегация</font></b> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]}) # Сумма print(df.sum()) # Среднее print(df.mean()) ##### <b><font color='skyblue'>Индексирование и нарезка</font></b> # Позиционное индексирование df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]}) # Доступ к первому ряду print(df.iloc[0]) # Нарезка строк print(df.iloc[1:3]) # Индексирование на основе меток df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]}, index=['row1', 'row2', 'row3']) # Доступ к ряду по метке print(df.loc['row2']) # Нарезка строк по меткам print(df.loc['row1':'row2']) #### <u><b><font color='skyblue'>2.3. Атрибуты и методы фреймов данных</font></b></u> ##### <b><font color='skyblue'>Атрибуты</font></b> # shape - Возвращает кортеж, представляющий размерность фрейма данных. df_titanic.shape # columns - Возвращает метки столбцов DataFrame. df_titanic.columns # index - Возвращает метки строк фрейма DataFrame. df_titanic.index ##### <b><font color='skyblue'>Методы</font></b> # head(n) - Возвращает первые n строк фрейма DataFrame. df_titanic.head(5) # tail(n) - Возвращает последние n строк фрейма DataFrame. df_titanic.tail(3) # describe() - Генерирует описательную статистику фрейма DataFrame. df_titanic.describe() # info() - Предоставляет краткую информацию о DataFrame. df_titanic.info() # drop(columns) - Удаляет указанные столбцы из DataFrame. df_titanic.drop(columns = 'Parents/Children Aboard', inplace = True) del df_titanic['Siblings/Spouses Aboard'] # rename(columns): Переименовывает столбцы в DataFrame. df_titanic.rename(columns = {'Siblings/Spouses Aboard':'SSA'}, inplace = True) ### <b><font color='skyblue'>3. Очистка данных в pandas</font></b> #### <u><b><font color='skyblue'>3.1. Обработка пропущенных значений</font></b></u> ##### <b><font color='skyblue'>Удаление</font></b> # Создание одномерного массива нулей data = {'A': [1, 2, 3, None, 5], 'B': [None, 2, 3, 4, 5], 'C': [1, 2, None, None, 5]} df = pd.DataFrame(data) df_cleaned = df.dropna() print(df) print(df_cleaned) ##### <b><font color='skyblue'>Заполнение</font></b> df_filled = df.fillna(df.mean()) print(df_filled) #### <b><font color='skyblue'>3.2. Удаление дубликатов</font></b> df_no_duplicates = df.drop_duplicates() print(df_no_duplicates) #### <b><font color='skyblue'>3.3. Исправление типов данных</font></b> df_titanic['Age'] = df_titanic['Age'].astype('int') df_titanic.info() df_titanic['Sex'] = df_titanic['Sex'].astype('category') df_titanic.info() #### <b><font color='skyblue'>3.4. Переименование столбцов</font></b> # Создание одномерного массива, заполненного значением 7 array1 = np.full(5, 7) print(\"Одномерный массив, заполненный значением 7:\", array1) df.rename(columns={'A': 'Column_A', 'B': 'Column_B'}, inplace=True) print(df) ### <b><font color='skyblue'>4. Слияние и объединение в Pandas</font></b> #### <b><font color='skyblue'>4.1. merge</font></b> df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3'], 'b': ['b1', 'b2', 'b3']}) df2 = pd.DataFrame({'a': ['a1', 'a2', 'a4'], 'c': ['c1', 'c2', 'c4']}) print(\"DataFrame 1:\\n\", df1) print(\"-\"*20) print(\"DataFrame 2:\\n\", df2) print(\"-\"*20) merged_df = pd.merge(df1, df2, on = 'a') print(merged_df) ##### <b><font color='skyblue'>Типы слияний</font></b> # Внутреннее соединение: Возвращает только строки с совпадающими ключами в обоих фреймах данных. pd.merge(df1, df2, how = 'inner', on = 'a') # Левое объединение: Возвращает все строки из левого DataFrame и совпадающие строки из правого DataFrame. pd.merge(df1, df2, how = 'left', on = 'a') # Правое объединение: Возвращает все строки из правого DataFrame и совпадающие строки из левого DataFrame. pd.merge(df1, df2, how = 'right', on = 'a') # Внешнее объединение: Возвращает все строки, если есть совпадение в левом или правом DataFrame. pd.merge(df1, df2, how = 'outer', on = 'a') # Указание столбцов для слияния: df2 = df2.rename(columns = {'a':'a_'}) merged_df = pd.merge(df1, df2, left_on = 'a', right_on = 'a_') # df1.merge(df2, left_on = 'a', right_on = 'a_') print(merged_df) #### <b><font color='skyblue'>4.2. join</font></b> df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3']}, index=['i1', 'i2', 'i3']) df2 = pd.DataFrame({'b': ['b1', 'b2', 'b3']}, index=['i1', 'i2', 'i4']) print(\"DataFrame 1:\\n\", df1) print(\"-\"*20) print(\"DataFrame 2:\\n\", df2) print(\"-\"*20) joined_df = df1.join(df2, how = 'left') print(joined_df) #### <b><font color='skyblue'>4.3. Конкатенация</font></b> df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3']}) df2 = pd.DataFrame({'b': ['b1', 'b2', 'b3']}) concatenated_df = pd.concat([df1, df2], axis = 1) print('df1') print(df1) print('df2') print(df1) print('concatenated_df') print(concatenated_df) df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3']}) df2 = pd.DataFrame({'b': ['b1', 'b2', 'b3']}) concatenated_df = pd.concat([df1, df2], axis = 0) print('df1') print(df1) print('df2') print(df2) print(df1) print('concatenated_df') print(concatenated_df) ### <u><b><font color='skyblue'>5. Группировка данных и сводные таблицы в Pandas</font></b></u> #### <b><font color='skyblue'>5.1. groupby()</font></b> data = { 'Category': ['A', 'B', 'A', 'B', 'A', 'B'], 'Value': [10, 20, 30, 40, 50, 60] } df = pd.DataFrame(data) # Группируем по \"Category\" и вычисляем сумму \"Value\" grouped_df = df.groupby('Category').sum() print(grouped_df) grouped_df = df.groupby('Category').agg({'Value': ['sum', 'mean', 'max']}) print(grouped_df) #### <b><font color='skyblue'>5.2. pivot_table()</font></b> Ключевые параметры в pivot_table() - data: DataFrame для разворота. - value: Столбец(и) для агрегирования. - index: Столбец(и) для группировки по строкам. - columns: Столбец(и) для группировки по столбцам. - aggfunc: Функция(и) агрегирования (например, 'mean', 'sum'). - fill_value (заполнить значение): Значение для замены отсутствующих значений. - margins: Добавить итоговые значения всех строк/столбцов (по умолчанию False). data = { 'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'], 'B': ['one', 'one', 'two', 'two', 'one', 'one'], 'C': ['маленький', 'большой', 'маленький', 'маленький', 'большой', 'маленький'], 'D': [1, 2, 2, 3, 3, 4] } df = pd.DataFrame(data) df # Создание сводной таблицы pivot_table = pd.pivot_table(df, values = 'D', index = ['A', 'B'], columns = ['C'], aggfunc = 'sum', fill_value = 0, margins = True, margins_name = 'Total') print(pivot_table) # Создайте сводную таблицу с несколькими агрегатами pivot_table = pd.pivot_table(df, values = ['D'], index = ['A', 'C'], aggfunc = {'D': ['mean', 'sum']}) print(pivot_table) # Построение графиков по таблице pivot pivot_table = pd.pivot_table(df, values = 'D', index = 'A', columns = 'B', aggfunc = 'mean') pivot_table.plot(kind = 'bar', title = 'Средние значения по A и B') pivot_table.plot(kind = 'hist', title = 'Средние значения по A и B') ### <b><font color='skyblue'>6. Решение задач</font></b> ##### <b><font color='skyblue'>Задача 1</font></b> Создайте DataFrame из словаря, добавьте новый столбец и вычислите среднее значение столбца. # Создайте DataFrame df_scores из словаря # Три колонки: # Name - имя студента # Math - оценка по математике # Science - оценка по наукам Science df_scores = pd.DataFrame({ 'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'], 'Math': [85, 90, 78, 92, 88], 'Science': [92, 88, 80, 95, 91] }) df_scores # Добавьте колонку Total, в который вычислите сумму баллов по Math и Science df_scores['Total'] = df_scores['Math'] + df_scores['Science'] df_scores # В переменную mean_total вычислите среднее значение суммы оценок по Math и Science mean_total = df_scores['Total'].mean() print(\"Среднее значение суммы оценок по Math и Science:\", mean_total) # Демонстрация функции pd.cut bins = [70, 80, 90, 100] labels = ['good', 'excellent', 'great'] df_scores['grade'] = pd.cut(df_scores['Total'], bins = bins, labels = labels) df_scores # Демонстрация функции pd.cut bins = [100, 120, 140, 170] labels = ['good', 'excellent', 'great'] df_scores['grade'] = pd.cut(df_scores['Total'], bins = bins, labels = labels) df_scores ##### <b><font color='skyblue'>Задача 2</font></b> Фильтруйте строки на основе условия и отсортируйте DataFrame по определенному столбцу. # Создайте DataFrame df_employees из словаря # Три колонки: # Name - имя сотрудника # Age - возраст сотрудника # Salary - зарплата сотрудника df_employees = pd.DataFrame({ 'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'], 'Age': [25, 30, 35, 40, 45], 'Salary': [50000, 60000, 70000, 80000, 90000] }) df_employees # В датафрейм filtered_df отфильтруйте сотрудников возрастом старше 25 лет filtered_df = df_employees[df_employees['Age'] > 25] filtered_df # Отсортируйте датафрейм filtered_df по убыванию зарплаты # Результат запишите в переменную sorted_df sorted_df = filtered_df.sort_values(by = 'Salary', ascending = False) sorted_df",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='skyblue'>Pandas. Revision</font></b>"
+        },
+        {
+          "cell": 2,
+          "type": "code",
+          "text": "# Импорт библиотек\nimport pandas as pd\nimport numpy as np"
+        },
+        {
+          "cell": 3,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>1. Series</font></b>"
+        },
+        {
+          "cell": 4,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>1.1. Создание Series</font></b>"
+        },
+        {
+          "cell": 5,
+          "type": "code",
+          "text": "# Из списка\ndata = [10, 20, 30, 40, 50]\nseries = pd.Series(data)\nseries"
+        },
+        {
+          "cell": 6,
+          "type": "code",
+          "text": "# С помощью функций NumPy\n# Использование numpy.linspace()\nser1 = pd.Series(np.linspace(3, 33, 3))\nprint(ser1)"
+        },
+        {
+          "cell": 7,
+          "type": "code",
+          "text": "# Использование numpy.random.normal()\nser2 = pd.Series(np.random.normal(0.0, 1.0, 5))\nprint(ser2)"
+        },
+        {
+          "cell": 8,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>1.2. Основные операции</font></b>"
+        },
+        {
+          "cell": 9,
+          "type": "code",
+          "text": "# Арифметические операции\nseries1 = pd.Series([1, 2, 3, 4, 5])\nseries2 = pd.Series([10, 20, 30, 40, 50])\n\n# Сложение\nresult= series1 + series2\nprint(result)"
+        },
+        {
+          "cell": 10,
+          "type": "code",
+          "text": "# Агрегация\nseries = pd.Series([1, 2, 3, 4, 5])\n\n# Сумма\nprint(series.sum())\n\n# Среднее\nprint(series.mean())"
+        },
+        {
+          "cell": 11,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>1.3. Индексирование и нарезка</font></b>"
+        },
+        {
+          "cell": 12,
+          "type": "code",
+          "text": "# Позиционное индексирование\nseries = pd.Series([10, 20, 30, 40, 50])\n\n# Доступ к первому элементу\nprint(series[0])\n\n# Нарезка\nprint(series[1:4])"
+        },
+        {
+          "cell": 13,
+          "type": "code",
+          "text": "# Индексация на основе меток\nseries = pd.Series([10, 20, 30, 40, 50], index = ['a', 'b', 'c', 'd', 'e'])\n\n# Доступ к элементу с меткой 'b'\nprint(series['b'])\n\n# Нарезка с метками\nprint(series['b':'d'])"
+        },
+        {
+          "cell": 14,
+          "type": "code",
+          "text": "# iloc - по позиции, loc - по меткам (индексам)\nseries = pd.Series([10, 20, 30, 40, 50], index = ['a', 'b', 'c', 'd', 'e'])\n\nprint('Выбор по позиции - iloc', series.iloc[1])\nprint('Выбор по метке - loc', series.loc['b'])"
+        },
+        {
+          "cell": 15,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>2. DataFrame в Pandas</font></b>"
+        },
+        {
+          "cell": 16,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>2.1. Создание DataFrame</font></b>"
+        },
+        {
+          "cell": 17,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Из словаря</font></b>"
+        },
+        {
+          "cell": 18,
+          "type": "code",
+          "text": "data = {\n    \"Name\": [\"Том\", \"Ник\", \"Криш\", \"Джек\"],\n    \"Возраст\": [20, 21, 19, 18]\n}\ndf = pd.DataFrame(data)\ndf"
+        },
+        {
+          "cell": 19,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Из списка списков</font></b>"
+        },
+        {
+          "cell": 20,
+          "type": "code",
+          "text": "data = [['Tom', 20], ['Nick', 21], ['Krish', 19], ['Jack', 18]]\ndf = pd.DataFrame(data, columns=['Name', 'Age'])\ndf"
+        },
+        {
+          "cell": 21,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Из массива numpy</font></b>"
+        },
+        {
+          "cell": 22,
+          "type": "code",
+          "text": "data = np.array([['', 'Col1', 'Col2'], ['Row1', 1, 2], ['Row2', 3, 4]])\ndf = pd.DataFrame(data = data[1:, 1:], index = data[1:, 0], columns = data[0, 1:])\ndf"
+        },
+        {
+          "cell": 23,
+          "type": "code",
+          "text": "data"
+        },
+        {
+          "cell": 24,
+          "type": "markdown",
+          "text": "##### <u><b><font color='skyblue'>Из файла CSV</font></b></u>"
+        },
+        {
+          "cell": 25,
+          "type": "code",
+          "text": "df_titanic = pd.read_csv('..//data//titanic.csv')\ndf_titanic"
+        },
+        {
+          "cell": 26,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>2.2. Основные операции</font></b>"
+        },
+        {
+          "cell": 27,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Арифметические операции</font></b>"
+        },
+        {
+          "cell": 28,
+          "type": "code",
+          "text": "df1 = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})\ndf2 = pd.DataFrame({'A': [10, 20, 30], 'B': [40, 50, 60]})\n\n# Сложение\nresult= df1 + df2\nprint(result)"
+        },
+        {
+          "cell": 29,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Агрегация</font></b>"
+        },
+        {
+          "cell": 30,
+          "type": "code",
+          "text": "df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})\n\n# Сумма\nprint(df.sum())\n\n# Среднее\nprint(df.mean())"
+        },
+        {
+          "cell": 31,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Индексирование и нарезка</font></b>"
+        },
+        {
+          "cell": 32,
+          "type": "code",
+          "text": "# Позиционное индексирование\ndf = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})\n\n# Доступ к первому ряду\nprint(df.iloc[0])\n\n# Нарезка строк\nprint(df.iloc[1:3])"
+        },
+        {
+          "cell": 33,
+          "type": "code",
+          "text": "# Индексирование на основе меток\ndf = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]}, index=['row1', 'row2', 'row3'])\n\n# Доступ к ряду по метке\nprint(df.loc['row2'])\n\n# Нарезка строк по меткам\nprint(df.loc['row1':'row2'])"
+        },
+        {
+          "cell": 34,
+          "type": "markdown",
+          "text": "#### <u><b><font color='skyblue'>2.3. Атрибуты и методы фреймов данных</font></b></u>"
+        },
+        {
+          "cell": 35,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Атрибуты</font></b>"
+        },
+        {
+          "cell": 36,
+          "type": "code",
+          "text": "# shape - Возвращает кортеж, представляющий размерность фрейма данных.\ndf_titanic.shape"
+        },
+        {
+          "cell": 37,
+          "type": "code",
+          "text": "# columns - Возвращает метки столбцов DataFrame.\ndf_titanic.columns"
+        },
+        {
+          "cell": 38,
+          "type": "code",
+          "text": "# index - Возвращает метки строк фрейма DataFrame.\ndf_titanic.index"
+        },
+        {
+          "cell": 39,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Методы</font></b>"
+        },
+        {
+          "cell": 40,
+          "type": "code",
+          "text": "# head(n) - Возвращает первые n строк фрейма DataFrame.\ndf_titanic.head(5)"
+        },
+        {
+          "cell": 41,
+          "type": "code",
+          "text": "# tail(n) - Возвращает последние n строк фрейма DataFrame.\ndf_titanic.tail(3)"
+        },
+        {
+          "cell": 42,
+          "type": "code",
+          "text": "# describe() - Генерирует описательную статистику фрейма DataFrame.\ndf_titanic.describe()"
+        },
+        {
+          "cell": 43,
+          "type": "code",
+          "text": "# info() - Предоставляет краткую информацию о DataFrame.\ndf_titanic.info()"
+        },
+        {
+          "cell": 44,
+          "type": "code",
+          "text": "# drop(columns) - Удаляет указанные столбцы из DataFrame.\ndf_titanic.drop(columns = 'Parents/Children Aboard', inplace = True)"
+        },
+        {
+          "cell": 45,
+          "type": "code",
+          "text": "del df_titanic['Siblings/Spouses Aboard']"
+        },
+        {
+          "cell": 46,
+          "type": "code",
+          "text": "# rename(columns): Переименовывает столбцы в DataFrame.\ndf_titanic.rename(columns = {'Siblings/Spouses Aboard':'SSA'}, inplace = True)"
+        },
+        {
+          "cell": 47,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>3. Очистка данных в pandas</font></b>"
+        },
+        {
+          "cell": 48,
+          "type": "markdown",
+          "text": "#### <u><b><font color='skyblue'>3.1. Обработка пропущенных значений</font></b></u>"
+        },
+        {
+          "cell": 49,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Удаление</font></b>"
+        },
+        {
+          "cell": 50,
+          "type": "code",
+          "text": "# Создание одномерного массива нулей\ndata = {'A': [1, 2, 3, None, 5], 'B': [None, 2, 3, 4, 5], 'C': [1, 2, None, None, 5]}\ndf = pd.DataFrame(data)\ndf_cleaned = df.dropna()\nprint(df)\nprint(df_cleaned)"
+        },
+        {
+          "cell": 51,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Заполнение</font></b>"
+        },
+        {
+          "cell": 52,
+          "type": "code",
+          "text": "df_filled = df.fillna(df.mean())\nprint(df_filled)"
+        },
+        {
+          "cell": 53,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>3.2. Удаление дубликатов</font></b>"
+        },
+        {
+          "cell": 54,
+          "type": "code",
+          "text": "df_no_duplicates = df.drop_duplicates()\nprint(df_no_duplicates)"
+        },
+        {
+          "cell": 55,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>3.3. Исправление типов данных</font></b>"
+        },
+        {
+          "cell": 56,
+          "type": "code",
+          "text": "df_titanic['Age'] = df_titanic['Age'].astype('int')\ndf_titanic.info()"
+        },
+        {
+          "cell": 57,
+          "type": "code",
+          "text": "df_titanic['Sex'] = df_titanic['Sex'].astype('category')\ndf_titanic.info()"
+        },
+        {
+          "cell": 58,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>3.4. Переименование столбцов</font></b>"
+        },
+        {
+          "cell": 59,
+          "type": "code",
+          "text": "# Создание одномерного массива, заполненного значением 7\narray1 = np.full(5, 7)\nprint(\"Одномерный массив, заполненный значением 7:\", array1)"
+        },
+        {
+          "cell": 60,
+          "type": "code",
+          "text": "df.rename(columns={'A': 'Column_A', 'B': 'Column_B'}, inplace=True)\nprint(df)"
+        },
+        {
+          "cell": 61,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>4. Слияние и объединение в Pandas</font></b>"
+        },
+        {
+          "cell": 62,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>4.1. merge</font></b>"
+        },
+        {
+          "cell": 63,
+          "type": "code",
+          "text": "df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3'], 'b': ['b1', 'b2', 'b3']})\ndf2 = pd.DataFrame({'a': ['a1', 'a2', 'a4'], 'c': ['c1', 'c2', 'c4']})\nprint(\"DataFrame 1:\\n\", df1)\nprint(\"-\"*20)\nprint(\"DataFrame 2:\\n\", df2)\nprint(\"-\"*20)\nmerged_df = pd.merge(df1, df2, on = 'a')\nprint(merged_df)"
+        },
+        {
+          "cell": 64,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Типы слияний</font></b>"
+        },
+        {
+          "cell": 65,
+          "type": "code",
+          "text": "# Внутреннее соединение: Возвращает только строки с совпадающими ключами в обоих фреймах данных.\npd.merge(df1, df2, how = 'inner', on = 'a')"
+        },
+        {
+          "cell": 66,
+          "type": "code",
+          "text": "# Левое объединение: Возвращает все строки из левого DataFrame и совпадающие строки из правого DataFrame.\npd.merge(df1, df2, how = 'left', on = 'a')"
+        },
+        {
+          "cell": 67,
+          "type": "code",
+          "text": "# Правое объединение: Возвращает все строки из правого DataFrame и совпадающие строки из левого DataFrame.\npd.merge(df1, df2, how = 'right', on = 'a')"
+        },
+        {
+          "cell": 68,
+          "type": "code",
+          "text": "# Внешнее объединение: Возвращает все строки, если есть совпадение в левом или правом DataFrame.\npd.merge(df1, df2, how = 'outer', on = 'a')"
+        },
+        {
+          "cell": 69,
+          "type": "code",
+          "text": "# Указание столбцов для слияния:\ndf2 = df2.rename(columns = {'a':'a_'})\nmerged_df = pd.merge(df1, df2, left_on = 'a', right_on = 'a_')\n# df1.merge(df2, left_on = 'a', right_on = 'a_')\nprint(merged_df)"
+        },
+        {
+          "cell": 70,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>4.2. join</font></b>"
+        },
+        {
+          "cell": 71,
+          "type": "code",
+          "text": "df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3']}, index=['i1', 'i2', 'i3'])\ndf2 = pd.DataFrame({'b': ['b1', 'b2', 'b3']}, index=['i1', 'i2', 'i4'])\nprint(\"DataFrame 1:\\n\", df1)\nprint(\"-\"*20)\nprint(\"DataFrame 2:\\n\", df2)\nprint(\"-\"*20)\njoined_df = df1.join(df2, how = 'left')\nprint(joined_df)"
+        },
+        {
+          "cell": 72,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>4.3. Конкатенация</font></b>"
+        },
+        {
+          "cell": 73,
+          "type": "code",
+          "text": "df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3']})\ndf2 = pd.DataFrame({'b': ['b1', 'b2', 'b3']})\n\nconcatenated_df = pd.concat([df1, df2], axis = 1)\nprint('df1')\nprint(df1)\nprint('df2')\nprint(df1)\nprint('concatenated_df')\nprint(concatenated_df)"
+        },
+        {
+          "cell": 74,
+          "type": "code",
+          "text": "df1 = pd.DataFrame({'a': ['a1', 'a2', 'a3']})\ndf2 = pd.DataFrame({'b': ['b1', 'b2', 'b3']})\n\nconcatenated_df = pd.concat([df1, df2], axis = 0)\nprint('df1')\nprint(df1)\nprint('df2')\nprint(df2)\nprint(df1)\nprint('concatenated_df')\nprint(concatenated_df)"
+        },
+        {
+          "cell": 75,
+          "type": "markdown",
+          "text": "### <u><b><font color='skyblue'>5. Группировка данных и сводные таблицы в Pandas</font></b></u>"
+        },
+        {
+          "cell": 76,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>5.1. groupby()</font></b>"
+        },
+        {
+          "cell": 77,
+          "type": "code",
+          "text": "data = {\n    'Category': ['A', 'B', 'A', 'B', 'A', 'B'],\n    'Value': [10, 20, 30, 40, 50, 60]\n}\ndf = pd.DataFrame(data)\n\n# Группируем по \"Category\" и вычисляем сумму \"Value\"\ngrouped_df = df.groupby('Category').sum()\nprint(grouped_df)"
+        },
+        {
+          "cell": 78,
+          "type": "code",
+          "text": "grouped_df = df.groupby('Category').agg({'Value': ['sum', 'mean', 'max']})\nprint(grouped_df)"
+        },
+        {
+          "cell": 79,
+          "type": "markdown",
+          "text": "#### <b><font color='skyblue'>5.2. pivot_table()</font></b>\nКлючевые параметры в pivot_table()\n- data: DataFrame для разворота.\n- value: Столбец(и) для агрегирования.\n- index: Столбец(и) для группировки по строкам.\n- columns: Столбец(и) для группировки по столбцам.\n- aggfunc: Функция(и) агрегирования (например, 'mean', 'sum').\n- fill_value (заполнить значение): Значение для замены отсутствующих значений.\n- margins: Добавить итоговые значения всех строк/столбцов (по умолчанию False)."
+        },
+        {
+          "cell": 80,
+          "type": "code",
+          "text": "data = {\n    'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'],\n    'B': ['one', 'one', 'two', 'two', 'one', 'one'],\n    'C': ['маленький', 'большой', 'маленький', 'маленький', 'большой', 'маленький'],\n    'D': [1, 2, 2, 3, 3, 4]\n}\ndf = pd.DataFrame(data)\ndf"
+        },
+        {
+          "cell": 81,
+          "type": "code",
+          "text": "# Создание сводной таблицы\npivot_table = pd.pivot_table(df, \n                             values = 'D', \n                             index = ['A', 'B'], \n                             columns = ['C'], \n                             aggfunc = 'sum', \n                             fill_value = 0,\n                             margins = True,\n                             margins_name = 'Total')\nprint(pivot_table)"
+        },
+        {
+          "cell": 82,
+          "type": "code",
+          "text": "# Создайте сводную таблицу с несколькими агрегатами\npivot_table = pd.pivot_table(df, \n                             values = ['D'], \n                             index = ['A', 'C'], \n                             aggfunc = {'D': ['mean', 'sum']})\nprint(pivot_table)"
+        },
+        {
+          "cell": 83,
+          "type": "code",
+          "text": "# Построение графиков по таблице pivot\npivot_table = pd.pivot_table(df, \n                             values = 'D', \n                             index = 'A', \n                             columns = 'B', \n                             aggfunc = 'mean')\npivot_table.plot(kind = 'bar', title = 'Средние значения по A и B')\npivot_table.plot(kind = 'hist', title = 'Средние значения по A и B')"
+        },
+        {
+          "cell": 84,
+          "type": "markdown",
+          "text": "### <b><font color='skyblue'>6. Решение задач</font></b>"
+        },
+        {
+          "cell": 85,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Задача 1</font></b>\nСоздайте DataFrame из словаря, добавьте новый столбец и вычислите среднее значение столбца."
+        },
+        {
+          "cell": 86,
+          "type": "code",
+          "text": "# Создайте DataFrame df_scores из словаря\n# Три колонки:\n# Name - имя студента\n# Math - оценка по математике\n# Science - оценка по наукам Science\ndf_scores = pd.DataFrame({\n    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],\n    'Math': [85, 90, 78, 92, 88],\n    'Science': [92, 88, 80, 95, 91]\n})\ndf_scores"
+        },
+        {
+          "cell": 87,
+          "type": "code",
+          "text": "# Добавьте колонку Total, в который вычислите сумму баллов по Math и Science\ndf_scores['Total'] = df_scores['Math'] + df_scores['Science']\ndf_scores"
+        },
+        {
+          "cell": 88,
+          "type": "code",
+          "text": "# В переменную mean_total вычислите среднее значение суммы оценок по Math и Science\nmean_total = df_scores['Total'].mean()\nprint(\"Среднее значение суммы оценок по Math и Science:\", mean_total)"
+        },
+        {
+          "cell": 89,
+          "type": "code",
+          "text": "# Демонстрация функции pd.cut\nbins = [70, 80, 90, 100]\nlabels = ['good', 'excellent', 'great']\ndf_scores['grade'] = pd.cut(df_scores['Total'], bins = bins, labels = labels)\ndf_scores"
+        },
+        {
+          "cell": 90,
+          "type": "code",
+          "text": "# Демонстрация функции pd.cut\nbins = [100, 120, 140, 170]\nlabels = ['good', 'excellent', 'great']\ndf_scores['grade'] = pd.cut(df_scores['Total'], bins = bins, labels = labels)\ndf_scores"
+        },
+        {
+          "cell": 91,
+          "type": "markdown",
+          "text": "##### <b><font color='skyblue'>Задача 2</font></b>\nФильтруйте строки на основе условия и отсортируйте DataFrame по определенному столбцу."
+        },
+        {
+          "cell": 92,
+          "type": "code",
+          "text": "# Создайте DataFrame df_employees из словаря\n# Три колонки:\n# Name - имя сотрудника\n# Age - возраст сотрудника\n# Salary - зарплата сотрудника\ndf_employees = pd.DataFrame({\n    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],\n    'Age': [25, 30, 35, 40, 45],\n    'Salary': [50000, 60000, 70000, 80000, 90000]\n})\ndf_employees"
+        },
+        {
+          "cell": 93,
+          "type": "code",
+          "text": "# В датафрейм filtered_df отфильтруйте сотрудников возрастом старше 25 лет\nfiltered_df = df_employees[df_employees['Age'] > 25]\nfiltered_df"
+        },
+        {
+          "cell": 94,
+          "type": "code",
+          "text": "# Отсортируйте датафрейм filtered_df по убыванию зарплаты\n# Результат запишите в переменную sorted_df\nsorted_df = filtered_df.sort_values(by = 'Salary', ascending = False)\nsorted_df"
+        }
+      ]
+    },
+    {
       "name": "Python for DA_L3-1-for_students.ipynb",
       "path": "notebooks/Python for DA_L3-1-for_students.ipynb",
       "course": "analytics",
@@ -22724,6 +23913,64 @@
           "cell": 5,
           "type": "code",
           "text": "revenue = orders * avg_check\nprint(\"Выручка:\", revenue)\nmax_revenue_day = days[np.argmax(revenue)]\nprint(\"День с максимальной выручкой:\", max_revenue_day)\navg_revenue = round(np.mean(revenue), 2)\nprint(\"Средняя выручка:\", avg_revenue)\ncustomer_orders = np.round(orders / customers, 2)\nprint(\"Заказы на одного покупателя:\", customer_orders)\nsum_revenue = np.cumsum(revenue)\nprint(\"Накопленная выручка:\", sum_revenue)"
+        }
+      ]
+    },
+    {
+      "name": "Пропавший файл_students.ipynb",
+      "path": "notebooks/Пропавший файл_students.ipynb",
+      "course": "analytics",
+      "searchText": "Пропавший файл_students.ipynb notebooks/Пропавший файл_students.ipynb # <b><font color='cornflowerblue'>Сюжет игры</font></b> Ночью из дата-центра исчез файл. Логи повреждены. Известно только, что: - саботаж совершил сотрудник компании; - он оставил следы в данных; Восстановить доступ можно, если определить: - город - отдел - сотрудника - устройство - дату атаки - код операции Из этих шести частей собирается пароль. Пароль является кодом доступа к исчезнувшему файлу. <b> Задача: </b> Восстановить пароль и получить доступ к файлу. ## <b><font color='cornflowerblue'>Данные</font></b> - employees.csv - devices.csv - incidents.csv - access_logs.csv # - employees.csv # - devices.csv # - incidents.csv # - access_logs.csv employees = pd.read_csv('..//data//employees.csv') print(employees) devices = pd.read_csv('..//data//devices.csv') print(devices) incidents = pd.read_csv('..//data//incidents.csv') print(incidents) access_logs = pd.read_csv('access_logs.csv') print(access_logs) ## <b><font color='cornflowerblue'>Глава 1. Подозрительные города</font></b> <u>Система сообщает:</u> Атака произошла из города с максимальным числом инцидентов высокой критичности. <i>1 часть пароля:</i> 3 первых буквы получившегося города ## <b><font color='cornflowerblue'>Глава 2. Внутренний агент</font></b> <u>Система сообщает:</u> Подозреваемый работает в отделе, где средняя длительность доступа к системе была максимальной. <i>2 часть пароля:</i> 2 первых буквы названия отдела ## <b><font color='cornflowerblue'>Глава 3. Кто именно?</font></b> Нужно найти сотрудника, из города в первой главе, отдела во второй главе и с максимальным количеством инцидентов. <i>3 часть пароля:</i> 3 первых буквы имени сотрудника ## <b><font color='cornflowerblue'>Глава 4. Орудие преступления</font></b> Атака была проведена с устройства, которое чаще всего использовалось подозреваемым. <i>4 часть пароля:</i> номер устройства (последние 2 символа имени устройства) ## <b><font color='cornflowerblue'>Глава 5. День атаки</font></b> Файл был украден в день максимальной активности подозреваемого. Подсказка: ориентируйтесь на таблицу логов <i>5 часть пароля:</i> день (например, если это 15 мая, то берем 15) ## <b><font color='cornflowerblue'>Глава 6. Код операции</font></b> Нужно: - оставить только действия подозреваемого в день атаки; - посчитать частоты действий; - отсортировать; - взять второе по популярности действие; <i>6 часть пароля:</i> первые три символа названия операции ## <b><font color='cornflowerblue'>Финал. Пароль</font></b> Соберите все части пароля: - заглавные буквы - части пароля разделяются символом: \"-\" - получившийся пароль - код доступа к архиву \"Пропавший файл.zip\" - если Вы выполнили все задания верно, то архив откроется",
+      "matches": [
+        {
+          "cell": 1,
+          "type": "markdown",
+          "text": "# <b><font color='cornflowerblue'>Сюжет игры</font></b>\nНочью из дата-центра исчез файл.\n\nЛоги повреждены. Известно только, что:\n- саботаж совершил сотрудник компании;\n- он оставил следы в данных;\n\nВосстановить доступ можно, если определить:\n- город\n- отдел\n- сотрудника\n- устройство\n- дату атаки\n- код операции\n\nИз этих шести частей собирается пароль.\nПароль является кодом доступа к исчезнувшему файлу.\n\n<b> Задача: </b> Восстановить пароль и получить доступ к файлу."
+        },
+        {
+          "cell": 2,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Данные</font></b>\n- employees.csv\n- devices.csv\n- incidents.csv\n- access_logs.csv"
+        },
+        {
+          "cell": 3,
+          "type": "code",
+          "text": "# - employees.csv\n# - devices.csv\n# - incidents.csv\n# - access_logs.csv\n\nemployees = pd.read_csv('..//data//employees.csv')\nprint(employees)\ndevices = pd.read_csv('..//data//devices.csv')\nprint(devices)\nincidents = pd.read_csv('..//data//incidents.csv')\nprint(incidents)\naccess_logs = pd.read_csv('access_logs.csv')\nprint(access_logs)"
+        },
+        {
+          "cell": 4,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Глава 1. Подозрительные города</font></b>\n<u>Система сообщает:</u> Атака произошла из города с максимальным числом инцидентов высокой критичности.\n\n<i>1 часть пароля:</i> 3 первых буквы получившегося города"
+        },
+        {
+          "cell": 6,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Глава 2. Внутренний агент</font></b>\n<u>Система сообщает:</u> Подозреваемый работает в отделе, где средняя длительность доступа к системе была максимальной.\n\n<i>2 часть пароля:</i> 2 первых буквы названия отдела"
+        },
+        {
+          "cell": 7,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Глава 3. Кто именно?</font></b>\nНужно найти сотрудника, из города в первой главе, отдела во второй главе и с максимальным количеством инцидентов.\n\n<i>3 часть пароля:</i> 3 первых буквы имени сотрудника"
+        },
+        {
+          "cell": 8,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Глава 4. Орудие преступления</font></b>\nАтака была проведена с устройства, которое чаще всего использовалось подозреваемым.\n\n<i>4 часть пароля:</i> номер устройства (последние 2 символа имени устройства)"
+        },
+        {
+          "cell": 9,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Глава 5. День атаки</font></b>\nФайл был украден в день максимальной активности подозреваемого. \nПодсказка: ориентируйтесь на таблицу логов\n\n<i>5 часть пароля:</i> день (например, если это 15 мая, то берем 15)"
+        },
+        {
+          "cell": 10,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Глава 6. Код операции</font></b>\nНужно:\n- оставить только действия подозреваемого в день атаки;\n- посчитать частоты действий;\n- отсортировать;\n- взять второе по популярности действие;\n\n<i>6 часть пароля:</i> первые три символа названия операции"
+        },
+        {
+          "cell": 11,
+          "type": "markdown",
+          "text": "## <b><font color='cornflowerblue'>Финал. Пароль</font></b>\nСоберите все части пароля:\n- заглавные буквы\n- части пароля разделяются символом: \"-\"\n- получившийся пароль - код доступа к архиву \"Пропавший файл.zip\"\n- если Вы выполнили все задания верно, то архив откроется"
         }
       ]
     },
