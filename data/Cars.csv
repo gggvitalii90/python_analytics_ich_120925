@@ -1,0 +1,501 @@
+Car_ID,Brand,Model,Year,Color,Engine_Type,Transmission,Price
+C0001,Toyota,Camry,2023,Red,Petrol,Automatic,80338.15
+C0002,Tesla,Model 3,2019,Red,Electric,Manual,26437.73
+C0003,Nissan,Qashqai,2018,Blue,Electric,Automatic,50158.13
+C0004,Hyundai,Sonata,2025,Red,Hybrid,Automatic,33026.14
+C0005,Toyota,RAV4,2016,White,Hybrid,Manual,79672.9
+C0006,Hyundai,Elantra,2019,White,Diesel,Automatic,94225.03
+C0007,Mercedes,C-Class,2020,Gray,Petrol,Manual,21344.38
+C0008,Tesla,Model 3,2021,Gray,Hybrid,Manual,48813.94
+C0009,BMW,3 Series,2017,Blue,Electric,Manual,34430.1
+C0010,Tesla,Model S,2015,Red,Hybrid,Manual,42136.55
+C0011,Tesla,Model 3,2017,Silver,Electric,Automatic,17337.05
+C0012,Tesla,Model S,2016,Gray,Electric,Manual,78178.58
+C0013,Hyundai,Sonata,2018,Blue,Diesel,Manual,92616.24
+C0014,Toyota,RAV4,2024,Silver,Hybrid,Automatic,97512.33
+C0015,Nissan,Altima,2019,Blue,Diesel,Manual,89267.74
+C0016,BMW,3 Series,2024,Black,Petrol,Manual,36006.2
+C0017,Nissan,Qashqai,2018,Silver,Petrol,Automatic,30585.94
+C0018,Nissan,Qashqai,2016,Black,Petrol,Manual,71104.74
+C0019,Tesla,Model S,2019,White,Diesel,Manual,24426.04
+C0020,Toyota,Camry,2022,Blue,Electric,Manual,68270.75
+C0021,BMW,3 Series,2020,Red,Diesel,Automatic,60882.36
+C0022,Tesla,Model X,2018,Red,Diesel,Automatic,40366.14
+C0023,Tesla,Model 3,2024,Silver,Diesel,Automatic,51077.41
+C0024,Mercedes,E-Class,2019,Blue,Petrol,Manual,33546.72
+C0025,Nissan,Altima,2016,Silver,Petrol,Manual,48204.7
+C0026,BMW,3 Series,2023,Black,Electric,Automatic,94847.47
+C0027,Mercedes,E-Class,2020,Gray,Hybrid,Manual,30021.18
+C0028,Kia,Sportage,2016,Blue,Hybrid,Manual,64476.81
+C0029,Tesla,Model 3,2024,Silver,Hybrid,Manual,87083.91
+C0030,Hyundai,Tucson,2022,Gray,Diesel,Manual,30892.91
+C0031,Mercedes,E-Class,2016,Silver,Petrol,Automatic,66365.92
+C0032,Tesla,Model X,2018,Blue,Petrol,Automatic,65576.93
+C0033,Tesla,Model 3,2020,White,Petrol,Manual,21841.21
+C0034,Toyota,Camry,2023,Blue,Petrol,Automatic,89206.33
+C0035,Kia,Cerato,2023,Blue,Hybrid,Manual,65266.64
+C0036,Toyota,Camry,2017,Red,Electric,Automatic,22685.3
+C0037,Kia,Sportage,2024,Red,Diesel,Manual,18249.01
+C0038,Nissan,Altima,2017,White,Electric,Automatic,17943.21
+C0039,Kia,Cerato,2022,Gray,Hybrid,Automatic,79781.25
+C0040,Tesla,Model X,2016,White,Diesel,Manual,18775.42
+C0041,Nissan,Qashqai,2015,Blue,Hybrid,Manual,48152.43
+C0042,Mercedes,E-Class,2018,Gray,Hybrid,Automatic,52740.96
+C0043,Hyundai,Sonata,2018,Silver,Diesel,Automatic,24980.76
+C0044,BMW,3 Series,2019,White,Diesel,Automatic,34474.21
+C0045,BMW,5 Series,2020,White,Electric,Manual,85822.19
+C0046,BMW,X5,2022,White,Hybrid,Automatic,99941.14
+C0047,Tesla,Model S,2019,White,Electric,Manual,37412.17
+C0048,Mercedes,GLA,2022,Black,Petrol,Automatic,72301.28
+C0049,Tesla,Model S,2020,Red,Diesel,Automatic,58158.34
+C0050,Mercedes,C-Class,2024,Red,Diesel,Manual,88724.54
+C0051,Kia,Sportage,2020,Gray,Diesel,Automatic,29037.62
+C0052,Kia,Sportage,2022,Gray,Diesel,Manual,26075.52
+C0053,Tesla,Model X,2022,Black,Hybrid,Manual,33621.82
+C0054,Toyota,Camry,2018,Silver,Hybrid,Manual,30129.17
+C0055,BMW,X5,2015,Blue,Diesel,Automatic,77348.2
+C0056,Nissan,Sunny,2021,Gray,Diesel,Manual,65876.67
+C0057,Nissan,Altima,2018,Black,Diesel,Manual,61473.24
+C0058,Tesla,Model S,2023,Black,Electric,Automatic,94755.18
+C0059,Kia,Sportage,2020,Gray,Petrol,Manual,91552.46
+C0060,Toyota,Corolla,2023,Silver,Diesel,Manual,99129.16
+C0061,Nissan,Sunny,2019,Black,Petrol,Manual,70324.99
+C0062,Tesla,Model X,2017,Black,Electric,Manual,39427.05
+C0063,Kia,Seltos,2019,Red,Diesel,Manual,83221.84
+C0064,Hyundai,Tucson,2019,Silver,Diesel,Automatic,37129.03
+C0065,Nissan,Altima,2019,Gray,Electric,Manual,46080.53
+C0066,Mercedes,E-Class,2017,White,Hybrid,Manual,94252.12
+C0067,Hyundai,Elantra,2016,Silver,Diesel,Manual,16670.51
+C0068,Hyundai,Tucson,2018,Black,Diesel,Automatic,47910.8
+C0069,Hyundai,Sonata,2023,Blue,Hybrid,Automatic,31312.75
+C0070,Hyundai,Sonata,2016,Black,Hybrid,Automatic,37639.31
+C0071,Kia,Seltos,2017,Black,Electric,Automatic,53635.55
+C0072,Mercedes,GLA,2016,Red,Electric,Manual,90776.35
+C0073,Kia,Sportage,2015,Red,Diesel,Manual,81463.08
+C0074,Hyundai,Tucson,2017,Gray,Electric,Automatic,92661.53
+C0075,Kia,Seltos,2020,Black,Petrol,Automatic,87777.21
+C0076,Nissan,Qashqai,2020,Silver,Hybrid,Manual,97778.44
+C0077,Toyota,RAV4,2018,Black,Electric,Automatic,37286.07
+C0078,BMW,3 Series,2020,Blue,Hybrid,Manual,87241.9
+C0079,Toyota,Corolla,2019,Blue,Diesel,Automatic,86983.02
+C0080,BMW,X5,2020,White,Petrol,Automatic,97807.1
+C0081,Tesla,Model 3,2016,Black,Petrol,Manual,37385.34
+C0082,Tesla,Model S,2015,Gray,Diesel,Automatic,71327.53
+C0083,Hyundai,Elantra,2020,Black,Electric,Manual,94839.15
+C0084,BMW,3 Series,2024,White,Petrol,Manual,45427.97
+C0085,Mercedes,E-Class,2020,White,Diesel,Manual,92630.78
+C0086,BMW,5 Series,2019,Silver,Hybrid,Automatic,73510.91
+C0087,Mercedes,GLA,2025,Gray,Hybrid,Manual,68728.35
+C0088,Kia,Cerato,2024,White,Hybrid,Automatic,92417.23
+C0089,Nissan,Qashqai,2018,Red,Electric,Manual,33212.38
+C0090,BMW,5 Series,2019,Silver,Electric,Automatic,17920.21
+C0091,Hyundai,Tucson,2018,Black,Electric,Manual,92699.73
+C0092,Mercedes,GLA,2023,White,Petrol,Automatic,78374.9
+C0093,Hyundai,Tucson,2019,Blue,Electric,Manual,86288.69
+C0094,Tesla,Model 3,2023,Silver,Hybrid,Automatic,35633.32
+C0095,Toyota,Camry,2023,White,Hybrid,Manual,74054.31
+C0096,Nissan,Qashqai,2019,White,Petrol,Automatic,61660.65
+C0097,Hyundai,Sonata,2025,White,Diesel,Automatic,56746.29
+C0098,Tesla,Model X,2017,Blue,Electric,Automatic,99875.13
+C0099,Hyundai,Tucson,2018,Gray,Diesel,Automatic,38984.11
+C0100,Nissan,Sunny,2018,Blue,Petrol,Manual,74108.18
+C0101,Mercedes,GLA,2015,Silver,Hybrid,Manual,75529.64
+C0102,Toyota,Camry,2018,Red,Hybrid,Automatic,95035.77
+C0103,Nissan,Altima,2019,Red,Hybrid,Manual,33878.13
+C0104,Mercedes,C-Class,2020,White,Petrol,Automatic,88830.31
+C0105,Kia,Sportage,2022,White,Diesel,Manual,54845.1
+C0106,BMW,5 Series,2023,White,Petrol,Automatic,57448.98
+C0107,Hyundai,Tucson,2021,Gray,Electric,Automatic,46740.58
+C0108,BMW,3 Series,2019,Gray,Electric,Automatic,68415.0
+C0109,Toyota,RAV4,2022,White,Electric,Manual,97204.59
+C0110,Nissan,Sunny,2018,Gray,Petrol,Manual,40546.31
+C0111,Kia,Sportage,2016,Black,Petrol,Automatic,96742.24
+C0112,Nissan,Altima,2021,Red,Hybrid,Manual,46778.03
+C0113,Toyota,RAV4,2024,White,Diesel,Automatic,35194.67
+C0114,Hyundai,Tucson,2024,Blue,Hybrid,Manual,63367.44
+C0115,Tesla,Model X,2015,Red,Electric,Manual,98105.6
+C0116,Tesla,Model X,2020,Black,Petrol,Automatic,43309.15
+C0117,Toyota,Corolla,2016,Gray,Petrol,Manual,25746.43
+C0118,BMW,X5,2023,Red,Petrol,Automatic,77133.35
+C0119,Mercedes,GLA,2018,Black,Hybrid,Manual,23200.24
+C0120,Nissan,Qashqai,2016,Black,Petrol,Manual,56469.05
+C0121,Nissan,Sunny,2022,Silver,Diesel,Manual,62501.37
+C0122,Tesla,Model 3,2018,Blue,Petrol,Manual,85848.09
+C0123,Mercedes,E-Class,2021,White,Petrol,Automatic,23630.56
+C0124,Nissan,Sunny,2015,Blue,Diesel,Manual,44875.07
+C0125,Tesla,Model S,2017,Silver,Electric,Automatic,35200.68
+C0126,Nissan,Sunny,2024,White,Electric,Automatic,67563.87
+C0127,Toyota,Camry,2025,Red,Diesel,Manual,93219.23
+C0128,Kia,Seltos,2019,Gray,Diesel,Manual,84135.49
+C0129,Kia,Sportage,2016,Blue,Hybrid,Automatic,95882.76
+C0130,Mercedes,GLA,2021,White,Hybrid,Automatic,48149.33
+C0131,Toyota,RAV4,2025,Blue,Electric,Automatic,61924.42
+C0132,Hyundai,Sonata,2022,Silver,Electric,Automatic,58245.71
+C0133,Kia,Sportage,2020,Black,Diesel,Manual,20192.76
+C0134,Toyota,Camry,2016,Gray,Diesel,Automatic,51529.96
+C0135,Mercedes,C-Class,2015,White,Hybrid,Automatic,55815.59
+C0136,BMW,3 Series,2019,Gray,Petrol,Manual,84503.94
+C0137,BMW,X5,2016,Silver,Petrol,Manual,49659.73
+C0138,Toyota,Camry,2024,Blue,Hybrid,Automatic,71116.49
+C0139,Tesla,Model 3,2019,White,Diesel,Automatic,63900.82
+C0140,BMW,X5,2025,Red,Hybrid,Manual,22543.49
+C0141,Tesla,Model X,2022,Gray,Electric,Manual,49552.44
+C0142,Hyundai,Tucson,2016,Blue,Diesel,Automatic,39878.32
+C0143,BMW,X5,2019,Red,Electric,Manual,97300.14
+C0144,BMW,5 Series,2021,Black,Electric,Automatic,71068.19
+C0145,Mercedes,C-Class,2019,Blue,Petrol,Manual,89690.07
+C0146,Kia,Seltos,2024,White,Petrol,Manual,32150.03
+C0147,Mercedes,GLA,2018,White,Electric,Automatic,40101.92
+C0148,Toyota,RAV4,2015,Gray,Diesel,Manual,60714.01
+C0149,Nissan,Sunny,2016,White,Diesel,Manual,89010.17
+C0150,Hyundai,Tucson,2017,Blue,Petrol,Manual,78555.28
+C0151,Hyundai,Sonata,2017,Gray,Petrol,Manual,44911.18
+C0152,Hyundai,Elantra,2022,Red,Hybrid,Automatic,18449.83
+C0153,Kia,Cerato,2016,Black,Hybrid,Automatic,86495.32
+C0154,Tesla,Model 3,2018,Silver,Petrol,Manual,41195.2
+C0155,Mercedes,C-Class,2022,Blue,Petrol,Automatic,15064.15
+C0156,Hyundai,Sonata,2015,Gray,Hybrid,Manual,22779.54
+C0157,Mercedes,E-Class,2024,Silver,Hybrid,Manual,54478.11
+C0158,Hyundai,Elantra,2018,White,Hybrid,Manual,15564.23
+C0159,Toyota,RAV4,2019,Black,Diesel,Automatic,37017.34
+C0160,BMW,X5,2018,Red,Petrol,Manual,56409.55
+C0161,Mercedes,C-Class,2016,Silver,Petrol,Manual,26413.01
+C0162,Nissan,Qashqai,2015,Gray,Electric,Manual,53008.54
+C0163,Tesla,Model X,2020,Gray,Diesel,Manual,46277.93
+C0164,Tesla,Model S,2023,White,Petrol,Automatic,42464.66
+C0165,Tesla,Model S,2016,Gray,Petrol,Manual,64280.26
+C0166,Tesla,Model X,2022,White,Petrol,Automatic,44421.49
+C0167,Mercedes,GLA,2021,Silver,Hybrid,Automatic,56347.83
+C0168,Toyota,Camry,2019,Gray,Diesel,Manual,34744.17
+C0169,Toyota,Corolla,2023,White,Petrol,Manual,77945.94
+C0170,Toyota,Camry,2024,Black,Electric,Manual,25733.99
+C0171,Tesla,Model X,2024,Red,Petrol,Automatic,23723.97
+C0172,Mercedes,C-Class,2015,Gray,Hybrid,Manual,25393.08
+C0173,Toyota,Camry,2020,Blue,Petrol,Automatic,57344.63
+C0174,Toyota,Corolla,2025,White,Electric,Automatic,18521.5
+C0175,Nissan,Sunny,2024,Gray,Hybrid,Automatic,74816.25
+C0176,BMW,3 Series,2022,Black,Hybrid,Manual,95524.52
+C0177,BMW,5 Series,2021,Red,Petrol,Automatic,94367.33
+C0178,Kia,Cerato,2025,White,Petrol,Automatic,77094.76
+C0179,Nissan,Sunny,2020,Gray,Petrol,Manual,43838.33
+C0180,Nissan,Sunny,2025,Blue,Electric,Manual,15712.77
+C0181,Tesla,Model S,2018,Red,Hybrid,Automatic,19270.26
+C0182,Kia,Cerato,2018,Silver,Diesel,Manual,94592.91
+C0183,Mercedes,E-Class,2022,Red,Petrol,Automatic,40162.15
+C0184,Kia,Seltos,2015,White,Hybrid,Automatic,90025.63
+C0185,Hyundai,Tucson,2015,Gray,Electric,Automatic,22264.62
+C0186,BMW,X5,2016,Silver,Diesel,Automatic,95629.0
+C0187,Hyundai,Tucson,2021,Black,Electric,Automatic,62336.26
+C0188,Toyota,Corolla,2018,Red,Diesel,Automatic,62762.83
+C0189,BMW,3 Series,2020,Blue,Electric,Manual,66184.26
+C0190,BMW,5 Series,2023,Blue,Petrol,Manual,42304.16
+C0191,Nissan,Qashqai,2025,Gray,Petrol,Manual,42582.85
+C0192,Nissan,Sunny,2015,Gray,Diesel,Manual,92711.05
+C0193,Toyota,Camry,2020,Black,Petrol,Manual,91143.29
+C0194,BMW,5 Series,2020,Red,Electric,Manual,47141.16
+C0195,Tesla,Model X,2020,Gray,Diesel,Manual,36871.75
+C0196,Hyundai,Elantra,2021,Red,Petrol,Automatic,44101.03
+C0197,Toyota,Camry,2021,Black,Petrol,Automatic,85571.95
+C0198,Tesla,Model X,2022,White,Hybrid,Automatic,35439.69
+C0199,Hyundai,Elantra,2025,Silver,Diesel,Manual,42536.49
+C0200,Toyota,Corolla,2022,Gray,Petrol,Manual,71249.59
+C0201,Toyota,Camry,2023,Red,Hybrid,Automatic,57000.19
+C0202,Mercedes,C-Class,2018,Blue,Diesel,Automatic,35182.93
+C0203,Kia,Cerato,2025,Silver,Hybrid,Manual,26695.21
+C0204,Tesla,Model S,2019,Blue,Electric,Manual,19232.38
+C0205,Mercedes,GLA,2018,Black,Electric,Manual,91063.54
+C0206,Kia,Sportage,2019,Black,Petrol,Manual,95801.7
+C0207,Nissan,Sunny,2022,Red,Petrol,Manual,36900.28
+C0208,BMW,3 Series,2024,Blue,Electric,Automatic,43449.6
+C0209,Mercedes,GLA,2023,White,Electric,Manual,49027.17
+C0210,Tesla,Model S,2016,Gray,Electric,Automatic,74916.76
+C0211,Toyota,Camry,2018,Black,Diesel,Automatic,68207.89
+C0212,Kia,Cerato,2016,Silver,Electric,Automatic,29137.93
+C0213,Toyota,Corolla,2018,Red,Electric,Automatic,86747.54
+C0214,Toyota,RAV4,2023,Black,Diesel,Automatic,64961.25
+C0215,Kia,Cerato,2024,Silver,Electric,Manual,56252.8
+C0216,BMW,5 Series,2025,Blue,Hybrid,Automatic,66993.77
+C0217,Kia,Seltos,2025,Silver,Electric,Manual,54557.44
+C0218,Kia,Sportage,2018,Blue,Electric,Automatic,18998.57
+C0219,Mercedes,GLA,2020,Red,Diesel,Automatic,36444.24
+C0220,Toyota,Camry,2021,White,Petrol,Manual,27036.18
+C0221,Toyota,Camry,2016,White,Diesel,Automatic,32320.79
+C0222,Tesla,Model S,2020,Red,Diesel,Automatic,35547.41
+C0223,Tesla,Model S,2020,White,Petrol,Manual,66030.95
+C0224,BMW,5 Series,2022,Black,Electric,Manual,17316.68
+C0225,Tesla,Model S,2019,Blue,Petrol,Automatic,30317.47
+C0226,Mercedes,GLA,2016,White,Diesel,Manual,73197.25
+C0227,BMW,3 Series,2015,White,Hybrid,Automatic,33511.99
+C0228,Toyota,Corolla,2021,Gray,Petrol,Manual,80597.19
+C0229,Kia,Cerato,2022,Black,Petrol,Manual,49689.9
+C0230,BMW,3 Series,2016,Blue,Hybrid,Automatic,75684.26
+C0231,Toyota,Camry,2024,White,Petrol,Manual,41318.81
+C0232,Mercedes,GLA,2018,Gray,Diesel,Automatic,93984.87
+C0233,Toyota,Corolla,2016,Blue,Electric,Automatic,34356.67
+C0234,Nissan,Qashqai,2022,Gray,Diesel,Automatic,78320.67
+C0235,Kia,Seltos,2024,Silver,Petrol,Automatic,40425.82
+C0236,Mercedes,GLA,2019,Silver,Electric,Manual,99664.31
+C0237,Mercedes,GLA,2018,Blue,Hybrid,Manual,92692.93
+C0238,BMW,5 Series,2022,Gray,Electric,Automatic,23452.33
+C0239,Toyota,Camry,2019,Blue,Electric,Automatic,84197.99
+C0240,BMW,5 Series,2025,Silver,Electric,Manual,56336.78
+C0241,Toyota,RAV4,2018,Red,Hybrid,Automatic,48576.42
+C0242,Tesla,Model X,2018,Red,Petrol,Automatic,68211.04
+C0243,Tesla,Model S,2018,Silver,Hybrid,Automatic,63692.99
+C0244,Tesla,Model X,2025,Blue,Hybrid,Manual,67286.72
+C0245,Mercedes,E-Class,2021,Black,Diesel,Automatic,59861.26
+C0246,Mercedes,C-Class,2015,Black,Hybrid,Manual,70409.5
+C0247,Mercedes,GLA,2022,Blue,Petrol,Automatic,45148.19
+C0248,Nissan,Qashqai,2016,Gray,Hybrid,Manual,72386.63
+C0249,Hyundai,Tucson,2021,White,Petrol,Manual,65306.64
+C0250,Nissan,Qashqai,2020,Gray,Diesel,Automatic,80442.75
+C0251,Hyundai,Sonata,2017,Red,Hybrid,Manual,77125.68
+C0252,Kia,Seltos,2015,Blue,Electric,Manual,65579.25
+C0253,Nissan,Sunny,2023,Red,Petrol,Automatic,40904.29
+C0254,BMW,X5,2025,Blue,Diesel,Automatic,34442.59
+C0255,BMW,5 Series,2025,Black,Petrol,Automatic,16073.13
+C0256,Nissan,Qashqai,2019,Gray,Diesel,Manual,69403.31
+C0257,BMW,3 Series,2024,Blue,Diesel,Manual,36852.07
+C0258,Toyota,Corolla,2023,Black,Electric,Automatic,76450.54
+C0259,Kia,Sportage,2024,Black,Diesel,Manual,15432.72
+C0260,Tesla,Model S,2024,Black,Hybrid,Automatic,75764.51
+C0261,Tesla,Model X,2022,Silver,Hybrid,Automatic,60188.37
+C0262,Nissan,Sunny,2017,Red,Diesel,Automatic,15731.73
+C0263,Hyundai,Sonata,2022,White,Hybrid,Manual,82694.4
+C0264,Tesla,Model 3,2019,Silver,Hybrid,Manual,70040.25
+C0265,Kia,Seltos,2018,Gray,Petrol,Manual,29781.09
+C0266,Tesla,Model X,2020,White,Hybrid,Automatic,24742.94
+C0267,BMW,X5,2024,White,Electric,Manual,40159.41
+C0268,BMW,5 Series,2022,White,Electric,Manual,77897.88
+C0269,Nissan,Qashqai,2015,Gray,Electric,Automatic,52804.45
+C0270,Tesla,Model 3,2024,Black,Electric,Manual,76670.69
+C0271,Nissan,Qashqai,2016,Gray,Diesel,Automatic,60403.39
+C0272,BMW,X5,2025,Gray,Electric,Manual,36261.58
+C0273,Mercedes,GLA,2019,Silver,Hybrid,Automatic,97569.91
+C0274,Nissan,Altima,2015,Silver,Electric,Manual,94691.22
+C0275,BMW,3 Series,2017,Silver,Electric,Manual,44753.36
+C0276,Nissan,Sunny,2025,Blue,Petrol,Automatic,50703.33
+C0277,Nissan,Qashqai,2016,White,Hybrid,Automatic,34255.92
+C0278,Nissan,Altima,2016,Silver,Petrol,Manual,84961.77
+C0279,Kia,Seltos,2015,Red,Electric,Automatic,85933.12
+C0280,Tesla,Model 3,2015,Blue,Electric,Automatic,15390.95
+C0281,Tesla,Model S,2020,Black,Petrol,Manual,64085.76
+C0282,Mercedes,E-Class,2017,Blue,Hybrid,Automatic,68812.78
+C0283,Toyota,Camry,2022,White,Hybrid,Manual,28195.4
+C0284,Mercedes,C-Class,2022,Blue,Electric,Automatic,51668.13
+C0285,Kia,Cerato,2017,White,Diesel,Manual,16765.09
+C0286,Nissan,Sunny,2025,Silver,Hybrid,Manual,59081.2
+C0287,Hyundai,Sonata,2024,Gray,Diesel,Automatic,52822.73
+C0288,BMW,3 Series,2018,Black,Diesel,Automatic,79631.09
+C0289,Tesla,Model 3,2025,White,Diesel,Automatic,29872.8
+C0290,Mercedes,GLA,2022,Blue,Diesel,Automatic,99707.28
+C0291,Kia,Sportage,2018,Silver,Diesel,Manual,76715.08
+C0292,Hyundai,Elantra,2022,Blue,Diesel,Automatic,79140.18
+C0293,BMW,3 Series,2015,White,Electric,Automatic,69114.77
+C0294,Nissan,Sunny,2020,Silver,Electric,Automatic,50422.08
+C0295,Hyundai,Elantra,2025,Blue,Hybrid,Manual,97629.5
+C0296,Nissan,Qashqai,2019,White,Petrol,Automatic,36488.89
+C0297,Hyundai,Tucson,2023,Blue,Electric,Manual,83331.9
+C0298,Kia,Seltos,2017,Red,Diesel,Automatic,80850.23
+C0299,Tesla,Model S,2024,White,Electric,Automatic,53359.33
+C0300,Mercedes,C-Class,2015,Silver,Electric,Manual,84003.26
+C0301,BMW,X5,2022,Black,Petrol,Automatic,86538.68
+C0302,Mercedes,C-Class,2022,Black,Electric,Automatic,78237.97
+C0303,Tesla,Model X,2020,White,Hybrid,Manual,41004.62
+C0304,BMW,5 Series,2017,Silver,Petrol,Manual,44558.29
+C0305,Nissan,Altima,2018,Black,Petrol,Manual,68740.73
+C0306,Nissan,Qashqai,2021,Blue,Diesel,Manual,80287.54
+C0307,Kia,Cerato,2023,Red,Diesel,Manual,18650.45
+C0308,BMW,5 Series,2023,Black,Hybrid,Manual,54084.04
+C0309,Toyota,Camry,2018,Gray,Hybrid,Manual,19202.36
+C0310,Hyundai,Elantra,2018,White,Petrol,Automatic,97891.68
+C0311,Toyota,Corolla,2015,White,Hybrid,Automatic,45662.22
+C0312,Hyundai,Elantra,2022,Black,Petrol,Manual,93641.13
+C0313,Toyota,Camry,2023,Red,Petrol,Manual,66822.3
+C0314,Tesla,Model X,2015,Red,Electric,Manual,34144.39
+C0315,Mercedes,E-Class,2016,White,Diesel,Manual,49991.15
+C0316,Toyota,RAV4,2024,Silver,Petrol,Manual,65718.57
+C0317,Toyota,Camry,2025,Gray,Petrol,Automatic,94065.17
+C0318,Mercedes,C-Class,2021,Black,Hybrid,Manual,44874.76
+C0319,Mercedes,C-Class,2023,Silver,Diesel,Automatic,52256.29
+C0320,Kia,Cerato,2018,Blue,Diesel,Manual,24694.17
+C0321,Mercedes,C-Class,2025,Red,Hybrid,Manual,72243.59
+C0322,Mercedes,GLA,2024,White,Electric,Manual,76945.41
+C0323,Kia,Sportage,2021,Gray,Electric,Manual,58060.85
+C0324,Nissan,Sunny,2017,White,Petrol,Automatic,49935.47
+C0325,Hyundai,Sonata,2023,Red,Diesel,Automatic,64065.66
+C0326,Tesla,Model S,2016,Red,Petrol,Automatic,73630.87
+C0327,Mercedes,E-Class,2019,Black,Electric,Automatic,91909.78
+C0328,Hyundai,Sonata,2016,Blue,Diesel,Automatic,24042.37
+C0329,Tesla,Model S,2015,Black,Hybrid,Automatic,86885.09
+C0330,Hyundai,Tucson,2025,White,Diesel,Automatic,39257.79
+C0331,BMW,X5,2023,Silver,Diesel,Automatic,21666.03
+C0332,Nissan,Altima,2023,Black,Diesel,Automatic,43315.59
+C0333,BMW,3 Series,2019,Blue,Diesel,Manual,86322.24
+C0334,BMW,3 Series,2017,White,Diesel,Manual,47842.6
+C0335,Tesla,Model X,2018,White,Diesel,Manual,65420.55
+C0336,Mercedes,C-Class,2025,Blue,Electric,Manual,93744.9
+C0337,Nissan,Qashqai,2018,Black,Electric,Automatic,26411.09
+C0338,Nissan,Sunny,2023,Red,Hybrid,Automatic,90237.8
+C0339,Tesla,Model S,2019,Gray,Hybrid,Manual,92883.27
+C0340,Kia,Seltos,2019,Black,Electric,Automatic,53012.12
+C0341,Kia,Seltos,2022,Blue,Petrol,Manual,35862.17
+C0342,Nissan,Qashqai,2016,Red,Petrol,Automatic,30351.37
+C0343,Nissan,Sunny,2019,Red,Hybrid,Manual,83159.71
+C0344,Nissan,Altima,2017,Red,Electric,Automatic,82070.94
+C0345,Hyundai,Tucson,2017,White,Diesel,Automatic,86871.06
+C0346,Nissan,Altima,2021,White,Diesel,Manual,52055.61
+C0347,Nissan,Sunny,2023,Black,Petrol,Manual,51599.71
+C0348,Hyundai,Tucson,2019,Red,Electric,Manual,16688.91
+C0349,Nissan,Qashqai,2017,Gray,Hybrid,Automatic,53216.75
+C0350,Kia,Seltos,2022,Black,Diesel,Manual,52463.23
+C0351,Kia,Seltos,2020,Gray,Petrol,Automatic,30658.1
+C0352,Tesla,Model S,2017,Black,Petrol,Automatic,79853.55
+C0353,Tesla,Model X,2019,Red,Electric,Automatic,21727.73
+C0354,Toyota,Camry,2018,Black,Diesel,Manual,89064.3
+C0355,Nissan,Sunny,2017,Silver,Diesel,Automatic,66192.9
+C0356,Toyota,RAV4,2017,Black,Diesel,Automatic,93494.38
+C0357,Tesla,Model X,2019,Gray,Hybrid,Automatic,55936.19
+C0358,Kia,Seltos,2025,Blue,Electric,Manual,96428.19
+C0359,BMW,X5,2022,Red,Petrol,Manual,95666.26
+C0360,Toyota,RAV4,2023,Black,Electric,Automatic,55890.27
+C0361,BMW,X5,2016,White,Petrol,Automatic,96776.11
+C0362,Nissan,Qashqai,2022,Silver,Petrol,Manual,75124.7
+C0363,Kia,Cerato,2015,Blue,Diesel,Manual,99989.12
+C0364,Hyundai,Elantra,2024,Black,Diesel,Automatic,24071.71
+C0365,Kia,Cerato,2023,Red,Petrol,Manual,57296.32
+C0366,Hyundai,Elantra,2022,Black,Petrol,Automatic,56171.44
+C0367,Tesla,Model 3,2017,Gray,Diesel,Manual,35856.76
+C0368,BMW,X5,2017,Silver,Petrol,Manual,72043.42
+C0369,Nissan,Sunny,2021,White,Diesel,Manual,42812.59
+C0370,Tesla,Model X,2025,Blue,Diesel,Manual,68216.44
+C0371,Hyundai,Tucson,2023,Red,Hybrid,Manual,34068.8
+C0372,Hyundai,Tucson,2024,Black,Petrol,Manual,51461.64
+C0373,Nissan,Altima,2022,Black,Electric,Manual,65384.54
+C0374,Toyota,Camry,2017,Silver,Diesel,Automatic,21452.52
+C0375,Mercedes,E-Class,2021,Red,Petrol,Automatic,92158.1
+C0376,Nissan,Sunny,2016,Silver,Electric,Manual,75290.48
+C0377,Kia,Sportage,2021,Gray,Electric,Manual,19766.68
+C0378,Kia,Cerato,2016,Gray,Petrol,Automatic,94187.85
+C0379,BMW,5 Series,2018,Blue,Electric,Manual,15287.73
+C0380,Toyota,RAV4,2023,Black,Petrol,Automatic,73265.22
+C0381,Nissan,Altima,2016,Black,Petrol,Automatic,17936.62
+C0382,Kia,Sportage,2024,Red,Hybrid,Manual,97407.23
+C0383,Kia,Cerato,2018,Black,Hybrid,Automatic,54266.05
+C0384,Tesla,Model 3,2015,Black,Petrol,Automatic,63705.91
+C0385,Mercedes,E-Class,2019,Silver,Electric,Automatic,23456.77
+C0386,Toyota,Corolla,2018,Gray,Diesel,Automatic,29727.24
+C0387,Hyundai,Tucson,2016,Silver,Petrol,Manual,80106.33
+C0388,Mercedes,E-Class,2020,Black,Electric,Automatic,36180.46
+C0389,Toyota,RAV4,2023,Silver,Hybrid,Automatic,74572.62
+C0390,Nissan,Sunny,2023,Blue,Petrol,Automatic,39960.25
+C0391,Nissan,Qashqai,2020,White,Electric,Automatic,88353.45
+C0392,Hyundai,Tucson,2018,Red,Hybrid,Automatic,71319.43
+C0393,Toyota,RAV4,2022,Blue,Diesel,Automatic,75783.38
+C0394,BMW,X5,2016,Black,Diesel,Automatic,38266.04
+C0395,Toyota,RAV4,2025,Gray,Diesel,Automatic,53727.95
+C0396,Kia,Sportage,2017,Silver,Hybrid,Manual,69972.71
+C0397,Mercedes,GLA,2024,Blue,Petrol,Automatic,34260.62
+C0398,Nissan,Qashqai,2015,Black,Electric,Manual,41514.29
+C0399,Kia,Seltos,2015,Red,Petrol,Manual,68707.48
+C0400,Toyota,Corolla,2016,Gray,Petrol,Automatic,97026.32
+C0401,Hyundai,Sonata,2025,Silver,Hybrid,Manual,89678.74
+C0402,BMW,5 Series,2015,Red,Diesel,Manual,94457.24
+C0403,Mercedes,GLA,2017,Silver,Electric,Automatic,96698.43
+C0404,Kia,Cerato,2021,Red,Petrol,Manual,87910.41
+C0405,Tesla,Model X,2023,Black,Hybrid,Automatic,88806.92
+C0406,Toyota,Camry,2018,Gray,Hybrid,Automatic,93761.81
+C0407,Kia,Sportage,2015,Silver,Diesel,Automatic,25314.9
+C0408,BMW,5 Series,2025,Black,Diesel,Manual,52323.95
+C0409,Mercedes,GLA,2024,Blue,Electric,Automatic,72708.59
+C0410,Kia,Cerato,2025,Gray,Petrol,Automatic,41377.02
+C0411,Nissan,Sunny,2025,Silver,Electric,Automatic,92927.72
+C0412,BMW,5 Series,2025,Gray,Petrol,Manual,22416.75
+C0413,Kia,Seltos,2021,Silver,Petrol,Manual,95358.71
+C0414,BMW,X5,2018,Red,Electric,Manual,75830.05
+C0415,Mercedes,C-Class,2022,Red,Petrol,Manual,40626.62
+C0416,Mercedes,C-Class,2018,Black,Hybrid,Automatic,36408.74
+C0417,Kia,Seltos,2020,Black,Hybrid,Automatic,97010.2
+C0418,Mercedes,E-Class,2024,Silver,Hybrid,Automatic,33747.3
+C0419,Hyundai,Elantra,2024,Blue,Electric,Automatic,26589.96
+C0420,Tesla,Model X,2021,Black,Diesel,Automatic,99307.62
+C0421,Nissan,Sunny,2024,White,Electric,Automatic,67664.2
+C0422,BMW,5 Series,2024,Silver,Diesel,Automatic,24443.71
+C0423,Kia,Cerato,2019,Gray,Electric,Automatic,70594.53
+C0424,Nissan,Qashqai,2020,Blue,Petrol,Manual,70388.78
+C0425,Toyota,RAV4,2019,White,Diesel,Manual,20378.35
+C0426,Hyundai,Tucson,2017,Black,Diesel,Manual,72163.86
+C0427,Kia,Cerato,2022,Black,Hybrid,Manual,81521.6
+C0428,Mercedes,E-Class,2016,Black,Hybrid,Manual,46983.41
+C0429,Mercedes,GLA,2025,Gray,Petrol,Manual,86656.17
+C0430,Nissan,Sunny,2017,Red,Diesel,Automatic,21393.33
+C0431,Hyundai,Tucson,2017,Silver,Petrol,Automatic,90207.03
+C0432,Nissan,Sunny,2015,Red,Hybrid,Automatic,49078.51
+C0433,Nissan,Altima,2015,Gray,Hybrid,Manual,72226.72
+C0434,Mercedes,E-Class,2019,Red,Petrol,Manual,45192.28
+C0435,Tesla,Model X,2016,Gray,Electric,Automatic,25337.12
+C0436,Mercedes,GLA,2018,White,Diesel,Manual,67934.18
+C0437,Nissan,Sunny,2025,Gray,Electric,Automatic,99669.63
+C0438,Toyota,Camry,2020,Blue,Electric,Manual,62584.97
+C0439,Hyundai,Tucson,2025,Gray,Diesel,Automatic,70576.6
+C0440,Tesla,Model 3,2016,Red,Electric,Manual,77162.51
+C0441,BMW,3 Series,2019,Silver,Petrol,Manual,99718.55
+C0442,Nissan,Sunny,2024,Black,Diesel,Manual,90545.9
+C0443,Mercedes,GLA,2019,White,Petrol,Automatic,15040.82
+C0444,Hyundai,Elantra,2015,Silver,Electric,Automatic,52122.52
+C0445,Mercedes,C-Class,2022,White,Electric,Automatic,67001.44
+C0446,Mercedes,C-Class,2019,Red,Electric,Automatic,96503.38
+C0447,Hyundai,Tucson,2017,White,Hybrid,Automatic,96124.81
+C0448,Toyota,RAV4,2021,White,Petrol,Automatic,81740.74
+C0449,Kia,Cerato,2019,Blue,Hybrid,Automatic,42928.74
+C0450,Hyundai,Tucson,2023,Black,Petrol,Automatic,95414.91
+C0451,Toyota,Corolla,2020,Black,Electric,Manual,71681.32
+C0452,BMW,X5,2021,Silver,Electric,Manual,96580.7
+C0453,Tesla,Model X,2024,Black,Diesel,Automatic,39915.71
+C0454,Tesla,Model 3,2016,Black,Petrol,Manual,56316.6
+C0455,Nissan,Qashqai,2023,Gray,Hybrid,Manual,94666.38
+C0456,Kia,Sportage,2016,White,Petrol,Manual,18896.17
+C0457,Mercedes,E-Class,2018,Black,Diesel,Manual,89425.83
+C0458,Nissan,Sunny,2022,Gray,Hybrid,Manual,21314.27
+C0459,Mercedes,C-Class,2015,White,Diesel,Manual,86997.52
+C0460,Kia,Seltos,2024,Gray,Electric,Automatic,89695.19
+C0461,Mercedes,C-Class,2023,Gray,Electric,Manual,69815.82
+C0462,Kia,Cerato,2020,Gray,Diesel,Manual,70305.32
+C0463,BMW,3 Series,2025,Black,Petrol,Manual,97547.49
+C0464,Hyundai,Elantra,2023,White,Hybrid,Manual,71865.37
+C0465,BMW,X5,2020,Red,Electric,Manual,97325.62
+C0466,Mercedes,E-Class,2015,White,Petrol,Manual,31162.29
+C0467,Nissan,Qashqai,2016,Red,Petrol,Automatic,67754.28
+C0468,BMW,5 Series,2024,Blue,Electric,Automatic,22864.84
+C0469,Kia,Seltos,2021,Red,Diesel,Manual,74126.21
+C0470,Mercedes,E-Class,2018,Red,Diesel,Manual,57972.89
+C0471,Toyota,RAV4,2016,Silver,Hybrid,Automatic,65330.42
+C0472,Hyundai,Sonata,2024,Gray,Petrol,Manual,57968.41
+C0473,BMW,5 Series,2018,White,Hybrid,Automatic,77673.89
+C0474,Hyundai,Elantra,2021,Black,Hybrid,Automatic,96801.96
+C0475,Mercedes,C-Class,2025,Gray,Hybrid,Manual,39426.35
+C0476,Toyota,Corolla,2025,Blue,Hybrid,Automatic,98034.8
+C0477,Nissan,Sunny,2016,Gray,Electric,Automatic,63023.81
+C0478,Mercedes,GLA,2019,Blue,Electric,Manual,39151.25
+C0479,Tesla,Model X,2019,Blue,Electric,Automatic,95030.16
+C0480,Toyota,Camry,2020,Blue,Petrol,Automatic,69164.8
+C0481,Mercedes,E-Class,2023,Gray,Hybrid,Manual,53295.04
+C0482,Toyota,Camry,2018,Black,Hybrid,Manual,47304.02
+C0483,Kia,Seltos,2020,Blue,Electric,Manual,57978.6
+C0484,Toyota,Camry,2018,Gray,Petrol,Automatic,35701.45
+C0485,Tesla,Model X,2022,Gray,Petrol,Manual,95460.71
+C0486,BMW,3 Series,2023,Silver,Electric,Manual,64128.73
+C0487,Tesla,Model X,2018,White,Hybrid,Manual,71823.77
+C0488,Tesla,Model 3,2025,White,Petrol,Automatic,26437.0
+C0489,Mercedes,E-Class,2018,White,Electric,Automatic,76993.42
+C0490,BMW,5 Series,2016,Black,Hybrid,Automatic,53228.52
+C0491,Kia,Seltos,2022,Red,Petrol,Automatic,19841.22
+C0492,Tesla,Model 3,2022,Blue,Electric,Manual,16340.85
+C0493,Toyota,Corolla,2017,Black,Diesel,Automatic,31016.48
+C0494,Toyota,Corolla,2017,White,Electric,Manual,42214.03
+C0495,Tesla,Model S,2018,Black,Diesel,Automatic,97334.54
+C0496,BMW,X5,2023,Red,Diesel,Manual,53580.76
+C0497,Nissan,Altima,2021,Black,Electric,Manual,24233.93
+C0498,Mercedes,GLA,2018,Red,Petrol,Manual,55534.6
+C0499,Tesla,Model 3,2025,Blue,Diesel,Manual,59691.91
+C0500,Mercedes,GLA,2024,Blue,Electric,Automatic,75993.8
